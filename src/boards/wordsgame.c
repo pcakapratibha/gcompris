@@ -1,6 +1,6 @@
 /* gcompris - wordsgame.c
  *
- * Time-stamp: <2005/09/04 19:48:02 brunoa>
+ * Time-stamp: <2005/09/29 23:27:25 bruno>
  *
  * Copyright (C) 2000 Bruno Coudoin
  * 
@@ -721,8 +721,9 @@ static FILE *get_wordfile(const char *locale)
 
   if(wordsfd==NULL)
     {
+      g_free(filename);
       /* Second Try to find a file matching the 'max' and the locale */
-      sprintf(filename, "%s%s%.2s",  
+      filename = g_strdup_printf("%s%s%.2s",  
 	      PACKAGE_DATA_DIR, "/wordsgame/wordslevelmax.", 
 	      locale);
       g_message("Trying to open file %s ", filename);

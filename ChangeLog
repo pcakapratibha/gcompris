@@ -1,3 +1,16 @@
+	*** RELEASE 7.0.3 ***
+
+2005-09-29  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Merge of commits from Yves in the 7.1 branch
+	Fixes crash in gletters.c, wordsgame.c and algebra.c
+
+	* configure.in:
+	* gcompris.spec.in:
+	* src/boards/algebra.c: (key_press):
+	* src/boards/gletters.c: (gletters_create_item):
+	* src/boards/wordsgame.c: (get_wordfile):
+
 2005-09-18  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Fixed gcompris2spip to work with spip 1.8.2

@@ -1,6 +1,6 @@
 /* gcompris - gletters.c
  *
- * Time-stamp: <2005/08/28 12:16:42 yves>
+ * Time-stamp: <2005/09/29 23:23:18 bruno>
  *
  * Copyright (C) 2000 Bruno Coudoin
  * 
@@ -721,7 +721,7 @@ static GnomeCanvasItem *gletters_create_item(GnomeCanvasGroup *parent)
     i=(int)((float)k*rand()/(RAND_MAX+1.0));
 
     for( j = 0; j < i; j++) {
-      str_p=g_utf8_find_next_char(str_p,NULL);
+      str_p=g_utf8_next_char(str_p);
     }
 
     g_utf8_strncpy (lettersItem, str_p,1);

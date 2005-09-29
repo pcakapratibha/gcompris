@@ -1,6 +1,6 @@
 /* gcompris - algebra.c
  *
- * Time-stamp: <2005/07/01 23:09:38 yves>
+ * Time-stamp: <2005/09/30 01:13:56 bruno>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -220,7 +220,7 @@ static gint key_press(guint keyval)
   guint c;
   gboolean stop = FALSE;
 
-  if(!gcomprisBoard)
+  if(!boardRootItem)
     return FALSE;
 
   /* Add some filter for control and shift key */
