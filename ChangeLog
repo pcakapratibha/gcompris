@@ -1,3 +1,11 @@
+2005-10-05  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Merge of commit by Yves on HEAD the 05/10/2005
+	Fix stupid bug, causing crash in memory_tux in edubuntu.
+
+	* src/boards/memory.c: (start_board), (memory_next_level),
+	(create_item):
+
 	*** RELEASE 7.0.3 ***
 
 2005-09-29  Bruno coudoin  <bruno.coudoin@free.fr>
