@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-12 21:06-0400\n"
+"POT-Creation-Date: 2005-10-23 02:19-0400\n"
 "PO-Revision-Date: 2005-09-06 22:51-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid ""
 "- In the 'Boards' section you can change the list of activities. Just "
 "untoggle them in the treeview. You can change the language used for reading, "
-"for example, then language used for saying the name of colours. - You can "
+"for example, then language used for saying the name of colors. - You can "
 "save multiple configurations, and switch easily. In the 'Profile' section "
 "add a profile, then in the 'Board' section select the profile in the "
 "combobox, then select the boards you want to be active. You can add lot of "
@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "- In the 'Boards' section you can change the list of activities. Just "
 "untoggle them in the treeview. You can change the language used for reading, "
-"for example, then language used for saying the name of colours. - You can "
+"for example, then language used for saying the name of colors. - You can "
 "save multiple configurations, and switch easily. In the 'Profile' section "
 "add a profile, then in the 'Board' section select the profile in the "
 "combobox, then select the boards you want to be active. You can add lot of "
@@ -68,7 +68,7 @@ msgstr ""
 "reporting for parents and teacher who want to monitor the progress, "
 "strengths and weakenesses of their children."
 
-#: boards/administration.xml.in.h:4 boards/gnumchmenu.xml.in.h:2
+#: boards/administration.xml.in.h:4
 msgid "Left-Click with the mouse to select an activity"
 msgstr "Left-Click with the mouse to select an activity"
 
@@ -477,7 +477,7 @@ msgid "In a limited time, find the difference between two numbers"
 msgstr "In a limited time, find the difference between two numbers"
 
 #: boards/algebra_minus.xml.in.h:4
-msgid "Practise the subtraction operation"
+msgid "Practice the subtraction operation"
 msgstr "Practise the subtraction operation"
 
 #: boards/algebra_minus.xml.in.h:5
@@ -505,7 +505,7 @@ msgstr ""
 "line addition."
 
 #: boards/algebra_plus.xml.in.h:4
-msgid "Practise the addition operation"
+msgid "Practice the addition operation"
 msgstr "Practise the addition operation"
 
 #: boards/algebra_plus.xml.in.h:5
@@ -563,7 +563,7 @@ msgstr "Needs to be capable of moving and clicking the mouse easily"
 
 #: boards/anim.xml.in.h:5
 msgid ""
-"Select a drawing tool on the left, and a colour down the bottom. Then click "
+"Select a drawing tool on the left, and a color down the bottom. Then click "
 "and drag in the white area to create a new shape. Once you've completed a "
 "drawing, you can take a snapshot of it with the 'camera' button. This "
 "creates a new image with the same content, a copy of your image. You can "
@@ -752,7 +752,7 @@ msgid "Play chess against the computer in a learning mode"
 msgstr "Play chess against the computer in a learning mode"
 
 #: boards/chess.xml.in.h:2
-msgid "Practise chess"
+msgid "Practice chess"
 msgstr "Practise chess"
 
 #: boards/chess_computer.xml.in.h:1 boards/chess_movelearn.xml.in.h:2
@@ -783,25 +783,29 @@ msgstr "Drag and Drop the items to organize the story"
 
 #: boards/chronos.xml.in.h:3
 msgid ""
-"Moon photo is copyright NASA. The space sounds come from Tuxpaint and "
-"Vegastrike which are released under the GPL license. The transportation "
-"images are copyright Franck Doucet. Dates of Transportation are based on "
-"those found in &lt;http://www.wikipedia.org&gt;."
+"Moon photo is copyright NASA.\n"
+"The space sounds come from Tuxpaint and Vegastrike which are released under "
+"the GPL license.\n"
+"The transportation images are copyright Franck Doucet.\n"
+"Dates of Transportation are based on those found in &lt;http://www.wikipedia."
+"org&gt;.\n"
 msgstr ""
-"Moon photo is copyright NASA. The space sounds come from Tuxpaint and "
-"Vegastrike which are released under the GPL license. The transportation "
-"images are copyright Franck Doucet. Dates of Transportation are based on "
-"those found in &lt;http://www.wikipedia.org&gt;."
+"Moon photo is copyright NASA.\n"
+"The space sounds come from Tuxpaint and Vegastrike which are released under "
+"the GPL licence.\n"
+"The transportation images are copyright Franck Doucet.\n"
+"Dates of Transportation are based on those found in &lt;http://www.wikipedia."
+"org&gt;.\n"
 
-#: boards/chronos.xml.in.h:4
+#: boards/chronos.xml.in.h:8
 msgid "Pick from the pictures on the left and put them on the red dots"
 msgstr "Pick from the pictures on the left and put them on the red dots"
 
-#: boards/chronos.xml.in.h:5
+#: boards/chronos.xml.in.h:9
 msgid "Sort the pictures into the order that tells the story"
 msgstr "Sort the pictures into the order that tells the story"
 
-#: boards/chronos.xml.in.h:6
+#: boards/chronos.xml.in.h:10
 msgid "Tell a short story"
 msgstr "Tell a short story"
 
@@ -842,7 +846,7 @@ msgstr "Tux and the apple tree"
 msgid "1769 Cugnot's fardier"
 msgstr "1769 Cugnot's fardier"
 
-#: boards/chronos/board3_0.xml.in.h:2 boards/chronos/board3_3.xml.in.h:3
+#: boards/chronos/board3_0.xml.in.h:2 boards/chronos/board3_3.xml.in.h:5
 #: boards/chronos/board3_4.xml.in.h:2
 msgid ""
 "1829 Stephenson's Rocket\n"
@@ -851,7 +855,7 @@ msgstr ""
 "1829 Stephenson's Rocket\n"
 "Steam locomotive"
 
-#: boards/chronos/board3_0.xml.in.h:3
+#: boards/chronos/board3_0.xml.in.h:4
 msgid ""
 "Place each image in the order and\n"
 "on the date it has been invented.\n"
@@ -863,8 +867,8 @@ msgstr ""
 "If not sure, research online at wikipedia:\n"
 "&lt;http://www.wikipedia.org&gt;"
 
-#: boards/chronos/board3_0.xml.in.h:7 boards/chronos/board3_1.xml.in.h:4
-#: boards/chronos/board3_2.xml.in.h:4 boards/chronos/board3_3.xml.in.h:4
+#: boards/chronos/board3_0.xml.in.h:8 boards/chronos/board3_1.xml.in.h:6
+#: boards/chronos/board3_2.xml.in.h:5 boards/chronos/board3_3.xml.in.h:7
 #: boards/chronos/board3_4.xml.in.h:4
 msgid "Transportation"
 msgstr "Transportation"
@@ -877,12 +881,12 @@ msgstr ""
 "1783 Montgolfier brothers'\n"
 "hot air balloon"
 
-#: boards/chronos/board3_1.xml.in.h:2 boards/chronos/board3_2.xml.in.h:3
+#: boards/chronos/board3_1.xml.in.h:3 boards/chronos/board3_2.xml.in.h:4
 #: boards/chronos/board3_4.xml.in.h:3 boards/chronos/board4_0.xml.in.h:1
 msgid "1880 Clement Ader's Eole"
 msgstr "1880 Clement Ader's Eole"
 
-#: boards/chronos/board3_1.xml.in.h:3
+#: boards/chronos/board3_1.xml.in.h:4
 msgid ""
 "1906 Paul Cornu\n"
 "First helicopter flight"
@@ -890,7 +894,7 @@ msgstr ""
 "1906 Paul Cornu\n"
 "First helicopter flight"
 
-#: boards/chronos/board3_2.xml.in.h:2 boards/chronos/board3_3.xml.in.h:2
+#: boards/chronos/board3_2.xml.in.h:2 boards/chronos/board3_3.xml.in.h:3
 msgid ""
 "1791 Comte de Sivrac's\n"
 "Celerifere"
@@ -910,7 +914,7 @@ msgstr ""
 "1909 Louis Bleriot crosses\n"
 "the English Channel"
 
-#: boards/chronos/board4_0.xml.in.h:4 boards/chronos/board4_1.xml.in.h:7
+#: boards/chronos/board4_0.xml.in.h:5 boards/chronos/board4_1.xml.in.h:7
 msgid "Aviation"
 msgstr "Aviation"
 
@@ -963,7 +967,7 @@ msgid "1923 Lancia Lambda"
 msgstr "1923 Lancia Lambda"
 
 #: boards/chronos/board4_3.xml.in.h:3
-msgid "1955 Citroën ds 199"
+msgid "1955 Citroën ds 19"
 msgstr "1955 Citroën ds 199"
 
 #: boards/chronos/board4_3.xml.in.h:4
@@ -1085,21 +1089,21 @@ msgid "Can move the mouse."
 msgstr "Can move the mouse."
 
 #: boards/colors.xml.in.h:2
-msgid "Click on the right colour"
+msgid "Click on the right color"
 msgstr "Click on the right colour"
 
 #: boards/colors.xml.in.h:3
-msgid "Colours"
+msgid "Colors"
 msgstr "Colours"
 
 #: boards/colors.xml.in.h:4
-msgid "Listen to the colour and click on the matching toon."
+msgid "Listen to the color and click on the matching toon."
 msgstr "Listen to the colour and click on the matching toon."
 
 #: boards/colors.xml.in.h:5
 msgid ""
-"This board teaches you to recognize different colours. When you hear the "
-"name of the colour, click on the toon wearing it."
+"This board teaches you to recognize different colors. When you hear the name "
+"of the color, click on the toon wearing it."
 msgstr ""
 "This board teaches you to recognize different colours. When you hear the "
 "name of the colour, click on the toon wearing it."
@@ -1190,7 +1194,7 @@ msgstr ""
 
 #: boards/draw.xml.in.h:5
 msgid ""
-"Select a drawing tool on the left, and a colour down the bottom, then click "
+"Select a drawing tool on the left, and a color down the bottom, then click "
 "and drag in the white area to create a new shape. To save time, you can "
 "click with the middle mouse button to delete an object."
 msgstr ""
@@ -1907,8 +1911,8 @@ msgstr ""
 "of the screen."
 
 #: boards/gnumch-equality.xml.in.h:3
-msgid "Practise addition, multiplication, division and substraction."
-msgstr "Practise addition, multiplication, division and substraction."
+msgid "Practice addition, multiplication, division and substraction."
+msgstr "Practise addition, multiplication, division and subtraction."
 
 #: boards/gnumch-equality.xml.in.h:4 boards/gnumch-inequality.xml.in.h:4
 msgid ""
@@ -1963,8 +1967,8 @@ msgid "Inequality Number Munchers"
 msgstr "Inequality Number Munchers"
 
 #: boards/gnumch-inequality.xml.in.h:3
-msgid "Practise addition, substraction, multiplication and division."
-msgstr "Practise addition, substraction, multiplication and division."
+msgid "Practice addition, substraction, multiplication and division."
+msgstr "Practise addition, subtraction, multiplication and division."
 
 #: boards/gnumch-multiples.xml.in.h:1
 msgid ""
@@ -2028,13 +2032,37 @@ msgstr ""
 msgid "Go to Number Munchers activities"
 msgstr "Go to Number Munchers activities"
 
+#: boards/gnumchmenu.xml.in.h:2
+msgid "Left-Click the mouse on an activity to select it."
+msgstr "Left-Click the mouse on an activity to select it."
+
 #: boards/guessnumber.xml.in.h:1
 msgid "Guess a number"
 msgstr "Guess a number"
 
 #: boards/guessnumber.xml.in.h:2
-msgid "Tux hide a number and you must guess it"
-msgstr "Tux hide a number and you must guess it"
+msgid "Help Tux escape the cave. Tux hide a number that you must discover."
+msgstr "Help Tux escape the cave. Tux hide a number that you must discover."
+
+#: boards/guessnumber.xml.in.h:3
+msgid "Numbers from 1 to 1000 for the last level."
+msgstr "Numbers from 1 to 1000 for the last level."
+
+#: boards/guessnumber.xml.in.h:4
+msgid ""
+"Read the instructions that give you the range of the number to find. Enter a "
+"number in the top right blue entry box. Tux tell you if your number is "
+"higher or lower. Then enter another number. The distance between Tux and the "
+"escape area on the right represents how far you are from the right number. "
+"If Tux is above or under the escape area, it means your number is higher or "
+"under the right number."
+msgstr ""
+"Read the instructions that give you the range of the number to find. Enter a "
+"number in the top right blue entry box. Tux tell you if your number is "
+"higher or lower. Then enter another number. The distance between Tux and the "
+"escape area on the right represents how far you are from the right number. "
+"If Tux is above or under the escape area, it means your number is higher or "
+"under the right number."
 
 #: boards/hanoi.xml.in.h:1
 msgid "Concept taken from EPI games."
@@ -2994,15 +3022,15 @@ msgid "Click on the correct colored object."
 msgstr "Click on the correct coloured object."
 
 #: boards/read_colors.xml.in.h:3
-msgid "Click on the matching colour"
+msgid "Click on the matching color"
 msgstr "Click on the matching colour"
 
 #: boards/read_colors.xml.in.h:4
-msgid "Read the names of colours"
+msgid "Read the names of colors"
 msgstr "Read the names of colours"
 
 #: boards/read_colors.xml.in.h:5
-msgid "This board teaches basic colours."
+msgid "This board teaches basic colors."
 msgstr "This board teaches basic colours."
 
 #: boards/read_colors/board1.xml.in.h:1
@@ -3582,44 +3610,44 @@ msgid "Set the watch to:"
 msgstr "Set the watch to:"
 
 #: src/boards/colors.c:57
-msgid "Click on the blue toon"
-msgstr "Click on the blue toon"
+msgid "Click on the blue duck"
+msgstr "Click on the blue duck"
 
 #: src/boards/colors.c:58
-msgid "Click on the brown toon"
-msgstr "Click on the brown toon"
+msgid "Click on the brown duck"
+msgstr "Click on the brown duck"
 
 #: src/boards/colors.c:59
-msgid "Click on the green toon"
-msgstr "Click on the green toon"
+msgid "Click on the green duck"
+msgstr "Click on the green duck"
 
 #: src/boards/colors.c:60
-msgid "Click on the grey toon"
-msgstr "Click on the grey toon"
+msgid "Click on the grey duck"
+msgstr "Click on the grey duck"
 
 #: src/boards/colors.c:61
-msgid "Click on the orange toon"
-msgstr "Click on the orange toon"
+msgid "Click on the orange duck"
+msgstr "Click on the orange duck"
 
 #: src/boards/colors.c:62
-msgid "Click on the purple toon"
-msgstr "Click on the purple toon"
+msgid "Click on the purple duck"
+msgstr "Click on the purple duck"
 
 #: src/boards/colors.c:63
-msgid "Click on the red toon"
-msgstr "Click on the red toon"
+msgid "Click on the red duck"
+msgstr "Click on the red duck"
 
 #: src/boards/colors.c:64
-msgid "Click on the yellow toon"
-msgstr "Click on the yellow toon"
+msgid "Click on the yellow duck"
+msgstr "Click on the yellow duck"
 
 #: src/boards/colors.c:65
-msgid "Click on the black toon"
-msgstr "Click on the black toon"
+msgid "Click on the black duck"
+msgstr "Click on the black duck"
 
 #: src/boards/colors.c:66
-msgid "Click on the white toon"
-msgstr "Click on the white toon"
+msgid "Click on the white duck"
+msgstr "Click on the white duck"
 
 #: src/boards/erase.c:158
 msgid "Couldn't get GTK settings"
@@ -3670,17 +3698,17 @@ msgstr "Move the entire stack to the right peg"
 msgid "Learn how to read"
 msgstr "Learn how to read"
 
-#: src/boards/leftright.c:248 src/boards/python/searace.py:429
-#: src/boards/python/searace.py:454 src/boards/python/searace.py:544
-#: src/boards/python/searace.py:856 src/boards/python/searace.py:889
-#: src/boards/python/searace.py:986
+#: src/boards/leftright.c:276 src/boards/leftright.c:286
+#: src/boards/python/searace.py:429 src/boards/python/searace.py:454
+#: src/boards/python/searace.py:544 src/boards/python/searace.py:856
+#: src/boards/python/searace.py:889 src/boards/python/searace.py:986
 msgid "left"
 msgstr "left"
 
-#: src/boards/leftright.c:258 src/boards/python/searace.py:429
-#: src/boards/python/searace.py:454 src/boards/python/searace.py:553
-#: src/boards/python/searace.py:858 src/boards/python/searace.py:891
-#: src/boards/python/searace.py:980
+#: src/boards/leftright.c:296 src/boards/leftright.c:306
+#: src/boards/python/searace.py:429 src/boards/python/searace.py:454
+#: src/boards/python/searace.py:553 src/boards/python/searace.py:858
+#: src/boards/python/searace.py:891 src/boards/python/searace.py:980
 msgid "right"
 msgstr "right"
 
@@ -3794,7 +3822,7 @@ msgstr ""
 #: src/boards/python/admin/board_list.py:632
 #: src/boards/python/admin/board_list.py:650
 #: src/boards/python/admin/wordlist.py:51 src/boards/python/login.py:543
-#: src/boards/python/pythontest.py:432 src/boards/python/tuxpaint.py:179
+#: src/boards/python/pythontest.py:409 src/boards/python/tuxpaint.py:179
 #, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -3804,7 +3832,7 @@ msgstr ""
 " for profile <b>%s</b>"
 
 #: src/boards/python/admin/board_list.py:662
-#: src/boards/python/pythontest.py:496
+#: src/boards/python/pythontest.py:473
 msgid "Select sound locale"
 msgstr "Select sound locale"
 
@@ -4080,15 +4108,15 @@ msgstr ""
 "Python XML module not found. SVG is disabled. Install the python XML module "
 "to enable SVG save/restore."
 
-#: src/boards/python/anim.py:2227
+#: src/boards/python/anim.py:2204
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr "SVG is disabled. Install Python XML module to enable it"
 
-#: src/boards/python/anim.py:2383
+#: src/boards/python/anim.py:2360
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr "Warning: the following images cannot be accessed on your system.\n"
 
-#: src/boards/python/anim.py:2385
+#: src/boards/python/anim.py:2362
 msgid "The corresponding items have been skipped."
 msgstr "The corresponding items have been skipped."
 
@@ -4213,15 +4241,25 @@ msgstr ""
 "L\n"
 "E"
 
-#: src/boards/python/guessnumber.py:225
-msgid "You won"
-msgstr "You won"
+#: src/boards/python/guessnumber.py:220
+#, python-format
+msgid "Guess a number between %d and %d"
+msgstr "Guess a number between %d and %d"
 
-#: src/boards/python/guessnumber.py:228
+#: src/boards/python/guessnumber.py:334 src/boards/python/guessnumber.py:335
+#, python-format
+msgid "Please enter a number between %d and %d"
+msgstr "Please enter a number between %d and %d"
+
+#: src/boards/python/guessnumber.py:340 src/boards/python/guessnumber.py:341
+msgid "Out of range"
+msgstr "Out of range"
+
+#: src/boards/python/guessnumber.py:347 src/boards/python/guessnumber.py:348
 msgid "Too high"
 msgstr "Too high"
 
-#: src/boards/python/guessnumber.py:230
+#: src/boards/python/guessnumber.py:350 src/boards/python/guessnumber.py:351
 msgid "Too low"
 msgstr "Too low"
 
@@ -4264,30 +4302,30 @@ msgid "This activity is not playable, just a test"
 msgstr "This activity is not playable, just a test"
 
 #. toggle box
-#: src/boards/python/pythontest.py:437
+#: src/boards/python/pythontest.py:414
 msgid "Disable line drawing in circle"
 msgstr "Disable line drawing in circle"
 
 #. combo box
-#: src/boards/python/pythontest.py:446
-msgid "Colour of the line"
+#: src/boards/python/pythontest.py:423
+msgid "Color of the line"
 msgstr "Colour of the line"
 
 #. spin button for int
-#: src/boards/python/pythontest.py:457
+#: src/boards/python/pythontest.py:434
 msgid "Distance between circles"
 msgstr "Distance between circles"
 
 #. radio buttons for circle or rectangle
-#: src/boards/python/pythontest.py:468
+#: src/boards/python/pythontest.py:445
 msgid "Use circles"
 msgstr "Use circles"
 
-#: src/boards/python/pythontest.py:469
+#: src/boards/python/pythontest.py:446
 msgid "Use rectangles"
 msgstr "Use rectangles"
 
-#: src/boards/python/pythontest.py:472
+#: src/boards/python/pythontest.py:449
 msgid "Choice of pattern"
 msgstr "Choice of pattern"
 
@@ -4485,7 +4523,7 @@ msgstr ""
 
 #: src/boards/target.c:465
 #, c-format
-msgid "Distance to target = %d metres"
+msgid "Distance to target = %d meters"
 msgstr "Distance to target = %d metres"
 
 #: src/gcompris/about.c:65
