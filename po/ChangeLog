@@ -1,3 +1,8 @@
+2004-17-04  Bruno Coudoin  <bruno.coudoin@free.fr>
+
+	* ru.po: removed fuzzy strings that makes them being non displayed
+	  in GCompris (This is really strange)
+
 2005-10-29  Bruno Coudoin <bruno.coudoin@free.fr>
 
 	* he.po en_CA.po es.po fi.po fr.po ru.po: Updated from HEAD
