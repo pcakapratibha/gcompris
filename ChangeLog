@@ -1,3 +1,9 @@
+2005-10-29  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed Maritania image reference
+
+	* boards/geography/board4_2.xml.in:
+
 2005-10-16  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Completed the guessnumber activity, including artwork
