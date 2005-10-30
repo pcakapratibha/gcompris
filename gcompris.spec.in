@@ -10,7 +10,7 @@ Summary: Educational suite for kids 2-10 years old
 Name: 		%name
 Version: 	%version
 Release: 	%rel
-Copyright: 	GPL
+License: 	GPL
 Group: 		Games/Other
 Source:		ftp://gcompris.sourceforge.net/gcompris-%{PACKAGE_VERSION}.tar.gz
 BuildRoot: 	%_tmppath/%name-%version-buildroot
@@ -26,7 +26,7 @@ Requires:	assetml-flags
 Requires:	libSDL_mixer1.2
 Requires:	libsqlite3_0
 Packager:       Bruno Coudoin <bcoudoin.coudoin@free.fr>
-URL: 		http://ofset.sf.net/gcompris
+URL: 		http://gcompris.net
 
 %description
 GCompris / I Have Understood is an educationnal game for children starting at 2.

@@ -1,6 +1,16 @@
+2005-10-30  Bruno coudoin  <bruno.coudoin@free.fr>
+
+
+
+	* configure.in: prepare for release 7.1PRE2
+	* gcompris.spec.in: fixed Coryright replaced by licence
+	* src/boards/python/login.py: Fixed, no more need pysqlite. (Thanks Klaus)
+
+	*** RELEASE 7.1.0PRE1 ***
+	
 2005-10-29  Bruno coudoin  <bruno.coudoin@free.fr>
 
-	Fixed Maritania image reference
+	Fixed Mauritania image reference
 
 	* boards/geography/board4_2.xml.in:
 
@@ -362,8 +372,6 @@
 	(read_dataset_directory):
 
 2005-10-02  Bruno coudoin  <bruno.coudoin@free.fr>
-
-	reviewed by: <delete if not using a buddy>
 
 	* config.h.mingw:
 	* configure.in:
