@@ -85,12 +85,7 @@ class Gcompris_guessnumber:
     self.gcomprisBoard.sublevel=1
     self.gcomprisBoard.number_of_sublevel=1
 
-    pixmap = gcompris.utils.load_pixmap(gcompris.skin.image_to_skin("button_reload.png"))
-    if(pixmap):
-      gcompris.bar_set_repeat_icon(pixmap)
-      gcompris.bar_set(gcompris.BAR_OK|gcompris.BAR_LEVEL|gcompris.BAR_REPEAT_ICON)
-    else:
-      gcompris.bar_set(gcompris.BAR_OK|gcompris.BAR_LEVEL|gcompris.BAR_REPEAT);
+    gcompris.bar_set(gcompris.BAR_OK|gcompris.BAR_LEVEL)
     
     gcompris.bar_set_level(self.gcomprisBoard)
 
@@ -129,7 +124,7 @@ class Gcompris_guessnumber:
     
     # When the bonus is displayed, it call us first with pause(1) and then with pause(0)
     # the game is won
-    if(pause == 0):
+    if(pause == 0 and self.gamewon):
       self.increment_level()
       self.gamewon = 0
 
@@ -187,6 +182,7 @@ class Gcompris_guessnumber:
   
   # Display the board game
   def cleanup_game(self):
+    self.gamewon = False
     if self.movestep_timer != 0:
       gtk.timeout_remove(self.movestep_timer)
       self.movestep_timer = 0
@@ -217,7 +213,7 @@ class Gcompris_guessnumber:
       # Select the number to find
       self.solution = random.randint(self.min, self.max)
     
-      text = "Guess a number between %d and %d" %(self.min, self.max)
+      text = _("Guess a number between %d and %d") %(self.min, self.max)
       
       self.rootitem.add(
           gnome.canvas.CanvasText,
@@ -325,6 +321,7 @@ class Gcompris_guessnumber:
     if str(self.solution) == text:
       self.indicator.set(text="")
       self.indicator_s.set(text="")
+      self.gamewon = True
       gcompris.bonus.display(gcompris.bonus.WIN, gcompris.bonus.TUX)
     else:
       try:
@@ -336,7 +333,7 @@ class Gcompris_guessnumber:
         widget.set_text('')
         return
 
-      if number > self.max or number == 0:
+      if number > self.max or number <= 0:
         self.indicator.set(text=_("Out of range"))
         self.indicator_s.set(text=_("Out of range"))
       else:

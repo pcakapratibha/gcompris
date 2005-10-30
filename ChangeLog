@@ -1,6 +1,39 @@
+2005-10-31  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Many bugfixes.
+	- memory: Name of section change in memory to fix the bug of memory disapearing
+	- submarine/vanne.png: Changed to be easier to catch
+	- tuxpaint: now translation aware
+	- erase: added more animal images to give more change they change at each gameplay.
+	- guessnumber: fixed pause. back from help was broken. No more accept minus numbers.
+	- hexagon: fixed pause. back from help was broken.
+	- railroad: fixed anormal speed increase
+	
+	* boards/guessnumber.xml.in: Name of section change to fix the bug of memory disapearing
+	* boards/memory.xml.in: -
+	* boards/memory_group.xml.in: -
+	* boards/memory_tux.xml.in: -
+	* boards/mosaic.xml.in: -
+	* boards/railroad.xml.in: -
+	* boards/submarine/vanne.png: Changed to be easier to catch
+	* boards/tuxpaint.xml.in: added translation aware
+	* po/POTFILES.in: added tuxpaint
+	* src/boards/erase.c: (game_won): added more animals images to give more change they change at each gameplay
+	* src/boards/python/guessnumber.py: fixed pause. back from help was broken. No more accept minus numbers.
+	* src/boards/python/hexagon.py: fixed pause. back from help was broken.
+	* src/boards/railroad.c: (reposition_model), (animate_step),
+	(animate_model): fixed anormal speed increase
+	* src/boards/wordsgame.c: (key_press), (wordsgame_read_wordfile): removed compile warnings
+	* src/gcompris/gcompris_db.c: (gcompris_db_init),
+	(gcompris_db_set_date), (gcompris_db_set_version),
+	(gcompris_db_board_update), (gcompris_db_read_board_from_section),
+	(gcompris_db_get_board_id), (gcompris_db_remove_board),
+	(gcompris_db_get_profile), (gcompris_get_user_from_id),
+	(gcompris_get_class_from_id), (gcompris_get_groups_list),
+	(gcompris_get_users_list), (gcompris_get_classes_list): removed compile warnings
+
+
 2005-10-30  Bruno coudoin  <bruno.coudoin@free.fr>
-
-
 
 	* configure.in: prepare for release 7.1PRE2
 	* gcompris.spec.in: fixed Coryright replaced by licence
