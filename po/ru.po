@@ -1,9 +1,11 @@
+# translation of ro_org.po to
 # translation of ru_my.po to
 # translation of ru.po to
 # translation of ru.po to Russian
 # Copyright (C) 2001-2002,2003, 2005 Free Software Foundation, Inc.
-# Anna Polesskaya and Kirill Polesski <rami at kaires.org>, 2003
 # Valek Filippov <frob@df.ru>, 2001-2002.
+# Anna Polesskaya and Kirill Polesski <rami at kaires.org>, 2003
+# AVL <avl.altlinux.ru>, 2004-2004.
 # Dubrovskiy Vyacheslav <dubrsl@altlinux.org>, 2005.
 #
 msgid ""
@@ -11,7 +13,7 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-17 08:51+0200\n"
-"PO-Revision-Date: 2005-10-29 16:02+0200\n"
+"PO-Revision-Date: 2005-11-02 17:21+0200\n"
 "Last-Translator: Dubrovskiy Vyacheslav <dubrsl@altlinux.org>\n"
 "Language-Team:  <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +23,7 @@ msgstr ""
 
 #: ../boards/administration.xml.in.h:1
 msgid "- In the 'Boards' section you can change the list of activities. Just untoggle them in the treeview. You can change the language used for reading, for example, then language used for saying the name of colors. - You can save multiple configurations, and switch easily. In the 'Profile' section add a profile, then in the 'Board' section select the profile in the combobox, then select the boards you want to be active. You can add lot of profiles, with different lists of boards, and different languages. You set the default profile in the 'Profile' section, by choosing the profile you want, then clicking on the 'Default' button. You can also choose a profile from the command line. - You can add users, classes and for each class, you can create groups of users. Note that you can import users from a comma-separated file. Assign one or more groups to a profile, after which those new logins will appear after restarting GCompris. Being able to identify individual children in GCompris means we can provide individual reports. It also recognizes the children as individuals; they can learn to type in, and recognize their own usernames (login is configurable)."
-msgstr "- В секции 'Игры' Вы можете изменять список доступных игр. Просто отключите их в дереве. Вы можете изменить язык, используемый для чтения, например выбрать другой язык используемый для произношения названий цветов. - Вы можете сохранять множество конфигураций, и легко их переключать. Добавьте профиль в секции 'Профиль', затем в секции 'Игры' выбирают профиль в области выбора, затем выберите игры которые будут доступны в данном профиле. Вы можете добавить несколько профилей, с различными списками игр, и на различных языках. Вы можете устанавить профиль по умолчанию в секции 'Профиля', выбирая профиль, который Вы хотите, и затем нажимая на кнопку 'По умолчанию'. Вы можете также выбрать профиль из командной строки. - Вы можете добавить пользователей, классы и для каждого класса, Вы можете создать группы пользователей. Заметьте, что Вы можете импортировать пользователей из файла. Назначьте одну или более групп на профиль, после которого те новые логины появятся после рестарта GCompris. Возможность идентифицировать детей в GCompris означает, что мы можем получить индивидуальные отчеты. Это также развивает индивидуальность у детей; они могут учиться печатать, и осознавать их собственные имена пользователя (логин)."
+msgstr "- В секции 'Игры' Вы можете изменять список доступных игр. Просто отключите их в дереве. Вы можете изменить язык, используемый для чтения, например выбрать другой язык используемый для произношения названий цветов. - Вы можете сохранять множество конфигураций, и легко их переключать. Добавьте профиль в секции 'Профиль', затем в секции 'Игры' выбирают профиль в области выбора, затем выберите игры которые будут доступны в данном профиле. Вы можете добавить несколько профилей, с различными списками игр, и на различных языках. Вы можете установить профиль по умолчанию в секции 'Профиля', выбирая профиль, который Вы хотите, и затем нажимая на кнопку 'По умолчанию'. Вы можете также выбрать профиль из командной строки. - Вы можете добавить пользователей, классы и для каждого класса, Вы можете создать группы пользователей. Заметьте, что Вы можете импортировать пользователей из файла. Назначьте одну или более групп на профиль, после которого те новые логины появятся после рестарта GCompris. Возможность идентифицировать детей в GCompris означает, что мы можем получить индивидуальные отчеты. Это также развивает индивидуальность у детей; они могут учиться печатать, и осознавать их собственные имена пользователя (логин)."
 
 #: ../boards/administration.xml.in.h:2
 msgid "GCompris Administration Menu"
@@ -29,7 +31,7 @@ msgstr "GCompris административное меню"
 
 #: ../boards/administration.xml.in.h:3
 msgid "If you want to fine tune GCompris to your needs, you can use the administration module here. The ultimate goal is to provide child-specific reporting for parents and teacher who want to monitor the progress, strengths and weakenesses of their children."
-msgstr "Если вы хотите хорошо настроить GCompris для ваших потребностей, вы можете использовать административный интерфейс. Конечная цель, это предоставить родителям и учителям отчет, которые хотят наблюдать как их дети обучяются или испытывают трудности."
+msgstr "Если вы хотите хорошо настроить GCompris для ваших потребностей, вы можете использовать административный интерфейс. Конечная цель, это предоставить родителям и учителям отчет, которые хотят наблюдать как их дети обучаются или испытывают трудности."
 
 #: ../boards/administration.xml.in.h:4
 msgid "Left-Click with the mouse to select an activity"
@@ -400,7 +402,7 @@ msgstr "Правильно расположи числа и арифметиче
 
 #: ../boards/algebra_guesscount.xml.in.h:4
 msgid "Find the series of correct operations that matches the given answer"
-msgstr "Найди правильные действия для получения заданного результата"
+msgstr "Посчитай правильно"
 
 #: ../boards/algebra_guesscount.xml.in.h:5
 msgid "The four arithmetic operations. Combine several arithmetic operations."
@@ -408,7 +410,9 @@ msgstr "Четыре арифметические операции. Исполь
 
 #: ../boards/algebra_guesscount.xml.in.h:6
 msgid "Work out the right combination of numbers and operations to match the given value"
-msgstr "Отыщи правильную комбинацию чисел и операций, приводящую к заданному результату"
+msgstr ""
+"Отыщи правильную комбинацию чисел и операций, \n"
+"для получения правильного ответа"
 
 #: ../boards/algebra_minus.xml.in.h:1
 msgid "A subtraction problem with two numbers is displayed. At the right of the equals sign, give the answer, the difference. Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
@@ -422,7 +426,7 @@ msgstr "В ограниченное время найди отличие меж�
 
 #: ../boards/algebra_minus.xml.in.h:4
 msgid "Practice the subtraction operation"
-msgstr "Упражнения на умножение"
+msgstr "Упражнения на вычитание"
 
 #: ../boards/algebra_minus.xml.in.h:5
 msgid "Simple subtraction"
@@ -452,11 +456,11 @@ msgstr "Задания по математике"
 
 #: ../boards/algorithm.xml.in.h:1
 msgid "Complete a list of symbols"
-msgstr "Заверши список символов"
+msgstr "Найди логическую последовательность расположения предметов"
 
 #: ../boards/algorithm.xml.in.h:2
 msgid "Find the next symbol in a list."
-msgstr "Найти следующий в списке символов."
+msgstr "В верхней части в определенной логической последовательности расположены предметы. В нижней части расположены возможные предметы, кликнув на который вы можете их выбрать."
 
 #: ../boards/algorithm.xml.in.h:3
 msgid "Logic training activity"
@@ -470,7 +474,7 @@ msgstr "Перемещай и щелкай мышью"
 
 #: ../boards/algorithm.xml.in.h:5
 msgid "algorithm"
-msgstr "алгоритм"
+msgstr "Алгоритм"
 
 #: ../boards/anim.xml.in.h:1
 msgid "Create a drawing or an animation"
@@ -505,7 +509,7 @@ msgstr "Выберите инструмент для рисования слев
 #: ../boards/babymatch/board6_0.xml.in.h:1
 #: ../boards/babymatch/board7_0.xml.in.h:1
 msgid "Drag and Drop the items to make them match"
-msgstr "С помощью мыши, подведи друг к другу и совмести объекты"
+msgstr "Сопоставь предметы близкие по значению"
 
 #: ../boards/babymatch.xml.in.h:2
 msgid "In the main board area, a set of objects are displayed. In the vertical box (at the left of the main board) another set of objects are shown, each one matching exactly one object in the main board area. This game challenges you to fine logical link between these objects. How do they fit together? Drag each object to the correct red space in the main area."
@@ -565,7 +569,7 @@ msgstr "Нажми две клавиши shift одновременно, что�
 
 #: ../boards/bargame.xml.in.h:1
 msgid "Brain"
-msgstr "Супермозг"
+msgstr "Логическое мышление"
 
 #: ../boards/bargame.xml.in.h:2
 msgid "Don't use the last ball"
@@ -578,11 +582,11 @@ msgstr "Упражнение на развитие логики"
 
 #: ../boards/bargame.xml.in.h:4
 msgid "Place balls in the holes. You win if the computer has to place the last ball. If you want Tux to begin, just click on him."
-msgstr "Попадите мячем в отверстие. Вы выиграете, если компьютер попадет последним. Если вы хотите, чтобы Тукс начал первым, кликните по нему."
+msgstr "Ходят по очереди. Укажите количество луз, которые вы хотите закрыть. Проигрывает тот, кто ходит последним. Если вы хотите, чтобы Тукс начал первым, кликните по нему."
 
 #: ../boards/bargame.xml.in.h:5
 msgid "bar game"
-msgstr "Биллиард"
+msgstr "Последний шар"
 
 #: ../boards/billard.xml.in.h:1
 msgid "Kick the ball into the black hole on the right"
@@ -628,8 +632,8 @@ msgid ""
 "Tux is in trouble, and needs to take his boat through a lock.\n"
 "Help Tux and find out how a canal lock works."
 msgstr ""
-"У Тукса на корабле возникли проблемы, ему нужно пройти через шлюз. Помоги \n"
-"Туксу и узнай, как работает шлюз."
+"Помоги Туксу провести корабль через шлюз \n"
+"и узнай, как он работает."
 
 #: ../boards/canal_lock.xml.in.h:4
 msgid "You are in charge of the canal lock. Open the gates and the locks in the right order, so Tux can travel through the gates in both directions."
@@ -644,7 +648,7 @@ msgstr "Сыграй в шахматы с компьютером в обучаю
 
 #: ../boards/chess.xml.in.h:2
 msgid "Practice chess"
-msgstr "Попрактикуйся в шахматах"
+msgstr "Шахматы"
 
 #: ../boards/chess_computer.xml.in.h:1
 #: ../boards/chess_movelearn.xml.in.h:2
@@ -668,7 +672,7 @@ msgstr "Закончи шахматную партию против компью
 
 #: ../boards/chronos.xml.in.h:1
 msgid "Chronos"
-msgstr "Часы"
+msgstr "Время"
 
 #: ../boards/chronos.xml.in.h:2
 msgid "Drag and Drop the items to organize the story"
@@ -688,7 +692,7 @@ msgstr "Расположи рисунки так, чтобы рассказат�
 
 #: ../boards/chronos.xml.in.h:6
 msgid "Tell a short story"
-msgstr "Расскажи короткую историю"
+msgstr "Умение представлять и рассказывать истории"
 
 #: ../boards/chronos/board1_0.xml.in.h:1
 msgid "Moonwalker"
@@ -901,11 +905,13 @@ msgstr "Рыба взята из юникс утилиты xfishtank. Изобр
 msgid ""
 "Left-Click with the mouse on all the swimming fish\n"
 "before they leave the fishtank"
-msgstr "Щёлкай левой кнопкой мыши по всем плавающим рыбкам пока они не уплыли из аквариума"
+msgstr ""
+"Щёлкай левой кнопкой мыши по всем плавающим рыбкам\n"
+"пока они не уплыли из аквариума"
 
 #: ../boards/clickgame.xml.in.h:16
 msgid "Motor coordination: moving and clicking the mouse."
-msgstr "Моторная координация.  перемещение и щелчок мыши."
+msgstr "Не допустить чтобы рыбки уплыли."
 
 #: ../boards/clickgame.xml.in.h:18
 msgid "Use the left mouse button to click on the moving fish."
@@ -929,7 +935,7 @@ msgstr "Установите часы в данное время, в показ�
 
 #: ../boards/clockgame.xml.in.h:5
 msgid "The concept of time. Reading the time."
-msgstr "Концепция времени. Чтение времени."
+msgstr "Понимание времени."
 
 #: ../boards/colors.xml.in.h:1
 msgid "Can move the mouse."
@@ -961,21 +967,21 @@ msgstr "Изучение компьютера"
 
 #: ../boards/connect4.xml.in.h:1
 msgid "Arrange four coins in a row"
-msgstr "Расположите четыре монеты в ряд"
+msgstr "Расположите четыре шара в ряд"
 
 #: ../boards/connect4.xml.in.h:2
 msgid "Click anywhere in the line in which you want to drop a piece"
-msgstr "Кликните на линии которую ты хочешь переместить на участок"
+msgstr "Кликните на линии в которую ты хочешь поместить шар"
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
-msgstr "Соединение 4"
+msgstr "4 в линию"
 
 #: ../boards/connect4.xml.in.h:4
 msgid ""
 "Create a line of 4 pieces either horizontally (lying down)\n"
 "or vertically (standing up)"
-msgstr "Создайте линию из 4 участков. Из двух горизонтальных или вертикальных линий"
+msgstr "Создайте линию из 4 шаров. Из двух горизонтальных или вертикальных линий"
 
 #: ../boards/connect4.xml.in.h:6
 msgid "Laurent Lacheny. Images and Artificial Intelligence taken from project 4stattack by Jeroen Vloothuis. The original project can be found on &lt;http://forcedattack.sourceforge.net&gt;"
@@ -1063,12 +1069,12 @@ msgstr "Моторная координация"
 #: ../src/boards/erase.c:83
 #: ../src/boards/machpuzzle.c:93
 msgid "Move the mouse"
-msgstr "Переместить мышь"
+msgstr "Движения мышкой"
 
 #: ../boards/erase.xml.in.h:5
 #: ../src/boards/erase.c:84
 msgid "Move the mouse to erase the area and discover the background"
-msgstr "Передвигать мышь до полного удаления области и освобождения фона"
+msgstr "Двигать мышкой для того, чтобы очистить и посмотреть картинку"
 
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
@@ -1076,7 +1082,7 @@ msgstr "Двигай мышью, пока все блоки не откроют�
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
-msgstr "Перемещай и щелкай мышью"
+msgstr "Двигай и щелкай мышкой"
 
 #: ../boards/erase_clic.xml.in.h:3
 msgid "Click the mouse on rectangles until all the blocks disappear."
@@ -1092,7 +1098,7 @@ msgstr "Передвигать мышь до полного удаления о�
 
 #: ../boards/erase_double_clic.xml.in.h:3
 msgid "Double-click the mouse"
-msgstr "Перемещай и щелкай мышью"
+msgstr "Двигай и щелкай мышкой"
 
 #: ../boards/erase_double_clic.xml.in.h:4
 msgid "Double-click the mouse on rectangles until all the blocks disappear."
@@ -1110,7 +1116,9 @@ msgstr ""
 
 #: ../boards/fifteen.xml.in.h:3
 msgid "Move each item to make an increasing series: from the smallest to the largest"
-msgstr "Двигай каждый предмет чтобы выстроить по возрастанию от самого маленького к самому большому"
+msgstr ""
+"Двигай каждый квадратик так, чтобы выстроить цифры\n"
+"по возрастанию от 1 до 15"
 
 #: ../boards/fifteen.xml.in.h:4
 msgid "Original code taken from the libgnomecanvas demo"
@@ -1186,7 +1194,7 @@ msgstr "Инструмент для рисования и анимации"
 
 #: ../boards/geography.xml.in.h:1
 msgid "Drag and Drop the items to redraw the whole map"
-msgstr "Перетаскивать предметы до полного заполнения карты"
+msgstr "Перетаскивать образы стран до полного заполнения карты"
 
 #: ../boards/geography.xml.in.h:2
 msgid "Locate the countries"
@@ -1268,7 +1276,7 @@ msgstr "Мексика"
 
 #: ../boards/geography/board2_0.xml.in.h:11
 msgid "North America"
-msgstr "Северная америка"
+msgstr "Северная Америка"
 
 #: ../boards/geography/board2_0.xml.in.h:12
 msgid "United States of America"
@@ -1300,7 +1308,7 @@ msgstr "Эквадор"
 
 #: ../boards/geography/board2_1.xml.in.h:7
 msgid "French Guiana"
-msgstr "Французская гвинея"
+msgstr "Французская Гвинея"
 
 #: ../boards/geography/board2_1.xml.in.h:8
 msgid "Guyana"
@@ -1320,11 +1328,11 @@ msgstr "Перу"
 
 #: ../boards/geography/board2_1.xml.in.h:12
 msgid "South America"
-msgstr "Южная америка"
+msgstr "Южная Америка"
 
 #: ../boards/geography/board2_1.xml.in.h:13
 msgid "Suriname"
-msgstr "Суринами"
+msgstr "Суринаме"
 
 #: ../boards/geography/board2_1.xml.in.h:14
 msgid "Uruguay"
@@ -1332,7 +1340,7 @@ msgstr "Уругвай"
 
 #: ../boards/geography/board2_1.xml.in.h:15
 msgid "Venezuela"
-msgstr "Венисуела"
+msgstr "Венесуэла"
 
 #: ../boards/geography/board3_0.xml.in.h:1
 msgid "Austria"
@@ -1396,7 +1404,7 @@ msgstr "Нидерланды"
 
 #: ../boards/geography/board3_0.xml.in.h:17
 msgid "United Kingdom"
-msgstr "Объединенное королество"
+msgstr "Объединенное королевство"
 
 #: ../boards/geography/board3_0.xml.in.h:18
 msgid "Western Europe"
@@ -1412,7 +1420,7 @@ msgstr "Беларусь"
 
 #: ../boards/geography/board3_1.xml.in.h:3
 msgid "Bosnia Herzegovina"
-msgstr "Босния герцеговина"
+msgstr "Босния Герцеговина"
 
 #: ../boards/geography/board3_1.xml.in.h:4
 msgid "Bulgaria"
@@ -1481,7 +1489,7 @@ msgstr "Сербия"
 
 #: ../boards/geography/board3_1.xml.in.h:20
 msgid "Slovak Republic"
-msgstr "Словатская республика"
+msgstr "Словацкая республика"
 
 #: ../boards/geography/board3_1.xml.in.h:21
 msgid "Slovenia"
@@ -1501,7 +1509,7 @@ msgstr "Северная Африка"
 
 #: ../boards/geography/board4_1.xml.in.h:1
 msgid "Southern Africa"
-msgstr "Южная америка"
+msgstr "Южная Америка"
 
 #: ../boards/geography/board4_2.xml.in.h:2
 msgid "Algeria"
@@ -1549,7 +1557,7 @@ msgstr "Джибути"
 
 #: ../boards/geography/board4_2.xml.in.h:13
 msgid "Egypt"
-msgstr "Египт"
+msgstr "Египет"
 
 #: ../boards/geography/board4_2.xml.in.h:14
 msgid "Equatorial Guinea"
@@ -1605,7 +1613,7 @@ msgstr "Ливия"
 
 #: ../boards/geography/board4_2.xml.in.h:27
 msgid "Madagascar"
-msgstr "Мадагоскар"
+msgstr "Мадагаскар"
 
 #: ../boards/geography/board4_2.xml.in.h:28
 msgid "Malawi"
@@ -1621,7 +1629,7 @@ msgstr "Мавритания"
 
 #: ../boards/geography/board4_2.xml.in.h:31
 msgid "Morocco"
-msgstr "Морокко"
+msgstr "Марокко"
 
 #: ../boards/geography/board4_2.xml.in.h:32
 msgid "Mozambique"
@@ -1645,11 +1653,11 @@ msgstr "Руанда"
 
 #: ../boards/geography/board4_2.xml.in.h:37
 msgid "Senegal"
-msgstr "Синегал"
+msgstr "Сенегал"
 
 #: ../boards/geography/board4_2.xml.in.h:38
 msgid "Sierra Leone"
-msgstr "Сиера Лионе"
+msgstr "Сьерра Лионе"
 
 #: ../boards/geography/board4_2.xml.in.h:39
 msgid "Somalia"
@@ -1657,7 +1665,7 @@ msgstr "Сомали"
 
 #: ../boards/geography/board4_2.xml.in.h:40
 msgid "South Africa"
-msgstr "Южная америка"
+msgstr "Южная Америка"
 
 #: ../boards/geography/board4_2.xml.in.h:41
 msgid "Swaziland"
@@ -1809,7 +1817,7 @@ msgstr ""
 
 #: ../boards/guessnumber.xml.in.h:4
 msgid "Numbers from 1 to 1000 for the last level."
-msgstr "Посчитай от 1 до 1000 для прохождения на следующийц уровень."
+msgstr "Посчитай от 1 до 1000 для прохождения на следующий уровень."
 
 #: ../boards/guessnumber.xml.in.h:5
 msgid "Read the instructions that give you the range of the number to find. Enter a number in the top right blue entry box. Tux tell you if your number is higher or lower. Then enter another number. The distance between Tux and the escape area on the right represents how far you are from the right number. If Tux is above or under the escape area, it means your number is higher or under the right number."
@@ -1836,7 +1844,7 @@ msgstr "Повтори башню справа на пустом месте сл
 #: ../boards/hanoi.xml.in.h:6
 #: ../src/boards/hanoi.c:100
 msgid "Simplified Tower of Hanoi"
-msgstr "Упрощеная ханойская башня"
+msgstr "Упрощенная ханойская башня"
 
 #: ../boards/hanoi_real.xml.in.h:2
 msgid "Mouse manipulation"
@@ -1848,7 +1856,7 @@ msgstr "Повтори башню справа на пустом месте сл
 
 #: ../boards/hanoi_real.xml.in.h:4
 msgid "The Tower of Hanoi"
-msgstr "Упрощеная ханойская башня"
+msgstr "Упрощенная ханойская башня"
 
 #: ../boards/hanoi_real.xml.in.h:5
 msgid "The object of the game is to move the entire stack to another peg, obeying the following rules: * only one disc may be moved at a time * no disc may be placed atop a smaller disc"
@@ -1868,7 +1876,7 @@ msgstr "Попробуй найти земляничку под голубым �
 
 #: ../boards/hexagon.xml.in.h:5
 msgid "hexagon"
-msgstr "шестиугольник"
+msgstr "Шестиугольник"
 
 #: ../boards/imageid.xml.in.h:1
 msgid "Click on the word corresponding to the printed image."
@@ -1876,7 +1884,7 @@ msgstr "Щёлкните на слове соответствующем пока
 
 #: ../boards/imageid.xml.in.h:2
 msgid "Practice reading by finding the word matching an image"
-msgstr "Практика чтения в процессе поиска слов, соотносящихся с изображением"
+msgstr "Практика чтения слов, соответствующих изображению"
 
 #: ../boards/imageid.xml.in.h:3
 #: ../boards/imagename.xml.in.h:4
@@ -1932,7 +1940,7 @@ msgstr "бутылка"
 
 #: ../boards/imageid/board1.xml.in.h:10
 msgid "cake"
-msgstr "пирожок"
+msgstr "торт"
 
 #: ../boards/imageid/board1.xml.in.h:11
 msgid "camel"
@@ -1986,7 +1994,7 @@ msgstr "самолет"
 
 #: ../boards/imageid/board1.xml.in.h:23
 msgid "satchel"
-msgstr "ранец"
+msgstr "сумка"
 
 #: ../boards/imagename.xml.in.h:1
 #: ../boards/imagename/board1_0.xml.in.h:1
@@ -2008,7 +2016,7 @@ msgstr "Название изображения"
 
 #: ../boards/imagename.xml.in.h:5
 msgid "Vocabulary and reading"
-msgstr "Чтение и словарный запас"
+msgstr "Расположить картинки над соответствующими словами"
 
 #: ../boards/imagename/board1_0.xml.in.h:2
 msgid "bulb"
@@ -2016,7 +2024,7 @@ msgstr "лампочка"
 
 #: ../boards/imagename/board1_0.xml.in.h:3
 msgid "fishing boat"
-msgstr "траулер"
+msgstr "катер"
 
 #: ../boards/imagename/board1_0.xml.in.h:4
 msgid "lamp"
@@ -2160,7 +2168,7 @@ msgstr "Найди свою левую и правую руки"
 #: ../boards/leftright.xml.in.h:4
 #: ../boards/railroad.xml.in.h:4
 msgid "None"
-msgstr "Ничего"
+msgstr "Нет"
 
 #: ../boards/leftright.xml.in.h:5
 msgid "You can see a hand: is it a left hand or a right hand? Click on the red button on the left, or the green button on the right."
@@ -2178,7 +2186,7 @@ msgstr "Можно использовать стрелки на клавиату
 #: ../boards/maze.xml.in.h:2
 #: ../src/boards/maze.c:133
 msgid "Find your way out of the maze"
-msgstr "Найти выход из лабиринта"
+msgstr "Найди выход из лабиринта"
 
 #: ../boards/maze.xml.in.h:3
 #: ../boards/maze2DRelative.xml.in.h:3
@@ -2200,11 +2208,11 @@ msgstr "Используя стрелки на клавиатуре передв
 
 #: ../boards/maze2DRelative.xml.in.h:2
 msgid "Find your way out of the maze (Move is relative)"
-msgstr "Найти выход из лабиринта"
+msgstr "Найди выход из лабиринта"
 
 #: ../boards/maze2DRelative.xml.in.h:5
 msgid "Use the keyboard arrows to move Tux up to the door. In this maze, the move is relative (first person). Use the up arrow to go forward. The other arrow let you turn Tux in another direction."
-msgstr "Используйте стрелки на клавиатуре для движения Тукса вверх к двери. В этом лаберинте движения от первого лица. Используйте стрелочку вверх для движения вперед. Другие стрелочки позволяют поворачивать Тукса в другие направления."
+msgstr "Используйте стрелки на клавиатуре для движения Тукса вверх к двери. В этом лабиринте движения от первого лица. Используйте стрелочку вверх для движения вперед. Другие стрелочки позволяют поворачивать Тукса в другие направления."
 
 #: ../boards/maze3D.xml.in.h:1
 msgid "3D Maze"
@@ -2212,23 +2220,23 @@ msgstr "3D Лабиринт"
 
 #: ../boards/maze3D.xml.in.h:3
 msgid "Find your way out of the 3D maze"
-msgstr "Найти выход из 3D лабиринта"
+msgstr "Найди выход из 3D лабиринта"
 
 #: ../boards/maze3D.xml.in.h:5
 msgid "Use the keyboard arrows to move Tux up to the door. Use the spacebar to switch between 2D and 3D modes. 2D mode just gives you an indication of your position, like a map. You cannot move Tux in 2D mode."
-msgstr "Используя стрелки на клавиатуре, перемести пингвиненка Тукса к дверям.Используй пробел для преключения между 2D и 3D режимами. 2D режим позволяет отобразить свою позицию, как на карте. В 2D режиме перемещаться нельзя."
+msgstr "Используя стрелки на клавиатуре, перемести пингвиненка Тукса к дверям.Используй пробел для переключения между 2D и 3D режимами. 2D режим позволяет отобразить свою позицию, как на карте. В 2D режиме перемещаться нельзя."
 
 #: ../boards/mazeInvisible.xml.in.h:2
 msgid "Find your way out of the invisible maze"
-msgstr "Найти выход из 3D лабиринта"
+msgstr "Найди выход из невидимого лабиринта"
 
 #: ../boards/mazeInvisible.xml.in.h:5
 msgid "Use the keyboard arrows to move Tux up to the door. Use the spacebar to switch between invisible and visible modes. Visible mode just gives you an indication of your position, like a map. You cannot move Tux in visible mode."
-msgstr "Используя стрелки на клавиатуре, перемести пингвиненка Тукса к дверям.Используй пробел для преключения между 2D и 3D режимами. 2D режим позволяет отобразить свою позицию, как на карте. В 2D режиме перемещаться нельзя."
+msgstr "Используя стрелки на клавиатуре, перемести пингвиненка Тукса к дверям.Используй пробел для переключения между видимым и невидимым режимами. Видимый режим позволяет отобразить свою позицию, как на карте. В видимом режиме перемещаться нельзя."
 
 #: ../boards/mazeMenu.xml.in.h:1
 msgid "Find your way out different type of mazes"
-msgstr "Найти выход из лабиринта"
+msgstr "Найди выход из лабиринта"
 
 #: ../boards/mazeMenu.xml.in.h:2
 msgid "Go to Maze activities"
@@ -2256,14 +2264,14 @@ msgstr "Повтори мелодию"
 msgid "A set of blank cards is shown. Each card has a picture on the other side, and each picture card has a twin exactly the same. Click on a card to see its hidden picture, and try to match the twins. You can only turn over two cards at once, so you need to remember where a picture is, while you look for its twin. When you turn over the twins, they both disappear."
 msgstr ""
 "Показан набор карт. Каждая карта имеет пару с таким же рисунком на обратной стороне. \n"
-"При щелчке по карте, она переворачивается и показвает обратную сторону. \n"
+"При щелчке по карте, она переворачивается и показывает обратную сторону. \n"
 "Но вы можете видеть только две перевернутые карты одновременно.\n"
 "Вы должны запоминать позиции скрытых изображений.\n"
 "Для удаления пары одинаковых карт, откройте их обе."
 
 #: ../boards/memory.xml.in.h:2
 msgid "Flip the cards to find the matching pairs"
-msgstr "Открывать карты и находитьсопадающие пары"
+msgstr "Открывать карты и находить совпадающие пары"
 
 #: ../boards/memory.xml.in.h:3
 msgid "Memory Game with images"
@@ -2282,7 +2290,7 @@ msgstr "Задания по математике"
 msgid "A set of blank cards is shown. Each pair is associated by the same picture in their hidden faces. Click on a card to can uncover it and see its hidden picture. However, you can only see two hidden pictures at once. You have to remember the position of the pictures to associate them. To remove a pair of cards, uncover both of them. You play alternatively with Tux, and must take more pairs of cards than him."
 msgstr ""
 "Показан набор карт. Каждая карта имеет пару с таким же рисунком на обратной стороне. \n"
-"При щелчке по карте, она переворачивается и показвает обратную сторону. \n"
+"При щелчке по карте, она переворачивается и показывает обратную сторону. \n"
 "Но вы можете видеть только две перевернутые карты одновременно.\n"
 "Вы должны запоминать позиции скрытых изображений.\n"
 "Для удаления пары одинаковых карт, откройте их обе."
@@ -2505,15 +2513,15 @@ msgstr "самолет/само_ет/л/ч/д"
 
 #: ../boards/missing_letter/board1.xml.in.h:34
 msgid "satchel/_atchel/s/c/l"
-msgstr "ранец/_анец/р/т/б"
+msgstr "сумка/_сумка/с/т/б"
 
 #: ../boards/missing_letter/board1.xml.in.h:35
 msgid "satchel/s_tchel/a/o/i"
-msgstr "ранец/р_нец/а/ы/о"
+msgstr "сумка/с_мка/у/ы/о"
 
 #: ../boards/missing_letter/board1.xml.in.h:36
 msgid "satchel/sa_chel/t/p/c"
-msgstr "ранец/ра_ец/н/л/к"
+msgstr "сумка/су_ка/м/л/к"
 
 #: ../boards/money.xml.in.h:1
 #: ../boards/money_cents.xml.in.h:1
@@ -2555,11 +2563,11 @@ msgstr "Игры для развития контроля мыши"
 
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
-msgstr "Собери головоломку"
+msgstr "Собери рисунок"
 
 #: ../boards/paintings.xml.in.h:2
 msgid "Drag and Drop the items to rebuild the original paintings"
-msgstr "Перетаскивать предметы до восстановления оригинального рисунка"
+msgstr "Перетаскивай кусочки рисунка для получения полного изображения"
 
 #: ../boards/paintings.xml.in.h:3
 msgid "Drag the image parts from the box on the left to create a painting on the main board."
@@ -2615,7 +2623,7 @@ msgstr "Нажми любую клавишу, чтобы пингвиненок 
 
 #: ../boards/paratrooper.xml.in.h:3
 msgid "In this game, Tux the parachutist needs help to land safely on the fishing boat. He needs to allow for the wind direction and speed."
-msgstr "В этой игре, Туксу-парашютисту требуется помощь, чтобы благополучно приземлиться на траулер. Тебе необходимо учитывать направление и скорость ветра."
+msgstr "В этой игре, Туксу-парашютисту требуется помощь, чтобы благополучно приземлиться на катер. Тебе необходимо учитывать направление и скорость ветра."
 
 #: ../boards/paratrooper.xml.in.h:4
 msgid "Parachutist"
@@ -2631,7 +2639,9 @@ msgstr "Поймайте числа в увеличивающемся поряд
 
 #: ../boards/planegame.xml.in.h:2
 msgid "Move the helicopter to catch the clouds in the correct order"
-msgstr "Перемещайте вертолет так чтобы поймать облака в правильном порядке"
+msgstr ""
+"Перемещайте вертолет так чтобы поймать облака\n"
+"в правильном порядке"
 
 #: ../boards/planegame.xml.in.h:3
 msgid "Number"
@@ -2672,7 +2682,7 @@ msgstr ""
 "Поезд - локомотив и вагоны, отображается вверху экрана на несколько секунд.\n"
 "Теперь, вы должны составить такой же поезд, выбирая нужные вагоны и локомотив.\n"
 "Вы можете отменить выбор любого элемента, щелкнув по нему.\n"
-"Проверьте свой варинт, щелкнув по значку руки внизу экрана."
+"Проверьте свой вариант, щелкнув по значку руки внизу экрана."
 
 #: ../boards/railroad.xml.in.h:3
 msgid "Memory-training"
@@ -2749,7 +2759,7 @@ msgstr "Упражнения на чтение"
 #: ../boards/readingh.xml.in.h:1
 #: ../boards/readingv.xml.in.h:1
 msgid "A word is shown at the top right of the board. A list of words will appear and disappear on the left. Does the given word belong to the list?"
-msgstr "Слово показывается сверху-справа. Список слов показывается и прячется слева.Ответьте, было ли или не было данное слово в списке?"
+msgstr "Слово показывается в вверху-справа. Список слов показывается и прячется слева.Ответьте, было ли или не было данное слово в списке?"
 
 #: ../boards/readingh.xml.in.h:2
 msgid "Horizontal reading practice"
@@ -2776,12 +2786,12 @@ msgstr "Чтение по-вертикали"
 
 #: ../boards/redraw.xml.in.h:1
 msgid "Copy a drawing from the box on the right into the box on the left."
-msgstr "Повтори рисунок в правой части в левой части."
+msgstr "Повтори рисунок из правой области в левую область."
 
 #: ../boards/redraw.xml.in.h:2
 #: ../boards/redraw_symmetrical.xml.in.h:4
 msgid "First, select the proper tool from the toolbar. Then drag the mouse to create objects. When you are done, click on the OK button. Errors will be marked with a little red cross. The order of objects (above/under) is not important but be careful not to end up with unwanted objects under others."
-msgstr "Сначала, выбери правильный инструмент в панели инструментов. Затем, перетаскива мышь, чтобы создать объект. Когда закончишь, щелкни по кнопке ОК. Ошибки будут отмечены небольшим красным крестиком. Порядок объектов (сверху/снизу) не важен, но будь внимателен, чтобы под объектами не оказалось других ненужных объектов."
+msgstr "Сначала, выбери правильный инструмент в панели инструментов. Затем, перетаскивай мышь, чтобы создать объект. Когда закончишь, щелкни по кнопке ОК. Ошибки будут отмечены небольшим красным крестиком. Порядок объектов (сверху/снизу) не важен, но будь внимателен, чтобы под объектами не оказалось других ненужных объектов."
 
 #: ../boards/redraw.xml.in.h:3
 msgid "Redraw the given item"
@@ -2791,11 +2801,11 @@ msgstr "Перерисовать данный предмет"
 msgid ""
 "Copy the mirror image of an object from the box\n"
 "on the right into the box on the left."
-msgstr "Скопируйте зеркальное отражение объекта из бокса справа в бокс слева."
+msgstr "Повтори рисунок из правой области в левую в зеркальном отражении."
 
 #: ../boards/redraw_symmetrical.xml.in.h:3
 msgid "Copy the mirror image of an object from the box on the right into the box on the left."
-msgstr "Скопируйте зеркальное отражение объекта из бокса справа в бокс слева."
+msgstr "Повтори рисунок из правой области в левую в зеркальном отражении."
 
 #: ../boards/redraw_symmetrical.xml.in.h:5
 msgid "Mirror the given item"
@@ -2808,7 +2818,7 @@ msgstr "Умение перемещать мышь, читать числа и �
 #: ../boards/reversecount.xml.in.h:2
 msgid "Click on the dice to show how many ice spots there are between Tux and the fish. Click the dice with the right mouse button to count backwards. When done, click on the OK button or hit the Enter key."
 msgstr ""
-"Щелкай по кубику, чтобы показать, сколько льдышек между Туксом и рыбкой.\n"
+"Щелкай по кубику, чтобы показать, сколько ледышек между Туксом и рыбкой.\n"
 "Также можно пользоваться правой кнопкой для обратного счета.\n"
 "Когда закончите, щелкните по кнопке OK или клавише enter."
 
@@ -2818,7 +2828,9 @@ msgstr "Упражнения на вычитание в виде игры"
 
 #: ../boards/reversecount.xml.in.h:4
 msgid "Tux is hungry. Help him find fish by counting to the correct ice spot."
-msgstr "Тукс голоден. Помоги ему найти рыбок, подсчитывая льдины на пути к ним."
+msgstr ""
+"Тукс голоден. Помоги ему найти рыбок, \n"
+"подсчитывая льдины на пути к ним."
 
 #: ../boards/scales/board1_0.xml.in.h:1
 #: ../boards/scales/board1_1.xml.in.h:1
@@ -2861,16 +2873,16 @@ msgstr ""
 msgid "To balance the scales, move the masses on the left side. The masses can be arranged in any order."
 msgstr ""
 "Чтобы уравновесить весы,·перемещай гири в левой части.\n"
-"Гири могут распологаться в любом порядке."
+"Гири могут располагаться в любом порядке."
 
 #: ../boards/searace.xml.in.h:1
 msgid "Direct your boat accurately to win the race."
-msgstr "Направляйте вашу лодку точно, чтобы выиграть гонку."
+msgstr "Управляйте вашей лодкой, чтобы выиграть регату."
 
 #: ../boards/searace.xml.in.h:2
 #: ../boards/searace1player.xml.in.h:2
 msgid "In the text entry, enter one command per line, to control your boat. Commands supported are displayed between the two entry areas. The 'left' and 'right' commands must be followed by an angle in degrees. The angle value is also called a 'parameter' to the left or right command. By default 45 degrees is used. The 'forward' command accepts a distance parameter. By default 1 is used. For example: left 90 => Make a perpendicular left turn forward 10 => Go forward for 10 units (as displayed on the ruler). The goal is to reach the right of the screen (the red line). When done, you can try to improve your program and start a new race with the same weather conditions by using the retry button. You can click and drag your mouse anywhere on the map to get a measurement in distance and angle. Going to the next level will give you more complex weather conditions."
-msgstr "В месте ввода команд, введите одну команду на линию, для управления вашей лодкой. Возможные команды показаны между двумя областями ввода. \"Влево\" и \"Вправо\" команды должны оканчиваться углом в градусах. Угол также называют \"параметром\" для команд \"влево\" или \"вправо\". По умолчанию используется 45 градусов. Параметр для командаы \"Вперед\"- расстояние. По умолчанию используется 1. Например: \"Влево 90\" => поворачивает перпендикулярно, \"Вперед 10\" => перемещается на10 единиц вперед (как показано на линейке). Цель состоит в том, чтобы достигнуть правого края экрана (красная линия). Когда закончите, Вы можете повторить гонку для улучшения вашей программы в тех же самых погодных условях при использовании кнопки повторения. Вы можете щелкнуть на карте и тянуть мышью, чтобы измерить расстояние или угол.  Следующий уровень даст Вам более сложные погодные условия."
+msgstr "В месте ввода команд, введите одну команду на линию, для управления вашей лодкой. Возможные команды показаны между двумя областями ввода. \"Влево\" и \"Вправо\" команды должны оканчиваться углом в градусах. Угол также называют \"параметром\" для команд \"влево\" или \"вправо\". По умолчанию используется 45 градусов. Параметр для команды \"Вперед\"- расстояние. По умолчанию используется 1. Например: \"Влево 90\" => поворачивает перпендикулярно, \"Вперед 10\" => перемещается на10 единиц вперед (как показано на линейке). Цель состоит в том, чтобы достигнуть правого края экрана (красная линия). Когда закончите, Вы можете повторить гонку для улучшения вашей программы в тех же самых погодных условиях при использовании кнопки повторения. Вы можете щелкнуть на карте и тянуть мышью, чтобы измерить расстояние или угол.  Следующий уровень даст Вам более сложные погодные условия."
 
 #: ../boards/searace.xml.in.h:3
 #: ../boards/searace1player.xml.in.h:3
@@ -2883,7 +2895,7 @@ msgstr "Морская регата (2 игрока)"
 
 #: ../boards/searace1player.xml.in.h:1
 msgid "Give good instructions to your ship in order to be first in the race."
-msgstr "Давайте хорошие команды Вашим кораблям чтобы выиграть регату."
+msgstr "Управляйте вашей лодкой, чтобы выиграть регату."
 
 #: ../boards/searace1player.xml.in.h:4
 msgid "Sea race (Single Player)"
@@ -2892,7 +2904,9 @@ msgstr "Морская регата (Один игрок)"
 #: ../boards/smallnumbers.xml.in.h:1
 #: ../boards/smallnumbers2.xml.in.h:1
 msgid "Count the number of dots on dice before they reach the ground"
-msgstr "Посчитай количество точек на кубике до того, как он упадет на землю"
+msgstr ""
+"Посчитай количество точек на кубике до того,\n"
+"как он упадет на землю"
 
 #: ../boards/smallnumbers.xml.in.h:2
 #: ../boards/smallnumbers2.xml.in.h:2
@@ -2919,11 +2933,7 @@ msgstr "Парные числа для игры в кости"
 
 #: ../boards/submarine.xml.in.h:1
 msgid "Click on different active elements : engine, rudders and air tanks, in order to navigate to the required depth."
-msgstr ""
-"Щелкайте по разным активным элементам: \n"
-"двигатель, рули и воздушные цисцерны \n"
-" в том порядке, в котором это приведет \n"
-"к правильной навигации на заданной глубине."
+msgstr "Щелкайте по разным активным элементам: двигатель, рули и воздушные цистерны  в том порядке, в котором это приведет к правильной навигации на заданной глубине."
 
 #: ../boards/submarine.xml.in.h:2
 msgid "Learn how a submarine works"
@@ -2939,7 +2949,9 @@ msgstr "Управлять подводной лодкой"
 
 #: ../boards/submarine.xml.in.h:5
 msgid "Pilot a submarine using air tanks and dive rudders"
-msgstr "Управлять подводной лодкой используя воздушные цисцерны и рули погружения"
+msgstr ""
+"Управлять подводной лодкой используя воздушные \n"
+"цистерны и рули погружения"
 
 #: ../boards/sudoku.xml.in.h:1
 msgid "Completing the puzzle requires patience and logical ability"
@@ -2955,7 +2967,9 @@ msgstr "Судоку, введите уникальные символы в кв
 
 #: ../boards/sudoku.xml.in.h:4
 msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
-msgstr "Символы должны быть уникальны в строке, в колонке, и (если определено) в каждом регионе."
+msgstr ""
+"Символы должны быть уникальны в строке, в колонке,\n"
+"и (если определено) в каждом регионе."
 
 #: ../boards/sudoku.xml.in.h:5
 msgid "The aim of the puzzle is to enter a symbol or numeral from 1 through 9 in each cell of a grid, most frequently a 9x9 grid made up of 3x3 subgrids (called 'regions'), starting with various symbols or numerals given in some cells (the 'givens'). Each row, column and region must contain only one instance of each symbol or numeral (Source &lt;http://en.wikipedia.org/wiki/Sudoku&gt;)."
@@ -2963,13 +2977,7 @@ msgstr "Цель головоломки состоит в том, чтобы в�
 
 #: ../boards/superbrain.xml.in.h:1
 msgid "Click on the items until you find what you think is the correct answer. Then, click on the OK button in the control bar. In the lower levels, Tux gives you an indication if you found a hiding place by marking the item with a black box. You can use the right mouse button to flip the colors in the opposite order."
-msgstr ""
-"Щелкни по элементам, пока вы не найдете, что это правильный вариант.\n"
-"Теперь щелчок по кнопке OK на панели управления.\n"
-"На простых уровнях Тукс отмечает элемент черным квадратиком, \n"
-"если вы попали на правильную позицию.\n"
-"Также можно использовать правую кнопку мыши для переключения цветов\n"
-" в обратном порядке."
+msgstr "Щелкни по элементам, пока вы не найдете, что это правильный вариант. Теперь щелчок по кнопке OK на панели управления. На простых уровнях Тукс отмечает элемент черным квадратиком, если вы попали на правильную позицию. Также можно использовать правую кнопку мыши для переключения цветов в обратном порядке."
 
 #: ../boards/superbrain.xml.in.h:2
 #: ../src/boards/superbrain.c:110
@@ -2979,7 +2987,9 @@ msgstr "Супермозг"
 #: ../boards/superbrain.xml.in.h:3
 #: ../src/boards/superbrain.c:111
 msgid "Tux has hidden several items. Find them again in the correct order"
-msgstr "Тукс спрятал несколько предметов. Найди и расставь их в правильном порядке"
+msgstr ""
+"Тукс спрятал несколько предметов.\n"
+"Найди и расставь их в правильном порядке"
 
 #: ../boards/target.xml.in.h:1
 msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
@@ -3016,7 +3026,7 @@ msgid ""
 "Remove all the red cars from the parking lot\n"
 "through the gate on the right"
 msgstr ""
-"Убери все красные машины с поля \n"
+"Убери все красные блоки с поля\n"
 "через ворота справа"
 
 #: ../boards/watercycle.xml.in.h:1
@@ -3173,7 +3183,6 @@ msgstr "абвгдеёжзийклмнопрстуфхцчшщэюя"
 
 #: ../src/boards/click_on_letter.c:270
 #, c-format
-#, fuzzy
 msgid ""
 "Error: this activity requires that you first install\n"
 "the packages assetml-voices-alphabet-%s or %s"
@@ -3183,7 +3192,6 @@ msgstr ""
 
 #: ../src/boards/click_on_letter.c:277
 #, c-format
-#, fuzzy
 msgid ""
 "Error: this activity requires that you first install\n"
 "the packages assetml-voices-alphabet-%s ! Fallback to english, sorry!"
@@ -3312,7 +3320,7 @@ msgstr "Обучение чтению"
 #: ../src/boards/python/searace.py:889
 #: ../src/boards/python/searace.py:986
 msgid "left"
-msgstr "влево"
+msgstr "левая"
 
 #: ../src/boards/leftright.c:258
 #: ../src/boards/python/searace.py:429
@@ -3322,15 +3330,19 @@ msgstr "влево"
 #: ../src/boards/python/searace.py:891
 #: ../src/boards/python/searace.py:980
 msgid "right"
-msgstr "вправо"
+msgstr "правая"
 
 #: ../src/boards/maze.c:492
 msgid "Look at your position, then switch back to invisible mode to continue your moves"
-msgstr "Взгляни на свою позицию и переключись обратно в 3d режим для перемещения"
+msgstr ""
+"Взгляни на свою позицию и переключись обратно\n"
+"в невидимый режим для перемещения"
 
 #: ../src/boards/maze.c:494
 msgid "Look at your position, then switch back to 3D mode to continue your moves"
-msgstr "Взгляни на свою позицию и переключись обратно в 3d режим для перемещения"
+msgstr ""
+"Взгляни на свою позицию и переключись обратно\n"
+"в 3d режим для перемещения"
 
 #: ../src/boards/memory.c:172
 msgid "Memory"
@@ -3736,7 +3748,6 @@ msgstr "1 не не простое число."
 
 #: ../src/boards/python/gnumch.py:130
 #, python-format
-#, fuzzy
 msgid "Primes less than %d"
 msgstr "Первичное меньше чем %d"
 
@@ -4045,11 +4056,11 @@ msgstr "Щёлкните на правильном цвете"
 
 #: ../src/boards/reading.c:366
 msgid "Please, check if the word"
-msgstr "Проверь, если это слово"
+msgstr "Будет ли это слово"
 
 #: ../src/boards/reading.c:386
 msgid "is being displayed"
-msgstr "показано"
+msgstr "показано?"
 
 #: ../src/boards/reading.c:557
 msgid "I am Ready"
@@ -4255,7 +4266,7 @@ msgstr "Французский"
 
 #: ../src/gcompris/config.c:79
 msgid "Irish (Gaelic)"
-msgstr "Ирландский (Гальский)"
+msgstr "Ирландский (Галльский)"
 
 #: ../src/gcompris/config.c:80
 msgid "Hebrew"
