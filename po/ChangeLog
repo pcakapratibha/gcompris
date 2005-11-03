@@ -1,3 +1,20 @@
+2005-11-03  Bruno Coudoin <bruno.coudoin@free.fr>
+
+	I removed the newlines in a few strings. In order to speed
+	the release process and avoid broken strings, I manually edited
+	po files to update the strings. Hope I did not break anything.
+	
+	* de.po
+	* en_CA.po
+	* es.po
+	* fi.po
+	* fr.po
+	* it.po
+	* nb.po
+	* nn.po
+	* pt.po
+	* ru.po
+
 2005-11-02  Bruno Coudoin <bruno.coudoin@free.fr>
 
 	* ru.po: updated russian by Dubrovskiy Vyacheslav.

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 5.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-24 08:04+0200\n"
-"PO-Revision-Date: 2005-10-21 19:56+0200\n"
+"PO-Revision-Date: 2005-11-03 23:23+0100\n"
 "Last-Translator: Immacolata Arenga <imma@eppesuigoccas.homedns.org>\n"
 "Language-Team: IT <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -1064,7 +1064,7 @@ msgstr ""
 #: ../boards/clickgame.xml.in.h:14
 #, fuzzy
 msgid ""
-"Left-Click with the mouse on all the swimming fish\n"
+"Left-Click with the mouse on all the swimming fish "
 "before they leave the fishtank"
 msgstr "Fai clic su tutti i pesci che nuotano prima che lascino la vasca"
 
@@ -3544,10 +3544,10 @@ msgstr "Un gioco con i pezzi che scorrono"
 #: ../boards/traffic.xml.in.h:2
 #, fuzzy
 msgid ""
-"Remove all the red cars from the parking lot\n"
+"Remove all the red cars from the parking lot "
 "through the gate on the right"
 msgstr ""
-"Sposta tutte le auto rosse fuori dalla griglia \n"
+"Sposta tutte le auto rosse fuori dalla griglia "
 "attraverso il passaggio a destra."
 
 #: ../boards/watercycle.xml.in.h:1
@@ -3573,10 +3573,10 @@ msgstr "Conoscere il ciclo dell'acqua"
 #: ../boards/watercycle.xml.in.h:4
 #, fuzzy
 msgid ""
-"Tux has come back from a long fishing party on his boat.\n"
+"Tux has come back from a long fishing party on his boat."
 "Bring the water system back up so he can take a shower."
 msgstr ""
-"Tux è tornato da una lunga battuta di pesca sulla sua barca.\n"
+"Tux è tornato da una lunga battuta di pesca sulla sua barca."
 "Attiva il ciclo dell'acqua per permettergli di fare una doccia."
 
 #: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:112

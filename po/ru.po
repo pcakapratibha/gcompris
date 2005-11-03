@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-17 08:51+0200\n"
-"PO-Revision-Date: 2005-11-02 17:21+0200\n"
+"PO-Revision-Date: 2005-11-03 23:24+0100\n"
 "Last-Translator: Dubrovskiy Vyacheslav <dubrsl@altlinux.org>\n"
 "Language-Team:  <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -629,10 +629,10 @@ msgstr "Управление шлюзом"
 
 #: ../boards/canal_lock.xml.in.h:2
 msgid ""
-"Tux is in trouble, and needs to take his boat through a lock.\n"
+"Tux is in trouble, and needs to take his boat through a lock. "
 "Help Tux and find out how a canal lock works."
 msgstr ""
-"Помоги Туксу провести корабль через шлюз \n"
+"Помоги Туксу провести корабль через шлюз "
 "и узнай, как он работает."
 
 #: ../boards/canal_lock.xml.in.h:4
@@ -903,10 +903,10 @@ msgstr "Рыба взята из юникс утилиты xfishtank. Изобр
 
 #: ../boards/clickgame.xml.in.h:14
 msgid ""
-"Left-Click with the mouse on all the swimming fish\n"
+"Left-Click with the mouse on all the swimming fish "
 "before they leave the fishtank"
 msgstr ""
-"Щёлкай левой кнопкой мыши по всем плавающим рыбкам\n"
+"Щёлкай левой кнопкой мыши по всем плавающим рыбкам "
 "пока они не уплыли из аквариума"
 
 #: ../boards/clickgame.xml.in.h:16
@@ -3023,10 +3023,10 @@ msgstr "Головоломка со сдвижными блоками"
 
 #: ../boards/traffic.xml.in.h:2
 msgid ""
-"Remove all the red cars from the parking lot\n"
+"Remove all the red cars from the parking lot "
 "through the gate on the right"
 msgstr ""
-"Убери все красные блоки с поля\n"
+"Убери все красные блоки с поля "
 "через ворота справа"
 
 #: ../boards/watercycle.xml.in.h:1
@@ -3047,10 +3047,10 @@ msgstr "Изучение круговорота воды в природе"
 
 #: ../boards/watercycle.xml.in.h:4
 msgid ""
-"Tux has come back from a long fishing party on his boat.\n"
+"Tux has come back from a long fishing party on his boat."
 "Bring the water system back up so he can take a shower."
 msgstr ""
-"Пингвиненок Тукс вернулся с долгой рыбалки на лодке. \n"
+"Пингвиненок Тукс вернулся с долгой рыбалки на лодке. "
 "Настрой водяную систему, чтобы он смог принять душ."
 
 #: ../boards/wordsgame.xml.in.h:1

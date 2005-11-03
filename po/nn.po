@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-30 21:52+0100\n"
-"PO-Revision-Date: 2005-10-30 22:48+0100\n"
+"PO-Revision-Date: 2005-11-03 23:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -724,10 +724,10 @@ msgstr "Kanalsluse"
 
 #: ../boards/canal_lock.xml.in.h:2
 msgid ""
-"Tux is in trouble, and needs to take his boat through a lock.\n"
+"Tux is in trouble, and needs to take his boat through a lock. "
 "Help Tux and find out how a canal lock works."
 msgstr ""
-"Tux har problem med båten sin, og må gjennom ei kanalsluse.\n"
+"Tux har problem med båten sin, og må gjennom ei kanalsluse. "
 "Hjelp han å forstå korleis slusesystemet fungerer."
 
 #: ../boards/canal_lock.xml.in.h:4
@@ -1029,7 +1029,7 @@ msgstr ""
 
 #: ../boards/clickgame.xml.in.h:14
 msgid ""
-"Left-Click with the mouse on all the swimming fish\n"
+"Left-Click with the mouse on all the swimming fish "
 "before they leave the fishtank"
 msgstr "Trykk med musa på alle fiskane før dei sym ut av akvariet."
 
@@ -3458,10 +3458,10 @@ msgstr "Skyvespel"
 
 #: ../boards/traffic.xml.in.h:2
 msgid ""
-"Remove all the red cars from the parking lot\n"
+"Remove all the red cars from the parking lot "
 "through the gate on the right"
 msgstr ""
-"Køyr den raude bilen (eller alle dei raude bilane)\n"
+"Køyr den raude bilen (eller alle dei raude bilane) "
 "ut frå parkeringsplassen gjennom luka til høgre."
 
 #: ../boards/watercycle.xml.in.h:1
@@ -3485,10 +3485,10 @@ msgstr "Lær om vasskrinsløpet"
 
 #: ../boards/watercycle.xml.in.h:4
 msgid ""
-"Tux has come back from a long fishing party on his boat.\n"
+"Tux has come back from a long fishing party on his boat."
 "Bring the water system back up so he can take a shower."
 msgstr ""
-"Tux kjem heim etter ein lang båttur, og du må setja i gong\n"
+"Tux kjem heim etter ein lang båttur, og du må setja i gong"
 "vasskrinsløpet, slik at han får teke ein velfortent dusj."
 
 #: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:112

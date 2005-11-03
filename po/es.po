@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-22 18:27+0200\n"
-"PO-Revision-Date: 2005-10-22 19:29+0200\n"
+"PO-Revision-Date: 2005-11-03 23:22+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -719,10 +719,10 @@ msgstr "Opera una esclusa"
 
 #: ../boards/canal_lock.xml.in.h:2
 msgid ""
-"Tux is in trouble, and needs to take his boat through a lock.\n"
+"Tux is in trouble, and needs to take his boat through a lock. "
 "Help Tux and find out how a canal lock works."
 msgstr ""
-"Tux está en problemas, necesita pasar a través de una esclusa.\n Ayuda a Tux y "
+"Tux está en problemas, necesita pasar a través de una esclusa. Ayuda a Tux y "
 "comprende como funciona una esclusa."
 
 #: ../boards/canal_lock.xml.in.h:4
@@ -1021,10 +1021,10 @@ msgstr ""
 
 #: ../boards/clickgame.xml.in.h:14
 msgid ""
-"Left-Click with the mouse on all the swimming fish\n"
+"Left-Click with the mouse on all the swimming fish "
 "before they leave the fishtank"
 msgstr ""
-"Pulsa con el botón izquierdo del ratón sobre los peces\n"
+"Pulsa con el botón izquierdo del ratón sobre los peces "
 "antes que se escapen del acuario"
 
 #: ../boards/clickgame.xml.in.h:16
@@ -3521,10 +3521,10 @@ msgstr "Un juego de rompecabezas deslizante"
 
 #: ../boards/traffic.xml.in.h:2
 msgid ""
-"Remove all the red cars from the parking lot\n"
+"Remove all the red cars from the parking lot "
 "through the gate on the right"
 msgstr ""
-"Sacar todos los coches rojos del aparcamiento\n"
+"Sacar todos los coches rojos del aparcamiento "
 "a través de la puerta de la derecha"
 
 #: ../boards/watercycle.xml.in.h:1
@@ -3548,10 +3548,10 @@ msgstr "Aprender el ciclo del agua"
 
 #: ../boards/watercycle.xml.in.h:4
 msgid ""
-"Tux has come back from a long fishing party on his boat.\n"
+"Tux has come back from a long fishing party on his boat."
 "Bring the water system back up so he can take a shower."
 msgstr ""
-"Tux ha vuelto de una fiesta de pesca en su barco.\n"
+"Tux ha vuelto de una fiesta de pesca en su barco."
 "Reactiva el sistema de aguas para que se pueda duchar."
 
 #: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:112

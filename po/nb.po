@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: gcompris.30.10.2005\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-16 20:56+0200\n"
-"PO-Revision-Date: 2005-10-30 14:31+0100\n"
+"PO-Revision-Date: 2005-11-03 23:23+0100\n"
 "Last-Translator: Klaus Ade Johnstad <klaus@skolelinux.no>\n"
 "Language-Team: Norwegian Bokmål < <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -715,10 +715,10 @@ msgstr "Betjen en kanalsluse"
 
 #: ../boards/canal_lock.xml.in.h:2
 msgid ""
-"Tux is in trouble, and needs to take his boat through a lock.\n"
+"Tux is in trouble, and needs to take his boat through a lock. "
 "Help Tux and find out how a canal lock works."
 msgstr ""
-"Tux er i trøbbel med skipet sitt. Han må føre det gjennom en kanalsluse. \n"
+"Tux er i trøbbel med skipet sitt. Han må føre det gjennom en kanalsluse. "
 "Hjelp Tux med å forstå hvordan en sluselås fungerer."
 
 #: ../boards/canal_lock.xml.in.h:4
@@ -1018,10 +1018,10 @@ msgstr ""
 
 #: ../boards/clickgame.xml.in.h:14
 msgid ""
-"Left-Click with the mouse on all the swimming fish\n"
+"Left-Click with the mouse on all the swimming fish "
 "before they leave the fishtank"
 msgstr ""
-"Klikk på fiskene med venstre museknapp før de svømmer\n"
+"Klikk på fiskene med venstre museknapp før de svømmer "
 "ut av akvariumet"
 
 #: ../boards/clickgame.xml.in.h:16
@@ -3358,10 +3358,10 @@ msgstr "Et spill med blokker"
 
 #: ../boards/traffic.xml.in.h:2
 msgid ""
-"Remove all the red cars from the parking lot\n"
+"Remove all the red cars from the parking lot "
 "through the gate on the right"
 msgstr ""
-"Fjern alle de røde bilene fra parkeringsplassen\n"
+"Fjern alle de røde bilene fra parkeringsplassen "
 "ved å få dem ut gjennom porten på høyre side."
 
 #: ../boards/watercycle.xml.in.h:1
@@ -3385,10 +3385,10 @@ msgstr "Lær vannets syklus"
 
 #: ../boards/watercycle.xml.in.h:4
 msgid ""
-"Tux has come back from a long fishing party on his boat.\n"
+"Tux has come back from a long fishing party on his boat."
 "Bring the water system back up so he can take a shower."
 msgstr ""
-"Tux har kommet tilbake fra en lang fisketur. Hjelp han med å \n"
+"Tux har kommet tilbake fra en lang fisketur. Hjelp han med å "
 "starte vannsystemet slik at han kan ta seg en dusj."
 
 #: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:112
