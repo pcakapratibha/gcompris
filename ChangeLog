@@ -1,3 +1,26 @@
+
+	*** RELEASE 7.1PRE2 ***
+
+2005-11-03  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Port of commit in HEAD 2005-11-01:
+	- Fixes text of board description being badly wrapped
+	  I now use the richtext canvas to display it. We may
+	  loose on reliabilty.
+
+	* boards/canal_lock.xml.in:
+	* boards/clickgame.xml.in:
+	* boards/gnumch-inequality.xml.in:
+	* boards/guessnumber.xml.in:
+	* boards/redraw_symmetrical.xml.in:
+	* boards/traffic.xml.in:
+	* boards/watercycle.xml.in:
+	* src/boards/menu.c: (menu_start), (menu_end), (item_event),
+	(set_content), (create_info_area):
+	* src/boards/python/anim.py:
+	* src/boards/python/guessnumber.py:
+	* src/gcompris/gameutil.c: (gcompris_add_xml_to_data):
+
 2005-11-02  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- fixed audio file detection to not accept a directory as a valid
