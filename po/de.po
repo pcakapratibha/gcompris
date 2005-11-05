@@ -1,4 +1,4 @@
-# translation of de.po to 
+# translation of de.po to
 # translation of de.po to
 # translation of de.po to
 # translation of de.po to
@@ -19,14 +19,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-01 08:52+0100\n"
-"PO-Revision-Date: 2005-11-03 23:20+0100\n"
+"POT-Creation-Date: 2005-11-05 15:36+0100\n"
+"PO-Revision-Date: 2005-11-05 16:56+0100\n"
 "Last-Translator: Ronny Standtke <Ronny.Standtke@gmx.net>\n"
 "Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -725,7 +725,7 @@ msgstr "Schieß den Ball ins Tor."
 
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
-#: ../boards/clickgame.xml.in.h:17 ../boards/connect4.xml.in.h:7
+#: ../boards/clickgame.xml.in.h:16 ../boards/connect4.xml.in.h:7
 #: ../boards/erase.xml.in.h:3 ../boards/erase_clic.xml.in.h:6
 #: ../boards/erase_double_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
 #: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
@@ -754,13 +754,13 @@ msgstr "Bediene eine Schleuse"
 
 #: ../boards/canal_lock.xml.in.h:2
 msgid ""
-"Tux is in trouble, and needs to take his boat through a lock. "
-"Help Tux and find out how a canal lock works."
+"Tux is in trouble, and needs to take his boat through a lock. Help Tux and "
+"find out how a canal lock works."
 msgstr ""
 "Tux ist in Schwierigkeiten und muss sein Schiff durch eine Schleuse bringen. "
 "Hilf Tux und verstehe, wie eine Schleuse funktioniert."
 
-#: ../boards/canal_lock.xml.in.h:4
+#: ../boards/canal_lock.xml.in.h:3
 msgid ""
 "You are in charge of the canal lock. Open the gates and the locks in the "
 "right order, so Tux can travel through the gates in both directions."
@@ -1057,17 +1057,17 @@ msgstr ""
 
 #: ../boards/clickgame.xml.in.h:14
 msgid ""
-"Left-Click with the mouse on all the swimming fish "
-"before they leave the fishtank"
+"Left-Click with the mouse on all the swimming fish before they leave the "
+"fishtank"
 msgstr ""
 "Klicke mit der linken Maustaste auf alle Fische, bevor sie aus dem Aquarium "
 "schwimmen."
 
-#: ../boards/clickgame.xml.in.h:16
+#: ../boards/clickgame.xml.in.h:15
 msgid "Motor coordination: moving and clicking the mouse."
 msgstr "Motorische Fähigkeiten: Bewegen und Klicken der Maus."
 
-#: ../boards/clickgame.xml.in.h:18
+#: ../boards/clickgame.xml.in.h:17
 msgid "Use the left mouse button to click on the moving fish."
 msgstr "Klicke mit der linken Maustaste auf die schwimmenden Fische."
 
@@ -1354,7 +1354,7 @@ msgstr "rutschen"
 
 #: ../boards/fifteen.xml.in.h:12
 msgid "taquin"
-msgstr ""
+msgstr "Fünfzehnerspiel"
 
 #: ../boards/followline.xml.in.h:1
 msgid "Control the hose-pipe"
@@ -2122,18 +2122,14 @@ msgid "Guess a number"
 msgstr "Errate eine Zahl"
 
 #: ../boards/guessnumber.xml.in.h:2
-msgid ""
-"Help Tux escape the cave.\n"
-"Tux hide a number that you must discover."
-msgstr ""
-"Hilf Tux, aus der Höhle zu fliehen.\n"
-"Tux versteckt eine Zahl, die du finden musst."
+msgid "Help Tux escape the cave. Tux hide a number that you must discover."
+msgstr "Hilf Tux, aus der Höhle zu fliehen. Tux versteckt eine Zahl, die du finden musst."
 
-#: ../boards/guessnumber.xml.in.h:4
+#: ../boards/guessnumber.xml.in.h:3
 msgid "Numbers from 1 to 1000 for the last level."
 msgstr "Nummern von 1 bis 1000 für die letzte Ebene."
 
-#: ../boards/guessnumber.xml.in.h:5
+#: ../boards/guessnumber.xml.in.h:4
 msgid ""
 "Read the instructions that give you the range of the number to find. Enter a "
 "number in the top right blue entry box. Tux tell you if your number is "
@@ -3219,7 +3215,7 @@ msgstr "Vertikale Leseübung"
 msgid "Copy a drawing from the box on the right into the box on the left."
 msgstr "Kopiere eine Zeichnung von rechts nach links."
 
-#: ../boards/redraw.xml.in.h:2 ../boards/redraw_symmetrical.xml.in.h:4
+#: ../boards/redraw.xml.in.h:2 ../boards/redraw_symmetrical.xml.in.h:2
 msgid ""
 "First, select the proper tool from the toolbar. Then drag the mouse to "
 "create objects. When you are done, click on the OK button. Errors will be "
@@ -3238,19 +3234,11 @@ msgstr "Zeichne den gegebenen Gegenstand nach"
 
 #: ../boards/redraw_symmetrical.xml.in.h:1
 msgid ""
-"Copy the mirror image of an object from the box\n"
-"on the right into the box on the left."
-msgstr ""
-"Kopiere das Spiegelbild eines Gegenstandes vom\n"
-"rechten in den linken Kasten."
-
-#: ../boards/redraw_symmetrical.xml.in.h:3
-msgid ""
 "Copy the mirror image of an object from the box on the right into the box on "
 "the left."
 msgstr "Kopiere das Spiegelbild eines Gegenstandes von rechts nach links."
 
-#: ../boards/redraw_symmetrical.xml.in.h:5
+#: ../boards/redraw_symmetrical.xml.in.h:3
 msgid "Mirror the given item"
 msgstr "Spiegele den gegebenen Gegenstand"
 
@@ -3553,7 +3541,9 @@ msgstr "Tuxpaint"
 
 #: ../boards/tuxpaint.xml.in.h:4
 msgid "Use Tuxpaint to draw. When Tuxpaint is finished this board will end."
-msgstr "Benutze Tuxpaint, um zu malen. Wenn Tuxpaint geschlossen wird, wird auch diese Tafel beendet."
+msgstr ""
+"Benutze Tuxpaint, um zu malen. Wenn Tuxpaint geschlossen wird, wird auch "
+"diese Tafel beendet."
 
 #: ../boards/tuxpaint.xml.in.h:5
 msgid "mouse and keyboard manipulation"
@@ -3564,9 +3554,7 @@ msgid "A sliding-block puzzle game"
 msgstr "Ein Schiebe-Puzzle"
 
 #: ../boards/traffic.xml.in.h:2
-msgid ""
-"Remove all the red cars from the parking lot "
-"through the gate on the right"
+msgid "Remove all the red cars from the parking lot through the gate on the right"
 msgstr "Entferne den roten Balken aus dem Gitter durch die rechte Öffnung."
 
 #: ../boards/watercycle.xml.in.h:1
@@ -3591,8 +3579,8 @@ msgstr "Lerne den Wasserkreislauf"
 
 #: ../boards/watercycle.xml.in.h:4
 msgid ""
-"Tux has come back from a long fishing party on his boat."
-"Bring the water system back up so he can take a shower."
+"Tux has come back from a long fishing party on his boat. Bring the water "
+"system back up so he can take a shower."
 msgstr ""
 "Tux ist mit seinem Boot von einem langen Fischfang zurückgekommen. Stelle "
 "den Wasserkreislauf wieder her, so dass er duschen kann."
@@ -3632,8 +3620,8 @@ msgstr "Mehrere Aktivitäten für Kinder"
 #: ../src/boards/advanced_colors.c:533 ../src/boards/imageid.c:642
 #: ../src/boards/missingletter.c:655 ../src/boards/read_colors.c:491
 #: ../src/boards/shapegame.c:1902 ../src/gcompris/file_selector.c:893
-#: ../src/gcompris/gameutil.c:186 ../src/gcompris/gameutil.c:604
-#: ../src/gcompris/gameutil.c:605 ../src/gcompris/gcompris.c:639
+#: ../src/gcompris/gameutil.c:186 ../src/gcompris/gameutil.c:583
+#: ../src/gcompris/gameutil.c:584 ../src/gcompris/gcompris.c:639
 #: ../src/gcompris/images_selector.c:767 ../src/gcompris/skin.c:87
 #: ../src/gcompris/skin.c:266 ../src/gcompris/wordlist.c:49
 #, c-format
@@ -3871,11 +3859,11 @@ msgstr "Memory"
 msgid "Find the matching pair"
 msgstr "Finde das zusammengehörige Paar"
 
-#: ../src/boards/menu.c:75
+#: ../src/boards/menu.c:79
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-#: ../src/boards/menu.c:76
+#: ../src/boards/menu.c:80
 msgid "Select a Board"
 msgstr "Wähle eine Tafel"
 
@@ -4246,19 +4234,19 @@ msgstr ""
 "Python-XML-Modul nicht gefunden. SVG wird deaktiviert. Installieren Sie das "
 "Python-XML-Modul, um SVG Laden/Speichern zu ermöglichen."
 
-#: ../src/boards/python/anim.py:2204
+#: ../src/boards/python/anim.py:2206
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr ""
 "SVG ist deaktiviert. Installieren Sie das Python-XML-Modul, um es zu "
 "aktivieren"
 
-#: ../src/boards/python/anim.py:2360
+#: ../src/boards/python/anim.py:2362
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr ""
 "Warnung: Auf die folgenden Bilder kann von Ihrem System aus nicht "
 "zugegriffen werden.\n"
 
-#: ../src/boards/python/anim.py:2362
+#: ../src/boards/python/anim.py:2364
 msgid "The corresponding items have been skipped."
 msgstr "Die entsprechenden Elemente wurden übersprungen."
 
@@ -4383,29 +4371,29 @@ msgstr ""
 "E\n"
 "L"
 
-#: ../src/boards/python/guessnumber.py:216
+#: ../src/boards/python/guessnumber.py:222
 #, python-format
 msgid "Guess a number between %d and %d"
 msgstr "Errate eine Zahl zwischen %d und %d"
 
-#: ../src/boards/python/guessnumber.py:331
-#: ../src/boards/python/guessnumber.py:332
+#: ../src/boards/python/guessnumber.py:337
+#: ../src/boards/python/guessnumber.py:338
 #, python-format
 msgid "Please enter a number between %d and %d"
 msgstr "Bitte gib eine Zahl zwischen %d und %d ein"
 
-#: ../src/boards/python/guessnumber.py:337
-#: ../src/boards/python/guessnumber.py:338
+#: ../src/boards/python/guessnumber.py:343
+#: ../src/boards/python/guessnumber.py:344
 msgid "Out of range"
 msgstr "Nicht im zulässigen Bereich"
 
-#: ../src/boards/python/guessnumber.py:344
-#: ../src/boards/python/guessnumber.py:345
+#: ../src/boards/python/guessnumber.py:350
+#: ../src/boards/python/guessnumber.py:351
 msgid "Too high"
 msgstr "Zu groß"
 
-#: ../src/boards/python/guessnumber.py:347
-#: ../src/boards/python/guessnumber.py:348
+#: ../src/boards/python/guessnumber.py:353
+#: ../src/boards/python/guessnumber.py:354
 msgid "Too low"
 msgstr "Zu klein"
 
@@ -4718,7 +4706,7 @@ msgstr ""
 
 #: ../src/gcompris/about.c:341 ../src/gcompris/about.c:350
 #: ../src/gcompris/config.c:221 ../src/gcompris/config.c:230
-#: ../src/gcompris/gameutil.c:1122 ../src/gcompris/help.c:362
+#: ../src/gcompris/gameutil.c:1101 ../src/gcompris/help.c:362
 #: ../src/gcompris/help.c:371 ../src/gcompris/images_selector.c:263
 msgid "OK"
 msgstr "OK"
