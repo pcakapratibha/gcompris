@@ -1,3 +1,9 @@
+2005-11-06  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/gcompris/gcompris.c: (init_background), (gcompris_exit),
+	(gcompris_init): From HEAD. Fix recursive exit on segfault.
+	Fix segfault on exit when fullscreen is set in the config box.
+
 2005-11-04  Yves Combe  <yves@ycombe.net>
 
 	Merged commit from HEAD.
