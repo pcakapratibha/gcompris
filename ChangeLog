@@ -1,3 +1,16 @@
+2005-11-12  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Merge of HEAD. 
+	Fixed several issues related to change between fullscreen mode
+	and window mode. Now if xrandr is enabled, the configuration dialog in GCompris
+	will toggle fullscreen/window mode on the fly.
+
+	* src/gcompris/config.c: (item_event_ok):
+	* src/gcompris/gcompris.c: (init_background), (setup_window),
+	(gcompris_set_fullscreen), (gcompris_exit), (xrandr_set_config),
+	(gcompris_init):
+	* src/gcompris/gcompris.h:
+
 2005-11-06  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/gcompris/gcompris.c: (init_background), (gcompris_exit),

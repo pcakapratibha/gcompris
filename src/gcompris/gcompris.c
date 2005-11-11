@@ -189,7 +189,8 @@ typedef struct
 
 } XRANDRData; 
 
-static SizeID		 xr_previous_size = -1;
+static SizeID		 xr_previous_size;
+static gboolean		 xr_previous_size_set = FALSE;
 static XRANDRData	*xrandr = NULL;
 
 static void xrandr_init ( XRANDRData *xrandr );
@@ -429,42 +430,27 @@ static void init_background()
   gint screen_height, screen_width;
   GtkWidget *vbox;
 
+#ifdef XRANDR
+  xrandr = g_new0 (XRANDRData, 1);
+#endif
+
+  gcompris_set_fullscreen(properties->fullscreen);
+
   screen_height = gdk_screen_height();
   screen_width  = gdk_screen_width();
 
 #ifdef XRANDR
-  gint i;
-  /* Search the 800x600 Resolution */
   if(properties->fullscreen && !properties->noxrandr) {
-    g_warning("XRANDR Is compiled in. Searching a good resolution");
-
-    xrandr = g_new0 (XRANDRData, 1);
-    xrandr_init ( xrandr );
-
-    /* Check if XRANDR is available */
-    if (!properties->noxrandr) {
-      xrandr_get_config ( xrandr );
-      xr_previous_size = (SizeID)xrandr->xr_current_size;
-
-      for (i = 0; i < xrandr->xr_nsize; i++) {
-        if(xrandr->xr_sizes[i].width == BOARDWIDTH &&
-	   xrandr->xr_sizes[i].height == BOARDHEIGHT+BARHEIGHT) {
-	  xrandr->xr_current_size = (SizeID)i;
-	  xrandr_set_config( xrandr );
-	  break;
-	}
-      }
-      screen_height = xrandr->xr_sizes[xrandr->xr_current_size].height;
-      screen_width  = xrandr->xr_sizes[xrandr->xr_current_size].width;
-    }
+    screen_height = xrandr->xr_sizes[xrandr->xr_current_size].height;
+    screen_width  = xrandr->xr_sizes[xrandr->xr_current_size].width;
   }
 #endif
 
-    yratio=screen_height/(float)(BOARDHEIGHT+BARHEIGHT);
-    xratio=screen_width/(float)BOARDWIDTH;
-    g_message("The screen_width=%f screen_height=%f\n",
-  	 (double)screen_width, (double)screen_height);
-    g_message("The xratio=%f yratio=%f\n", xratio, yratio);
+  yratio=screen_height/(float)(BOARDHEIGHT+BARHEIGHT);
+  xratio=screen_width/(float)BOARDWIDTH;
+  g_message("The screen_width=%f screen_height=%f\n",
+	    (double)screen_width, (double)screen_height);
+  g_message("The xratio=%f yratio=%f\n", xratio, yratio);
 
   yratio=xratio=MIN(xratio, yratio);
 
@@ -484,10 +470,6 @@ static void init_background()
 
   g_message("Calculated x ratio xratio=%f\n", xratio);
   
-  /* First, Remove the gnome crash dialog because it locks the user when in full screen */
-  signal(SIGSEGV, gcompris_terminate);
-  signal(SIGINT, gcompris_terminate);
-
 
   /* Background area if ratio above 1 */
   if(properties->fullscreen)
@@ -716,14 +698,6 @@ static void setup_window ()
 
   gtk_widget_show (GTK_WIDGET(canvas_bg));
 
-  if(properties->fullscreen)
-    {
-      gdk_window_set_decorations (window->window, 0);
-      gdk_window_set_functions (window->window, 0);
-      gtk_widget_set_uposition (window, 0, 0);
-      gtk_window_fullscreen (GTK_WINDOW(window));
-    }
-
   init_plugins();
   
 
@@ -816,6 +790,73 @@ void gcompris_end_board()
     board_play (get_current_gcompris_board()->previous_board);
 }
 
+/** \brief toggle full screen mode
+ *
+ *
+ */
+void gcompris_set_fullscreen(gboolean state)
+{
+
+  if(state)
+    {
+#ifdef XRANDR
+      gint i;
+      /* Search the 800x600 Resolution */
+      if(properties->fullscreen && !properties->noxrandr) {
+	
+	g_warning("XRANDR Is compiled in. Searching a good resolution");
+
+	/* Check if XRANDR is available */
+	if (!properties->noxrandr) {
+	  xrandr_get_config ( xrandr );
+	  xr_previous_size = (SizeID)xrandr->xr_current_size;
+	  for (i = 0; i < xrandr->xr_nsize; i++) {
+	    if(xrandr->xr_sizes[i].width == BOARDWIDTH &&
+	       xrandr->xr_sizes[i].height == BOARDHEIGHT+BARHEIGHT) 
+	      {
+		xrandr->xr_current_size = (SizeID)i;
+		xr_previous_size_set = TRUE;
+		break;
+	      }
+	  }
+	}
+
+	/* Set the Fullscreen now */
+	if(xr_previous_size_set) 
+	  {
+	    xrandr_set_config( xrandr );
+	  }
+      }
+#endif
+      gdk_window_set_decorations (window->window, 0);
+      gdk_window_set_functions (window->window, 0);
+      gtk_widget_set_uposition (window, 0, 0);
+      gtk_window_fullscreen (GTK_WINDOW(window));
+    }
+  else
+    { 
+#ifdef XRANDR
+      /* Set back the original screen size */
+      if(xr_previous_size_set && !properties->noxrandr)
+	{
+	  /* Need to refresh our config or xrandr api will reject us */
+	  if(xrandr)
+	    {
+	      xrandr_get_config ( xrandr );
+	      xrandr->xr_current_size = (SizeID)xr_previous_size;
+	      xrandr_set_config( xrandr );
+	    }
+	}
+      xr_previous_size_set = FALSE;
+#endif
+      gdk_window_set_decorations (window->window, 1);
+      gdk_window_set_functions (window->window, 1);
+      gtk_widget_set_uposition (window, 0, 0);
+      gtk_window_unfullscreen (GTK_WINDOW(window));
+    }
+
+}
+
 void gcompris_exit()
 {
   /* Do not loopback in exit */
@@ -826,19 +867,7 @@ void gcompris_exit()
 
   gcompris_db_exit();
 
-#ifdef XRANDR
-  /* Set back the original screen size */
-  if(properties->fullscreen && !properties->noxrandr)
-    {
-      /* Need to refresh our config or xrandr api will reject us */
-      if(xrandr)
-	{
-	  xrandr_get_config ( xrandr );
-	  xrandr->xr_current_size = (SizeID)xr_previous_size;
-	  xrandr_set_config( xrandr );
-	}
-    }
-#endif
+  gcompris_set_fullscreen(FALSE);
 
   gtk_main_quit ();
 
@@ -1038,7 +1067,8 @@ xrandr_set_config( XRANDRData  *data )
 			       CurrentTime);
 
   if(status) {
-    printf("ERROR: Failed to set back the original resolution XRRSetScreenConfig returned status = %d\n", (int)status);
+    g_error("ERROR: Failed to set back the original resolution XRRSetScreenConfig returned status = %d\n",
+	    (int)status);
   }
   return;
 
@@ -1056,6 +1086,10 @@ gcompris_init (int argc, char *argv[])
   poptContext pctx; 
   int popt_option;
   gchar *str;
+
+  /* First, Remove the gnome crash dialog because it locks the user when in full screen */
+  signal(SIGSEGV, gcompris_terminate);
+  signal(SIGINT, gcompris_terminate);
 
   bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
