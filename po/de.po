@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-05 15:36+0100\n"
-"PO-Revision-Date: 2005-11-05 16:56+0100\n"
+"POT-Creation-Date: 2005-11-12 12:24+0100\n"
+"PO-Revision-Date: 2005-11-12 12:29+0100\n"
 "Last-Translator: Ronny Standtke <Ronny.Standtke@gmx.net>\n"
 "Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1126,7 +1126,7 @@ msgstr ""
 "einer Farbe gehört hast, klicke auf die Figur mit dieser Farbe."
 
 #: ../boards/colors_group.xml.in.h:1
-msgid "Go to Colour activities"
+msgid "Go to Color activities"
 msgstr "Zu den Farbspielen"
 
 #: ../boards/computer.xml.in.h:1
@@ -2122,7 +2122,7 @@ msgid "Guess a number"
 msgstr "Errate eine Zahl"
 
 #: ../boards/guessnumber.xml.in.h:2
-msgid "Help Tux escape the cave. Tux hide a number that you must discover."
+msgid "Help Tux escape the cave. Tux hides a number that you must discover."
 msgstr "Hilf Tux, aus der Höhle zu fliehen. Tux versteckt eine Zahl, die du finden musst."
 
 #: ../boards/guessnumber.xml.in.h:3
@@ -3621,7 +3621,7 @@ msgstr "Mehrere Aktivitäten für Kinder"
 #: ../src/boards/missingletter.c:655 ../src/boards/read_colors.c:491
 #: ../src/boards/shapegame.c:1902 ../src/gcompris/file_selector.c:893
 #: ../src/gcompris/gameutil.c:186 ../src/gcompris/gameutil.c:583
-#: ../src/gcompris/gameutil.c:584 ../src/gcompris/gcompris.c:639
+#: ../src/gcompris/gameutil.c:584 ../src/gcompris/gcompris.c:623
 #: ../src/gcompris/images_selector.c:767 ../src/gcompris/skin.c:87
 #: ../src/gcompris/skin.c:266 ../src/gcompris/wordlist.c:49
 #, c-format
@@ -3866,6 +3866,16 @@ msgstr "Hauptmenü"
 #: ../src/boards/menu.c:80
 msgid "Select a Board"
 msgstr "Wähle eine Tafel"
+
+#: ../src/boards/money.c:488
+#, c-format
+msgid "$ %.2f"
+msgstr ""
+
+#: ../src/boards/money.c:501
+#, c-format
+msgid "$ %.0f"
+msgstr ""
 
 #: ../src/boards/paratrooper.c:102
 msgid "Paratrooper"
@@ -4971,8 +4981,8 @@ msgstr "Kann Themen-Verzeichnis %s nicht öffnen"
 msgid "No skin found in %s\n"
 msgstr "Keine Verkleidung in %s gefunden\n"
 
-#: ../src/gcompris/config.c:453 ../src/gcompris/config.c:809
-#: ../src/gcompris/config.c:820
+#: ../src/gcompris/config.c:453 ../src/gcompris/config.c:817
+#: ../src/gcompris/config.c:828
 #, c-format
 msgid "Skin : %s"
 msgstr "Thema: %s"
@@ -5102,7 +5112,7 @@ msgstr ""
 msgid "The location of user directories: [$HOME/.gcompris/users]"
 msgstr "Ort der Benutzerverzeichnisse: [$HOME/.gcompris/users]"
 
-#: ../src/gcompris/gcompris.c:797
+#: ../src/gcompris/gcompris.c:773
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -5126,7 +5136,7 @@ msgstr ""
 "Informationen zu diesem Thema erhalten Sie von der FSF unter\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1097
+#: ../src/gcompris/gcompris.c:1138
 #, c-format
 msgid ""
 "GCompris\n"
@@ -5140,17 +5150,17 @@ msgstr ""
 "Mehr Informationen unter http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1165
+#: ../src/gcompris/gcompris.c:1206
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Verwenden Sie -l, um direkt auf eine Aktivität zuzugreifen.\n"
 
-#: ../src/gcompris/gcompris.c:1166
+#: ../src/gcompris/gcompris.c:1207
 #, c-format
 msgid "List of available activity is :\n"
 msgstr "Liste der verfügbaren Aktivitäten:\n"
 
-#: ../src/gcompris/gcompris.c:1309
+#: ../src/gcompris/gcompris.c:1350
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Die Liste der verfügbaren Profile ist:\n"
