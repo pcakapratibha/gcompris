@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-12 12:24+0100\n"
-"PO-Revision-Date: 2005-11-12 12:29+0100\n"
+"POT-Creation-Date: 2005-11-13 19:30+0100\n"
+"PO-Revision-Date: 2005-11-13 19:49+0100\n"
 "Last-Translator: Ronny Standtke <Ronny.Standtke@gmx.net>\n"
 "Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -2123,7 +2123,9 @@ msgstr "Errate eine Zahl"
 
 #: ../boards/guessnumber.xml.in.h:2
 msgid "Help Tux escape the cave. Tux hides a number that you must discover."
-msgstr "Hilf Tux, aus der Höhle zu fliehen. Tux versteckt eine Zahl, die du finden musst."
+msgstr ""
+"Hilf Tux, aus der Höhle zu fliehen. Tux versteckt eine Zahl, die du finden "
+"musst."
 
 #: ../boards/guessnumber.xml.in.h:3
 msgid "Numbers from 1 to 1000 for the last level."
@@ -3870,12 +3872,12 @@ msgstr "Wähle eine Tafel"
 #: ../src/boards/money.c:488
 #, c-format
 msgid "$ %.2f"
-msgstr ""
+msgstr "€ %.2f"
 
 #: ../src/boards/money.c:501
 #, c-format
 msgid "$ %.0f"
-msgstr ""
+msgstr "€ %.0f"
 
 #: ../src/boards/paratrooper.c:102
 msgid "Paratrooper"
@@ -5136,7 +5138,7 @@ msgstr ""
 "Informationen zu diesem Thema erhalten Sie von der FSF unter\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1138
+#: ../src/gcompris/gcompris.c:1141
 #, c-format
 msgid ""
 "GCompris\n"
@@ -5150,17 +5152,17 @@ msgstr ""
 "Mehr Informationen unter http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1206
+#: ../src/gcompris/gcompris.c:1209
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Verwenden Sie -l, um direkt auf eine Aktivität zuzugreifen.\n"
 
-#: ../src/gcompris/gcompris.c:1207
+#: ../src/gcompris/gcompris.c:1210
 #, c-format
 msgid "List of available activity is :\n"
 msgstr "Liste der verfügbaren Aktivitäten:\n"
 
-#: ../src/gcompris/gcompris.c:1350
+#: ../src/gcompris/gcompris.c:1353
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Die Liste der verfügbaren Profile ist:\n"
