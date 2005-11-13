@@ -1,3 +1,11 @@
+2005-11-13  Bruno coudoin  <bruno.coudoin@free.fr>
+	    
+	From HEAD, applied a patch that should fix the
+	decoration disapearing under KDE when switching
+	fullscreen/window mode.
+
+	* src/gcompris/gcompris.c: (gcompris_set_fullscreen):
+
 2005-11-12  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Merged from HEAD.
