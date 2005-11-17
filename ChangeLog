@@ -1,3 +1,11 @@
+2005-11-17  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Merged from HEAD a fix by Yves.
+	Fix xml i18n bug.
+
+	* src/gcompris/gameutil.c: (reactivate_newline),
+	(gcompris_add_xml_to_data):
+
 2005-11-13  Bruno coudoin  <bruno.coudoin@free.fr>
 	    
 	From HEAD, applied a patch that should fix the
