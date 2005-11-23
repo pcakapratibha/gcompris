@@ -1,6 +1,6 @@
 /* gcompris - images_selector.c
  *
- * Time-stamp: <2005/10/01 14:49:05 bruno>
+ * Time-stamp: <2005/11/12 19:03:14 bruno>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -44,7 +44,7 @@ static gint		 item_event_scroll(GnomeCanvasItem *item,
 					   GdkEvent *event,
 					   GnomeCanvas *canvas);
 static gboolean		 read_xml_file(gchar *fname);
-static gboolean                 read_dataset_directory(gchar *dataset_dir);
+static gboolean		 read_dataset_directory(gchar *dataset_dir);
 static void		 display_image(gchar *imagename, GnomeCanvasItem *rootitem);
 static void		 free_stuff (GtkObject *obj, GList *data);
 
@@ -290,7 +290,7 @@ void gcompris_images_selector_start (GcomprisBoard *gcomprisBoard, gchar *datase
   /* if the file doesn't exist */
   if(g_file_test ((dataset), G_FILE_TEST_IS_DIR) )
     {
-      g_warning(_("dataset %s is a directory. Trying to read xml "), dataset);
+      g_warning("dataset %s is a directory. Trying to read xml", dataset);
 
       read_dataset_directory(dataset);
     }
@@ -347,6 +347,10 @@ static void display_image(gchar *imagename, GnomeCanvasItem *root_item)
     return;
 
   pixmap = gcompris_load_pixmap(imagename);
+
+  /* Sad, the image is not found */
+  if(!pixmap)
+    return;
 
   iw = IMAGE_WIDTH;
   ih = IMAGE_HEIGHT;
@@ -629,7 +633,7 @@ parseImage (xmlDocPtr doc, xmlNodePtr cur) {
     /* replace '~' by home dir */
     pathname = g_strdup_printf("%s%s",g_get_home_dir(), pathname+1);
     if (!g_file_test ((pathname), G_FILE_TEST_IS_DIR)){
-       g_warning(_("In ImageSet %s, the pathname for the home directory '%s' is not found. Skipping the whole ImageSet.\n"), imageSetName, pathname);
+       g_warning("In ImageSet %s, the pathname for the home directory '%s' is not found. Skipping the whole ImageSet.", imageSetName, pathname);
       return;
     }
   }
@@ -663,7 +667,7 @@ parseImage (xmlDocPtr doc, xmlNodePtr cur) {
   
   if(!g_file_test ((absolutepath), G_FILE_TEST_EXISTS) )
     {
-      g_warning(_("In ImageSet %s, an image is not found. Skipping ImageSet...\n"), absolutepath);
+      g_warning("In ImageSet %s, an image is not found. Skipping ImageSet...", absolutepath);
       return;
     }
 
@@ -694,7 +698,7 @@ parseImage (xmlDocPtr doc, xmlNodePtr cur) {
       g_free(pathname);
       pathname = tmpdir;
       if (!g_file_test ((pathname), G_FILE_TEST_IS_DIR)){
-        g_warning(_("In ImageSet %s, directory %s is not found. Skipping all the ImageSet...\n"), absolutepath, pathname);
+        g_warning("In ImageSet %s, directory %s is not found. Skipping all the ImageSet...", absolutepath, pathname);
         return;
       }
     }
@@ -706,7 +710,7 @@ parseImage (xmlDocPtr doc, xmlNodePtr cur) {
 	continue;
       }
       filename = g_strdup_printf("%s/%s", pathname, onefile);
-      if (!g_file_test ((filename), G_FILE_TEST_EXISTS)){
+      if (!g_file_test ((filename), G_FILE_TEST_IS_REGULAR)){
 	continue;
       }
       imageList = g_list_append (imageList, filename);
@@ -764,7 +768,7 @@ read_xml_file(gchar *fname)
   /* if the file doesn't exist */
   if(!g_file_test ((fname), G_FILE_TEST_EXISTS)) 
     {
-      g_warning(_("Couldn't find file %s !"), fname);
+      g_warning("Couldn't find file %s !", fname);
       return FALSE;
     }
 
@@ -815,7 +819,7 @@ read_dataset_directory(gchar *dataset_dir)
     absolute_fname = g_strdup_printf("%s/%s",dataset_dir,fname);
     printf("Reading dataset file %s\n",absolute_fname);
    
-    if (!g_file_test ((absolute_fname), G_FILE_TEST_EXISTS))
+    if (!g_file_test ((absolute_fname), G_FILE_TEST_IS_REGULAR))
       continue;
 
     /* parse the new file and put the result into newdoc */

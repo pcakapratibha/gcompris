@@ -1,6 +1,6 @@
 /* gcompris - gameutil.c
  *
- * Time-stamp: <2005/11/17 21:51:32 bruno>
+ * Time-stamp: <2005/11/17 11:13:26 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -184,7 +184,7 @@ GdkPixbuf *gcompris_load_pixmap(char *pixmapfile)
 
   if (!filename) {
     char *str;
-    g_warning (_("Couldn't find file %s !"), pixmapfile);
+    g_warning ("Couldn't find file %s !", pixmapfile);
 
     str = g_strdup_printf("%s\n%s\n%s\n%s", 
 			  _("Couldn't find file"), 
@@ -592,8 +592,8 @@ GcomprisBoard *gcompris_read_xml_file(GcomprisBoard *gcomprisBoard,
 
       if(!g_file_test ((filename), G_FILE_TEST_EXISTS))
 	{
-	  g_warning(_("Couldn't find file %s !"), fname);
-	  g_warning(_("Couldn't find file %s !"), filename);
+	  g_warning("Couldn't find file %s !", fname);
+	  g_warning("Couldn't find file %s !", filename);
 	  g_free(filename);
 	  g_free(gcomprisBoard);
 	  return NULL;
@@ -1260,39 +1260,52 @@ gchar *g_utf8_strndup(gchar* utf8text, gint n)
  return result;
 } 
 
-/*
- * Return NULL or a new gchar* with the absolute_filename of the given filename
+/** \brief search a given relative file in all gcompris dir it could be found
+ *     
+ * \return NULL or a new gchar* with the absolute_filename of the given filename
  *
  */
 gchar *gcompris_find_absolute_filename(gchar *filename)
 {
-  gchar *absolute_filename;
+  int			 i = 0;
+  gchar			*absolute_filename;
+  gchar			*dir_to_search[4];
+  GcomprisProperties	*properties = gcompris_get_properties();
+  GcomprisBoard		*gcomprisBoard = get_current_gcompris_board();
 
-  /* Search it on the file system */
+  /* Check it's already an absolute file */
+  if(g_path_is_absolute (filename) &&
+     g_file_test (filename, G_FILE_TEST_IS_REGULAR))
+    return g_strdup(filename);
 
-  if (!g_path_is_absolute (filename)) {
-    GcomprisProperties	*properties = gcompris_get_properties();
-
-    absolute_filename = g_strdup_printf("%s/%s", properties->package_data_dir, filename);
-
-    if (!g_file_test (absolute_filename, G_FILE_TEST_IS_REGULAR)) {
-      GcomprisBoard   *gcomprisBoard = get_current_gcompris_board();
-      g_free(absolute_filename);
-      if(gcomprisBoard) {
-	absolute_filename = g_strdup_printf("%s/%s", gcomprisBoard->board_dir, filename);
-      } else {
-	return NULL;
-      }
-    }
-  } else {
-    absolute_filename = strdup(filename);
-  }
-    
-  if (!g_file_test (absolute_filename, G_FILE_TEST_IS_REGULAR)){
-    g_free(absolute_filename);
-    return NULL;
-  }
+  /*
+   * Search it on the file system
+   */
   
+  dir_to_search[i++] = properties->package_data_dir;
+  dir_to_search[i++] = properties->user_data_dir;
+
+  if(gcomprisBoard)
+    dir_to_search[i++] = gcomprisBoard->board_dir;
+
+  dir_to_search[i++] = NULL;
+
+  absolute_filename = g_strdup(filename);
+  i = 0;
+  
+  while (dir_to_search[i])
+    {
+      g_free(absolute_filename);
+      absolute_filename = g_strdup_printf("%s/%s", dir_to_search[i], filename);
+      i++;
+      if(g_file_test (absolute_filename, G_FILE_TEST_IS_REGULAR))
+	goto FOUND;
+    }
+    
+  g_free(absolute_filename);
+  return NULL;
+
+ FOUND:
   return absolute_filename;
 }
 

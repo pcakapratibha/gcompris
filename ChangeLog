@@ -1,3 +1,25 @@
+	*** RELEASE 7.1.1 ***
+
+2005-11-24  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* Makefile.mingw: fixed for windows, missing "
+	* configure.in: release 7.1.1
+	* gcompris-installer.nsi: fixed uninstallation
+	* gcompris.spec.in: now use mandriva-release instead of mandrake. no more check %canvaslib < 2.3.6
+	  because the numbering has changed, at least on mandriva. not sure it's usefull.
+	* src/boards/draw.c: fixed to work again on windows
+	* src/boards/python.c: (pythonboard_init): taken patch from HEAD to remove 
+	  the error AttributeError: 'module' object has no attribute 'argv'
+	  thanks to misc and erwan for their help.
+	* src/gcompris/gameutil.c: (gcompris_load_pixmap),
+	(gcompris_read_xml_file), (gcompris_find_absolute_filename):
+	* src/gcompris/images_selector.c: (gcompris_images_selector_start),
+	(display_image), (parseImage), (read_xml_file),
+	(read_dataset_directory): use gcompris_find_absolute_filename from HEAD. This fixed an error
+	  in image_selector when a tuxpaint image is selected.
+	* src/gcompris/properties.c: (gcompris_properties_new): added user_data_dir from HEAD
+	* src/gcompris/properties.h: added user_data_dir from HEAD
+
 	*** RELEASE 7.1 FINAL ***
 
 2005-11-17  Bruno coudoin  <bruno.coudoin@free.fr>
@@ -53,14 +75,6 @@
 
 	* src/boards/menu.c: (menu_start):
 	* src/gcompris/gcompris.c: (gcompris_terminate):
-
-2005-11-04  Bruno coudoin  <bruno.coudoin@free.fr>
-
-	reviewed by: <delete if not using a buddy>
-
-	* src/boards/menu.c: (menu_start):
-	* src/gcompris/gcompris.c: (gcompris_terminate):
-
 
 	*** RELEASE 7.1PRE2 ***
 
