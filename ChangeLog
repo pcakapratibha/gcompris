@@ -1,5 +1,15 @@
 2006-01-21  Yves Combe  <yves@ycombe.net>
 
+	return to last menu position after playing a board
+	add GCompris Logo at start.
+
+	* src/boards/menu2.c: (menu_start), (display_section),
+	(create_top), (display_welcome):
+	* src/gcompris/properties.c: (gcompris_properties_new):
+	* src/gcompris/properties.h:
+
+2006-01-21  Yves Combe  <yves@ycombe.net>
+
 	gcompris -l nowhere/menu2 to test this new menu.
 
 	* boards/Makefile.am:

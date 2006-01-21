@@ -1,6 +1,6 @@
 /* gcompris - menu2.c
  *
- * Time-stamp: <2006/01/21 00:18:00 yves>
+ * Time-stamp: <2006/01/21 21:42:00 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -62,6 +62,7 @@ static void		 set_content(GnomeCanvasRichText *item_content,
 				     gchar *text);
 
 static void              display_section (gchar *path);
+static void              display_welcome (void);
 static void		 create_panel(GnomeCanvasGroup *parent);
 static void		 create_top(GnomeCanvasGroup *parent, gchar *path);
 
@@ -165,6 +166,9 @@ static void menu_pause (gboolean pause)
  */
 static void menu_start (GcomprisBoard *agcomprisBoard)
 {
+
+  GcomprisProperties	*properties = gcompris_get_properties();
+
   current_x = 0.0;
   current_y = 0.0;
 
@@ -228,6 +232,11 @@ static void menu_start (GcomprisBoard *agcomprisBoard)
       create_info_area(boardRootItem, menuitems);
 
       create_panel(boardRootItem);
+
+      if (properties->menu_position)
+	display_section(properties->menu_position);
+      else
+	display_welcome();
 
       /* set initial values for this level */
       gcomprisBoard->level = 1;
@@ -320,6 +329,7 @@ static void create_panel(GnomeCanvasGroup *parent)
 static void display_section (gchar *path)
 {
       GList		*boardlist;	/* List of Board */
+      GcomprisProperties	*properties = gcompris_get_properties();
 
       if (strcmp(path,"home")==0)
 	boardlist = homeBoards;
@@ -348,6 +358,11 @@ static void display_section (gchar *path)
 
       if (strcmp(path,"home")!=0)
 	g_list_free(boardlist);
+
+      if (properties->menu_position)
+	g_free(properties->menu_position);
+      
+      properties->menu_position = g_strdup(path);
 
 }
 
@@ -923,6 +938,66 @@ static void create_top(GnomeCanvasGroup *parent, gchar *path)
 
   g_free(path1);
   
+}
+
+static void              display_welcome (void)
+{
+  GnomeCanvasItem *logo;
+  GdkPixbuf *pixmap;
+
+  if (actualSectionItem)
+    {
+      g_error("actualSectionItem exists in display_section !");
+    }
+
+
+  actualSectionItem = GNOME_CANVAS_GROUP(
+					 gnome_canvas_item_new ( boardRootItem,
+								 gnome_canvas_group_get_type (),
+								 "x", (double) 0,
+								 "y", (double) 0,
+								 NULL));
+  
+  pixmap = gcompris_load_skin_pixmap("gcompris-about.png");
+
+
+  logo = gnome_canvas_item_new (actualSectionItem,
+				gnome_canvas_pixbuf_get_type (),
+				"pixbuf", pixmap,
+				"x", (gdouble) display_x + display_w/2.0,
+				"y", (gdouble) display_y + display_h/2.0,
+				"anchor", GTK_ANCHOR_CENTER,
+				NULL);
+ 
+  gtk_signal_connect(GTK_OBJECT(logo), "event",
+		     (GtkSignalFunc) gcompris_item_event_focus,
+		     NULL);
+ 
+      if(G_IS_OBJECT(menuitems->boardname_item))
+	gnome_canvas_item_set (menuitems->boardname_item,
+			       "text", "GCompris V" VERSION,
+			       NULL);
+
+      if(G_IS_OBJECT(menuitems->description_item)
+	 && G_IS_OBJECT(menuitems->description_item_s))
+	set_content(menuitems->description_item,
+		    menuitems->description_item_s,
+		    _("GCompris is a collection of educational games that provides for children from 2 years old with different activities."));
+
+      if(G_IS_OBJECT(menuitems->author_item))
+	gnome_canvas_item_set (menuitems->author_item,
+			       "text", _("Bruno Coudoin, Genius"),
+			       NULL);
+      if(G_IS_OBJECT(menuitems->boardname_item_s))
+	gnome_canvas_item_set (menuitems->boardname_item_s,
+			       "text", "GCompris V" VERSION,
+			       NULL);
+
+      if(G_IS_OBJECT(menuitems->author_item_s))
+	gnome_canvas_item_set (menuitems->author_item_s,
+			       "text", _("Bruno Coudoin, Genius"),
+			       NULL);
+
 }
 
 
