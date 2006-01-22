@@ -1,6 +1,6 @@
 /* gcompris - menu2.c
  *
- * Time-stamp: <2006/01/22 13:30:31 yves>
+ * Time-stamp: <2006/01/23 00:33:57 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -210,8 +210,6 @@ static void menu_start (GcomprisBoard *agcomprisBoard)
 
       gcomprisBoard=agcomprisBoard;
 
-      g_warning ("menu2 : dispaly board %s / %s ",gcomprisBoard->section, gcomprisBoard->name );
-
       menuitems = g_new(MenuItems, 1);
 
       gcompris_set_background(gnome_canvas_root(gcomprisBoard->canvas), 
@@ -233,8 +231,9 @@ static void menu_start (GcomprisBoard *agcomprisBoard)
 
       create_panel(boardRootItem);
 
-      if (properties->menu_position)
+      if (properties->menu_position){
 	display_section(properties->menu_position);
+      }
       else
 	display_welcome();
 
@@ -269,8 +268,6 @@ static void create_panel(GnomeCanvasGroup *parent)
 
   n_sections = g_list_length(panelBoards);
 
-  g_warning("menu2: number of main sections %d", n_sections);
-  
   if (n_sections == 0)
     return;
 
@@ -287,8 +284,6 @@ static void create_panel(GnomeCanvasGroup *parent)
 
   for (list = panelBoards; list != NULL; list = list->next){
     board = (GcomprisBoard *) list->data;
-
-    g_warning("menu2: panel %s", board->name);
 
     pixmap = gcompris_load_pixmap(board->icon_name);
 
@@ -329,12 +324,8 @@ static void create_panel(GnomeCanvasGroup *parent)
 static void display_section (gchar *path)
 {
       GList		*boardlist;	/* List of Board */
-      GcomprisProperties	*properties = gcompris_get_properties();
 
-      if (strcmp(path,"home")==0)
-	boardlist = homeBoards;
-      else
-	boardlist = gcompris_get_menulist(path);
+      boardlist = gcompris_get_menulist(path);
 
       if (actualSectionItem)
 	gtk_object_destroy (GTK_OBJECT(actualSectionItem));
@@ -358,11 +349,6 @@ static void display_section (gchar *path)
 
       if (strcmp(path,"home")!=0)
 	g_list_free(boardlist);
-
-      if (properties->menu_position)
-	g_free(properties->menu_position);
-      
-      properties->menu_position = g_strdup(path);
 
 }
 
@@ -643,10 +629,15 @@ item_event(GnomeCanvasItem *item, GdkEvent *event,  MenuItems *menuitems)
 	
 	if (strcmp(board->type,"menu")==0){
 	  gchar *path = g_strdup_printf("%s/%s",board->section, board->name);
+	  GcomprisProperties	*properties = gcompris_get_properties();
 
 	  display_section(path);
-	  
-	  g_free(path);
+
+	  if (properties->menu_position)
+	    g_free(properties->menu_position);
+
+	  properties->menu_position = path;
+  
 	}
 	else
 	  board_run_next (board);

@@ -579,7 +579,9 @@ static gint hat_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
 			// Make the items go out of the hat, 
 			for (i = 0 ; i < nb_list() ; i++) {
 				for (j = 0 ; j < frame_minus.nb_stars[i] ; j++) {
-					my_move = g_malloc(sizeof(move_object));	// Freed in function smooth_move
+					if ((my_move = g_malloc(sizeof(move_object))) == NULL) {	// Freed in function smooth_move
+						g_error ("Malloc error in hat_event");
+					}
 					my_move->i = i;
 					my_move->j = j;
 					my_move->nb = 20;

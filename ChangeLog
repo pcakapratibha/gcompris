@@ -1,3 +1,12 @@
+2006-01-23  Yves Combe  <yves@ycombe.net>
+
+	fix bug in menu2.
+	minor update in magic_hat (MB)
+
+	* src/boards/magic_hat.c: (hat_event):
+	* src/boards/menu2.c: (menu_start), (display_section),
+	(item_event), (create_top):
+
 2006-01-22  Yves Combe  <yves@ycombe.net>
 
 	new activity magic_hat by Marc Brun.
