@@ -48,6 +48,7 @@ lib_LTLIBRARIES = \
 	libleftright.la \
 	libsuperbrain.la \
 	libmachpuzzle.la \
+	libmagic_hat.la \
 	libmaze.la \
 	libmemory.la \
 	libmenu.la \
@@ -195,6 +196,10 @@ libcolors_la_SOURCES = colors.c
 libtarget_la_LDFLAGS = -module -avoid-version
 libtarget_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la
 libtarget_la_SOURCES = target.c
+
+libmagic_hat_la_LDFLAGS = -module -avoid-version
+libmagic_hat_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la
+libmagic_hat_la_SOURCES = magic_hat.c
 
 libmaze_la_LDFLAGS = -module -avoid-version
 libmaze_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la

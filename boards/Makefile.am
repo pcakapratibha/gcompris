@@ -64,6 +64,7 @@ xml_in_files = \
 	keyboard.xml.in \
 	leftright.xml.in \
 	login.xml.in \
+	magic_hat.xml.in \
 	math.xml.in \
 	maze2DRelative.xml.in \
 	maze3D.xml.in \

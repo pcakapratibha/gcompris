@@ -1,6 +1,6 @@
 /* gcompris - menu2.c
  *
- * Time-stamp: <2006/01/21 21:42:00 yves>
+ * Time-stamp: <2006/01/22 13:30:31 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -968,36 +968,34 @@ static void              display_welcome (void)
 				"y", (gdouble) display_y + display_h/2.0,
 				"anchor", GTK_ANCHOR_CENTER,
 				NULL);
+
+  gdk_pixbuf_unref(pixmap);
  
-  gtk_signal_connect(GTK_OBJECT(logo), "event",
-		     (GtkSignalFunc) gcompris_item_event_focus,
-		     NULL);
- 
-      if(G_IS_OBJECT(menuitems->boardname_item))
-	gnome_canvas_item_set (menuitems->boardname_item,
+  if(G_IS_OBJECT(menuitems->boardname_item))
+    gnome_canvas_item_set (menuitems->boardname_item,
+			   "text", "GCompris V" VERSION,
+			   NULL);
+  
+  if(G_IS_OBJECT(menuitems->description_item)
+     && G_IS_OBJECT(menuitems->description_item_s))
+    set_content(menuitems->description_item,
+		menuitems->description_item_s,
+		_("GCompris is a collection of educational games that provides for children from 2 years old with different activities."));
+
+  if(G_IS_OBJECT(menuitems->author_item))
+    gnome_canvas_item_set (menuitems->author_item,
+			   "text", _("Bruno Coudoin, Genius"),
+			   NULL);
+  if(G_IS_OBJECT(menuitems->boardname_item_s))
+    gnome_canvas_item_set (menuitems->boardname_item_s,
 			       "text", "GCompris V" VERSION,
-			       NULL);
-
-      if(G_IS_OBJECT(menuitems->description_item)
-	 && G_IS_OBJECT(menuitems->description_item_s))
-	set_content(menuitems->description_item,
-		    menuitems->description_item_s,
-		    _("GCompris is a collection of educational games that provides for children from 2 years old with different activities."));
-
-      if(G_IS_OBJECT(menuitems->author_item))
-	gnome_canvas_item_set (menuitems->author_item,
-			       "text", _("Bruno Coudoin, Genius"),
-			       NULL);
-      if(G_IS_OBJECT(menuitems->boardname_item_s))
-	gnome_canvas_item_set (menuitems->boardname_item_s,
-			       "text", "GCompris V" VERSION,
-			       NULL);
-
-      if(G_IS_OBJECT(menuitems->author_item_s))
-	gnome_canvas_item_set (menuitems->author_item_s,
-			       "text", _("Bruno Coudoin, Genius"),
-			       NULL);
-
+			   NULL);
+  
+  if(G_IS_OBJECT(menuitems->author_item_s))
+    gnome_canvas_item_set (menuitems->author_item_s,
+			   "text", _("Bruno Coudoin, Genius"),
+			   NULL);
+  
 }
 
 

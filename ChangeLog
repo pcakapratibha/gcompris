@@ -1,3 +1,33 @@
+2006-01-22  Yves Combe  <yves@ycombe.net>
+
+	new activity magic_hat by Marc Brun.
+
+	* boards/Makefile.am:
+	* boards/boardicons/magic_hat.png:
+	* boards/magic_hat.xml.in:
+	* boards/magic_hat/hat-point.png:
+	* boards/magic_hat/hat.png:
+	* boards/magic_hat/magic_hat-bg.png:
+	* boards/magic_hat/star-clear.png:
+	* boards/magic_hat/star.png:
+	* boards/magic_hat/star1.png:
+	* boards/magic_hat/star2.png:
+	* boards/magic_hat/star3.png:
+	* src/boards/Makefile.am:
+	* src/boards/magic_hat.c: (pause_board), (start_board),
+	(end_board), (process_ok), (set_level), (is_our_board),
+	(magic_hat_next_level), (magic_hat_destroy_all_items),
+	(magic_hat_create_item), (finished), (game_won), (draw_frame),
+	(draw_table), (draw_hat), (place_item), (item_event), (hat_event),
+	(nb_list), (smooth_move):
+	* src/boards/menu2.c: (display_welcome):
+
+2006-01-21  Yves Combe  <yves@ycombe.net>
+
+	suppress highlight on start
+
+	* src/boards/menu2.c: (display_welcome):
+
 2006-01-21  Yves Combe  <yves@ycombe.net>
 
 	return to last menu position after playing a board
