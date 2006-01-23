@@ -1,6 +1,6 @@
 /* gcompris - menu2.c
  *
- * Time-stamp: <2006/01/23 14:19:34 yves>
+ * Time-stamp: <2006/01/23 23:27:48 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -450,6 +450,7 @@ static void menu_create_item(GnomeCanvasGroup *parent, MenuItems *menuitems, Gco
   GnomeCanvasItem *item, *menu_button;
   int difficulty;
   gchar *tmp_board_dir;
+  gdouble ratio, pixmap_w, pixmap_h;
 
   /*
    * Take care to load the board->icon_name from the dir specified
@@ -462,21 +463,29 @@ static void menu_create_item(GnomeCanvasGroup *parent, MenuItems *menuitems, Gco
   menu_pixmap = gcompris_load_pixmap(board->icon_name);
   gcomprisBoard->board_dir = tmp_board_dir;
 
+  ratio = get_ratio (menu_pixmap, icon_size);
+  pixmap_w = gdk_pixbuf_get_width(menu_pixmap)*ratio;
+  pixmap_h = gdk_pixbuf_get_height(menu_pixmap)*ratio;
+
   next_spot();
 
   menu_button = gnome_canvas_item_new (parent,
 				       gnome_canvas_pixbuf_get_type (),
 				       "pixbuf", menu_pixmap,
-				       "x", (double)current_x - gdk_pixbuf_get_width(menu_pixmap)/2,
-				       "y", (double)current_y - gdk_pixbuf_get_height(menu_pixmap)/2,
+				       "x", (double)current_x - pixmap_w/2,
+				       "y", (double)current_y - pixmap_h/2,
+				       "width", (gdouble) pixmap_w,
+				       "height", (gdouble) pixmap_h,
+				       "width-set", TRUE,
+				       "height-set", TRUE,
 				       NULL);
 
   // display difficulty stars
   if (board->difficulty != NULL) {
     difficulty = atoi(board->difficulty);
     gcompris_display_difficulty_stars(parent,
-				      (double)current_x - gdk_pixbuf_get_width(menu_pixmap)/2 - 25,
-				      (double)current_y - gdk_pixbuf_get_height(menu_pixmap)/2,
+				      (double)current_x - pixmap_w/2 - 25,
+				      (double)current_y - pixmap_h/2,
 				      (double) 0.6,
 				      difficulty);
   }
@@ -512,8 +521,8 @@ static void menu_create_item(GnomeCanvasGroup *parent, MenuItems *menuitems, Gco
       gnome_canvas_item_new (parent,
 			     gnome_canvas_pixbuf_get_type (),
 			     "pixbuf", pixmap,
-			     "x", (double)current_x - gdk_pixbuf_get_width(menu_pixmap)/2 - 25,
-			     "y", (double)current_y - gdk_pixbuf_get_height(menu_pixmap)/2 + 28,
+			     "x", (double)current_x - pixmap_w/2 - 25,
+			     "y", (double)current_y - pixmap_h/2 + 28,
 			     NULL);
       gdk_pixbuf_unref(pixmap);
       g_free(soundfile);
@@ -526,8 +535,8 @@ static void menu_create_item(GnomeCanvasGroup *parent, MenuItems *menuitems, Gco
       item =  gnome_canvas_item_new (parent,
 				     gnome_canvas_pixbuf_get_type (),
 				     "pixbuf", pixmap,
-				     "x", (double)current_x - gdk_pixbuf_get_width(menu_pixmap)/2 - 25,
-				     "y", (double)current_y - gdk_pixbuf_get_height(menu_pixmap)/2,
+				     "x", (double)current_x - pixmap_w/2 - 25,
+				     "y", (double)current_y - pixmap_h/2,
 				     NULL);
       gdk_pixbuf_unref(pixmap);
     }
