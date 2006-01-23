@@ -1,5 +1,12 @@
 2006-01-23  Yves Combe  <yves@ycombe.net>
 
+	add background for menu2, with the differents zones. 
+
+	* boards/skins/gartoon/gcompris-menu2bg.png:
+	* src/boards/menu2.c: (menu_start):
+
+2006-01-23  Yves Combe  <yves@ycombe.net>
+
 	fix segfault i had in level 4 5 6 of magic hat.
 
 	* src/boards/magic_hat.c: (place_item):
