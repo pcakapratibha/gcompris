@@ -1,5 +1,11 @@
 2006-01-23  Yves Combe  <yves@ycombe.net>
 
+	fix segfault i had in level 4 5 6 of magic hat.
+
+	* src/boards/magic_hat.c: (place_item):
+
+2006-01-23  Yves Combe  <yves@ycombe.net>
+
 	fix bug in menu2.
 	minor update in magic_hat (MB)
 

@@ -461,10 +461,9 @@ static void place_item(frame * my_frame, int type) {
   GdkPixbuf *pixmap[MAX_LIST], *image;
   double item_x, item_y;
   double x, y;
-
-  pixmap[ITEM1] = gcompris_load_pixmap("magic_hat/star1.png");
-  pixmap[ITEM2] = gcompris_load_pixmap("magic_hat/star2.png");
-  pixmap[ITEM3] = gcompris_load_pixmap("magic_hat/star3.png");
+  char *image_name[MAX_LIST] = { "magic_hat/star1.png",
+				 "magic_hat/star2.png",
+				 "magic_hat/star3.png" };
 
   x = my_frame->coord_x;
   y = my_frame->coord_y;
@@ -474,7 +473,7 @@ static void place_item(frame * my_frame, int type) {
 	for (j = 0 ; j < MAX_ITEM ; j++) {
 
 		if ((j < my_frame->nb_stars[i]) && (type != EMPTY))
-			image = pixmap[i];
+			image = gcompris_load_pixmap(image_name[i]);
 		else
 			image = gcompris_load_pixmap("magic_hat/star-clear.png");
 
@@ -497,7 +496,8 @@ static void place_item(frame * my_frame, int type) {
 			"height_set", TRUE,
 			"anchor", GTK_ANCHOR_NW,
 			NULL);
-			
+		gdk_pixbuf_unref(image);
+	
 		if (type == DYNAMIC)
 			gtk_signal_connect(GTK_OBJECT(item), "event", (GtkSignalFunc) item_event, GINT_TO_POINTER(MAX_ITEM * i + j));
 
@@ -507,10 +507,6 @@ static void place_item(frame * my_frame, int type) {
 	}
   }
 
-  gdk_pixbuf_unref(pixmap[ITEM1]);
-  gdk_pixbuf_unref(pixmap[ITEM2]);
-  gdk_pixbuf_unref(pixmap[ITEM3]);
- 
 }
 
 // When clicked, an item changes his appearance (active or inactive) and the counter is re-evaluated
