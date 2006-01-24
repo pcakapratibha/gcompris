@@ -69,6 +69,7 @@ lib_LTLIBRARIES = \
 	libadvanced_colors.la \
 	libread_colors.la \
 	libdraw.la \
+	libwordprocessor.la \
 	$(python_plugin)
 
 libdir = $(plugindir)
@@ -261,6 +262,10 @@ libhanoi_real_la_SOURCES = hanoi_real.c
 libfifteen_la_LDFLAGS = -module -avoid-version
 libfifteen_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la
 libfifteen_la_SOURCES = fifteen.c
+
+libwordprocessor_la_LDFLAGS = -module -avoid-version
+libwordprocessor_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la
+libwordprocessor_la_SOURCES = wordprocessor.c
 
 
 libpython_la_LDFLAGS = -export-dynamic -module -avoid-version $(PYTHON_LIBS)

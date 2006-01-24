@@ -114,6 +114,7 @@ xml_in_files = \
 	traffic.xml.in \
 	tuxpaint.xml.in \
 	watercycle.xml.in \
+	wordprocessor.xml.in \
 	wordsgame.xml.in
 
 xml_DATA = $(xml_in_files:.xml.in=.xml)

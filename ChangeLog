@@ -1,3 +1,18 @@
+2006-01-25  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	First release of a new activity, the wordprocessor.
+	Uncomplete yet.
+
+	* boards/Makefile.am:
+	* boards/boardicons/README:
+	* boards/boardicons/wordprocessor.png:
+	* boards/wordprocessor.xml.in:
+	* src/boards/Makefile.am:
+	* src/boards/wordprocessor.c: (pause_board), (start_board),
+	(end_board), (set_level), (is_our_board),
+	(wordprocessor_destroy_all_items), (wordprocessor_create),
+	(item_event):
+
 2006-01-23  Yves Combe  <yves@ycombe.net>
 
 	constraint resize icon.
