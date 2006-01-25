@@ -1,6 +1,6 @@
 /* gcompris - gcompris.h
  *
- * Time-stamp: <2005/11/11 12:50:47 bruno>
+ * Time-stamp: <2006/01/25 09:37:03 yves>
  *
  * Copyright (C) 2000,2001,2002 Bruno Coudoin
  *
@@ -146,6 +146,16 @@ void		 gcompris_set_fullscreen(gboolean state);
 void		 gcompris_exit();
 
 gchar		*gcompris_get_database();
+
+typedef void     (*ConfirmCallBack)     (gboolean answer);
+
+void gcompris_confirm (gchar *title, 
+		       gchar *question_text,
+		       gchar *yes_text,
+		       gchar *no_text,
+		       ConfirmCallBack iscb);
+
+void gcompris_confirm_stop (void);
 
 /* Trace Log */
 #define GCOMPRIS_LOG_STATUS_PASSED    "PASSED"

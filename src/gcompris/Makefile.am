@@ -121,6 +121,7 @@ libgcompris_1_la_SOURCES =			\
 	board.h board.c \
 	board_config.h board_config.c \
 	gcompris_files.c \
+	gcompris_confirm.c \
 	profile.c \
 	wordlist.c \
 	gcompris_db.c \

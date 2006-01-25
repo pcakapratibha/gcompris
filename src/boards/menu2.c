@@ -1,6 +1,6 @@
 /* gcompris - menu2.c
  *
- * Time-stamp: <2006/01/23 23:27:48 yves>
+ * Time-stamp: <2006/01/23 23:49:43 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -464,6 +464,10 @@ static void menu_create_item(GnomeCanvasGroup *parent, MenuItems *menuitems, Gco
   gcomprisBoard->board_dir = tmp_board_dir;
 
   ratio = get_ratio (menu_pixmap, icon_size);
+
+  if (ratio < 1.0)
+    g_warning("Resize %s", board->icon_name);
+
   pixmap_w = gdk_pixbuf_get_width(menu_pixmap)*ratio;
   pixmap_h = gdk_pixbuf_get_height(menu_pixmap)*ratio;
 

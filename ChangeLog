@@ -1,3 +1,15 @@
+2006-01-25  Yves Combe  <yves@ycombe.net>
+
+	add a confirmation popup on quit. Yet colors problem because of shadow.
+
+	* src/boards/menu2.c: (menu_create_item):
+	* src/gcompris/Makefile.am:
+	* src/gcompris/bar.c: (item_event_bar), (confirm_quit):
+	* src/gcompris/gcompris.h:
+	* src/gcompris/gcompris_confirm.c: (gcompris_confirm),
+	(gcompris_confirm_stop), (display_confirm), (free_stuff),
+	(set_content), (button_event):
+
 2006-01-25  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	First release of a new activity, the wordprocessor.
