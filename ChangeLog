@@ -1,5 +1,11 @@
 2006-01-25  Yves Combe  <yves@ycombe.net>
 
+	fix colors in confirmation window.
+
+	* src/gcompris/gcompris_confirm.c: (display_confirm):
+
+2006-01-25  Yves Combe  <yves@ycombe.net>
+
 	add a confirmation popup on quit. Yet colors problem because of shadow.
 
 	* src/boards/menu2.c: (menu_create_item):

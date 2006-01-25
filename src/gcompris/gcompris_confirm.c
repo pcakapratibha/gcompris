@@ -1,6 +1,6 @@
 /* gcompris - gcompris_confirm.c
  *
- * Time-stamp: <2006/01/25 10:26:25 yves>
+ * Time-stamp: <2006/01/25 21:05:44 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -171,7 +171,7 @@ display_confirm(gchar *title,
   GcomprisBoard *gcomprisBoard = get_current_gcompris_board();
 
 
-  GnomeCanvasItem  *item, *item2, *richtext1, *richtext2;
+  GnomeCanvasItem  *item, *item2, *richtext_s, *richtext;
   GdkPixbuf	   *pixmap = NULL;
   GdkPixbuf	   *pixmap_cross = NULL;
   GdkPixbuf	   *pixmap_stick = NULL;
@@ -242,34 +242,20 @@ display_confirm(gchar *title,
 			 "y", (gdouble) titre_y + titre_h/2 + 1.0,
 			 "font", gcompris_skin_font_title,
 			 "anchor", GTK_ANCHOR_CENTER,
-			 "fill_color_rgba",  gcompris_skin_color_title,
+			 "fill_color_rgba",  gcompris_skin_color_shadow,
 			 NULL);
 
   gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
 			 gnome_canvas_text_get_type (),
 			 "text", title,
-			 "x", (gdouble) titre_x + titre_w/2 + 1.0,
-			 "y", (gdouble) titre_y + titre_h/2 + 1.0,
+			 "x", (gdouble) titre_x + titre_w/2,
+			 "y", (gdouble) titre_y + titre_h/2,
 			 "font", gcompris_skin_font_title,
 			 "anchor", GTK_ANCHOR_CENTER,
-			 "fill_color_rgba",  gcompris_skin_color_shadow,
+			 "fill_color_rgba",  gcompris_skin_color_title,
 			 NULL);
 
-  richtext1 = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
-				     gnome_canvas_rich_text_get_type (),
-				     "x", (double) text_zone_x ,
-				     "y", (double)  text_zone_y,
-				     "width",  text_zone_w,
-				     "height", text_zone_h,
-				     "anchor", GTK_ANCHOR_NW,
-				     "justification", GTK_JUSTIFY_CENTER,
-				     "grow_height", FALSE,
-				     "cursor_visible", FALSE,
-				     "cursor_blink", FALSE,
-				     "editable", FALSE,
-				     NULL);
-
-  richtext2 = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
+  richtext_s = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
 				     gnome_canvas_rich_text_get_type (),
 				     "x", (double) text_zone_x + 1.0,
 				     "y", (double)  text_zone_y + 1.0,
@@ -283,8 +269,23 @@ display_confirm(gchar *title,
 				     "editable", FALSE,
 				     NULL);
 
-  set_content (GNOME_CANVAS_RICH_TEXT(richtext1), 
-	       GNOME_CANVAS_RICH_TEXT(richtext2), 
+
+  richtext = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
+				     gnome_canvas_rich_text_get_type (),
+				     "x", (double) text_zone_x ,
+				     "y", (double)  text_zone_y,
+				     "width",  text_zone_w,
+				     "height", text_zone_h,
+				     "anchor", GTK_ANCHOR_NW,
+				     "justification", GTK_JUSTIFY_CENTER,
+				     "grow_height", FALSE,
+				     "cursor_visible", FALSE,
+				     "cursor_blink", FALSE,
+				     "editable", FALSE,
+				     NULL);
+
+  set_content (GNOME_CANVAS_RICH_TEXT(richtext), 
+	       GNOME_CANVAS_RICH_TEXT(richtext_s), 
 	       question_text);
 	 
   
