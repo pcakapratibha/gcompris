@@ -1,6 +1,6 @@
 /* gcompris - gcompris_confirm.c
  *
- * Time-stamp: <2006/01/25 21:05:44 yves>
+ * Time-stamp: <2006/01/26 11:44:04 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -307,6 +307,8 @@ display_confirm(gchar *title,
 				"anchor", GTK_ANCHOR_WEST,
 				NULL);
 
+  gdk_pixbuf_unref(pixmap);
+
   gtk_signal_connect(GTK_OBJECT(item), "event",
 		     (GtkSignalFunc) button_event,
 		     "/no/");
@@ -323,6 +325,8 @@ display_confirm(gchar *title,
     "y", (double) button_y + 2*button_h/3,
     "anchor", GTK_ANCHOR_CENTER,
     NULL);
+
+  gdk_pixbuf_unref(pixmap_cross);
 
   gtk_signal_connect(GTK_OBJECT(item), "event",
 		     (GtkSignalFunc) button_event,
@@ -358,6 +362,8 @@ display_confirm(gchar *title,
 				"anchor", GTK_ANCHOR_WEST,
 				NULL);
 
+  gdk_pixbuf_unref(pixmap);
+
   gtk_signal_connect(GTK_OBJECT(item), "event",
 		     (GtkSignalFunc) button_event,
 		     "/yes/");
@@ -374,6 +380,8 @@ display_confirm(gchar *title,
 				"y", (double) button_y + button_h/3,
 				"anchor", GTK_ANCHOR_CENTER,
 				NULL);
+
+  gdk_pixbuf_unref(pixmap_stick);
 
   gtk_signal_connect(GTK_OBJECT(item), "event",
 		     (GtkSignalFunc) button_event,
