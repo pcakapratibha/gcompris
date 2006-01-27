@@ -1,6 +1,6 @@
 /* gcompris - gcompris_confirm.c
  *
- * Time-stamp: <2006/01/26 11:44:04 yves>
+ * Time-stamp: <2006/01/27 23:48:42 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -407,6 +407,8 @@ display_confirm(gchar *title,
   gtk_signal_connect(GTK_OBJECT(item2), "event",
 		     (GtkSignalFunc) gcompris_item_event_focus,
 		     item);
+
+  confirm_displayed = TRUE;
 
 }
 
