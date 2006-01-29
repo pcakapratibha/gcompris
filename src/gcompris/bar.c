@@ -1,6 +1,6 @@
 /* gcompris - bar.c
  *
- * Time-stamp: <2006/01/25 10:24:33 yves>
+ * Time-stamp: <2006/01/29 20:24:05 yves>
  *
  * Copyright (C) 2000-2003 Bruno Coudoin
  *
@@ -544,9 +544,10 @@ item_event_bar(GnomeCanvasItem *item, GdkEvent *event, gchar *data)
 	}
       else if(!strcmp((char *)data, "configuration"))
 	{
-	  if(gcomprisBoard->plugin->config != NULL)
+	  if(gcomprisBoard->plugin->config_start != NULL)
 	    {
-	      gcomprisBoard->plugin->config();
+	      gcomprisBoard->plugin->config_start(gcomprisBoard,
+						  gcompris_get_current_profile());
 	    }
 	}
       else if(!strcmp((char *)data, "about"))

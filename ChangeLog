@@ -1,3 +1,14 @@
+2006-01-29  Yves Combe  <yves@ycombe.net>
+
+	Add board config_start call by the bar.
+	Click on letter fixed to use that. Menu2 too.
+	Others boards needs fix too.
+
+	* src/boards/click_on_letter.c: (start_board), (conf_ok),
+	(config_start):
+	* src/boards/menu2.c: (menu_config_start), (menu_config_stop):
+	* src/gcompris/bar.c: (item_event_bar):
+
 2006-01-29  Yves Combe,,,  <yves@ycombe.net>
 
 	menu2 is now default menu.

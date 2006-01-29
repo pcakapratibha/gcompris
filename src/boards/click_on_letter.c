@@ -159,7 +159,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       gcomprisBoard->maxlevel=NUMBER_OF_LEVELS;
       gcomprisBoard->sublevel=1;
       gcomprisBoard->number_of_sublevel=NUMBER_OF_SUBLEVELS; /* Go to next level after this number of 'play' */
-      gcompris_bar_set(GCOMPRIS_BAR_LEVEL|GCOMPRIS_BAR_REPEAT);
+      gcompris_bar_set(GCOMPRIS_BAR_CONFIG|GCOMPRIS_BAR_LEVEL|GCOMPRIS_BAR_REPEAT);
       gcompris_score_start(SCORESTYLE_NOTE,
 			   50,
 			   50,
@@ -578,6 +578,25 @@ static GcomprisConfCallback conf_ok(GHashTable *table)
   
   board_conf = NULL;
   profile_conf = NULL;
+
+  if (gcomprisBoard){
+    gcompris_change_locale(g_hash_table_lookup( table, "locale"));
+
+    gchar *up_init_str = g_hash_table_lookup( table, "uppercase_only");
+
+    if (up_init_str && (strcmp(up_init_str, "True")==0))
+      uppercase_only = TRUE;
+    else
+      uppercase_only = FALSE;
+
+    //  g_hash_table_destroy(config);
+
+    click_on_letter_next_level();
+
+    gamewon = FALSE;
+    pause_board(FALSE);
+
+  }
 }
 
 static void
@@ -587,9 +606,12 @@ config_start(GcomprisBoard *agcomprisBoard,
   board_conf = agcomprisBoard;
   profile_conf = aProfile;
 
+  if (gcomprisBoard)
+    pause_board(TRUE);
+
   gcompris_configuration_window( g_strdup_printf("<b>%s</b> configuration\n for profile <b>%s</b>",
 						 agcomprisBoard->name, 
-						 aProfile->name), 
+						 aProfile ? aProfile->name : ""), 
 				 (GcomprisConfCallback )conf_ok);
 
   /* init the combo to previously saved value */

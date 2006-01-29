@@ -1,6 +1,6 @@
 /* gcompris - menu2.c
  *
- * Time-stamp: <2006/01/29 14:55:48 yves>
+ * Time-stamp: <2006/01/29 20:15:14 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -50,6 +50,11 @@ static void		 menu_pause (gboolean pause);
 static void		 menu_end (void);
 static gboolean		 menu_is_our_board (GcomprisBoard *gcomprisBoard);
 static void		 menu_config(void);
+
+static void              menu_config_start(GcomprisBoard *agcomprisBoard,
+					   GcomprisProfile *aProfile);
+
+static void              menu_config_stop(void);
 
 static void		 menu_create_item(GnomeCanvasGroup *parent, MenuItems *menuitems, GcomprisBoard *board);
 static gboolean		 next_spot();
@@ -136,8 +141,8 @@ static BoardPlugin menu_bp =
     NULL,
     menu_config,
     NULL,
-    NULL,
-    NULL
+    menu_config_start,
+    menu_config_stop
   };
 
 /*
@@ -1012,6 +1017,25 @@ static void              display_welcome (void)
 			   NULL);
   
 }
+
+static void
+menu_config_start(GcomprisBoard *agcomprisBoard,
+	     GcomprisProfile *aProfile){
+  if(gcomprisBoard!=NULL)
+    {
+      menu_pause(TRUE);
+      gcompris_config_start();
+    }
+}
+
+/* ======================= */
+/* = config_stop        = */
+/* ======================= */
+static void 
+menu_config_stop()
+{
+}
+
 
 
 /* Local Variables: */
