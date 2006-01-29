@@ -1,3 +1,63 @@
+2006-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Added the German map by Olaf Ronneberger.
+	- Added in tools/shapegame/ a utility to create shapegame activity
+
+	* boards/geography.xml.in:
+	* boards/geography/Makefile.am:
+	* boards/geography/board6_0.xml.in:
+	* boards/geography/germany_region/back.png:
+	* boards/geography/germany_region/baden-wuerttemberg.png:
+	* boards/geography/germany_region/bayern.png:
+	* boards/geography/germany_region/berlin.png:
+	* boards/geography/germany_region/brandenburg.png:
+	* boards/geography/germany_region/bremen.png:
+	* boards/geography/germany_region/hamburg.png:
+	* boards/geography/germany_region/hessen.png:
+	* boards/geography/germany_region/mecklenburg-vorpommern.png:
+	* boards/geography/germany_region/niedersachsen.png:
+	* boards/geography/germany_region/nordrhein-westfalen.png:
+	* boards/geography/germany_region/rheinland-pfalz.png:
+	* boards/geography/germany_region/saarland.png:
+	* boards/geography/germany_region/sachsen-anhalt.png:
+	* boards/geography/germany_region/sachsen.png:
+	* boards/geography/germany_region/schleswig_holstein.png:
+	* boards/geography/germany_region/target_baden-wuerttemberg.png:
+	* boards/geography/germany_region/target_bayern.png:
+	* boards/geography/germany_region/target_berlin.png:
+	* boards/geography/germany_region/target_brandenburg.png:
+	* boards/geography/germany_region/target_bremen.png:
+	* boards/geography/germany_region/target_hamburg.png:
+	* boards/geography/germany_region/target_hessen.png:
+	* boards/geography/germany_region/target_mecklenburg-vorpommern.png
+	:
+	* boards/geography/germany_region/target_niedersachsen.png:
+	* boards/geography/germany_region/target_nordrhein-westfalen.png:
+	* boards/geography/germany_region/target_rheinland-pfalz.png:
+	* boards/geography/germany_region/target_saarland.png:
+	* boards/geography/germany_region/target_sachsen-anhalt.png:
+	* boards/geography/germany_region/target_sachsen.png:
+	* boards/geography/germany_region/target_schleswig_holstein.png:
+	* boards/geography/germany_region/target_thueringen.png:
+	* boards/geography/germany_region/thueringen.png:
+	* src/boards/wordprocessor.c: (wordprocessor_create),
+	(display_style_buttons), (item_event), (create_tags):
+	* src/gcompris/gcompris_confirm.c:
+	* tools/shapegame/HOWTO:
+	* tools/shapegame/Makefile:
+	* tools/shapegame/dt/Makefile:
+	* tools/shapegame/dt/README:
+	* tools/shapegame/dt/dt.cpp:
+	* tools/shapegame/dt/dt.h:
+	* tools/shapegame/dt/image.h:
+	* tools/shapegame/dt/imconv.h:
+	* tools/shapegame/dt/imutil.h:
+	* tools/shapegame/dt/input.pbm:
+	* tools/shapegame/dt/misc.h:
+	* tools/shapegame/dt/pnmfile.h:
+	* tools/shapegame/nice_target_spot.cpp:
+	* tools/shapegame/test.pbm:
+
 2006-01-29  Yves Combe  <yves@ycombe.net>
 
 	fix click_on_letter and shapegame (imagename) to configure from bar.

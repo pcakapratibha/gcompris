@@ -1,6 +1,6 @@
 /* gcompris - gcompris_confirm.c
  *
- * Time-stamp: <2006/01/29 13:54:54 yves>
+ * Time-stamp: <2006/01/29 16:06:02 bruno>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -18,6 +18,7 @@
  *   along with this program; if not, write to the Free Software
  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
+#include <string.h>
 
 /**
  * A confirmation popup for gcompris
@@ -25,25 +26,14 @@
  */
 #include "gcompris.h"
 
-static gint		 item_event_confirm(GnomeCanvasItem *item, 
-					    GdkEvent *event, 
-					    gpointer data);
-
-static void		 display_text(GnomeCanvasItem *rootitem, gchar *text);
-
 static void              display_confirm(gchar *title,
 					 gchar *question_text,
 					 gchar *yes_text,
 					 gchar *no_text,
 					 ConfirmCallBack iscb);
 
-static void		 entry_enter_callback( GtkWidget *widget,
-					       GtkWidget *entry );
-
 static gint
 button_event(GnomeCanvasItem *item, GdkEvent *event,  gchar *answer);
-
-static void		 free_stuff (GtkObject *obj, gchar* data);
 
 static void              set_content(GnomeCanvasRichText *item_content, 
 				     GnomeCanvasRichText *item_content_s,
