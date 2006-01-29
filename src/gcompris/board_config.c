@@ -1,6 +1,6 @@
 /* gcompris - board_config.c
  *
- * Time-stamp: <2005/10/01 14:34:12 bruno>
+ * Time-stamp: <2006/01/29 22:29:04 yves>
  *
  * Copyright (C) 2001 Pascal Georges
  *
@@ -80,8 +80,7 @@ static void check_key(gchar *key)
     g_error(" Key %s forbiden ! Change !", key);
 }
 
-void gcompris_close_board_conf (GtkButton *button,
-				gpointer user_data)
+void gcompris_close_board_conf ()
 {
   gtk_object_destroy              ((GtkObject *)conf_window);
   g_hash_table_destroy (hash_conf);
@@ -93,11 +92,15 @@ void gcompris_close_board_conf (GtkButton *button,
 void gcompris_apply_board_conf (GtkButton *button,
 				gpointer user_data)
 {
-  if (Confcallback != NULL)
-    Confcallback(hash_conf);
 
-  gcompris_close_board_conf (button,
-			     user_data);
+  if (Confcallback != NULL)
+    if (strcmp((gchar *) user_data, "/apply/")==0)
+      Confcallback(hash_conf);
+    else 
+      Confcallback(NULL);
+
+  gcompris_close_board_conf ();
+
 }
 
 GtkVBox *gcompris_configuration_window(gchar *label, GcomprisConfCallback callback)
@@ -156,8 +159,8 @@ GtkVBox *gcompris_configuration_window(gchar *label, GcomprisConfCallback callba
 
   g_signal_connect(G_OBJECT(button), 
 		   "clicked",
-		   G_CALLBACK(gcompris_close_board_conf),
-		   NULL);
+		   G_CALLBACK(gcompris_apply_board_conf),
+		   "/cancel/");
 
   /* Ok button */
   button_ok = GTK_BUTTON(gtk_button_new_from_stock(GTK_STOCK_OK));
@@ -165,7 +168,7 @@ GtkVBox *gcompris_configuration_window(gchar *label, GcomprisConfCallback callba
   g_signal_connect (G_OBJECT(button_ok),
 		    "clicked",
 		    G_CALLBACK(gcompris_apply_board_conf),
-		    NULL);
+		    "/apply/");
 
   gtk_box_pack_end (GTK_BOX(footer),
 		    GTK_WIDGET(button_ok),
@@ -665,8 +668,13 @@ GtkComboBox *gcompris_combo_locales(gchar *init)
 static gchar *current_locale = NULL;
 void gcompris_change_locale(gchar *locale)
 {
-  if ((!locale) || strcmp(locale, "NULL") == 0)
+  if (!locale)
     return;
+
+  if (strcmp(locale, "NULL") == 0){
+    gcompris_reset_locale();
+    return;
+  }
 
   current_locale = g_strdup(gcompris_get_locale());
 

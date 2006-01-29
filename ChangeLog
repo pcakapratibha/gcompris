@@ -1,5 +1,19 @@
 2006-01-29  Yves Combe  <yves@ycombe.net>
 
+	fix click_on_letter and shapegame (imagename) to configure from bar.
+
+	* src/boards/click_on_letter.c: (sounds_are_fine), (conf_ok),
+	(config_start):
+	* src/boards/py-gcompris-profile.c:
+	(gcompris_new_pyGcomprisProfileObject):
+	* src/boards/py-mod-gcompris.c: (pyGcomprisConfCallback):
+	* src/boards/shapegame.c: (start_board), (conf_ok), (config_start):
+	* src/gcompris/board_config.c: (gcompris_close_board_conf),
+	(gcompris_apply_board_conf), (gcompris_configuration_window),
+	(gcompris_change_locale):
+
+2006-01-29  Yves Combe  <yves@ycombe.net>
+
 	Add board config_start call by the bar.
 	Click on letter fixed to use that. Menu2 too.
 	Others boards needs fix too.

@@ -248,12 +248,6 @@ static gboolean sounds_are_fine ()
   gchar *locale = NULL;
   gboolean fine = TRUE;
 
-  GHashTable *config = gcompris_get_board_conf();
-
-  gcompris_change_locale(g_hash_table_lookup( config, "locale"));
-
-  g_hash_table_destroy(config);
-
   /* TRANSLATORS: Put here the alphabet in your language */
   alphabet=_("abcdefghijklmnopqrstuvwxyz");
   assert(g_utf8_validate(alphabet,-1,NULL)); // require by all utf8-functions
@@ -574,13 +568,19 @@ static GHFunc save_table (gpointer key,
 
 static GcomprisConfCallback conf_ok(GHashTable *table)
 {
+  if (!table){
+    if (gcomprisBoard)
+      pause_board(FALSE);
+    return;
+  }
+    
+
   g_hash_table_foreach(table, (GHFunc) save_table, NULL);
   
   board_conf = NULL;
   profile_conf = NULL;
 
   if (gcomprisBoard){
-    gcompris_change_locale(g_hash_table_lookup( table, "locale"));
 
     gchar *up_init_str = g_hash_table_lookup( table, "uppercase_only");
 
@@ -590,6 +590,12 @@ static GcomprisConfCallback conf_ok(GHashTable *table)
       uppercase_only = FALSE;
 
     //  g_hash_table_destroy(config);
+
+    gcompris_reset_locale();
+    g_warning("Table locale %s", g_hash_table_lookup( table, "locale"));
+    gcompris_change_locale(g_hash_table_lookup( table, "locale"));
+
+    sounds_are_fine();
 
     click_on_letter_next_level();
 
@@ -621,6 +627,10 @@ config_start(GcomprisBoard *agcomprisBoard,
   
   gcompris_combo_locales( locale);
 
+  //gcompris_separator();
+ 
+  //gcompris_combo_locales_asset( "Select sound locale", locale_sound, "gcompris colors", NULL, "audio/x-ogg", "purple.ogg");
+
   gboolean up_init = FALSE;
 
   gchar *up_init_str = g_hash_table_lookup( config, "uppercase_only");
@@ -628,8 +638,6 @@ config_start(GcomprisBoard *agcomprisBoard,
   if (up_init_str && (strcmp(up_init_str, "True")==0))
     up_init = TRUE;
 
-  gcompris_separator();
- 
   gcompris_boolean_box(_("Uppercase only text"),
 		       "uppercase_only",
 		       up_init);
