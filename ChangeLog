@@ -1,3 +1,11 @@
+2006-01-29  Yves Combe  <yves@ycombe.net>
+
+	Suppress event connection on text. 
+	Segfault seems to be fixed.
+
+	* src/gcompris/gcompris_confirm.c: (gcompris_confirm_stop),
+	(display_confirm):
+
 2006-01-27  Yves Combe  <yves@ycombe.net>
 
 	fix unpause bug in confirm.

@@ -1,6 +1,6 @@
 /* gcompris - gcompris_confirm.c
  *
- * Time-stamp: <2006/01/27 23:48:42 yves>
+ * Time-stamp: <2006/01/29 13:54:54 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -52,7 +52,10 @@ static void              set_content(GnomeCanvasRichText *item_content,
 static gboolean		 confirm_displayed = FALSE;
 
 static GnomeCanvasItem	*rootitem = NULL;
-
+static GnomeCanvasItem	*no_button = NULL;
+static GnomeCanvasItem	*yes_button = NULL;
+static GnomeCanvasItem	*yes_stick = NULL;
+static GnomeCanvasItem	*no_cross = NULL;
 
 static ConfirmCallBack  confirmCallBack = NULL;
 
@@ -134,6 +137,13 @@ void gcompris_confirm_stop ()
 {
   GcomprisBoard *gcomprisBoard = get_current_gcompris_board();
 
+  // Destroy the box
+  /* FIXME: Crashes randomly */
+  if(rootitem!=NULL)
+    gtk_object_destroy(GTK_OBJECT(rootitem));
+
+  rootitem = NULL;	  
+
   if(gcomprisBoard!=NULL && confirm_displayed)
     {
       if(gcomprisBoard->plugin->pause_board != NULL)
@@ -141,13 +151,6 @@ void gcompris_confirm_stop ()
 	  gcomprisBoard->plugin->pause_board(FALSE);
 	}
     }
-
-  // Destroy the box
-  /* FIXME: Crashes randomly */
-  if(rootitem!=NULL)
-    gtk_object_destroy(GTK_OBJECT(rootitem));
-
-  rootitem = NULL;	  
 
   gcompris_bar_hide(FALSE);
   confirm_displayed = FALSE;
@@ -299,94 +302,87 @@ display_confirm(gchar *title,
   pixmap_cross = gcompris_load_skin_pixmap("bad.png");
 
   // CANCEL
-  item = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
-				gnome_canvas_pixbuf_get_type (),
-				"pixbuf", pixmap, 
-				"x", (double) button_x ,
-				"y", (double) button_y + 2*button_h/3,
-				"anchor", GTK_ANCHOR_WEST,
-				NULL);
+  no_button = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
+				     gnome_canvas_pixbuf_get_type (),
+				     "pixbuf", pixmap, 
+				     "x", (double) button_x ,
+				     "y", (double) button_y + 2*button_h/3,
+				     "anchor", GTK_ANCHOR_WEST,
+				     NULL);
 
-  gdk_pixbuf_unref(pixmap);
+  //gdk_pixbuf_unref(pixmap);
 
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  gtk_signal_connect(GTK_OBJECT(no_button), "event",
 		     (GtkSignalFunc) button_event,
 		     "/no/");
 
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  gtk_signal_connect(GTK_OBJECT(no_button), "event",
 		     (GtkSignalFunc) gcompris_item_event_focus,
 		     NULL);
 
   // CANCEL CROSS
-  item = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
-    gnome_canvas_pixbuf_get_type (),
-    "pixbuf", pixmap_cross, 
-    "x", (double) button_x  + gdk_pixbuf_get_width(pixmap)/2,
-    "y", (double) button_y + 2*button_h/3,
-    "anchor", GTK_ANCHOR_CENTER,
-    NULL);
+  no_cross = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
+				    gnome_canvas_pixbuf_get_type (),
+				    "pixbuf", pixmap_cross, 
+				    "x", (double) button_x  + gdk_pixbuf_get_width(pixmap)/2,
+				    "y", (double) button_y + 2*button_h/3,
+				    "anchor", GTK_ANCHOR_CENTER,
+				    NULL);
 
   gdk_pixbuf_unref(pixmap_cross);
 
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  gtk_signal_connect(GTK_OBJECT(no_cross), "event",
 		     (GtkSignalFunc) button_event,
 		     "/no/");
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  gtk_signal_connect(GTK_OBJECT(no_cross), "event",
 		     (GtkSignalFunc) gcompris_item_event_focus,
 		     NULL);
 
 
-  item2 = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
-				 gnome_canvas_text_get_type (),
-				 "text", no_text,
-				 "font", gcompris_skin_font_title,
-				 "x", (double)  button_x + gdk_pixbuf_get_width(pixmap) + button_x_int ,
-				 "y", (double)  button_y + 2*button_h/3,
-				 "anchor", GTK_ANCHOR_WEST,
-				 "fill_color_rgba", gcompris_skin_color_text_button,
-				 NULL);
-
-  gtk_signal_connect(GTK_OBJECT(item2), "event",
-		     (GtkSignalFunc) button_event,
-		     "/no/");
-  gtk_signal_connect(GTK_OBJECT(item2), "event",
-		     (GtkSignalFunc) gcompris_item_event_focus,
-		     item);
+  gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
+			 gnome_canvas_text_get_type (),
+			 "text", no_text,
+			 "font", gcompris_skin_font_title,
+			 "x", (double)  button_x + gdk_pixbuf_get_width(pixmap) + button_x_int ,
+			 "y", (double)  button_y + 2*button_h/3,
+			 "anchor", GTK_ANCHOR_WEST,
+			 "fill_color_rgba", gcompris_skin_color_text_button,
+			 NULL);
 
   // OK
-  item = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
-				gnome_canvas_pixbuf_get_type (),
-				"pixbuf", pixmap, 
-				"x", (double) button_x ,
-				"y", (double) button_y + button_h/3,
-				"anchor", GTK_ANCHOR_WEST,
-				NULL);
-
+  yes_button = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
+				      gnome_canvas_pixbuf_get_type (),
+				      "pixbuf", pixmap, 
+				      "x", (double) button_x ,
+				      "y", (double) button_y + button_h/3,
+				      "anchor", GTK_ANCHOR_WEST,
+				      NULL);
+  
   gdk_pixbuf_unref(pixmap);
-
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  
+  gtk_signal_connect(GTK_OBJECT(yes_button), "event",
 		     (GtkSignalFunc) button_event,
 		     "/yes/");
 
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  gtk_signal_connect(GTK_OBJECT(yes_button), "event",
 		     (GtkSignalFunc) gcompris_item_event_focus,
 		     NULL);
 
   // OK stick
-  item = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
-				gnome_canvas_pixbuf_get_type (),
-				"pixbuf", pixmap_stick, 
-				"x", (double) button_x + gdk_pixbuf_get_width(pixmap)/2,
-				"y", (double) button_y + button_h/3,
-				"anchor", GTK_ANCHOR_CENTER,
-				NULL);
+  yes_stick = gnome_canvas_item_new (GNOME_CANVAS_GROUP(rootitem),
+				     gnome_canvas_pixbuf_get_type (),
+				     "pixbuf", pixmap_stick, 
+				     "x", (double) button_x + gdk_pixbuf_get_width(pixmap)/2,
+				     "y", (double) button_y + button_h/3,
+				     "anchor", GTK_ANCHOR_CENTER,
+				     NULL);
 
   gdk_pixbuf_unref(pixmap_stick);
 
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  gtk_signal_connect(GTK_OBJECT(yes_stick), "event",
 		     (GtkSignalFunc) button_event,
 		     "/yes/");
-  gtk_signal_connect(GTK_OBJECT(item), "event",
+  gtk_signal_connect(GTK_OBJECT(yes_stick), "event",
 		     (GtkSignalFunc) gcompris_item_event_focus,
 		     NULL);
 
@@ -400,13 +396,6 @@ display_confirm(gchar *title,
 				 "anchor", GTK_ANCHOR_WEST,
 				 "fill_color_rgba", gcompris_skin_color_text_button,
 				 NULL);
-
-  gtk_signal_connect(GTK_OBJECT(item2), "event",
-		     (GtkSignalFunc) button_event,
-		     "/yes/");
-  gtk_signal_connect(GTK_OBJECT(item2), "event",
-		     (GtkSignalFunc) gcompris_item_event_focus,
-		     item);
 
   confirm_displayed = TRUE;
 
