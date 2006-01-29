@@ -1,6 +1,6 @@
 /* gcompris - menu2.c
  *
- * Time-stamp: <2006/01/23 23:49:43 yves>
+ * Time-stamp: <2006/01/29 14:55:48 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -255,7 +255,7 @@ static void menu_start (GcomprisBoard *agcomprisBoard)
 static void create_panel(GnomeCanvasGroup *parent)
 {
   int n_sections;
-  GList *list;
+  GList *list = NULL;
   GcomprisBoard *board;
   GdkPixbuf *pixmap = NULL;
   GnomeCanvasItem *item;
@@ -263,8 +263,14 @@ static void create_panel(GnomeCanvasGroup *parent)
 
   gdouble x, y;
   gint int_y;
+  GcomprisProperties	*properties = gcompris_get_properties();
 
-  panelBoards = gcompris_get_menulist("/");
+  /* In normal mode, we show all the sections in panel */
+  /* in direct submenu access, we show the icon of the submenu */
+  if (strcmp(properties->root_menu,"/")==0)
+    panelBoards = gcompris_get_menulist(properties->root_menu);
+  else
+    panelBoards = g_list_append(list, gcomprisBoard);
 
   n_sections = g_list_length(panelBoards);
 
@@ -376,7 +382,7 @@ menu_is_our_board (GcomprisBoard *gcomprisBoard)
 {
   if (gcomprisBoard)
     {
-      if(g_strcasecmp(gcomprisBoard->type, "menu2")==0)
+      if(g_strcasecmp(gcomprisBoard->type, "menu")==0)
 	{
 	  /* Set the plugin entry */
 	  gcomprisBoard->plugin=&menu_bp;
@@ -858,6 +864,8 @@ static void create_top(GnomeCanvasGroup *parent, gchar *path)
 
   GnomeCanvasItem *item;
 
+  GcomprisProperties	*properties = gcompris_get_properties();
+
   if (!path)
     return;
 
@@ -871,15 +879,23 @@ static void create_top(GnomeCanvasGroup *parent, gchar *path)
   while (splitted_section[i] != NULL)
     {
 
+      path2 = g_strdup_printf("%s/%s", path1, splitted_section[i]);
+
+      g_free(path1);
+      path1 = path2;
+      
+      if (strcmp(path1, properties->root_menu)<0){
+	i++;
+	continue;
+      }
+
       if (current_top_x == 0.0){
 	current_top_x = top_x;
 	current_top_y = top_y + top_h/2.0;
-      }
-
-      if (i>1){
+      } else {
 	pixmap = gcompris_load_skin_pixmap("button_forward.png");
 	ratio = get_ratio(pixmap, top_arrow_size);
-
+	
 	gnome_canvas_item_new (parent,
 			       gnome_canvas_pixbuf_get_type (),
 			       "pixbuf", pixmap,
@@ -897,11 +913,6 @@ static void create_top(GnomeCanvasGroup *parent, gchar *path)
 	current_top_x += top_arrow_size + top_int_x;
 	
       }
-      
-      path2 = g_strdup_printf("%s/%s", path1, splitted_section[i]);
-
-      g_free(path1);
-      path1 = path2;
       
       board = gcompris_get_board_from_section(path1);
 

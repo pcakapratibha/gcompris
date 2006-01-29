@@ -1,3 +1,13 @@
+2006-01-29  Yves Combe,,,  <yves@ycombe.net>
+
+	menu2 is now default menu.
+	menu2 works now with -l option
+
+	* src/boards/Makefile.am:
+	* src/boards/menu2.c: (create_panel), (menu_is_our_board),
+	(create_top):
+	* src/gcompris/gcompris.c: (gcompris_init):
+
 2006-01-29  Yves Combe  <yves@ycombe.net>
 
 	Suppress event connection on text. 

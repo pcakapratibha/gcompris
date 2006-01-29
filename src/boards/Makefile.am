@@ -52,7 +52,6 @@ lib_LTLIBRARIES = \
 	libmaze.la \
 	libmemory.la \
 	libmenu.la \
-	libmenu2.la \
 	libmissingletter.la \
 	libmoney.la \
 	libparatrooper.la \
@@ -97,11 +96,7 @@ libcrane_la_SOURCES = crane.c
 
 libmenu_la_LDFLAGS = -module -avoid-version
 libmenu_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la
-libmenu_la_SOURCES = menu.c
-
-libmenu2_la_LDFLAGS = -module -avoid-version
-libmenu2_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la
-libmenu2_la_SOURCES = menu2.c
+libmenu_la_SOURCES = menu2.c
 
 libclickgame_la_LDFLAGS = -module -avoid-version
 libclickgame_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la
