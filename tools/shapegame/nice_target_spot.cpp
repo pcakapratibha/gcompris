@@ -1,4 +1,4 @@
-/* gcompris - click_on_letter.c
+/* gcompris - nice_target_spot.cpp
  *
  * Copyright (C) 2006 Olaf Ronneberger
  *

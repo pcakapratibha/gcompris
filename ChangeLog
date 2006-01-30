@@ -1,3 +1,20 @@
+2006-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Added copyright header following formal argeement of
+	  the author Pedro Felzenszwalb <pff@cs.uchicago.edu>
+
+	* tools/shapegame/.cvsignore:
+	* tools/shapegame/dt/.cvsignore:
+	* tools/shapegame/dt/README:
+	* tools/shapegame/dt/dt.cpp:
+	* tools/shapegame/dt/dt.h:
+	* tools/shapegame/dt/image.h:
+	* tools/shapegame/dt/imconv.h:
+	* tools/shapegame/dt/imutil.h:
+	* tools/shapegame/dt/misc.h:
+	* tools/shapegame/dt/pnmfile.h:
+	* tools/shapegame/nice_target_spot.cpp:
+
 2006-01-30  Yves Combe  <yves@ycombe.net>
 
 	fix configuration window was not visible in fullscreen mode, using gtk_dialog.
