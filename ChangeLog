@@ -1,3 +1,10 @@
+2006-01-30  Yves Combe  <yves@ycombe.net>
+
+	fix configuration window was not visible in fullscreen mode, using gtk_dialog.
+
+	* src/gcompris/board_config.c: (gcompris_close_board_conf),
+	(gcompris_response_board_conf), (gcompris_configuration_window):
+
 2006-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Added the German map by Olaf Ronneberger.
