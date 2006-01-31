@@ -1,6 +1,6 @@
 /* gcompris - reading.c
  *
- * Time-stamp: <2006/01/31 00:19:16 yves>
+ * Time-stamp: <2006/01/31 09:20:51 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -863,6 +863,9 @@ reading_config_start(GcomprisBoard *agcomprisBoard,
 {
   board_conf = agcomprisBoard;
   profile_conf = aProfile;
+
+  if (gcomprisBoard)
+    pause_board(TRUE);
 
   gcompris_configuration_window( g_strdup_printf("<b>%s</b> configuration\n for profile <b>%s</b>",
 						 agcomprisBoard->name, 

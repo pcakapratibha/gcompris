@@ -747,6 +747,9 @@ config_start(GcomprisBoard *agcomprisBoard,
   board_conf = agcomprisBoard;
   profile_conf = aProfile;
 
+  if (gcomprisBoard)
+    pause_board(TRUE);
+
   gcompris_configuration_window( g_strdup_printf("<b>%s</b> configuration\n for profile <b>%s</b>",
 						 agcomprisBoard->name, 
 						 aProfile ? aProfile->name : ""), 

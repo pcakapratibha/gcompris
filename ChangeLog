@@ -1,3 +1,17 @@
+2006-01-31  Yves Combe,,,  <yves@ycombe.net>
+
+	fix configurables boards in c to configure from bar.
+
+	* src/boards/colors.c: (conf_ok), (colors_config_start),
+	(start_board):
+	* src/boards/gletters.c: (level_set_score), (conf_ok),
+	(gletter_config_start):
+	* src/boards/imageid.c: (config_start):
+	* src/boards/missingletter.c: (config_start):
+	* src/boards/reading.c: (reading_config_start):
+	* src/boards/smallnumbers.c: (start_board),
+	(smallnumbers_create_item), (conf_ok), (smallnumber_config_start):
+
 2006-01-31  Yves Combe  <yves@ycombe.net>
 
 	fix /reading boards to configure from bar.
