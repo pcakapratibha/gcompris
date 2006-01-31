@@ -581,27 +581,27 @@ static GcomprisConfCallback conf_ok(GHashTable *table)
   profile_conf = NULL;
 
   if (gcomprisBoard){
+    GHashTable *config = gcompris_get_board_conf();
 
-    gchar *up_init_str = g_hash_table_lookup( table, "uppercase_only");
-
+    gcompris_reset_locale();
+    gcompris_change_locale(g_hash_table_lookup( config, "locale"));
+    
+    gchar *up_init_str = g_hash_table_lookup( config, "uppercase_only");
+    
     if (up_init_str && (strcmp(up_init_str, "True")==0))
       uppercase_only = TRUE;
     else
       uppercase_only = FALSE;
-
-    //  g_hash_table_destroy(config);
-
-    gcompris_reset_locale();
-    g_warning("Table locale %s", g_hash_table_lookup( table, "locale"));
-    gcompris_change_locale(g_hash_table_lookup( table, "locale"));
-
+    
+    g_hash_table_destroy(config);
+    
     sounds_are_fine();
-
+    
     click_on_letter_next_level();
-
+    
     gamewon = FALSE;
     pause_board(FALSE);
-
+    
   }
 }
 

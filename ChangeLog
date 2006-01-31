@@ -1,3 +1,15 @@
+2006-01-31  Yves Combe  <yves@ycombe.net>
+
+	fix /reading boards to configure from bar.
+
+	* src/boards/click_on_letter.c: (conf_ok):
+	* src/boards/imageid.c: (start_board), (conf_ok), (config_start):
+	* src/boards/missingletter.c: (start_board), (conf_ok):
+	* src/boards/python/pythontest.py:
+	* src/boards/reading.c: (start_board), (conf_ok),
+	(reading_config_start):
+	* src/boards/shapegame.c: (conf_ok):
+
 2006-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Added copyright header following formal argeement of

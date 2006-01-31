@@ -1,6 +1,6 @@
 /* gcompris - shapegame.c
  *
- * Time-stamp: <2006/01/29 23:18:23 yves>
+ * Time-stamp: <2006/01/31 00:13:12 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -2107,14 +2107,17 @@ static GcomprisConfCallback conf_ok(GHashTable *table)
   board_conf = NULL;
   profile_conf = NULL;
 
-  if (gcomprisBoard){
-    if (strcmp(gcomprisBoard->name, "imagename")==0){
-      gcompris_reset_locale();
-      gcompris_change_locale(g_hash_table_lookup( table, "locale"));
-    }
-
+  if ((gcomprisBoard) && (strcmp(gcomprisBoard->name, "imagename")==0)){
+    GHashTable *config = gcompris_get_board_conf();
+    
+    gcompris_reset_locale();
+    
+    gcompris_change_locale(g_hash_table_lookup( config, "locale"));
+      
+    g_hash_table_destroy(config);
+    
     shapegame_next_level();
-
+    
     pause_board(FALSE);
   }
 
