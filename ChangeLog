@@ -1,3 +1,11 @@
+2006-02-03  Yves Combe,,,  <yves@ycombe.net>
+
+	fix level display and usage in awele.
+	add winning detection at 25 beans-> display bonus and new game.
+
+	* src/boards/awele.c: (start_board), (set_level),
+	(awele_create_item):
+
 2006-02-02  Yves Combe  <yves@ycombe.net>
 
 	Display bonus and end of game when 25 beans are captured.

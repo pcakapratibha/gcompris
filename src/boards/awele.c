@@ -32,6 +32,7 @@ CALLBACK_ARGS *buttonClickArgs[6];
 static void start_board (GcomprisBoard * agcomprisBoard);
 static void pause_board (gboolean pause);
 static void end_board (void);
+static void set_level (guint level);
 static int gamewon;
 static void game_won (void);
 
@@ -64,7 +65,7 @@ static BoardPlugin menu_bp = {
 	is_our_board,		/* Return 1 if the plugin can handle the board file */
 	NULL,
 	NULL,
-	NULL,
+	set_level,
 	NULL,
 	NULL,
 	NULL,
@@ -104,9 +105,9 @@ start_board (GcomprisBoard * agcomprisBoard)
 	if (agcomprisBoard != NULL)
 	{
 		gcomprisBoard = agcomprisBoard;
-		gcomprisBoard->level = 9;
-		gcomprisBoard->maxlevel = 13;
-		gcomprisBoard->sublevel = 2;
+		gcomprisBoard->level = 1;
+		gcomprisBoard->maxlevel = 4;
+		gcomprisBoard->sublevel = 1;
 		gcomprisBoard->number_of_sublevel = 1;	/* Go to next level after
 							 * this number of 'play' */
 		gcompris_bar_set (GCOMPRIS_BAR_LEVEL);
@@ -148,6 +149,19 @@ is_our_board (GcomprisBoard * gcomprisBoard)
 		}
 	}
 	return FALSE;
+}
+
+
+static void
+set_level (guint level)
+{
+
+  if(gcomprisBoard!=NULL)
+    {
+      gcomprisBoard->level=level;
+      gcomprisBoard->sublevel = 1;
+      awele_next_level();
+    }
 }
 
 
@@ -423,8 +437,6 @@ awele_create_item (GnomeCanvasGroup * parent)
 	gtk_signal_connect (GTK_OBJECT (graphsElt->ButtonNewGame), "event",
 			    GTK_SIGNAL_FUNC (buttonNewGameClick),
 			    (gpointer) buttonClickArgs[1]);
-
-	gcomprisBoard->level = 1;
 
 	return NULL;
 }
