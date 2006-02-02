@@ -1,3 +1,9 @@
+2006-02-02  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	
+	* tools/list_missing_sounds.sh: By Jose Jorge. A nice utility to compare the locale
+	  translations status of voices to English.
+
 2006-01-31  Yves Combe,,,  <yves@ycombe.net>
 
 	fix configurables boards in c to configure from bar.
