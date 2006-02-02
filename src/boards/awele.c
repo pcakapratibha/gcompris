@@ -735,6 +735,11 @@ updateCapturedBeans (GnomeCanvasItem * Captures[2])
 	{
 		sprintf (buffer, "%d", staticAwale->CapturedBeans[i]);
 		g_object_set (Captures[i], "text", buffer, NULL);
+		if (staticAwale->CapturedBeans[i] > 24)
+		  {
+		    gamewon = TRUE;
+		    gcompris_display_bonus(i==0, BONUS_FLOWER);
+		  }
 	}
 }
 

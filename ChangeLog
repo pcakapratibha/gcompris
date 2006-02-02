@@ -1,3 +1,9 @@
+2006-02-02  Yves Combe  <yves@ycombe.net>
+
+	Display bonus and end of game when 25 beans are captured.
+
+	* src/boards/awele.c: (updateCapturedBeans):
+
 2006-02-02  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	
