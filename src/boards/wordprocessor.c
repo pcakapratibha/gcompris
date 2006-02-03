@@ -24,6 +24,43 @@
 
 #include "gcompris/gcompris.h"
 
+/*
+ * Predefined styles
+ * -----------------
+ */
+typedef struct {
+  gchar *name;
+  gchar *font;
+  PangoWeight weight;
+  GtkJustification justification;
+  gint indent;
+  gint pixels_above_lines;
+  gint pixels_below_lines;
+  gchar *foreground;
+} style_t;
+
+typedef struct {
+   gchar *name;
+  style_t styles[];
+} style_list_t;
+
+static style_t style_default[] =
+  {
+    { "H0", "Serif 30", PANGO_WEIGHT_ULTRABOLD,  GTK_JUSTIFY_CENTER, 0,  40, 20, "black"},
+    { "H1", "Serif 26", PANGO_WEIGHT_BOLD,       GTK_JUSTIFY_LEFT,   0,  30, 15, "black" },
+    { "H2", "Serif 20", PANGO_WEIGHT_SEMIBOLD,   GTK_JUSTIFY_LEFT,   0,  20, 12, "black" },
+    { "P",  "Serif 16", PANGO_WEIGHT_NORMAL,     GTK_JUSTIFY_LEFT,   30, 3,  3,  "black" }
+  };
+#define NUMBER_OF_STYLE G_N_ELEMENTS(style_default)
+
+static style_t style_love_letter[] =
+  {
+    { "H0", "Serif 30", PANGO_WEIGHT_ULTRABOLD,  GTK_JUSTIFY_CENTER, 0,  40, 20, "DeepPink" },
+    { "H1", "Serif 26", PANGO_WEIGHT_BOLD,       GTK_JUSTIFY_LEFT,   0,  30, 15, "HotPink" },
+    { "H2", "Serif 20", PANGO_WEIGHT_SEMIBOLD,   GTK_JUSTIFY_LEFT,   0,  20, 12, "MediumOrchid" },
+    { "P",  "Serif 16", PANGO_WEIGHT_NORMAL,     GTK_JUSTIFY_LEFT,   30, 3,  3,  "black" }
+  };
+
 static GcomprisBoard *gcomprisBoard = NULL;
 static gboolean board_paused = TRUE;
 
@@ -32,6 +69,8 @@ static void	 pause_board (gboolean pause);
 static void	 end_board (void);
 static gboolean	 is_our_board (GcomprisBoard *gcomprisBoard);
 static void	 set_level (guint level);
+static gboolean  key_press_event (GtkWidget *text_view,
+				  GdkEventKey *event);
 
 static GnomeCanvasGroup *boardRootItem = NULL;
 
@@ -41,15 +80,17 @@ static gint		 item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data);
 static void		 display_style_buttons(GnomeCanvasGroup *boardRootItem, 
 					       int x,
 					       int y);
-static void		 create_tags (GtkTextBuffer *buffer, int style);
+static void		 create_tags (GtkTextBuffer *buffer, style_t style[]);
 
 #define word_area_x1 120
 #define word_area_y1 80
 #define word_area_width 580
 #define word_area_height 420
 
-static gchar * current_style;
+static style_t *current_style;
+static gchar *current_style_name;
 static GtkTextBuffer *buffer;
+static GtkWidget *view;
 
 /* Description of this plugin */
 static BoardPlugin menu_bp =
@@ -165,7 +206,6 @@ static void wordprocessor_destroy_all_items()
 static GnomeCanvasItem *wordprocessor_create()
 {
   GnomeCanvasItem *item = NULL;
-  GtkWidget *view;
   GtkWidget *sw;
 
   boardRootItem = GNOME_CANVAS_GROUP(
@@ -177,6 +217,8 @@ static GnomeCanvasItem *wordprocessor_create()
 
   view = gtk_text_view_new ();
   gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (view), GTK_WRAP_WORD);
+  g_signal_connect (view, "key-release-event", 
+		    G_CALLBACK (key_press_event), NULL);
 
   buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (view));
       
@@ -201,9 +243,9 @@ static GnomeCanvasItem *wordprocessor_create()
   gtk_widget_show(GTK_WIDGET(sw));
 
   /*
-   * Create the default tags
+   * Create the default style tags
    */
-  create_tags(buffer, 0);
+  create_tags(buffer, style_love_letter);
 
   /*
    * Display the style buttons
@@ -231,7 +273,8 @@ static void display_style_buttons(GnomeCanvasGroup *boardRootItem,
 			  _("TEXT"), "P",
 			  NULL, NULL };
 
-  current_style = NULL;
+  current_style_name = NULL;
+  current_style      = NULL;
 
   pixmap = gcompris_load_skin_pixmap("button_small.png");
 
@@ -305,7 +348,7 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 	  {
 	    GtkTextIter    iter_start, iter_end;
 
-	    current_style = (char *)data;
+	    current_style_name = (char *)data;
 
 	    gtk_text_buffer_get_iter_at_mark(buffer,
 					     &iter_start,
@@ -320,9 +363,27 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 					    &iter_end);
 
 	    gtk_text_buffer_apply_tag_by_name(buffer,
-					      current_style,
+					      current_style_name,
 					      &iter_start,
 					      &iter_end);
+#if 0
+	    {
+	      PangoFontDescription *font_desc;
+	      GdkColor color;
+
+	      /* Change default font throughout the widget */
+	      font_desc = pango_font_description_from_string ("Serif 15");
+	      gtk_widget_modify_font (view, font_desc);
+	      pango_font_description_free (font_desc);
+	    
+	      /* Change default color throughout the widget */
+	      gdk_color_parse ("green", &color);
+	      gtk_widget_modify_text (view, GTK_STATE_NORMAL, &color);
+
+	      /* Change left margin throughout the widget */
+	      gtk_text_view_set_left_margin (GTK_TEXT_VIEW (view), 30);
+	    }
+#endif
 	  }
 	  break;
 	default:
@@ -336,58 +397,95 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
   return FALSE;
 }
 
+/* Create a bunch of tags. Note that it's also possible to
+ * create tags with gtk_text_tag_new() then add them to the
+ * tag table for the buffer, gtk_text_buffer_create_tag() is
+ * just a convenience function. Also note that you don't have
+ * to give tags a name; pass NULL for the name to create an
+ * anonymous tag.
+ *
+ * In any real app, another useful optimization would be to create
+ * a GtkTextTagTable in advance, and reuse the same tag table for
+ * all the buffers with the same tag set, instead of creating
+ * new copies of the same tags for every buffer.
+ *
+ * Tags are assigned default priorities in order of addition to the
+ * tag table.	 That is, tags created later that affect the same text
+ * property affected by an earlier tag will override the earlier
+ * tag.  You can modify tag priorities with
+ * gtk_text_tag_set_priority().
+ */
+
 static void
-create_tags (GtkTextBuffer *buffer, int style)
+create_tags (GtkTextBuffer *buffer, style_t style[])
 {
+  gint i;
 
-  /* Create a bunch of tags. Note that it's also possible to
-   * create tags with gtk_text_tag_new() then add them to the
-   * tag table for the buffer, gtk_text_buffer_create_tag() is
-   * just a convenience function. Also note that you don't have
-   * to give tags a name; pass NULL for the name to create an
-   * anonymous tag.
-   *
-   * In any real app, another useful optimization would be to create
-   * a GtkTextTagTable in advance, and reuse the same tag table for
-   * all the buffers with the same tag set, instead of creating
-   * new copies of the same tags for every buffer.
-   *
-   * Tags are assigned default priorities in order of addition to the
-   * tag table.	 That is, tags created later that affect the same text
-   * property affected by an earlier tag will override the earlier
-   * tag.  You can modify tag priorities with
-   * gtk_text_tag_set_priority().
-   */
+  for(i=0; i<NUMBER_OF_STYLE; i++)
+    {
+      GtkTextTag *tag;
 
-  gtk_text_buffer_create_tag (buffer, "H0",
-			      "weight", PANGO_WEIGHT_BOLD,
-			      "size", 22 * PANGO_SCALE,
-			      "justification", GTK_JUSTIFY_CENTER,
-			      "pixels-above-lines", 40,
-			      "pixels-bellow-lines", 20,
-			      NULL);
-  
-  gtk_text_buffer_create_tag (buffer, "H1",
-			      "weight", PANGO_WEIGHT_BOLD,
- 			      "size", 20 * PANGO_SCALE,
-			      "pixels-above-lines", 30,
-			      "pixels-bellow-lines", 15,
-			      NULL);  
-  
-  gtk_text_buffer_create_tag (buffer, "H2",
-			      "weight", PANGO_WEIGHT_BOLD,
- 			      "size", 18 * PANGO_SCALE,
-			      "pixels-above-lines", 20,
-			      "pixels-bellow-lines", 12,
-			      NULL);  
-
-  /* Now the default style for text */
-  gtk_text_buffer_create_tag (buffer, "P",
- 			      "size", 14 * PANGO_SCALE,
-			      "indent", 30,
-			      NULL);  
-  
-  gtk_text_buffer_create_tag (buffer, "not_editable",
-			      "editable", FALSE, NULL);
+      tag = gtk_text_buffer_create_tag (buffer, style[i].name,
+					"weight", style[i].weight,
+					"font", style[i].font,
+					"justification", style[i].justification,
+					"indent", style[i].indent,
+					"pixels-above-lines", style[i].pixels_above_lines,
+					"pixels-below-lines", style[i].pixels_below_lines,
+					"foreground", style[i].foreground,
+					NULL);
+      g_object_set_data (G_OBJECT (tag), "style", GINT_TO_POINTER (i));
+    }
   
 }
+
+/* Catch all typing events to apply the proper tags
+ *
+ */
+static gboolean
+key_press_event (GtkWidget *text_view,
+		 GdkEventKey *event)
+{
+  GtkTextIter iter_start, iter_end;
+  GtkTextBuffer *buffer;
+
+  {
+    GSList *tags = NULL, *tagp = NULL;
+
+    buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (text_view));
+
+    gtk_text_buffer_get_iter_at_mark(buffer,
+				     &iter_start,
+				     gtk_text_buffer_get_insert (buffer));
+    gtk_text_iter_set_line_offset(&iter_start, 0);
+
+    iter_end = iter_start;
+    gtk_text_iter_forward_to_line_end(&iter_end);
+
+    tags = gtk_text_iter_get_tags (&iter_start);
+    if(g_slist_length(tags) == 0)
+      tags = gtk_text_iter_get_tags (&iter_end);
+
+    for (tagp = tags;  tagp != NULL;  tagp = tagp->next)
+      {
+	GtkTextTag *tag = tagp->data;
+	gchar *name;
+	g_object_get (G_OBJECT (tag), "name", &name, NULL);
+	gint style = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (tag), "style"));
+
+	printf("name=%s style=%d\n", name, style);
+
+	gtk_text_buffer_apply_tag_by_name(buffer,
+					  name,
+					  &iter_start,
+					  &iter_end);
+      }
+    
+    if (tags) 
+      g_slist_free (tags);
+    
+  }
+
+  return FALSE;
+}
+

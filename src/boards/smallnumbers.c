@@ -1,6 +1,6 @@
 /* gcompris - smallnumbers.c
  *
- * Time-stamp: <2006/01/31 14:11:59 yves>
+ * Time-stamp: <2006/02/03 21:13:51 bruno>
  *
  * Copyright (C) 2000 Bruno Coudoin
  * 
@@ -359,7 +359,6 @@ static void smallnumbers_create_item(GnomeCanvasGroup *parent)
   GdkPixbuf *smallnumbers_pixmap = NULL;
   GnomeCanvasItem *item;
   GnomeCanvasGroup *group_item;
-  char *str;
   guint i;
   char *lettersItem;
   gchar *str1 = NULL;
@@ -412,11 +411,13 @@ static void smallnumbers_create_item(GnomeCanvasGroup *parent)
     g_free(str1);
     g_free(str2);
 
-    str = g_strdup_printf("gcompris/dice/gnome-dice%c.png", numbers[i]);
+    str1 = g_strdup_printf("level%c.png", numbers[i]);
+    str2 = gcompris_image_to_skin(str1);
 
-    smallnumbers_pixmap = gcompris_load_pixmap(str);
+    smallnumbers_pixmap = gcompris_load_pixmap(str2);
 
-    g_free(str);
+    g_free(str1);
+    g_free(str2);
 
     if(x==0.0) {
       x = (double)(rand()%(gcomprisBoard->width-

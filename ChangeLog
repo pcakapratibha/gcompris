@@ -1,3 +1,23 @@
+2006-02-03  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- merged awele with HEAD.
+	
+	* boards/awele/awele_frame.jpg:
+	* boards/awele/awele_frame.png:
+	* boards/awele/awele_frame_avec_messages.png:
+	* boards/awele/nv_partie.png:
+	* boards/awele/nv_partie_clic.png:
+	* boards/awele/nv_partie_notify.png:
+	* po/TRANSLATORS.README:
+	* src/boards/awele.c: (start_board), (repeat), (awele_create_item),
+	(buttonNewGameClick):
+	* src/boards/awele.h:
+	* src/boards/python/guessnumber.py: fix title alignement from HEAD.
+	* src/boards/smallnumbers.c: (smallnumbers_create_item): from HEAD, use bar dice.
+	* src/boards/wordprocessor.c: (wordprocessor_create),
+	(display_style_buttons), (item_event), (create_tags),
+	(key_press_event):
+
 2006-02-03  Yves Combe,,,  <yves@ycombe.net>
 
 	fix level display and usage in awele.

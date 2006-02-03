@@ -1,6 +1,8 @@
                            NOTE TO TRANSLATORS
                            -------------------
 
+To update only you po file, run: intltool-update lang (lang is fr for French).
+
 GCompris is a little bit special in terms of translation needs. The best is
 done to bring back everything to .po files but it is not exhaustive.
 
