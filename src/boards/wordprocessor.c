@@ -39,11 +39,6 @@ typedef struct {
   gchar *foreground;
 } style_t;
 
-typedef struct {
-   gchar *name;
-  style_t styles[];
-} style_list_t;
-
 static style_t style_default[] =
   {
     { "H0", "Serif 30", PANGO_WEIGHT_ULTRABOLD,  GTK_JUSTIFY_CENTER, 0,  40, 20, "black"},
@@ -81,14 +76,14 @@ static void		 display_style_buttons(GnomeCanvasGroup *boardRootItem,
 					       int x,
 					       int y);
 static void		 create_tags (GtkTextBuffer *buffer, style_t style[]);
+static void		 set_default_style (GtkTextBuffer *buffer, style_t *style);
 
 #define word_area_x1 120
 #define word_area_y1 80
 #define word_area_width 580
 #define word_area_height 420
 
-static style_t *current_style;
-static gchar *current_style_name;
+static style_t *current_style_default;
 static GtkTextBuffer *buffer;
 static GtkWidget *view;
 
@@ -273,9 +268,6 @@ static void display_style_buttons(GnomeCanvasGroup *boardRootItem,
 			  _("TEXT"), "P",
 			  NULL, NULL };
 
-  current_style_name = NULL;
-  current_style      = NULL;
-
   pixmap = gcompris_load_skin_pixmap("button_small.png");
 
   offset_y = gdk_pixbuf_get_height(pixmap) + 10;
@@ -347,6 +339,7 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 	case 3:
 	  {
 	    GtkTextIter    iter_start, iter_end;
+	    gchar *current_style_name;
 
 	    current_style_name = (char *)data;
 
@@ -366,24 +359,6 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 					      current_style_name,
 					      &iter_start,
 					      &iter_end);
-#if 0
-	    {
-	      PangoFontDescription *font_desc;
-	      GdkColor color;
-
-	      /* Change default font throughout the widget */
-	      font_desc = pango_font_description_from_string ("Serif 15");
-	      gtk_widget_modify_font (view, font_desc);
-	      pango_font_description_free (font_desc);
-	    
-	      /* Change default color throughout the widget */
-	      gdk_color_parse ("green", &color);
-	      gtk_widget_modify_text (view, GTK_STATE_NORMAL, &color);
-
-	      /* Change left margin throughout the widget */
-	      gtk_text_view_set_left_margin (GTK_TEXT_VIEW (view), 30);
-	    }
-#endif
 	  }
 	  break;
 	default:
@@ -434,9 +409,40 @@ create_tags (GtkTextBuffer *buffer, style_t style[])
 					"pixels-below-lines", style[i].pixels_below_lines,
 					"foreground", style[i].foreground,
 					NULL);
-      g_object_set_data (G_OBJECT (tag), "style", GINT_TO_POINTER (i));
+      g_object_set_data (G_OBJECT (tag), "style", &style[i]);
     }
-  
+
+  /* Point to the last style */
+  i--;
+
+  current_style_default = &style[i];
+  set_default_style(buffer, current_style_default);
+}
+
+/*
+ * Set the default style
+ */
+static void
+set_default_style (GtkTextBuffer *buffer, style_t *style)
+{
+  PangoFontDescription *font_desc;
+  GdkColor color;
+
+  printf("set_default_style %s\n", style->name);
+  /* Change default font throughout the widget */
+  font_desc = pango_font_description_from_string (style->font);
+  gtk_widget_modify_font (view, font_desc);
+  pango_font_description_free (font_desc);
+	    
+  /* Change default color throughout the widget */
+  gdk_color_parse (style->foreground, &color);
+  gtk_widget_modify_text (view, GTK_STATE_NORMAL, &color);
+
+  /* Change left margin, justification, ... throughout the widget */
+  gtk_text_view_set_indent (GTK_TEXT_VIEW (view), style->indent);
+  gtk_text_view_set_justification(GTK_TEXT_VIEW (view), style->justification);
+  gtk_text_view_set_pixels_below_lines(GTK_TEXT_VIEW (view), style->pixels_below_lines);
+  gtk_text_view_set_pixels_above_lines(GTK_TEXT_VIEW (view), style->pixels_above_lines);
 }
 
 /* Catch all typing events to apply the proper tags
@@ -463,18 +469,24 @@ key_press_event (GtkWidget *text_view,
     gtk_text_iter_forward_to_line_end(&iter_end);
 
     tags = gtk_text_iter_get_tags (&iter_start);
+    printf("length %d\n", g_slist_length(tags));
     if(g_slist_length(tags) == 0)
-      tags = gtk_text_iter_get_tags (&iter_end);
+      {
+	gtk_text_iter_backward_char (&iter_end);
+	tags = gtk_text_iter_get_tags (&iter_end);
+	gtk_text_iter_forward_char (&iter_end);
+	printf("2 length %d\n", g_slist_length(tags));
+      }
 
     for (tagp = tags;  tagp != NULL;  tagp = tagp->next)
       {
 	GtkTextTag *tag = tagp->data;
 	gchar *name;
 	g_object_get (G_OBJECT (tag), "name", &name, NULL);
-	gint style = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (tag), "style"));
+	style_t *style = g_object_get_data (G_OBJECT (tag), "style");
 
-	printf("name=%s style=%d\n", name, style);
-
+	printf("name=%s  style=%s\n", name, style->name);
+	set_default_style(buffer, style);
 	gtk_text_buffer_apply_tag_by_name(buffer,
 					  name,
 					  &iter_start,
@@ -483,7 +495,15 @@ key_press_event (GtkWidget *text_view,
     
     if (tags) 
       g_slist_free (tags);
-    
+    else
+      {
+	/* Set the default style */
+	set_default_style(buffer, &style_love_letter[3]);
+	gtk_text_buffer_apply_tag_by_name(buffer,
+					  current_style_default->name,
+					  &iter_start,
+					  &iter_end);
+      }
   }
 
   return FALSE;

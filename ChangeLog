@@ -1,3 +1,16 @@
+2006-02-05  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Changed background entry color to white. The blue background color
+	was no more working for me for no reason.
+
+	Improved wordprocessor. Now handle a single fixed theme coherently.
+	
+	* po/ChangeLog:
+	* src/boards/python/guessnumber.py:
+	* src/boards/wordprocessor.c: (display_style_buttons),
+	(item_event), (create_tags), (set_default_style),
+	(key_press_event):
+
 2006-02-03  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- merged awele with HEAD.
