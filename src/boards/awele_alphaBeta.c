@@ -41,6 +41,23 @@ gint eval (GNode *node){
 }
 
 /*
+ * Evaluation function for level 1-2
+ * this function returns always 0. The play is random, 
+ * because tree building is randomised.
+ *
+ */
+gint eval_to_null (GNode *node){
+  return 0;
+}
+
+
+gint eval_to_best_capture (GNode *node){
+  AWALE *aw = node->data;
+
+  return (aw->CapturedBeans[COMPUTER]);
+}
+
+/*
  * firstChild. create all the childs and return first one
  */
 GNode *firstChild(GNode *node)
@@ -102,27 +119,45 @@ short int  think( AWALE *static_awale, short int level){
 
   int npris ;
   int best = -1;
-  
-  maxprof = level;
+  int value = 0;
+  EvalFunction use_eval = NULL;
+
+  if ( ((level-1) / 2) ==  0){
+    maxprof = 1;
+    use_eval = &eval_to_null;
+    g_warning("search depth 1, evaluation null");
+  }
+  else {
+    if ( ((level-1) / 2) == 1 ){
+      maxprof = 1;
+      use_eval = &eval_to_best_capture;
+    g_warning("search depth 1, evaluation best capture");
+    }
+    else {
+      maxprof = (level - 3)/2;
+      use_eval = &eval;
+    g_warning("search depth %d, evaluation best difference in capture", maxprof );
+    }
+  }
   
   /*augmente la profondeur quand le nombre de pieces diminue */
-/*   npris = a->CapturedBeans[HUMAN] + a->CapturedBeans[COMPUTER] ; */
+  /*   npris = a->CapturedBeans[HUMAN] + a->CapturedBeans[COMPUTER] ; */
   
-/*   if ( npris > 20 ) maxprof ++ ; */
-/*   if ( npris > 25 ) maxprof ++ ; */
-/*   if ( npris > 30 ) maxprof ++ ; */
-/*   if ( npris > 35 ) maxprof ++ ; */
-/*   if ( npris > 40 ) maxprof ++ ; */
+  /*   if ( npris > 20 ) maxprof ++ ; */
+  /*   if ( npris > 25 ) maxprof ++ ; */
+  /*   if ( npris > 30 ) maxprof ++ ; */
+  /*   if ( npris > 35 ) maxprof ++ ; */
+  /*   if ( npris > 40 ) maxprof ++ ; */
 
-  gcompris_alphabeta( TRUE, 
-		      t, 
-		      (EvalFunction) eval, 
-		      &best, 
-		      (FirstChildGameFunction) firstChild, 
-		      (NextSiblingGameFunction) nextSibling,
-		      -INFINI , 
-		      INFINI,
-		      maxprof) ;
+  value = gcompris_alphabeta( TRUE, 
+			      t, 
+			      use_eval, 
+			      &best, 
+			      (FirstChildGameFunction) firstChild, 
+			      (NextSiblingGameFunction) nextSibling,
+			      -INFINI , 
+			      INFINI,
+			      maxprof) ;
   
   if (best < 0){
     g_warning("Leaf node, game is over");
@@ -132,7 +167,7 @@ short int  think( AWALE *static_awale, short int level){
   
   AWALE *tmpaw = tmpNode->data;
   
-  g_warning("THINK best : %d, play: %d", best, tmpaw->last_play);
+  g_warning("THINK best : %d, play: %d", value, tmpaw->last_play);
   
   best = tmpaw->last_play;
   

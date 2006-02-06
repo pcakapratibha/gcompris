@@ -45,7 +45,7 @@ static void awele_next_level (void);
 static gboolean  to_computer(gpointer data);
 static gint timeout = 0;
 static gboolean computer_turn = FALSE;
-
+static gboolean sublevel_finished = FALSE;
 /*
  * Description of this plugin 
  */
@@ -140,7 +140,6 @@ start_board (GcomprisBoard * agcomprisBoard)
 		awele_next_level ();
 
 		gamewon = FALSE;
-		computer_turn = FALSE;
 		pause_board (FALSE);
 	}
 }
@@ -183,7 +182,7 @@ is_our_board (GcomprisBoard * gcomprisBoard)
  */
 static void repeat (){
 
-  buttonNewGameClick(graphsElt);
+  awele_next_level();
 }
 
 
@@ -195,6 +194,10 @@ set_level (guint level)
     {
       gcomprisBoard->level=level;
       gcomprisBoard->sublevel = 1;
+      if (timeout){
+	g_source_remove(timeout);
+	timeout=0;
+      }
       awele_next_level();
     }
 }
@@ -222,8 +225,16 @@ awele_next_level ()
 	 * Create the level 
 	 */
 	awele_create_item (gnome_canvas_root (gcomprisBoard->canvas));
-
-
+	
+	if ((gcomprisBoard->level % 2) ==0){
+	  computer_turn = TRUE;
+	  staticAwale->player = HUMAN;
+	  timeout = g_timeout_add (2000,
+				   (GSourceFunc) to_computer,
+				   NULL);
+	} else {
+	  computer_turn = FALSE;
+	}
 }
 
 /*
@@ -508,29 +519,32 @@ awele_create_item (GnomeCanvasGroup * parent)
 static void
 game_won ()
 {
-	gcomprisBoard->sublevel++;
-
-	if (gcomprisBoard->sublevel > gcomprisBoard->number_of_sublevel)
-	{
-		/*
-		 * Try the next level 
-		 */
-		gcomprisBoard->sublevel = 1;
-		gcomprisBoard->level++;
-		if (gcomprisBoard->level > gcomprisBoard->maxlevel)
-		{		// the
+  if (sublevel_finished){
+    gcomprisBoard->sublevel++;
+    
+    if (gcomprisBoard->sublevel > gcomprisBoard->number_of_sublevel)
+      {
+	/*
+	 * Try the next level 
+	 */
+	gcomprisBoard->sublevel = 1;
+	gcomprisBoard->level++;
+	if (gcomprisBoard->level > gcomprisBoard->maxlevel)
+	  {		// the
 			// current 
 			// board
 			// is
 			// finished 
 			// : bail
 			// out
-			board_finished (BOARD_FINISHED_RANDOM);
-			return;
-		}
-
-	}
-	awele_next_level ();
+	    board_finished (BOARD_FINISHED_RANDOM);
+	    return;
+	  }
+	
+      }
+  }
+  sublevel_finished = FALSE;
+  awele_next_level ();
 }
 
 /**
@@ -612,6 +626,7 @@ static gboolean  to_computer(gpointer data)
     computer_turn = FALSE;
   } else {
     gamewon = TRUE;
+    sublevel_finished = TRUE;
     gcompris_display_bonus(TRUE, BONUS_FLOWER);
   }
   
@@ -817,7 +832,8 @@ updateCapturedBeans ()
  		if (staticAwale->CapturedBeans[i] > 24)
  		  { 
  		    gamewon = TRUE;
- 		    gcompris_display_bonus(i==0, BONUS_FLOWER);
+		    sublevel_finished = (i==0);
+ 		    gcompris_display_bonus(sublevel_finished, BONUS_FLOWER);
  		  } 
 	}
 }

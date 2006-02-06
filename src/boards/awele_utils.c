@@ -89,7 +89,7 @@ AWALE *moveAwale(short int hole, AWALE * aw)
   }
   
   if (isOpponentHungry(tempAw->player, tempAw)){
-    g_warning("isOpponentHungry TRUE");
+    g_warning("isOpponentHungry %s TRUE",(tempAw->player == HUMAN)? "HUMAN" : "COMPUTER" );
     g_free(tempAw);
     return NULL;
   }

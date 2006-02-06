@@ -1,5 +1,26 @@
 2006-02-06  Yves Combe  <yves@ycombe.net>
 
+	change evaluation fonction usage in awele,
+	to make it easier in level 1-4.
+	difficulty:
+	 - level 1-2 -> random
+	 - level 3-4 -> best computer capture, depth 1.
+	 - level 5-6 -> best difference in capture, depth 1.
+	 - level 7-8 -> best difference in capture, depth 2.
+	 - level 9 -> best difference in capture, depth 3.
+	clean from g_warning.
+	change first player: computer begins at level 2-4-6-8.
+
+	* src/boards/awele.c: (start_board), (repeat), (set_level),
+	(awele_next_level), (game_won), (to_computer),
+	(updateCapturedBeans):
+	* src/boards/awele_alphaBeta.c: (eval_to_null),
+	(eval_to_best_capture), (think):
+	* src/boards/awele_utils.c: (moveAwale):
+	* src/gcompris/gcompris_alphabeta.c: (gcompris_alphabeta):
+
+2006-02-06  Yves Combe  <yves@ycombe.net>
+
 	awele manily fixed.
 	TODO: change first player.
 	TODO: add correct rule in case of end by hungry player.

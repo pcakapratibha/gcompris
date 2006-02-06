@@ -1,6 +1,6 @@
 /* gcompris - gcompris_alphabeta.c
  *
- * Time-stamp: <2006/02/06 08:15:38 yves>
+ * Time-stamp: <2006/02/06 18:34:37 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -44,6 +44,8 @@ gint gcompris_alphabeta (gboolean maximize,
 {
   gpointer child;
   gint m, t, nextBest, index;
+
+  g_assert (depth >= 0);
   
   child = firstChild(treeGame);
 
