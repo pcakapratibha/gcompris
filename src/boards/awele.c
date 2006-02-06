@@ -46,6 +46,11 @@ static gboolean  to_computer(gpointer data);
 static gint timeout = 0;
 static gboolean computer_turn = FALSE;
 static gboolean sublevel_finished = FALSE;
+
+/*=============================================*/
+static GcomprisAnimation *animation;
+static GcomprisAnimCanvasItem *anim_item;
+
 /*
  * Description of this plugin 
  */
@@ -96,16 +101,24 @@ static void pause_board (gboolean pause)
 	  if (gamewon == TRUE)
 	    game_won ();
 	  else
-	    if (computer_turn)
+	    if (computer_turn){
 	      timeout = g_timeout_add (2000,
 				       (GSourceFunc) to_computer,
 				       NULL);
+	      anim_item = (GnomeCanvasItem*)
+		gcompris_activate_animation( boardRootItem,
+					     animation );
+	      gnome_canvas_item_show(anim_item->canvas);
+	    }
 	}
-	else
+	else{
+	  gnome_canvas_item_hide(anim_item->canvas);
+	  gcompris_deactivate_animation(anim_item);
 	  if (timeout){
 	    g_source_remove(timeout);
 	    timeout = 0;
 	  }
+	}
 }
 
 /*
@@ -136,7 +149,9 @@ start_board (GcomprisBoard * agcomprisBoard)
 		} else {
 		  gcompris_bar_set(GCOMPRIS_BAR_LEVEL|GCOMPRIS_BAR_REPEAT);
 		}
-		
+
+		animation = gcompris_load_animation( "connect4/sablier.txt" );
+
 		awele_next_level ();
 
 		gamewon = FALSE;
@@ -153,6 +168,7 @@ end_board ()
 	if (gcomprisBoard != NULL)
 	{
 		pause_board (TRUE);
+		gcompris_free_animation(animation);
 		awele_destroy_all_items ();
 	}
 	gcomprisBoard = NULL;
@@ -232,6 +248,11 @@ awele_next_level ()
 	  timeout = g_timeout_add (2000,
 				   (GSourceFunc) to_computer,
 				   NULL);
+	  anim_item = (GnomeCanvasItem*)
+	    gcompris_activate_animation( boardRootItem,
+					 animation );
+	  gnome_canvas_item_show(anim_item->canvas);
+
 	} else {
 	  computer_turn = FALSE;
 	}
@@ -612,6 +633,10 @@ static gboolean  to_computer(gpointer data)
   }
 
   coup = think (staticAwale, gcomprisBoard->level);
+
+  gnome_canvas_item_hide(anim_item->canvas);
+  gcompris_deactivate_animation(anim_item);
+
   if (coup >= 0){
     AWALE *tmpAw = staticAwale;
     staticAwale = moveAwale (coup, tmpAw);
@@ -694,6 +719,10 @@ buttonClick (GtkWidget * item, GdkEvent * event, gpointer data)
 	      timeout = g_timeout_add (2000,
 				       (GSourceFunc) to_computer,
 				       NULL);
+	      anim_item = (GnomeCanvasItem*)
+		gcompris_activate_animation( boardRootItem,
+					     animation );
+	      gnome_canvas_item_show(anim_item->canvas);
 	    }
 	  
 	  break;

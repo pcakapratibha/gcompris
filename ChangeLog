@@ -1,3 +1,10 @@
+2006-02-07  Yves Combe  <yves@ycombe.net>
+
+	add animation like in connect4 when computer think.
+
+	* src/boards/awele.c: (pause_board), (start_board), (end_board),
+	(awele_next_level), (to_computer), (buttonClick):
+
 2006-02-06  Yves Combe  <yves@ycombe.net>
 
 	clean code from unused fucntion
