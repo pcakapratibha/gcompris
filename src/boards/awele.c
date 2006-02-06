@@ -110,7 +110,7 @@ start_board (GcomprisBoard * agcomprisBoard)
 
 		gcomprisBoard = agcomprisBoard;
 		gcomprisBoard->level = 1;
-		gcomprisBoard->maxlevel = 4;
+		gcomprisBoard->maxlevel = 9;
 		gcomprisBoard->sublevel = 1;
 		gcomprisBoard->number_of_sublevel = 1;	/* Go to next level after
 							 * this number of 'play' */
@@ -121,9 +121,9 @@ start_board (GcomprisBoard * agcomprisBoard)
 		if(pixmap) {
 		  gcompris_bar_set_repeat_icon(pixmap);
 		  gdk_pixbuf_unref(pixmap);
-		  gcompris_bar_set(GCOMPRIS_BAR_REPEAT_ICON);
+		  gcompris_bar_set(GCOMPRIS_BAR_LEVEL|GCOMPRIS_BAR_REPEAT_ICON);
 		} else {
-		  gcompris_bar_set(GCOMPRIS_BAR_REPEAT);
+		  gcompris_bar_set(GCOMPRIS_BAR_LEVEL|GCOMPRIS_BAR_REPEAT);
 		}
 		
 		awele_next_level ();
@@ -317,7 +317,7 @@ awele_create_item (GnomeCanvasGroup * parent)
 
 	}
 
-	staticAwale = (AWALE *) malloc (sizeof (AWALE));
+	staticAwale = (AWALE *) g_malloc (sizeof (AWALE));
 
 	if (!staticAwale)
 		exit (1);
@@ -574,6 +574,57 @@ initBoardGraphics (GRAPHICS_ELT * graphsElt)
 	}
 }
 
+
+gboolean  to_computer(gpointer data)
+{
+  CALLBACK_ARGS *args;
+  short int retourMove;
+  short int returnMove;
+  short int coup;
+  args = (CALLBACK_ARGS *) data;
+
+  g_object_set (GTK_OBJECT
+		(args->graphsElt->button[args->numeroCase]),
+		"pixbuf",
+		args->graphsElt->pixbufButtonNotify[args->
+						    numeroCase],
+		"y", (double) Y_BOUTONS, NULL);
+  
+  
+  if (staticAwale->player == COMPUTER)
+    {
+      
+       /* last play is HUMAN */
+      /* DIRTY: FIXME */
+      staticAwale->player = HUMAN; 
+      
+      coup = think (staticAwale, gcomprisBoard->level);
+      if (coup >= 0){
+	AWALE *tmpAw = staticAwale;
+	staticAwale = moveAwale (coup, tmpAw);
+	if (!staticAwale){
+	  g_error("le coup devrait être bon !");
+	}
+	g_free(tmpAw);
+	updateNbBeans (args->graphsElt->nbBeansHole,
+		       boardRootItem,
+		       args->graphsElt->ptBeansHoleLink, 0);
+	updateCapturedBeans (args->graphsElt->Captures);
+	staticAwale->player = HUMAN;
+	if (returnMove == GAMEOVER)
+	  g_object_set (args->graphsElt->msg, "text",
+			"FIN DE LA PARTIE !!!", NULL);
+	else g_object_set (args->graphsElt->msg, "text",
+			   "A toi de jouer ...", NULL);
+      }
+      else {
+	gamewon = TRUE;
+	gcompris_display_bonus(TRUE, BONUS_FLOWER);
+      }
+    }
+  return FALSE;
+}
+
 /**
 *  Fonction effectuant la procedure associe a un clic sur pixmap
 *  Cette fonction est appelee quand un clic sur un bouton est effectue.\n
@@ -614,66 +665,46 @@ buttonClick (GtkWidget * item, GdkEvent * event, gpointer data)
 			      "y", (double) Y_BOUTONS, NULL);
 		break;
 	case GDK_BUTTON_PRESS:
+	  if (staticAwale->player == COMPUTER)
+	    return TRUE;
 
-		g_object_set (GTK_OBJECT
-			      (args->graphsElt->button[args->numeroCase]),
-			      "pixbuf",
-			      args->graphsElt->pixbufButtonClicked[args->
-								   numeroCase],
-			      "y", (double) Y_BOUTONS + 3, NULL);
+	  g_object_set (GTK_OBJECT
+			(args->graphsElt->button[args->numeroCase]),
+			"pixbuf",
+			args->graphsElt->pixbufButtonClicked[args->
+							     numeroCase],
+			"y", (double) Y_BOUTONS + 3, NULL);
+	  
+	  g_object_set (args->graphsElt->msg, "text", "", NULL);
 
-		g_object_set (args->graphsElt->msg, "text", "", NULL);
-
-		if (isValidMove (args->numeroCase, staticAwale) != TRUE)
-		{
-			g_object_set (args->graphsElt->msg, "text", errorMsg,
-				      NULL);
-		}
-		else
-		{
-			retourMove = move (args->numeroCase, staticAwale);
-			if (retourMove == TRUE || retourMove == GAMEOVER)
-			{
-				updateNbBeans (args->graphsElt->nbBeansHole,
-					       boardRootItem,
-					       args->graphsElt->
-					       ptBeansHoleLink, 0);
-				updateCapturedBeans (args->graphsElt->
-						     Captures);
-				staticAwale->player = COMPUTER;
-			}
-			if (retourMove == GAMEOVER)
-				g_object_set (args->graphsElt->msg, "text",
-					      "FIN DE LA PARTIE !!!", NULL);
-		}
-
-		break;
+	  /* FIXME */
+	  staticAwale->player = COMPUTER; 
+	  AWALE *tmpaw = moveAwale (args->numeroCase, staticAwale);
+	  if (!tmpaw)
+	    {
+	      g_object_set (args->graphsElt->msg, "text", "grosse burne !",
+			    NULL);
+	    }
+	  else
+	    {
+	      g_free(staticAwale);
+	      staticAwale = tmpaw;
+	      updateNbBeans (args->graphsElt->nbBeansHole,
+			     boardRootItem,
+			     args->graphsElt->ptBeansHoleLink,
+			     0);
+	      updateCapturedBeans (args->graphsElt->
+				   Captures);
+	       /* last play is HUMAN */
+	      /* DIRTY: FIXME */
+	      staticAwale->player = COMPUTER;
+	      g_timeout_add (2000,
+			     (GSourceFunc) to_computer,
+			     data);
+	    }
+	  
+	  break;
 	case GDK_BUTTON_RELEASE:
-		g_object_set (GTK_OBJECT
-			      (args->graphsElt->button[args->numeroCase]),
-			      "pixbuf",
-			      args->graphsElt->pixbufButtonNotify[args->
-								  numeroCase],
-			      "y", (double) Y_BOUTONS, NULL);
-
-
-		if (staticAwale->player == COMPUTER)
-		{
-			sleep (1);
-			coup = think (staticAwale, gcomprisBoard->level);
-			returnMove = move (coup, staticAwale);
-			updateNbBeans (args->graphsElt->nbBeansHole,
-				       boardRootItem,
-				       args->graphsElt->ptBeansHoleLink, 0);
-			updateCapturedBeans (args->graphsElt->Captures);
-			staticAwale->player = HUMAN;
-			if (returnMove == GAMEOVER)
-				g_object_set (args->graphsElt->msg, "text",
-					      "FIN DE LA PARTIE !!!", NULL);
-			else g_object_set (args->graphsElt->msg, "text",
-					      "A toi de jouer ...", NULL);
-
-		}
 		break;
 	default:
 		break;
@@ -800,11 +831,11 @@ updateCapturedBeans (GnomeCanvasItem * Captures[2])
 	{
 		sprintf (buffer, "%d", staticAwale->CapturedBeans[i]);
 		g_object_set (Captures[i], "text", buffer, NULL);
-		if (staticAwale->CapturedBeans[i] > 24)
-		  {
-		    gamewon = TRUE;
-		    gcompris_display_bonus(i==0, BONUS_FLOWER);
-		  }
+ 		if (staticAwale->CapturedBeans[i] > 24)
+ 		  { 
+ 		    gamewon = TRUE;
+ 		    gcompris_display_bonus(i==0, BONUS_FLOWER);
+ 		  } 
 	}
 }
 

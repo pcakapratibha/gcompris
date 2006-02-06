@@ -93,6 +93,7 @@ libgcomprisinclude_HEADERS =			\
 	gcompris.h \
 	gcompris-board.h \
 	board_config.h \
+	gcompris_alphabeta.h \
 	gcompris_config.h \
 	gcompris_db.h \
 	gcompris_im.h \
@@ -120,6 +121,7 @@ libgcompris_1_la_SOURCES =			\
 	pixbuf_util.c \
 	board.h board.c \
 	board_config.h board_config.c \
+	gcompris_alphabeta.c \
 	gcompris_files.c \
 	gcompris_confirm.c \
 	profile.c \

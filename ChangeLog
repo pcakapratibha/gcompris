@@ -1,3 +1,21 @@
+2006-02-06  Yves Combe  <yves@ycombe.net>
+
+	add generic minmax(alphabeta) function.
+	use it in awale.
+	Need more tests.
+
+	* src/boards/awele.c: (start_board), (awele_create_item),
+	(to_computer), (buttonClick), (updateCapturedBeans):
+	* src/boards/awele_alphaBeta.c: (eval), (firstChild),
+	(nextSibling), (free_awale), (think):
+	* src/boards/awele_utils.c: (isOpponentHungry), (moveAwale),
+	(randplay):
+	* src/boards/awele_utils.h:
+	* src/gcompris/Makefile.am:
+	* src/gcompris/gcompris.h:
+	* src/gcompris/gcompris_alphabeta.c: (gcompris_alphabeta):
+	* src/gcompris/gcompris_alphabeta.h:
+
 2006-02-05  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Changed background entry color to white. The blue background color
