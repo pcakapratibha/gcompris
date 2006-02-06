@@ -26,8 +26,7 @@ char errorMsg[30];
 AWALE *staticAwale;
 int caseCoord[12] =
 	{ 102, 206, 309, 413, 522, 628, 626, 520, 411, 307, 201, 100 };
-GRAPHICS_ELT *graphsElt = NULL;
-CALLBACK_ARGS *buttonClickArgs[6];
+static GRAPHICS_ELT *graphsElt = NULL;
 
 static void start_board (GcomprisBoard * agcomprisBoard);
 static void pause_board (gboolean pause);
@@ -43,7 +42,9 @@ static gboolean is_our_board (GcomprisBoard * gcomprisBoard);
 static GnomeCanvasItem *awele_create_item (GnomeCanvasGroup * parent);
 static void awele_destroy_all_items (void);
 static void awele_next_level (void);
-
+static gboolean  to_computer(gpointer data);
+static gint timeout = 0;
+static gboolean computer_turn = FALSE;
 
 /*
  * Description of this plugin 
@@ -87,14 +88,24 @@ GET_BPLUGIN_INFO (awele)
 static void pause_board (gboolean pause)
 {
 	if (gcomprisBoard == NULL)
-		return;
-
-	if (gamewon == TRUE && pause == FALSE)
-	{			/* the game is won */
-		game_won ();
-	}
+	  return;
 
 	board_paused = pause;
+
+	if (pause == FALSE) {
+	  if (gamewon == TRUE)
+	    game_won ();
+	  else
+	    if (computer_turn)
+	      timeout = g_timeout_add (2000,
+				       (GSourceFunc) to_computer,
+				       NULL);
+	}
+	else
+	  if (timeout){
+	    g_source_remove(timeout);
+	    timeout = 0;
+	  }
 }
 
 /*
@@ -129,6 +140,7 @@ start_board (GcomprisBoard * agcomprisBoard)
 		awele_next_level ();
 
 		gamewon = FALSE;
+		computer_turn = FALSE;
 		pause_board (FALSE);
 	}
 }
@@ -204,6 +216,7 @@ awele_next_level ()
 
 	awele_destroy_all_items ();
 	gamewon = FALSE;
+	computer_turn = FALSE;
 
 	/*
 	 * Create the level 
@@ -327,7 +340,9 @@ awele_create_item (GnomeCanvasGroup * parent)
 		staticAwale->board[i] = NBBEANSPERHOLE;
 	}
 
-	staticAwale->player = HUMAN;
+	/* ->player is last player */
+	/* next is human */
+	staticAwale->player = COMPUTER;
 
 	for (i = 0; i < NBPLAYER; i++)
 	{
@@ -335,14 +350,6 @@ awele_create_item (GnomeCanvasGroup * parent)
 	}
 
 	graphsElt = (GRAPHICS_ELT *) malloc (sizeof (GRAPHICS_ELT));
-
-	for (i = 0; i < 6; i++)
-	{
-		buttonClickArgs[i] =
-			(CALLBACK_ARGS *) malloc (sizeof (CALLBACK_ARGS));
-		buttonClickArgs[i]->graphsElt = graphsElt;
-		buttonClickArgs[i]->numeroCase = i;
-	}
 
 	/*
 	 * Boucle pour creer et positionner les boutons qui serviront 
@@ -407,7 +414,7 @@ awele_create_item (GnomeCanvasGroup * parent)
 
 		gtk_signal_connect (GTK_OBJECT (graphsElt->button[i]),
 				    "event", GTK_SIGNAL_FUNC (buttonClick),
-				    (gpointer) buttonClickArgs[i]);
+				    GINT_TO_POINTER(i));
 
 
 	}
@@ -575,53 +582,40 @@ initBoardGraphics (GRAPHICS_ELT * graphsElt)
 }
 
 
-gboolean  to_computer(gpointer data)
+static gboolean  to_computer(gpointer data)
 {
-  CALLBACK_ARGS *args;
-  short int retourMove;
-  short int returnMove;
   short int coup;
-  args = (CALLBACK_ARGS *) data;
 
-  g_object_set (GTK_OBJECT
-		(args->graphsElt->button[args->numeroCase]),
-		"pixbuf",
-		args->graphsElt->pixbufButtonNotify[args->
-						    numeroCase],
-		"y", (double) Y_BOUTONS, NULL);
-  
-  
-  if (staticAwale->player == COMPUTER)
-    {
-      
-       /* last play is HUMAN */
-      /* DIRTY: FIXME */
-      staticAwale->player = HUMAN; 
-      
-      coup = think (staticAwale, gcomprisBoard->level);
-      if (coup >= 0){
-	AWALE *tmpAw = staticAwale;
-	staticAwale = moveAwale (coup, tmpAw);
-	if (!staticAwale){
-	  g_error("le coup devrait être bon !");
-	}
-	g_free(tmpAw);
-	updateNbBeans (args->graphsElt->nbBeansHole,
-		       boardRootItem,
-		       args->graphsElt->ptBeansHoleLink, 0);
-	updateCapturedBeans (args->graphsElt->Captures);
-	staticAwale->player = HUMAN;
-	if (returnMove == GAMEOVER)
-	  g_object_set (args->graphsElt->msg, "text",
-			"FIN DE LA PARTIE !!!", NULL);
-	else g_object_set (args->graphsElt->msg, "text",
-			   "A toi de jouer ...", NULL);
-      }
-      else {
-	gamewon = TRUE;
-	gcompris_display_bonus(TRUE, BONUS_FLOWER);
-      }
+  if (!computer_turn){
+    g_warning ("to_computer called but not compter_turn");
+    return FALSE;
+  }
+
+  if (board_paused){
+    g_warning ("to_computer called but not board paused");
+    timeout = 0;
+    return TRUE;
+  }
+
+  coup = think (staticAwale, gcomprisBoard->level);
+  if (coup >= 0){
+    AWALE *tmpAw = staticAwale;
+    staticAwale = moveAwale (coup, tmpAw);
+    if (!staticAwale){
+      g_error("le coup devrait être bon !");
     }
+    g_free(tmpAw);
+    updateNbBeans (0);
+    updateCapturedBeans ();
+    g_object_set (graphsElt->msg, "text",
+		  "A toi de jouer ...", NULL);
+    computer_turn = FALSE;
+  } else {
+    gamewon = TRUE;
+    gcompris_display_bonus(TRUE, BONUS_FLOWER);
+  }
+  
+  timeout = 0;
   return FALSE;
 }
 
@@ -639,73 +633,62 @@ gboolean  to_computer(gpointer data)
 static gint
 buttonClick (GtkWidget * item, GdkEvent * event, gpointer data)
 {
-
-	CALLBACK_ARGS *args;
-	short int retourMove;
-	short int returnMove;
-	short int coup;
-
-	args = (CALLBACK_ARGS *) data;
+	gint numeroCase = GPOINTER_TO_INT(data);
 
 	switch (event->type)
 	{
 	case GDK_ENTER_NOTIFY:
 		g_object_set (GTK_OBJECT
-			      (args->graphsElt->button[args->numeroCase]),
+			      (graphsElt->button[numeroCase]),
 			      "pixbuf",
-			      args->graphsElt->pixbufButtonNotify[args->
-								  numeroCase],
+			      graphsElt->pixbufButtonNotify[numeroCase],
 			      "y", (double) Y_BOUTONS, NULL);
 		break;
 	case GDK_LEAVE_NOTIFY:
 		g_object_set (GTK_OBJECT
-			      (args->graphsElt->button[args->numeroCase]),
+			      (graphsElt->button[numeroCase]),
 			      "pixbuf",
-			      args->graphsElt->pixbufButton[args->numeroCase],
+			      graphsElt->pixbufButton[numeroCase],
 			      "y", (double) Y_BOUTONS, NULL);
 		break;
 	case GDK_BUTTON_PRESS:
-	  if (staticAwale->player == COMPUTER)
+	  if (computer_turn)
 	    return TRUE;
 
 	  g_object_set (GTK_OBJECT
-			(args->graphsElt->button[args->numeroCase]),
+			(graphsElt->button[numeroCase]),
 			"pixbuf",
-			args->graphsElt->pixbufButtonClicked[args->
-							     numeroCase],
+			graphsElt->pixbufButtonClicked[numeroCase],
 			"y", (double) Y_BOUTONS + 3, NULL);
 	  
-	  g_object_set (args->graphsElt->msg, "text", "", NULL);
+	  g_object_set (graphsElt->msg, "text", "", NULL);
 
-	  /* FIXME */
-	  staticAwale->player = COMPUTER; 
-	  AWALE *tmpaw = moveAwale (args->numeroCase, staticAwale);
+	  AWALE *tmpaw = moveAwale (numeroCase, staticAwale);
 	  if (!tmpaw)
 	    {
-	      g_object_set (args->graphsElt->msg, "text", "grosse burne !",
+	      g_object_set (graphsElt->msg, "text", "Non valable !",
 			    NULL);
 	    }
 	  else
 	    {
 	      g_free(staticAwale);
 	      staticAwale = tmpaw;
-	      updateNbBeans (args->graphsElt->nbBeansHole,
-			     boardRootItem,
-			     args->graphsElt->ptBeansHoleLink,
-			     0);
-	      updateCapturedBeans (args->graphsElt->
-				   Captures);
-	       /* last play is HUMAN */
-	      /* DIRTY: FIXME */
-	      staticAwale->player = COMPUTER;
-	      g_timeout_add (2000,
-			     (GSourceFunc) to_computer,
-			     data);
+	      updateNbBeans (0);
+	      updateCapturedBeans ();
+	      computer_turn = TRUE;
+	      timeout = g_timeout_add (2000,
+				       (GSourceFunc) to_computer,
+				       NULL);
 	    }
 	  
 	  break;
 	case GDK_BUTTON_RELEASE:
-		break;
+	  g_object_set (GTK_OBJECT
+			(graphsElt->button[numeroCase]),
+			"pixbuf",
+			graphsElt->pixbufButtonNotify[numeroCase],
+			"y", (double) Y_BOUTONS, NULL);
+	  break;
 	default:
 		break;
 	}
@@ -726,91 +709,91 @@ buttonClick (GtkWidget * item, GdkEvent * event, gpointer data)
 *  @return Renvoi du pointeur sur la zone memoire apres redimension (n'a probablement pas changÃ© d'adresse).
 */
 static BEANHOLE_LINK *
-updateNbBeans (GnomeCanvasItem * nbBeansHole[NBHOLE],
-	       GnomeCanvasGroup * rootGroup,
-	       BEANHOLE_LINK * ptLink, int alpha)
+updateNbBeans (int alpha)
 {
 
-	char buffer[3];		//Manipulation chaines de caracteres            
-	int i, j, k, idxTabBeans = 0;	//Compteur Boucle Manipulation Elements graphiques
-	static short int nbActiveBean = NBTOTALBEAN;	//nbre graine restant sur plateau
-	static short int nbOldActiveBean;	//nbre graine restant sur plateau au tour precedent
-	BEANHOLE_LINK *ptBeansHoleLink = NULL;	//pointeur sur structures stockant les item graines et la case dans laquelle elles se trouvent.
-
-	/**
-	*	Sauvegarde du nombre de graines restantes sur le plateau de jeu 
-	*	pour le prochain appel a la fonction. 
-	*	Mise a jour de nbActiveBean avec nouvelle configuration du plateau de jeu.
-	*/
-	if (alpha)
+  char buffer[3];		//Manipulation chaines de caracteres            
+  int i, j, k, idxTabBeans = 0;	//Compteur Boucle Manipulation Elements graphiques
+  static short int nbActiveBean = NBTOTALBEAN;	//nbre graine restant sur plateau
+  static short int nbOldActiveBean;	//nbre graine restant sur plateau au tour precedent
+  BEANHOLE_LINK *ptBeansHoleLink = NULL;	//pointeur sur structures stockant les item graines et la case dans laquelle elles se trouvent.
+  
+  /**
+   *	Sauvegarde du nombre de graines restantes sur le plateau de jeu 
+   *	pour le prochain appel a la fonction. 
+   *	Mise a jour de nbActiveBean avec nouvelle configuration du plateau de jeu.
+   */
+  if (alpha)
+    {
+      nbOldActiveBean = 48;
+    }
+  else
+    {
+      nbOldActiveBean = nbActiveBean;
+    }
+  
+  nbActiveBean =
+    NBTOTALBEAN - (staticAwale->CapturedBeans[HUMAN] +
+		   staticAwale->CapturedBeans[COMPUTER]);
+  
+  /**
+   *	Destruction d'autant d'elements graphiques graines
+   *	qu'il y a eu de captures pdt ce tour de jeu
+   */
+  for (ptBeansHoleLink = &(graphsElt->ptBeansHoleLink)[nbActiveBean], i = 0;
+       i < nbOldActiveBean - nbActiveBean; i++, ptBeansHoleLink++)
+    {
+      gtk_object_destroy (GTK_OBJECT (ptBeansHoleLink->beanPixbuf));
+    }
+  
+  
+  /**
+   *	Allocation d'un nouvel espace memoire stockant les item graines 
+   *	et la case dans laquelle elles se trouvent. Puis liberation de la fin de 
+   *	l'ancien espace memoire.
+   */
+  
+  ptBeansHoleLink =
+    (BEANHOLE_LINK *) realloc (graphsElt->ptBeansHoleLink,
+			       nbActiveBean *
+			       sizeof (BEANHOLE_LINK));
+  
+  /**
+   *	Pour chaque case du plateau, mise a jour du nbre de graines qu'elle contient. 
+   *	Et pour chaque graine de cette case, deplacement d'un element graphique type graine
+   *	dans cette case. Et mise a jour de l'information hole dans la structure BEANHOLE_LINK.
+   */
+  for (i = NBHOLE - 1; i >= 0; i--)
+    {
+      sprintf (buffer, "%d", staticAwale->board[i]);
+      gnome_canvas_item_set (graphsElt->nbBeansHole[i], "text", buffer, NULL);
+      
+      for (j = 0;
+	   j < staticAwale->board[i] && idxTabBeans < nbActiveBean;
+	   j++, idxTabBeans++)
 	{
-		nbOldActiveBean = 48;
+	  
+	  k = 0 + rand () % 4;
+	  
+	  gnome_canvas_item_set (ptBeansHoleLink[idxTabBeans].
+				 beanPixbuf, "x",
+				 (double) caseCoord[i] +
+				 rand () % 50, "y",
+				 (double) (((i <
+					     6) ? 260 : 130) +
+					   rand () % 60), NULL);
+	  
+	  ptBeansHoleLink[idxTabBeans].hole = i;
 	}
-	else
-	{
-		nbOldActiveBean = nbActiveBean;
-	}
-
-	nbActiveBean =
-		NBTOTALBEAN - (staticAwale->CapturedBeans[HUMAN] +
-			       staticAwale->CapturedBeans[COMPUTER]);
-
-	/**
-	*	Destruction d'autant d'elements graphiques graines
-	*	qu'il y a eu de captures pdt ce tour de jeu
-	*/
-	for (ptBeansHoleLink = &ptLink[nbActiveBean], i = 0;
-	     i < nbOldActiveBean - nbActiveBean; i++, ptBeansHoleLink++)
-	{
-		gtk_object_destroy (GTK_OBJECT (ptBeansHoleLink->beanPixbuf));
-	}
-
-
-	/**
-	*	Allocation d'un nouvel espace memoire stockant les item graines 
-	*	et la case dans laquelle elles se trouvent. Puis liberation de la fin de 
-	*	l'ancien espace memoire.
-	*/
-
-	ptBeansHoleLink =
-		(BEANHOLE_LINK *) realloc (ptLink,
-					   nbActiveBean *
-					   sizeof (BEANHOLE_LINK));
-
-	/**
-	*	Pour chaque case du plateau, mise a jour du nbre de graines qu'elle contient. 
-	*	Et pour chaque graine de cette case, deplacement d'un element graphique type graine
-	*	dans cette case. Et mise a jour de l'information hole dans la structure BEANHOLE_LINK.
-	*/
-	for (i = NBHOLE - 1; i >= 0; i--)
-	{
-		sprintf (buffer, "%d", staticAwale->board[i]);
-		gnome_canvas_item_set (nbBeansHole[i], "text", buffer, NULL);
-
-		for (j = 0;
-		     j < staticAwale->board[i] && idxTabBeans < nbActiveBean;
-		     j++, idxTabBeans++)
-		{
-
-			k = 0 + rand () % 4;
-
-			gnome_canvas_item_set (ptBeansHoleLink[idxTabBeans].
-					       beanPixbuf, "x",
-					       (double) caseCoord[i] +
-					       rand () % 50, "y",
-					       (double) (((i <
-							   6) ? 260 : 130) +
-							 rand () % 60), NULL);
-
-			ptBeansHoleLink[idxTabBeans].hole = i;
-		}
-
-	}
-
-	/**
-	*	Renvoi du pointeur sur la zone memoire retaillee (n'a probablement pas change d'adresse).
-	*/
-	return ptBeansHoleLink;
+      
+    }
+  
+  /**
+   *	Renvoi du pointeur sur la zone memoire retaillee (n'a probablement pas change d'adresse).
+   */
+  
+  graphsElt->ptBeansHoleLink = ptBeansHoleLink;
+  return ptBeansHoleLink;
 }
 
 
@@ -821,7 +804,7 @@ updateNbBeans (GnomeCanvasItem * nbBeansHole[NBHOLE],
 *  @param Captures[2] pointeur sur les gnomeCanvasItem d'affichage des scores
 */
 static void
-updateCapturedBeans (GnomeCanvasItem * Captures[2])
+updateCapturedBeans ()
 {
 
 	short int i;
@@ -830,7 +813,7 @@ updateCapturedBeans (GnomeCanvasItem * Captures[2])
 	for (i = 0; i < 2; i++)
 	{
 		sprintf (buffer, "%d", staticAwale->CapturedBeans[i]);
-		g_object_set (Captures[i], "text", buffer, NULL);
+		g_object_set (graphsElt->Captures[i], "text", buffer, NULL);
  		if (staticAwale->CapturedBeans[i] > 24)
  		  { 
  		    gamewon = TRUE;
@@ -880,13 +863,13 @@ buttonNewGameClick (GRAPHICS_ELT *graphsElt)
 			  "text", "4", NULL);
 	  }
 	
-	staticAwale->player = HUMAN;
+	staticAwale->player = COMPUTER;
 
 	for (i = 0; i < NBPLAYER; i++)
 	  {
 	    staticAwale->CapturedBeans[i] = 0;
 	  }
 	
-	updateCapturedBeans (graphsElt->Captures);
+	updateCapturedBeans ();
 	initBoardGraphics (graphsElt);
 }

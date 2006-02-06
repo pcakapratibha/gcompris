@@ -52,7 +52,6 @@ short int isOpponentHungry(short int player, AWALE * aw)
 AWALE *moveAwale(short int hole, AWALE * aw)
 {
   if (!aw->board[hole]){
-    g_warning("ben, non, pas de billes dans ce trou %d", hole);
     return NULL;
   }
 
@@ -95,7 +94,6 @@ AWALE *moveAwale(short int hole, AWALE * aw)
     return NULL;
   }
   else {
-    g_warning("move %d in hole %d ok.", nbBeans, hole);
     tempAw->player = switch_player(tempAw->player);
     return tempAw;
   }

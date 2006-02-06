@@ -1,6 +1,6 @@
 /* gcompris - gcompris_alphabeta.c
  *
- * Time-stamp: <2006/02/05 23:01:12 yves>
+ * Time-stamp: <2006/02/06 08:15:38 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  *
@@ -49,11 +49,11 @@ gint gcompris_alphabeta (gboolean maximize,
 
   *bestChild = -1;
 
-  g_warning("gcompris_alphabeta %d %d %d", depth, alpha, beta);
+/*   g_warning("gcompris_alphabeta %d %d %d", depth, alpha, beta); */
   
   /* directly return value for leaf node*/
   if ((!child) || (depth == 0)){
-    g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild);
+/*     g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild); */
     return heuristic(treeGame);
   }
 
@@ -77,13 +77,13 @@ gint gcompris_alphabeta (gboolean maximize,
 	*bestChild = index;
       }
       if ( m >= beta){
-	g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild);
+/* 	g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild); */
 	return m;
       }
       index++;
       child = nextSibling(child);
     }
-    g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild);
+/*     g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild); */
     return m;
   }
   else {
@@ -105,13 +105,13 @@ gint gcompris_alphabeta (gboolean maximize,
 	*bestChild = index;
       }
       if ( m <= alpha){
-	g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild);
+/* 	g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild); */
 	return m;
       }
       index++;
       child = nextSibling(child);
     }
-	g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild);
+/* 	g_warning("gcompris_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild); */
     return m;
 
   }

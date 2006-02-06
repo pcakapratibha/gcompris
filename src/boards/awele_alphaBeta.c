@@ -48,24 +48,22 @@ GNode *firstChild(GNode *node)
   AWALE *aw = node->data;
   AWALE *tmpaw;
   GNode *tmpnode;
+  gint eval_node = eval(node);
+  gint rand_play;
 
-  if ((eval(node) == 25) || (eval(node)==-25))
+  /* Case node is winning one */
+  if ((eval_node == 25) || (eval_node == -25))
     return NULL;
 
   gint i;
+  rand_play = 1 + random()%6;
 
   for (i = 0 ; i < 6; i++)
     {
-      g_warning("hole %d %d",i + ((aw->player == HUMAN )? 6 : 0) , aw->board[i + ((aw->player == HUMAN )? 6 : 0)] );
-      tmpaw = moveAwale(i + ((aw->player == HUMAN )? 6 : 0), aw);
-      if (!tmpaw){
-	g_warning("Child %d fails", i + ((aw->player == HUMAN )? 6 : 0));
-      }
-      else {
+      tmpaw = moveAwale((rand_play + i)%6 + ((aw->player == HUMAN )? 6 : 0), aw);
+      if (tmpaw){
 	tmpnode = g_node_new(tmpaw);
-
 	g_node_insert (node, -1, tmpnode);
-	g_warning("node inserted");
       }
     }
   
@@ -94,43 +92,28 @@ gboolean free_awale(GNode *node,
 * @return Le meilleur coup calcule par la machine
 * le player est celui qui a joué le dernier coup.
 */
-short int  think( AWALE *a, short int level){
-  // make a copy of awale.
+
+short int  think( AWALE *static_awale, short int level){
+
   AWALE *aw = g_malloc(sizeof(AWALE));
-  memcpy (aw, a, sizeof(AWALE));
+  memcpy (aw, static_awale, sizeof(AWALE));
+
   GNode *t = g_node_new(aw) ;
+
   int npris ;
   int best = -1;
   
-  maxprof = level +1 ;
+  maxprof = level;
   
   /*augmente la profondeur quand le nombre de pieces diminue */
-  npris = a->CapturedBeans[HUMAN] + a->CapturedBeans[COMPUTER] ;
+/*   npris = a->CapturedBeans[HUMAN] + a->CapturedBeans[COMPUTER] ; */
   
-  if ( npris > 20 ) maxprof ++ ;
-  if ( npris > 25 ) maxprof ++ ;
-  if ( npris > 30 ) maxprof ++ ;
-  if ( npris > 35 ) maxprof ++ ;
-  if ( npris > 40 ) maxprof ++ ;
+/*   if ( npris > 20 ) maxprof ++ ; */
+/*   if ( npris > 25 ) maxprof ++ ; */
+/*   if ( npris > 30 ) maxprof ++ ; */
+/*   if ( npris > 35 ) maxprof ++ ; */
+/*   if ( npris > 40 ) maxprof ++ ; */
 
-  g_warning("THINK alphabeta maxprof : %d", maxprof);
-
-  g_warning(" %d | %d %d %d %d %d %d | %d %d %d %d %d %d | %d",
-	    a->CapturedBeans[HUMAN],
-	    a->board[0],
-	    a->board[1],
-	    a->board[2],
-	    a->board[3],
-	    a->board[4],
-	    a->board[5],
-	    a->board[6],
-	    a->board[7],
-	    a->board[8],
-	    a->board[9],
-	    a->board[10],
-	    a->board[11],	    
-	    a->CapturedBeans[COMPUTER]);
-  
   gcompris_alphabeta( TRUE, 
 		      t, 
 		      (EvalFunction) eval, 
@@ -142,7 +125,7 @@ short int  think( AWALE *a, short int level){
 		      maxprof) ;
   
   if (best < 0){
-    g_warning("Leaf Node, game is over");
+    g_warning("Leaf node, game is over");
     return -1;
   }
   GNode *tmpNode = g_node_nth_child (t, best);

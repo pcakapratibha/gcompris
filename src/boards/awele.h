@@ -59,6 +59,6 @@ static gint buttonNewGameClick (GRAPHICS_ELT *graphsElt);
 /**
 *	Fonctions Mise a jour de l'affichage
 */
-static BEANHOLE_LINK * updateNbBeans (GnomeCanvasItem *nbBeansHole[NBHOLE], GnomeCanvasGroup *rootGroup, BEANHOLE_LINK *ptLink, int alpha);
-static void updateCapturedBeans (GnomeCanvasItem *Captures[2]);
+static BEANHOLE_LINK * updateNbBeans (int alpha);
+static void updateCapturedBeans (void);
 static void initBoardGraphics (GRAPHICS_ELT *graphsElt);

@@ -1,5 +1,20 @@
 2006-02-06  Yves Combe  <yves@ycombe.net>
 
+	awele manily fixed.
+	TODO: change first player.
+	TODO: add correct rule in case of end by hungry player.
+
+	* src/boards/awele.c: (pause_board), (start_board),
+	(awele_next_level), (awele_create_item), (to_computer),
+	(buttonClick), (updateNbBeans), (updateCapturedBeans),
+	(buttonNewGameClick):
+	* src/boards/awele.h:
+	* src/boards/awele_alphaBeta.c: (firstChild), (think):
+	* src/boards/awele_utils.c: (moveAwale):
+	* src/gcompris/gcompris_alphabeta.c: (gcompris_alphabeta):
+
+2006-02-06  Yves Combe  <yves@ycombe.net>
+
 	add generic minmax(alphabeta) function.
 	use it in awale.
 	Need more tests.
