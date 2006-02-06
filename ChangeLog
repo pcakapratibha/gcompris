@@ -1,5 +1,12 @@
 2006-02-06  Yves Combe  <yves@ycombe.net>
 
+	clean code from unused fucntion
+
+	* src/boards/awele.c:
+	* src/boards/awele.h:
+
+2006-02-06  Yves Combe  <yves@ycombe.net>
+
 	change evaluation fonction usage in awele,
 	to make it easier in level 1-4.
 	difficulty:

@@ -54,7 +54,6 @@ typedef struct {
 static gint eventDelete (GtkWidget * widget, GdkEvent *event, gpointer data);
 static gint eventDestroy (GtkWidget * widget, GdkEvent *event, gpointer data);
 static gint buttonClick (GtkWidget *item, GdkEvent *event, gpointer data);
-static gint buttonNewGameClick (GRAPHICS_ELT *graphsElt);
 
 /**
 *	Fonctions Mise a jour de l'affichage
