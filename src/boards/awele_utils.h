@@ -63,6 +63,7 @@ typedef struct {
 /**
 *	Fonction de manipulation de l'awale
 */
+gboolean diedOfHunger(AWALE *aw);
 AWALE *moveAwale(short int hole, AWALE * aw);
 short int think(AWALE * a, short int level);
 short int randplay(AWALE * a);

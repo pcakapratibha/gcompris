@@ -51,13 +51,16 @@ short int isOpponentHungry(short int player, AWALE * aw)
 */
 AWALE *moveAwale(short int hole, AWALE * aw)
 {
+  AWALE *tempAw, *tempAwGs;
+  gboolean has_capture = FALSE;
+
   if (!aw->board[hole]){
     return NULL;
   }
 
   short int nbBeans, j, last;
   
-  AWALE *tempAw = g_malloc(sizeof(AWALE));
+  tempAw = g_malloc(sizeof(AWALE));
   
   memcpy(tempAw, aw, sizeof(AWALE));
 
@@ -76,10 +79,15 @@ AWALE *moveAwale(short int hole, AWALE * aw)
 
   last = (last +11) %12;
 
+  /* Grand Slam (play and no capture because this let other player hungry */
+  tempAwGs = g_malloc(sizeof(AWALE));
+  memcpy(tempAwGs, tempAw, sizeof(AWALE));
+
   // capture
   while ((last >= ((tempAw->player == HUMAN)? 0 : 6))
 	  && (last < ((tempAw->player == HUMAN)? 6 : 12))){
     if ((tempAw->board[last] == 2) || (tempAw->board[last] == 3)){
+      has_capture = TRUE;
       tempAw->CapturedBeans[switch_player(tempAw->player)] += tempAw->board[last];
       tempAw->board[last] = 0;
       last = (last+11)%12;
@@ -87,12 +95,21 @@ AWALE *moveAwale(short int hole, AWALE * aw)
     }
     break;
   }
-  
+
   if (isOpponentHungry(tempAw->player, tempAw)){
-    g_warning("isOpponentHungry %s TRUE",(tempAw->player == HUMAN)? "HUMAN" : "COMPUTER" );
-    g_free(tempAw);
-    return NULL;
-  }
+    if (has_capture){
+      /* Grand Slam case */
+      //g_warning("Grand Slam: no capture");
+      g_free(tempAw);
+      return tempAwGs;
+    } else{
+      /* No capture and  opponent hungry -> forbidden */
+      //g_warning("isOpponentHungry %s TRUE",(tempAw->player == HUMAN)? "HUMAN" : "COMPUTER" );
+      g_free(tempAw);
+      g_free(tempAwGs);
+      return NULL;
+    }
+  }    
   else {
     tempAw->player = switch_player(tempAw->player);
     return tempAw;
@@ -129,5 +146,21 @@ short int randplay(AWALE * a)
     return (i);
 }
 
+/* last player is hungry and cannot be served ? */
+gboolean diedOfHunger(AWALE *aw)
+{
+  gint begin = (aw->player == HUMAN) ? 0 : 6;
+  gint k;
 
+  if (isOpponentHungry(switch_player(aw->player), aw)){
+    for (k=0; k <6; k++){
+      if ( aw->board[begin+k] > 6 - k)
+	return FALSE;
+    }
+    g_warning("%s is died of hunger", (aw->player == HUMAN) ? "HUMAN" : "COMPUTER");
+    return TRUE;
+  }
+  else
+    return FALSE;
+}
 

@@ -659,15 +659,26 @@ static gboolean  to_computer(gpointer data)
     if (!staticAwale){
       g_error("le coup devrait être bon !");
     }
-    g_free(tmpAw);
-    updateNbBeans (0);
-    updateCapturedBeans ();
-    g_object_set (graphsElt->msg, "text",
-		  _("Your turn to play ..."), NULL);
+    gboolean IAmHungry = diedOfHunger(staticAwale);
+    if (!IAmHungry){
+      g_free(tmpAw);
+      updateNbBeans (0);
+      updateCapturedBeans ();
+      g_object_set (graphsElt->msg, "text",
+		    _("Your turn to play ..."), NULL);
+    } else {
+      /* computer hungry but human can't give it beans */
+      /* Human player win by catching all the beans left. */
+      gamewon = TRUE;
+      sublevel_finished = TRUE;
+      gcompris_display_bonus(TRUE, BONUS_FLOWER);
+    }
   } else {
+    /* computer can't play. Why? human is hungry and i cannot give it 
+       to eat */
     gamewon = TRUE;
-    sublevel_finished = TRUE;
-    gcompris_display_bonus(TRUE, BONUS_FLOWER);
+    sublevel_finished = FALSE;
+    gcompris_display_bonus(FALSE, BONUS_FLOWER);
   }
   
   timeout = 0;

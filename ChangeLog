@@ -1,3 +1,13 @@
+2006-02-07  Yves Combe,,,  <yves@ycombe.net>
+
+	add Grand slam rule for capture (no capture 
+	if that let opponent hungry).
+	add correct rule for hunger end of games (untested).
+
+	* src/boards/awele.c: (to_computer):
+	* src/boards/awele_utils.c: (moveAwale), (diedOfHunger):
+	* src/boards/awele_utils.h:
+
 2006-02-07  Yves Combe  <yves@ycombe.net>
 
 	fix crash with animation on next_level and repeat.
