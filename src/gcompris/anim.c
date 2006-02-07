@@ -138,6 +138,9 @@ void gcompris_deactivate_animation(GcomprisAnimCanvasItem *item)
     return;
   }
 
+  if (GNOME_IS_CANVAS_ITEM(item->canvas))
+    gtk_object_destroy(GTK_OBJECT(item->canvas));
+
   active = g_slist_delete_link(active, node);
   g_object_unref(item->iter);
   g_free(item);

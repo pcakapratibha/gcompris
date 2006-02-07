@@ -113,7 +113,6 @@ static void pause_board (gboolean pause)
 	}
 	else{
 	  if (computer_turn){
-	    gnome_canvas_item_hide(anim_item->canvas);
 	    gcompris_deactivate_animation(anim_item);
 	    if (timeout){
 	      g_source_remove(timeout);
@@ -200,7 +199,6 @@ is_our_board (GcomprisBoard * gcomprisBoard)
  */
 static void repeat (){
   if (computer_turn){
-    gnome_canvas_item_hide(anim_item->canvas);
     gcompris_deactivate_animation(anim_item);
     if (timeout){
       g_source_remove(timeout);
@@ -221,7 +219,6 @@ set_level (guint level)
       gcomprisBoard->sublevel = 1;
 
       if (computer_turn){
-	gnome_canvas_item_hide(anim_item->canvas);
 	gcompris_deactivate_animation(anim_item);
 	if (timeout){
 	  g_source_remove(timeout);
@@ -649,7 +646,6 @@ static gboolean  to_computer(gpointer data)
 
   coup = think (staticAwale, gcomprisBoard->level);
 
-  gnome_canvas_item_hide(anim_item->canvas);
   gcompris_deactivate_animation(anim_item);
   computer_turn = FALSE;
 
@@ -676,9 +672,11 @@ static gboolean  to_computer(gpointer data)
   } else {
     /* computer can't play. Why? human is hungry and i cannot give it 
        to eat */
+    /* if human has 24 beans, it's draw (human win in gcompris) */
+    /* if not, all staying are captured by computer and computer win */
     gamewon = TRUE;
-    sublevel_finished = FALSE;
-    gcompris_display_bonus(FALSE, BONUS_FLOWER);
+    sublevel_finished = (staticAwale->CapturedBeans[HUMAN] ==  24);
+    gcompris_display_bonus(sublevel_finished, BONUS_FLOWER);
   }
   
   timeout = 0;
@@ -748,7 +746,6 @@ buttonClick (GtkWidget * item, GdkEvent * event, gpointer data)
 	      anim_item = (GnomeCanvasItem*)
 		gcompris_activate_animation( boardRootItem,
 					     animation );
-	      gnome_canvas_item_show(anim_item->canvas);
 	    }
 	  
 	  break;

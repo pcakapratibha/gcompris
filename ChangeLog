@@ -1,3 +1,15 @@
+2006-02-07  Yves Combe  <yves@ycombe.net>
+
+	fix anim api to destroy the item canvas on deactivate.
+	fix gnumch to not crash with that (del anim before quit)
+	fix anim in awele.
+
+	* src/boards/awele.c: (pause_board), (repeat), (set_level),
+	(to_computer), (buttonClick):
+	* src/boards/awele_utils.c: (diedOfHunger):
+	* src/boards/python/gnumch.py:
+	* src/gcompris/anim.c: (gcompris_deactivate_animation):
+
 2006-02-07  Yves Combe,,,  <yves@ycombe.net>
 
 	add Grand slam rule for capture (no capture 

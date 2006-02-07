@@ -919,5 +919,9 @@ class Gcompris_gnumch:
             return 0
 
     def end(self):
+        for i in range(0, len(self.troggles)):
+            del self.troggles[i].anim
+        if self.muncher.anim:
+            del self.muncher.anim
         self.stopGame()
         self.rootitem.destroy()

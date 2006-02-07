@@ -149,7 +149,7 @@ short int randplay(AWALE * a)
 /* last player is hungry and cannot be served ? */
 gboolean diedOfHunger(AWALE *aw)
 {
-  gint begin = (aw->player == HUMAN) ? 0 : 6;
+  gint begin = (aw->player == HUMAN) ? 6 : 0;
   gint k;
 
   if (isOpponentHungry(switch_player(aw->player), aw)){
