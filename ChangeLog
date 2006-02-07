@@ -1,5 +1,13 @@
 2006-02-07  Yves Combe  <yves@ycombe.net>
 
+	fix crash with animation on next_level and repeat.
+	fix strings i18n. Needs review of strings.
+
+	* src/boards/awele.c: (pause_board), (repeat), (set_level),
+	(awele_create_item), (to_computer), (buttonClick):
+
+2006-02-07  Yves Combe  <yves@ycombe.net>
+
 	add animation like in connect4 when computer think.
 
 	* src/boards/awele.c: (pause_board), (start_board), (end_board),

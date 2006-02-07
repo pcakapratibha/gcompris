@@ -112,11 +112,13 @@ static void pause_board (gboolean pause)
 	    }
 	}
 	else{
-	  gnome_canvas_item_hide(anim_item->canvas);
-	  gcompris_deactivate_animation(anim_item);
-	  if (timeout){
-	    g_source_remove(timeout);
-	    timeout = 0;
+	  if (computer_turn){
+	    gnome_canvas_item_hide(anim_item->canvas);
+	    gcompris_deactivate_animation(anim_item);
+	    if (timeout){
+	      g_source_remove(timeout);
+	      timeout = 0;
+	    }
 	  }
 	}
 }
@@ -197,7 +199,14 @@ is_our_board (GcomprisBoard * gcomprisBoard)
  *
  */
 static void repeat (){
-
+  if (computer_turn){
+    gnome_canvas_item_hide(anim_item->canvas);
+    gcompris_deactivate_animation(anim_item);
+    if (timeout){
+      g_source_remove(timeout);
+      timeout = 0;
+    }
+  }
   awele_next_level();
 }
 
@@ -210,11 +219,17 @@ set_level (guint level)
     {
       gcomprisBoard->level=level;
       gcomprisBoard->sublevel = 1;
-      if (timeout){
-	g_source_remove(timeout);
-	timeout=0;
+
+      if (computer_turn){
+	gnome_canvas_item_hide(anim_item->canvas);
+	gcompris_deactivate_animation(anim_item);
+	if (timeout){
+	  g_source_remove(timeout);
+	  timeout = 0;
+	}
       }
       awele_next_level();
+      
     }
 }
 
@@ -521,7 +536,7 @@ awele_create_item (GnomeCanvasGroup * parent)
 
 	graphsElt->msg = gnome_canvas_item_new (boardRootItem,
 						gnome_canvas_text_get_type (),
-						"text", "Selectionne une case a jouer",
+						"text", _("Choose an house"),
 						"font", "12x24",
 						"size", 20000,
 						"x", (double) 400,
@@ -627,7 +642,7 @@ static gboolean  to_computer(gpointer data)
   }
 
   if (board_paused){
-    g_warning ("to_computer called but not board paused");
+    g_warning ("to_computer called but board paused");
     timeout = 0;
     return TRUE;
   }
@@ -636,6 +651,7 @@ static gboolean  to_computer(gpointer data)
 
   gnome_canvas_item_hide(anim_item->canvas);
   gcompris_deactivate_animation(anim_item);
+  computer_turn = FALSE;
 
   if (coup >= 0){
     AWALE *tmpAw = staticAwale;
@@ -647,8 +663,7 @@ static gboolean  to_computer(gpointer data)
     updateNbBeans (0);
     updateCapturedBeans ();
     g_object_set (graphsElt->msg, "text",
-		  "A toi de jouer ...", NULL);
-    computer_turn = FALSE;
+		  _("Your turn to play ..."), NULL);
   } else {
     gamewon = TRUE;
     sublevel_finished = TRUE;
@@ -706,7 +721,7 @@ buttonClick (GtkWidget * item, GdkEvent * event, gpointer data)
 	  AWALE *tmpaw = moveAwale (numeroCase, staticAwale);
 	  if (!tmpaw)
 	    {
-	      g_object_set (graphsElt->msg, "text", "Non valable !",
+	      g_object_set (graphsElt->msg, "text", _("Not allowed! Try again !"),
 			    NULL);
 	    }
 	  else
