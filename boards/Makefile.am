@@ -75,6 +75,22 @@ xml_in_files = \
 	memory_group.xml.in \
 	memory_sound_tux.xml.in \
 	memory_sound.xml.in \
+	memory_op_group.xml.in \
+	memory_op_group_tux.xml.in \
+	memory_add.xml.in \
+	memory_add_tux.xml.in \
+	memory_minus.xml.in \
+	memory_minus_tux.xml.in \
+	memory_mult.xml.in \
+	memory_mult_tux.xml.in \
+	memory_div.xml.in \
+	memory_div_tux.xml.in \
+	memory_add_minus.xml.in \
+	memory_add_minus_tux.xml.in \
+	memory_mult_div.xml.in \
+	memory_mult_div_tux.xml.in \
+	memory_add_minus_mult_div.xml.in \
+	memory_add_minus_mult_div_tux.xml.in \
 	memory_tux.xml.in \
 	memory.xml.in \
 	menu.xml.in \

@@ -1,3 +1,26 @@
+2006-02-09  Yves Combe  <yves@ycombe.net>
+
+	fix animation was launched after winning.
+	add memory based mathematicals operations boards.
+
+	* boards/Makefile.am:
+	* boards/memory_add.xml.in:
+	* boards/memory_add_minus.xml.in:
+	* boards/memory_add_minus_mult_div.xml.in:
+	* boards/memory_add_minus_mult_div_tux.xml.in:
+	* boards/memory_add_minus_tux.xml.in:
+	* boards/memory_add_tux.xml.in:
+	* boards/memory_mult.xml.in:
+	* boards/memory_mult_div.xml.in:
+	* boards/memory_mult_div_tux.xml.in:
+	* boards/memory_mult_tux.xml.in:
+	* boards/memory_op_group.xml.in:
+	* boards/memory_op_group_tux.xml.in:
+	* src/boards/awele.c: (buttonClick):
+	* src/boards/memory.c: (get_random_token), (start_board),
+	(memory_destroy_all_items), (get_image), (create_item),
+	(compare_card):
+
 2006-02-08  Yves Combe  <yves@ycombe.net>
 
 	fix depth search. Must not to be odd in best difference evaluation!

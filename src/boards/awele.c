@@ -739,13 +739,15 @@ buttonClick (GtkWidget * item, GdkEvent * event, gpointer data)
 	      staticAwale = tmpaw;
 	      updateNbBeans (0);
 	      updateCapturedBeans ();
-	      computer_turn = TRUE;
-	      timeout = g_timeout_add (2000,
-				       (GSourceFunc) to_computer,
-				       NULL);
-	      anim_item = (GnomeCanvasItem*)
-		gcompris_activate_animation( boardRootItem,
-					     animation );
+	      if (!gamewon){
+		computer_turn = TRUE;
+		timeout = g_timeout_add (2000,
+					 (GSourceFunc) to_computer,
+					 NULL);
+		anim_item = (GnomeCanvasItem*)
+		  gcompris_activate_animation( boardRootItem,
+					       animation );
+	      }
 	    }
 	  
 	  break;
