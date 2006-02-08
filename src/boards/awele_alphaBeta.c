@@ -134,19 +134,32 @@ short int  think( AWALE *static_awale, short int level){
     g_warning("search depth 1, evaluation best capture");
     break;
   case 3:
-    maxprof = 1;
-    use_eval = &eval;
-    g_warning("search depth %d, evaluation best gain", maxprof);
-    break;
   case 4:
-    maxprof = 1;
+    maxprof = 2;
     use_eval = &eval;
-    g_warning("search depth %d, evaluation best gain", maxprof);
+    g_warning("search depth %d, evaluation best difference", maxprof);
+    break;
+  case 5:
+  case 6:
+    maxprof = 4;
+    use_eval = &eval;
+    g_warning("search depth %d, evaluation best difference", maxprof);
+    break;
+  case 7:
+  case 8:
+    maxprof = 6;
+    use_eval = &eval;
+    g_warning("search depth %d, evaluation best difference", maxprof);
+    break;
+  case 9:
+    maxprof = 8;
+    use_eval = &eval;
+    g_warning("search depth %d, evaluation best difference", maxprof);
     break;
   default:
-    maxprof = level - 3;
+    maxprof = 8;
     use_eval = &eval;
-    g_warning("search depth %d, evaluation best gain", maxprof);
+    g_warning("search depth %d, evaluation best difference", maxprof);
     break;
   }
 

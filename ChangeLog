@@ -1,5 +1,11 @@
 2006-02-08  Yves Combe  <yves@ycombe.net>
 
+	fix depth search. Must not to be odd in best difference evaluation!
+
+	* src/boards/awele_alphaBeta.c: (think):
+
+2006-02-08  Yves Combe  <yves@ycombe.net>
+
 	add a reset of item->canvas after destroy.
 
 	* src/gcompris/anim.c: (gcompris_deactivate_animation):
