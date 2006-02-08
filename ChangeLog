@@ -1,3 +1,12 @@
+2006-02-08  Yves Combe  <yves@ycombe.net>
+
+	Some fix in animation api/usage.
+
+	* src/boards/awele_alphaBeta.c: (think):
+	* src/boards/py-mod-anim.c: (Animation_free), (AnimCanvas_free):
+	* src/boards/python/gnumch.py:
+	* src/gcompris/anim.c: (anim_tick):
+
 2006-02-07  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/advanced_colors.c: (add_xml_data): fixed to check properly for long locale (e.g. pt_BR)

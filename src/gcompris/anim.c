@@ -180,7 +180,7 @@ static gboolean anim_tick(void *ignore)
 {
   if(active == NULL)
     {
-      printf("deactivating anim_tick\n");
+      g_warning("deactivating anim_tick\n");
       return FALSE;
     }
 

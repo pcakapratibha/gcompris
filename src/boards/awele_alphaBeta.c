@@ -122,32 +122,33 @@ short int  think( AWALE *static_awale, short int level){
   int value = 0;
   EvalFunction use_eval = NULL;
 
-  if ( ((level-1) / 2) ==  0){
+  switch (level) {
+  case 1:
     maxprof = 1;
     use_eval = &eval_to_null;
     g_warning("search depth 1, evaluation null");
-  }
-  else {
-    if ( ((level-1) / 2) == 1 ){
-      maxprof = 1;
-      use_eval = &eval_to_best_capture;
+    break;
+  case 2:
+    maxprof = 1;
+    use_eval = &eval_to_best_capture;
     g_warning("search depth 1, evaluation best capture");
-    }
-    else {
-      maxprof = (level - 3)/2;
-      use_eval = &eval;
-    g_warning("search depth %d, evaluation best difference in capture", maxprof );
-    }
+    break;
+  case 3:
+    maxprof = 1;
+    use_eval = &eval;
+    g_warning("search depth %d, evaluation best gain", maxprof);
+    break;
+  case 4:
+    maxprof = 1;
+    use_eval = &eval;
+    g_warning("search depth %d, evaluation best gain", maxprof);
+    break;
+  default:
+    maxprof = level - 3;
+    use_eval = &eval;
+    g_warning("search depth %d, evaluation best gain", maxprof);
+    break;
   }
-  
-  /*augmente la profondeur quand le nombre de pieces diminue */
-  /*   npris = a->CapturedBeans[HUMAN] + a->CapturedBeans[COMPUTER] ; */
-  
-  /*   if ( npris > 20 ) maxprof ++ ; */
-  /*   if ( npris > 25 ) maxprof ++ ; */
-  /*   if ( npris > 30 ) maxprof ++ ; */
-  /*   if ( npris > 35 ) maxprof ++ ; */
-  /*   if ( npris > 40 ) maxprof ++ ; */
 
   value = gcompris_alphabeta( TRUE, 
 			      t, 
