@@ -1,5 +1,12 @@
 2006-02-09  Yves Combe  <yves@ycombe.net>
 
+	fix bug, change font size following level for memory operations activities.
+
+	* src/boards/memory.c: (get_random_token), (start_board),
+	(create_item), (compare_card):
+
+2006-02-09  Yves Combe  <yves@ycombe.net>
+
 	fix animation was launched after winning.
 	add memory based mathematicals operations boards.
 

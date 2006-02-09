@@ -1,6 +1,6 @@
 /* gcompris - memory.c
  *
- * Time-stamp: <2006/02/08 23:25:18 yves>
+ * Time-stamp: <2006/02/09 00:59:11 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  * 
@@ -33,6 +33,20 @@
 
 //#define TEXT_FONT gcompris_skin_font_board_huge_bold
 #define TEXT_FONT "Serif bold 28"
+
+static gchar *op_fonts[10] =
+  {
+    "",
+    "Serif bold 28",
+    "Serif bold 24",
+    "Serif bold 20",
+    "Serif bold 20",
+    "Serif bold 18",
+    "Serif bold 14",
+    "Serif bold 14",
+    "Serif bold 14",
+    "Serif bold 12",
+  };
 
 static GcomprisBoard *gcomprisBoard = NULL;
 
@@ -410,7 +424,7 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
 {
   gchar *result = NULL;
   gchar *second = NULL;
-
+  gboolean skip;
 
   gint max_token;
   gint j, i, k;
@@ -513,7 +527,9 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
   j=-1;
 
   do {
+    skip = FALSE;
     g_free(result);
+    result = NULL;
     g_free(second);
     j++;
 
@@ -578,11 +594,12 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
       }
     case TYPE_DIV:
       {
-	int i, j;
-	i = k %  div_levelDescription[gcomprisBoard->level][0];
-	j = k /  div_levelDescription[gcomprisBoard->level][0];
-	result = g_strdup_printf("%d÷%d",i*j,i);
-	second = g_strdup_printf("%d",j);
+	int i1, i2;
+	i1 = k %  div_levelDescription[gcomprisBoard->level][0];
+	if (i1==0) skip=TRUE;
+	i2 = k /  div_levelDescription[gcomprisBoard->level][0];
+	result = g_strdup_printf("%d÷%d",i1*i2,i1);
+	second = g_strdup_printf("%d",i2);
 	break;
       }
     default:
@@ -591,8 +608,8 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
       break;
     }
 
-  } while ((j < max_token ) 
-	   && (passed_token && result && g_list_find_custom(passed_token, result, (GCompareFunc)strcmp)));
+  } while (skip || ((j < max_token ) 
+	   && (passed_token && result && g_list_find_custom(passed_token, result, (GCompareFunc)strcmp))));
 
   g_assert (j < max_token);
 	 
@@ -755,7 +772,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 				      currentUiMode=UIMODE_NORMAL;
 				      currentBoardMode=BOARDMODE_MULT_DIV;
 				    } else {
-				      if(g_strcasecmp(gcomprisBoard->mode, "add_minus_mult_div_tux")==0){
+				      if(g_strcasecmp(gcomprisBoard->mode, "add_minus_mult_div")==0){
 					currentMode=MODE_NORMAL;
 					currentUiMode=UIMODE_NORMAL;
 					currentBoardMode=BOARDMODE_ADD_MINUS_MULT_DIV;
@@ -1304,12 +1321,17 @@ static void create_item(GnomeCanvasGroup *parent)
 	      gdk_pixbuf_unref(pixmap);
 	      
 	    } else {
+	      gchar *font;
+	      if (memoryItem->type & (TYPE_ADD|TYPE_MINUS|TYPE_MULT|TYPE_DIV))
+		font = op_fonts[gcomprisBoard->level];
+	      else
+		font = TEXT_FONT;
 	      /* It's a letter */
 	      memoryItem->frontcardItem =	 \
 		gnome_canvas_item_new (GNOME_CANVAS_GROUP(memoryItem->rootItem),
 				       gnome_canvas_text_get_type (),
 				       "text", memoryItem->data,
-				       "font", TEXT_FONT,
+				       "font", font,
 				       "x", (double) (width*0.8)/2,
 				       "y", (double) (height*0.8)/2,
 				       "anchor", GTK_ANCHOR_CENTER,
@@ -1603,10 +1625,10 @@ compare_card (gconstpointer a,
 
   if (card1->type & (TYPE_ADD|TYPE_MINUS|TYPE_MULT|TYPE_DIV)){
     if ((!card1->second_value) && ( card2->second_value)){
-      return ((card1->data == card2->second_value)? 0 : -1);
+      return strcmp(card1->data,card2->second_value);
     }
     if ((!card2->second_value) && ( card1->second_value)){
-      return ((card2->data == card1->second_value)? 0 : -1);
+      return strcmp(card2->data,card1->second_value);
     }
     return -1;
   }
