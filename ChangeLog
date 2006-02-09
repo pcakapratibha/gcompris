@@ -1,5 +1,12 @@
 2006-02-09  Yves Combe  <yves@ycombe.net>
 
+	fix bug in memory_div and emory_mult_div. 
+	fix font size and font color.
+
+	* src/boards/memory.c: (get_image), (create_item):
+
+2006-02-09  Yves Combe  <yves@ycombe.net>
+
 	fix bug, change font size following level for memory operations activities.
 
 	* src/boards/memory.c: (get_random_token), (start_board),

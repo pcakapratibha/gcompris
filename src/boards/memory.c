@@ -1,6 +1,6 @@
 /* gcompris - memory.c
  *
- * Time-stamp: <2006/02/09 00:59:11 yves>
+ * Time-stamp: <2006/02/09 07:58:04 yves>
  *
  * Copyright (C) 2000 Bruno Coudoin
  * 
@@ -41,11 +41,11 @@ static gchar *op_fonts[10] =
     "Serif bold 24",
     "Serif bold 20",
     "Serif bold 20",
-    "Serif bold 18",
-    "Serif bold 14",
-    "Serif bold 14",
-    "Serif bold 14",
-    "Serif bold 12",
+    "Serif bold 17",
+    "Serif bold 13",
+    "Serif bold 13",
+    "Serif bold 13",
+    "Serif bold 11",
   };
 
 static GcomprisBoard *gcomprisBoard = NULL;
@@ -765,7 +765,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 				  if(g_strcasecmp(gcomprisBoard->mode, "mult_div")==0){
 				    currentMode=MODE_NORMAL;
 				    currentUiMode=UIMODE_NORMAL;
-				    currentBoardMode=BOARDMODE_MULT;
+				    currentBoardMode=BOARDMODE_MULT_DIV;
 				  } else {
 				    if(g_strcasecmp(gcomprisBoard->mode, "mult_div_tux")==0){
 				      currentMode=MODE_TUX;
@@ -1104,7 +1104,7 @@ static void get_image(MemoryItem *memoryItem, guint x, guint y)
     break;
   case BOARDMODE_DIV:
     get_random_token ( TYPE_DIV, &memoryItem->type,  &memoryItem->data, &memoryItem->second_value);
-    g_assert (memoryItem->type == TYPE_ADD);
+    g_assert (memoryItem->type == TYPE_DIV);
     break;
   case BOARDMODE_ADD_MINUS:
     get_random_token ( TYPE_ADD | TYPE_MINUS, &memoryItem->type,  &memoryItem->data, &memoryItem->second_value);
@@ -1163,8 +1163,8 @@ static void create_item(GnomeCanvasGroup *parent)
   height = (base_y2-base_y1)/numberOfLine;
 
   /* Remove a little bit of space for the card shadow */
-  height2 = height * 0.9;
-  width2  = width  * 0.9;
+  height2 = height * 0.95;
+  width2  = width  * 0.95;
 
 
   if (currentUiMode == UIMODE_SOUND) {
@@ -1250,8 +1250,8 @@ static void create_item(GnomeCanvasGroup *parent)
 				   "pixbuf", pixmap, 
 				   "x", (double) 0,
 				   "y", (double) 0,
-				   "width", (double) width*0.9,
-				   "height", (double) height*0.9,
+				   "width", (double) width2,
+				   "height", (double) height2,
 				   "width_set", TRUE, 
 				   "height_set", TRUE,
 				   NULL);
@@ -1265,8 +1265,8 @@ static void create_item(GnomeCanvasGroup *parent)
 				     "pixbuf", pixmap, 
 				     "x", (double) 0,
 				     "y", (double) 0,
-				     "width", (double) width*0.9,
-				     "height", (double) height*0.9,
+				     "width", (double) width2,
+				     "height", (double) height2,
 				     "width_set", TRUE, 
 				     "height_set", TRUE,
 				     NULL);
@@ -1286,8 +1286,8 @@ static void create_item(GnomeCanvasGroup *parent)
 				     "pixbuf", pixmap, 
 				     "x", (double) 0,
 				     "y", (double) 0,
-				     "width", (double) width*0.9,
-				     "height", (double) height*0.9,
+				     "width", (double) width2,
+				     "height", (double) height2,
 				     "width_set", TRUE, 
 				     "height_set", TRUE,
 				     NULL);
@@ -1300,17 +1300,17 @@ static void create_item(GnomeCanvasGroup *parent)
 	      yratio=(height2*0.8)/(float)gdk_pixbuf_get_height(pixmap);
 	      xratio=(width2*0.8)/(float)gdk_pixbuf_get_width(pixmap);
 	      yratio=xratio=MIN(xratio, yratio);
-	      card_shadow_w = width*0.07;
-	      card_shadow_h = height*0.07;
+	      card_shadow_w = width*0.05;
+	      card_shadow_h = height*0.05;
 	      
 	      memoryItem->frontcardItem =	\
 		gnome_canvas_item_new (GNOME_CANVAS_GROUP(memoryItem->rootItem),
 				       gnome_canvas_pixbuf_get_type (),
 				       "pixbuf", pixmap, 
-				       "x", (double) ((width*0.9)-
+				       "x", (double) ((width2)-
 						      gdk_pixbuf_get_width(pixmap)*xratio*0.8)/2 -
 				       card_shadow_w,
-				       "y", (double) ((height*0.9)-
+				       "y", (double) ((height2)-
 						      gdk_pixbuf_get_height(pixmap)*yratio*0.8)/2 -
 				       card_shadow_h,
 				       "width", (double) gdk_pixbuf_get_width(pixmap)*xratio*0.8,
@@ -1332,10 +1332,10 @@ static void create_item(GnomeCanvasGroup *parent)
 				       gnome_canvas_text_get_type (),
 				       "text", memoryItem->data,
 				       "font", font,
-				       "x", (double) (width*0.8)/2,
-				       "y", (double) (height*0.8)/2,
+				       "x", (double) (width2*0.9)/2,
+				       "y", (double) (height2*0.9)/2,
 				       "anchor", GTK_ANCHOR_CENTER,
-				       "fill_color_rgba", 0x99CDFFFF,
+				       "fill_color_rgba", 0x559ADDFF,
 				       NULL);
 	      
 	    }
