@@ -1,5 +1,11 @@
 2006-02-09  Yves Combe  <yves@ycombe.net>
 
+	minor fix (hat double click and highlight focus).
+
+	* src/boards/magic_hat.c: (draw_hat), (hat_event):
+
+2006-02-09  Yves Combe  <yves@ycombe.net>
+
 	new versions of magic hat by Marc Brun: addition and substraction.
 
 	* boards/Makefile.am:

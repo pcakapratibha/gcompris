@@ -76,6 +76,7 @@ static gboolean board_paused = TRUE;
 static GnomeCanvasGroup *boardRootItem = NULL;
 static gint timer_id = 0;
 static gint board_mode = DEFAULT_MODE;
+static gint hat_event_id;	// value returned by gtk_signal_connect. Used by gtk_signal_disconnect
 
 static GnomeCanvasItem	*hat;
 static frame frame1;
@@ -503,9 +504,10 @@ static void draw_hat(int type) {
 		"height_set", TRUE,
 		"anchor", GTK_ANCHOR_NW,
 		NULL);
+
   if (type == STARS) {
-    gtk_signal_connect(GTK_OBJECT(hat), "event", (GtkSignalFunc) hat_event, NULL);
-    gtk_signal_connect(GTK_OBJECT(hat), "event", (GtkSignalFunc) gcompris_item_event_focus, NULL);
+	 hat_event_id = gtk_signal_connect(GTK_OBJECT(hat), "event", (GtkSignalFunc) hat_event, NULL);
+	 gtk_signal_connect(GTK_OBJECT(hat), "event", (GtkSignalFunc) gcompris_item_event_focus, NULL);
   }
 }
 
@@ -633,6 +635,9 @@ static gint hat_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
 		return FALSE;
 
 	if ((event->type == GDK_BUTTON_PRESS) && (event->button.button == 1)) {
+
+		// disconnect hat and hat_event, so that hat can not be clicked any more
+		gtk_signal_disconnect(GTK_OBJECT(hat), hat_event_id);
 
 		// 'open' the hat
 		item_rotate_with_center(hat, -20.0, 0, MH_HAT_HEIGHT);
