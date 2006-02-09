@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GCompris>
   <Board 
-	 name="magic_hat"
+	 name="magic_hat_minus"
 	 type="magic_hat"
 	 section="/experimental"
-	 icon="boardicons/magic_hat.png" 
+	 icon="boardicons/magic_hat_minus.png" 
 	 difficulty="2"
-	 mode="normal"
+	 mode="minus"
 	 author="Marc BRUN"
 	 boarddir="">
 	 <_title>The magician hat</_title>

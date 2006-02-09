@@ -18,15 +18,16 @@
  */
 
 #include "gcompris/gcompris.h"
+#include <string.h>
 
-#define MH_FRAME_TOTAL_X 420	// Coordonates for the 'magician sentence' frame
-#define MH_FRAME_TOTAL_Y 60
-#define MH_FRAME_MINUS_X 420	// Coordonates for the 'out of the hat items' frame
-#define MH_FRAME_MINUS_Y 200 
+#define MH_FRAME1_X 420		// Coordonates for the first frame (first operand of the operation)
+#define MH_FRAME1_Y 60
+#define MH_FRAME2_X 420		// Coordonates for the second frame (second operand of the operation)
+#define MH_FRAME2_Y 200 
 #define MH_FRAME_PLAYER_X 420	// Coordonates for the 'player' frame
 #define MH_FRAME_PLAYER_Y 380
 
-#define MH_HAT_X	190
+#define MH_HAT_X	190	// Coordonates for the hat	
 #define MH_HAT_Y	90
 #define MH_HAT_HEIGHT	250
 #define MH_HAT_WIDTH	130
@@ -43,23 +44,20 @@
 #define ITEM_SIZE 30		// Items are squares (or square-included)
 #define SPACE_BETWEEN_ITEMS 5
 
-#define ITEM1	0
-#define ITEM2	1
-#define ITEM3	2
-
-#define	LIST_TOTAL	0
-#define LIST_MINUS	1
-#define LIST_PLAYER	2
+#define MODE_MINUS	0
+#define MODE_PLUS	1
+#define DEFAULT_MODE	MODE_MINUS
 
 // Types
 
 // This structure describes a frame (there are 3 of them on the board) 
 typedef struct {
-	double		coord_x;
-	double		coord_y;
-	int		nb_stars[MAX_LIST];
-	int		array_star_type[MAX_LIST][MAX_ITEM];
-	GnomeCanvasItem *array_item[MAX_LIST][MAX_ITEM];
+  int		id;		
+  double	coord_x;
+  double	coord_y;
+  int		nb_stars[MAX_LIST];
+  int		array_star_type[MAX_LIST][MAX_ITEM];
+  GnomeCanvasItem *array_item[MAX_LIST][MAX_ITEM];
 } frame;
 
 // This structure decribes a movement
@@ -69,6 +67,7 @@ typedef struct {
   double dx;
   double dy;
   int nb;               // how much of x/y movement (to give a smooth effect) ?
+  int frame;		// number of the concerned frame (1 or 2)
 } move_object;
 
 // Global variables
@@ -76,10 +75,11 @@ static GcomprisBoard *gcomprisBoard = NULL;
 static gboolean board_paused = TRUE;
 static GnomeCanvasGroup *boardRootItem = NULL;
 static gint timer_id = 0;
+static gint board_mode = DEFAULT_MODE;
 
 static GnomeCanvasItem	*hat;
-static frame frame_total;
-static frame frame_minus;
+static frame frame1;
+static frame frame2;
 static frame frame_player;
 
 // gcompris functions
@@ -105,14 +105,16 @@ static gint hat_event(GnomeCanvasItem *, GdkEvent *, gpointer);
 static gint item_event(GnomeCanvasItem *, GdkEvent *, gpointer);
 static int  nb_list();
 static gint smooth_move(move_object *);
+static gint move_stars(frame *);
+static gint close_hat();
 
 /* Description of this plugin */
 static BoardPlugin menu_bp =
   {
     NULL,
     NULL,
-    "Duplicate the top right model.",
-    "Select item in the bottom left frame and move them with the magic_hat's arrows.",
+    "Give the result of an operation.",
+    "Click on the bottom left stars to give the result of the operation.",
     "Marc BRUN",
     NULL,
     NULL,
@@ -167,8 +169,15 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 	gcomprisBoard->number_of_sublevel = 1;	// Go to next level after this number of 'play'
 	gcompris_bar_set(GCOMPRIS_BAR_LEVEL|GCOMPRIS_BAR_OK);
 
+	if (strcmp(gcomprisBoard->mode, "minus") == 0)
+		board_mode = MODE_MINUS;
+	else if (strcmp(gcomprisBoard->mode, "plus") == 0)
+		board_mode = MODE_PLUS;
+	else
+		board_mode = DEFAULT_MODE;
+
 	gcompris_set_background(gnome_canvas_root(gcomprisBoard->canvas), gcompris_image_to_skin("gcompris-bg.jpg"));
-	
+
 	magic_hat_next_level();
 
 	gamewon = FALSE;
@@ -197,9 +206,16 @@ static void process_ok() {
   int i;
   int ok = TRUE;
 
-  for (i = 0 ; i < nb_list() ; i++) {
-	if (frame_total.nb_stars[i] != (frame_minus.nb_stars[i] + frame_player.nb_stars[i]))
-		ok = FALSE;
+  if (board_mode == MODE_MINUS) {
+	for (i = 0 ; i < nb_list() ; i++) {
+		if (frame1.nb_stars[i] != (frame2.nb_stars[i] + frame_player.nb_stars[i]))
+			ok = FALSE;
+	}
+  } else {
+	for (i = 0 ; i < nb_list() ; i++) {
+		if (frame_player.nb_stars[i] != (frame1.nb_stars[i] + frame2.nb_stars[i]))
+			ok = FALSE;
+	}
   }
 
   if (ok) {
@@ -271,6 +287,7 @@ static GnomeCanvasItem *magic_hat_create_item()
 {
   int i, j;
   GdkPixbuf *pixmap;
+  int step;
 
   boardRootItem = GNOME_CANVAS_GROUP(gnome_canvas_item_new (gnome_canvas_root(gcomprisBoard->canvas),
 				     gnome_canvas_group_get_type (),
@@ -278,8 +295,11 @@ static GnomeCanvasItem *magic_hat_create_item()
 				     "y", (double) 0,
 				     NULL));
 
+  if (board_mode == MODE_MINUS)
+	pixmap = gcompris_load_pixmap("magic_hat/magic_hat_minus_bg.png");
+  else
+	pixmap = gcompris_load_pixmap("magic_hat/magic_hat_plus_bg.png");
 
-  pixmap = gcompris_load_pixmap("magic_hat/magic_hat-bg.png");
   gnome_canvas_item_new (boardRootItem,
 			 gnome_canvas_pixbuf_get_type(),
 			 "pixbuf", pixmap,
@@ -289,53 +309,85 @@ static GnomeCanvasItem *magic_hat_create_item()
 			 NULL);
   gdk_pixbuf_unref(pixmap);
 
-  // Initialisation for frame_total
-  frame_total.coord_x = MH_FRAME_TOTAL_X;
-  frame_total.coord_y = MH_FRAME_TOTAL_Y;
+  // Initialisation for frame1
+  frame1.id = 1;
+  frame1.coord_x = MH_FRAME1_X;
+  frame1.coord_y = MH_FRAME1_Y;
 
-  // Initialisation for frame_total
-  frame_minus.coord_x = MH_FRAME_MINUS_X;
-  frame_minus.coord_y = MH_FRAME_MINUS_Y;
+  // Initialisation for frame1
+  frame2.id = 2;
+  frame2.coord_x = MH_FRAME2_X;
+  frame2.coord_y = MH_FRAME2_Y;
 
-  // Initialisation for frame_total
+  // Initialisation for frame1
+  frame_player.id = 3;
   frame_player.coord_x = MH_FRAME_PLAYER_X;
   frame_player.coord_y = MH_FRAME_PLAYER_Y;
 
   // The three frames of this activity : one for the sentence of the magician (top left), one for
   // the items out of the hat (top right), one for the answer of the payer (bottom right)
-  draw_frame(&frame_total);
-  draw_frame(&frame_minus);
+  draw_frame(&frame1);
+  draw_frame(&frame2);
   draw_frame(&frame_player);
 
-  // Description of the 9 levels
-  // Level 1 : one list (yellow stars), from 2 to 4 stars
-  // Level 2 : one list (yellow stars), from 2 to 7 stars
-  // Level 3 : one list (yellow stars), from 2 to 10 stars
-  // Level 4 : two lists (yellow and green stars), from 2 to 4 stars
-  // Level 5 : two lists (yellow and green stars), from 2 to 7 stars
-  // Level 6 : two lists (yellow and green stars), from 2 to 10 stars
-  // Level 7 : three lists (yellow, green and blue stars), from 2 to 4 stars
-  // Level 8 : three lists (yellow, green and blue stars), from 2 to 7 stars
-  // Level 9 : three lists (yellow, green and blue stars), from 2 to 10 stars
+  // Description of the 9 levels for substraction
+  // Level 1 : one list (yellow stars), from 2 to 4 stars in frame 1
+  // Level 2 : one list (yellow stars), from 2 to 7 stars in frame 1
+  // Level 3 : one list (yellow stars), from 2 to 10 stars in frame 1
+  // Level 4 : two lists (yellow and green stars), from 2 to 4 stars in frame 1
+  // Level 5 : two lists (yellow and green stars), from 2 to 7 stars in frame 1
+  // Level 6 : two lists (yellow and green stars), from 2 to 10 stars in frame 1
+  // Level 7 : three lists (yellow, green and blue stars), from 2 to 4 stars in frame 1
+  // Level 8 : three lists (yellow, green and blue stars), from 2 to 7 stars in frame 1
+  // Level 9 : three lists (yellow, green and blue stars), from 2 to 10 stars in frame 1
+  //
+  // Description of the 9 levels for addition
+  // Level 1 : one list (yellow stars), from 2 to 4 for the total
+  // Level 2 : one list (yellow stars), from 2 to 7 for the total
+  // Level 3 : one list (yellow stars), from 2 to 10 for the total
+  // Level 4 : two lists (yellow and green stars), from 2 to 4 for the total
+  // Level 5 : two lists (yellow and green stars), from 2 to 7 for the total
+  // Level 6 : two lists (yellow and green stars), from 2 to 10 for the total
+  // Level 7 : three lists (yellow, green and blue stars), from 2 to 4 for the total
+  // Level 8 : three lists (yellow, green and blue stars), from 2 to 7 for the total
+  // Level 9 : three lists (yellow, green and blue stars), from 2 to 10 for the total
+  
+  step = 3;
+
   for (i = 0 ; i < nb_list() ; i++) {
 
-	frame_total.nb_stars[i] = RAND(2, (1 + (3 * nb_list()))); 	// Minimum 2 to avoid '0' value (which is not easy to understand for kids)
-	for (j = 0 ; j < frame_total.nb_stars[i] ; j++) frame_total.array_star_type[i][j] = i;
-	for ( ; j < MAX_ITEM ; j++) frame_total.array_star_type[i][j] = -1;
+	// Frame 1
+	if (board_mode == MODE_MINUS)
+		frame1.nb_stars[i] = RAND(2, (1 + (step * nb_list()))); // Minimum 2 to avoid '0' value (which is not easy to understand for kids)
+	else
+		frame1.nb_stars[i] = RAND(1, (step * nb_list()));
 
-	frame_minus.nb_stars[i] = RAND(1, (frame_total.nb_stars[i]) - 1);	// Minimum 1 to avoid '0'
-	for (j = 0 ; j < frame_minus.nb_stars[i] ; j++) frame_minus.array_star_type[i][j] = i;
-	for ( ; j < MAX_ITEM ; j++) frame_minus.array_star_type[i][j] = -1;
-	for (j = 0 ; j < MAX_ITEM ; j++) frame_minus.array_item[i][j] = gnome_canvas_item_new (boardRootItem, gnome_canvas_pixbuf_get_type(), NULL);
+	for (j = 0 ; j < frame1.nb_stars[i] ; j++) frame1.array_star_type[i][j] = i;
+	for ( ; j < MAX_ITEM ; j++) frame1.array_star_type[i][j] = -1;
+	for (j = 0 ; j < MAX_ITEM ; j++) frame1.array_item[i][j] = gnome_canvas_item_new (boardRootItem, gnome_canvas_pixbuf_get_type(), NULL);
 
+	// Frame 2
+	if (board_mode == MODE_MINUS)
+		frame2.nb_stars[i] = RAND(1, (frame1.nb_stars[i]) - 1);	// Minimum 1 to avoid '0'
+	else
+		frame2.nb_stars[i] = RAND(1, ((step * nb_list()) - frame1.nb_stars[i] + 1));
+
+	for (j = 0 ; j < frame2.nb_stars[i] ; j++) frame2.array_star_type[i][j] = i;
+	for ( ; j < MAX_ITEM ; j++) frame2.array_star_type[i][j] = -1;
+	for (j = 0 ; j < MAX_ITEM ; j++) frame2.array_item[i][j] = gnome_canvas_item_new (boardRootItem, gnome_canvas_pixbuf_get_type(), NULL);
+
+	// Player frame
 	frame_player.nb_stars[i] = 0;
 	for (j = 0 ; j < MAX_ITEM ; j++) frame_player.array_star_type[i][j] = -1;
   }
 
-  place_item(&frame_total, NORMAL);	// design the 'total' stars, with all the items
-  place_item(&frame_minus, EMPTY);	// design empty 'minus' stars (star-clear), will be filled when player click on hat
-  place_item(&frame_minus, UNDERHAT);	// design 'out' stars, all the items are hidden under the hat
-  place_item(&frame_player, EMPTY);	// design the player frame, currently empty but after click on hat with dynamic stars (colorised when clicked)
+  if (board_mode == MODE_MINUS) {
+	place_item(&frame1, NORMAL);	// design the 'total' stars, with all the items
+	place_item(&frame2, UNDERHAT);	// design 'out' stars, all the items are hidden under the hat
+  } else {
+	place_item(&frame1, NORMAL);	// design the first frame stars, with all the items
+	place_item(&frame2, NORMAL);	// design the second frame stars, with all the items
+  }
 
   // The magic hat !! And its table
   // The hat is designed after the 'minus' items so that it hides them
@@ -370,7 +422,7 @@ static void game_won() {
   magic_hat_next_level();
 }
 
-// Draw a frame (small squares)
+// Draw a frame with empty small squares
 static void draw_frame(frame *my_frame) {
 
   GnomeCanvasItem *item_frame = NULL;
@@ -405,6 +457,8 @@ static void draw_frame(frame *my_frame) {
 	}
   }
 
+  place_item(my_frame, EMPTY);
+
 }
 
 // Draw the table (line)
@@ -428,6 +482,7 @@ static void draw_table() {
 		NULL);
 }
 
+// Draw the hat
 static void draw_hat(int type) {
 
   GdkPixbuf *image;
@@ -448,22 +503,31 @@ static void draw_hat(int type) {
 		"height_set", TRUE,
 		"anchor", GTK_ANCHOR_NW,
 		NULL);
-
-  if (type == STARS) gtk_signal_connect(GTK_OBJECT(hat), "event", (GtkSignalFunc) hat_event, NULL);
+  if (type == STARS) {
+    gtk_signal_connect(GTK_OBJECT(hat), "event", (GtkSignalFunc) hat_event, NULL);
+    gtk_signal_connect(GTK_OBJECT(hat), "event", (GtkSignalFunc) gcompris_item_event_focus, NULL);
+  }
 }
 
 // Place items on the board
-// For TOTAL and MINUS lists, items are not modifiable
+// 	frame * my_frame : which frame to create the items on ?
+// 	int type         : four possible values
+// 				EMPTY => only grey stars, which symbolise an empty item
+// 				NORMAL => a coloured star
+// 				UNDERHAT => objects are not visible, they are localised under the hat
+// 				DYNAMIC => the items are made clicable (for the player frame)
 static void place_item(frame * my_frame, int type) {
 
   GnomeCanvasItem *item = NULL;
   int i, j;
-  GdkPixbuf *pixmap[MAX_LIST], *image;
+  int k, nb_item;
+  GdkPixbuf *image;
   double item_x, item_y;
   double x, y;
-  char *image_name[MAX_LIST] = { "magic_hat/star1.png",
-				 "magic_hat/star2.png",
-				 "magic_hat/star3.png" };
+
+  char *image_name[MAX_LIST] = {"magic_hat/star1.png",
+  				"magic_hat/star2.png",
+				"magic_hat/star3.png"};
 
   x = my_frame->coord_x;
   y = my_frame->coord_y;
@@ -485,31 +549,39 @@ static void place_item(frame * my_frame, int type) {
 			item_y = y + (i * (ITEM_SIZE + SPACE_BETWEEN_ITEMS));
 		}
 
-		item = gnome_canvas_item_new (boardRootItem,
-			gnome_canvas_pixbuf_get_type(),
-			"pixbuf", image,
-			"x", item_x,
-			"y", item_y,
-			"width", (double) (ITEM_SIZE - 2),
-			"height", (double) (ITEM_SIZE - 2),
-			"width_set", TRUE,
-			"height_set", TRUE,
-			"anchor", GTK_ANCHOR_NW,
-			NULL);
+		// If NORMAL, we have to create two items : the first one stays on the frame, the
+		// other one moves to the hat
+		if (type == NORMAL)
+			nb_item = 2;
+		else
+			nb_item = 1;
+
+		for (k = 0 ; k < nb_item ; k++) {
+			item = gnome_canvas_item_new (boardRootItem,
+				gnome_canvas_pixbuf_get_type(),
+				"pixbuf", image,
+				"x", item_x,
+				"y", item_y,
+				"width", (double) (ITEM_SIZE - 2),
+				"height", (double) (ITEM_SIZE - 2),
+				"width_set", TRUE,
+				"height_set", TRUE,
+				"anchor", GTK_ANCHOR_NW,
+				NULL);
+		}
+
 		gdk_pixbuf_unref(image);
-	
+			
 		if (type == DYNAMIC)
 			gtk_signal_connect(GTK_OBJECT(item), "event", (GtkSignalFunc) item_event, GINT_TO_POINTER(MAX_ITEM * i + j));
 
-		if (type == UNDERHAT)
-			frame_minus.array_item[i][j] = item;
-
+		if (type == UNDERHAT || type == NORMAL)
+			my_frame->array_item[i][j] = item;
 	}
   }
-
 }
 
-// When clicked, an item changes his appearance (active or inactive) and the counter is re-evaluated
+// When clicked, an star from the player frame changes its appearance (grey or coloured) and the counter is re-evaluated
 static gint item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
 
 	int index = GPOINTER_TO_INT(data);
@@ -538,9 +610,9 @@ static gint item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
 			frame_player.nb_stars[index / MAX_ITEM]++;
 			frame_player.array_star_type[index / MAX_ITEM][index % MAX_ITEM] = index / MAX_ITEM;
 
-			pixmap[ITEM1] = gcompris_load_pixmap("magic_hat/star1.png");
-		        pixmap[ITEM2] = gcompris_load_pixmap("magic_hat/star2.png");
-		        pixmap[ITEM3] = gcompris_load_pixmap("magic_hat/star3.png");
+			pixmap[0] = gcompris_load_pixmap("magic_hat/star1.png");
+		        pixmap[1] = gcompris_load_pixmap("magic_hat/star2.png");
+		        pixmap[2] = gcompris_load_pixmap("magic_hat/star3.png");
 
 			gnome_canvas_item_set(item, "pixbuf", pixmap[index / MAX_ITEM], NULL);
 		}
@@ -550,12 +622,9 @@ static gint item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
 	return FALSE;
 }
 
-// When clicked, the hat rotates and a few items can go out of it
+// When clicked, the hat rotates and a few items can go out of or into it
+// Then the hat go back in its previous position, and the game can start
 static gint hat_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
-
-	double x1, x2, y1, y2;
-	int i, j;
-	move_object *my_move = NULL;
 
 	if (board_paused)
 		return FALSE;
@@ -564,47 +633,20 @@ static gint hat_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
 		return FALSE;
 
 	if ((event->type == GDK_BUTTON_PRESS) && (event->button.button == 1)) {
-		gnome_canvas_item_get_bounds(item, &x1, &y1, &x2, &y2);
 
-		// If first click on hat
-		if (x1 == MH_HAT_X) {
+		// 'open' the hat
+		item_rotate_with_center(hat, -20.0, 0, MH_HAT_HEIGHT);
 
-			// 'open' the hat
-			item_rotate_with_center(hat, -20.0, 0, MH_HAT_HEIGHT);
+		// Make the items move from/out the hat, depending on the mode
+		// Wait a few seconds between the two frames
+		move_stars(&frame1);
+		timer_id = g_timeout_add(1200, (GtkFunction) move_stars, &frame2);
 
-			// Make the items go out of the hat, 
-			for (i = 0 ; i < nb_list() ; i++) {
-				for (j = 0 ; j < frame_minus.nb_stars[i] ; j++) {
-					if ((my_move = g_malloc(sizeof(move_object))) == NULL) {	// Freed in function smooth_move
-						g_error ("Malloc error in hat_event");
-					}
-					my_move->i = i;
-					my_move->j = j;
-					my_move->nb = 20;
-					my_move->dx = (frame_minus.coord_x + (my_move->j * (ITEM_SIZE + SPACE_BETWEEN_ITEMS)) -
-				      			(MH_HAT_X + ((MH_HAT_WIDTH - ITEM_SIZE) / 2))) / my_move->nb;
-					my_move->dy = (frame_minus.coord_y + (my_move->i * (ITEM_SIZE + SPACE_BETWEEN_ITEMS)) -
-							(MH_HAT_Y + MH_HAT_HEIGHT -  2 * ITEM_SIZE)) / my_move->nb;
-
-					timer_id = g_timeout_add(50, (GtkFunction) smooth_move, my_move);
-				}
-			}
-
-		// If second click on hat
-		} else {
-			// erase the hat with stars
-			gtk_object_destroy(GTK_OBJECT(hat));
-
-			// draw a hat with an interrogation point
-			draw_hat(POINT);
-
-			// draw an empty dynamic frame, each item is activable by left click
-  			place_item(&frame_player, DYNAMIC);
-		}
+		// Wait again a few seconds before closing the hat. Then the game is ready to start
+		timer_id = g_timeout_add(2600, (GtkFunction) close_hat, NULL);
 	}
 
 	return FALSE;
-
 }
 
 // Return nb_list to be displayed, depending of the game level :
@@ -617,6 +659,54 @@ static int nb_list() {
 
 }
 
+// Move all the stars of one frame to or from the hat
+static gint move_stars(frame *my_frame) {
+
+  int i, j;
+  move_object *my_move = NULL;
+  
+  for (i = 0 ; i < nb_list() ; i++) {
+	for (j = 0 ; j < my_frame->nb_stars[i] ; j++) {
+		if ((my_move = g_malloc(sizeof(move_object))) == NULL) {        // Freed in function smooth_move
+			g_error ("Malloc error in hat_event");
+		}
+
+		my_move->i = i;
+		my_move->j = j;
+		my_move->nb = 20;
+		my_move->dx = - ((my_frame->coord_x + (my_move->j * (ITEM_SIZE + SPACE_BETWEEN_ITEMS)) -
+				(MH_HAT_X + ((MH_HAT_WIDTH - ITEM_SIZE) / 2))) / my_move->nb);
+		my_move->dy = - ((my_frame->coord_y + (my_move->i * (ITEM_SIZE + SPACE_BETWEEN_ITEMS)) -
+				(MH_HAT_Y + MH_HAT_HEIGHT -  2 * ITEM_SIZE)) / my_move->nb);
+
+		if (board_mode == MODE_MINUS && my_frame->id == 2) {
+			my_move->dx = -my_move->dx;
+			my_move->dy = -my_move->dy;
+		}
+
+		my_move->frame = my_frame->id;
+		timer_id = g_timeout_add(50, (GtkFunction) smooth_move, my_move);
+	}
+  }
+  return FALSE;
+}
+
+// Close the hat, then the game can start
+static gint close_hat() {
+
+  // erase the hat with stars
+  gtk_object_destroy(GTK_OBJECT(hat));
+
+  // draw a hat with an interrogation point
+  draw_hat(POINT);
+
+  // draw an empty dynamic frame, each item is activable by left click
+  // before this, the player_frame is not clicable
+  place_item(&frame_player, DYNAMIC);
+
+  return FALSE;
+}
+
 // Move a star smoothly from under the hat to its final location, on the minus frame
 static gint smooth_move(move_object *my_move) {
 
@@ -625,7 +715,11 @@ static gint smooth_move(move_object *my_move) {
 	return FALSE;
   }
 
-  gnome_canvas_item_move(frame_minus.array_item[my_move->i][my_move->j], my_move->dx, my_move->dy); 
+  if (my_move->frame == 1)
+	gnome_canvas_item_move(frame1.array_item[my_move->i][my_move->j], my_move->dx, my_move->dy); 
+  else
+	gnome_canvas_item_move(frame2.array_item[my_move->i][my_move->j], my_move->dx, my_move->dy); 
+
   return TRUE;
 
 }

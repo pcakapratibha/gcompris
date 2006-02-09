@@ -1,5 +1,27 @@
 2006-02-09  Yves Combe  <yves@ycombe.net>
 
+	new versions of magic hat by Marc Brun: addition and substraction.
+
+	* boards/Makefile.am:
+	* boards/boardicons/magic_hat.png:
+	* boards/boardicons/magic_hat_minus.png:
+	* boards/boardicons/magic_hat_plus.png:
+	* boards/magic_hat.xml.in:
+	* boards/magic_hat/magic_hat_minus.png:
+	* boards/magic_hat/magic_hat_minus_bg.png:
+	* boards/magic_hat/magic_hat_plus.png:
+	* boards/magic_hat/magic_hat_plus_bg.png:
+	* boards/magic_hat/star.png:
+	* boards/magic_hat_minus.xml.in:
+	* boards/magic_hat_plus.xml.in:
+	* configure.in:
+	* src/boards/magic_hat.c: (start_board), (process_ok),
+	(magic_hat_create_item), (draw_frame), (draw_hat), (place_item),
+	(item_event), (hat_event), (move_stars), (close_hat),
+	(smooth_move):
+
+2006-02-09  Yves Combe  <yves@ycombe.net>
+
 	fix bug in memory_div and emory_mult_div. 
 	fix font size and font color.
 
