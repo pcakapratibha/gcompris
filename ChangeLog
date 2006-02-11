@@ -1,3 +1,10 @@
+2006-02-11  Yves Combe  <yves@ycombe.net>
+
+	test on size of db file, to create tables if it's 0
+	(correction of null-sized db due to USE_SQLITE bug).
+	
+	* src/gcompris/gcompris_db.c: (gcompris_db_init):
+
 2006-02-09  Yves Combe  <yves@ycombe.net>
 
 	minor fix (hat double click and highlight focus).
