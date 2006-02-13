@@ -1,3 +1,11 @@
+2006-02-13  Yves Combe  <yves@ycombe.net>
+
+	fix bug in gcompris_sound_controller signal definition. Apparently causes crash in dapper Ubuntu.
+
+	* po/Makefile.in.in:
+	* src/gcompris/soundutil.c: (default_sound_played_signal_handler),
+	(gcompris_sound_class_init):
+
 2006-02-11  Yves Combe  <yves@ycombe.net>
 
 	test on size of db file, to create tables if it's 0
