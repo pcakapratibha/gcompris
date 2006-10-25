@@ -18,7 +18,6 @@
  */
 
 #include "string.h"
-#include <unistd.h>		/* sleep */
 
 #ifdef __APPLE__
 #   include <sys/types.h>
@@ -173,11 +172,7 @@ scheduler_bgnd (gpointer user_data)
   const gchar *one_dirent;
 
   /* Sleep to let gcompris intialisation and intro music to complete */
-#if defined WIN32
-  sleep(25000);
-#else
-  sleep(25);
-#endif
+  g_usleep(25000000);
 
   /* Load the Music directory file names */
   music_dir = g_strconcat(properties->package_data_dir, "/music/background", NULL);

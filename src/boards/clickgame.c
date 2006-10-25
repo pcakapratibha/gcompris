@@ -455,7 +455,7 @@ static FishItem *clickgame_create_item(GnomeCanvasGroup *parent)
 
   fishitem = g_malloc(sizeof(FishItem));
   fishitem->currentItem   = 0;
-  fishitem->speed = (double)(rand()%(60))/10 - 3;
+  fishitem->speed = (double)(g_random_int()%(60))/10 - 3;
   fishitem->item_list = NULL;
 
   pixmap = (GdkPixbuf *)g_list_nth_data(imagelist, 0);
@@ -478,7 +478,7 @@ static FishItem *clickgame_create_item(GnomeCanvasGroup *parent)
     gnome_canvas_item_new (parent,
 			   gnome_canvas_group_get_type (),
 			   "x", x,
-			   "y", (double)(rand()%(gcomprisBoard->height-
+			   "y", (double)(g_random_int()%(gcomprisBoard->height-
 						 (guint)(gdk_pixbuf_get_height(pixmap)*
 							 imageZoom))),
 			   NULL);
@@ -709,7 +709,7 @@ static void load_random_pixmap()
   gchar *str = NULL;
   gboolean cont = TRUE;
 
-  i=rand()%(NUMBER_OF_IMAGES);
+  i=g_random_int()%(NUMBER_OF_IMAGES);
 
   /* First image */
   j=0;
