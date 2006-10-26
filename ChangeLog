@@ -1,3 +1,9 @@
+2006-10-26  Yves Combe  <yves@ycombe.net>
+
+	Make tuxpaint launcher works on Windows. Uses tuxpaint installation registry key.
+
+	* src/boards/python/tuxpaint.py:
+
 2006-10-25  Yves Combe  <yves@ycombe.net>
 
 	Reapply patch suppressed from HEAD branch, for cross compile with mingw.

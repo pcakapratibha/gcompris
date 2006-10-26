@@ -25,8 +25,10 @@ import gcompris.sound
 import gcompris.admin
 import gtk
 import os
+import gobject
 
 import pango
+import platform
 
 #import gobject
 from gettext import gettext as _
@@ -49,10 +51,23 @@ class Gcompris_tuxpaint:
       return init
 
   def start(self):
-#    line = os.sys.stdin.readline()
-#    while (len(line) >1):
-#      exec(line)
-#      line = os.sys.stdin.readline()
+    progname='tuxpaint'
+    tuxpaint_dir = None
+    flags = gobject.SPAWN_DO_NOT_REAP_CHILD | gobject.SPAWN_SEARCH_PATH 
+
+    if (platform.platform().split('-')[0] == 'Windows'):
+      progname = 'tuxpaint.exe'
+
+      try:
+         import _winreg
+
+         tuxpaint_key = _winreg.OpenKey( _winreg.HKEY_LOCAL_MACHINE, 
+                                         "Software\\TuxPaint" )
+         tuxpaint_dir, type = _winreg.QueryValueEx(tuxpaint_key, "Install_Dir")
+         flags = gobject.SPAWN_DO_NOT_REAP_CHILD
+
+      except:
+	   pass
 
     self.window = self.gcomprisBoard.canvas.get_toplevel()
 
@@ -73,7 +88,7 @@ class Gcompris_tuxpaint:
       y=0.0
       )
 
-    options = ['tuxpaint']
+    options = [progname]
 
     if (Prop.fullscreen and eval(self.config_dict['fullscreen'])):
       options.append('--fullscreen')
@@ -84,7 +99,6 @@ class Gcompris_tuxpaint:
     #  --1280x1024 | --1400x1050 | --1600x1200]
     if (Prop.screensize and eval(self.config_dict['size'])):
       if (Prop.screensize >=1):
-        print 'Prop.screensize', Prop.screensize
         options.append('--800x600')
       else:
         options.append('--640x480')
@@ -112,14 +126,16 @@ class Gcompris_tuxpaint:
     #self.window.set_keep_below(False)
 
     try:
-      # gobject.SPAWN_DO_NOT_REAP_CHILD|gobject.SPAWN_SEARCH_PATH = 2 | 4
-      pid,stdin, stdout, stderr = gcompris.spawn_async(
-        options, flags=2|4)
-    except:
-      gcompris.utils.dialog(_("Cannot find Tuxpaint.\nInstall it to use this activity !"),stop_board)
-      return
+       pid,stdin, stdout, stderr = gobject.spawn_async(
+           options, flags=flags,
+           working_directory=tuxpaint_dir)
 
-    gcompris.child_watch_add(pid, child_callback, self)
+
+    except:
+       gcompris.utils.dialog(_("Cannot find Tuxpaint.\nInstall it to use this activity !"),stop_board)
+       return
+
+    gobject.child_watch_add(pid, child_callback, data=self, priority=gobject.PRIORITY_HIGH)
 
     gcompris.bar_set(0)
     gcompris.bar_hide(1)
@@ -233,14 +249,6 @@ def child_callback(fd,  cond, data):
   #board.window.set_property("accept-focus", 1)
   #board.window.set_keep_above(False)
   gcompris.sound.reopen()
-
-  #a bug in tuxpaint 9.14: it does not suppress it lockfile
-  lockfile = os.getenv('HOME') + '/.tuxpaint/lockfile.dat'
-
-  try:
-    os.remove(lockfile)
-  except:
-    print lockfile, 'not removed.'
 
   global pid
   pid = None
