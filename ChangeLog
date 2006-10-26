@@ -1,3 +1,10 @@
+2006-10-27  Yves Combe  <yves@ycombe.net>
+
+	pass -DSTATIC_MODULE for native mingw compilation.
+	It should make windows version as before. Need test.
+
+	* src/gcompris/Makefile.mingw:
+
 2006-10-26  Yves Combe  <yves@ycombe.net>
 
 	fix compilation and problems on linux.
