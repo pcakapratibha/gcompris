@@ -5,7 +5,7 @@
 #  include <config.h>
 #endif
 
-#include "strings.h"
+#include <string.h>
 
 #include "gcompris/gcompris.h"
 #include <glib/gstdio.h>

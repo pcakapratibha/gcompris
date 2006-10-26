@@ -55,6 +55,7 @@ class Gcompris_tuxpaint:
     tuxpaint_dir = None
     flags = gobject.SPAWN_DO_NOT_REAP_CHILD | gobject.SPAWN_SEARCH_PATH 
 
+    print platform.platform(), platform.platform().split('-')[0]
     if (platform.platform().split('-')[0] == 'Windows'):
       progname = 'tuxpaint.exe'
 
@@ -126,10 +127,18 @@ class Gcompris_tuxpaint:
     #self.window.set_keep_below(False)
 
     try:
-       pid,stdin, stdout, stderr = gobject.spawn_async(
-           options, flags=flags,
-           working_directory=tuxpaint_dir)
+       print tuxpaint_dir, flags, options
+       # bug in working_directory=None ?
+       if (tuxpaint_dir):
+          pid, stdin, stdout, stderr = gobject.spawn_async(
+            argv=options, 
+            flags=flags,
+            working_directory=tuxpaint_dir)
 
+       else:
+          pid, stdin, stdout, stderr = gobject.spawn_async(
+            argv=options, 
+            flags=flags)
 
     except:
        gcompris.utils.dialog(_("Cannot find Tuxpaint.\nInstall it to use this activity !"),stop_board)

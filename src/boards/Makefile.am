@@ -27,10 +27,12 @@ if PLATFORM_WIN32
 shared = -shared
 no_undefined = -no-undefined
 gc_libs = $(GCOMPRIS_LIBS)
+dll_export = -DBOARD_DLL_EXPORT
 else
 shared =
 no_undefined =
-gc_libs
+gc_libs =
+dll_export =
 endif
 
 SUBDIRS= $(python_subdir)
@@ -90,7 +92,7 @@ INCLUDES = \
 	$(PYGTK_CFLAGS) \
 	$(sqlite_cflags) \
 	$(cairo_cflags) \
-	-DBOARD_DLL_EXPORT
+	$(dll_export)
 
 libdraw_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs)
 libdraw_la_LIBADD = $(top_builddir)/src/gcompris/libgcompris-1.la

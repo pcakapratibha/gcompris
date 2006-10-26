@@ -1,5 +1,14 @@
 2006-10-26  Yves Combe  <yves@ycombe.net>
 
+	fix compilation and problems on linux.
+
+	* po/Makefile.in.in:
+	* src/boards/Makefile.am:
+	* src/boards/gtans_support.c:
+	* src/boards/python/tuxpaint.py:
+
+2006-10-26  Yves Combe  <yves@ycombe.net>
+
 	Make tuxpaint launcher works on Windows. Uses tuxpaint installation registry key.
 
 	* src/boards/python/tuxpaint.py:
