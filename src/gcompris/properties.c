@@ -19,6 +19,7 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
+#define G_STDIO_NO_WRAP_ON_UNIX
 #include <glib/gstdio.h>
 #include <fcntl.h>
 #include <string.h>
@@ -99,11 +100,13 @@ gc_prop_config_file_get()
     return(config_file);
   dir = gc_prop_user_root_directory_get();
   /* Was never called, must calculate it */
+#ifdef WIN32
   if (! G_WIN32_IS_NT_BASED() ) {
     config_file = g_strconcat(dir, "/gcompris.cfg", NULL);
-  } else {
+  } else 
+#endif
     config_file = g_strconcat(dir, "/gcompris.conf", NULL);
-  }
+
   g_free(dir);
    return(config_file);
 }

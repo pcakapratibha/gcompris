@@ -642,7 +642,7 @@ void gc_menu_load()
       GTimeVal now;
 
       g_get_current_time (&now);
-      g_date_set_time_val (today, &now);-
+      g_date_set_time_val (today, &now);
 #else
       g_date_set_time (today, time (NULL));
 #endif

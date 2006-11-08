@@ -1,5 +1,12 @@
 2006-11-08  Yves Combe  <yves@ycombe.net>
 
+	fix bugs on linux compilation. use G_STDIO_NO_WRAP_ON_UNIX to make unlink work with glib < 2.12
+
+	* src/gcompris/menu.c: (gc_menu_load):
+	* src/gcompris/properties.c: (gc_prop_config_file_get):
+
+2006-11-08  Yves Combe  <yves@ycombe.net>
+
 	2.6/Win98 fix:
 	- tuxpaint launcher: fix bug related to pygtk/gtk 2.6 (for win98)
 	- suppress g_error if no boards in gc_board_pause.
