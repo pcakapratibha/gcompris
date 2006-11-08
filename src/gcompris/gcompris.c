@@ -1098,12 +1098,12 @@ static void load_properties ()
   g_free(prefix_dir);
 
 
-  /* Display the directory value we have */
+  /* Display the directory and database value we have */
   printf("package_data_dir         = %s\n", properties->package_data_dir);
   printf("package_locale_dir       = %s\n", properties->package_locale_dir);
   printf("package_plugin_dir       = %s\n", properties->package_plugin_dir);
   printf("package_python_plugin_dir= %s\n", properties->package_python_plugin_dir);
-
+  printf("database                 = %s\n", properties->database);
 }
 
 GcomprisProperties *gc_prop_get ()

@@ -1,3 +1,21 @@
+2006-11-08  Yves Combe  <yves@ycombe.net>
+
+	2.6/Win98 fix:
+	- tuxpaint launcher: fix bug related to pygtk/gtk 2.6 (for win98)
+	- suppress g_error if no boards in gc_board_pause.
+	- add error message with db name
+	- use G_WIN32_IS_NT_BASED, as g_get_home_dir return c:\ instead of NULL in 2.6/Win98
+	- reuse time instead of g_timeval for 2.6
+	
+	* configure.in:
+	* src/boards/python/tuxpaint.py:
+	* src/gcompris/board.c: (gc_board_pause):
+	* src/gcompris/gcompris.c: (load_properties):
+	* src/gcompris/gcompris_db.c: (gc_db_init):
+	* src/gcompris/menu.c: (gc_menu_load):
+	* src/gcompris/properties.c: (gc_prop_user_root_directory_get),
+	(gc_prop_config_file_get):
+
 2006-10-27  Yves Combe  <yves@ycombe.net>
 
 	pass -DSTATIC_MODULE for native mingw compilation.

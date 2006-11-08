@@ -386,7 +386,7 @@ gc_board_pause(int pause)
       if(gc_board_get_current_board_plugin()->pause_board)
 	gc_board_get_current_board_plugin()->pause_board(pause);
     }
-  else g_error ("No boards to pause ?");
+  else g_warning ("No boards to pause ?");
 }
 
 void

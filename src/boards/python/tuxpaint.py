@@ -34,7 +34,6 @@ import platform
 from gettext import gettext as _
 
 pid = None
-#board = None
 
 class Gcompris_tuxpaint:
   """TuxPaint Launcher"""
@@ -66,6 +65,8 @@ class Gcompris_tuxpaint:
                                          "Software\\TuxPaint" )
          tuxpaint_dir, type = _winreg.QueryValueEx(tuxpaint_key, "Install_Dir")
          flags = gobject.SPAWN_DO_NOT_REAP_CHILD
+         # escape mandatory in Win pygtk2.6
+         tuxpaint_dir = '"' + tuxpaint_dir + '"'
 
       except:
 	   pass
@@ -127,7 +128,6 @@ class Gcompris_tuxpaint:
     #self.window.set_keep_below(False)
 
     try:
-       print tuxpaint_dir, flags, options
        # bug in working_directory=None ?
        if (tuxpaint_dir):
           pid, stdin, stdout, stderr = gobject.spawn_async(
@@ -254,9 +254,12 @@ def child_callback(fd,  cond, data):
   if (gcompris.get_properties().fullscreen and
       not gcompris.get_properties().noxf86vm):
     gtk.gdk.pointer_grab(data.window.window, True, 0, data.window.window)
-  #global board
-  #board.window.set_property("accept-focus", 1)
-  #board.window.set_keep_above(False)
+
+    #bug in gtk2.6/window
+    if (gtk.gtk_version <= (2,6,10)):
+       data.window.unfullscreen()
+       data.window.fullscreen()
+
   gcompris.sound.reopen()
 
   global pid

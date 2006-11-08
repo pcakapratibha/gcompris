@@ -513,7 +513,7 @@ AC_MSG_RESULT([$native_win32])
 
 AM_CONDITIONAL(BUILD_MINGW32, test "$native_win32" = yes)
 if test "$native_win32" = yes; then
-   LIBS="$LIBS -luuid -lole32 -lwsock32 -mno-cygwin -mms-bitfields -mwindows"
+   LIBS="$LIBS -luuid -lole32 -lwsock32 -mno-cygwin -mms-bitfields -mwindows -mconsole"
    #CFLAGS="$CFLAGS -D__GW32__ -DWIN32 -I$CROSS_ROOT/include -I$CROSS_ROOT/include/glibc"
    #CFLAGS="$CFLAGS -DWIN32"
 fi
