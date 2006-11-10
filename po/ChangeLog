@@ -1,6 +1,7 @@
-2006-11-05  Bruno Coudoin <bruno.coudoin@free.fr>
+2006-11-10  Bruno Coudoin <bruno.coudoin@free.fr>
 
-	* mr.po: Updated Marathi by Sarvangin Vikas Sanstha, Pune, INDIA
+	* mr.po: Updated Marathi by removing fuzzy, per the author request
+	* pt_BR.po: Updated by Frederico Goncalves Guimaraes (taken from HEAD)
 
 2006-11-02  Alexander Shopov  <ash@contact.bg>
 
