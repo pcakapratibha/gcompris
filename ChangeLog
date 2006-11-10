@@ -1,3 +1,28 @@
+2006-11-11  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Backport from HEAD:
+	  Quiting the gnumch or searace activity crash GCompris
+	1 times on 10.
+
+	- Minor:
+	- new interrupt audio mode to have a more reactive experience
+	in audio activity. Audio memory and then melody activities
+	are now much more pleasant to play (Yves fix on a Markus request).
+
+
+	* boards/skins/gartoon/ofsetlogo.png:
+	* configure.in:
+	* src/boards/memory.c: (start_board), (end_board), (item_event):
+	* src/boards/py-mod-anim.c: (AnimCanvas_free):
+	* src/boards/py-mod-sound.c: (py_gc_sound_policy_set),
+	(py_gc_sound_policy_get), (python_gcompris_sound_module_init):
+	* src/boards/python/melody.py:
+	* src/gcompris/about.c: (gc_about_start):
+	* src/gcompris/gcompris.c: (gc_fullscreen_set):
+	* src/gcompris/soundutil.c: (gc_sound_policy_set), (free_string),
+	(gc_sound_play_ogg_list):
+	* src/gcompris/soundutil.h:
+
 	*** RELEASE 8.2 ***
 
 2006-11-05  Bruno coudoin  <bruno.coudoin@free.fr>
