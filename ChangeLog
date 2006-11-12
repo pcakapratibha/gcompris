@@ -1,8 +1,13 @@
+2006-11-12  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/erase.c: (erase_create_item): (backport) fixed out of bounds image
+
+
 2006-11-11  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Backport from HEAD:
 	  Quiting the gnumch or searace activity crash GCompris
-	1 times on 10.
+	  1 times on 10.
 
 	- Minor:
 	- new interrupt audio mode to have a more reactive experience
