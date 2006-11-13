@@ -22,7 +22,6 @@
 #include <glib/gstdio.h>
 #include <fcntl.h>
 #include <string.h>
-#include <unistd.h>
 
 #include "gcompris.h"
 
@@ -126,7 +125,8 @@ gc_prop_new ()
   GcomprisProperties *tmp;
   char          *config_file = gc_prop_config_file_get();
   GScanner      *scanner;
-  int		 filefd;
+  gchar		*content;
+  gsize		length;
   gchar         *full_rootdir;
   const gchar   *locale;
   gchar         *user_dir;
@@ -197,15 +197,16 @@ gc_prop_new ()
 
   g_warning("config_file %s", config_file);
 
-  filefd = open(config_file, O_RDONLY);
-
-  if(filefd > 0) {
+  if(g_file_get_contents(config_file,
+			 &content,
+			 &length,
+			 NULL)) {
 
     /* create a new scanner */
     scanner = g_scanner_new(NULL);
 
     /* set up the scanner to read from the file */
-    g_scanner_input_file(scanner, filefd);
+    g_scanner_input_text(scanner, content, length);
 
     /* while the next token is something else other than end of file */
     while(g_scanner_peek_next_token(scanner) != G_TOKEN_EOF) {
@@ -279,9 +280,7 @@ gc_prop_new ()
 
     /* destroy the scanner */
     g_scanner_destroy(scanner);
-
-    close(filefd);
-
+    g_free(content);
   }
 
   /*

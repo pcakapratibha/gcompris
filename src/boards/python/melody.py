@@ -119,13 +119,14 @@ class Gcompris_melody:
 
   def end(self):
     self.cleanup()
-    print("Gcompris_melody end.")
+    #print("Gcompris_melody end.")
     gcompris.sound.policy_set(self.saved_policy)
     gcompris.sound.resume()
 
 
   def ok(self):
-    print("Gcompris_melody ok.")
+    #print("Gcompris_melody ok.")
+    pass
 
 
   def cleanup(self):
@@ -240,12 +241,12 @@ class Gcompris_melody:
 
 
   def repeat(self):
-    print("Gcompris_melody repeat.")
+    #print("Gcompris_melody repeat.")
     # Important to use a timer here to keep self.timers up todate
     self.timers.append(gtk.timeout_add(50, self.repeat_it))
 
   def repeat_it(self):
-    print("Gcompris_melody repeat it.")
+    #print("Gcompris_melody repeat it.")
     if self.in_repeat:
       return
 
@@ -268,11 +269,12 @@ class Gcompris_melody:
 
 
   def config(self):
-    print("Gcompris_melody config.")
+    #print("Gcompris_melody config.")
+    pass
 
   #randomize the sequence and plays it one first time
   def populate(self, sound_struct):
-    print("Gcompris_melody populate.")
+    #print("Gcompris_melody populate.")
     self.solution = []
 
     for i in range(self.gcomprisBoard.level+2):
@@ -281,22 +283,18 @@ class Gcompris_melody:
     self.timers.append(gtk.timeout_add(1300, self.repeat_it))
 
   def key_press(self, keyval, commit_str, preedit_str):
-    print("got key %i" % keyval)
+    #print("got key %i" % keyval)
     # Play sounds with the keys
     if ((keyval == gtk.keysyms.KP_1) or (keyval == gtk.keysyms._1)):
-      print "son1"
       self.sound_play(self.melodylist[self.theme][1][0])
       return True
     if ((keyval == gtk.keysyms.KP_2) or (keyval == gtk.keysyms._2)):
-      print "son2"
       self.sound_play(self.melodylist[self.theme][1][1])
       return True
     if ((keyval == gtk.keysyms.KP_3) or (keyval == gtk.keysyms._3)):
-      print "son3"
       self.sound_play(self.melodylist[self.theme][1][2])
       return True
     if ((keyval == gtk.keysyms.KP_4) or (keyval == gtk.keysyms._4)):
-      print "son4"
       self.sound_play(self.melodylist[self.theme][1][3])
       return True
 
@@ -317,7 +315,7 @@ class Gcompris_melody:
 
 
   def set_level(self, level):
-    print("Gcompris_melody set level. %i" % level)
+    #print("Gcompris_melody set level. %i" % level)
     self.gcomprisBoard.level=level;
     self.gcomprisBoard.sublevel=1;
     self.cleanup()
@@ -371,7 +369,7 @@ class Gcompris_melody:
 	else:
 	  self.theme = 0
 
-	print("New melody theme : " + self.melodylist[self.theme][0]['theme'] + ".")
+	#print("New melody theme : " + self.melodylist[self.theme][0]['theme'] + ".")
     # Apply the changes
       	self.cleanup()
       	self.display_current_level()
@@ -381,6 +379,7 @@ class Gcompris_melody:
 
   def sound_played(self, file):
     #print "python sound played :", file
+    pass
 
   def intro_cb(self, file):
     #print "intro passed. go play"
