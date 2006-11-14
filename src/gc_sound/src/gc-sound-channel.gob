@@ -1,0 +1,191 @@
+%alltop{/* gcompris - gc-sound-channel.gob
+ *
+ * Copyright (C) 2006 Yves Combe
+ *
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program; if not, write to the Free Software
+ *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+%}
+
+requires 2.0.0
+
+%{
+#include <gc-sound-channel.h>
+#include <SDL.h>
+#include <SDL_thread.h>
+#include <SDL_mixer.h>
+#include <SDL_audio.h>
+#include <libintl.h>
+
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+
+#ifndef N_
+#define N_(String) gettext_noop (String)
+#endif
+
+#include "gc-sound-channel-private.h"
+
+%}
+
+%h{
+#include <gc-sound.h>
+%}
+
+
+%{
+static GHashTable *channels_table = NULL;
+%}
+class GC:Sound:Channel from G:Object {
+  private int channel
+  destroy {
+    g_hash_table_remove(channels_table, GINT_TO_POINTER(channel));
+
+    if (g_hash_table_size (channels_table) == 0) {
+      g_hash_table_destroy(channels_table);
+      channels_table = NULL;
+    }
+  };
+  property INT channel
+         (nick = _("Short nickname"),
+          blurb = _("Long description"),
+          minimum = 0, export)
+        get { g_value_set_int (VAL, self->_priv->channel); };
+
+  private gboolean initialised = {FALSE};
+
+  private Mix_Chunk *sample;
+  private GC:Sound:Item *playing_item = { NULL }; 
+
+  private int volume = { MIX_MAX_VOLUME };
+
+  property INT volume
+     ( nick= _("Channel volume"),
+       blurb= _("Volume max of the channel"),
+       export,
+       link);
+
+  private GC:Sound:Mixer *mixer = { NULL }
+  destroywith g_object_unref ;  
+
+  property OBJECT mixer
+     (nick = _("GCompris Sound Mixer"),
+      blurb = _("GCompris Sound Mixer where this sound channel is"),
+      object_type=GC:Sound:Mixer,
+      flags = CONSTRUCT_ONLY,
+      export)
+      set { self->_priv->mixer = GC_SOUND_MIXER(g_value_get_object 
+(VAL)); 
+              self->_priv->channel = self->_priv->mixer->channels++ ;
+              Mix_AllocateChannels(self->_priv->mixer->channels );
+
+               g_warning("Channel #%d initialised", self->_priv->channel);
+
+               g_hash_table_insert(channels_table, &(self->_priv->channel), self);
+
+               self->_priv->rootItem = GC_SOUND_ITEM(g_object_new(gc_sound_item_get_type(), "channel", self, NULL));
+
+               g_object_ref(self->_priv->rootItem);
+               
+      }
+      get { g_value_set_object (VAL, G_OBJECT(self->_priv->channel)); }
+       ;
+
+  private GC:Sound:Item *rootItem = { NULL }
+  destroywith g_object_unref;
+
+  property OBJECT rootItem 
+     (nick = _("GCompris Sound Item root"),
+      blurb = _("GCompris Sound Item root"),
+      object_type=GC:Sound:Item,
+      export, link)
+       ;
+
+  init (self)  {
+    g_warning("gc channel instance init"); 
+    if (!channels_table)
+      channels_table = g_hash_table_new (g_int_hash, g_int_equal);
+
+    Mix_ChannelFinished(self_channel_finished);
+  }
+
+  class_init (class) {
+    g_warning("gc channel class init"); 
+  }
+
+  public GC:Sound:Item *
+    new_item (self)
+    {
+      return GC_SOUND_ITEM(g_object_new(gc_sound_item_get_type(), "parent", self->_priv->rootItem, NULL));
+    }
+
+  private void channel_finished (int channel)
+    {
+      /* check we are on the right channel */
+      /* this a too simple callback */
+      /* get self */
+      GCSoundChannel *self;
+
+      self = GC_SOUND_CHANNEL(g_hash_table_lookup(channels_table, &channel));
+
+      if (!self) {
+           g_warning ("Cannot get GCSoundChannel from hash !!!!!");
+           return;
+      }
+      self_play_finished (self, self->_priv->playing_item);
+      self->_priv->playing_item = NULL;
+    }
+
+  public gboolean
+    real_play (self, GC:Sound:Item *item (check null type), int volume)
+    {
+      gchar * filename = gc_sound_item_get_filename(item);
+
+       if (filename == NULL)
+          return FALSE;
+
+         self->_priv->sample=Mix_LoadWAV_RW(SDL_RWFromFile(filename, "rb"), 1);
+         if (!self->_priv->sample) {
+            g_warning("Sample music %s cannot be load", filename); 
+            return FALSE;
+            }
+
+          if ((volume == -1) || (volume >  self->_priv->volume))
+            Mix_VolumeChunk(self->_priv->sample, self->_priv->volume);
+          else
+            Mix_VolumeChunk(self->_priv->sample, volume);
+
+          if(Mix_PlayChannel(self->_priv->channel, self->_priv->sample, 0)==-1) {
+            g_warning("Channel cannot play music %s", filename); 
+            return FALSE;
+            }
+
+          g_warning("Playing %s on channel %d", filename, self->_priv->channel); 
+
+          self->_priv->playing_item = item;
+          return TRUE;
+    }
+
+  signal first NONE (POINTER)
+     void play_finished (self, GC:Sound:Item *item (check null type))
+  {
+        g_warning ("Channel %d emitted signal play-finished %d", self->_priv->channel);
+        Mix_FreeChunk(self->_priv->sample);
+        self->_priv->sample = NULL;
+
+        gc_sound_item_play_finished(item);     
+  }
+     
+}

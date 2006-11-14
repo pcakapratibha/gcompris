@@ -1,0 +1,22 @@
+2006-11-14  Yves Combe <yves@ycombe.net>
+
+	initial import of gc_sound objects library. Works, without grouping.
+
+	* COPYING:
+	* INSTALL:
+	* Makefile.am:
+	* aclocal.m4:
+	* compile:
+	* config.guess:
+	* config.sub:
+	* configure.in:
+	* install-sh:
+	* ltmain.sh:
+	* missing:
+	* src/Makefile.am:
+	* src/gc-sound-channel.gob:
+	* src/gc-sound-item.gob:
+	* src/gc-sound-mixer.gob:
+	* src/gc-sound.h:
+	* src/test_gc_sound.c: (finish), (main):
+

@@ -1,0 +1,45 @@
+AC_INIT([GCompris Sound library], [2.0],
+        [Yves Combe <yves@ycombe.net>],
+        [gc_sound])
+AM_INIT_AUTOMAKE
+
+dnl Don't let libtool check for these
+CXX=no
+F77=no
+GCJ=no
+
+#AC_PROG_INTLTOOL
+AC_PROG_LIBTOOL
+
+AC_PROG_CC
+AC_PROG_INSTALL
+
+GOB2_CHECK([2.0.0])
+
+PKG_CHECK_MODULES(GC_SOUND,[
+	glib-2.0 >= 2.10.0
+	gobject-2.0 >= 2.8.0
+	])
+
+dnl Check for SDL
+SDL_VERSION=1.2.3
+
+cflags_previous=$CFLAGS
+libs_previous=$LIBS
+
+if test "x$SDL_CFLAGS" = "x" -o "x$SDL_LIBS" = "x" ; then
+  AM_PATH_SDL($SDL_VERSION,
+            :,
+	    AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
+  )
+else
+  AC_SUBST(SDL_CFLAGS)
+  AC_SUBST(SDL_LIBS)
+  echo "*** Not checking SDL. Using existing SDL_FLAGS and SDL_LIBS ***" 
+fi
+
+AC_CHECK_LIB(SDL_mixer, Mix_OpenAudio,, AC_MSG_ERROR([*** SDL_mixer not found. Visit http://www.libsdl.org and get it]))
+
+AC_OUTPUT([Makefile
+src/Makefile
+])
