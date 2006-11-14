@@ -1,3 +1,38 @@
+2006-11-14  Yves Combe  <yves@ycombe.net>
+
+	Play groups of music.
+
+	* src/Makefile.am:
+	* src/gc_sound/ChangeLog:
+	* src/gc_sound/src/gc-sound-channel.gob:
+	* src/gc_sound/src/gc-sound-item.gob:
+	* src/gc_sound/src/gc-sound-mixer.gob:
+	* src/gc_sound/src/test_gc_sound.c: (finish), (start), (main):
+
+2006-11-14  Yves Combe  <yves@ycombe.net>
+
+	initial import of library for sound object gc_sound. Not yet integrated.
+
+	* src/Makefile.am:
+	* src/gc_sound/COPYING:
+	* src/gc_sound/ChangeLog:
+	* src/gc_sound/INSTALL:
+	* src/gc_sound/Makefile.am:
+	* src/gc_sound/aclocal.m4:
+	* src/gc_sound/compile:
+	* src/gc_sound/config.guess:
+	* src/gc_sound/config.sub:
+	* src/gc_sound/configure.in:
+	* src/gc_sound/install-sh:
+	* src/gc_sound/ltmain.sh:
+	* src/gc_sound/missing:
+	* src/gc_sound/src/Makefile.am:
+	* src/gc_sound/src/gc-sound-channel.gob:
+	* src/gc_sound/src/gc-sound-item.gob:
+	* src/gc_sound/src/gc-sound-mixer.gob:
+	* src/gc_sound/src/gc-sound.h:
+	* src/gc_sound/src/test_gc_sound.c: (finish), (main):
+
 2006-11-13  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/gcompris/properties.c: (gc_prop_config_file_get),

@@ -1,5 +1,14 @@
 2006-11-14  Yves Combe <yves@ycombe.net>
 
+	Play music with groups of sound items.
+
+	* src/gc-sound-channel.gob:
+	* src/gc-sound-item.gob:
+	* src/gc-sound-mixer.gob:
+	* src/test_gc_sound.c: (finish), (start), (main):
+
+2006-11-14  Yves Combe <yves@ycombe.net>
+
 	initial import of gc_sound objects library. Works, without grouping.
 
 	* COPYING:

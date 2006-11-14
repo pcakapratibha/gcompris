@@ -46,6 +46,7 @@ typedef struct _GCSoundChannel GCSoundChannel;
 #endif
 %}
 class GC:Sound:Mixer from G:Object {
+  public gchar *nick = {NULL};
   protected int channels = { 0 };
 
   private int audio_buffers=2048;
@@ -106,7 +107,7 @@ class GC:Sound:Mixer from G:Object {
 
   private gboolean sdl_ok = { FALSE };
 
-  init (self)  {
+  init (self) {
     g_warning("gc mixer init");
     
     // initialize SDL for audio
@@ -124,10 +125,10 @@ class GC:Sound:Mixer from G:Object {
 
   }
 
-  public G:Object *
+  public GC:Sound:Mixer *
     new (void)
     {
-      return (GObject *)GET_NEW;
+      return (GCSoundMixer *)GET_NEW;
     }
 
    public void close_audio(self)
