@@ -54,13 +54,18 @@ main (int argc, char *argv)
 
    // test
    gc_sound_item_set_filename(item1_1, NULL);
-   gc_sound_item_set_filename(item1_1, "../../../boards/sounds/wahoo.ogg");
+   gc_sound_item_set_filename(item1_1, "../../../boards/sounds/train.ogg");
 
    // callback connection
-   gc_sound_item_connect__play_finished(item1, finish, NULL);
-   gc_sound_item_connect__play_finished(item2, finish, NULL);
+   gc_sound_item_connect__play_finished(item1_1, finish, NULL);
+   gc_sound_item_connect__play_finished(item1_2, finish, NULL);
    gc_sound_item_connect__play_started(item1_1, start, NULL);
    gc_sound_item_connect__play_started(item1_2, start, NULL);
+
+   // test mute 
+   //gc_sound_item_set_mute(item1_1, TRUE);
+
+   gc_sound_item_set_loop(item1, TRUE);
 
    //play
    gc_sound_item_play(item2);

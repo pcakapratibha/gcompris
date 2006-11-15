@@ -1,3 +1,13 @@
+2006-11-15  Yves Combe  <yves@ycombe.net>
+
+	Play loop item/groups.
+	Mute item/groups.
+
+	* src/gc_sound/ChangeLog:
+	* src/gc_sound/src/gc-sound-channel.gob:
+	* src/gc_sound/src/gc-sound-item.gob:
+	* src/gc_sound/src/test_gc_sound.c: (main):
+
 2006-11-14  Yves Combe  <yves@ycombe.net>
 
 	Play groups of music.

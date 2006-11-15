@@ -154,10 +154,14 @@ class GC:Sound:Channel from G:Object {
   public gboolean
     real_play (self, GC:Sound:Item *item (check null type))
     {
+      int i=0;
+      g_warning ("Real play %s", item->nick);
       gchar * filename = gc_sound_item_get_filename(item);
 
-       if (filename == NULL)
+       if (filename == NULL){
+          g_warning("No filename ? no play!");
           return FALSE;
+          }
 
          self->_priv->sample=Mix_LoadWAV_RW(SDL_RWFromFile(filename, "rb"), 1);
          if (!self->_priv->sample) {
@@ -170,7 +174,8 @@ class GC:Sound:Channel from G:Object {
           else
             Mix_VolumeChunk(self->_priv->sample, item->volume);
 
-          if(Mix_PlayChannel(self->_priv->channel, self->_priv->sample, 0)==-1) {
+          if (Mix_PlayChannel(self->_priv->channel, self->_priv->sample, 0)==-1) {
+            g_warning (" ? %d",i++);
             g_warning("Channel cannot play music %s", filename); 
             return FALSE;
             }
@@ -199,23 +204,30 @@ class GC:Sound:Channel from G:Object {
 
   protected void play_first_item(self)
     {
-      if (g_list_length(self->_priv->play_list)>0)
+      gboolean ret;
+
+      while (g_list_length(self->_priv->play_list)>0)
         {
            self->_priv->playing_root = g_list_first (self->_priv->play_list);
            self->_priv->play_list = g_list_remove_link  (self->_priv->play_list, self->_priv->playing_root);
-         }
-       else
-         return;
 
-      self->_priv->signal_id_child = gc_sound_item_connect__play_finished (GC_SOUND_ITEM(self->_priv->playing_root->data), self_item_play_finished, self);
-      gc_sound_item_play_next(GC_SOUND_ITEM(self->_priv->playing_root->data));
+          self->_priv->signal_id_child = gc_sound_item_connect__play_finished (GC_SOUND_ITEM(self->_priv->playing_root->data), self_item_play_finished, self);
+          ret = gc_sound_item_play_next(GC_SOUND_ITEM(self->_priv->playing_root->data));
+          if (ret)
+             return ;          
+        }
     }
 
   private void item_play_finished (GC:Sound:Item *item, gpointer data)
     {
-      
-        g_signal_handler_disconnect ( item, GC_SOUND_CHANNEL(data)->_priv->signal_id_child);
-
+        if (item != GC_SOUND_ITEM(GC_SOUND_CHANNEL(data)->_priv->playing_root->data))
+           return;
+        g_warning("channel item_play_finished on channel %d %s\n", GC_SOUND_CHANNEL(data)->_priv->channel, item->nick);
         self_play_first_item(GC_SOUND_CHANNEL(data));
-    }     
+    }
+
+  public void connect_me (self, GC:Sound:Item *item )
+    {
+      gc_sound_item_connect__play_finished(item, self_item_play_finished, self);
+    }    
 }

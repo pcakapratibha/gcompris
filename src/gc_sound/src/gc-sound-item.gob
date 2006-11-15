@@ -48,8 +48,29 @@ typedef struct _GCSoundChannel GCSoundChannel;
 %}
 
 class GC:Sound:Item from G:Object {
+  /* debug */
   public gchar *nick = {NULL};
 
+  /*************************/
+  /* muted or not ?        */
+  public gboolean mute = { FALSE };
+
+  property BOOLEAN mute
+     ( nick=_("Mute"),
+        blurb=_("Do not play me"),
+        export, link );
+
+  /*************************/
+  /* loop or not ?        */
+  public gboolean loop = { FALSE };
+
+  property BOOLEAN loop
+     ( nick=_("Loop"),
+        blurb=_("Play loop"),
+        export, link );
+
+  /*************************/
+  /* channel where we play */
   private GC:Sound:Channel *channel = { NULL }
   destroywith g_object_unref ;  
 
@@ -57,8 +78,15 @@ class GC:Sound:Item from G:Object {
      ( nick=_("Channel playing for us"),
         blurb=_("Numero of channel"),
         object_type=GC:Sound:Channel,
-        export, link );
+        export )
+       set { self->_priv->channel = GC_SOUND_CHANNEL(g_value_get_object 
+(VAL));
+       gc_sound_channel_connect_me( self->_priv->channel, self);
+       }
+       get { g_value_set_object (VAL, G_OBJECT(self->_priv->channel)); };
 
+  /*******************************************************/
+  /* Parent is another item. We receive channel from it. */
   private GC:Sound:Item *parent = { NULL }
   destroywith g_object_unref ;  
 
@@ -73,17 +101,11 @@ class GC:Sound:Item from G:Object {
        get { g_value_set_object (VAL, G_OBJECT(self->_priv->parent)); }
     ;
 
+  /********************************************/
+  /* filename is the name of file we play     */
+  /* may be NULL, in case we are only a group */
   private gchar *filename = { NULL }
   destroywith g_free;
-
-  public int volume = { -1 };
-
-  /* mark if item or one child is playing */
-  private gboolean started = { FALSE };
-
-  /* mark if is playing or not */
-  private gboolean has_played = { FALSE };
-
   property STRING filename
      ( nick=_("Filename of sound"),
         blurb=_("sound file to play"),
@@ -101,9 +123,22 @@ class GC:Sound:Item from G:Object {
 	}
       get {  g_value_set_string(VAL, g_strdup(self->_priv->filename));};
 
+  /*******************************************/
+  /* Volume for the sound                    */
+  public int volume = { -1 };
 
+  /****************************************/
+  /* mark if item or one child is playing */
+  private gboolean started = { FALSE };
+
+  /*****************************/
+  /* mark if is playing or not */
+  private gboolean has_played = { FALSE };
+
+  /* playing part of the child */
   private G:List *playing = { NULL };
 
+  /* childs */
   private G:List *SoundItems = { NULL }
   destroy {
     GList *list;
@@ -114,13 +149,18 @@ class GC:Sound:Item from G:Object {
     g_list_free (SoundItems);
   };
 
+
+  /* PlayList */
   private GList *PlayList = { NULL }
   destroy {
     g_list_free (PlayList);
   };
 
+
+  /* Objects methods */
   init (self)  {
     g_warning("Item sound instance init");
+    /* do nothing. We set up channel when property is set */
   }
 
   class_init (class) {
@@ -135,11 +175,14 @@ class GC:Sound:Item from G:Object {
 
       child = GC_SOUND_ITEM(g_object_new(gc_sound_item_get_type(), "parent", self, "channel", self->_priv->channel, NULL));
 
+      /* Child is added to our lists */
       self->_priv->SoundItems = g_list_append (self->_priv->SoundItems, child);
       self->_priv->PlayList = g_list_append (self->_priv->PlayList, child);
 
+      /* we get a ref */
       g_object_ref (G_OBJECT(child));
 
+      /* we need to know if start play or end on it, to send the same signal (group start/end) */
       self_connect__play_finished ( child, self_child_play_finished, self);
       self_connect__play_started ( child, self_child_play_started, self);
       
@@ -151,49 +194,72 @@ class GC:Sound:Item from G:Object {
      {
         /* Change that with policy */
         self->_priv->has_played = TRUE;
+
+        /* we will be added in play list channel */
 	gc_sound_channel_play_item(self->_priv->channel, self);
      }
 
 
-   protected void
+   /* recursive play in group */
+   protected gboolean
      play_next (self) 
       {
+        gboolean ret;
+        if (self->mute)
+           return FALSE;
+        /* mark if we are in play tree */
         self->_priv->has_played = TRUE;
-  
-        if (g_list_length(self->_priv->PlayList) > 0) {
-            if (self->_priv->playing == NULL)  {
-               self->_priv->playing = g_list_first(self->_priv->PlayList);
-            } else
-              self->_priv->playing = g_list_next (self->_priv->playing );
 
-            if ( self->_priv->playing == NULL )
-                 self_play_finished(self); 
-            else {
-             if ( GC_SOUND_ITEM(self->_priv->playing->data) == self){
-                self_play_started(self);
-                gc_sound_channel_real_play(self->_priv->channel, self);
-                }
-             else
-                gc_sound_item_play_next ( GC_SOUND_ITEM(self->_priv->playing->data));
+        if (g_list_length(self->_priv->PlayList) == 0)
+           return FALSE;
+
+        if (self->_priv->playing == NULL)
+            self->_priv->playing = g_list_first(self->_priv->PlayList);
+        else
+            self->_priv->playing = g_list_next (self->_priv->playing );
+
+        if ((self->_priv->playing == NULL) && (self->loop)) {
+            g_warning ("looping on %s", self->nick);
+            self->_priv->playing = g_list_first (self->_priv->PlayList );         
             }
-         }
-        
+  
+        while (self->_priv->playing) {
+             if ( GC_SOUND_ITEM(self->_priv->playing->data) == self){
+                if (!self->_priv->started)
+                   self_play_started(self);
+                gc_sound_channel_real_play(self->_priv->channel, self);
+                return TRUE;
+                }
+             else {
+                ret= gc_sound_item_play_next ( GC_SOUND_ITEM(self->_priv->playing->data));
+                if (ret)
+                   return ret;
+                } 
+             self->_priv->playing = g_list_next (self->_priv->playing );
+             }    
+
+        /* if we have play, it's finished */
+        if (self->_priv->started) {
+            g_warning("Call play_finished %s %d %d", self->nick, self->_priv->has_played, self->_priv->playing);
+
+            self_play_finished(self);
+        }           
+
+        return FALSE;
      }
 
   /* play */
-  signal last NONE (NONE)
+  signal first NONE (NONE)
      void play_finished (self)
   {
-    //g_warning("play_finished %s", self->nick);
+    g_warning("play_finished %s %d %d", self->nick, self->_priv->has_played, self->_priv->playing);
 
-    if (self->_priv->has_played && self->_priv->playing) {
-       self_play_next(self);
-       }
-    else {
+    if ((!self->_priv->has_played) || (!self->_priv->playing)) {
        self->_priv->started = FALSE;
        self->_priv->has_played = FALSE;
        }
   }
+
   signal last NONE (NONE)
      void play_started (self)
   {
