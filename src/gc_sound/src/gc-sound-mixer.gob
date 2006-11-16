@@ -90,7 +90,7 @@ class GC:Sound:Mixer from G:Object {
                   Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
                   self->_priv->bits=audio_format&0xFF;
                    Mix_AllocateChannels(self->channels );
-                  g_warning("Opened audio at %d Hz %d bit %s, %d bytes audio buffer\n Numbers of channels %d", audio_rate,
+                  g_warning("Opened audio at %d Hz %d bit %s, %d bytes audio buffer\n Number of channels %d", audio_rate,
 	    self->_priv->bits, audio_channels>1?"stereo":"mono", self->_priv->audio_buffers, self->channels);
 
                    Mix_AllocateChannels(self->channels );
@@ -108,7 +108,7 @@ class GC:Sound:Mixer from G:Object {
   private gboolean sdl_ok = { FALSE };
 
   init (self) {
-    g_warning("gc mixer init");
+    //g_warning("gc mixer init");
     
     // initialize SDL for audio
     if(SDL_Init(SDL_INIT_AUDIO)<0){
@@ -121,7 +121,7 @@ class GC:Sound:Mixer from G:Object {
 }
 
   class_init (class) {
-     g_warning("gc mixer class init");
+     //g_warning("gc mixer class init");
 
   }
 
