@@ -1,3 +1,21 @@
+	*** RELEASE 8.2.2 ***
+
+2006-11-18  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Added missing somali voices
+	- Fixed electricity to work on 'any' gnucap release
+
+	* configure.in:
+	* src/boards/python/electric.py:
+	* src/boards/python/melody.py:
+
+	*** RELEASE 8.2.1 ***
+
+2006-11-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/gcompris/gameutil.c: (gc_util_create_rootdir): ported to use glib.
+	now acount with accents in windows no more fail to save the config file.
+
 2006-11-13  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/gcompris/properties.c: (gc_prop_config_file_get),

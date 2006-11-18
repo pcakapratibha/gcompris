@@ -39,7 +39,7 @@ class Gcompris_melody:
 
     self.gcomprisBoard.disable_im_context = True
 
-    print("Gcompris_melody __init__.")
+    #print("Gcompris_melody __init__.")
 
     # These are used to let us restart only after the bonux is displayed.
     # When the bonus is displayed, it call us first with pause(1) and then with pause(0)
@@ -56,7 +56,7 @@ class Gcompris_melody:
     self.gcomprisBoard.number_of_sublevel=1
 
     # pause the bg music
-    print "pause sound"
+    #print "pause sound"
     gcompris.sound.pause()
 
     self.timers = []
@@ -128,7 +128,6 @@ class Gcompris_melody:
     #print("Gcompris_melody ok.")
     pass
 
-
   def cleanup(self):
 
     # Clear all timer
@@ -148,6 +147,8 @@ class Gcompris_melody:
     gcompris.set_background(self.gcomprisBoard.canvas.root(),
                             self.melodylist[self.theme][0]['background'])
     gcompris.bar_set_level(self.gcomprisBoard)
+
+    gcompris.sound.policy_set(gcompris.sound.PLAY_AND_INTERRUPT)
 
     # Create our rootitem. We put each canvas item in it so at the end we
     # only have to kill it. The canvas deletes all the items it contains automaticaly.
@@ -207,6 +208,7 @@ class Gcompris_melody:
     if self.kidstry == self.solution :
       if (self.increment_level() == 1):
         self.gamewon = 1
+        gcompris.sound.policy_set(self.saved_policy)
         gcompris.bonus.display(1, gcompris.bonus.FLOWER)
 
 
@@ -286,15 +288,19 @@ class Gcompris_melody:
     #print("got key %i" % keyval)
     # Play sounds with the keys
     if ((keyval == gtk.keysyms.KP_1) or (keyval == gtk.keysyms._1)):
+      #print "son1"
       self.sound_play(self.melodylist[self.theme][1][0])
       return True
     if ((keyval == gtk.keysyms.KP_2) or (keyval == gtk.keysyms._2)):
+      #print "son2"
       self.sound_play(self.melodylist[self.theme][1][1])
       return True
     if ((keyval == gtk.keysyms.KP_3) or (keyval == gtk.keysyms._3)):
+      #print "son3"
       self.sound_play(self.melodylist[self.theme][1][2])
       return True
     if ((keyval == gtk.keysyms.KP_4) or (keyval == gtk.keysyms._4)):
+      #print "son4"
       self.sound_play(self.melodylist[self.theme][1][3])
       return True
 
