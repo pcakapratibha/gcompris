@@ -1,3 +1,72 @@
+2006-11-29  Yves Combe <yves@ycombe.net>
+
+	Rewrite gc_sound without gob (in C).
+	Architecture change:
+	- GCSoundMixer is an interface. GCSoundMixerSDL just implement it. 
+	That to allow change libsdl dependencie to gstreamer when needed.
+	- GCSoundChannel and GCSoundItem just uses GCSoundMixer interface to run.
+
+	TODO:
+	- object_ref is not correct.
+	- python binding.
+	- add a record capability in interface (for now SDL_mixer can not do it).
+	- future way. add a gstreamer implementation of interface.	
+	
+	* aclocal.m4:
+	* configure.in:
+	* src/Makefile.am:
+	* src/gc-sound-channel.c: (gc_sound_channel_play_item),
+	(gc_sound_channel_get_root), (gc_sound_channel_pause),
+	(gc_sound_channel_resume), (gc_sound_channel_halt),
+	(gc_sound_channel_get_policy), (gc_sound_channel_set_policy),
+	(gc_sound_channel_play), (gc_sound_channel_init),
+	(gc_sound_channel_get_property), (gc_sound_channel_set_property),
+	(gc_sound_channel_signal_chunk_end), (gc_sound_channel_signal_run),
+	(gc_sound_channel_class_init):
+	* src/gc-sound-channel.gob:
+	* src/gc-sound-channel.h:
+	* src/gc-sound-item.c: (gc_sound_item_run_next),
+	(gc_sound_item_set_loop), (gc_sound_item_get_policy),
+	(gc_sound_item_set_policy), (gc_sound_item_child_start),
+	(gc_sound_item_child_end), (gc_sound_item_append_child),
+	(gc_sound_item_play), (gc_sound_item_set_filename),
+	(gc_sound_item_get_filename), (gc_sound_item_signal_real_play),
+	(gc_sound_item_signal_play_end), (gc_sound_item_signal_play_start),
+	(gc_sound_item_signal_chunk_end),
+	(gc_sound_item_signal_chunk_start), (gc_sound_item_init),
+	(gc_sound_item_get_property), (gc_sound_item_set_property),
+	(gc_sound_item_class_init):
+	* src/gc-sound-item.gob:
+	* src/gc-sound-item.h:
+	* src/gc-sound-marshallers.c:
+	* src/gc-sound-marshallers.h:
+	* src/gc-sound-mixer-SDL.c: (gc_sound_mixer_SDL_new),
+	(gc_sound_mixer_SDL_open_audio), (gc_sound_mixer_SDL_close_audio),
+	(gc_sound_mixer_SDL_new_channel), (gc_sound_mixer_SDL_pause),
+	(gc_sound_mixer_SDL_resume), (gc_sound_mixer_SDL_halt),
+	(gc_sound_mixer_SDL_pause_channel),
+	(gc_sound_mixer_SDL_resume_channel),
+	(gc_sound_mixer_SDL_halt_channel), (gc_sound_mixer_SDL_play_item),
+	(channel_finished_cb), (gc_sound_mixer_SDL_channel_finished),
+	(gc_sound_mixer_SDL_init), (gc_sound_mixer_SDL_finalize),
+	(gc_sound_mixer_SDL_get_property),
+	(gc_sound_mixer_SDL_set_property), (gc_sound_mixer_SDL_class_init),
+	(gc_init_sound_mixer):
+	* src/gc-sound-mixer-SDL.h:
+	* src/gc-sound-mixer-private.h:
+	* src/gc-sound-mixer.c: (gc_sound_mixer_open_audio),
+	(gc_sound_mixer_close_audio), (gc_sound_mixer_new_channel),
+	(gc_sound_mixer_pause), (gc_sound_mixer_resume),
+	(gc_sound_mixer_halt), (gc_sound_mixer_pause_channel),
+	(gc_sound_mixer_resume_channel), (gc_sound_mixer_halt_channel),
+	(gc_sound_mixer_play_item), (gc_sound_mixer_get_type),
+	(_gc_sound_mixer_install_property), (gc_sound_mixer_iface_init):
+	* src/gc-sound-mixer.gob:
+	* src/gc-sound-mixer.h:
+	* src/gc-sound.h:
+	* src/marshallers.list:
+	* src/test_gc_sound.c: (main):
+
 2006-11-16  Yves Combe <yves@ycombe.net>
 
 	Added sound policy (play only if iddle, after current, or interrupt and play).
