@@ -11,6 +11,7 @@ libgcsoundincludedir = $(includedir)/gcompris/gcsound
 
 libgcsoundinclude_HEADERS = \
 	gc-sound.h \
+	gc-sound-object.h\
 	gc-sound-mixer.h \
 	gc-sound-mixer-SDL.h \
 	gc-sound-channel.h \
@@ -27,6 +28,7 @@ libgcsound_PRIVATE =
 libgcsound_2_la_SOURCES = \
 	$(libgcsoundinclude_HEADERS) \
 	$(libgcsound_PRIVATE) \
+	gc-sound-object.c \
 	gc-sound-mixer.c \
 	gc-sound-mixer-SDL.c \
 	gc-sound-marshallers.c \
@@ -42,11 +44,13 @@ test_gc_sound_LDFLAGS = -L. -lgcsound-2  $(GC_SOUND_LIBS)
 test_gc_sound_SOURCES = \
 	test_gc_sound.c
 
-gc-sound-channel.c:  gc-sound-mixer.c gc-sound-item.c
+gc-sound-channel.c:  gc-sound-mixer.h gc-sound-item.h gc-sound-marshallers.h
 
-gc-sound-item.c:  gc-sound-channel.c
+gc-sound-item.c:  gc-sound-channel.h gc-sound-marshallers.h
 
-gc-sound-mixer.c:  gc-sound-channel.c
+gc-sound-mixer.c:  gc-sound-channel.h gc-sound-marshallers.h
+
+gc-sound-object.c: gc-sound-marshallers.h
 
 gc-sound-marshallers.h: $(srcdir)/marshallers.list $(srcdir)/Makefile
 	@( $(GLIB_GENMARSHAL) --header --prefix=gc_sound_marshal $< ) > xgen-cmh \

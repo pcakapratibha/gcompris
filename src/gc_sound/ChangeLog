@@ -1,3 +1,24 @@
+2006-12-01  Yves Combe <yves@ycombe.net>
+
+	Add GCSoundObject to have a base class with destroy signal/functions.
+	Idea (and some code) from GtkObject.
+	GCSOundMixerSDL, GCSoundChannel and GCSoundItem now use it.
+
+	* src/Makefile.am:
+	* src/gc-sound-channel.h:
+	* src/gc-sound-item.h:
+	* src/gc-sound-mixer-SDL.c: (gc_sound_mixer_SDL_init),
+	(gc_init_sound_mixer):
+	* src/gc-sound-mixer-SDL.h:
+	* src/gc-sound-object.c: (gc_sound_object_get_type),
+	(gc_sound_object_base_class_init),
+	(gc_sound_object_base_class_finalize),
+	(gc_sound_object_class_init), (gc_sound_object_init),
+	(gc_sound_object_destroy), (gc_sound_object_dispose),
+	(gc_sound_object_real_destroy), (gc_sound_object_finalize),
+	(gc_sound_object_set_property), (gc_sound_object_get_property):
+	* src/gc-sound-object.h:
+
 2006-11-29  Yves Combe <yves@ycombe.net>
 
 	Rewrite gc_sound without gob (in C).

@@ -30,6 +30,7 @@ typedef struct _GCSoundItemClass GCSoundItemClass;
 
 
 G_END_DECLS
+#include <gc-sound-object.h>
 #include <gc-sound-channel.h>
 G_BEGIN_DECLS
 
@@ -44,7 +45,7 @@ G_BEGIN_DECLS
 GType gc_sound_item_get_type(void);
 
 struct _GCSoundItem {
-  GObject         __parent__;
+  GCSoundObject         __parent__;
 
   gdouble         volume;
   gboolean        mute;
@@ -74,7 +75,7 @@ struct _GCSoundItem {
 };
 
 struct _GCSoundItemClass {
-  GObjectClass   __parentClass__;
+  GCSoundObjectClass   __parentClass__;
 
   /* signal handlers */
   void        (* real_play)         (GCSoundItem * self);

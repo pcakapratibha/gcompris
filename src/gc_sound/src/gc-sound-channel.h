@@ -37,6 +37,7 @@ typedef enum {
 G_END_DECLS
 
 #include <glib-object.h>
+#include <gc-sound-object.h>
 #include <gc-sound-mixer.h>
 #include <gc-sound-item.h>
 
@@ -52,7 +53,7 @@ G_BEGIN_DECLS
 GType gc_sound_channel_get_type(void);
 
 struct _GCSoundChannel {
-  GObject         __parent__;
+  GCSoundObject         __parent__;
 
   gdouble            volume;
   GCSoundPolicy policy;
@@ -76,7 +77,7 @@ struct _GCSoundChannel {
 };
 
 struct _GCSoundChannelClass {
-  GObjectClass   __parentClass__;
+  GCSoundObjectClass   __parentClass__;
 
   /* signal handlers */
   void        (* run)         (GCSoundChannel * self);

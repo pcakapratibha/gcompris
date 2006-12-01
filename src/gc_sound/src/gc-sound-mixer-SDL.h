@@ -20,6 +20,7 @@
 #ifndef __GC_SOUND_MIXER_SDL_H__
 #define __GC_SOUND_MIXER_SDL_H__
 
+#include <gc-sound-object.h>
 #include <gc-sound-mixer.h>
 #include <gc-sound-channel.h>
 #include <gc-sound-item.h>
@@ -58,7 +59,7 @@ gboolean                gc_sound_mixer_SDL_play_item        (GCSoundMixerSDL * s
 */
 
 struct _GCSoundMixerSDL {
-  GObject __parent__;
+  GCSoundObject __parent__;
 
   /* Is audio initiallised correctly */
   gboolean audio_opened;
@@ -73,10 +74,12 @@ struct _GCSoundMixerSDL {
 
   // debug only. will be removed.
   gchar* nick;
+
+  gboolean has_user_ref_count;
 };
 
 struct _GCSoundMixerSDLClass {
-        GInitiallyUnownedClass base_class;
+        GCSoundObjectClass base_class;
 
         /* vtable */
         gboolean         (* open_audio)         (GCSoundMixerSDL * self);

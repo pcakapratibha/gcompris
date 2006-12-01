@@ -347,8 +347,10 @@ gc_sound_mixer_SDL_init (GCSoundMixerSDL* self)
        g_warning("gc_sound_mixer_SDL_init: cannot open audio !");
    }
 
-
-
+    /* like GtkWindow */
+    g_object_ref_sink (self);
+    self->has_user_ref_count = TRUE;
+    
  }
 
 enum {
@@ -438,19 +440,19 @@ G_DEFINE_TYPE_WITH_CODE(GCSoundMixerSDL, gc_sound_mixer_SDL, G_TYPE_OBJECT,
   g_warning("Sound Mixer is initalized from SDL! ");
 
         /* vtable */
-      iface->open_audio = gc_sound_mixer_SDL_open_audio;
-      iface->close_audio = gc_sound_mixer_SDL_close_audio;
-
-      iface->new_channel = gc_sound_mixer_SDL_new_channel;
-
-      iface->pause = gc_sound_mixer_SDL_pause;
-      iface->resume = gc_sound_mixer_SDL_resume;
-      iface->halt = gc_sound_mixer_SDL_halt;
-
-      iface->pause_channel = gc_sound_mixer_SDL_pause_channel;
-      iface->resume_channel = gc_sound_mixer_SDL_resume_channel;
-      iface->halt_channel = gc_sound_mixer_SDL_halt_channel;
-
-      iface->play_item = gc_sound_mixer_SDL_play_item;
+  iface->open_audio = gc_sound_mixer_SDL_open_audio;
+  iface->close_audio = gc_sound_mixer_SDL_close_audio;
+  
+  iface->new_channel = gc_sound_mixer_SDL_new_channel;
+  
+  iface->pause = gc_sound_mixer_SDL_pause;
+  iface->resume = gc_sound_mixer_SDL_resume;
+  iface->halt = gc_sound_mixer_SDL_halt;
+  
+  iface->pause_channel = gc_sound_mixer_SDL_pause_channel;
+  iface->resume_channel = gc_sound_mixer_SDL_resume_channel;
+  iface->halt_channel = gc_sound_mixer_SDL_halt_channel;
+  
+  iface->play_item = gc_sound_mixer_SDL_play_item;
 
 }
