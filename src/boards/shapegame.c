@@ -1601,7 +1601,7 @@ static void create_title(char *name, double x, double y, GtkJustification justif
   item = \
     gnome_canvas_item_new (GNOME_CANVAS_GROUP(shape_root_item),
 			   gnome_canvas_text_get_type (),
-			   "text", name,
+			   "text", gettext(name),
 			   "font", gc_skin_font_board_medium,
 			   "x", x + 1.0,
 			   "y", y + 1.0,
@@ -1615,7 +1615,7 @@ static void create_title(char *name, double x, double y, GtkJustification justif
   item = \
     gnome_canvas_item_new (GNOME_CANVAS_GROUP(shape_root_item),
 			   gnome_canvas_text_get_type (),
-			   "text", name,
+			   "text", gettext(name),
 			   "font", gc_skin_font_board_medium,
 			   "x", x,
 			   "y", y,

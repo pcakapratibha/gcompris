@@ -1,3 +1,15 @@
+2006-12-06  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	-- Merge from HEAD
+	- Fixed 2 annoying bug in anim/draw:
+	  It's now easy to move text by using it's anchor
+	  The DEL key works now.
+
+	* Makefile.mingw.in: added msvcr71.dll, not all windows have it.
+	* po/Makefile.in.in:
+	* src/boards/python/anim.py:
+	* src/boards/shapegame.c: (create_title): now uses gettext for tittles.
+
 	*** RELEASE 8.2.2 ***
 
 2006-11-18  Bruno coudoin  <bruno.coudoin@free.fr>
