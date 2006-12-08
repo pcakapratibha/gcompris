@@ -38,12 +38,10 @@ guint gc_sound_channel_signals[N_SIGNALS] = {0};
 
 gboolean                gc_sound_channel_play_item     (GCSoundChannel * self, GCSoundItem *item)
 {
-  g_warning("gc_sound_channel_play_item %s %s", self->nick, item->nick);
-
   self->running_sample = item;
   self->stopped = FALSE;
 
-  return gc_sound_mixer_play_item (self->mixer, self, item);
+  return gc_sound_mixer_play_item (GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self, item);
 }
 
 GCSoundItem *           gc_sound_channel_get_root     (GCSoundChannel * self)
@@ -53,17 +51,17 @@ GCSoundItem *           gc_sound_channel_get_root     (GCSoundChannel * self)
 
 gboolean                gc_sound_channel_pause        (GCSoundChannel * self)
 {
-  return gc_sound_mixer_pause_channel( self->mixer, self);
+  return gc_sound_mixer_pause_channel( GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self);
 }
 
 gboolean                gc_sound_channel_resume       (GCSoundChannel * self)
 {
-  return gc_sound_mixer_resume_channel( self->mixer, self);
+  return gc_sound_mixer_resume_channel( GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self);
 }
 
 gboolean                gc_sound_channel_halt         (GCSoundChannel * self)
 {
-  return gc_sound_mixer_halt_channel( self->mixer, self);
+  return gc_sound_mixer_halt_channel(GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self);
 }
 
 GCSoundPolicy           gc_sound_channel_get_policy   (GCSoundChannel * self)
@@ -88,8 +86,6 @@ gboolean                gc_sound_channel_play         (GCSoundChannel *self,
       else
          policy = gc_sound_item_get_policy(item);
 
-     //g_warning ("play_item %s with policy %d", item->nick, policy);
-
       switch (policy) {
         case GC_SOUND_PLAY_ONLY_IF_IDLE:
              if (self->running_sample || g_list_length (self->playlist)>0)
@@ -99,26 +95,22 @@ gboolean                gc_sound_channel_play         (GCSoundChannel *self,
 	     g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
              break;
 
-        case GC_SOUND_INTERRUPT_AND_PLAY:
-	  g_list_free (self->playlist);
-          self->playlist = NULL;
-          self->playlist = g_list_append (self->playlist, item);
-          if (self->running_sample){
-             self->stopped = TRUE;
-             //g_warning("halting channel %d %d", self->_priv->channel, g_list_length(self->_priv->play_list));
-	     // send a signal to halt.
-             gc_sound_channel_halt(self);
-          }
-          // TODO send a signal to run !!! 
+      case GC_SOUND_INTERRUPT_AND_PLAY:
+	g_list_free (self->playlist);
+	self->playlist = NULL;
+	self->playlist = g_list_append (self->playlist, item);
+	if (self->running_sample){
+	  self->stopped = TRUE;
+	  gc_sound_channel_halt(self);
+	}
+	g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
+	break;
+	
+      default:
+	self->playlist = g_list_append (self->playlist, item);
+	if (!self->running_sample)
 	  g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
-          break;
-
-        default:
-                 self->playlist = g_list_append (self->playlist, item);
-                 if (!self->running_sample)
-		   // TODO send a signal to run !!! 
-		   g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
-                 break;
+	break;
       }
 
 }
@@ -131,7 +123,23 @@ enum {
 
 
 /* GType */
-G_DEFINE_TYPE(GCSoundChannel, gc_sound_channel, G_TYPE_OBJECT);
+G_DEFINE_TYPE(GCSoundChannel, gc_sound_channel, GC_TYPE_SOUND_OBJECT);
+
+static void root_destroyed (GCSoundObject *root, gpointer data)
+{
+  // direct call claas destroy because root is already destroyed.
+
+  GC_SOUND_OBJECT_GET_CLASS(data)->destroy (GC_SOUND_OBJECT(data));
+}
+
+static void
+gc_sound_channel_destroy (GCSoundChannel *self){
+  g_signal_handlers_disconnect_by_func(self->root, root_destroyed, self);
+  gc_sound_object_destroy(GC_SOUND_OBJECT(self->root));
+  g_object_unref(self->root);
+
+  GC_SOUND_OBJECT_GET_CLASS(self)->destroy (GC_SOUND_OBJECT(self));
+}
 
 static void
 gc_sound_channel_init(GCSoundChannel* self) 
@@ -144,8 +152,12 @@ gc_sound_channel_init(GCSoundChannel* self)
   
   self->stopped = FALSE;
 
-  self->mixer = NULL;
+  GC_SOUND_OBJECT(self)->parent = NULL;
   self->root = GC_SOUND_ITEM(g_object_new(GC_TYPE_SOUND_ITEM, "channel", self, NULL));
+
+  g_object_ref_sink(G_OBJECT(self->root));
+
+  g_signal_connect(G_OBJECT(self->root), "destroy", (GCallback) root_destroyed, self);
 
   self->playlist = NULL;
 
@@ -154,9 +166,6 @@ gc_sound_channel_init(GCSoundChannel* self)
   // this one is the group playing
   self->running_root = NULL;
 
-  //debug. will be removed.
-  gchar *nick;
-
 }
 
 static void
@@ -164,9 +173,6 @@ gc_sound_channel_get_property(GObject* object, guint prop_id, GValue* value, GPa
 {
   GCSoundChannel *self = GC_SOUND_CHANNEL(object);
   switch(prop_id) {
-  case PROP_MIXER:
-    g_value_set_object(value, self->mixer);
-    break;
   default:
     G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
     break;
@@ -179,9 +185,6 @@ gc_sound_channel_set_property(GObject* object, guint prop_id, GValue const* valu
   GCSoundChannel *self = GC_SOUND_CHANNEL(object);
 
   switch(prop_id) {
-  case PROP_MIXER:
-    self->mixer = g_value_get_object(value);
-    break;
   default:
     G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
     break;
@@ -198,8 +201,6 @@ gc_sound_channel_signal_chunk_end (GCSoundChannel *self)
 
   g_return_if_fail(GC_IS_SOUND_ITEM(chunk));
 
-  g_warning ("%s received chunk_end self->stopped %s", self->nick, self->stopped ? "TRUE" : "FALSE");
-
   g_signal_emit_by_name (chunk, "chunk_end", 0, self->stopped);
 }
 
@@ -208,8 +209,6 @@ gc_sound_channel_signal_run (GCSoundChannel *self)
 {
   GList *item_root;
   gboolean ret;
-
-  g_warning("Channel %s received run !", self->nick);
 
   while (g_list_length(self->playlist)>0)
     {
@@ -236,15 +235,6 @@ gc_sound_channel_class_init(GCSoundChannelClass* self_class)
   go_class->get_property = gc_sound_channel_get_property;
   go_class->set_property = gc_sound_channel_set_property;
 
-  g_object_class_install_property(go_class,
-				  PROP_MIXER,
-				  g_param_spec_object ("mixer",
-						     "GCompris mixer",
-						      "The mixer where this channel stand",
-						       GC_TYPE_SOUND_MIXER,
-						      G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
-
-
 /* signals */
 /* enum { */
 /*   RUN, /\* internal: launch recursive playing of playlist *\/ */
@@ -261,6 +251,7 @@ gc_sound_channel_class_init(GCSoundChannelClass* self_class)
 
   self_class->run = gc_sound_channel_signal_run;
   self_class->chunk_end = gc_sound_channel_signal_chunk_end;
+  self_class->destroy = gc_sound_channel_destroy;
 
   gc_sound_channel_signals[RUN] =
     g_signal_new("run", /* name */

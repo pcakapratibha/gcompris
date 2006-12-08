@@ -71,17 +71,15 @@ struct _GCSoundChannel {
   GList*    running_root;
 
   gint channel_number;
-
-  //debug. will be removed.
-  gchar *nick;
 };
 
 struct _GCSoundChannelClass {
   GCSoundObjectClass   __parentClass__;
 
   /* signal handlers */
-  void        (* run)         (GCSoundChannel * self);
+  void        (* run)               (GCSoundChannel * self);
   void        (* chunk_end)         (GCSoundChannel * self);
+  void        (* destroy)            (GCSoundChannel *self);
 };
 
 GCSoundItem *           gc_sound_channel_get_root     (GCSoundChannel * self);

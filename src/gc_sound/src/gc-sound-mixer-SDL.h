@@ -66,14 +66,10 @@ struct _GCSoundMixerSDL {
   gboolean paused;
 
   /* List of channels */
-  GHashTable *channels_from_pointer;
-  GHashTable *channels_to_pointer;
+  GPtrArray  *channels;
   GHashTable *samples;
 
   gboolean stopped;
-
-  // debug only. will be removed.
-  gchar* nick;
 
   gboolean has_user_ref_count;
 };
@@ -106,6 +102,8 @@ struct _GCSoundMixerSDLClass {
 
         void             (* channel_finished)  (GCSoundMixerSDL * self,
                                                  GCSoundChannel * channel);
+
+        void             (* destroy)           (GCSoundMixerSDL *self);
 };
 
 G_END_DECLS

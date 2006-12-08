@@ -75,13 +75,13 @@ gc_sound_mixer_SDL_open_audio (GCSoundMixer* mixer)
   // print out some info on the audio device and stream
   Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
   bits=audio_format&0xFF;
-  Mix_AllocateChannels(g_hash_table_size(self->channels_from_pointer));
+  Mix_AllocateChannels(self->channels->len);
   g_warning("Opened audio at %d Hz %d bit %s, %d bytes audio buffer number of channels %d", 
 	    audio_rate,
 	    bits, 
 	    audio_channels>1?"stereo":"mono", 
 	    audio_buffers, 
-	    g_hash_table_size(self->channels_from_pointer));
+	    self->channels->len);
   return TRUE;
 }
 
@@ -105,39 +105,67 @@ gc_sound_mixer_SDL_close_audio       (GCSoundMixer * mixer)
   return TRUE;
 }
 
+static void reset_channel_number(GCSoundChannel *channel, gboolean stopped, gpointer data)
+{
+  channel->channel_number =  GPOINTER_TO_INT(data);
+}
+
+static void channel_destroyed(GCSoundChannel *channel, gpointer data)
+{
+  GCSoundMixerSDL *self = GC_SOUND_MIXER_SDL (data);
+  int i;
+
+  //check if channel is playing
+  if (channel->running_sample) {
+    // Correct. As channel take a ref on itself when it's playing, it will
+    // not be finalized before it get this signal.
+    gc_sound_mixer_halt_channel (GC_SOUND_MIXER(self), channel);
+  }
+  
+  g_ptr_array_remove_index (self->channels, channel->channel_number);
+  g_object_unref (channel);
+
+  /* channel reorganisation */
+  for (i = 0; i < self->channels->len; i++) {
+    GCSoundChannel *i_channel = g_ptr_array_index (self->channels, i);
+
+    if (i!=i_channel->channel_number) {
+      if (i_channel->running_sample)
+	g_signal_connect(i_channel, "chunk_end", (GCallback) reset_channel_number, GINT_TO_POINTER(i));
+      else
+	reset_channel_number ( i_channel, FALSE, GINT_TO_POINTER(i));
+    }
+  }
+}
+
 static GCSoundChannel *gc_sound_mixer_SDL_new_channel (GCSoundMixer * mixer)
-  {
+{
     GCSoundMixerSDL* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
 
     self = GC_SOUND_MIXER_SDL(mixer);
 
-    g_warning ("gc_sound_mixer_SDL_new_channel");
-
     GCSoundChannel *channel = GC_SOUND_CHANNEL(g_object_new(GC_TYPE_SOUND_CHANNEL,
-						      "mixer", self, NULL));
+						      "parent", self, NULL));
 
     g_assert (channel != 0);
 
-    channel->channel_number = g_hash_table_size(self->channels_from_pointer);
+    channel->channel_number = self->channels->len;
 
-    g_warning ("inserting channel %d into tables",  channel->channel_number);
-    g_hash_table_insert (self->channels_from_pointer, 
-			 channel, 
-			 GINT_TO_POINTER(channel->channel_number));
-
-    g_hash_table_insert (self->channels_to_pointer,
-		       &(channel->channel_number), 
-                         channel);
+    g_ptr_array_add (self->channels,
+		     channel);
 
     Mix_AllocateChannels(channel->channel_number + 1);
     
-    g_warning ("Numbers of channels allocated %d",  Mix_AllocateChannels(-1));
+    g_warning ("Numbers of channels allocated is now %d",  Mix_AllocateChannels(-1));
+
+    g_object_ref_sink(G_OBJECT(channel));
+
+    g_signal_connect(G_OBJECT(channel), "destroy", (GCallback) channel_destroyed, self);
 
     return channel;
-  }
-
+}
 
 gboolean                gc_sound_mixer_SDL_pause             (GCSoundMixer * mixer)
  {
@@ -193,11 +221,7 @@ gc_sound_mixer_SDL_pause_channel     (GCSoundMixer * mixer, GCSoundChannel * cha
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
 
-    self = GC_SOUND_MIXER_SDL(mixer);
-    int channel_number = (int) g_hash_table_lookup (self->channels_from_pointer,
-						    channel);
-
-    Mix_Pause (channel_number);
+    Mix_Pause (channel->channel_number);
   }
 
 gboolean
@@ -208,12 +232,7 @@ gc_sound_mixer_SDL_resume_channel    (GCSoundMixer * mixer, GCSoundChannel * cha
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
 
-    self = GC_SOUND_MIXER_SDL(mixer);
-
-    int channel_number = (int) g_hash_table_lookup (self->channels_from_pointer,
-						    channel);
-
-    Mix_Resume (channel_number);
+    Mix_Resume (channel->channel_number);
     return TRUE;
   }
 
@@ -226,12 +245,7 @@ gc_sound_mixer_SDL_halt_channel      (GCSoundMixer * mixer, GCSoundChannel * cha
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
 
-    self = GC_SOUND_MIXER_SDL(mixer);
-
-    int channel_number = (int) g_hash_table_lookup (self->channels_from_pointer,
-						    channel);
-
-    Mix_HaltChannel (channel_number);
+    Mix_HaltChannel (channel->channel_number);
 
     return TRUE;
   }
@@ -249,10 +263,7 @@ gc_sound_mixer_SDL_play_item  (GCSoundMixer * mixer, GCSoundChannel * channel, G
 
     self = GC_SOUND_MIXER_SDL(mixer);
 
-    int channel_number = (int) g_hash_table_lookup (self->channels_from_pointer,
-						    channel);
-
-    if (Mix_Playing(channel_number)){
+    if (Mix_Playing(channel->channel_number)){
          g_warning("Channel busy ? no play!");
          return FALSE;
          }
@@ -273,7 +284,7 @@ gc_sound_mixer_SDL_play_item  (GCSoundMixer * mixer, GCSoundChannel * channel, G
     else
       Mix_VolumeChunk(sample, (int) item->volume * MIX_MAX_VOLUME);
 
-     if (Mix_PlayChannel(channel_number, sample, 0)==-1) {
+     if (Mix_PlayChannel(channel->channel_number, sample, 0)==-1) {
        g_warning("Channel cannot play music %s", item->filename);
        Mix_FreeChunk (sample);
        return FALSE;
@@ -281,7 +292,7 @@ gc_sound_mixer_SDL_play_item  (GCSoundMixer * mixer, GCSoundChannel * channel, G
 
      g_hash_table_insert( self->samples, channel, sample);
 
-     g_warning("Playing %s on channel #%d", item->filename, channel_number);
+     g_warning("Playing %s on channel #%d", item->filename, channel->channel_number);
 
      return TRUE;
   }
@@ -290,14 +301,7 @@ void channel_finished_cb (int channel_number)
  {
    GCSoundMixerSDL* self = running_mixer;
 
-   g_warning("Channel number %d size %d", 
-	     channel_number, 
-	     g_hash_table_size(self->channels_to_pointer));
-
-   int cn = channel_number;
-
-   GCSoundChannel *channel = GC_SOUND_CHANNEL(g_hash_table_lookup (self->channels_to_pointer,
-                                                  &cn));
+   GCSoundChannel *channel = g_ptr_array_index(self->channels, channel_number);
 
    g_return_if_fail(channel != NULL);
    g_return_if_fail(GC_IS_SOUND_MIXER_SDL(self));
@@ -316,6 +320,7 @@ void gc_sound_mixer_SDL_channel_finished (GCSoundMixerSDL* self,
 
   sample = g_hash_table_lookup (self->samples, channel);
   Mix_FreeChunk (sample);
+  g_hash_table_remove (self->samples, channel);
 
   g_signal_emit_by_name (channel, "chunk_end", 0, channel->stopped);
 }
@@ -328,10 +333,8 @@ gc_sound_mixer_SDL_init (GCSoundMixerSDL* self)
      g_error("Sorry, i can't allocate more than one mixer !!!");
    running_mixer = self;
 
-   self->channels_from_pointer = g_hash_table_new (g_direct_hash,
-                                      g_direct_equal);
-   self->channels_to_pointer = g_hash_table_new (g_int_hash,
-                                      g_int_equal);
+   self->channels = g_ptr_array_new ();
+
    self->samples = g_hash_table_new (g_direct_hash,
                                       g_direct_equal);
    self->paused = FALSE;
@@ -357,6 +360,7 @@ enum {
 	PROP_0,
 	PROP_DEVICE,
 };
+static GObjectClass *parent_class;
 
 
 static void
@@ -366,16 +370,39 @@ gc_sound_mixer_SDL_finalize (GObject* object)
 
    running_mixer = NULL;
 
-   g_hash_table_destroy (self->channels_from_pointer);
-   g_hash_table_destroy (self->channels_to_pointer);
+   g_ptr_array_free                (self->channels, TRUE);
+
    g_hash_table_destroy (self->samples);
 
    if (self->audio_opened)
      Mix_CloseAudio();
 
    SDL_Quit(); 
+
+   parent_class->finalize (object);
  }
 
+static void
+gc_sound_mixer_SDL_destroy (GCSoundMixerSDL *self)
+{
+  gint i;
+
+    if (self->has_user_ref_count)
+    {
+      self->has_user_ref_count = FALSE;
+      g_object_unref (self);
+    }
+
+    for (i = 0; i < self->channels->len; i++)
+      {
+	g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)), channel_destroyed, self);
+	gc_sound_object_destroy (GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)));
+	g_object_unref(G_OBJECT(g_ptr_array_index(self->channels,i)));
+      }
+
+    GC_SOUND_OBJECT_GET_CLASS(self)->destroy (GC_SOUND_OBJECT(self));
+
+}
 
 static void
 gc_sound_mixer_SDL_get_property() {}
@@ -386,16 +413,17 @@ gc_sound_mixer_SDL_set_property() {}
 static void
 gc_sound_mixer_SDL_class_init (GCSoundMixerSDLClass* self_class)
  {
-      g_warning("gc_sound_mixer_SDL_class_init");
-
       GObjectClass* go_class;
       
+      parent_class = g_type_class_peek_parent (G_OBJECT_CLASS(self_class));
+
       /* GObjectClass */
       go_class = G_OBJECT_CLASS(self_class);
       go_class->finalize     = gc_sound_mixer_SDL_finalize;
       go_class->get_property = gc_sound_mixer_SDL_get_property;
       go_class->set_property = gc_sound_mixer_SDL_set_property;
-      
+
+      self_class->destroy = gc_sound_mixer_SDL_destroy;
       _gc_sound_mixer_install_property( go_class, PROP_DEVICE);
 
 /* signals */
@@ -432,12 +460,12 @@ gc_sound_mixer_SDL_class_init (GCSoundMixerSDLClass* self_class)
 
 static void gc_init_sound_mixer (GCSoundMixerIface* iface);
 
-G_DEFINE_TYPE_WITH_CODE(GCSoundMixerSDL, gc_sound_mixer_SDL, G_TYPE_OBJECT,
+G_DEFINE_TYPE_WITH_CODE(GCSoundMixerSDL, gc_sound_mixer_SDL, GC_TYPE_SOUND_OBJECT,
 		 G_IMPLEMENT_INTERFACE(GC_TYPE_SOUND_MIXER, gc_init_sound_mixer));
 
  void gc_init_sound_mixer (GCSoundMixerIface* iface)
 {
-  g_warning("Sound Mixer is initalized from SDL! ");
+  g_warning("Sound Mixer is initalized by SDL mixer! ");
 
         /* vtable */
   iface->open_audio = gc_sound_mixer_SDL_open_audio;

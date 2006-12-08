@@ -43,6 +43,7 @@ enum {
 };
 enum {
   PROP_0,
+  PROP_PARENT,
   PROP_USER_DATA
 };
 
@@ -99,6 +100,9 @@ gc_sound_object_class_init (GCSoundObjectClass *class)
 
   parent_class = g_type_class_ref (G_TYPE_OBJECT);
 
+  gobject_class->get_property = gc_sound_object_get_property;
+  gobject_class->set_property = gc_sound_object_set_property;
+
   gobject_class->dispose = gc_sound_object_dispose;
   gobject_class->finalize = gc_sound_object_finalize;
 
@@ -110,6 +114,13 @@ gc_sound_object_class_init (GCSoundObjectClass *class)
 							 "User Data",
 							 "Anonymous User Data Pointer",
 							 G_PARAM_READWRITE));
+  g_object_class_install_property (gobject_class,
+				   PROP_PARENT,
+				   g_param_spec_object ("parent", 
+							"Parent Object",
+							"GCSoundObject parent",
+							GC_TYPE_SOUND_OBJECT,
+							G_PARAM_READWRITE));
 
   gc_sound_object_signals[DESTROY] =
     g_signal_new ("destroy",
@@ -125,6 +136,8 @@ static void
 gc_sound_object_init (GCSoundObject      *object,
 		      GCSoundObjectClass *klass)
 {
+  // TRUE is default;
+  object->destroy_with_parent = TRUE;
 }
 
 /********************************************
@@ -136,9 +149,10 @@ gc_sound_object_destroy (GCSoundObject *object)
 {
   g_return_if_fail (object != NULL);
   g_return_if_fail (GC_IS_SOUND_OBJECT (object));
-  
-  if (!(GC_SOUND_OBJECT_FLAGS (object) & GC_SOUND_IN_DESTRUCTION))
+
+  if (!(GC_SOUND_OBJECT_FLAGS (object) & GC_SOUND_IN_DESTRUCTION)){
     g_object_run_dispose (G_OBJECT (object));
+  }
 }
 
 static void
@@ -188,6 +202,15 @@ gc_sound_object_finalize (GObject *gobject)
  * comes directly from GtkObject
  *
  *****************************************/
+static void
+parent_destroyed (GCSoundObject *object, gpointer data)
+{
+  if (GC_SOUND_OBJECT(object)->parent) {
+    g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(object)->parent, parent_destroyed, object);
+    g_object_unref (GC_SOUND_OBJECT(object)->parent);
+  }
+  gc_sound_object_destroy(GC_SOUND_OBJECT(data));
+}
 
 static void
 gc_sound_object_set_property (GObject      *object,
@@ -200,6 +223,18 @@ gc_sound_object_set_property (GObject      *object,
     case PROP_USER_DATA:
       g_object_set_data (G_OBJECT (object), "user_data", g_value_get_pointer (value));
       break;
+    case PROP_PARENT:
+      if (GC_SOUND_OBJECT(object)->parent) {
+	g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(object)->parent, parent_destroyed, object);
+	g_object_unref (GC_SOUND_OBJECT(object)->parent);
+      }
+      GC_SOUND_OBJECT(object)->parent = g_value_get_object (value);
+      if (GC_SOUND_OBJECT(object)->parent){
+	g_object_ref (GC_SOUND_OBJECT(object)->parent);
+	g_signal_connect ( G_OBJECT(GC_SOUND_OBJECT(object)->parent), "destroy", (GCallback) parent_destroyed, object );
+      }
+      break;
+
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
       break;
@@ -216,6 +251,9 @@ gc_sound_object_get_property (GObject     *object,
     {
     case PROP_USER_DATA:
       g_value_set_pointer (value, g_object_get_data (G_OBJECT (object), "user_data"));
+      break;
+    case PROP_PARENT:
+      g_value_set_object (value, G_OBJECT (GC_SOUND_OBJECT(object)->parent));
       break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);

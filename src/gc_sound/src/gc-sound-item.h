@@ -60,9 +60,6 @@ struct _GCSoundItem {
   GCSoundItem*    parent;
   GList*          children;
 
-  //debug. will be removed
-  gchar * nick;
-
   //internal use
   // TRUE if we are in running play tree.
   gboolean has_played;

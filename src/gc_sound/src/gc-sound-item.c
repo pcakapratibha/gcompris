@@ -45,8 +45,6 @@ gboolean        gc_sound_item_run_next (GCSoundItem *self,
 {
   gboolean ret;
 
-  g_warning("run_next %s %d", self->nick, stopped);
-
   /* if we are stopped, we don't continue */
   if (stopped) {
     g_signal_emit(self, gc_sound_item_signals[PLAY_END], 0, stopped);
@@ -69,7 +67,6 @@ gboolean        gc_sound_item_run_next (GCSoundItem *self,
     self->playing = g_list_next (self->playing );
   
   if ((self->playing == NULL) && (self->loop)) {
-    g_warning ("looping on %s", self->nick);
     self->playing = g_list_first (self->children );         
   }
   
@@ -133,20 +130,32 @@ void gc_sound_item_child_end( GCSoundItem *child, gboolean stopped, gpointer dat
     gc_sound_item_run_next(self, stopped);
 }
 
+void gc_sound_item_child_destroyed( GCSoundItem *child, gpointer data)
+{
+  GCSoundItem *self = GC_SOUND_ITEM(data);
+
+  self->children = g_list_remove ( self->children, child);
+  g_object_unref (G_OBJECT(child));
+}
+
 GCSoundItem *   gc_sound_item_append_child (GCSoundItem *self)
 {
   GCSoundItem *child;
 
-  child = GC_SOUND_ITEM(g_object_new(gc_sound_item_get_type(), "parent", self, "channel", self->channel, NULL));
+  child = GC_SOUND_ITEM(g_object_new(GC_TYPE_SOUND_ITEM, 
+				     "parent", self, 
+				     "channel", self->channel, 
+				     NULL));
 
   /* Child is added to our lists */
   self->children = g_list_append (self->children, child);
 
   /* we get a ref */
-  g_object_ref (G_OBJECT(child));
+  g_object_ref_sink (G_OBJECT(child));
 
   g_signal_connect( child, "play-end", (GCallback) gc_sound_item_child_end, self);
   g_signal_connect( child, "play-start", (GCallback)  gc_sound_item_child_start, self);
+  g_signal_connect( child, "destroy", (GCallback)  gc_sound_item_child_destroyed, self);
   return child;
 }
 
@@ -177,8 +186,6 @@ gchar *         gc_sound_item_get_filename (GCSoundItem *self)
 static void
 gc_sound_item_signal_real_play (GCSoundItem *self)
 {
-  g_warning("item %s received real_play", self->nick);
-
   g_signal_emit(self, gc_sound_item_signals[CHUNK_START], 0);
   gc_sound_channel_play_item (self->channel, self);
 }
@@ -186,8 +193,6 @@ gc_sound_item_signal_real_play (GCSoundItem *self)
 static void
 gc_sound_item_signal_play_end (GCSoundItem *self, gboolean stopped)
 {
-  g_warning("item %s received play_end", self->nick);
-
   if (self->has_played || stopped) {
     self->started = FALSE;
     self->has_played = FALSE;
@@ -198,16 +203,12 @@ gc_sound_item_signal_play_end (GCSoundItem *self, gboolean stopped)
 static void
 gc_sound_item_signal_play_start (GCSoundItem *self)
 {
-  g_warning("item %s received play_start", self->nick);
-
   self->started = TRUE;
 }
  
 static void
 gc_sound_item_signal_chunk_end (GCSoundItem *self, gboolean stopped)
 {
-  g_warning("item %s received chunk_end", self->nick);
-
   /*
   We receive this signal from channel when play of chunk if finished.
   We have to continue play in our group.
@@ -219,8 +220,6 @@ gc_sound_item_signal_chunk_end (GCSoundItem *self, gboolean stopped)
 static void
 gc_sound_item_signal_chunk_start (GCSoundItem *self)
 {
-  g_warning("item %s received chunk_start", self->nick);
-
   self->started = TRUE;
 }
 
@@ -228,19 +227,16 @@ gc_sound_item_signal_chunk_start (GCSoundItem *self)
 enum {
 	PROP_0,
 	PROP_CHANNEL,
-	PROP_PARENT,
 	PROP_FILENAME
 };
 
 /* GType */
-G_DEFINE_TYPE(GCSoundItem, gc_sound_item, G_TYPE_OBJECT);
+G_DEFINE_TYPE(GCSoundItem, gc_sound_item, GC_TYPE_SOUND_OBJECT);
 
 static void
 gc_sound_item_init(GCSoundItem* self) 
 {
   // initialisation des variables.
-  g_warning("gc_sound_item_init");
-
   self->volume = -1.0;
   self->mute = FALSE;
 
@@ -276,9 +272,6 @@ gc_sound_item_get_property(GObject* object, guint prop_id, GValue* value, GParam
   case PROP_CHANNEL:
     g_value_set_object(value, self->channel);
     break;
-  case PROP_PARENT:
-    g_value_set_object(value, self->parent);
-    break;
   case PROP_FILENAME:
     g_value_set_string(value, self->filename);
     break;
@@ -297,9 +290,6 @@ gc_sound_item_set_property(GObject* object, guint prop_id, GValue const* value, 
   case PROP_CHANNEL:
     self->channel = g_value_get_object(value);
     break;
-  case PROP_PARENT:
-    self->parent = g_value_get_object(value);
-    break;
   case PROP_FILENAME:
     gc_sound_item_set_filename( self, (gchar *)g_value_get_string(value));
     break;
@@ -314,8 +304,6 @@ static void
 gc_sound_item_class_init(GCSoundItemClass* self_class) 
 {
   // c'est ici qu'il faut passer les properties et les signals.
-  g_warning("gc_sound_item_class_init");
-
    GObjectClass* go_class;
       
    /* GObjectClass */
@@ -330,14 +318,6 @@ gc_sound_item_class_init(GCSoundItemClass* self_class)
 						     "GCompris channel",
 						      "The channel where this channel stand",
 						       GC_TYPE_SOUND_CHANNEL,
-						       G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
-
-  g_object_class_install_property(go_class,
-				  PROP_PARENT,
-				  g_param_spec_object ("parent",
-						     "GCompris parent",
-						      "The parent where this channel stand",
-						       GC_TYPE_SOUND_ITEM,
 						       G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
 /* signals */

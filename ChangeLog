@@ -1,3 +1,49 @@
+2006-12-08  Yves Combe <yves@ycombe.net>
+
+	GC_SOUND
+	Work on destroy recursive on mixer-SDL/channel/item
+	TODO: 
+	-  fix if channel is destroyed before mixer, 
+	   an error occurs when mixer is destroyed?
+	- python bindings
+	
+	* src/gc_sound/ChangeLog:
+	* src/gc_sound/src/gc-sound-channel.c:
+	(gc_sound_channel_play_item), (gc_sound_channel_pause),
+	(gc_sound_channel_resume), (gc_sound_channel_halt),
+	(gc_sound_channel_play), (root_destroyed),
+	(gc_sound_channel_destroy), (gc_sound_channel_init),
+	(gc_sound_channel_get_property), (gc_sound_channel_set_property),
+	(gc_sound_channel_signal_chunk_end), (gc_sound_channel_signal_run),
+	(gc_sound_channel_class_init):
+	* src/gc_sound/src/gc-sound-channel.h:
+	* src/gc_sound/src/gc-sound-item.c: (gc_sound_item_run_next),
+	(gc_sound_item_child_destroyed), (gc_sound_item_append_child),
+	(gc_sound_item_signal_real_play), (gc_sound_item_signal_play_end),
+	(gc_sound_item_signal_play_start),
+	(gc_sound_item_signal_chunk_end),
+	(gc_sound_item_signal_chunk_start), (gc_sound_item_init),
+	(gc_sound_item_get_property), (gc_sound_item_set_property),
+	(gc_sound_item_class_init):
+	* src/gc_sound/src/gc-sound-item.h:
+	* src/gc_sound/src/gc-sound-mixer-SDL.c:
+	(gc_sound_mixer_SDL_open_audio), (reset_channel_number),
+	(channel_destroyed), (gc_sound_mixer_SDL_new_channel),
+	(gc_sound_mixer_SDL_pause_channel),
+	(gc_sound_mixer_SDL_resume_channel),
+	(gc_sound_mixer_SDL_halt_channel), (gc_sound_mixer_SDL_play_item),
+	(channel_finished_cb), (gc_sound_mixer_SDL_channel_finished),
+	(gc_sound_mixer_SDL_init), (gc_sound_mixer_SDL_finalize),
+	(gc_sound_mixer_SDL_destroy), (gc_sound_mixer_SDL_class_init),
+	(gc_init_sound_mixer):
+	* src/gc_sound/src/gc-sound-mixer-SDL.h:
+	* src/gc_sound/src/gc-sound-object.c: (gc_sound_object_class_init),
+	(gc_sound_object_init), (gc_sound_object_destroy),
+	(parent_destroyed), (gc_sound_object_set_property),
+	(gc_sound_object_get_property):
+	* src/gc_sound/src/gc-sound-object.h:
+	* src/gc_sound/src/test_gc_sound.c: (finish), (start), (main):
+
 2006-12-01  Yves Combe <yves@ycombe.net>
 
 	GCSound: 

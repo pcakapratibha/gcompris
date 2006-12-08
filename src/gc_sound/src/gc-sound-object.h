@@ -52,6 +52,13 @@ struct _GCSoundObject {
   GInitiallyUnowned __parent__;
 
   guint32 flags;
+
+  // NULL on mixer; mixer on channel,; prent item on item
+  GCSoundObject *parent;
+  gboolean destroy_with_parent;
+
+  //debug
+  gchar *nick;
 };
 
 struct _GCSoundObjectClass {
@@ -59,6 +66,8 @@ struct _GCSoundObjectClass {
 
   void (*destroy)  (GCSoundObject *object);
 };
+
+void     gc_sound_object_destroy (GCSoundObject *object);
 
 G_END_DECLS
 
