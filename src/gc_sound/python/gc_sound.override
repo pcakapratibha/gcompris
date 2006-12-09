@@ -1,0 +1,20 @@
+%%
+headers
+#include <Python.h>
+
+#include "pygobject.h"  
+#include <glib.h>
+#include "gc-sound.h"
+
+void py_gc_sound_add_constants(PyObject *module, const gchar *strip_prefix);
+void py_gc_sound_register_classes(PyObject *d);
+
+%%
+modulename gc_sound
+%%
+import gobject.GObject as PyGObject_Type
+
+%%
+ignore-glob
+  *_get_type
+%%

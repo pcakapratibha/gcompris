@@ -20,11 +20,11 @@
 #include <gc-sound-object.h>
 #include <gc-sound-marshallers.h>
 
-static void       gc_sound_object_base_class_init     (GCSoundObjectClass *class);
-static void       gc_sound_object_base_class_finalize (GCSoundObjectClass *class);
-static void       gc_sound_object_class_init          (GCSoundObjectClass *klass);
-static void       gc_sound_object_init                (GCSoundObject      *object,
-						  GCSoundObjectClass *klass);
+static void       gc_sound_object_base_class_init     (GcSoundObjectClass *class);
+static void       gc_sound_object_base_class_finalize (GcSoundObjectClass *class);
+static void       gc_sound_object_class_init          (GcSoundObjectClass *klass);
+static void       gc_sound_object_init                (GcSoundObject      *object,
+						  GcSoundObjectClass *klass);
 static void	  gc_sound_object_set_property	 (GObject	 *object,
 						  guint           property_id,
 						  const GValue   *value,
@@ -34,7 +34,7 @@ static void	  gc_sound_object_get_property	 (GObject	 *object,
 						  GValue         *value,
 						  GParamSpec     *pspec);
 static void       gc_sound_object_dispose            (GObject        *object);
-static void       gc_sound_object_real_destroy        (GCSoundObject      *object);
+static void       gc_sound_object_real_destroy        (GcSoundObject      *object);
 static void       gc_sound_object_finalize            (GObject        *object);
 
 enum {
@@ -51,7 +51,7 @@ static guint       gc_sound_object_signals[LAST_SIGNAL] = { 0 };
 static gpointer    parent_class = NULL;
 
 /****************************************************
- * GCSoundObject type, class and instance initialization
+ * GcSoundObject type, class and instance initialization
  *
  ****************************************************/
 
@@ -64,19 +64,19 @@ gc_sound_object_get_type (void)
     {
       const GTypeInfo object_info =
       {
-	sizeof (GCSoundObjectClass),
+	sizeof (GcSoundObjectClass),
 	(GBaseInitFunc) gc_sound_object_base_class_init,
 	(GBaseFinalizeFunc) gc_sound_object_base_class_finalize,
 	(GClassInitFunc) gc_sound_object_class_init,
 	NULL,		/* class_finalize */
 	NULL,		/* class_data */
-	sizeof (GCSoundObject),
+	sizeof (GcSoundObject),
 	16,		/* n_preallocs */
 	(GInstanceInitFunc) gc_sound_object_init,
 	NULL,		/* value_table */
       };
       
-      object_type = g_type_register_static (G_TYPE_INITIALLY_UNOWNED, "GCSoundObject", 
+      object_type = g_type_register_static (G_TYPE_INITIALLY_UNOWNED, "GcSoundObject", 
 					    &object_info, G_TYPE_FLAG_ABSTRACT);
     }
 
@@ -84,17 +84,17 @@ gc_sound_object_get_type (void)
 }
 
 static void
-gc_sound_object_base_class_init (GCSoundObjectClass *class)
+gc_sound_object_base_class_init (GcSoundObjectClass *class)
 {
 }
 
 static void
-gc_sound_object_base_class_finalize (GCSoundObjectClass *class)
+gc_sound_object_base_class_finalize (GcSoundObjectClass *class)
 {
 }
 
 static void
-gc_sound_object_class_init (GCSoundObjectClass *class)
+gc_sound_object_class_init (GcSoundObjectClass *class)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (class);
 
@@ -118,7 +118,7 @@ gc_sound_object_class_init (GCSoundObjectClass *class)
 				   PROP_PARENT,
 				   g_param_spec_object ("parent", 
 							"Parent Object",
-							"GCSoundObject parent",
+							"GcSoundObject parent",
 							GC_TYPE_SOUND_OBJECT,
 							G_PARAM_READWRITE));
 
@@ -126,26 +126,26 @@ gc_sound_object_class_init (GCSoundObjectClass *class)
     g_signal_new ("destroy",
 		  G_TYPE_FROM_CLASS (gobject_class),
 		  G_SIGNAL_RUN_CLEANUP | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-		  G_STRUCT_OFFSET (GCSoundObjectClass, destroy),
+		  G_STRUCT_OFFSET (GcSoundObjectClass, destroy),
 		  NULL, NULL,
 		  gc_sound_marshal_VOID__VOID,
 		  G_TYPE_NONE, 0);
 }
 
 static void
-gc_sound_object_init (GCSoundObject      *object,
-		      GCSoundObjectClass *klass)
+gc_sound_object_init (GcSoundObject      *object,
+		      GcSoundObjectClass *klass)
 {
   // TRUE is default;
   object->destroy_with_parent = TRUE;
 }
 
 /********************************************
- * Functions to end a GCSoundObject's life time
+ * Functions to end a GcSoundObject's life time
  *
  ********************************************/
 void
-gc_sound_object_destroy (GCSoundObject *object)
+gc_sound_object_destroy (GcSoundObject *object)
 {
   g_return_if_fail (object != NULL);
   g_return_if_fail (GC_IS_SOUND_OBJECT (object));
@@ -158,7 +158,7 @@ gc_sound_object_destroy (GCSoundObject *object)
 static void
 gc_sound_object_dispose (GObject *gobject)
 {
-  GCSoundObject *object = GC_SOUND_OBJECT (gobject);
+  GcSoundObject *object = GC_SOUND_OBJECT (gobject);
 
   /* guard against reinvocations during
    * destruction with the GTK_IN_DESTRUCTION flag.
@@ -176,7 +176,7 @@ gc_sound_object_dispose (GObject *gobject)
 }
 
 static void
-gc_sound_object_real_destroy (GCSoundObject *object)
+gc_sound_object_real_destroy (GcSoundObject *object)
 {
   g_signal_handlers_destroy (object);
 }
@@ -184,11 +184,11 @@ gc_sound_object_real_destroy (GCSoundObject *object)
 static void
 gc_sound_object_finalize (GObject *gobject)
 {
-  GCSoundObject *object = GC_SOUND_OBJECT (gobject);
+  GcSoundObject *object = GC_SOUND_OBJECT (gobject);
 
   if (g_object_is_floating (object))
     {
-      g_warning ("GCSoundObject: A floating object was finalized. This means that someone\n"
+      g_warning ("GcSoundObject: A floating object was finalized. This means that someone\n"
 		 "called g_object_unref() on an object that had only a floating\n"
 		 "reference; the initial floating reference is not owned by anyone\n"
 		 "and must be removed with g_object_ref_sink().");
@@ -198,12 +198,12 @@ gc_sound_object_finalize (GObject *gobject)
 }
 
 /*****************************************
- * GCSoundObject property handlers
+ * GcSoundObject property handlers
  * comes directly from GtkObject
  *
  *****************************************/
 static void
-parent_destroyed (GCSoundObject *object, gpointer data)
+parent_destroyed (GcSoundObject *object, gpointer data)
 {
   if (GC_SOUND_OBJECT(object)->parent) {
     g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(object)->parent, parent_destroyed, object);

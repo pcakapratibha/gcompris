@@ -27,8 +27,8 @@ G_BEGIN_DECLS
 /*
  * Main interface structure
  */
-typedef struct _GCSoundMixer GCSoundMixer;
-typedef struct _GCSoundMixerIface GCSoundMixerIface;
+typedef struct _GcSoundMixer GcSoundMixer;
+typedef struct _GcSoundMixerIface GcSoundMixerIface;
 
 G_END_DECLS
 
@@ -41,55 +41,55 @@ G_BEGIN_DECLS
  * Type checking and casting macros
  */
 #define GC_TYPE_SOUND_MIXER             (gc_sound_mixer_get_type())
-#define GC_SOUND_MIXER(obj)             G_TYPE_CHECK_INSTANCE_CAST((obj), GC_TYPE_SOUND_MIXER, GCSoundMixer)
+#define GC_SOUND_MIXER(obj)             G_TYPE_CHECK_INSTANCE_CAST((obj), GC_TYPE_SOUND_MIXER, GcSoundMixer)
 #define GC_IS_SOUND_MIXER(obj)          G_TYPE_CHECK_INSTANCE_TYPE((obj), GC_TYPE_SOUND_MIXER)
-#define GC_SOUND_MIXER_GET_CLASS(obj)   G_TYPE_INSTANCE_GET_INTERFACE((obj), GC_TYPE_SOUND_MIXER, GCSoundMixerIface)
+#define GC_SOUND_MIXER_GET_CLASS(obj)   G_TYPE_INSTANCE_GET_INTERFACE((obj), GC_TYPE_SOUND_MIXER, GcSoundMixerIface)
 
 GType gc_sound_mixer_get_type(void);
 
 void                    _gc_sound_mixer_install_property (GObjectClass* go_class,
 		       	                           gboolean      device_id);
 
-gboolean                gc_sound_mixer_open_audio        (GCSoundMixer * self);
-gboolean                gc_sound_mixer_close_audio       (GCSoundMixer * self);
+gboolean                gc_sound_mixer_open_audio        (GcSoundMixer * self);
+gboolean                gc_sound_mixer_close_audio       (GcSoundMixer * self);
 
-GCSoundChannel * 	gc_sound_mixer_new_channel       (GCSoundMixer * self);
+GcSoundChannel * 	gc_sound_mixer_new_channel       (GcSoundMixer * self);
 
-gboolean                gc_sound_mixer_pause             (GCSoundMixer * self);
-gboolean                gc_sound_mixer_resume            (GCSoundMixer * self);
-gboolean                gc_sound_mixer_halt              (GCSoundMixer * self);
+gboolean                gc_sound_mixer_pause             (GcSoundMixer * self);
+gboolean                gc_sound_mixer_resume            (GcSoundMixer * self);
+gboolean                gc_sound_mixer_halt              (GcSoundMixer * self);
 
-gboolean                gc_sound_mixer_pause_channel     (GCSoundMixer * self, GCSoundChannel * channel);
-gboolean                gc_sound_mixer_resume_channel    (GCSoundMixer * self, GCSoundChannel * channel);
-gboolean                gc_sound_mixer_halt_channel      (GCSoundMixer * self, GCSoundChannel * channel);
+gboolean                gc_sound_mixer_pause_channel     (GcSoundMixer * self, GcSoundChannel * channel);
+gboolean                gc_sound_mixer_resume_channel    (GcSoundMixer * self, GcSoundChannel * channel);
+gboolean                gc_sound_mixer_halt_channel      (GcSoundMixer * self, GcSoundChannel * channel);
 
-gboolean                gc_sound_mixer_play_item         (GCSoundMixer * self, GCSoundChannel * channel, GCSoundItem *item);
+gboolean                gc_sound_mixer_play_item         (GcSoundMixer * self, GcSoundChannel * channel, GcSoundItem *item);
 
-struct _GCSoundMixerIface {
+struct _GcSoundMixerIface {
         GTypeInterface base_iface;
 
         /* vtable */
-        gboolean         (* open_audio)         (GCSoundMixer * self);
-        gboolean         (* close_audio)        (GCSoundMixer * self);
+        gboolean         (* open_audio)         (GcSoundMixer * self);
+        gboolean         (* close_audio)        (GcSoundMixer * self);
 
-        GCSoundChannel * (* new_channel)        (GCSoundMixer * self);
+        GcSoundChannel * (* new_channel)        (GcSoundMixer * self);
 
-        gboolean         (* pause)              (GCSoundMixer * self);
-        gboolean         (* resume)             (GCSoundMixer * self);
-        gboolean         (* halt)               (GCSoundMixer * self);
+        gboolean         (* pause)              (GcSoundMixer * self);
+        gboolean         (* resume)             (GcSoundMixer * self);
+        gboolean         (* halt)               (GcSoundMixer * self);
 
-        gboolean         (* pause_channel)      (GCSoundMixer * self,
-                                                 GCSoundChannel * channel);
+        gboolean         (* pause_channel)      (GcSoundMixer * self,
+                                                 GcSoundChannel * channel);
 
-        gboolean         (* resume_channel)     (GCSoundMixer * self,
-                                                 GCSoundChannel * channel);
+        gboolean         (* resume_channel)     (GcSoundMixer * self,
+                                                 GcSoundChannel * channel);
 
-        gboolean         (* halt_channel)       (GCSoundMixer * self,
-                                                 GCSoundChannel * channel);
+        gboolean         (* halt_channel)       (GcSoundMixer * self,
+                                                 GcSoundChannel * channel);
 
-        gboolean         (* play_item)          (GCSoundMixer * self,
-                                                 GCSoundChannel * channel,
-                                                 GCSoundItem *item);
+        gboolean         (* play_item)          (GcSoundMixer * self,
+                                                 GcSoundChannel * channel,
+                                                 GcSoundItem *item);
 };
 
 G_END_DECLS

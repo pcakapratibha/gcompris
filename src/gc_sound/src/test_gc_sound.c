@@ -2,25 +2,25 @@
 #include <gc-sound.h>
 #include <stdio.h>
 
-void finish(GCSoundItem *item, gboolean stopped, gpointer data)
+void finish(GcSoundItem *item, gboolean stopped, gpointer data)
 {
   g_warning("Return of finish callback %s %s", GC_SOUND_OBJECT(item)->nick, stopped ? "STOPPED" : "normal");
 }
 
-void start(GCSoundItem *item, gpointer data)
+void start(GcSoundItem *item, gpointer data)
 {
   g_warning("Return of start callback %s",  GC_SOUND_OBJECT(item)->nick);
 }
 
 main (int argc, char *argv)
 {
-  GCSoundMixer *gcmix;
-  GCSoundChannel* gcchan1, *gcchan2;
-  GCSoundItem *item1, *item2, *item3, *root1, *root2, *item1_1, *item1_2; 
+  GcSoundMixer *gcmix;
+  GcSoundChannel* gcchan1, *gcchan2;
+  GcSoundItem *item1, *item2, *item3, *root1, *root2, *item1_1, *item1_2; 
    g_type_init ();
 
   /* Sound mixer opens SDL and audio device */
-  gcmix = gc_sound_mixer_SDL_new();
+  gcmix = gc_sound_mixer_sdl_new();
    GC_SOUND_OBJECT(gcmix)->nick = "gcmix";
 
   /* We open two chans to play simultaneously */
@@ -29,7 +29,7 @@ main (int argc, char *argv)
   GC_SOUND_OBJECT(gcchan1)->nick = "gcchan1";
   GC_SOUND_OBJECT(gcchan2)->nick = "gcchan2";
 
-  GCSoundMixer *gcmix2;
+  GcSoundMixer *gcmix2;
 
   g_object_get(G_OBJECT(gcchan2), "parent", &gcmix2, NULL);
 
@@ -65,7 +65,7 @@ main (int argc, char *argv)
 
    //policy test: works on channel and on item.
    //gc_sound_channel_set_policy(gcchan2, GC_SOUND_INTERRUPT_AND_PLAY);
-   gc_sound_item_set_policy(item3, GC_SOUND_INTERRUPT_AND_PLAY);
+   gc_sound_item_set_policy(item3, INTERRUPT_AND_PLAY);
 
    // callback connection
    //gc_sound_item_connect__play_finished(item2, (GCallback) finish, NULL);
@@ -99,8 +99,8 @@ main (int argc, char *argv)
     g_usleep(3000000);
 
     //this will stop item2 because of policy
-    //gc_sound_item_play(item3);
-    //gc_sound_object_destroy(GC_SOUND_OBJECT(gcchan2));
+    gc_sound_item_play(item3);
+    gc_sound_object_destroy(GC_SOUND_OBJECT(gcchan2));
 
     gc_sound_object_destroy(GC_SOUND_OBJECT(item1));
     g_usleep(3000000);

@@ -1,3 +1,78 @@
+2006-12-09  Yves Combe <yves@ycombe.net>
+
+	Python bindings:
+	- change names from GCSound to GcSound, and names in SoundPolicy enum
+	  (uses h2py and glib-mkenums)
+	- add bindings for python.
+
+	* INSTALL:
+	* Makefile.am:
+	* aclocal.m4:
+	* compile:
+	* configure.in:
+	* depcomp:
+	* install-sh:
+	* missing:
+	* python/Makefile.am:
+	* python/gc_sound.defs:
+	* python/gc_sound.override:
+	* python/gc_sound_module.c: (initgc_sound):
+	* src/Makefile.am:
+	* src/gc-sound-channel.c: (gc_sound_channel_play_item),
+	(gc_sound_channel_get_root), (gc_sound_channel_pause),
+	(gc_sound_channel_resume), (gc_sound_channel_halt),
+	(gc_sound_channel_get_policy), (gc_sound_channel_set_policy),
+	(gc_sound_channel_play), (root_destroyed),
+	(gc_sound_channel_destroy), (gc_sound_channel_init),
+	(gc_sound_channel_get_property), (gc_sound_channel_set_property),
+	(gc_sound_channel_signal_chunk_end), (gc_sound_channel_signal_run),
+	(gc_sound_channel_class_init):
+	* src/gc-sound-channel.h:
+	* src/gc-sound-item.c: (gc_sound_item_run_next),
+	(gc_sound_item_set_loop), (gc_sound_item_get_policy),
+	(gc_sound_item_set_policy), (gc_sound_item_child_start),
+	(gc_sound_item_child_end), (gc_sound_item_child_destroyed),
+	(gc_sound_item_append_child), (gc_sound_item_play),
+	(gc_sound_item_set_filename), (gc_sound_item_get_filename),
+	(gc_sound_item_signal_real_play), (gc_sound_item_signal_play_end),
+	(gc_sound_item_signal_play_start),
+	(gc_sound_item_signal_chunk_end),
+	(gc_sound_item_signal_chunk_start), (gc_sound_item_init),
+	(gc_sound_item_get_property), (gc_sound_item_set_property),
+	(gc_sound_item_class_init)	* src/gc-sound-item.h:
+	* src/gc-sound-mixer-SDL.c: (gc_sound_mixer_sdl_new),
+	(gc_sound_mixer_sdl_open_audio), (gc_sound_mixer_sdl_close_audio),
+	(reset_channel_number), (channel_destroyed),
+	(gc_sound_mixer_sdl_new_channel), (gc_sound_mixer_sdl_pause),
+	(gc_sound_mixer_sdl_resume), (gc_sound_mixer_sdl_halt),
+	(gc_sound_mixer_sdl_pause_channel),
+	(gc_sound_mixer_sdl_resume_channel),
+	(gc_sound_mixer_sdl_halt_channel), (gc_sound_mixer_sdl_play_item),
+	(channel_finished_cb), (gc_sound_mixer_sdl_channel_finished),
+	(gc_sound_mixer_sdl_init), (gc_sound_mixer_sdl_finalize),
+	(gc_sound_mixer_sdl_destroy), (gc_sound_mixer_sdl_get_property),
+	(gc_sound_mixer_sdl_set_property), (gc_sound_mixer_sdl_class_init),
+	(gc_init_sound_mixer):
+	* src/gc-sound-mixer-SDL.h:
+	* src/gc-sound-mixer-private.h:
+	* src/gc-sound-mixer.c: (gc_sound_mixer_open_audio),
+	(gc_sound_mixer_close_audio), (gc_sound_mixer_new_channel),
+	(gc_sound_mixer_pause), (gc_sound_mixer_resume),
+	(gc_sound_mixer_halt), (gc_sound_mixer_pause_channel),
+	(gc_sound_mixer_resume_channel), (gc_sound_mixer_halt_channel),
+	(gc_sound_mixer_play_item), (gc_sound_mixer_get_type):
+	* src/gc-sound-mixer.h:
+	* src/gc-sound-object.c: (gc_sound_object_get_type),
+	(gc_sound_object_base_class_init),
+	(gc_sound_object_base_class_finalize),
+	(gc_sound_object_class_init), (gc_sound_object_init),
+	(gc_sound_object_destroy), (gc_sound_object_dispose),
+	(gc_sound_object_real_destroy), (gc_sound_object_finalize),
+	(parent_destroyed):
+	* src/gc-sound-object.h:
+	* src/gc-sound.h:
+	* src/test_gc_sound.c: (finish), (start), (main):
+
 2006-12-08  Yves Combe <yves@ycombe.net>
 
 	Work on destroy recursive on mixer-SDL/channel/item

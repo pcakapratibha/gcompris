@@ -36,7 +36,7 @@ enum {
 
 guint gc_sound_channel_signals[N_SIGNALS] = {0};
 
-gboolean                gc_sound_channel_play_item     (GCSoundChannel * self, GCSoundItem *item)
+gboolean                gc_sound_channel_play_item     (GcSoundChannel * self, GcSoundItem *item)
 {
   self->running_sample = item;
   self->stopped = FALSE;
@@ -44,58 +44,58 @@ gboolean                gc_sound_channel_play_item     (GCSoundChannel * self, G
   return gc_sound_mixer_play_item (GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self, item);
 }
 
-GCSoundItem *           gc_sound_channel_get_root     (GCSoundChannel * self)
+GcSoundItem *           gc_sound_channel_get_root     (GcSoundChannel * self)
 {
   return self->root;
 }
 
-gboolean                gc_sound_channel_pause        (GCSoundChannel * self)
+gboolean                gc_sound_channel_pause        (GcSoundChannel * self)
 {
   return gc_sound_mixer_pause_channel( GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self);
 }
 
-gboolean                gc_sound_channel_resume       (GCSoundChannel * self)
+gboolean                gc_sound_channel_resume       (GcSoundChannel * self)
 {
   return gc_sound_mixer_resume_channel( GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self);
 }
 
-gboolean                gc_sound_channel_halt         (GCSoundChannel * self)
+gboolean                gc_sound_channel_halt         (GcSoundChannel * self)
 {
   return gc_sound_mixer_halt_channel(GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self);
 }
 
-GCSoundPolicy           gc_sound_channel_get_policy   (GCSoundChannel * self)
+GcSoundPolicy           gc_sound_channel_get_policy   (GcSoundChannel * self)
 {
   return self->policy;
 }
-gboolean                gc_sound_channel_set_policy   (GCSoundChannel * self,
-						 GCSoundPolicy  policy)
+gboolean                gc_sound_channel_set_policy   (GcSoundChannel * self,
+						 GcSoundPolicy  policy)
 {
   self->policy = policy;
   return TRUE;
 }
 
-gboolean                gc_sound_channel_play         (GCSoundChannel *self, 
-						 GCSoundItem *item)
+gboolean                gc_sound_channel_play         (GcSoundChannel *self, 
+						 GcSoundItem *item)
 {
-      GCSoundPolicy policy;
+      GcSoundPolicy policy;
 
       /* item policy if it's set */
-      if (gc_sound_item_get_policy(item) == GC_SOUND_POLICY_NONE)
+      if (gc_sound_item_get_policy(item) == NONE)
          policy = self->policy;
       else
          policy = gc_sound_item_get_policy(item);
 
       switch (policy) {
-        case GC_SOUND_PLAY_ONLY_IF_IDLE:
+        case PLAY_ONLY_IF_IDLE:
              if (self->running_sample || g_list_length (self->playlist)>0)
-                return;
+                return FALSE;
 	     self->playlist = g_list_append (self->playlist, item);
 	     // TODO send a signal to run !!! 
 	     g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
              break;
 
-      case GC_SOUND_INTERRUPT_AND_PLAY:
+      case INTERRUPT_AND_PLAY:
 	g_list_free (self->playlist);
 	self->playlist = NULL;
 	self->playlist = g_list_append (self->playlist, item);
@@ -112,7 +112,7 @@ gboolean                gc_sound_channel_play         (GCSoundChannel *self,
 	  g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
 	break;
       }
-
+      return TRUE;
 }
 
 /* GType stuff */
@@ -123,9 +123,9 @@ enum {
 
 
 /* GType */
-G_DEFINE_TYPE(GCSoundChannel, gc_sound_channel, GC_TYPE_SOUND_OBJECT);
+G_DEFINE_TYPE(GcSoundChannel, gc_sound_channel, GC_TYPE_SOUND_OBJECT);
 
-static void root_destroyed (GCSoundObject *root, gpointer data)
+static void root_destroyed (GcSoundObject *root, gpointer data)
 {
   // direct call claas destroy because root is already destroyed.
 
@@ -133,7 +133,7 @@ static void root_destroyed (GCSoundObject *root, gpointer data)
 }
 
 static void
-gc_sound_channel_destroy (GCSoundChannel *self){
+gc_sound_channel_destroy (GcSoundChannel *self){
   g_signal_handlers_disconnect_by_func(self->root, root_destroyed, self);
   gc_sound_object_destroy(GC_SOUND_OBJECT(self->root));
   g_object_unref(self->root);
@@ -142,13 +142,13 @@ gc_sound_channel_destroy (GCSoundChannel *self){
 }
 
 static void
-gc_sound_channel_init(GCSoundChannel* self) 
+gc_sound_channel_init(GcSoundChannel* self) 
 {
   // initialisation des variables.
   //g_warning("gc_sound_channel_init");
 
   self->volume = 1.0;
-  self->policy = GC_SOUND_PLAY_AFTER_CURRENT;
+  self->policy = PLAY_AFTER_CURRENT;
   
   self->stopped = FALSE;
 
@@ -171,7 +171,7 @@ gc_sound_channel_init(GCSoundChannel* self)
 static void
 gc_sound_channel_get_property(GObject* object, guint prop_id, GValue* value, GParamSpec* pspec) 
 {
-  GCSoundChannel *self = GC_SOUND_CHANNEL(object);
+  GcSoundChannel *self = GC_SOUND_CHANNEL(object);
   switch(prop_id) {
   default:
     G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
@@ -182,7 +182,7 @@ gc_sound_channel_get_property(GObject* object, guint prop_id, GValue* value, GPa
 static void
 gc_sound_channel_set_property(GObject* object, guint prop_id, GValue const* value, GParamSpec* pspec) 
 {
-  GCSoundChannel *self = GC_SOUND_CHANNEL(object);
+  GcSoundChannel *self = GC_SOUND_CHANNEL(object);
 
   switch(prop_id) {
   default:
@@ -193,9 +193,9 @@ gc_sound_channel_set_property(GObject* object, guint prop_id, GValue const* valu
 }
 
 static void
-gc_sound_channel_signal_chunk_end (GCSoundChannel *self)
+gc_sound_channel_signal_chunk_end (GcSoundChannel *self)
 {
-  GCSoundItem *chunk = self->running_sample;
+  GcSoundItem *chunk = self->running_sample;
 
   self->running_sample = NULL;
 
@@ -205,7 +205,7 @@ gc_sound_channel_signal_chunk_end (GCSoundChannel *self)
 }
 
 static void
-gc_sound_channel_signal_run (GCSoundChannel *self)
+gc_sound_channel_signal_run (GcSoundChannel *self)
 {
   GList *item_root;
   gboolean ret;
@@ -222,7 +222,7 @@ gc_sound_channel_signal_run (GCSoundChannel *self)
 }
 
 static void
-gc_sound_channel_class_init(GCSoundChannelClass* self_class) 
+gc_sound_channel_class_init(GcSoundChannelClass* self_class) 
 {
   // c'est ici qu'il faut passer les properties et les signals.
   // g_warning("gc_sound_channel_class_init");
@@ -257,7 +257,7 @@ gc_sound_channel_class_init(GCSoundChannelClass* self_class)
     g_signal_new("run", /* name */
 		 GC_TYPE_SOUND_CHANNEL, /* itype */
 		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		 G_STRUCT_OFFSET (GCSoundChannelClass, run), /* offset function */ 
+		 G_STRUCT_OFFSET (GcSoundChannelClass, run), /* offset function */ 
 		 NULL,  /* accumulator */ 
 		 NULL,  /* accu data */
 		 gc_sound_marshal_VOID__VOID, /* marshal */
@@ -269,7 +269,7 @@ gc_sound_channel_class_init(GCSoundChannelClass* self_class)
     g_signal_new("chunk_end", /* name */
 		 GC_TYPE_SOUND_CHANNEL, /* itype */
 		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		 G_STRUCT_OFFSET (GCSoundChannelClass, chunk_end), /* offset function */ 
+		 G_STRUCT_OFFSET (GcSoundChannelClass, chunk_end), /* offset function */ 
 		 NULL,  /* accumulator */ 
 		 NULL,  /* accu data */
 		 gc_sound_marshal_VOID__BOOLEAN, /* marshal */

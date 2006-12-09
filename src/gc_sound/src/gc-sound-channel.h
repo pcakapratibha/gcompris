@@ -24,15 +24,15 @@
 
 G_BEGIN_DECLS
 
-typedef struct _GCSoundChannel GCSoundChannel;
-typedef struct _GCSoundChannelClass GCSoundChannelClass;
+typedef struct _GcSoundChannel GcSoundChannel;
+typedef struct _GcSoundChannelClass GcSoundChannelClass;
 
 typedef enum {
-        GC_SOUND_POLICY_NONE,
-        GC_SOUND_PLAY_ONLY_IF_IDLE,
-        GC_SOUND_PLAY_AFTER_CURRENT,
-        GC_SOUND_INTERRUPT_AND_PLAY
-} GCSoundPolicy;
+        NONE,
+        PLAY_ONLY_IF_IDLE,
+        PLAY_AFTER_CURRENT,
+        INTERRUPT_AND_PLAY
+} GcSoundPolicy;
 
 G_END_DECLS
 
@@ -44,59 +44,59 @@ G_END_DECLS
 G_BEGIN_DECLS
 
 #define GC_TYPE_SOUND_CHANNEL         (gc_sound_channel_get_type())
-#define GC_SOUND_CHANNEL(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), GC_TYPE_SOUND_CHANNEL, GCSoundChannel))
-#define GC_SOUND_CHANNEL_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), GC_TYPE_SOUND_CHANNEL, GCSoundChannelClass))
+#define GC_SOUND_CHANNEL(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), GC_TYPE_SOUND_CHANNEL, GcSoundChannel))
+#define GC_SOUND_CHANNEL_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), GC_TYPE_SOUND_CHANNEL, GcSoundChannelClass))
 #define GC_IS_SOUND_CHANNEL(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), GC_TYPE_SOUND_CHANNEL))
 #define GC_IS_SOUND_CHANNEL_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), GC_TYPE_SOUND_CHANNEL))
-#define GC_SOUND_CHANNEL_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), GC_TYPE_SOUND_CHANNEL, GCSoundChannelClass))
+#define GC_SOUND_CHANNEL_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), GC_TYPE_SOUND_CHANNEL, GcSoundChannelClass))
 
 GType gc_sound_channel_get_type(void);
 
-struct _GCSoundChannel {
-  GCSoundObject         __parent__;
+struct _GcSoundChannel {
+  GcSoundObject         __parent__;
 
   gdouble            volume;
-  GCSoundPolicy policy;
+  GcSoundPolicy policy;
   //gint            policy;
 
   gboolean stopped;
 
-  GCSoundMixer*   mixer;
-  GCSoundItem*    root;
+  GcSoundMixer*   mixer;
+  GcSoundItem*    root;
 
   GList* playlist;
   //this one is the item with the file
-  GCSoundItem*    running_sample;
+  GcSoundItem*    running_sample;
   // this one is the group playing
   GList*    running_root;
 
   gint channel_number;
 };
 
-struct _GCSoundChannelClass {
-  GCSoundObjectClass   __parentClass__;
+struct _GcSoundChannelClass {
+  GcSoundObjectClass   __parentClass__;
 
   /* signal handlers */
-  void        (* run)               (GCSoundChannel * self);
-  void        (* chunk_end)         (GCSoundChannel * self);
-  void        (* destroy)            (GCSoundChannel *self);
+  void        (* run)               (GcSoundChannel * self);
+  void        (* chunk_end)         (GcSoundChannel * self);
+  void        (* destroy)            (GcSoundChannel *self);
 };
 
-GCSoundItem *           gc_sound_channel_get_root     (GCSoundChannel * self);
+GcSoundItem *           gc_sound_channel_get_root     (GcSoundChannel * self);
 
-gboolean                gc_sound_channel_pause        (GCSoundChannel * self);
-gboolean                gc_sound_channel_resume       (GCSoundChannel * self);
-gboolean                gc_sound_channel_halt         (GCSoundChannel * self);
+gboolean                gc_sound_channel_pause        (GcSoundChannel * self);
+gboolean                gc_sound_channel_resume       (GcSoundChannel * self);
+gboolean                gc_sound_channel_halt         (GcSoundChannel * self);
 
-gboolean                gc_sound_channel_play         (GCSoundChannel * channel, 
-						 GCSoundItem *item);
+gboolean                gc_sound_channel_play         (GcSoundChannel * channel, 
+						 GcSoundItem *item);
 
-gboolean                gc_sound_channel_play_item     (GCSoundChannel * self, 
-						  GCSoundItem *item);
+gboolean                gc_sound_channel_play_item     (GcSoundChannel * self, 
+						  GcSoundItem *item);
 
-GCSoundPolicy           gc_sound_channel_get_policy   (GCSoundChannel * self);
-gboolean                gc_sound_channel_set_policy   (GCSoundChannel * self,
-                                                       GCSoundPolicy  policy);
+GcSoundPolicy           gc_sound_channel_get_policy   (GcSoundChannel * self);
+gboolean                gc_sound_channel_set_policy   (GcSoundChannel * self,
+                                                       GcSoundPolicy  policy);
 
 G_END_DECLS
 

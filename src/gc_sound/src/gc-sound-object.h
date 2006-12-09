@@ -24,15 +24,15 @@
 
 G_BEGIN_DECLS
 
-typedef struct _GCSoundObject	GCSoundObject;
-typedef struct _GCSoundObjectClass	GCSoundObjectClass;
+typedef struct _GcSoundObject	GcSoundObject;
+typedef struct _GcSoundObjectClass	GcSoundObjectClass;
 
 #define GC_TYPE_SOUND_OBJECT         (gc_sound_object_get_type())
-#define GC_SOUND_OBJECT(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), GC_TYPE_SOUND_OBJECT, GCSoundObject))
-#define GC_SOUND_OBJECT_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), GC_TYPE_SOUND_OBJECT, GCSoundObjectClass))
+#define GC_SOUND_OBJECT(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), GC_TYPE_SOUND_OBJECT, GcSoundObject))
+#define GC_SOUND_OBJECT_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), GC_TYPE_SOUND_OBJECT, GcSoundObjectClass))
 #define GC_IS_SOUND_OBJECT(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), GC_TYPE_SOUND_OBJECT))
 #define GC_IS_SOUND_OBJECT_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), GC_TYPE_SOUND_OBJECT))
-#define GC_SOUND_OBJECT_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), GC_TYPE_SOUND_OBJECT, GCSoundObjectClass))
+#define GC_SOUND_OBJECT_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), GC_TYPE_SOUND_OBJECT, GcSoundObjectClass))
 
 GType gc_sound_object_get_type(void);
 
@@ -40,7 +40,7 @@ GType gc_sound_object_get_type(void);
 typedef enum
 {
   GC_SOUND_IN_DESTRUCTION	= 1 << 0, /* Used internally during dispose */
-} GCSoundObjectFlags;
+} GcSoundObjectFlags;
 
 #define GC_SOUND_OBJECT_FLAGS(obj)		  (GC_SOUND_OBJECT (obj)->flags)
 /* Macros for setting and clearing bits in the object_flags field of GtkObject.
@@ -48,26 +48,26 @@ typedef enum
 #define GC_SOUND_OBJECT_SET_FLAGS(obj,flag)	  G_STMT_START{ (GC_SOUND_OBJECT_FLAGS (obj) |= (flag)); }G_STMT_END
 #define GC_SOUND_OBJECT_UNSET_FLAGS(obj,flag)  G_STMT_START{ (GC_SOUND_OBJECT_FLAGS (obj) &= ~(flag)); }G_STMT_END
 
-struct _GCSoundObject {
+struct _GcSoundObject {
   GInitiallyUnowned __parent__;
 
   guint32 flags;
 
   // NULL on mixer; mixer on channel,; prent item on item
-  GCSoundObject *parent;
+  GcSoundObject *parent;
   gboolean destroy_with_parent;
 
   //debug
   gchar *nick;
 };
 
-struct _GCSoundObjectClass {
+struct _GcSoundObjectClass {
   GInitiallyUnownedClass base_class;
 
-  void (*destroy)  (GCSoundObject *object);
+  void (*destroy)  (GcSoundObject *object);
 };
 
-void     gc_sound_object_destroy (GCSoundObject *object);
+void     gc_sound_object_destroy (GcSoundObject *object);
 
 G_END_DECLS
 

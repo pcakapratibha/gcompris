@@ -24,3 +24,4 @@
 #include <gc-sound-mixer-SDL.h>
 #include <gc-sound-channel.h>
 #include <gc-sound-item.h>
+#include <gc-sound-enumerations.h>

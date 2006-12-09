@@ -3,6 +3,8 @@ AC_INIT([GCompris Sound library], [2.0],
         [gc_sound])
 AM_INIT_AUTOMAKE
 
+AM_ACLOCAL_INCLUDE(macros)
+
 dnl Don't let libtool check for these
 CXX=no
 F77=no
@@ -46,6 +48,74 @@ fi
 
 AC_CHECK_LIB(SDL_mixer, Mix_OpenAudio,, AC_MSG_ERROR([*** SDL_mixer not found. Visit http://www.libsdl.org and get it]))
 
+AC_MSG_CHECKING([for glib-genmarshal])
+GLIB_GENMARSHAL=`pkg-config --variable=glib_genmarshal glib-2.0`
+AC_SUBST(GLIB_GENMARSHAL)
+AC_MSG_RESULT($GLIB_GENMARSHAL)
+
+AC_MSG_CHECKING([for glib-mkenums])
+GLIB_MKENUMS=`pkg-config --variable=glib_mkenums glib-2.0`
+AC_SUBST(GLIB_MKENUMS)
+AC_MSG_RESULT($GLIB_MKENUMS)
+
+dnl  -----------------
+dnl | Python bindings |-------------------------------------------------------
+dnl  -----------------
+
+dnl required versions of other packages
+m4_define(pygtk_required_major_version, 2)
+m4_define(pygtk_required_minor_version, 8)
+m4_define(pygtk_required_micro_version, 0)
+m4_define(pygtk_required_version, pygtk_required_major_version.pygtk_required_minor_version.pygtk_required_micro_version)
+m4_define(gtk_required_version,               2.8.0)
+
+dnl Define pygtk required version, for runtime check
+AC_DEFINE(PYGTK_REQUIRED_MAJOR_VERSION, pygtk_required_major_version, [PyGTK required major version])
+AC_DEFINE(PYGTK_REQUIRED_MINOR_VERSION, pygtk_required_minor_version, [PyGTK required minor version])
+AC_DEFINE(PYGTK_REQUIRED_MICRO_VERSION, pygtk_required_micro_version, [PyGTK required micro version])
+
+dnl check for python
+AM_PATH_PYTHON(2.2)
+AM_CHECK_PYTHON_HEADERS([have_python="yes"],[have_python="no"])
+
+if test x$have_python = xno; then
+  AC_MSG_NOTICE([Python binding is disabled.])
+else
+
+ dnl check for pygtk
+ PKG_CHECK_MODULES(PYGTK, pygtk-2.0 >= pygtk_required_version,[
+		 have_python="yes"
+		 AC_MSG_RESULT(okay)
+		 ],[
+		 have_python="no"
+		 AC_MSG_RESULT(not found)
+		 ])
+ if test x$have_python = xyes; then
+    AC_SUBST(PYGTK_CFLAGS)
+   AC_PATH_PROG(PYGTK_CODEGEN, pygtk-codegen-2.0, no)
+   if test "x$PYGTK_CODEGEN" = xno; then
+     AC_MSG_NOTICE(could not find pygtk-codegen-2.0 script, Python binding is disabled.)
+     have_python="no"
+   fi
+
+   if test x$have_python = xyes; then
+    AC_MSG_CHECKING(for pygtk defs)
+    PYGTK_DEFSDIR=`$PKG_CONFIG --variable=defsdir pygtk-2.0`
+    AC_SUBST(PYGTK_DEFSDIR)
+    AC_MSG_RESULT($PYGTK_DEFSDIR)
+   fi
+ fi
+
+dnl required version substitutions for use in the spec file
+PYGTK_VERSION=pygtk_required_version
+GTK_VERSION=gtk_required_version
+
+fi
+
+AM_CONDITIONAL(WITH_PYTHON,[test "x$have_python" = "xyes"])
+
+
 AC_OUTPUT([Makefile
 src/Makefile
+python/Makefile
 ])

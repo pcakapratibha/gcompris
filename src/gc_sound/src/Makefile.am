@@ -3,13 +3,13 @@
 #
 lib_LTLIBRARIES = libgcsound-2.la
 
-libgcsound_2_la_CFLAGS= $(SDL_CFLAGS) $(SDL_MIXER_CFLAGS) $(GC_SOUND_CFLAGS)
+libgcsound_2_la_CFLAGS= $(SDL_CFLAGS) $(GC_SOUND_CFLAGS)
 
-libgcsound_2_la_LDFLAGS= $(SDL_LIBS)  $(SDL_MIXER_LIBS) $(GC_SOUND_LIBS)
+libgcsound_2_la_LDFLAGS= $(SDL_LIBS)  $(GC_SOUND_LIBS)
 
 libgcsoundincludedir = $(includedir)/gcompris/gcsound
 
-libgcsoundinclude_HEADERS = \
+static_headers = \
 	gc-sound.h \
 	gc-sound-object.h\
 	gc-sound-mixer.h \
@@ -17,6 +17,13 @@ libgcsoundinclude_HEADERS = \
 	gc-sound-channel.h \
 	gc-sound-marshallers.h \
 	gc-sound-item.h
+
+build_headers = \
+	gc-sound-enumerations.h
+
+libgcsoundinclude_HEADERS = \
+	$(static_headers) \
+	$(build_headers)
 
 libgcsound_PRIVATE = 
 # \
@@ -32,6 +39,7 @@ libgcsound_2_la_SOURCES = \
 	gc-sound-mixer.c \
 	gc-sound-mixer-SDL.c \
 	gc-sound-marshallers.c \
+	gc-sound-enumerations.c \
 	gc-sound-channel.c \
 	gc-sound-item.c
 
@@ -63,20 +71,20 @@ gc-sound-marshallers.c: $(srcdir)/marshallers.list $(srcdir)/Makefile
 	&& (cmp -s xgen-cmc $@ || (echo "Creating $@..."; cp xgen-cmc $@) ) \
 	&& rm -f xgen-cmc
 
-# gc-sound-enumerations.h: $(static_headers) Makefile gc-sound-enumerations.h.in
-# 	@( cd $(srcdir) && $(GLIB_MKENUMS) --template gc-sound-enumerations.h.in \
-# 	   $(gc_sound_HEADERS) ) > xgen-gtbh \
-# 	&& (cmp -s xgen-gtbh $@ || (echo "Creating $@..."; cp xgen-gtbh $@) ) \
-# 	&& rm -f xgen-gtbh
+gc-sound-enumerations.h: $(static_headers) Makefile gc-sound-enumerations.h.in
+	@( cd $(srcdir) && $(GLIB_MKENUMS) --template gc-sound-enumerations.h.in \
+	$(static_headers) ) > xgen-gtbh \
+	&& (cmp -s xgen-gtbh $@ || (echo "Creating $@..."; cp xgen-gtbh $@) ) \
+	&& rm -f xgen-gtbh
 
-# gc-sound-enumerations.c: $(static_headers) Makefile gc-sound-enumerations.c.in
-# 	@( cd $(srcdir) && $(GLIB_MKENUMS) --template gc-sound-enumerations.c.in \
-# 	   $(gc_sound_HEADERS) ) >> xgen-gtbc \
-# 	&& (cmp -s xgen-gtbc $@ || (echo "Creating $@..."; cp xgen-gtbc $@) ) \
-# 	&& rm -f xgen-gtbc
+gc-sound-enumerations.c: $(libgcsoundinclude_HEADERS) Makefile gc-sound-enumerations.c.in
+	@( cd $(srcdir) && $(GLIB_MKENUMS) --template gc-sound-enumerations.c.in \
+	   $(libgcsoundinclude_HEADERS) ) >> xgen-gtbc \
+	&& (cmp -s xgen-gtbc $@ || (echo "Creating $@..."; cp xgen-gtbc $@) ) \
+	&& rm -f xgen-gtbc
 
-#	gc-sound-enumerations.c.in \
-#	gc-sound-enumerations.h.in \
 EXTRA_DIST=\
-	marshallers.list \
-	$(NULL)
+	gc-sound-enumerations.h.in \
+	gc-sound-enumerations.c.in \
+	marshallers.list
+

@@ -25,8 +25,8 @@
 G_BEGIN_DECLS
 
 
-typedef struct _GCSoundItem GCSoundItem;
-typedef struct _GCSoundItemClass GCSoundItemClass;
+typedef struct _GcSoundItem GcSoundItem;
+typedef struct _GcSoundItemClass GcSoundItemClass;
 
 
 G_END_DECLS
@@ -36,28 +36,28 @@ G_BEGIN_DECLS
 
 
 #define GC_TYPE_SOUND_ITEM         (gc_sound_item_get_type())
-#define GC_SOUND_ITEM(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), GC_TYPE_SOUND_ITEM, GCSoundItem))
-#define GC_SOUND_ITEM_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), GC_TYPE_SOUND_ITEM, GCSoundItemClass))
+#define GC_SOUND_ITEM(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), GC_TYPE_SOUND_ITEM, GcSoundItem))
+#define GC_SOUND_ITEM_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), GC_TYPE_SOUND_ITEM, GcSoundItemClass))
 #define GC_IS_SOUND_ITEM(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), GC_TYPE_SOUND_ITEM))
 #define GC_IS_SOUND_ITEM_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), GC_TYPE_SOUND_ITEM))
-#define GC_SOUND_ITEM_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), GC_TYPE_SOUND_ITEM, GCSoundItemClass))
+#define GC_SOUND_ITEM_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), GC_TYPE_SOUND_ITEM, GcSoundItemClass))
 
 GType gc_sound_item_get_type(void);
 
-struct _GCSoundItem {
-  GCSoundObject         __parent__;
+struct _GcSoundItem {
+  GcSoundObject         __parent__;
 
   gdouble         volume;
   gboolean        mute;
 
-  GCSoundPolicy policy;
+  GcSoundPolicy policy;
   //gint            policy;
   gboolean        loop;
 
   gchar*          filename;
 
-  GCSoundChannel* channel;
-  GCSoundItem*    parent;
+  GcSoundChannel* channel;
+  GcSoundItem*    parent;
   GList*          children;
 
   //internal use
@@ -71,31 +71,31 @@ struct _GCSoundItem {
   GList *playing;
 };
 
-struct _GCSoundItemClass {
-  GCSoundObjectClass   __parentClass__;
+struct _GcSoundItemClass {
+  GcSoundObjectClass   __parentClass__;
 
   /* signal handlers */
-  void        (* real_play)         (GCSoundItem * self);
-  void        (* play_start)         (GCSoundItem * self);
-  void        (* play_end)         (GCSoundItem * self, gboolean stopped);
-  void        (* chunk_start)         (GCSoundItem * self);
-  void        (* chunk_end)         (GCSoundItem * self, gboolean stopped);
+  void        (* real_play)         (GcSoundItem * self);
+  void        (* play_start)         (GcSoundItem * self);
+  void        (* play_end)         (GcSoundItem * self, gboolean stopped);
+  void        (* chunk_start)         (GcSoundItem * self);
+  void        (* chunk_end)         (GcSoundItem * self, gboolean stopped);
 
 };
 
 // internal use
-gboolean        gc_sound_item_run_next (GCSoundItem *self, 
+gboolean        gc_sound_item_run_next (GcSoundItem *self, 
                                         gboolean stopped);
 
-GCSoundItem *   gc_sound_item_append_child (GCSoundItem *self);
+GcSoundItem *   gc_sound_item_append_child (GcSoundItem *self);
 
-gboolean        gc_sound_item_play (GCSoundItem *self);
+gboolean        gc_sound_item_play (GcSoundItem *self);
 
-void            gc_sound_item_set_filename (GCSoundItem *self, gchar *filename);
+void            gc_sound_item_set_filename (GcSoundItem *self, gchar *filename);
 
-gchar *         gc_sound_item_get_filename (GCSoundItem *self);
+gchar *         gc_sound_item_get_filename (GcSoundItem *self);
 
-void            gc_sound_item_set_loop(GCSoundItem *self, gboolean loop); 
+void            gc_sound_item_set_loop(GcSoundItem *self, gboolean loop); 
 
 G_END_DECLS
 

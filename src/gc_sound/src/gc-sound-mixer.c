@@ -20,21 +20,21 @@
 #include <gc-sound-mixer-SDL.h>
 
 gboolean
-gc_sound_mixer_open_audio  (GCSoundMixer * self)
+gc_sound_mixer_open_audio  (GcSoundMixer * self)
 {
   return GC_SOUND_MIXER_GET_CLASS(self)->open_audio (self);
 }
 
 gboolean
-gc_sound_mixer_close_audio  (GCSoundMixer * self)
+gc_sound_mixer_close_audio  (GcSoundMixer * self)
 {
   return GC_SOUND_MIXER_GET_CLASS(self)->close_audio (self);
 }
 
-GCSoundChannel *
-gc_sound_mixer_new_channel (GCSoundMixer * self)
+GcSoundChannel *
+gc_sound_mixer_new_channel (GcSoundMixer * self)
 {
-  g_return_val_if_fail (GC_IS_SOUND_MIXER_SDL (self), (GCSoundChannel * )NULL);
+  g_return_val_if_fail (GC_IS_SOUND_MIXER_SDL (self), (GcSoundChannel * )NULL);
   g_assert (GC_SOUND_MIXER_GET_CLASS(self)->new_channel != 0);
 
   return GC_SOUND_MIXER_GET_CLASS(self)->new_channel (self);
@@ -42,44 +42,44 @@ gc_sound_mixer_new_channel (GCSoundMixer * self)
 
 
 gboolean
-gc_sound_mixer_pause  (GCSoundMixer * self)
+gc_sound_mixer_pause  (GcSoundMixer * self)
 {
   return GC_SOUND_MIXER_GET_CLASS(self)->pause (self);
 }
 
 
 gboolean
-gc_sound_mixer_resume  (GCSoundMixer * self)
+gc_sound_mixer_resume  (GcSoundMixer * self)
 {
   return GC_SOUND_MIXER_GET_CLASS(self)->resume (self);
 }
 
 gboolean
-gc_sound_mixer_halt  (GCSoundMixer * self)
+gc_sound_mixer_halt  (GcSoundMixer * self)
 {
   return GC_SOUND_MIXER_GET_CLASS(self)->halt (self);
 }
 
 gboolean
-gc_sound_mixer_pause_channel (GCSoundMixer * self, GCSoundChannel * channel)
+gc_sound_mixer_pause_channel (GcSoundMixer * self, GcSoundChannel * channel)
 {
   return GC_SOUND_MIXER_GET_CLASS(self)->pause_channel (self, channel);
 }
 
 gboolean
-gc_sound_mixer_resume_channel (GCSoundMixer * self, GCSoundChannel * channel)
+gc_sound_mixer_resume_channel (GcSoundMixer * self, GcSoundChannel * channel)
 {
    return GC_SOUND_MIXER_GET_CLASS(self)->resume_channel (self, channel);
 }
 
 gboolean
-gc_sound_mixer_halt_channel (GCSoundMixer * self, GCSoundChannel * channel)
+gc_sound_mixer_halt_channel (GcSoundMixer * self, GcSoundChannel * channel)
 {
    return GC_SOUND_MIXER_GET_CLASS(self)->halt_channel (self, channel);
 }
 
 gboolean
-gc_sound_mixer_play_item (GCSoundMixer * self, GCSoundChannel * channel, GCSoundItem *item)
+gc_sound_mixer_play_item (GcSoundMixer * self, GcSoundChannel * channel, GcSoundItem *item)
 {
    return GC_SOUND_MIXER_GET_CLASS(self)->play_item (self, channel, item);
 }
@@ -94,7 +94,7 @@ gc_sound_mixer_get_type (void)
   static GType type = 0;
   if (type == 0) {
     static const GTypeInfo info = {
-      sizeof (GCSoundMixerIface),
+      sizeof (GcSoundMixerIface),
       NULL,   /* base_init */
       NULL,   /* base_finalize */
       (GClassInitFunc) gc_sound_mixer_iface_init,   /* class_init */
@@ -104,7 +104,7 @@ gc_sound_mixer_get_type (void)
       0,      /* n_preallocs */
       NULL    /* instance_init */
     };
-    type = g_type_register_static (G_TYPE_INTERFACE, "GCSoundMixer", &info, 0);
+    type = g_type_register_static (G_TYPE_INTERFACE, "GcSoundMixer", &info, 0);
     g_type_interface_add_prerequisite(type, G_TYPE_OBJECT);
   }
   return type;

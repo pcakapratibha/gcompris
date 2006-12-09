@@ -1,0 +1,287 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Mixer
+  (in-module "GcSound")
+  (c-name "GcSoundMixer")
+  (gtype-id "GC_TYPE_SOUND_MIXER")
+)
+
+(define-object Object
+  (in-module "GcSound")
+  (parent "GObject")
+  (c-name "GcSoundObject")
+  (gtype-id "GC_TYPE_SOUND_OBJECT")
+)
+
+(define-object MixerSdl
+  (in-module "GcSound")
+  (parent "GcSoundObject")
+  (c-name "GcSoundMixerSdl")
+  (gtype-id "GC_TYPE_SOUND_MIXER_SDL")
+)
+
+(define-object Item
+  (in-module "GcSound")
+  (parent "GcSoundObject")
+  (c-name "GcSoundItem")
+  (gtype-id "GC_TYPE_SOUND_ITEM")
+)
+
+(define-object Channel
+  (in-module "GcSound")
+  (parent "GcSoundObject")
+  (c-name "GcSoundChannel")
+  (gtype-id "GC_TYPE_SOUND_CHANNEL")
+)
+
+;; Enumerations and flags ...
+
+(define-enum SoundPolicy
+  (in-module "GcSound")
+  (c-name "GcSoundPolicy")
+  (gtype-id "GC_TYPE_SOUND_POLICY")
+  (values
+    '("none" "NONE")
+    '("play-only-if-idle" "PLAY_ONLY_IF_IDLE")
+    '("play-after-current" "PLAY_AFTER_CURRENT")
+    '("interrupt-and-play" "INTERRUPT_AND_PLAY")
+  )
+)
+
+;; From gc-sound-channel.h
+
+(define-method get_root
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_get_root")
+  (return-type "GcSoundItem*")
+)
+
+(define-method pause
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_pause")
+  (return-type "gboolean")
+)
+
+(define-method resume
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_resume")
+  (return-type "gboolean")
+)
+
+(define-method halt
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_halt")
+  (return-type "gboolean")
+)
+
+(define-method play
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_play")
+  (return-type "gboolean")
+  (parameters
+    '("GcSoundItem*" "item")
+  )
+)
+
+(define-method play_item
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_play_item")
+  (return-type "gboolean")
+  (parameters
+    '("GcSoundItem*" "item")
+  )
+)
+
+(define-method get_policy
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_get_policy")
+  (return-type "GcSoundPolicy")
+)
+
+(define-method set_policy
+  (of-object "GcSoundChannel")
+  (c-name "gc_sound_channel_set_policy")
+  (return-type "gboolean")
+  (parameters
+    '("GcSoundPolicy" "policy")
+  )
+)
+
+
+
+;; From gc-sound-enumerations.h
+
+(define-function gc_sound_object_flags_get_type
+  (c-name "gc_sound_object_flags_get_type")
+  (return-type "GType")
+)
+
+(define-function gc_sound_policy_get_type
+  (c-name "gc_sound_policy_get_type")
+  (return-type "GType")
+)
+
+
+
+;; From gc-sound.h
+
+
+
+;; From gc-sound-item.h
+
+(define-method append_child
+  (of-object "GcSoundItem")
+  (c-name "gc_sound_item_append_child")
+  (return-type "GcSoundItem*")
+)
+
+(define-method play
+  (of-object "GcSoundItem")
+  (c-name "gc_sound_item_play")
+  (return-type "gboolean")
+)
+
+(define-method set_filename
+  (of-object "GcSoundItem")
+  (c-name "gc_sound_item_set_filename")
+  (return-type "none")
+  (parameters
+    '("gchar*" "filename")
+  )
+)
+
+(define-method get_filename
+  (of-object "GcSoundItem")
+  (c-name "gc_sound_item_get_filename")
+  (return-type "gchar*")
+)
+
+(define-method set_loop
+  (of-object "GcSoundItem")
+  (c-name "gc_sound_item_set_loop")
+  (return-type "none")
+  (parameters
+    '("gboolean" "loop")
+  )
+)
+
+
+
+;; From gc-sound-marshallers.h
+
+
+
+;; From gc-sound-mixer.h
+
+(define-method open_audio
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_open_audio")
+  (return-type "gboolean")
+)
+
+(define-method close_audio
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_close_audio")
+  (return-type "gboolean")
+)
+
+(define-method new_channel
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_new_channel")
+  (return-type "GcSoundChannel*")
+)
+
+(define-method pause
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_pause")
+  (return-type "gboolean")
+)
+
+(define-method resume
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_resume")
+  (return-type "gboolean")
+)
+
+(define-method halt
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_halt")
+  (return-type "gboolean")
+)
+
+(define-method pause_channel
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_pause_channel")
+  (return-type "gboolean")
+  (parameters
+    '("GcSoundChannel*" "channel")
+  )
+)
+
+(define-method resume_channel
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_resume_channel")
+  (return-type "gboolean")
+  (parameters
+    '("GcSoundChannel*" "channel")
+  )
+)
+
+(define-method halt_channel
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_halt_channel")
+  (return-type "gboolean")
+  (parameters
+    '("GcSoundChannel*" "channel")
+  )
+)
+
+(define-method play_item
+  (of-object "GcSoundMixer")
+  (c-name "gc_sound_mixer_play_item")
+  (return-type "gboolean")
+  (parameters
+    '("GcSoundChannel*" "channel")
+    '("GcSoundItem*" "item")
+  )
+)
+
+
+
+;; From gc-sound-mixer-private.h
+
+
+
+;; From gc-sound-mixer-SDL.h
+
+(define-function gc_sound_mixer_sdl_get_type
+  (c-name "gc_sound_mixer_sdl_get_type")
+  (return-type "GType")
+)
+
+(define-function gc_sound_mixer_sdl_new
+  (c-name "gc_sound_mixer_sdl_new")
+  (is-constructor-of "GcSoundMixerSdl")
+  (return-type "GcSoundMixer*")
+)
+
+
+
+;; From gc-sound-object.h
+
+(define-function gc_sound_object_get_type
+  (c-name "gc_sound_object_get_type")
+  (return-type "GType")
+)
+
+(define-method destroy
+  (of-object "GcSoundObject")
+  (c-name "gc_sound_object_destroy")
+  (return-type "none")
+)
+
+
+
+;; From gobject-helpers.h
+
+

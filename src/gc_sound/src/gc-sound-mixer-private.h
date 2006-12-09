@@ -31,7 +31,7 @@
 extern "C" {
 #endif /* __cplusplus */
 
-struct _GCSoundMixerPrivate {
+struct _GcSoundMixerPrivate {
 #line 52 "gc-sound-mixer-SDL.gob"
 	int audio_buffers;
 #line 53 "gc-sound-mixer-SDL.gob"

@@ -40,7 +40,7 @@ enum {
 guint gc_sound_item_signals[N_SIGNALS] = {0};
 
 // internal use
-gboolean        gc_sound_item_run_next (GCSoundItem *self, 
+gboolean        gc_sound_item_run_next (GcSoundItem *self, 
                                         gboolean stopped)
 {
   gboolean ret;
@@ -93,25 +93,25 @@ gboolean        gc_sound_item_run_next (GCSoundItem *self,
   return FALSE;
 }
 
-void            gc_sound_item_set_loop(GCSoundItem *self, gboolean loop)
+void            gc_sound_item_set_loop(GcSoundItem *self, gboolean loop)
 {
   self->loop = loop;
 }
 
-GCSoundPolicy           gc_sound_item_get_policy   (GCSoundItem * self)
+GcSoundPolicy           gc_sound_item_get_policy   (GcSoundItem * self)
 {
   return self->policy;
 }
-gboolean                gc_sound_item_set_policy   (GCSoundItem * self,
-						    GCSoundPolicy  policy)
+gboolean                gc_sound_item_set_policy   (GcSoundItem * self,
+						    GcSoundPolicy  policy)
 {
   self->policy = policy;
   return TRUE;
 }
 
-void gc_sound_item_child_start( GCSoundItem *child, gpointer data)
+void gc_sound_item_child_start( GcSoundItem *child, gpointer data)
 {
-  GCSoundItem *self = GC_SOUND_ITEM(data);
+  GcSoundItem *self = GC_SOUND_ITEM(data);
 
   g_return_if_fail(GC_IS_SOUND_ITEM(self));
 
@@ -122,25 +122,25 @@ void gc_sound_item_child_start( GCSoundItem *child, gpointer data)
 
 }
 
-void gc_sound_item_child_end( GCSoundItem *child, gboolean stopped, gpointer data)
+void gc_sound_item_child_end( GcSoundItem *child, gboolean stopped, gpointer data)
 {
-  GCSoundItem *self = GC_SOUND_ITEM(data);
+  GcSoundItem *self = GC_SOUND_ITEM(data);
 
   if (self->has_played)
     gc_sound_item_run_next(self, stopped);
 }
 
-void gc_sound_item_child_destroyed( GCSoundItem *child, gpointer data)
+void gc_sound_item_child_destroyed( GcSoundItem *child, gpointer data)
 {
-  GCSoundItem *self = GC_SOUND_ITEM(data);
+  GcSoundItem *self = GC_SOUND_ITEM(data);
 
   self->children = g_list_remove ( self->children, child);
   g_object_unref (G_OBJECT(child));
 }
 
-GCSoundItem *   gc_sound_item_append_child (GCSoundItem *self)
+GcSoundItem *   gc_sound_item_append_child (GcSoundItem *self)
 {
-  GCSoundItem *child;
+  GcSoundItem *child;
 
   child = GC_SOUND_ITEM(g_object_new(GC_TYPE_SOUND_ITEM, 
 				     "parent", self, 
@@ -159,15 +159,15 @@ GCSoundItem *   gc_sound_item_append_child (GCSoundItem *self)
   return child;
 }
 
-gboolean        gc_sound_item_play (GCSoundItem *self)
+gboolean        gc_sound_item_play (GcSoundItem *self)
 {
   return gc_sound_channel_play (self->channel, self);
 }
 
-void            gc_sound_item_set_filename (GCSoundItem *self, gchar *filename)
+void            gc_sound_item_set_filename (GcSoundItem *self, gchar *filename)
 {
   if (filename) {
-    self->filename = filename;
+    self->filename = g_strdup(filename);
   
     if ( (!self->children) || (self != self->children->data))
       self->children = g_list_prepend( self->children, self);
@@ -178,20 +178,20 @@ void            gc_sound_item_set_filename (GCSoundItem *self, gchar *filename)
   }
 }
 
-gchar *         gc_sound_item_get_filename (GCSoundItem *self)
+gchar *         gc_sound_item_get_filename (GcSoundItem *self)
 {
   return self->filename;
 }
  
 static void
-gc_sound_item_signal_real_play (GCSoundItem *self)
+gc_sound_item_signal_real_play (GcSoundItem *self)
 {
   g_signal_emit(self, gc_sound_item_signals[CHUNK_START], 0);
   gc_sound_channel_play_item (self->channel, self);
 }
  
 static void
-gc_sound_item_signal_play_end (GCSoundItem *self, gboolean stopped)
+gc_sound_item_signal_play_end (GcSoundItem *self, gboolean stopped)
 {
   if (self->has_played || stopped) {
     self->started = FALSE;
@@ -201,13 +201,13 @@ gc_sound_item_signal_play_end (GCSoundItem *self, gboolean stopped)
 }
  
 static void
-gc_sound_item_signal_play_start (GCSoundItem *self)
+gc_sound_item_signal_play_start (GcSoundItem *self)
 {
   self->started = TRUE;
 }
  
 static void
-gc_sound_item_signal_chunk_end (GCSoundItem *self, gboolean stopped)
+gc_sound_item_signal_chunk_end (GcSoundItem *self, gboolean stopped)
 {
   /*
   We receive this signal from channel when play of chunk if finished.
@@ -218,7 +218,7 @@ gc_sound_item_signal_chunk_end (GCSoundItem *self, gboolean stopped)
 }
  
 static void
-gc_sound_item_signal_chunk_start (GCSoundItem *self)
+gc_sound_item_signal_chunk_start (GcSoundItem *self)
 {
   self->started = TRUE;
 }
@@ -231,16 +231,16 @@ enum {
 };
 
 /* GType */
-G_DEFINE_TYPE(GCSoundItem, gc_sound_item, GC_TYPE_SOUND_OBJECT);
+G_DEFINE_TYPE(GcSoundItem, gc_sound_item, GC_TYPE_SOUND_OBJECT);
 
 static void
-gc_sound_item_init(GCSoundItem* self) 
+gc_sound_item_init(GcSoundItem* self) 
 {
   // initialisation des variables.
   self->volume = -1.0;
   self->mute = FALSE;
 
-  self->policy = GC_SOUND_PLAY_AFTER_CURRENT;
+  self->policy = PLAY_AFTER_CURRENT;
   self->loop = FALSE;
 
   self->filename = NULL;
@@ -267,7 +267,7 @@ gc_sound_item_init(GCSoundItem* self)
 static void
 gc_sound_item_get_property(GObject* object, guint prop_id, GValue* value, GParamSpec* pspec) 
 {
-  GCSoundItem *self = GC_SOUND_ITEM(object);
+  GcSoundItem *self = GC_SOUND_ITEM(object);
   switch(prop_id) {
   case PROP_CHANNEL:
     g_value_set_object(value, self->channel);
@@ -284,7 +284,7 @@ gc_sound_item_get_property(GObject* object, guint prop_id, GValue* value, GParam
 static void
 gc_sound_item_set_property(GObject* object, guint prop_id, GValue const* value, GParamSpec* pspec) 
 {
-  GCSoundItem *self = GC_SOUND_ITEM(object);
+  GcSoundItem *self = GC_SOUND_ITEM(object);
 
   switch(prop_id) {
   case PROP_CHANNEL:
@@ -301,7 +301,7 @@ gc_sound_item_set_property(GObject* object, guint prop_id, GValue const* value, 
 }
 
 static void
-gc_sound_item_class_init(GCSoundItemClass* self_class) 
+gc_sound_item_class_init(GcSoundItemClass* self_class) 
 {
   // c'est ici qu'il faut passer les properties et les signals.
    GObjectClass* go_class;
@@ -344,7 +344,7 @@ gc_sound_item_class_init(GCSoundItemClass* self_class)
     g_signal_new("real_play", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
 		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		 G_STRUCT_OFFSET (GCSoundItemClass, real_play), /* offset function */
+		 G_STRUCT_OFFSET (GcSoundItemClass, real_play), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
 		 gc_sound_marshal_VOID__VOID, /* marshal */
@@ -355,7 +355,7 @@ gc_sound_item_class_init(GCSoundItemClass* self_class)
     g_signal_new("play_start", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
 		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		 G_STRUCT_OFFSET (GCSoundItemClass, play_start), /* offset function */
+		 G_STRUCT_OFFSET (GcSoundItemClass, play_start), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
 		 gc_sound_marshal_VOID__VOID, /* marshal */
@@ -366,7 +366,7 @@ gc_sound_item_class_init(GCSoundItemClass* self_class)
     g_signal_new("play_end", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
 		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		 G_STRUCT_OFFSET (GCSoundItemClass, play_end), /* offset function */
+		 G_STRUCT_OFFSET (GcSoundItemClass, play_end), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
 		 gc_sound_marshal_VOID__BOOLEAN, /* marshal */
@@ -378,7 +378,7 @@ gc_sound_item_class_init(GCSoundItemClass* self_class)
     g_signal_new("chunk_start", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
 		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		 G_STRUCT_OFFSET (GCSoundItemClass, chunk_start), /* offset function */
+		 G_STRUCT_OFFSET (GcSoundItemClass, chunk_start), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
 		 gc_sound_marshal_VOID__VOID, /* marshal */
@@ -389,7 +389,7 @@ gc_sound_item_class_init(GCSoundItemClass* self_class)
     g_signal_new("chunk_end", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
 		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		 G_STRUCT_OFFSET (GCSoundItemClass, chunk_end), /* offset function */
+		 G_STRUCT_OFFSET (GcSoundItemClass, chunk_end), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
 		 gc_sound_marshal_VOID__BOOLEAN, /* marshal */

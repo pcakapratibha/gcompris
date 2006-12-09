@@ -37,23 +37,23 @@ enum {
   N_SIGNALS
 };
 
-guint gc_sound_mixer_SDL_signals[N_SIGNALS] = {0};
+guint gc_sound_mixer_sdl_signals[N_SIGNALS] = {0};
 
-static GCSoundMixerSDL *running_mixer = NULL;
+static GcSoundMixerSdl *running_mixer = NULL;
 
-GCSoundMixer *gc_sound_mixer_SDL_new(void)
+GcSoundMixer *gc_sound_mixer_sdl_new(void)
 {
   return GC_SOUND_MIXER(g_object_new(GC_TYPE_SOUND_MIXER_SDL, NULL));
 }
 
 gboolean
-gc_sound_mixer_SDL_open_audio (GCSoundMixer* mixer)
+gc_sound_mixer_sdl_open_audio (GcSoundMixer* mixer)
 {
   int audio_rate,audio_channels;
   Uint16 audio_format;
   int audio_buffers=2048;
   int bits = 0;
-  GCSoundMixerSDL* self;
+  GcSoundMixerSdl* self;
 
   g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
 
@@ -66,7 +66,7 @@ gc_sound_mixer_SDL_open_audio (GCSoundMixer* mixer)
 
   // initialize sdl mixer, open up the audio device
   if(Mix_OpenAudio(44100,MIX_DEFAULT_FORMAT,2,audio_buffers)<0){
-    g_warning("GCSoundMixer can not open audio dev");
+    g_warning("GcSoundMixer can not open audio dev");
     return FALSE;
   }
 
@@ -86,9 +86,9 @@ gc_sound_mixer_SDL_open_audio (GCSoundMixer* mixer)
 }
 
 gboolean 
-gc_sound_mixer_SDL_close_audio       (GCSoundMixer * mixer)
+gc_sound_mixer_sdl_close_audio       (GcSoundMixer * mixer)
 {
-  GCSoundMixerSDL* self;
+  GcSoundMixerSdl* self;
 
   g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
 
@@ -105,14 +105,14 @@ gc_sound_mixer_SDL_close_audio       (GCSoundMixer * mixer)
   return TRUE;
 }
 
-static void reset_channel_number(GCSoundChannel *channel, gboolean stopped, gpointer data)
+static void reset_channel_number(GcSoundChannel *channel, gboolean stopped, gpointer data)
 {
   channel->channel_number =  GPOINTER_TO_INT(data);
 }
 
-static void channel_destroyed(GCSoundChannel *channel, gpointer data)
+static void channel_destroyed(GcSoundChannel *channel, gpointer data)
 {
-  GCSoundMixerSDL *self = GC_SOUND_MIXER_SDL (data);
+  GcSoundMixerSdl *self = GC_SOUND_MIXER_SDL (data);
   int i;
 
   //check if channel is playing
@@ -127,7 +127,7 @@ static void channel_destroyed(GCSoundChannel *channel, gpointer data)
 
   /* channel reorganisation */
   for (i = 0; i < self->channels->len; i++) {
-    GCSoundChannel *i_channel = g_ptr_array_index (self->channels, i);
+    GcSoundChannel *i_channel = g_ptr_array_index (self->channels, i);
 
     if (i!=i_channel->channel_number) {
       if (i_channel->running_sample)
@@ -138,15 +138,15 @@ static void channel_destroyed(GCSoundChannel *channel, gpointer data)
   }
 }
 
-static GCSoundChannel *gc_sound_mixer_SDL_new_channel (GCSoundMixer * mixer)
+static GcSoundChannel *gc_sound_mixer_sdl_new_channel (GcSoundMixer * mixer)
 {
-    GCSoundMixerSDL* self;
+    GcSoundMixerSdl* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
 
     self = GC_SOUND_MIXER_SDL(mixer);
 
-    GCSoundChannel *channel = GC_SOUND_CHANNEL(g_object_new(GC_TYPE_SOUND_CHANNEL,
+    GcSoundChannel *channel = GC_SOUND_CHANNEL(g_object_new(GC_TYPE_SOUND_CHANNEL,
 						      "parent", self, NULL));
 
     g_assert (channel != 0);
@@ -167,16 +167,16 @@ static GCSoundChannel *gc_sound_mixer_SDL_new_channel (GCSoundMixer * mixer)
     return channel;
 }
 
-gboolean                gc_sound_mixer_SDL_pause             (GCSoundMixer * mixer)
+gboolean                gc_sound_mixer_sdl_pause             (GcSoundMixer * mixer)
  {
-   GCSoundMixerSDL* self;
+   GcSoundMixerSdl* self;
 
    g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
 
    self = GC_SOUND_MIXER_SDL(mixer);
 
    if (self->paused){
-     g_warning ("gc_sound_mixer_SDL_pause : Already paused !");
+     g_warning ("gc_sound_mixer_sdl_pause : Already paused !");
      return FALSE;
    }
 
@@ -185,16 +185,16 @@ gboolean                gc_sound_mixer_SDL_pause             (GCSoundMixer * mix
  } 
 
 gboolean
-gc_sound_mixer_SDL_resume (GCSoundMixer * mixer)
+gc_sound_mixer_sdl_resume (GcSoundMixer * mixer)
   {
-    GCSoundMixerSDL* self;
+    GcSoundMixerSdl* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
   
     self = GC_SOUND_MIXER_SDL(mixer);
 
     if (!self->paused){
-      g_warning ("gc_sound_mixer_SDL_resume : Not paused !");
+      g_warning ("gc_sound_mixer_sdl_resume : Not paused !");
       return FALSE;
     }
     Mix_Resume(-1);
@@ -202,9 +202,9 @@ gc_sound_mixer_SDL_resume (GCSoundMixer * mixer)
   }
 
 gboolean
-gc_sound_mixer_SDL_halt              (GCSoundMixer * mixer)
+gc_sound_mixer_sdl_halt              (GcSoundMixer * mixer)
   {
-    GCSoundMixerSDL* self;
+    GcSoundMixerSdl* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
 
@@ -214,9 +214,9 @@ gc_sound_mixer_SDL_halt              (GCSoundMixer * mixer)
   }
 
 gboolean
-gc_sound_mixer_SDL_pause_channel     (GCSoundMixer * mixer, GCSoundChannel * channel)
+gc_sound_mixer_sdl_pause_channel     (GcSoundMixer * mixer, GcSoundChannel * channel)
   {
-    GCSoundMixerSDL* self;
+    GcSoundMixerSdl* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
@@ -225,9 +225,9 @@ gc_sound_mixer_SDL_pause_channel     (GCSoundMixer * mixer, GCSoundChannel * cha
   }
 
 gboolean
-gc_sound_mixer_SDL_resume_channel    (GCSoundMixer * mixer, GCSoundChannel * channel)
+gc_sound_mixer_sdl_resume_channel    (GcSoundMixer * mixer, GcSoundChannel * channel)
   {
-    GCSoundMixerSDL* self;
+    GcSoundMixerSdl* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
@@ -238,9 +238,9 @@ gc_sound_mixer_SDL_resume_channel    (GCSoundMixer * mixer, GCSoundChannel * cha
 
 
 gboolean
-gc_sound_mixer_SDL_halt_channel      (GCSoundMixer * mixer, GCSoundChannel * channel)
+gc_sound_mixer_sdl_halt_channel      (GcSoundMixer * mixer, GcSoundChannel * channel)
   {
-    GCSoundMixerSDL* self;
+    GcSoundMixerSdl* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
@@ -252,11 +252,11 @@ gc_sound_mixer_SDL_halt_channel      (GCSoundMixer * mixer, GCSoundChannel * cha
 
 
 gboolean
-gc_sound_mixer_SDL_play_item  (GCSoundMixer * mixer, GCSoundChannel * channel, GCSoundItem *item )
+gc_sound_mixer_sdl_play_item  (GcSoundMixer * mixer, GcSoundChannel * channel, GcSoundItem *item )
   {
     Mix_Chunk *sample;
 
-    GCSoundMixerSDL* self;
+    GcSoundMixerSdl* self;
 
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
@@ -299,22 +299,22 @@ gc_sound_mixer_SDL_play_item  (GCSoundMixer * mixer, GCSoundChannel * channel, G
 
 void channel_finished_cb (int channel_number)
  {
-   GCSoundMixerSDL* self = running_mixer;
+   GcSoundMixerSdl* self = running_mixer;
 
-   GCSoundChannel *channel = g_ptr_array_index(self->channels, channel_number);
+   GcSoundChannel *channel = g_ptr_array_index(self->channels, channel_number);
 
    g_return_if_fail(channel != NULL);
    g_return_if_fail(GC_IS_SOUND_MIXER_SDL(self));
    g_return_if_fail(GC_IS_SOUND_CHANNEL(channel));
 
-   g_signal_emit(self, gc_sound_mixer_SDL_signals[CHANNEL_FINISHED], 0, channel, NULL);
+   g_signal_emit(self, gc_sound_mixer_sdl_signals[CHANNEL_FINISHED], 0, channel, NULL);
 
  }
 
 
 static
-void gc_sound_mixer_SDL_channel_finished (GCSoundMixerSDL* self,
-					  GCSoundChannel* channel)
+void gc_sound_mixer_sdl_channel_finished (GcSoundMixerSdl* self,
+					  GcSoundChannel* channel)
 {
   Mix_Chunk *sample;
 
@@ -326,7 +326,7 @@ void gc_sound_mixer_SDL_channel_finished (GCSoundMixerSDL* self,
 }
 
 static void
-gc_sound_mixer_SDL_init (GCSoundMixerSDL* self)
+gc_sound_mixer_sdl_init (GcSoundMixerSdl* self)
  {
    /* SDL_mixer limitation */
    if (running_mixer != NULL)
@@ -346,8 +346,8 @@ gc_sound_mixer_SDL_init (GCSoundMixerSDL* self)
 
     self->audio_opened = FALSE;
 
-    if (!gc_sound_mixer_SDL_open_audio (GC_SOUND_MIXER(self))) {
-       g_warning("gc_sound_mixer_SDL_init: cannot open audio !");
+    if (!gc_sound_mixer_sdl_open_audio (GC_SOUND_MIXER(self))) {
+       g_warning("gc_sound_mixer_sdl_init: cannot open audio !");
    }
 
     /* like GtkWindow */
@@ -364,9 +364,9 @@ static GObjectClass *parent_class;
 
 
 static void
-gc_sound_mixer_SDL_finalize (GObject* object)
+gc_sound_mixer_sdl_finalize (GObject* object)
  {
-   GCSoundMixerSDL * self = GC_SOUND_MIXER_SDL(object);
+   GcSoundMixerSdl * self = GC_SOUND_MIXER_SDL(object);
 
    running_mixer = NULL;
 
@@ -383,7 +383,7 @@ gc_sound_mixer_SDL_finalize (GObject* object)
  }
 
 static void
-gc_sound_mixer_SDL_destroy (GCSoundMixerSDL *self)
+gc_sound_mixer_sdl_destroy (GcSoundMixerSdl *self)
 {
   gint i;
 
@@ -405,13 +405,13 @@ gc_sound_mixer_SDL_destroy (GCSoundMixerSDL *self)
 }
 
 static void
-gc_sound_mixer_SDL_get_property() {}
+gc_sound_mixer_sdl_get_property() {}
 
 static void
-gc_sound_mixer_SDL_set_property() {}
+gc_sound_mixer_sdl_set_property() {}
 
 static void
-gc_sound_mixer_SDL_class_init (GCSoundMixerSDLClass* self_class)
+gc_sound_mixer_sdl_class_init (GcSoundMixerSdlClass* self_class)
  {
       GObjectClass* go_class;
       
@@ -419,11 +419,11 @@ gc_sound_mixer_SDL_class_init (GCSoundMixerSDLClass* self_class)
 
       /* GObjectClass */
       go_class = G_OBJECT_CLASS(self_class);
-      go_class->finalize     = gc_sound_mixer_SDL_finalize;
-      go_class->get_property = gc_sound_mixer_SDL_get_property;
-      go_class->set_property = gc_sound_mixer_SDL_set_property;
+      go_class->finalize     = gc_sound_mixer_sdl_finalize;
+      go_class->get_property = gc_sound_mixer_sdl_get_property;
+      go_class->set_property = gc_sound_mixer_sdl_set_property;
 
-      self_class->destroy = gc_sound_mixer_SDL_destroy;
+      self_class->destroy = gc_sound_mixer_sdl_destroy;
       _gc_sound_mixer_install_property( go_class, PROP_DEVICE);
 
 /* signals */
@@ -439,13 +439,13 @@ gc_sound_mixer_SDL_class_init (GCSoundMixerSDLClass* self_class)
 /* }; */
 
       
-      self_class->channel_finished = gc_sound_mixer_SDL_channel_finished;
+      self_class->channel_finished = gc_sound_mixer_sdl_channel_finished;
 
-      gc_sound_mixer_SDL_signals[CHANNEL_FINISHED] =
+      gc_sound_mixer_sdl_signals[CHANNEL_FINISHED] =
 	g_signal_new("channel_finished", /* name */
 		     GC_TYPE_SOUND_MIXER_SDL, /* itype */
 		     (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
-		     G_STRUCT_OFFSET (GCSoundMixerSDLClass, channel_finished), /* offset function */
+		     G_STRUCT_OFFSET (GcSoundMixerSdlClass, channel_finished), /* offset function */
 		     NULL,  /* accumulator */
 		     NULL,  /* accu data */
 		     gc_sound_marshal_VOID__OBJECT, /* marshal */
@@ -458,29 +458,29 @@ gc_sound_mixer_SDL_class_init (GCSoundMixerSDLClass* self_class)
       
  }
 
-static void gc_init_sound_mixer (GCSoundMixerIface* iface);
+static void gc_init_sound_mixer (GcSoundMixerIface* iface);
 
-G_DEFINE_TYPE_WITH_CODE(GCSoundMixerSDL, gc_sound_mixer_SDL, GC_TYPE_SOUND_OBJECT,
+G_DEFINE_TYPE_WITH_CODE(GcSoundMixerSdl, gc_sound_mixer_sdl, GC_TYPE_SOUND_OBJECT,
 		 G_IMPLEMENT_INTERFACE(GC_TYPE_SOUND_MIXER, gc_init_sound_mixer));
 
- void gc_init_sound_mixer (GCSoundMixerIface* iface)
+ void gc_init_sound_mixer (GcSoundMixerIface* iface)
 {
   g_warning("Sound Mixer is initalized by SDL mixer! ");
 
         /* vtable */
-  iface->open_audio = gc_sound_mixer_SDL_open_audio;
-  iface->close_audio = gc_sound_mixer_SDL_close_audio;
+  iface->open_audio = gc_sound_mixer_sdl_open_audio;
+  iface->close_audio = gc_sound_mixer_sdl_close_audio;
   
-  iface->new_channel = gc_sound_mixer_SDL_new_channel;
+  iface->new_channel = gc_sound_mixer_sdl_new_channel;
   
-  iface->pause = gc_sound_mixer_SDL_pause;
-  iface->resume = gc_sound_mixer_SDL_resume;
-  iface->halt = gc_sound_mixer_SDL_halt;
+  iface->pause = gc_sound_mixer_sdl_pause;
+  iface->resume = gc_sound_mixer_sdl_resume;
+  iface->halt = gc_sound_mixer_sdl_halt;
   
-  iface->pause_channel = gc_sound_mixer_SDL_pause_channel;
-  iface->resume_channel = gc_sound_mixer_SDL_resume_channel;
-  iface->halt_channel = gc_sound_mixer_SDL_halt_channel;
+  iface->pause_channel = gc_sound_mixer_sdl_pause_channel;
+  iface->resume_channel = gc_sound_mixer_sdl_resume_channel;
+  iface->halt_channel = gc_sound_mixer_sdl_halt_channel;
   
-  iface->play_item = gc_sound_mixer_SDL_play_item;
+  iface->play_item = gc_sound_mixer_sdl_play_item;
 
 }
