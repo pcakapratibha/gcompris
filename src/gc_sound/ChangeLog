@@ -1,3 +1,17 @@
+2006-12-10  Yves Combe <yves@ycombe.net>
+
+	fix errors in destroy (destroy loop).
+
+	* src/gc-sound-channel.c: (root_destroyed),
+	(gc_sound_channel_destroy), (gc_sound_channel_class_init):
+	* src/gc-sound-channel.h:
+	* src/gc-sound-mixer-SDL.c: (gc_sound_mixer_sdl_finalize),
+	(gc_sound_mixer_sdl_destroy), (gc_sound_mixer_sdl_class_init):
+	* src/gc-sound-mixer-SDL.h:
+	* src/gc-sound-object.c: (gc_sound_object_class_init),
+	(gc_sound_object_dispose), (parent_destroyed):
+	* src/test_gc_sound.c: (main):
+
 2006-12-09  Yves Combe <yves@ycombe.net>
 
 	Python bindings:

@@ -35,6 +35,7 @@ enum {
 };
 
 guint gc_sound_channel_signals[N_SIGNALS] = {0};
+static GcSoundObjectClass *parent_class;
 
 gboolean                gc_sound_channel_play_item     (GcSoundChannel * self, GcSoundItem *item)
 {
@@ -124,21 +125,25 @@ enum {
 
 /* GType */
 G_DEFINE_TYPE(GcSoundChannel, gc_sound_channel, GC_TYPE_SOUND_OBJECT);
+static void gc_sound_channel_destroy (GcSoundObject *self);
 
 static void root_destroyed (GcSoundObject *root, gpointer data)
 {
+  if (!(GC_SOUND_OBJECT_FLAGS (GC_SOUND_OBJECT(data)) & GC_SOUND_IN_DESTRUCTION))
+    gc_sound_channel_destroy (GC_SOUND_CHANNEL(data));
   // direct call claas destroy because root is already destroyed.
-
-  GC_SOUND_OBJECT_GET_CLASS(data)->destroy (GC_SOUND_OBJECT(data));
+    //GC_SOUND_OBJECT_GET_CLASS(data)->destroy (GC_SOUND_OBJECT(data));
 }
 
 static void
-gc_sound_channel_destroy (GcSoundChannel *self){
-  g_signal_handlers_disconnect_by_func(self->root, root_destroyed, self);
-  gc_sound_object_destroy(GC_SOUND_OBJECT(self->root));
-  g_object_unref(self->root);
-
-  GC_SOUND_OBJECT_GET_CLASS(self)->destroy (GC_SOUND_OBJECT(self));
+gc_sound_channel_destroy (GcSoundObject *self){
+  if (GC_SOUND_CHANNEL(self)->root) {
+    g_signal_handlers_disconnect_by_func(GC_SOUND_CHANNEL(self)->root, root_destroyed, self);
+    gc_sound_object_destroy(GC_SOUND_OBJECT(GC_SOUND_CHANNEL(self)->root));
+    g_object_unref(GC_SOUND_CHANNEL(self)->root);
+    GC_SOUND_CHANNEL(self)->root = NULL;
+  }
+  parent_class->destroy (GC_SOUND_OBJECT(self));
 }
 
 static void
@@ -228,7 +233,10 @@ gc_sound_channel_class_init(GcSoundChannelClass* self_class)
   // g_warning("gc_sound_channel_class_init");
 
    GObjectClass* go_class;
-      
+   GcSoundObjectClass * gc_sound_object_class = GC_SOUND_OBJECT_CLASS(self_class);
+
+   parent_class = g_type_class_peek_parent (GC_SOUND_OBJECT_CLASS(self_class));
+
    /* GObjectClass */
    go_class = G_OBJECT_CLASS(self_class);
 
@@ -251,7 +259,7 @@ gc_sound_channel_class_init(GcSoundChannelClass* self_class)
 
   self_class->run = gc_sound_channel_signal_run;
   self_class->chunk_end = gc_sound_channel_signal_chunk_end;
-  self_class->destroy = gc_sound_channel_destroy;
+  gc_sound_object_class->destroy = gc_sound_channel_destroy;
 
   gc_sound_channel_signals[RUN] =
     g_signal_new("run", /* name */

@@ -360,7 +360,7 @@ enum {
 	PROP_0,
 	PROP_DEVICE,
 };
-static GObjectClass *parent_class;
+static GcSoundObjectClass *parent_class;
 
 
 static void
@@ -370,7 +370,7 @@ gc_sound_mixer_sdl_finalize (GObject* object)
 
    running_mixer = NULL;
 
-   g_ptr_array_free                (self->channels, TRUE);
+   g_ptr_array_free  (self->channels, TRUE);
 
    g_hash_table_destroy (self->samples);
 
@@ -379,29 +379,31 @@ gc_sound_mixer_sdl_finalize (GObject* object)
 
    SDL_Quit(); 
 
-   parent_class->finalize (object);
+   g_warning("SDL audio closed");
+
+   G_OBJECT_CLASS(parent_class)->finalize (object);
  }
 
 static void
-gc_sound_mixer_sdl_destroy (GcSoundMixerSdl *self)
+gc_sound_mixer_sdl_destroy (GcSoundObject *object)
 {
+  GcSoundMixerSdl *self = GC_SOUND_MIXER_SDL (object);
   gint i;
 
-    if (self->has_user_ref_count)
+  for (i = 0; i < self->channels->len; i++)
+    {
+      g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)), channel_destroyed, self);
+      gc_sound_object_destroy (GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)));
+      g_object_unref(G_OBJECT(g_ptr_array_index(self->channels,i)));
+    }
+  
+  if (self->has_user_ref_count)
     {
       self->has_user_ref_count = FALSE;
       g_object_unref (self);
     }
-
-    for (i = 0; i < self->channels->len; i++)
-      {
-	g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)), channel_destroyed, self);
-	gc_sound_object_destroy (GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)));
-	g_object_unref(G_OBJECT(g_ptr_array_index(self->channels,i)));
-      }
-
-    GC_SOUND_OBJECT_GET_CLASS(self)->destroy (GC_SOUND_OBJECT(self));
-
+  
+  parent_class->destroy (GC_SOUND_OBJECT(self));
 }
 
 static void
@@ -414,8 +416,9 @@ static void
 gc_sound_mixer_sdl_class_init (GcSoundMixerSdlClass* self_class)
  {
       GObjectClass* go_class;
-      
-      parent_class = g_type_class_peek_parent (G_OBJECT_CLASS(self_class));
+      GcSoundObjectClass *gc_sound_object_class;
+
+      parent_class = g_type_class_peek_parent (GC_SOUND_OBJECT_CLASS(self_class));
 
       /* GObjectClass */
       go_class = G_OBJECT_CLASS(self_class);
@@ -423,7 +426,9 @@ gc_sound_mixer_sdl_class_init (GcSoundMixerSdlClass* self_class)
       go_class->get_property = gc_sound_mixer_sdl_get_property;
       go_class->set_property = gc_sound_mixer_sdl_set_property;
 
-      self_class->destroy = gc_sound_mixer_sdl_destroy;
+      gc_sound_object_class = GC_SOUND_OBJECT_CLASS(self_class);
+      gc_sound_object_class->destroy = gc_sound_mixer_sdl_destroy;
+
       _gc_sound_mixer_install_property( go_class, PROP_DEVICE);
 
 /* signals */

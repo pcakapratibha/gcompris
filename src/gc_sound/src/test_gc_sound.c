@@ -23,19 +23,29 @@ main (int argc, char *argv)
   gcmix = gc_sound_mixer_sdl_new();
    GC_SOUND_OBJECT(gcmix)->nick = "gcmix";
 
+   g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
+
   /* We open two chans to play simultaneously */
   gcchan1 = gc_sound_mixer_new_channel(gcmix);
+  g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
+
   gcchan2 = gc_sound_mixer_new_channel(gcmix);
+  g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
+
   GC_SOUND_OBJECT(gcchan1)->nick = "gcchan1";
   GC_SOUND_OBJECT(gcchan2)->nick = "gcchan2";
 
-  GcSoundMixer *gcmix2;
+  //GcSoundMixer *gcmix2;
 
-  g_object_get(G_OBJECT(gcchan2), "parent", &gcmix2, NULL);
+  //g_object_get(G_OBJECT(gcchan2), "parent", &gcmix2, NULL);
 
   /* Each chan has a root item, where we group the sounds to play in that channel*/
   root1 = GC_SOUND_ITEM(gc_sound_channel_get_root(gcchan1));
+  g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
+
   root2 = GC_SOUND_ITEM(gc_sound_channel_get_root(gcchan2));
+  g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
+
   GC_SOUND_OBJECT(root1)->nick="root1";
   GC_SOUND_OBJECT(root2)->nick="root2";
 
@@ -46,6 +56,8 @@ main (int argc, char *argv)
   item1_1 = gc_sound_item_append_child (item1);
   
   item1_2 = gc_sound_item_append_child (item1);
+
+  g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
   
   GC_SOUND_OBJECT(item1)->nick = "item1";
   GC_SOUND_OBJECT(item2)->nick = "item2";
@@ -100,19 +112,23 @@ main (int argc, char *argv)
 
     //this will stop item2 because of policy
     gc_sound_item_play(item3);
-    gc_sound_object_destroy(GC_SOUND_OBJECT(gcchan2));
+    //gc_sound_object_destroy(GC_SOUND_OBJECT(gcchan2));
 
     gc_sound_object_destroy(GC_SOUND_OBJECT(item1));
+    g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
     g_usleep(3000000);
-    //gc_sound_object_destroy(GC_SOUND_OBJECT(root2));
+    gc_sound_object_destroy(GC_SOUND_OBJECT(root2));
+    g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
 
     g_usleep(3000000);
 
     gc_sound_object_destroy(GC_SOUND_OBJECT(gcmix));
-    gc_sound_object_destroy(GC_SOUND_OBJECT(gcmix2));
+    g_warning("mix ref_count %d", G_OBJECT(gcmix)->ref_count);
+    //gc_sound_object_destroy(GC_SOUND_OBJECT(gcmix2));
 
     g_usleep(3000000);
    /* infinite loop */
-   //g_main_loop_run(g_main_loop_new  (NULL, FALSE));
+    g_warning("loop now");
+   g_main_loop_run(g_main_loop_new  (NULL, FALSE));
 
 }

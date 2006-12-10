@@ -36,6 +36,8 @@ static void	  gc_sound_object_get_property	 (GObject	 *object,
 static void       gc_sound_object_dispose            (GObject        *object);
 static void       gc_sound_object_real_destroy        (GcSoundObject      *object);
 static void       gc_sound_object_finalize            (GObject        *object);
+static void       parent_destroyed                    (GcSoundObject *object, 
+						       gpointer data);
 
 enum {
   DESTROY,
@@ -98,7 +100,7 @@ gc_sound_object_class_init (GcSoundObjectClass *class)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (class);
 
-  parent_class = g_type_class_ref (G_TYPE_OBJECT);
+  parent_class = g_type_class_peek_parent (GC_SOUND_OBJECT_CLASS(class));
 
   gobject_class->get_property = gc_sound_object_get_property;
   gobject_class->set_property = gc_sound_object_set_property;
@@ -166,10 +168,15 @@ gc_sound_object_dispose (GObject *gobject)
   if (!(GC_SOUND_OBJECT_FLAGS (object) & GC_SOUND_IN_DESTRUCTION))
     {
       GC_SOUND_OBJECT_SET_FLAGS (object, GC_SOUND_IN_DESTRUCTION);
-      
+      if (GC_SOUND_OBJECT(object)->parent) {
+	g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(object)->parent, parent_destroyed, object);
+	g_object_unref (GC_SOUND_OBJECT(object)->parent);
+	GC_SOUND_OBJECT(object)->parent = NULL;
+      }
+
       g_signal_emit (object, gc_sound_object_signals[DESTROY], 0);
       
-      GC_SOUND_OBJECT_UNSET_FLAGS (object, GC_SOUND_IN_DESTRUCTION);
+      //GC_SOUND_OBJECT_UNSET_FLAGS (object, GC_SOUND_IN_DESTRUCTION);
     }
 
   G_OBJECT_CLASS (parent_class)->dispose (gobject);
@@ -205,10 +212,6 @@ gc_sound_object_finalize (GObject *gobject)
 static void
 parent_destroyed (GcSoundObject *object, gpointer data)
 {
-  if (GC_SOUND_OBJECT(object)->parent) {
-    g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(object)->parent, parent_destroyed, object);
-    g_object_unref (GC_SOUND_OBJECT(object)->parent);
-  }
   gc_sound_object_destroy(GC_SOUND_OBJECT(data));
 }
 

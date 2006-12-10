@@ -103,7 +103,6 @@ struct _GcSoundMixerSdlClass {
         void             (* channel_finished)  (GcSoundMixerSdl * self,
                                                  GcSoundChannel * channel);
 
-        void             (* destroy)           (GcSoundMixerSdl *self);
 };
 
 G_END_DECLS

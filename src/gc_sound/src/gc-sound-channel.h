@@ -79,7 +79,6 @@ struct _GcSoundChannelClass {
   /* signal handlers */
   void        (* run)               (GcSoundChannel * self);
   void        (* chunk_end)         (GcSoundChannel * self);
-  void        (* destroy)            (GcSoundChannel *self);
 };
 
 GcSoundItem *           gc_sound_channel_get_root     (GcSoundChannel * self);
