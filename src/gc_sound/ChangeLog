@@ -1,3 +1,21 @@
+2006-12-12  Yves Combe <yves@ycombe.net>
+
+	add demo.py little python demo.
+	add g_object_ref in mixer_sdl_new (fix bug in destroy).
+	get filename returns a copy of the string, not the pointer itself.
+	reset channel number when a channel is destroyed.
+
+	* python/demo.py:
+	* python/gc_sound.override:
+	* src/gc-sound-item.c: (gc_sound_item_set_filename),
+	(gc_sound_item_get_filename), (gc_sound_item_class_init):
+	* src/gc-sound-mixer-SDL.c:
+	(gc_sound_mixer_sdl_open_audio), (reset_channel_number),
+	(channel_destroyed), (gc_sound_mixer_sdl_init),
+	(gc_sound_mixer_sdl_finalize), (gc_sound_mixer_sdl_destroy):
+	* src/gc-sound-object.c:
+	* src/test_gc_sound.c: (main):
+
 2006-12-10  Yves Combe <yves@ycombe.net>
 
 	fix errors in destroy (destroy loop).

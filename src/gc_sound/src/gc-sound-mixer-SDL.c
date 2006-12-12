@@ -70,7 +70,7 @@ gc_sound_mixer_sdl_open_audio (GcSoundMixer* mixer)
     return FALSE;
   }
 
-  self->audio_opened = FALSE;
+  self->audio_opened = TRUE;
   
   // print out some info on the audio device and stream
   Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
@@ -108,6 +108,13 @@ gc_sound_mixer_sdl_close_audio       (GcSoundMixer * mixer)
 static void reset_channel_number(GcSoundChannel *channel, gboolean stopped, gpointer data)
 {
   channel->channel_number =  GPOINTER_TO_INT(data);
+  GcSoundMixerSdl *self = GC_SOUND_MIXER_SDL(GC_SOUND_OBJECT(channel)->parent);
+
+  /* if this channel is last in list, we can now reset numbers of channel */
+  if (self->channels->len == channel->channel_number + 1){
+    Mix_AllocateChannels(channel->channel_number + 1);
+    g_warning ("Numbers of channels allocated is now %d",  Mix_AllocateChannels(-1));
+  }
 }
 
 static void channel_destroyed(GcSoundChannel *channel, gpointer data)
@@ -121,9 +128,8 @@ static void channel_destroyed(GcSoundChannel *channel, gpointer data)
     // not be finalized before it get this signal.
     gc_sound_mixer_halt_channel (GC_SOUND_MIXER(self), channel);
   }
-  
+
   g_ptr_array_remove_index (self->channels, channel->channel_number);
-  g_object_unref (channel);
 
   /* channel reorganisation */
   for (i = 0; i < self->channels->len; i++) {
@@ -136,6 +142,15 @@ static void channel_destroyed(GcSoundChannel *channel, gpointer data)
 	reset_channel_number ( i_channel, FALSE, GINT_TO_POINTER(i));
     }
   }
+
+  /* destroyed channel is last one */
+  if (self->channels->len == channel->channel_number){
+    Mix_AllocateChannels(channel->channel_number + 1);
+    g_warning ("Numbers of channels allocated is now %d",  Mix_AllocateChannels(-1));
+  }
+  
+  g_object_unref (channel);
+
 }
 
 static GcSoundChannel *gc_sound_mixer_sdl_new_channel (GcSoundMixer * mixer)
@@ -351,9 +366,8 @@ gc_sound_mixer_sdl_init (GcSoundMixerSdl* self)
    }
 
     /* like GtkWindow */
-    g_object_ref_sink (self);
+    g_object_ref_sink (G_OBJECT(self));
     self->has_user_ref_count = TRUE;
-    
  }
 
 enum {
@@ -368,18 +382,9 @@ gc_sound_mixer_sdl_finalize (GObject* object)
  {
    GcSoundMixerSdl * self = GC_SOUND_MIXER_SDL(object);
 
-   running_mixer = NULL;
-
    g_ptr_array_free  (self->channels, TRUE);
 
    g_hash_table_destroy (self->samples);
-
-   if (self->audio_opened)
-     Mix_CloseAudio();
-
-   SDL_Quit(); 
-
-   g_warning("SDL audio closed");
 
    G_OBJECT_CLASS(parent_class)->finalize (object);
  }
@@ -396,6 +401,18 @@ gc_sound_mixer_sdl_destroy (GcSoundObject *object)
       gc_sound_object_destroy (GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)));
       g_object_unref(G_OBJECT(g_ptr_array_index(self->channels,i)));
     }
+
+   running_mixer = NULL;
+
+   if (self->audio_opened){
+     Mix_CloseAudio();
+     self->audio_opened = FALSE;
+     g_warning ("SDL audio closed");
+   } else
+     g_warning("mixer destroy: SDL audio was closed !");
+
+   SDL_Quit(); 
+
   
   if (self->has_user_ref_count)
     {

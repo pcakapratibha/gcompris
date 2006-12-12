@@ -166,6 +166,9 @@ gboolean        gc_sound_item_play (GcSoundItem *self)
 
 void            gc_sound_item_set_filename (GcSoundItem *self, gchar *filename)
 {
+  if (self->filename)
+    g_free (self->filename);
+
   if (filename) {
     self->filename = g_strdup(filename);
   
@@ -180,7 +183,7 @@ void            gc_sound_item_set_filename (GcSoundItem *self, gchar *filename)
 
 gchar *         gc_sound_item_get_filename (GcSoundItem *self)
 {
-  return self->filename;
+  return g_strdup(self->filename);
 }
  
 static void
@@ -319,6 +322,13 @@ gc_sound_item_class_init(GcSoundItemClass* self_class)
 						      "The channel where this channel stand",
 						       GC_TYPE_SOUND_CHANNEL,
 						       G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
+  g_object_class_install_property(go_class,
+				  PROP_FILENAME,
+				  g_param_spec_string ("filename",
+						     "File to play",
+						       "The sound file to play",
+						       NULL,
+						       G_PARAM_READWRITE));
 
 /* signals */
 /* enum { */

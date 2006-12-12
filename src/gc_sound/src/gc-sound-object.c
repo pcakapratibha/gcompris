@@ -1,4 +1,4 @@
-/* gcompris - gc-sound-object.h
+/* gcompris - gc-sound-object.c
  *
  * Copyright (C) 2006 Yves Combe
  *
