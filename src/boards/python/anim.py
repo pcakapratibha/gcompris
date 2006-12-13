@@ -33,6 +33,7 @@ import gcompris
 import gcompris.utils
 import gcompris.skin
 import gcompris.bonus
+import gcompris.sound
 import gtk
 import gtk.gdk
 import gtk.keysyms
@@ -169,6 +170,7 @@ class Gcompris_anim:
     self.ANCHOR_SW = 6
     self.ANCHOR_S  = 7
     self.ANCHOR_SE = 8
+    self.ANCHOR_T  = 9
 
     self.anchors = { 'LINE': [ self.ANCHOR_SW , self.ANCHOR_NE ],
                      'RECT': [ self.ANCHOR_N,
@@ -180,7 +182,7 @@ class Gcompris_anim:
                                self.ANCHOR_W,
                                self.ANCHOR_NW
                                ],
-                     'TEXT': [ self.ANCHOR_N ]
+                     'TEXT': [ self.ANCHOR_T ]
                      }
     self.anchors ['FILL_RECT'] =  self.anchors ['RECT']
     self.anchors ['CIRCLE'] =  self.anchors ['RECT']
@@ -485,7 +487,7 @@ class Gcompris_anim:
     if (self.selected == None):
       return True
     elif (gobject.type_name(self.selected.item_list[0])!="GnomeCanvasText"):
-      print "Not Text object when got key !!!"
+      #print "Not Text object when got key !!!"
       return True
 
     textItem = self.selected.item_list[0]
@@ -496,15 +498,12 @@ class Gcompris_anim:
 
     if ((keyval == gtk.keysyms.BackSpace) or
         (keyval == gtk.keysyms.Delete)):
-      print "DEL", oldtext, len(oldtext)
       if (len(oldtext) != 1):
         newtext = oldtext[:-1]
       else:
         newtext = u'?'
+      self.last_commit = newtext
     else:
-
-
-
       if ((oldtext[:1] == u'?') and (len(oldtext)==1)):
         oldtext = u' '
         oldtext = oldtext.strip()
@@ -521,9 +520,7 @@ class Gcompris_anim:
       else:
         newtext = oldtext
 
-
     textItem.set(markup=newtext.encode('UTF-8'))
-    self.updated_text(textItem)
 
     return True
 
@@ -591,6 +588,7 @@ class Gcompris_anim:
 
     if event.type == gtk.gdk.BUTTON_PRESS:
       if event.button == 1:
+        gcompris.sound.play_ogg("sounds/bleep.wav")
         # Some button have instant effects
         if (self.tools[tool][0] == "SAVE"):
 #          self.Anim2Shot()
@@ -698,6 +696,7 @@ class Gcompris_anim:
       return
 
     if event.type == gtk.gdk.BUTTON_PRESS:
+      gcompris.sound.play_ogg("sounds/drip.wav")
       if event.button == 1:
         # Deactivate old button
         self.old_color_item.set(width_units = 0.0,
@@ -828,6 +827,7 @@ class Gcompris_anim:
 
   def stop_event(self, item, event, up):
     if event.type == gtk.gdk.BUTTON_PRESS:
+      gcompris.sound.play_ogg("sounds/bleep.wav")
       self.playing_stop()
 
   def playing_stop(self):
@@ -838,6 +838,7 @@ class Gcompris_anim:
   def speed_event(self, item, event, up):
 
     if event.type == gtk.gdk.BUTTON_PRESS:
+      gcompris.sound.play_ogg("sounds/bleep.wav")
       if up:
         if self.anim_speed==25:
           return
@@ -952,6 +953,7 @@ class Gcompris_anim:
 
     if event.type == gtk.gdk.BUTTON_PRESS and event.button == 1:
       if event.button == 1:
+        gcompris.sound.play_ogg("sounds/bleep.wav")
         self.unselect()
 
     #
@@ -1026,6 +1028,7 @@ class Gcompris_anim:
   def fillin_item_event(self, item, event):
     if event.type == gtk.gdk.BUTTON_PRESS:
       if event.button == 1:
+        gcompris.sound.play_ogg("sounds/paint1.wav")
         if self.tools[self.current_tool][0] == "FILL":
           item.set(fill_color_rgba=self.colors[self.current_color])
           return True
@@ -1035,6 +1038,7 @@ class Gcompris_anim:
   def fillout_item_event(self, item, event):
     if event.type == gtk.gdk.BUTTON_PRESS:
       if event.button == 1:
+        gcompris.sound.play_ogg("sounds/paint1.wav")
         if self.tools[self.current_tool][0] == "FILL":
           item.set(outline_color_rgba=self.colors[self.current_color])
           return True
@@ -1050,6 +1054,8 @@ class Gcompris_anim:
     if event.type == gtk.gdk.BUTTON_PRESS:
       if event.button == 1:
         if self.tools[self.current_tool][0] == "DEL":
+          gcompris.sound.play_ogg("sounds/eraser1.wav",
+                                  "sounds/eraser2.wav")
           self.del_item(item);
           return True
     return False
@@ -1079,6 +1085,7 @@ class Gcompris_anim:
     if event.type == gtk.gdk.BUTTON_PRESS:
 
       if event.button == 1:
+        gcompris.sound.play_ogg("sounds/bleep.wav")
         self.newitem = None
         print "----------------------------------------"
         print "Current image = " + str(self.current_frame)
@@ -1284,7 +1291,6 @@ class Gcompris_anim:
 
 
           if self.tools[self.current_tool][0] == "TEXT":
-            self.updated_text(self.newitem)
             (x1, x2, y1, y2) = self.get_bounds(self.newitem)
             self.object_set_size_and_pos(self.newitemgroup, x1, x2, y1, y2)
             self.select_item(self.newitemgroup)
@@ -1569,6 +1575,13 @@ class Gcompris_anim:
           y1= y2,
           y2= y2 + self.DEFAULT_ANCHOR_SIZE
           )
+      elif anchor_type == self.ANCHOR_T:
+        anchor.set(
+          x1= (x1 + x2 - self.DEFAULT_ANCHOR_SIZE*3)/2,
+          x2= (x1 + x2 + self.DEFAULT_ANCHOR_SIZE*3)/2,
+          y1= y2,
+          y2= y2 + self.DEFAULT_ANCHOR_SIZE
+          )
       elif anchor_type == self.ANCHOR_NE:
         anchor.set(
           x1= x2,
@@ -1630,11 +1643,9 @@ class Gcompris_anim:
       return False
 
     if event.state & gtk.gdk.BUTTON1_MASK:
-      # warning: anchor is in a group of anchors, wich is in the object group
+      # warning: anchor is in a group of anchors, which is in the object group
       parent=item.get_property("parent").get_property("parent")
       real_item=parent.item_list[0]
-      if gobject.type_name(real_item)=="GnomeCanvasText":
-        return
 
       wx=event.x
       wy=event.y
@@ -1652,6 +1663,10 @@ class Gcompris_anim:
         y1=real_item.get_property("y")
         x2=x1+real_item.get_property("width")
         y2=y1+real_item.get_property("height")
+      elif gobject.type_name(real_item)=="GnomeCanvasText":
+        y1=y
+        y2=y+real_item.get_property("text_height")
+        pass
       else:
         x1=real_item.get_property("x1")
         y1=real_item.get_property("y1")
@@ -1664,6 +1679,13 @@ class Gcompris_anim:
                                      y1=y1,
                                      x2=x2,
                                      y2=y
+                                     )
+      elif (anchor_type == self.ANCHOR_T):
+        self.object_set_size_and_pos(parent,
+                                     x1=x,
+                                     y1=y1,
+                                     x2=x,
+                                     y2=y2
                                      )
       elif (anchor_type == self.ANCHOR_NE):
         self.object_set_size_and_pos(parent,
@@ -1843,7 +1865,6 @@ class Gcompris_anim:
       anchor.set_data('anchor_type', anchor_type)
       anchor.connect("event", self.resize_item_event,anchor_type)
 
-
   def select_item(self, group):
     if (self.selected != None):
       self.unselect()
@@ -1904,15 +1925,6 @@ class Gcompris_anim:
 
     item.get_property("parent").affine_relative(mat)
 
-
-  def updated_text(self, item):
-    #item.set(clip=1)
-    #bounds = self.get_bounds(item)
-    #print bounds, bounds[2]-bounds[0], bounds[3]-bounds[1]
-    #item.set(clip_width=bounds[2]-bounds[0],
-    #         clip_height=bounds[3]-bounds[1]
-    #         )
-    return
 
 ###########################################
 # Anim 2 specific
@@ -2041,7 +2053,7 @@ class Gcompris_anim:
     self.z_reinit()
     self.item_frame_counter.set(text=self.current_frame + 1)
     # print self.current_frame + 1
-    gtk.timeout_add(500, self.run_flash)
+    gobject.timeout_add(500, self.run_flash)
 
   def z_find_index(self, anAnimItem):
     def f(x): return x < anAnimItem.z

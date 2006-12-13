@@ -1,12 +1,13 @@
-INCLUDES = $(PYTHON_INCLUDES) $(PYGTK_CFLAGS)
+#INCLUDES = $(PYTHON_INCLUDES) $(PYGTK_CFLAGS)
+INCLUDES = $(PYTHON_CFLAGS) $(PYGTK_CFLAGS)
 
 defsdir = $(datadir)/pygtk/2.0/defs
 defs_DATA = gc_sound.defs
 
 EXTRA_DIST = $(defs_DATA)
 
-pkgpythondir = $(pyexecdir)/gtk-2.0
-pkgpyexecdir = $(pyexecdir)/gtk-2.0
+pkgpythondir = $(pyexecdir)
+pkgpyexecdir = $(pyexecdir)
 
 common_ldflags = -module -avoid-version
 

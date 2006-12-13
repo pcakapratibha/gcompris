@@ -5,11 +5,12 @@
 # Copyright (C) 2005, 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the GCompris package.
 # Nabil Ben Khalifa <nabil_benkhalifa@yahoo.fr>, 2005, 2006.
+# Djihed Afifi <djihed@gmail.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD.ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-07 03:37+0000\n"
+"POT-Creation-Date: 2006-12-01 23:34+0000\n"
 "PO-Revision-Date: 2006-11-12 14:17+0100\n"
 "Last-Translator: nabil\n"
 "Language-Team:  <en@li.org>\n"
@@ -429,7 +430,8 @@ msgstr "العمليات الحسابية الأربعة. أدمج العديد 
 msgid ""
 "Work out the right combination of numbers and operations to match the given "
 "value"
-msgstr "استنبط التركيبة الصحيحة من الأعداد و العمليات للحصول على النتيجة المبينة"
+msgstr ""
+"استنبط التركيبة الصحيحة من الأعداد و العمليات للحصول على النتيجة المبينة"
 
 #: ../boards/algebra_minus.xml.in.h:1
 msgid ""
@@ -461,7 +463,8 @@ msgid ""
 "If not, just try again."
 msgstr ""
 "سيتم عرض حصيلة عملية جمع عددين. أدخل الإجابة على يمين علامة التساوي. استعمل "
-"الأسهم يمين يسار لتغيير إجابتك, و مفتاح الإدخال لتثبيت الإجابة. إذا أخطأت أعد المحاولة"
+"الأسهم يمين يسار لتغيير إجابتك, و مفتاح الإدخال لتثبيت الإجابة. إذا أخطأت "
+"أعد المحاولة"
 
 #: ../boards/algebra_plus.xml.in.h:3
 msgid ""
@@ -696,10 +699,10 @@ msgstr "اركل الكرة إلى الهدف"
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:16 ../boards/connect4.xml.in.h:6
-#: ../boards/erase.xml.in.h:3 ../boards/erase_clic.xml.in.h:6
-#: ../boards/erase_double_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
-#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
-#: ../boards/tangram.xml.in.h:8
+#: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
+#: ../boards/erase_clic.xml.in.h:6 ../boards/erase_double_clic.xml.in.h:6
+#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
+#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
 msgstr "استعمال الفأرة"
 
@@ -1018,7 +1021,9 @@ msgid ""
 "Set the clock to the time given, in the time-units shown (hours:minutes or "
 "hours:minutes:seconds). Click on the different arrows, and move the mouse, "
 "to make the numbers go up or down."
-msgstr "ثبت الساعة على الوقت المحدد, حسب وحدات الزمن المعروضة (ساعات:دقائق أو ساعات:دقائق:ثواني). انقر على عقارب الساعة و حرك الفأرة لتثبت الوقت الذي تريده "
+msgstr ""
+"ثبت الساعة على الوقت المحدد, حسب وحدات الزمن المعروضة (ساعات:دقائق أو ساعات:"
+"دقائق:ثواني). انقر على عقارب الساعة و حرك الفأرة لتثبت الوقت الذي تريده "
 
 #: ../boards/clockgame.xml.in.h:5
 msgid "The concept of time. Reading the time."
@@ -1044,7 +1049,9 @@ msgstr "استمع إلى اسم اللون ثم انقر على صورة الب
 msgid ""
 "This board teaches you to recognize different colors. When you hear the name "
 "of the color, click on the duck wearing it."
-msgstr "تساعدك هذه اللوحة على التعرف على مختلف الألوان. حينما تسمع اسم لون انقر على البطة ذات نفس اللون"
+msgstr ""
+"تساعدك هذه اللوحة على التعرف على مختلف الألوان. حينما تسمع اسم لون انقر على "
+"البطة ذات نفس اللون"
 
 #: ../boards/colors_group.xml.in.h:1
 msgid "Colors based activities."
@@ -1062,19 +1069,22 @@ msgstr "اكتشف الحاسوب"
 msgid "Play with computer peripherals."
 msgstr "العب مع الوحدات الملحقة للحاسوب"
 
-#: ../boards/connect4.xml.in.h:1
+#: ../boards/connect4.xml.in.h:1 ../boards/connect4-2players.xml.in.h:1
 msgid "Arrange four coins in a row"
 msgstr ""
 
-#: ../boards/connect4.xml.in.h:2
-msgid "Click anywhere in the line where you want to drop a piece"
+#: ../boards/connect4.xml.in.h:2 ../boards/connect4-2players.xml.in.h:2
+msgid ""
+"Click anywhere in the line where you want to drop a piece. Alternatively, "
+"you can use the arrow keys to move and the down, or space key to drop a "
+"piece."
 msgstr ""
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
 msgstr ""
 
-#: ../boards/connect4.xml.in.h:4
+#: ../boards/connect4.xml.in.h:4 ../boards/connect4-2players.xml.in.h:4
 msgid ""
 "Create a line of 4 pieces either horizontally (lying down) or vertically "
 "(standing up)"
@@ -1085,6 +1095,19 @@ msgid ""
 "Laurent Lacheny. Images and Artificial Intelligence taken from project "
 "4stattack by Jeroen Vloothuis. The original project can be found on &lt;"
 "http://forcedattack.sourceforge.net&gt;"
+msgstr ""
+
+#: ../boards/connect4-2players.xml.in.h:3
+#, fuzzy
+msgid "Connect 4 (2 Players)"
+msgstr "السباق البحري (لاعبين اثنين)"
+
+#: ../boards/connect4-2players.xml.in.h:6
+msgid ""
+"The original code was written in 2005 by Laurent Lacheny. In 2006, Miguel de "
+"Izarra made the two players game. Images and Artificial Intelligence taken "
+"from project 4stattack by Jeroen Vloothuis. The original project can be "
+"found on &lt;http://forcedattack.sourceforge.net&gt;"
 msgstr ""
 
 #: ../boards/crane.xml.in.h:1
@@ -1234,14 +1257,17 @@ msgid ""
 "(&lt;http://schmode.net/&gt;) and from LE BERRE Daniel. These people kindly "
 "gave GCompris the authorization to include their pictures. Thanks a lot, "
 "both of you."
-msgstr "رسوم الحيوانات مأخوذة من صفحة صور الحيوانات لرالف شمود ( http://schmode.net ) ومن عند دانيال لبر. وقد أعطى كلاهما مشكورا Gcompris الإذن لاستعمال هذه الصور"
+msgstr ""
+"رسوم الحيوانات مأخوذة من صفحة صور الحيوانات لرالف شمود ( http://schmode."
+"net ) ومن عند دانيال لبر. وقد أعطى كلاهما مشكورا Gcompris الإذن لاستعمال هذه "
+"الصور"
 
-#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:113
+#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:118
 #: ../src/boards/machpuzzle.c:88
 msgid "Move the mouse"
 msgstr "حرك الفأرة"
 
-#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:114
+#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:119
 msgid "Move the mouse to erase the area and discover the background"
 msgstr "حرك الفأرة لمحو الشاشة و اكتشاف الخلفية"
 
@@ -1296,7 +1322,8 @@ msgid ""
 msgstr ""
 
 #: ../boards/fifteen.xml.in.h:3
-msgid "Move each item to make an increasing series: from the smallest to the largest"
+msgid ""
+"Move each item to make an increasing series: from the smallest to the largest"
 msgstr ""
 
 #: ../boards/fifteen.xml.in.h:4
@@ -2440,7 +2467,8 @@ msgid ""
 msgstr ""
 
 #: ../boards/login.xml.in.h:1
-msgid "GCompris identifies each child, so we can provide child-specific reports."
+msgid ""
+"GCompris identifies each child, so we can provide child-specific reports."
 msgstr ""
 
 #: ../boards/login.xml.in.h:2
@@ -2943,9 +2971,9 @@ msgid ""
 msgstr ""
 "لاستعمال هذا البرنامج انقر على أيقونة للإنتقال إلى قائمة اختيارات أو نشاط "
 "معين. \n"
-" يوجد في أسفل الشاشة  مجموعة أيقونات للتحكم في البرنامج سنقوم "
-"باستعراضها \n"
-"من اليمين إلى الشمال (لا يتم عرض أيقونة إلا إذا كانت متوفرة في النشاط الحالي) \n"
+" يوجد في أسفل الشاشة  مجموعة أيقونات للتحكم في البرنامج سنقوم باستعراضها \n"
+"من اليمين إلى الشمال (لا يتم عرض أيقونة إلا إذا كانت متوفرة في النشاط "
+"الحالي) \n"
 "المنزل: الرجوع إلى قائمة الإختيارات السابقة أو الخروج من البرنامج. \n"
 "الاصبع: ثبت إجابتك \n"
 "النرد: عرض المستوي الحالي. انقر على النرد لتغيير المستوى \n"
@@ -2965,7 +2993,9 @@ msgstr "قائمة الإختيارات الرئيسية لGCompris"
 msgid ""
 "GCompris is a collection of educational games that provides different "
 "activities for children aged 2 and up."
-msgstr "GCompris لعبة تربوية تحتوي على مجموعة من الأنشطة مناسبة لأطفال سنهم عامين فما فوق "
+msgstr ""
+"GCompris لعبة تربوية تحتوي على مجموعة من الأنشطة مناسبة لأطفال سنهم عامين "
+"فما فوق "
 
 #: ../boards/menu.xml.in.h:18
 msgid ""
@@ -3173,7 +3203,10 @@ msgstr "تعلم استعمال النقود"
 msgid ""
 "You must buy the different items and give the exact price. At higher levels, "
 "several items are displayed, and you must first calculate the total price."
-msgstr "عليك أن تشتري السلع المعروضة و أن تدفع الثمن الصحيح كاملا. في المستويات المتقدمة, يتم عرض مجموعة من السلع في نفس الوقت و عليك أن تحسب الثمن الجملي لتدفعه."
+msgstr ""
+"عليك أن تشتري السلع المعروضة و أن تدفع الثمن الصحيح كاملا. في المستويات "
+"المتقدمة, يتم عرض مجموعة من السلع في نفس الوقت و عليك أن تحسب الثمن الجملي "
+"لتدفعه."
 
 #: ../boards/money_cents.xml.in.h:4
 msgid "Practice money usage including cents"
@@ -3336,7 +3369,8 @@ msgid "Test board for the python plugin"
 msgstr ""
 
 #: ../boards/pythontest.xml.in.h:5
-msgid "Thanks to Guido van Rossum and the python team for this powerful language!"
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
 msgstr ""
 
 #: ../boards/railroad.xml.in.h:1
@@ -3668,7 +3702,8 @@ msgid "Sudoku, place unique symbols in a square."
 msgstr ""
 
 #: ../boards/sudoku.xml.in.h:4
-msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
+msgid ""
+"Symbols must be unique in a row, in a column, and (if defined) each region."
 msgstr ""
 
 #: ../boards/sudoku.xml.in.h:5
@@ -3737,7 +3772,8 @@ msgid "The tangram puzzle game"
 msgstr ""
 
 #: ../boards/target.xml.in.h:1
-msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
+msgid ""
+"Can move the mouse, can read numbers and count up to 15 for the first level"
 msgstr ""
 
 #: ../boards/target.xml.in.h:2
@@ -3856,23 +3892,23 @@ msgstr "مجموعة البرامج التربوية gcompris"
 msgid "Multi-activity educational game"
 msgstr ""
 
-#: ../src/boards/awele.c:352 ../src/boards/awele.c:362
+#: ../src/boards/awele.c:350 ../src/boards/awele.c:360
 msgid "NORTH"
 msgstr "شمال"
 
-#: ../src/boards/awele.c:374 ../src/boards/awele.c:384
+#: ../src/boards/awele.c:372 ../src/boards/awele.c:382
 msgid "SOUTH"
 msgstr "جنوب"
 
-#: ../src/boards/awele.c:553
+#: ../src/boards/awele.c:551
 msgid "Choose a house"
 msgstr ""
 
-#: ../src/boards/awele.c:681
+#: ../src/boards/awele.c:679
 msgid "Your turn to play ..."
 msgstr "حان دورك ..."
 
-#: ../src/boards/awele.c:750
+#: ../src/boards/awele.c:748
 msgid "Not allowed! Try again !"
 msgstr ""
 
@@ -3920,8 +3956,8 @@ msgstr ""
 msgid "White mates"
 msgstr ""
 
-#: ../src/boards/chess.c:1092 ../src/gcompris/bonus.c:342
-#: ../src/gcompris/bonus.c:351
+#: ../src/boards/chess.c:1092 ../src/gcompris/bonus.c:359
+#: ../src/gcompris/bonus.c:368
 msgid "Drawn game"
 msgstr "تعادل"
 
@@ -3961,7 +3997,7 @@ msgid ""
 msgstr ""
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:898
+#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:899
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr ""
@@ -4059,7 +4095,8 @@ msgid ""
 msgstr ""
 
 #: ../src/boards/maze.c:494
-msgid "Look at your position, then switch back to 3D mode to continue your moves"
+msgid ""
+"Look at your position, then switch back to 3D mode to continue your moves"
 msgstr ""
 
 #: ../src/boards/memory.c:286
@@ -4070,7 +4107,7 @@ msgstr "ذاكرة"
 msgid "Find the matching pair"
 msgstr ""
 
-#. TRANSLATORS: Put here the mathematical operators "+-�" for  your language.
+#. TRANSLATORS: Put here the mathematical operators "+-��" for  your language.
 #: ../src/boards/memory.c:864
 msgid "+-×÷"
 msgstr "+-×÷"
@@ -4092,6 +4129,10 @@ msgstr ""
 #: ../src/boards/money.c:501
 #, c-format
 msgid "$ %.0f"
+msgstr ""
+
+#: ../src/boards/paratrooper.c:437
+msgid "Control fall speed with up and down arrow keys."
 msgstr ""
 
 #: ../src/boards/planegame.c:75
@@ -4178,7 +4219,7 @@ msgstr ""
 #: ../src/boards/python/admin/board_list.py:631
 #: ../src/boards/python/admin/board_list.py:649
 #: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
-#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:183
+#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
 #, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4370,7 +4411,7 @@ msgstr ""
 
 #: ../src/boards/python/admin/profile_list.py:121
 #: ../src/boards/wordprocessor.c:53 ../src/gcompris/board_config.c:668
-#: ../src/gcompris/board_config.c:832
+#: ../src/gcompris/board_config.c:926
 msgid "Default"
 msgstr "الإفتراضي"
 
@@ -4415,7 +4456,8 @@ msgid "Birth date:"
 msgstr "تاريخ الولادة:"
 
 #: ../src/boards/python/admin/user_edit.py:159
-msgid "You need to provide at least a login, first name and last name for your users"
+msgid ""
+"You need to provide at least a login, first name and last name for your users"
 msgstr ""
 
 #: ../src/boards/python/admin/user_edit.py:176
@@ -4612,7 +4654,7 @@ msgstr ""
 msgid "Rebuild the same mosaic on the right area"
 msgstr ""
 
-#: ../src/boards/python/melody.py:115
+#: ../src/boards/python/melody.py:118
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -4627,11 +4669,13 @@ msgid ""
 msgstr ""
 
 #: ../src/boards/python/oscar_and_friends.py:117
-msgid "They were all happy that the storms never reached all the way down to them."
+msgid ""
+"They were all happy that the storms never reached all the way down to them."
 msgstr ""
 
 #: ../src/boards/python/oscar_and_friends.py:118
-msgid "No matter how bad it was up there, the bottom was always calm and quiet."
+msgid ""
+"No matter how bad it was up there, the bottom was always calm and quiet."
 msgstr ""
 
 #: ../src/boards/python/oscar_and_friends.py:119
@@ -4745,33 +4789,33 @@ msgstr ""
 msgid "Distance:"
 msgstr "المسافة:"
 
-#: ../src/boards/python/tuxpaint.py:119
+#: ../src/boards/python/tuxpaint.py:144
 msgid ""
 "Cannot find Tuxpaint.\n"
 "Install it to use this activity !"
 msgstr ""
 
-#: ../src/boards/python/tuxpaint.py:132
+#: ../src/boards/python/tuxpaint.py:157
 msgid "Waiting for Tuxpaint to finish"
 msgstr ""
 
-#: ../src/boards/python/tuxpaint.py:187
+#: ../src/boards/python/tuxpaint.py:210
 msgid "Inherit fullscreen setting from GCompris"
 msgstr ""
 
-#: ../src/boards/python/tuxpaint.py:191
+#: ../src/boards/python/tuxpaint.py:214
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
 msgstr ""
 
-#: ../src/boards/python/tuxpaint.py:195
+#: ../src/boards/python/tuxpaint.py:218
 msgid "Disable shape rotation"
 msgstr ""
 
-#: ../src/boards/python/tuxpaint.py:199
+#: ../src/boards/python/tuxpaint.py:222
 msgid "Show Uppercase text only"
 msgstr ""
 
-#: ../src/boards/python/tuxpaint.py:203
+#: ../src/boards/python/tuxpaint.py:226
 msgid "Disable stamps"
 msgstr ""
 
@@ -4789,56 +4833,39 @@ msgid ""
 "a list of words to play this game.\n"
 msgstr ""
 
-#: ../src/boards/reading.c:383
+#: ../src/boards/reading.c:381
 msgid "Please, check if the word"
 msgstr "تحقق من فضلك أن الكلمة "
 
-#: ../src/boards/reading.c:403
+#: ../src/boards/reading.c:401
 msgid "is being displayed"
 msgstr "معروضة على الشاشة"
 
-#: ../src/boards/reading.c:577
+#: ../src/boards/reading.c:575
 msgid "I am Ready"
 msgstr "أنا مستعد"
 
-#: ../src/boards/reading.c:617
+#: ../src/boards/reading.c:615
 msgid "Yes, I saw it"
 msgstr "نعم رأيتها"
 
-#: ../src/boards/reading.c:647
+#: ../src/boards/reading.c:645
 msgid "No, it was not there"
 msgstr "لا لم أرها"
 
 #. Report what was wrong in the log
-#: ../src/boards/reading.c:685
+#: ../src/boards/reading.c:683
 #, c-format
 msgid "The word to find was '%s'"
 msgstr "الكلمة التي نبحث عنها هي : '%s'"
 
-#: ../src/boards/reading.c:688
+#: ../src/boards/reading.c:686
 msgid "But it was not displayed"
 msgstr "لكن لم يكن معروضا"
 
-#: ../src/boards/reading.c:690
+#: ../src/boards/reading.c:688
 msgid "And it was displayed"
 msgstr "و كان معروضا"
-
-#. Enter Edit Mode
-#: ../src/boards/shapegame.c:436
-msgid ""
-"You have entered Edit mode\n"
-"Move the puzzle items;\n"
-"type 's' to save, and\n"
-"'d' to display all the shapes"
-msgstr ""
-
-#: ../src/boards/shapegame.c:444
-msgid ""
-"The data from this activity are saved under\n"
-"/tmp/gcompris-board.xml"
-msgstr ""
-"معطيات هاته اللوحة محفوظة في \n"
-"/tmp/gcompris-board.xml"
 
 #: ../src/boards/submarine.c:198
 msgid "Submarine"
@@ -4914,9 +4941,10 @@ msgid "TEXT"
 msgstr "نص"
 
 #: ../src/gcompris/about.c:57
+#, fuzzy
 msgid ""
 "Author: Bruno Coudoin\n"
-"Contribution: Pascal Georges, Jose Jorge\n"
+"Contribution: Pascal Georges, Jose Jorge, Yves Combe\n"
 "Graphics: Renaud Blanchard, Franck Doucet\n"
 "Intro Music: Djilali Sebihi\n"
 "Background Music: Rico Da Halvarez\n"
@@ -4936,11 +4964,11 @@ msgstr "نبيل بن خليفة"
 msgid "About GCompris"
 msgstr "بشأن GCompris"
 
-#: ../src/gcompris/about.c:117 ../src/gcompris/about.c:126
+#: ../src/gcompris/about.c:117
 msgid "Translators:"
 msgstr "المترجمون:"
 
-#: ../src/gcompris/about.c:249
+#: ../src/gcompris/about.c:193
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -4948,16 +4976,16 @@ msgstr ""
 "الصفحة الرئيسية لGCompris \n"
 "http://gcompris.net"
 
-#: ../src/gcompris/about.c:271
+#: ../src/gcompris/about.c:215
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
 msgstr "هذا البرنامج جزء من إصدارات GNU و قد تم إصداره وفقا لرخصة GNU العلنية"
 
-#: ../src/gcompris/about.c:334 ../src/gcompris/about.c:344
+#: ../src/gcompris/about.c:278 ../src/gcompris/about.c:288
 #: ../src/gcompris/config.c:466 ../src/gcompris/config.c:476
-#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:376
-#: ../src/gcompris/help.c:386 ../src/gcompris/images_selector.c:317
+#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:380
+#: ../src/gcompris/help.c:390 ../src/gcompris/images_selector.c:317
 msgid "OK"
 msgstr "موافق"
 
@@ -4986,6 +5014,30 @@ msgid ""
 "Select the language\n"
 " to use in the board"
 msgstr ""
+
+#: ../src/gcompris/board_config.c:763
+msgid "Global GCompris mode"
+msgstr ""
+
+#: ../src/gcompris/board_config.c:764
+#, fuzzy
+msgid "Normal"
+msgstr "مرجاني"
+
+#: ../src/gcompris/board_config.c:765
+msgid "2 clicks"
+msgstr ""
+
+#: ../src/gcompris/board_config.c:766
+msgid "both modes"
+msgstr ""
+
+#: ../src/gcompris/board_config.c:794
+#, fuzzy
+msgid ""
+"Select the drag and drop mode\n"
+" to use in the board"
+msgstr "إ_ختر لغةً لتستعملها لجلستك:"
 
 #: ../src/gcompris/config.c:59
 msgid "Your system default"
@@ -5247,8 +5299,8 @@ msgstr "التأثير"
 msgid "Couldn't open skin dir: %s"
 msgstr "تعذر فتح مجلد الأشكال : %s"
 
-#: ../src/gcompris/config.c:410 ../src/gcompris/config.c:865
-#: ../src/gcompris/config.c:879
+#: ../src/gcompris/config.c:410 ../src/gcompris/config.c:861
+#: ../src/gcompris/config.c:875
 #, c-format
 msgid "Skin : %s"
 msgstr "الشكل : %s"
@@ -5273,142 +5325,148 @@ msgstr "التحميل"
 msgid "SAVE"
 msgstr "الحفظ"
 
-#: ../src/gcompris/gameutil.c:79
+#: ../src/gcompris/gameutil.c:80
 msgid "Couldn't find or load the file"
 msgstr "لم أستطع العثور أو تحميل الملف "
 
-#: ../src/gcompris/gameutil.c:81
+#: ../src/gcompris/gameutil.c:82
 msgid "This activity is incomplete."
 msgstr "هذا النشاط غير مكتمل."
 
-#: ../src/gcompris/gameutil.c:82
+#: ../src/gcompris/gameutil.c:83
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:123
+#: ../src/gcompris/gcompris.c:122
 msgid "run gcompris in fullscreen mode."
 msgstr "شغل gcompris مستعملا جميع الشاشة"
 
-#: ../src/gcompris/gcompris.c:126
+#: ../src/gcompris/gcompris.c:125
 msgid "run gcompris in window mode."
 msgstr "شغل gcompris في نافذة"
 
-#: ../src/gcompris/gcompris.c:129
+#: ../src/gcompris/gcompris.c:128
 msgid "run gcompris with sound enabled."
 msgstr "شغل gcompris مع تخويل الصوت"
 
-#: ../src/gcompris/gcompris.c:132
+#: ../src/gcompris/gcompris.c:131
 msgid "run gcompris without sound."
 msgstr "شغل gcompris بدون صوت"
 
-#: ../src/gcompris/gcompris.c:135
+#: ../src/gcompris/gcompris.c:134
 msgid "run gcompris with the default gnome cursor."
 msgstr "شغل gcompris باستعمال المؤشر الإفتراضي لgnome"
 
-#: ../src/gcompris/gcompris.c:138
+#: ../src/gcompris/gcompris.c:137
 msgid "display only activities with this difficulty level."
 msgstr "عرض الأنشطة التي تتناسب فقط مع هذا المستوى"
 
-#: ../src/gcompris/gcompris.c:141
+#: ../src/gcompris/gcompris.c:140
 msgid "display debug informations on the console."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:144
+#: ../src/gcompris/gcompris.c:143
 msgid "Print the version of "
 msgstr "اطبع رقم نسخة "
 
-#: ../src/gcompris/gcompris.c:147
+#: ../src/gcompris/gcompris.c:146
 msgid "Use the antialiased canvas (slower)."
 msgstr "استعمال المساحات المنعمة (أبطأ) "
 
-#: ../src/gcompris/gcompris.c:150
+#: ../src/gcompris/gcompris.c:149
 msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:153
+#: ../src/gcompris/gcompris.c:152
 msgid ""
 "Run gcompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
 "activity)"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:156
+#: ../src/gcompris/gcompris.c:155
 msgid "Run GCompris with local activity directory added to menu"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:159
+#: ../src/gcompris/gcompris.c:158
 msgid "Run GCompris in administration and user-management mode"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:162
+#: ../src/gcompris/gcompris.c:161
 msgid "Use alternate database for profiles"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:165
+#: ../src/gcompris/gcompris.c:164
 msgid "Use alternate database for logs"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:168
+#: ../src/gcompris/gcompris.c:167
 msgid "Create the alternate database for profiles"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:171
+#: ../src/gcompris/gcompris.c:170
 msgid "Re-read XML Menus and store them in the database"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:174
+#: ../src/gcompris/gcompris.c:173
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:177
+#: ../src/gcompris/gcompris.c:176
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:180
+#: ../src/gcompris/gcompris.c:179
 msgid ""
 "Shared directory location, for profiles and board-configuration data: "
 "[$HOME/.gcompris/shared]"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:183
+#: ../src/gcompris/gcompris.c:182
 msgid "The location of user directories: [$HOME/.gcompris/users]"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:186
+#: ../src/gcompris/gcompris.c:185
 msgid "Run the experimental activities"
 msgstr "شغل الأنشطة التجريبية"
 
-#: ../src/gcompris/gcompris.c:189
+#: ../src/gcompris/gcompris.c:188
 msgid "Disable the quit button"
 msgstr "تعطيل زر المغادرة"
 
-#: ../src/gcompris/gcompris.c:192
+#: ../src/gcompris/gcompris.c:191
 msgid "Disable the config button"
 msgstr "تعطيل زر الإعدادات"
 
-#: ../src/gcompris/gcompris.c:195
+#: ../src/gcompris/gcompris.c:194
 msgid "Display the resources on stdout based on the selected activities"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:198
+#: ../src/gcompris/gcompris.c:197
 msgid ""
 "GCompris will get images, sounds and activity data from this server if not "
 "found locally."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:201
+#: ../src/gcompris/gcompris.c:200
 msgid ""
 "Only when --server is provided, disable check for local resource first. Data "
 "are always taken from the web server."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:205
-msgid "In server mode, specify the cache directory used to avoid useless downloads."
+#: ../src/gcompris/gcompris.c:204
+msgid ""
+"In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:838
+#: ../src/gcompris/gcompris.c:206
+msgid ""
+"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
+msgstr ""
+
+#: ../src/gcompris/gcompris.c:831
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -5422,7 +5480,7 @@ msgid ""
 "<http://www.fsf.org/philosophy>"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1433
+#: ../src/gcompris/gcompris.c:1438
 #, c-format
 msgid ""
 "GCompris\n"
@@ -5436,42 +5494,42 @@ msgstr ""
 "لمزيد من المعلومات زر الصفحة http://gcompris.net \n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1522
+#: ../src/gcompris/gcompris.c:1527
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1523
+#: ../src/gcompris/gcompris.c:1528
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "قائمة الأنشطة المتاحة: \n"
 
-#: ../src/gcompris/gcompris.c:1701
+#: ../src/gcompris/gcompris.c:1720
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris_db.c:250
+#: ../src/gcompris/gcompris_db.c:255
 msgid "Unaffected"
 msgstr "غير مبوب"
 
-#: ../src/gcompris/gcompris_db.c:251
+#: ../src/gcompris/gcompris_db.c:256
 msgid "Users without a class"
 msgstr "مستعمل بدون قسم"
 
-#: ../src/gcompris/help.c:194
+#: ../src/gcompris/help.c:195
 msgid "Prerequisite"
 msgstr "المتطلبات"
 
-#: ../src/gcompris/help.c:222
+#: ../src/gcompris/help.c:223
 msgid "Goal"
 msgstr "الهدف"
 
-#: ../src/gcompris/help.c:250
+#: ../src/gcompris/help.c:251
 msgid "Manual"
 msgstr "دليل المستخدم"
 
-#: ../src/gcompris/help.c:278
+#: ../src/gcompris/help.c:279
 msgid "Credit"
 msgstr "الديباجة"
 
@@ -5484,3 +5542,169 @@ msgstr "انتهى الوقت"
 msgid "Remaining Time = %d"
 msgstr "الوقت المتبقي = %d"
 
+#, fuzzy
+#~ msgid "move"
+#~ msgstr "زيتوني"
+
+#, fuzzy
+#~ msgid "puzzle"
+#~ msgstr "بنفسجي"
+
+#, fuzzy
+#~ msgid "slide"
+#~ msgstr "زيزفوني"
+
+#, fuzzy
+#~ msgid "taquin"
+#~ msgstr "زبرجدي"
+
+#, fuzzy
+#~ msgid "Couldn't open dir: %s"
+#~ msgstr "تعذر فتح مجلد الأشكال : %s"
+
+#~ msgid ""
+#~ "The data from this activity are saved under\n"
+#~ "/tmp/gcompris-board.xml"
+#~ msgstr ""
+#~ "معطيات هاته اللوحة محفوظة في \n"
+#~ "/tmp/gcompris-board.xml"
+
+#, fuzzy
+#~ msgid "Tamil"
+#~ msgstr "تايلاندي"
+
+#, fuzzy
+#~ msgid "This board is dedicated to recognize unusual colors."
+#~ msgstr "تعلم تمييز الألوان النادرة"
+
+#, fuzzy
+#~ msgid ""
+#~ "In a limited time, give the result to the multiplication of two numbers"
+#~ msgstr "أعط نتيجة عملية ضرب عددين في وقت محدود"
+
+#~ msgid ""
+#~ "With displayed numbers and operations, find the right combination to get "
+#~ "the right result"
+#~ msgstr ""
+#~ "باستعمال الأعداد و العمليات المعروضة, جد التركيبة المناسبة للحصول على "
+#~ "النتيجة"
+
+#~ msgid ""
+#~ "Motor coordination: mouse mouvement and mouse click. The goal is just to "
+#~ "click with the left mouse button on the moving fish."
+#~ msgstr "الهدف من اللعبة هو أن تنقر بزر الفأرة الأيسر على السمكة المتحركة"
+
+#~ msgid ""
+#~ "This board is dedicated to train kids to recognize colors. Several "
+#~ "colored toons are displayed and a color is spoken. The kid must select "
+#~ "the proper toon."
+#~ msgstr ""
+#~ "هذه اللوحة مخصصة لتدريب الأطفال على التعرف على الألوان. سيتم عرض عدد من "
+#~ "الصور الملونة و ذكر لون معين و على الطفل اختيار الصورة المناسبة"
+
+#, fuzzy
+#~ msgid "Drag and Drop the top piece only on an empty location"
+#~ msgstr "أمسك و اسحب القطع المقترحة إلى أمكنتها المناسبة"
+
+#~ msgid "Given hands pictures, find if it's a right or left one"
+#~ msgstr "ميز بين اليد اليمنى و اليد اليسرى"
+
+#~ msgid "Manage the paratrooper to let him safely land"
+#~ msgstr "تحكم في المظلي حتى يهبط بسلام"
+
+#~ msgid "Paratrooper"
+#~ msgstr "المظلي"
+
+#, fuzzy
+#~ msgid "Railroad"
+#~ msgstr "سكة حديدية"
+
+#, fuzzy
+#~ msgid "Type the keyboard number 1 to 9 before the dice reaches the ground"
+#~ msgstr "أدخل الكلمات المتساقطة قبل أن تصل إلى الأرض"
+
+#~ msgid "find file %s !"
+#~ msgstr "جد الملف  %s !"
+
+#, fuzzy
+#~ msgid "Learning Chess"
+#~ msgstr "تعلم الشطرنج"
+
+#, fuzzy
+#~ msgid "Play chess against tux in a learning mode"
+#~ msgstr "العب الشطرنج ضد الحاسوب في صيغة التعلم"
+
+#, fuzzy
+#~ msgid "Read a letter"
+#~ msgstr "انقر على حرف"
+
+#, fuzzy
+#~ msgid "Read Colors"
+#~ msgstr "ألوان"
+
+#, fuzzy
+#~ msgid "Click on the corresponding color"
+#~ msgstr "أنقر على اللون المناسب"
+
+#, fuzzy
+#~ msgid "Read a list of words and then tell if the given word is in it"
+#~ msgstr "اقرأ قائمة من الكلمات و حدد إذا كانت كلمة معينة من ضمنها"
+
+#~ msgid "Help"
+#~ msgstr "مساعدة"
+
+#~ msgid "Azerbaijani Turkic"
+#~ msgstr "تركي أذربيجاني"
+
+#~ msgid "Czech"
+#~ msgstr "تشيكي"
+
+#, fuzzy
+#~ msgid "Indian"
+#~ msgstr "إيطالي"
+
+#, fuzzy
+#~ msgid "Brazil Portuguese"
+#~ msgstr "برتغالي"
+
+#, fuzzy
+#~ msgid "Icon"
+#~ msgstr "قمحي"
+
+#, fuzzy
+#~ msgid "Name"
+#~ msgstr "كهرماني"
+
+#~ msgid "Type"
+#~ msgstr "النوع"
+
+#~ msgid "Difficulty"
+#~ msgstr "الصعوبة"
+
+#~ msgid "Directory"
+#~ msgstr "مجلد"
+
+#~ msgid "Released under GPL"
+#~ msgstr "إصدار وفقا لرخصة GPL"
+
+#~ msgid "Now Playing Music"
+#~ msgstr "لعب الموسيقى "
+
+#, fuzzy
+#~ msgid "Artist"
+#~ msgstr "خمري"
+
+#, fuzzy
+#~ msgid "Couldn't open music dir: %s"
+#~ msgstr "تعذر فتح مجلد الأشكال : %s"
+
+#, fuzzy
+#~ msgid "Couldn't find pixmap file: %s"
+#~ msgstr "لم أستطع العثور أو تحميل الملف "
+
+#, fuzzy
+#~ msgid "Move the mouse to machpuzzle the area and discover the background"
+#~ msgstr "حرك الفأرة لمحو الشاشة و اكتشاف الخلفية"
+
+#~ msgid "GCompris I Have Understood"
+#~ msgstr "GCompris لقد فهمت"

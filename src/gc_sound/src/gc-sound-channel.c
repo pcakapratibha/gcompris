@@ -18,6 +18,7 @@
  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 #include <gc-sound-channel.h>
+#include <gc-sound-item.h>
 #include <gc-sound-marshallers.h>
 
 /* signals */
@@ -130,7 +131,7 @@ static void gc_sound_channel_destroy (GcSoundObject *self);
 static void root_destroyed (GcSoundObject *root, gpointer data)
 {
   if (!(GC_SOUND_OBJECT_FLAGS (GC_SOUND_OBJECT(data)) & GC_SOUND_IN_DESTRUCTION))
-    gc_sound_channel_destroy (GC_SOUND_CHANNEL(data));
+    gc_sound_channel_destroy (GC_SOUND_OBJECT(data));
   // direct call claas destroy because root is already destroyed.
     //GC_SOUND_OBJECT_GET_CLASS(data)->destroy (GC_SOUND_OBJECT(data));
 }
@@ -176,7 +177,6 @@ gc_sound_channel_init(GcSoundChannel* self)
 static void
 gc_sound_channel_get_property(GObject* object, guint prop_id, GValue* value, GParamSpec* pspec) 
 {
-  GcSoundChannel *self = GC_SOUND_CHANNEL(object);
   switch(prop_id) {
   default:
     G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
@@ -187,8 +187,6 @@ gc_sound_channel_get_property(GObject* object, guint prop_id, GValue* value, GPa
 static void
 gc_sound_channel_set_property(GObject* object, guint prop_id, GValue const* value, GParamSpec* pspec) 
 {
-  GcSoundChannel *self = GC_SOUND_CHANNEL(object);
-
   switch(prop_id) {
   default:
     G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
@@ -212,7 +210,6 @@ gc_sound_channel_signal_chunk_end (GcSoundChannel *self)
 static void
 gc_sound_channel_signal_run (GcSoundChannel *self)
 {
-  GList *item_root;
   gboolean ret;
 
   while (g_list_length(self->playlist)>0)

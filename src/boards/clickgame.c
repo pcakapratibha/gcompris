@@ -219,7 +219,7 @@ static void
 fish_gobble (FishItem *fishitem)
 {
   clickgame_destroy_item(fishitem);
-  gc_sound_play_ogg ("sounds/gobble.ogg", NULL);
+  gc_sound_play_ogg ("sounds/bubble.wav", NULL);
 
   gcomprisBoard->sublevel++;
   gc_score_set(gcomprisBoard->sublevel);
@@ -284,7 +284,10 @@ canvas_event(GnomeCanvas *canvas, GdkEvent *event)
 		 if (gnome_canvas_get_item_at (canvas, mouse_x, mouse_y) !=
 		     g_slist_nth_data (fish->cur_frames, fish->currentItem) &&
 		     (dx > 0) ^ (fish->speed < 0))
-		   fish_reverse_direction (fish);
+		   {
+		     fish_reverse_direction (fish);
+		     gc_sound_play_ogg ("sounds/drip.wav", NULL);
+		   }
 		 else
 		   react += 1;
 	       }
@@ -486,12 +489,12 @@ static void clickgame_next_level()
 {
   static /*const*/ gchar *bglist[] =
     {
-      "clickgame/nur00523.jpg",
-      "clickgame/nur03006.jpg",
-      "clickgame/nur03011.jpg",
-      "clickgame/nur03010.jpg",
-      "clickgame/nur03013.jpg",
-      "clickgame/nur03505.jpg"
+      "clickgame/sea1.jpg",
+      "clickgame/sea2.jpg",
+      "clickgame/sea3.jpg",
+      "clickgame/sea4.jpg",
+      "clickgame/sea5.jpg",
+      "clickgame/sea6.jpg"
     };
 
   int bgx = gcomprisBoard->level - 1;
@@ -536,6 +539,18 @@ static void clickgame_animate_item(FishItem *fishitem)
 							     currentItem));
 }
 
+static void
+fish_escape (FishItem *fishitem)
+{
+  item2del_list = g_list_append (item2del_list, fishitem);
+  gc_sound_play_ogg ("sounds/youcannot.wav", NULL);
+
+  if (gcomprisBoard->sublevel) {
+    --gcomprisBoard->sublevel;
+    gc_score_set(gcomprisBoard->sublevel);
+  }
+}
+
 static void clickgame_move_item(FishItem *fishitem)
 {
   double sp = fishitem->speed;
@@ -561,17 +576,13 @@ static void clickgame_move_item(FishItem *fishitem)
 
   if(fishitem->speed>0)
     {
-      if(x1>gcomprisBoard->width) {
-	item2del_list = g_list_append (item2del_list, fishitem);
-	gc_sound_play_ogg ("crash", NULL);
-      }
+      if(x1>gcomprisBoard->width)
+	fish_escape (fishitem);
     }
   else
     {
-      if(x2<0) {
-	item2del_list = g_list_append (item2del_list, fishitem);
-	gc_sound_play_ogg ("crash", NULL);
-      }
+      if(x2<0)
+	fish_escape (fishitem);
     }
 
   while (g_list_length (item_list) < 3) {

@@ -95,6 +95,11 @@ void            gc_sound_item_set_filename (GcSoundItem *self, gchar *filename);
 
 gchar *         gc_sound_item_get_filename (GcSoundItem *self);
 
+GcSoundPolicy   gc_sound_item_get_policy (GcSoundItem *self);
+
+gboolean        gc_sound_item_set_policy   (GcSoundItem * self,
+					    GcSoundPolicy  policy);
+
 void            gc_sound_item_set_loop(GcSoundItem *self, gboolean loop); 
 
 G_END_DECLS

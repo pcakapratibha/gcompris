@@ -93,7 +93,6 @@ libgcomprisinclude_HEADERS =			\
 	binreloc.h \
 	bonus.h \
 	gc_core.h \
-	cursor.h \
 	gameutil.h \
 	gc_net.h \
 	gcompris.h \
@@ -112,6 +111,7 @@ libgcomprisinclude_HEADERS =			\
 	skin.h \
 	soundutil.h \
 	timer.h \
+	drag.h \
 	$(cairo_h)
 
 libgcompris_1_la_SOURCES =			\
@@ -124,7 +124,6 @@ libgcompris_1_la_SOURCES =			\
 	board_config.h board_config.c \
 	bonus.c \
 	config.c \
-	cursor.c \
 	dialog.c \
 	file_selector.c \
 	gameutil.c \
@@ -148,6 +147,7 @@ libgcompris_1_la_SOURCES =			\
 	soundutil.c \
 	timer.c \
 	wordlist.c \
+	drag.c \
         $(profile_c) \
 	$(cairo_c)
 
@@ -160,9 +160,9 @@ marshal_sources =				\
 BUILT_SOURCES =					\
 	$(marshal_sources)
 
-gcompris-marshal.h: gcompris-marshal.list $(GLIB_GENMARSHAL)
+gcompris-marshal.h: gcompris-marshal.list 
 	$(GLIB_GENMARSHAL) $< --header --prefix=gnome_canvas_marshal > $@
-gcompris-marshal.c: gcompris-marshal.list $(GLIB_GENMARSHAL)
+gcompris-marshal.c: gcompris-marshal.list
 	$(GLIB_GENMARSHAL) $< --body --prefix=gnome_canvas_marshal > $@
 
 EXTRA_DIST = \

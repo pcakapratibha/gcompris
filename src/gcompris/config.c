@@ -82,6 +82,7 @@ static gchar *linguas[] = {
   "hr_HR.UTF-8",	N_("Croatian"),
   "it_IT.UTF-8", 	N_("Italian"),
   "ka_GE.UTF-8",        N_("Georgian"),
+  "ko_KR.UTF-8",        N_("Korean"),
   "lt_LT.UTF-8",	N_("Lithuanian"),
   "mk_MK.UTF-8",	N_("Macedonian"),
   "ml_IN.UTF-8",	N_("Malayalam"),
@@ -746,13 +747,9 @@ item_event_ok(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 	    {
 	      if(!properties->music)
 		sdlplayer_halt_music();
-	      else
-		sdlplayer_resume_music();
 
 	      if(!properties->fx)
 		sdlplayer_halt_fx();
-	      else
-		sdlplayer_resume_fx();
 	    }
 	  gc_prop_save(properties);
 	}

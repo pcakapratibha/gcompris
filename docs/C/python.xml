@@ -36,6 +36,10 @@ xsltproc -o python.html http://docbook.sourceforge.net/release/xsl/current/html/
 	  <revnumber>0.4</revnumber>
 	  <date>January 2005</date>
 	</revision>
+	<revision>
+	  <revnumber>0.5</revnumber>
+	  <date>December 2006</date>
+	</revision>
       </revhistory>
     </articleinfo>
     <title>Python wrapper for Gcompris</title>
@@ -438,9 +442,6 @@ attribute is readeable and/or writable.</para>
 	    <tbody>
 	      <row><entry>gcompris.CURSOR_FIRST_CUSTOM</entry>
 		<entry>GCOMPRIS_FIRST_CUSTOM_CURSOR</entry></row>
-	      <row><entry>gcompris.CURSOR_BIG_RED_ARROW</entry>
-		<entry>GCOMPRIS_BIG_RED_ARROW_CURSOR</entry></row>
-	      <row><entry>gcompris.CURSOR_BIRD</entry><entry>GCOMPRIS_BIRD_CURSOR</entry></row>
 	      <row><entry>gcompris.CURSOR_LINE</entry><entry>GCOMPRIS_LINE_CURSOR</entry></row>
 	      <row><entry>gcompris.CURSOR_FILLRECT</entry><entry>GCOMPRIS_FILLRECT_CURSOR</entry></row>
 	      <row><entry>gcompris.CURSOR_RECT</entry><entry>GCOMPRIS_RECT_CURSOR</entry></row>

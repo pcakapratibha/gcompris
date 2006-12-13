@@ -253,7 +253,6 @@ gc_sound_item_init(GcSoundItem* self)
   self->children = NULL;
 
   //debug. will be removed
-  gchar * nick;
 
   //internal use
   // TRUE if we are in running play tree.

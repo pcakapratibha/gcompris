@@ -197,6 +197,8 @@ gboolean                gc_sound_mixer_sdl_pause             (GcSoundMixer * mix
 
    Mix_Pause(-1);
    self->paused = TRUE;
+
+   return TRUE;
  } 
 
 gboolean
@@ -214,6 +216,8 @@ gc_sound_mixer_sdl_resume (GcSoundMixer * mixer)
     }
     Mix_Resume(-1);
     self->paused = FALSE;
+
+    return TRUE;
   }
 
 gboolean
@@ -226,24 +230,24 @@ gc_sound_mixer_sdl_halt              (GcSoundMixer * mixer)
     self = GC_SOUND_MIXER_SDL(mixer);
 
     Mix_HaltChannel(-1);
+
+    return TRUE;
   }
 
 gboolean
 gc_sound_mixer_sdl_pause_channel     (GcSoundMixer * mixer, GcSoundChannel * channel)
   {
-    GcSoundMixerSdl* self;
-
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
 
     Mix_Pause (channel->channel_number);
+
+    return TRUE;
   }
 
 gboolean
 gc_sound_mixer_sdl_resume_channel    (GcSoundMixer * mixer, GcSoundChannel * channel)
   {
-    GcSoundMixerSdl* self;
-
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
 
@@ -255,8 +259,6 @@ gc_sound_mixer_sdl_resume_channel    (GcSoundMixer * mixer, GcSoundChannel * cha
 gboolean
 gc_sound_mixer_sdl_halt_channel      (GcSoundMixer * mixer, GcSoundChannel * channel)
   {
-    GcSoundMixerSdl* self;
-
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
 

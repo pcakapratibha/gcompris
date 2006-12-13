@@ -24,8 +24,12 @@
 #define SOUNDLISTFILE PACKAGE
 #define MAX_LAYERS 3
 
+typedef struct  {gint count; gint max;} counter;
+
 static GcomprisBoard *gcomprisBoard = NULL;
 static gboolean board_paused = TRUE;
+static SoundPolicy sound_policy;
+
 
 static void	 start_board (GcomprisBoard *agcomprisBoard);
 static void	 pause_board (gboolean pause);
@@ -46,6 +50,7 @@ static void		 shuffle_image_list(char *list[], int size);
 static int number_of_item = 0;
 static int number_of_item_x = 0;
 static int number_of_item_y = 0;
+static guint normal_delay_id = 0;
 
 static gint timer_id = 0;
 
@@ -173,17 +178,19 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       gcomprisBoard->sublevel=1;
       gcomprisBoard->number_of_sublevel=10; /* Go to next level after this number of 'play' */
       gc_score_start(SCORESTYLE_NOTE,
-			   gcomprisBoard->width - 220,
-			   gcomprisBoard->height - 50,
-			   gcomprisBoard->number_of_sublevel);
+		     gcomprisBoard->width - 220,
+		     gcomprisBoard->height - 50,
+		     gcomprisBoard->number_of_sublevel);
       gc_bar_set(GC_BAR_LEVEL);
 
       if (strcmp(gcomprisBoard->mode,"double_clic")==0)
 	board_mode = DOUBLECLIC;
       else if (strcmp(gcomprisBoard->mode,"clic")==0)
 	board_mode = CLIC;
-      else
+      else {
 	board_mode = NORMAL;
+	gcomprisBoard->maxlevel=8;
+      }
 
       if (board_mode == DOUBLECLIC){
 	GtkSettings *DefaultsGtkSettings = gtk_settings_get_default ();
@@ -209,11 +216,19 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 
       gamewon = FALSE;
       pause_board(FALSE);
+
+      /* initial state to restore */
+      sound_policy = gc_sound_policy_get();
+      gc_sound_policy_set(PLAY_AND_INTERRUPT);
+
+      gc_cursor_set(GCOMPRIS_DEL_CURSOR);
+
     }
 }
 /* ======================================= */
 static void end_board ()
 {
+  gc_cursor_set(GCOMPRIS_DEFAULT_CURSOR);
   if (board_mode == DOUBLECLIC){
     gdk_display_set_double_click_time( gdk_display_get_default(),
 					   DefaultDoubleClicDistance);
@@ -226,6 +241,7 @@ static void end_board ()
       erase_destroy_all_items();
     }
   gcomprisBoard = NULL;
+  gc_sound_policy_set(sound_policy);
 }
 
 /* ======================================= */
@@ -292,7 +308,9 @@ static void erase_next_level()
   /* Select the number of layer depending on the level */
 
   if (board_mode != DOUBLECLIC){
-    if(gcomprisBoard->level>4)
+    if(gcomprisBoard->level>6)
+      layers = 4;
+    else if(gcomprisBoard->level>4)
       layers = 3;
     else if(gcomprisBoard->level>2)
       layers = 2;
@@ -309,6 +327,11 @@ static void erase_next_level()
 /* Destroy all the items */
 static void erase_destroy_all_items()
 {
+  if (normal_delay_id) {
+    g_source_remove (normal_delay_id);
+    normal_delay_id = 0;
+  }
+
   if (timer_id) {
     gtk_timeout_remove (timer_id);
     timer_id = 0;
@@ -326,8 +349,9 @@ static GnomeCanvasItem *erase_create_item(int layer)
   int ix, jy;
   GnomeCanvasItem *item = NULL;
   GdkPixbuf *pixmap[MAX_LAYERS];
+  counter *c;
 
-  g_assert(layer<=MAX_LAYERS);
+/*   g_assert(layer<=MAX_LAYERS); */
 
   boardRootItem = GNOME_CANVAS_GROUP(
 				     gnome_canvas_item_new (gnome_canvas_root(gcomprisBoard->canvas),
@@ -345,24 +369,26 @@ static GnomeCanvasItem *erase_create_item(int layer)
     pixmap[0] = gc_pixmap_load("images/transparent_square.png");
 
   if(layer>1)
-    pixmap[1] = gc_pixmap_load("images/water_spot.png");
+    pixmap[1] = gc_pixmap_load("images/transparent_square_green.png");
 
   if(layer>2)
-    pixmap[2] = gc_pixmap_load("images/water_drop.png");
+    pixmap[2] = gc_pixmap_load("images/transparent_square_yellow.png");
 
   for(i=0,ix=0; i<BOARDWIDTH; i+=BOARDWIDTH/number_of_item_x, ix++)
     {
       for(j=0, jy=0; j<BOARDHEIGHT; j+=BOARDHEIGHT/number_of_item_y, jy++)
 	{
 	  int current_layer = layer;
+	  if (layer == 4)
+	    current_layer = 1 ;
 
 	  if ((board_mode != NORMAL) && ((ix+jy) %2 == 0))
 	    continue;
 
 	  while(current_layer--)
 	    {
-	      double w = (BOARDWIDTH/number_of_item_x) *  (1.0 - (0.3 * current_layer));
-	      double h = (BOARDHEIGHT/number_of_item_y) * (1.0 - (0.3 * current_layer));
+	      double w = (BOARDWIDTH/number_of_item_x) ;
+	      double h = (BOARDHEIGHT/number_of_item_y) ;
 	      double x = i + ((BOARDWIDTH/number_of_item_x)  - w) / 2;
 	      double y = j + ((BOARDHEIGHT/number_of_item_y) - h) / 2;
 
@@ -377,8 +403,16 @@ static GnomeCanvasItem *erase_create_item(int layer)
 					    "height_set", TRUE,
 					    "anchor", GTK_ANCHOR_NW,
 					    NULL);
+	      c = g_new (counter, 1);
+	      c->count = 0 ;
+	      c->max = 0 ;
+	      /* if item is not first, it must be keep first time mouse
+	       * pass over in normal mode or in layer 4 */
+	      if ((current_layer > 0) || (layer == 4))
+		c->max = 1 ;
 
-	      gtk_signal_connect(GTK_OBJECT(item), "event", (GtkSignalFunc) item_event, NULL);
+	      g_signal_connect_data (item, "event", (GCallback) item_event, (gpointer)c,
+				     (GClosureNotify) g_free, 0);
 	      number_of_item++;
 	    }
 	}
@@ -426,21 +460,55 @@ static void game_won()
   erase_next_level();
 }
 
+static gboolean
+erase_one_item (GnomeCanvasItem *item)
+{
+  gtk_object_destroy(GTK_OBJECT(item));
+
+  if(number_of_item%2)
+    gc_sound_play_ogg ("sounds/eraser1.wav", NULL);
+  else
+    gc_sound_play_ogg ("sounds/eraser2.wav", NULL);
+
+  if(--number_of_item == 0)
+    {
+      gamewon = TRUE;
+      erase_destroy_all_items();
+      timer_id = gtk_timeout_add (4000, (GtkFunction) bonus, NULL);
+    }
+  normal_delay_id = 0;
+  return FALSE;
+}
+
 /* ==================================== */
 static gint
 item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 {
-
+  counter *c = (counter *) data;
   if(board_paused)
     return FALSE;
 
   if (event->type == GDK_MOTION_NOTIFY)
     return FALSE;
 
-  if (board_mode == NORMAL)
-    if (event->type != GDK_ENTER_NOTIFY)
-      return FALSE;
-
+  if (board_mode == NORMAL) {
+    if (event->type == GDK_ENTER_NOTIFY) {
+      if (c->count < c->max){
+	c->count++ ;
+	return FALSE ;
+      }
+      /* Are enter & leave always sent in pairs? Don't assume. */
+      if (normal_delay_id)
+	g_source_remove (normal_delay_id);
+      normal_delay_id
+	= g_timeout_add (50, (GSourceFunc) erase_one_item, item);
+    } else if (event->type == GDK_LEAVE_NOTIFY) {
+      if (normal_delay_id)
+	g_source_remove (normal_delay_id);
+      normal_delay_id = 0;
+    }
+    return FALSE;
+  }
   if (board_mode == CLIC)
     if (event->type != GDK_BUTTON_PRESS)
       return FALSE;
@@ -461,14 +529,7 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
     }
   }
 
-  gtk_object_destroy(GTK_OBJECT(item));
-
-  if(--number_of_item == 0)
-    {
-      gamewon = TRUE;
-      erase_destroy_all_items();
-      timer_id = gtk_timeout_add (4000, (GtkFunction) bonus, NULL);
-    }
+  erase_one_item (item);
 
   return FALSE;
 }

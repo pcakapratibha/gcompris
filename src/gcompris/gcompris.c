@@ -32,8 +32,6 @@
 #include "about.h"
 #include <locale.h>
 
-#include "cursor.h"
-
 #include "binreloc.h"
 
 /* For XF86_VIDMODE Support */
@@ -117,6 +115,7 @@ static int  popt_display_resource  = FALSE;
 static char *popt_server            = NULL;
 static int  *popt_web_only          = NULL;
 static char *popt_cache_dir         = NULL;
+static char *popt_drag_mode         = NULL;
 
 static struct poptOption options[] = {
   {"fullscreen", 'f', POPT_ARG_NONE, &popt_fullscreen, 0,
@@ -203,6 +202,8 @@ static struct poptOption options[] = {
 
   {"cache-dir", '\0', POPT_ARG_STRING, &popt_cache_dir, 0,
    N_("In server mode, specify the cache directory used to avoid useless downloads."), NULL},
+  {"drag-mode", 'g', POPT_ARG_STRING, &popt_drag_mode, 0,
+   N_("Global drag and drop mode: normal, 2clicks, both. Default mode is normal."), NULL},
 
 #ifndef WIN32	/* Not supported on windows */
   POPT_AUTOHELP
@@ -530,7 +531,7 @@ static void init_background()
 
 void gc_cursor_set(guint gdk_cursor_type)
 {
-  GdkCursor *cursor;
+  GdkCursor *cursor = NULL;
 
   // Little hack to force gcompris to use the default cursor
   if(gdk_cursor_type==GCOMPRIS_DEFAULT_CURSOR)
@@ -542,55 +543,47 @@ void gc_cursor_set(guint gdk_cursor_type)
     gdk_window_set_cursor (window->window, cursor);
     gdk_cursor_destroy(cursor);
   } else { // we use a custom cursor
-    GdkColor fg, bg;
-    //    static const gchar * cursor;
-    static const gchar ** bits;
-
-    gdk_color_parse("rgb:FFFF/FFFF/FFFF",&fg);
-    gdk_color_parse("rgb:FFFF/3FFF/0000",&bg);
-
-    gdk_color_parse("black",&fg);
-    gdk_color_parse("red",&bg);
+    GdkPixbuf *cursor_pixbuf = NULL;
 
     switch (gdk_cursor_type) {
-    case GCOMPRIS_BIG_RED_ARROW_CURSOR :
-      bits = big_red_arrow_cursor_bits;
-      break;
-    case GCOMPRIS_BIRD_CURSOR :
-      bits = bird_cursor_bits;
+    case GCOMPRIS_DEFAULT_CURSOR :
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_default.png");
       break;
     case GCOMPRIS_LINE_CURSOR :
-      bits = big_red_line_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_line.png");
       break;
     case GCOMPRIS_RECT_CURSOR :
-      bits = big_red_rectangle_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_rect.png");
       break;
     case GCOMPRIS_FILLRECT_CURSOR :
-      bits = big_red_filledrectangle_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_fillrect.png");
       break;
     case GCOMPRIS_CIRCLE_CURSOR :
-      bits = big_red_circle_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_circle.png");
       break;
     case GCOMPRIS_FILLCIRCLE_CURSOR :
-      bits = big_red_filledcircle_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_fillcircle.png");
       break;
     case GCOMPRIS_FILL_CURSOR :
-      bits = big_red_fill_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_fill.png");
       break;
     case GCOMPRIS_DEL_CURSOR :
-      bits = big_red_del_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_del.png");
       break;
     case GCOMPRIS_SELECT_CURSOR :
-      bits = big_red_select_cursor_bits;
+      cursor_pixbuf = gc_skin_pixmap_load("cursor_select.png");
       break;
-    default : bits = big_red_arrow_cursor_bits;
+    default :
+      return;
+      break;
     }
 
-    cursor = gdk_cursor_new_from_data(bits, 40 , 40, &fg, &bg, 0, 0);
-    if(cursor)
+    if(cursor_pixbuf)
       {
+	cursor = gdk_cursor_new_from_pixbuf(gdk_display_get_default(), cursor_pixbuf, 0, 0);
 	gdk_window_set_cursor(window->window, cursor);
 	gdk_cursor_unref(cursor);
+	gdk_pixbuf_unref(cursor_pixbuf);
       }
   }
 }
@@ -1390,6 +1383,12 @@ gc_init (int argc, char *argv[])
   signal(SIGSEGV, gc_terminate);
   signal(SIGINT, gc_terminate);
 
+#ifdef XF86_VIDMODE
+  printf("XF86VidMode: Compiled with XF86VidMode.\nIf you have problems starting GCompris in fullscreen, try the -x option to disable XF86VidMode.\n");
+#else
+  printf("XF86VidMode: Not compiled with XVIDMODE\n");
+#endif
+
   load_properties();
 
   gc_skin_load(properties->skin);
@@ -1668,14 +1667,28 @@ gc_init (int argc, char *argv[])
 
   if(popt_web_only) {
     g_free(properties->package_data_dir);
-    properties->package_data_dir = "";
+    properties->package_data_dir = g_strdup("");
 
     g_free(properties->system_icon_dir);
-    properties->system_icon_dir = "";
+    properties->system_icon_dir = g_strdup("");
   }
 
   if (popt_server){
       properties->cache_dir = g_strdup(popt_cache_dir);
+  }
+
+  if (popt_drag_mode){
+    if (strcmp(popt_drag_mode, "default") == 0)
+      properties->drag_mode = GC_DRAG_MODE_GRAB;
+    else {
+      if (strcmp(popt_drag_mode, "2clicks") == 0)
+	properties->drag_mode = GC_DRAG_MODE_2CLICKS;
+      else {
+	if (strcmp(popt_drag_mode, "both") == 0)
+	  properties->drag_mode = GC_DRAG_MODE_BOTH;
+	else g_warning("Unknown drag mode ! Valids modes are \"normal\", \"2clicks\" and \"both\"");
+      }
+    }
   }
 
   /*

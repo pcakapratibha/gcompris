@@ -1,4 +1,4 @@
-SUBDIRS = gcompris read_colors advanced_colors babymatch babyshapes imageid imagename missing_letter paintings scales doubleentry geography chronos
+SUBDIRS = gcompris read_colors advanced_colors babymatch babyshapes imageid imagename missing_letter paintings doubleentry geography chronos
 
 xmldir = $(pkgdatadir)/@PACKAGE_DATA_DIR@
 
@@ -20,6 +20,7 @@ xml_in_files = \
 	bargame.xml.in \
 	billard.xml.in \
 	canal_lock.xml.in \
+	chat.xml.in \
 	chess_computer.xml.in \
 	chess_movelearn.xml.in \
 	chess_partyend.xml.in \

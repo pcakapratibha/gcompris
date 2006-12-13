@@ -158,7 +158,6 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       gamewon = FALSE;
       pause_board(FALSE);
 
-      gc_cursor_set(GCOMPRIS_LINE_CURSOR);
     }
 
 }
@@ -174,7 +173,6 @@ end_board ()
       destroy_all_items();
     }
   gcomprisBoard = NULL;
-  gc_cursor_set(GCOMPRIS_DEFAULT_CURSOR);
 }
 
 static void
@@ -667,6 +665,7 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
   switch (event->type)
     {
     case GDK_BUTTON_PRESS:
+      gc_sound_play_ogg ("sounds/bleep.wav", NULL);
       x = item_x;
       y = item_y;
 
@@ -701,10 +700,16 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 	  else if(item==minute_item)
 	  {
 	    if(currentTime.minute > 45 && angle * 30 / M_PI < 15)
-	      currentTime.hour++;
+	      {
+		currentTime.hour++;
+		gc_sound_play_ogg ("sounds/paint1.wav", NULL);
+	      }
 
 	    if(currentTime.minute < 15 && angle * 30 / M_PI > 45)
-	      currentTime.hour--;
+	      {
+		currentTime.hour--;
+		gc_sound_play_ogg ("sounds/paint1.wav", NULL);
+	      }
 
 	    display_minute(angle * 30 / M_PI);
 	    display_hour(currentTime.hour);
@@ -712,10 +717,16 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 	  else if(item==second_item)
 	  {
 	    if(currentTime.second > 45 && angle * 30 / M_PI < 15)
-	      currentTime.minute++;
+	      {
+		currentTime.minute++;
+		gc_sound_play_ogg ("sounds/paint1.wav", NULL);
+	      }
 
 	    if(currentTime.second < 15 && angle * 30 / M_PI > 45)
-	      currentTime.minute--;
+	      {
+		currentTime.minute--;
+		gc_sound_play_ogg ("sounds/paint1.wav", NULL);
+	      }
 
 	    display_second(angle * 30 / M_PI);
 	    display_minute(currentTime.minute);
@@ -747,11 +758,11 @@ static void get_random_hour(GcomprisTime *time)
 {
 
   time->hour=g_random_int()%12;
-  
+
   if(gcomprisBoard->level>3)
     time->second=g_random_int()%60;
   else time->second=0;
-  
+
   time->minute=g_random_int()%60;
 
   switch(gcomprisBoard->level)
