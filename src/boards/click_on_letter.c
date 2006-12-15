@@ -78,8 +78,6 @@ static gchar *right_letter;
 
 static gchar *alphabet;
 
-static void sound_played(gchar *file);
-
 static gboolean uppercase_only;
 
 /* Description of this plugin */
@@ -241,7 +239,7 @@ static void repeat ()
       g_free(str1);
 
       if(right_letter_ogg) {
-	gc_sound_play_ogg_cb(right_letter_ogg, sound_played);
+	gc_sound_play_ogg(right_letter_ogg);
       }
 
       g_free(right_letter_ogg);
@@ -659,8 +657,3 @@ config_stop()
 {
 }
 
-static void
-sound_played (gchar *file)
-{
-  g_warning ("Sound_played %s\n", file);
-}

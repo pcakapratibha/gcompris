@@ -46,6 +46,22 @@ LIBGNOMECANVAS_REQUIRED=2.3.6
 PKG_CHECK_MODULES(GCOMPRIS, gtk+-2.0 >= $GTK_REQUIRED gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED libgnomecanvas-2.0 >= $LIBGNOMECANVAS_REQUIRED gthread-2.0)
 AC_CHECK_LIB(SDL_mixer, Mix_OpenAudio,, AC_MSG_ERROR([*** SDL_mixer not found. Visit http://www.libsdl.org and get it]))
 
+AC_MSG_CHECKING([for gc_sound])
+pwd=`pwd`
+GC_SOUND_CFLAGS="-I$pwd/src/gc_sound/src"
+GC_SOUND_LIBS="$pwd/src/gc_sound/src/libgcsound-2.la"
+AC_SUBST(GC_SOUND_CFLAGS)
+AC_SUBST(GC_SOUND_LIBS)
+AC_MSG_RESULT([$GC_SOUND_CFLAGS])
+
+PKG_CHECK_MODULES(GOBJECT,[
+	glib-2.0 >= 2.10.0
+	gobject-2.0 >= 2.8.0
+	])
+
+GCOMPRIS_CFLAGS="$GCOMPRIS_CFLAGS $GC_SOUND_CFLAGS"
+GCOMPRIS_LIBS="$GCOMPRIS_LIBS $GC_SOUND_LIBS"
+
 AC_SUBST(GCOMPRIS_CFLAGS)
 AC_SUBST(GCOMPRIS_LIBS)
 

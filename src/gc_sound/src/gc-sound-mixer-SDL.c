@@ -401,7 +401,8 @@ gc_sound_mixer_sdl_destroy (GcSoundObject *object)
     {
       g_signal_handlers_disconnect_by_func(GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)), channel_destroyed, self);
       gc_sound_object_destroy (GC_SOUND_OBJECT(g_ptr_array_index(self->channels,i)));
-      g_object_unref(G_OBJECT(g_ptr_array_index(self->channels,i)));
+      // will be unref on signal receipt
+      //g_object_unref(G_OBJECT(g_ptr_array_index(self->channels,i)));
     }
 
    running_mixer = NULL;

@@ -28,7 +28,7 @@ typedef struct  {gint count; gint max;} counter;
 
 static GcomprisBoard *gcomprisBoard = NULL;
 static gboolean board_paused = TRUE;
-static SoundPolicy sound_policy;
+static GcSoundPolicy sound_policy;
 
 
 static void	 start_board (GcomprisBoard *agcomprisBoard);
@@ -219,7 +219,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 
       /* initial state to restore */
       sound_policy = gc_sound_policy_get();
-      gc_sound_policy_set(PLAY_AND_INTERRUPT);
+      gc_sound_policy_set(INTERRUPT_AND_PLAY);
 
       gc_cursor_set(GCOMPRIS_DEL_CURSOR);
 

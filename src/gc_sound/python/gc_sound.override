@@ -116,3 +116,73 @@ _wrap_gc_sound_mixer_sdl_new(PyGObject *self, PyObject *args, PyObject *kwargs)
     g_object_ref(G_OBJECT(self->obj));
     return 0;
 }
+%%
+override gc_sound_item_append_child  kwargs
+static PyObject *
+_wrap_gc_sound_item_append_child (PyGObject *self, PyObject *args,
+			        PyObject *kwargs)
+{
+    GcSoundItem   *item;
+    GObjectClass      *class;
+    guint              pos;
+    PyObject          *value;
+    PyObject          *key;
+    GType              type;
+
+    if (!PyArg_ParseTuple (args, ":gc_sound.item.append_child")) {
+	return NULL;
+    }
+
+    item = gc_sound_item_append_child(GC_SOUND_ITEM(self->obj), NULL);
+
+    if (!item) {
+	PyErr_SetString (PyExc_RuntimeError,
+			 "could not create GcSoundItem object");
+	return NULL;
+    }
+
+    type =  GC_TYPE_SOUND_ITEM;
+
+    class = G_OBJECT_GET_CLASS(item);
+    g_object_freeze_notify (G_OBJECT(item));
+    pos = 0;
+    /* For each keyword ... */
+    while (kwargs && PyDict_Next (kwargs, (int *) &pos, &key, &value)) {
+	gchar *key_str = PyString_AsString (key);
+	g_warning("kwargs %s", key_str);
+	GParamSpec *pspec;
+	GValue gvalue ={ 0, };
+
+	pspec = g_object_class_find_property (class, key_str);
+	if (!pspec) {
+	    gchar buf[512];
+
+	    g_snprintf(buf, sizeof(buf),
+		       "canvas item `%s' doesn't support property `%s'",
+		       g_type_name(type), key_str);
+	    PyErr_SetString(PyExc_TypeError, buf);
+	    gc_sound_object_destroy(GC_SOUND_OBJECT(item));
+	    return NULL;
+	}
+
+	g_value_init(&gvalue, G_PARAM_SPEC_VALUE_TYPE(pspec));
+	if (pyg_value_from_pyobject(&gvalue, value)) {
+	    gchar buf[512];
+
+	    g_snprintf(buf, sizeof(buf),
+		       "could not convert value for property `%s'", key_str);
+	    PyErr_SetString(PyExc_TypeError, buf);
+	    gc_sound_object_destroy(GC_SOUND_OBJECT(item));
+	    return NULL;
+	}
+	g_object_set_property(G_OBJECT(item), key_str, &gvalue);
+	g_value_unset(&gvalue);
+    }
+
+    g_object_thaw_notify (G_OBJECT(item));
+
+    return pygobject_new ((GObject *)item);
+    
+
+}
+	

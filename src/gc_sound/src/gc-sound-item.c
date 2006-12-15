@@ -138,14 +138,19 @@ void gc_sound_item_child_destroyed( GcSoundItem *child, gpointer data)
   g_object_unref (G_OBJECT(child));
 }
 
-GcSoundItem *   gc_sound_item_append_child (GcSoundItem *self)
+GcSoundItem *   gc_sound_item_append_child (GcSoundItem *self, const gchar *first_arg_name, ...)
 {
   GcSoundItem *child;
+  va_list args;
 
   child = GC_SOUND_ITEM(g_object_new(GC_TYPE_SOUND_ITEM, 
 				     "parent", self, 
-				     "channel", self->channel, 
+				     "channel", self->channel,
 				     NULL));
+  va_start (args, first_arg_name);
+  g_object_set_valist( G_OBJECT(child), 
+		       first_arg_name, args);
+  va_end (args);
 
   /* Child is added to our lists */
   self->children = g_list_append (self->children, child);
@@ -196,6 +201,10 @@ gc_sound_item_signal_real_play (GcSoundItem *self)
 static void
 gc_sound_item_signal_play_end (GcSoundItem *self, gboolean stopped)
 {
+  if (self->destroy_after_play){
+    gc_sound_object_destroy(GC_SOUND_OBJECT(self));
+  }
+
   if (self->has_played || stopped) {
     self->started = FALSE;
     self->has_played = FALSE;
@@ -230,7 +239,8 @@ gc_sound_item_signal_chunk_start (GcSoundItem *self)
 enum {
 	PROP_0,
 	PROP_CHANNEL,
-	PROP_FILENAME
+	PROP_FILENAME,
+	PROP_DESTROY_AFTER_PLAY
 };
 
 /* GType */
@@ -264,6 +274,7 @@ gc_sound_item_init(GcSoundItem* self)
   // child we are playing
   self->playing = NULL;
 
+  self->destroy_after_play = FALSE;
 }
 
 static void
@@ -275,7 +286,10 @@ gc_sound_item_get_property(GObject* object, guint prop_id, GValue* value, GParam
     g_value_set_object(value, self->channel);
     break;
   case PROP_FILENAME:
-    g_value_set_string(value, self->filename);
+    g_value_set_string(value, g_strdup(self->filename));
+    break;
+  case PROP_DESTROY_AFTER_PLAY:
+    g_value_set_boolean(value, self->destroy_after_play);
     break;
   default:
     G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
@@ -294,6 +308,9 @@ gc_sound_item_set_property(GObject* object, guint prop_id, GValue const* value, 
     break;
   case PROP_FILENAME:
     gc_sound_item_set_filename( self, (gchar *)g_value_get_string(value));
+    break;
+  case PROP_DESTROY_AFTER_PLAY:
+    self->destroy_after_play = g_value_get_boolean(value);
     break;
   default:
     G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
@@ -327,6 +344,13 @@ gc_sound_item_class_init(GcSoundItemClass* self_class)
 						     "File to play",
 						       "The sound file to play",
 						       NULL,
+						       G_PARAM_READWRITE));
+  g_object_class_install_property(go_class,
+				  PROP_DESTROY_AFTER_PLAY,
+				  g_param_spec_boolean ("destroy_after_play",
+						     "destroy the item when played",
+						       "Destroy the item when played",
+						       FALSE,
 						       G_PARAM_READWRITE));
 
 /* signals */
@@ -363,7 +387,7 @@ gc_sound_item_class_init(GcSoundItemClass* self_class)
   gc_sound_item_signals[PLAY_START] =
     g_signal_new("play_start", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
-		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
+		 (GSignalFlags)(G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION), /* flags */
 		 G_STRUCT_OFFSET (GcSoundItemClass, play_start), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
@@ -374,7 +398,7 @@ gc_sound_item_class_init(GcSoundItemClass* self_class)
   gc_sound_item_signals[PLAY_END] =
     g_signal_new("play_end", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
-		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
+		 (GSignalFlags)(G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION), /* flags */
 		 G_STRUCT_OFFSET (GcSoundItemClass, play_end), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
@@ -386,7 +410,7 @@ gc_sound_item_class_init(GcSoundItemClass* self_class)
   gc_sound_item_signals[CHUNK_START] =
     g_signal_new("chunk_start", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
-		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
+		 (GSignalFlags)(G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION), /* flags */
 		 G_STRUCT_OFFSET (GcSoundItemClass, chunk_start), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */
@@ -397,7 +421,7 @@ gc_sound_item_class_init(GcSoundItemClass* self_class)
   gc_sound_item_signals[CHUNK_END] =
     g_signal_new("chunk_end", /* name */
 		 GC_TYPE_SOUND_ITEM, /* itype */
-		 (GSignalFlags)(G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION), /* flags */
+		 (GSignalFlags)(G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION), /* flags */
 		 G_STRUCT_OFFSET (GcSoundItemClass, chunk_end), /* offset function */
 		 NULL,  /* accumulator */
 		 NULL,  /* accu data */

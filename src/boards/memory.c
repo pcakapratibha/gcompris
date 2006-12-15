@@ -108,6 +108,7 @@ typedef struct {
   GnomeCanvasItem *frontcardItem;
   gboolean hidden;
   gchar *second_value;
+  GcSoundItem *sound_item;
 } MemoryItem;
 
 static MemoryItem *firstCard = NULL;
@@ -156,8 +157,8 @@ static void player_win();
 
 static void display_card(MemoryItem *memoryItem, CardStatus cardStatus);
 
-static void sound_callback(gchar *file);
-static void start_callback(gchar *file);
+static void sound_callback(GcSoundItem *item, gboolean stopped, gpointer data);
+static void start_callback(GcSoundItem *item, gboolean stopped, gpointer data);
 static gboolean playing_sound = FALSE;
 
 // Number of images for x and y by level
@@ -276,7 +277,7 @@ static gchar *soundList[] =
 
 #define NUMBER_OF_SOUNDS G_N_ELEMENTS(soundList)
 
-static SoundPolicy sound_policy;
+static GcSoundPolicy sound_policy;
 
 /* Description of this plugin */
 static BoardPlugin menu_bp =
@@ -685,6 +686,7 @@ static void pause_board (gboolean pause)
  */
 static void start_board (GcomprisBoard *agcomprisBoard)
 {
+  GcSoundItem *item;
 
   if(agcomprisBoard!=NULL)
     {
@@ -819,7 +821,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 	  /* initial state to restore */
 	  sound_policy = gc_sound_policy_get();
 
-	  gc_sound_policy_set(PLAY_AND_INTERRUPT);
+	  gc_sound_policy_set(INTERRUPT_AND_PLAY);
 
 	  gc_set_background(gnome_canvas_root(gcomprisBoard->canvas), "images/gcompris_band.png");
 	  base_x1 = BASE_SOUND_X1;
@@ -891,7 +893,10 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       to_tux = FALSE;
       if (currentUiMode == UIMODE_SOUND){
 	playing_sound = TRUE;
-	gc_sound_play_ogg_cb("sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg",start_callback);
+	item = gc_sound_item_from_gc_filename("sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg", NULL);
+
+	g_object_connect(G_OBJECT(item), "play_end",(GCallback) start_callback, NULL);
+	gc_sound_item_play(item);
       } else
 	playing_sound = FALSE;
 
@@ -904,6 +909,7 @@ end_board ()
 {
   if (currentUiMode == UIMODE_SOUND) {
     gc_sound_policy_set(sound_policy);
+    gc_sound_object_destroy(GC_SOUND_OBJECT(gc_sound_channel_get_root(gc_prop_get()->fx_chan)));
     gc_sound_resume();
   }
 
@@ -1340,6 +1346,10 @@ static void create_item(GnomeCanvasGroup *parent)
 				     "height_set", TRUE,
 				     NULL);
 	    gdk_pixbuf_unref(pixmap);
+
+	    memoryItem->sound_item = \
+	    gc_sound_item_from_gc_filename( memoryItem->data, NULL);
+	    g_object_connect(memoryItem->sound_item, "play_end", (GCallback) sound_callback, NULL);
 	  }
 	  else {
 	    if(memoryItem->type == TYPE_IMAGE) {
@@ -1425,7 +1435,7 @@ static void display_card(MemoryItem *memoryItem, CardStatus cardStatus)
 	gnome_canvas_item_hide(memoryItem->backcardItem);
 	gnome_canvas_item_show(memoryItem->frontcardItem);
 	playing_sound = TRUE;
-	gc_sound_play_ogg_cb (memoryItem->data, sound_callback);
+	gc_sound_item_play(memoryItem->sound_item);
 	break;
       case ON_BACK:
 	gnome_canvas_item_show(memoryItem->backcardItem);
@@ -1806,12 +1816,10 @@ static gint tux_play(){
   return FALSE;
 }
 
-static void sound_callback(gchar *file)
+static void sound_callback(GcSoundItem *item, gboolean stopped, gpointer data)
 {
   if (! gcomprisBoard)
     return;
-
-  g_warning("sound_callback %s", file);
 
   playing_sound = FALSE;
   if (currentMode == MODE_TUX){
@@ -1841,7 +1849,8 @@ static void sound_callback(gchar *file)
 }
 
 
-static void start_callback(gchar *file){
+static void start_callback(GcSoundItem *item, gboolean stopped, gpointer data)
+{
   if (!gcomprisBoard)
     return;
 
@@ -1849,4 +1858,5 @@ static void start_callback(gchar *file){
     return;
 
   playing_sound = FALSE;
+  gc_sound_object_destroy(GC_SOUND_OBJECT(item));
 }

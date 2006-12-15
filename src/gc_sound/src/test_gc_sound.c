@@ -38,13 +38,15 @@ main (int argc, char *argv)
   GC_SOUND_OBJECT(root2)->nick="root2";
 
   /* create new item for our sounds */
-  item1 = gc_sound_item_append_child (root1);
-  item2 = gc_sound_item_append_child (root2);
-  item3 = gc_sound_item_append_child (root2);
-  item1_1 = gc_sound_item_append_child (item1);
+  item1 = gc_sound_item_append_child (root1, NULL);
+  // item2 = gc_sound_item_append_child (root2, "filename", "../../../../../gcompris_main/gcompris/boards/music/background/LRLaPause.ogg", NULL);
   
-  item1_2 = gc_sound_item_append_child (item1);
-
+  item2 = gc_sound_item_append_child (root2, NULL);
+   g_object_set( G_OBJECT(item2), "filename", "../../../../../gcompris_main/gcompris/boards/music/background/LRLaPause.ogg", NULL);
+  item3 = gc_sound_item_append_child (root2, "filename", "../../../../../gcompris_main/gcompris/boards/sounds/bonus.ogg", NULL);
+  item1_1 = gc_sound_item_append_child (item1, "filename", "../../../../../gcompris_main/gcompris/boards/sounds/train.ogg", NULL);
+  item1_2 = gc_sound_item_append_child (item1, "filename",  "../../../../../gcompris_main/gcompris/boards/sounds/wahoo.ogg", "destroy_after_play", TRUE, NULL);
+  
   GC_SOUND_OBJECT(item1)->nick = "item1";
   GC_SOUND_OBJECT(item2)->nick = "item2";
   GC_SOUND_OBJECT(item3)->nick = "item3";
@@ -52,10 +54,11 @@ main (int argc, char *argv)
   GC_SOUND_OBJECT(item1_2)->nick = "item1_2";
 
    /* set file sound name */
-   gc_sound_item_set_filename(item1_1, "../../../../../gcompris_main/gcompris/boards/sounds/wahoo.ogg");
+  /*   gc_sound_item_set_filename(item1_1, "../../../../../gcompris_main/gcompris/boards/sounds/wahoo.ogg");
    gc_sound_item_set_filename(item1_2, "../../../../../gcompris_main/gcompris/boards/sounds/wahoo.ogg");
    gc_sound_item_set_filename(item2, "../../../../../gcompris_main/gcompris/boards/music/background/LRLaPause.ogg");
    gc_sound_item_set_filename(item3, "../../../../../gcompris_main/gcompris/boards/sounds/bonus.ogg");
+  */
 
    // test
    gc_sound_item_set_filename(item1_1, NULL);

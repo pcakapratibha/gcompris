@@ -56,7 +56,7 @@ INCLUDES = \
 	$(XML_CFLAGS) \
 	$(SDL_CFLAGS) \
 	-DGNOME_DISABLE_DEPRECATED \
-        $(sqlite_cflags) \
+         $(sqlite_cflags) \
 	$(GNET_CFLAGS) \
 	$(cairo_cflags)
 
@@ -70,9 +70,11 @@ gcompris_LDFLAGS = \
 gcompris_LDADD = \
 	$(top_builddir)/src/gcompris/libgcompris-1.la \
 	$(LIBICONV)		\
-        $(INTLLIBS) \
+	$(INTLLIBS) \
 	$(python_ldadd) \
-	$(LIBPOPT)
+	$(LIBPOPT) \
+	$(GC_SOUND_LIBS)
+
 
 #
 # Gcompris library
@@ -142,7 +144,6 @@ libgcompris_1_la_SOURCES =			\
 	profile.c \
 	properties.c \
 	score.c \
-	sdlplayer.c \
 	skin.c \
 	soundutil.c \
 	timer.c \

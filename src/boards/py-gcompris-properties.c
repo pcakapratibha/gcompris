@@ -160,6 +160,33 @@ pyGcomprisPropertiesType_getattr(pyGcomprisPropertiesObject *self, char *name)
 
     if(strcmp(name,"default_context")==0) return Py_BuildValue("s", self->cdata->default_context);
 
+    if(strcmp(name,"mixer")==0){
+      if (self->cdata->mixer)
+	return (PyObject*) pygobject_new((GObject*)self->cdata->mixer);
+      else {
+	Py_INCREF(Py_None);
+	return Py_None;
+      }
+    }
+
+    if(strcmp(name,"fx_chan")==0){
+      if (self->cdata->fx_chan)
+	return (PyObject*) pygobject_new((GObject*)self->cdata->fx_chan);
+      else {
+	Py_INCREF(Py_None);
+	return Py_None;
+      }
+    }
+
+    if(strcmp(name,"music_chan")==0){
+      if (self->cdata->music_chan)
+	return (PyObject*) pygobject_new((GObject*)self->cdata->music_chan);
+      else {
+	Py_INCREF(Py_None);
+	return Py_None;
+      }
+    }
+
   }
   return Py_FindMethod(pyGcomprisPropertiesType_methods, (PyObject *)self, name);
 }

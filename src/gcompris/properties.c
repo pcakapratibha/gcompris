@@ -174,6 +174,11 @@ gc_prop_new ()
   tmp->cache_dir                  = NULL;
   tmp->drag_mode                  = GC_DRAG_MODE_GRAB;
 
+  /* initialised in soundutil.c (gc_sound_init) */
+  tmp->mixer                      = NULL;
+  tmp->music_chan                 = NULL;
+  tmp->fx_chan                    = NULL;
+
   user_dir = gc_prop_user_root_directory_get() ;
   gc_util_create_rootdir( user_dir );
 

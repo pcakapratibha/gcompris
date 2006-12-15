@@ -41,7 +41,7 @@
   (c-name "GcSoundPolicy")
   (gtype-id "GC_TYPE_SOUND_POLICY")
   (values
-    '("none" "NONE")
+    '("policy_none" "POLICY_NONE")
     '("play-only-if-idle" "PLAY_ONLY_IF_IDLE")
     '("play-after-current" "PLAY_AFTER_CURRENT")
     '("interrupt-and-play" "INTERRUPT_AND_PLAY")
@@ -133,6 +133,10 @@
   (of-object "GcSoundItem")
   (c-name "gc_sound_item_append_child")
   (return-type "GcSoundItem*")
+  (parameters
+    '("const-gchar*" "first_arg_name")
+  )
+  (varargs #t)
 )
 
 (define-method play

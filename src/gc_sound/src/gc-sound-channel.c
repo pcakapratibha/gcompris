@@ -83,7 +83,7 @@ gboolean                gc_sound_channel_play         (GcSoundChannel *self,
       GcSoundPolicy policy;
 
       /* item policy if it's set */
-      if (gc_sound_item_get_policy(item) == NONE)
+      if (gc_sound_item_get_policy(item) == POLICY_NONE)
          policy = self->policy;
       else
          policy = gc_sound_item_get_policy(item);
@@ -130,10 +130,12 @@ static void gc_sound_channel_destroy (GcSoundObject *self);
 
 static void root_destroyed (GcSoundObject *root, gpointer data)
 {
-  if (!(GC_SOUND_OBJECT_FLAGS (GC_SOUND_OBJECT(data)) & GC_SOUND_IN_DESTRUCTION))
-    gc_sound_channel_destroy (GC_SOUND_OBJECT(data));
-  // direct call claas destroy because root is already destroyed.
-    //GC_SOUND_OBJECT_GET_CLASS(data)->destroy (GC_SOUND_OBJECT(data));
+  GcSoundChannel *self = GC_SOUND_CHANNEL(data);
+  if (!(GC_SOUND_OBJECT_FLAGS (GC_SOUND_OBJECT(data)) & GC_SOUND_IN_DESTRUCTION)) {
+    g_object_unref(self->root);
+    self->root = GC_SOUND_ITEM(g_object_new(GC_TYPE_SOUND_ITEM, "channel", self, NULL));
+    g_object_ref_sink(G_OBJECT(self->root));
+  }
 }
 
 static void

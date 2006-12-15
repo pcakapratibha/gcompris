@@ -26,6 +26,8 @@
 #  include <config.h>
 #endif
 
+#include <gc-sound.h>
+
 #include <libgnomecanvas/libgnomecanvas.h>
 
 #include <gtk/gtk.h>

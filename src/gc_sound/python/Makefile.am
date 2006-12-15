@@ -13,10 +13,10 @@ common_ldflags = -module -avoid-version
 
 # gc_sound binding
 pkgpyexec_LTLIBRARIES = gc_sound.la
-gc_sound_la_CFLAGS = $(GC_SOUND_CFLAGS)  -I../src
+gc_sound_la_CFLAGS = $(GOBJECT_CFLAGS)  -I../src
 gc_sound_la_LDFLAGS = $(common_ldflags) -export-symbols-regex initgc_sound
-gc_sound_la_LIBADD = $(GC_SOUND_LIBS) -L../src/.libs -lgcsound-2
-nodist_gc_sound_la_CFLAGS = $(GC_SOUNDS_CFLAGS) -I../src
+gc_sound_la_LIBADD = $(GOBJECT_LIBS) -L../src/.libs -lgcsound-2
+nodist_gc_sound_la_CFLAGS = $(GOBJECT_CFLAGS) -I../src
 gc_sound_la_SOURCES = gc_sound_module.c
 nodist_gc_sound_la_SOURCES = gc_sound.c
 CLEANFILES = gc_sound.c

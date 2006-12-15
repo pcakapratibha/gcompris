@@ -1,5 +1,5 @@
 import sys
-sys.path.append('.libs')
+sys.path.insert(0, '.libs')
 
 import gc_sound
 import gtk
@@ -17,8 +17,10 @@ if __name__ == "__main__":
    chan = mix.new_channel()
 
    item = chan.get_root().append_child()
-   item.set_filename("/home/ycombe/Win32/gcompris_main/gcompris/boards/sounds/youcannot.wav")
+   #item.set_filename("/home/ycombe/Win32/gcompris_main/gcompris/boards/sounds/youcannot.wav")
 
+   print item.get_filename()
+   item.set_property("filename", "/home/ycombe/Win32/gcompris_main/gcompris/boards/sounds/youcannot.wav")
    item.connect("play_start", cb_start)
    item.connect("play_end", cb_stop)
    item.play()

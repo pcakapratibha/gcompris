@@ -69,6 +69,8 @@ struct _GcSoundItem {
 
   // child we are playing
   GList *playing;
+
+  gboolean       destroy_after_play;
 };
 
 struct _GcSoundItemClass {
@@ -87,7 +89,7 @@ struct _GcSoundItemClass {
 gboolean        gc_sound_item_run_next (GcSoundItem *self, 
                                         gboolean stopped);
 
-GcSoundItem *   gc_sound_item_append_child (GcSoundItem *self);
+GcSoundItem *   gc_sound_item_append_child (GcSoundItem *self, const gchar *first_arg_name, ...);
 
 gboolean        gc_sound_item_play (GcSoundItem *self);
 

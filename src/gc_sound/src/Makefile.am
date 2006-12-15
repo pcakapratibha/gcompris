@@ -3,11 +3,11 @@
 #
 lib_LTLIBRARIES = libgcsound-2.la
 
-#libgcsound_2_la_CFLAGS= $(SDL_CFLAGS) $(GC_SOUND_CFLAGS)
-#libgcsound_2_la_LDFLAGS= $(SDL_LIBS)  $(GC_SOUND_LIBS)
+libgcsound_2_la_CFLAGS= $(SDL_CFLAGS) $(GOBJECT_CFLAGS)
+libgcsound_2_la_LDFLAGS= $(SDL_LIBS)  $(GOBJECT_LIBS)
 
-libgcsound_2_la_CFLAGS= $(SDL_CFLAGS) $(GCOMPRIS_CFLAGS)
-libgcsound_2_la_LDFLAGS= $(SDL_LIBS)  $(GCOMPRIS_LIBS)
+#libgcsound_2_la_CFLAGS= $(SDL_CFLAGS) $(GCOMPRIS_CFLAGS)
+#libgcsound_2_la_LDFLAGS= $(SDL_LIBS)  $(GCOMPRIS_LIBS)
 
 libgcsoundincludedir = $(includedir)/gcompris/gcsound
 
@@ -47,9 +47,9 @@ libgcsound_2_la_SOURCES = \
 
 check_PROGRAMS = test_gc_sound
 
-test_gc_sound_CFLAGS = $(GC_SOUND_CFLAGS)
+test_gc_sound_CFLAGS = $(GOBJECT_CFLAGS)
 
-test_gc_sound_LDFLAGS = -L. -lgcsound-2  $(GC_SOUND_LIBS)
+test_gc_sound_LDFLAGS = -L. -lgcsound-2  $(GOBJECT_LIBS)
 
 test_gc_sound_SOURCES = \
 	test_gc_sound.c

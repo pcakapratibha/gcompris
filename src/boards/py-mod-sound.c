@@ -165,56 +165,19 @@ void pyGcomprisSoundCallback(gchar *file){
 }
 
 
-static PyObject*
-py_gc_sound_play_ogg_cb(PyObject* self, PyObject* args)
-{
-  gchar *file;
-  PyObject* pyCallback;
-
-  /* Parse arguments */
-  if(!PyArg_ParseTuple(args,
-		       "sO:gc_sound_play_ogg_cb",
-		       &file,
-		       &pyCallback))
-    return NULL;
-
-  if(!PyCallable_Check(pyCallback))
-    {
-      PyErr_SetString(PyExc_TypeError,
-		      "gc_sound_play_ogg_cb second argument must be callable");
-      return NULL;
-    }
-
-  if (!py_sound_callbacks)
-    py_sound_callbacks = g_hash_table_new_full (g_str_hash,
-					    g_str_equal,
-					    g_free,
-					    NULL);
-
-  g_hash_table_replace (py_sound_callbacks,
-			g_strdup(file),
-			pyCallback);
-  Py_INCREF(pyCallback);
-
-  g_warning("py_gc_sound_play_ogg_cb %s", file);
-
-  gc_sound_play_ogg_cb( file,
-			(GcomprisSoundCallback) pyGcomprisSoundCallback);
-
-  /* Create and return the result */
-  Py_INCREF(Py_None);
-  return Py_None;
-
-}
-
 /* void gc_sound_policy_set(guint); */
 static PyObject*
 py_gc_sound_policy_set(PyObject* self, PyObject* args)
 {
-  guint policy;
+  GcSoundPolicy policy;
+  PyObject *py_policy = NULL;
+
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, "i:gc_sound_policy_set",&policy))
+  if(!PyArg_ParseTuple(args, "O:gc_sound_policy_set",&py_policy))
     return NULL;
+
+  if (pyg_enum_get_value(GC_TYPE_SOUND_POLICY, py_policy, (gpointer)&policy))
+        return NULL;
 
   /* Call the corresponding C function */
   gc_sound_policy_set(policy);
@@ -228,16 +191,16 @@ py_gc_sound_policy_set(PyObject* self, PyObject* args)
 static PyObject*
 py_gc_sound_policy_get(PyObject* self, PyObject* args)
 {
-  guint policy;
+  GcSoundPolicy policy;
+
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, ":gc_sound_policy_set"))
+  if(!PyArg_ParseTuple(args, ":gc_sound_policy_get"))
     return NULL;
 
   /* Call the corresponding C function */
   policy = gc_sound_policy_get();
-
-  /* Create and return the result */
-  return Py_BuildValue("i", policy);
+    
+  return pyg_enum_from_gtype(GC_TYPE_SOUND_POLICY, policy);
 }
 
 
@@ -248,7 +211,6 @@ static PyMethodDef PythonGcomprisSoundModule[] = {
   { "close",  py_gc_sound_close, METH_VARARGS, "gc_sound_close" },
   { "pause",  py_gc_sound_pause, METH_VARARGS, "gc_sound_pause" },
   { "resume",  py_gc_sound_resume, METH_VARARGS, "gc_sound_resume" },
-  { "play_ogg_cb",  py_gc_sound_play_ogg_cb, METH_VARARGS, "gc_sound_play_ogg_cb" },
   { "policy_get",  py_gc_sound_policy_get, METH_VARARGS, "gc_sound_policy_get" },
   { "policy_set",  py_gc_sound_policy_set, METH_VARARGS, "gc_sound_policy_set" },
   { NULL, NULL, 0, NULL}
@@ -258,10 +220,6 @@ void python_gcompris_sound_module_init(void)
 {
   PyObject* module;
   module = Py_InitModule("_gcompris_sound", PythonGcomprisSoundModule);
-
-  PyModule_AddIntConstant(module, "PLAY_ONLY_IF_IDLE", PLAY_ONLY_IF_IDLE );
-  PyModule_AddIntConstant(module, "PLAY_AFTER_CURRENT", PLAY_AFTER_CURRENT );
-  PyModule_AddIntConstant(module, "PLAY_AND_INTERRUPT", PLAY_AND_INTERRUPT );
 }
 
 /* Some usefull code parts ... */

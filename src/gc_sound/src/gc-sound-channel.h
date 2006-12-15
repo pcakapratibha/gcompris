@@ -28,7 +28,7 @@ typedef struct _GcSoundChannel GcSoundChannel;
 typedef struct _GcSoundChannelClass GcSoundChannelClass;
 
 typedef enum {
-        NONE,
+        POLICY_NONE,
         PLAY_ONLY_IF_IDLE,
         PLAY_AFTER_CURRENT,
         INTERRUPT_AND_PLAY

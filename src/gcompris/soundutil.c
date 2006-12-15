@@ -26,33 +26,11 @@
 #include <signal.h>
 #include <glib.h>
 
-static GList	*pending_queue = NULL;
-static int	 sound_policy;
 static gboolean	 music_paused = FALSE;
 static gboolean	 sound_closed = FALSE;
 
-/* mutex */
-GMutex		*lock = NULL;
-GMutex		*lock_music = NULL;
-GMutex		*lock_fx = NULL;
-GCond		*cond = NULL;
-
 /* Singleton */
 static guint	 sound_init = 0;
-
-/* Forward function declarations */
-GThread		*thread_scheduler_fx, *thread_scheduler_music;
-
-static void	*thread_play_ogg (gchar *file);
-static char	*get_next_sound_to_play( );
-
-static gpointer  scheduler_fx (gpointer user_data);
-static gpointer  scheduler_music (gpointer user_data);
-
-/* sound control */
-GObject *gc_sound_controller = NULL;
-void gc_sound_callback(GcomprisSound *ctl, gchar *file, gpointer user_data);
-GHashTable *sound_callbacks = NULL;
 
 /* =====================================================================
  *
@@ -60,7 +38,6 @@ GHashTable *sound_callbacks = NULL;
 void
 gc_sound_init()
 {
-
   /* Check to run the init once only */
   if(sound_init == 1)
     {
@@ -71,40 +48,18 @@ gc_sound_init()
     }
   sound_init = 1;
 
-  gc_sound_controller = g_object_new (GCOMPRIS_SOUND_TYPE, NULL);
+#ifdef HAVE_LIBSDL_MIXER
+  gc_prop_get()->mixer = gc_sound_mixer_sdl_new();
+#endif
 
-  g_signal_connect( gc_sound_controller,
-		    "sound-played",
-		    (GCallback) gc_sound_callback,
-		    NULL);
-
-  g_assert( gc_sound_controller != NULL );
-
-  /* Initialize the thread system */
-  if (!g_thread_supported ()) g_thread_init (NULL);
-
-  lock = g_mutex_new ();
-  lock_music = g_mutex_new ();
-  lock_fx = g_mutex_new ();
-  cond = g_cond_new ();
-
-  sound_policy = PLAY_AFTER_CURRENT;
-
-  if(sdlplayer_init()!=0) {
+  if(!gc_prop_get()->mixer) {
     /* Sound init failed. Desactivate the sound */
     gc_prop_get()->music = 0;
     gc_prop_get()->fx    = 0;
     return;
   }
-
-  thread_scheduler_fx = g_thread_create((GThreadFunc)scheduler_fx, NULL, FALSE, NULL);
-  if (thread_scheduler_fx == NULL)
-    perror("create failed for fx scheduler");
-
-  thread_scheduler_music = g_thread_create((GThreadFunc)scheduler_music, NULL, FALSE, NULL);
-  if (thread_scheduler_music == NULL)
-    perror("create failed for music scheduler");
-
+  gc_prop_get()->music_chan = gc_sound_mixer_new_channel(gc_prop_get()->mixer);
+  gc_prop_get()->fx_chan = gc_sound_mixer_new_channel(gc_prop_get()->mixer);
 }
 
 void
@@ -113,15 +68,7 @@ gc_sound_close()
   if ( !sound_closed )
     {
       sound_closed = TRUE;
-      if ( music_paused ) {
-         music_paused = FALSE;
-	gc_sound_resume();
-         }
-      g_mutex_lock(lock_fx);
-      sdlplayer_halt_music();
-      sdlplayer_halt_fx();
-      g_mutex_lock(lock_music);
-      sdlplayer_close();
+      gc_sound_mixer_close_audio(gc_prop_get()->mixer);
     }
 }
 
@@ -131,11 +78,8 @@ gc_sound_reopen()
   if (gc_prop_get()->fx || gc_prop_get()->music) {
     if (sound_closed)
       {
-	sdlplayer_reopen();
-	g_mutex_unlock(lock_fx);
-	g_mutex_unlock(lock_music);
+	gc_sound_mixer_open_audio(gc_prop_get()->mixer);
 	sound_closed = FALSE;
-	music_paused = FALSE;
       }
   }
 }
@@ -143,14 +87,14 @@ gc_sound_reopen()
 void
 gc_sound_pause()
 {
-  sdlplayer_pause_music();
+  gc_sound_channel_pause(gc_prop_get()->music_chan);
   music_paused = TRUE;
 }
 
 void
 gc_sound_resume()
 {
-  sdlplayer_resume_music();
+  gc_sound_channel_resume(gc_prop_get()->music_chan);
   music_paused = FALSE;
 }
 
@@ -158,32 +102,25 @@ gc_sound_resume()
  *
  * =====================================================================*/
 void
-gc_sound_policy_set(int policy)
+gc_sound_policy_set(GcSoundPolicy policy)
 {
-  switch (policy)
-    {
-    case PLAY_ONLY_IF_IDLE : sound_policy = PLAY_ONLY_IF_IDLE; break;
-    case PLAY_AFTER_CURRENT : sound_policy = PLAY_AFTER_CURRENT; break;
-    case PLAY_AND_INTERRUPT : sound_policy = PLAY_AND_INTERRUPT; break;
-    default : sound_policy = PLAY_AFTER_CURRENT;
-    }
-}
-/* =====================================================================
- *
- * =====================================================================*/
-int
-gc_sound_policy_get()
-{
-  return sound_policy;
+  gc_sound_channel_set_policy(gc_prop_get()->fx_chan, policy);
 }
 
 /* =====================================================================
- * Thread scheduler background :
- *	- launches a single thread for playing and play any file found
- *        in the gcompris music directory
+ *
+ * =====================================================================*/
+GcSoundPolicy
+gc_sound_policy_get()
+{
+  return gc_sound_channel_get_policy(gc_prop_get()->fx_chan);
+}
+
+
+/* =====================================================================
  ======================================================================*/
-static gpointer
-scheduler_music (gpointer user_data)
+void
+gc_music_play ()
 {
   GcomprisProperties *properties = gc_prop_get();
   gint i;
@@ -204,7 +141,7 @@ scheduler_music (gpointer user_data)
   if (!dir) {
     g_warning ("Couldn't open music dir: %s", music_dir);
     g_free(music_dir);
-    return NULL;
+    return;
   }
 
   /* Fill up the music list */
@@ -222,143 +159,26 @@ scheduler_music (gpointer user_data)
   if(g_slist_length(musiclist)==0)
     {
       g_free(music_dir);
-      return NULL;
+      return;
     }
 
   /* Now loop over all our music files */
-  while (TRUE)
+
+  for(i=0; i<g_slist_length(musiclist); i++)
     {
-      for(i=0; i<g_slist_length(musiclist); i++)
-	{
-	  /* Music can be disabled at any time */
-	  while(!gc_prop_get()->music || music_paused || sound_closed)
-	    g_usleep(1000000);
-
-	  /* WARNING Displaying stuff in a thread seems to make gcompris unstable */
-	  /*	  display_ogg_file_credits((char *)g_list_nth_data(musiclist, i)); */
-	  //	  if(decode_ogg_file((char *)g_list_nth_data(musiclist, i))!=0)
-	  g_mutex_lock(lock_music);
-	  if(sdlplayer_music((char *)g_slist_nth_data(musiclist, i), 128)!=0){
-	    g_warning("sdlplayer_music failed, try again in 5 seconds");
-	    g_usleep(5000000);
-	  }
-	  g_mutex_unlock(lock_music);
-
-	}
+      GcSoundItem *item = gc_sound_item_append_child( gc_sound_channel_get_root ( gc_prop_get()->music_chan ), NULL);
+      
+      gc_sound_item_set_filename( item, g_slist_nth_data(musiclist, i));
+      
     }
 
-  /* Never happen */
+  g_object_set( G_OBJECT(gc_sound_channel_get_root ( gc_prop_get()->music_chan )),
+		"destroy_after_play", TRUE, NULL);
+  gc_sound_item_set_loop(gc_sound_channel_get_root ( gc_prop_get()->music_chan ), TRUE);
+  gc_sound_item_play(gc_sound_channel_get_root ( gc_prop_get()->music_chan ));
+
   g_slist_free(musiclist);
-  g_warning( "The background thread music is stopped now. "\
-	     "The files in %s are not ogg vorbis OR the sound output failed",
-	     music_dir);
-  g_free(music_dir);
-  return NULL;
-}
-/* =====================================================================
- * Thread scheduler :
- *	- launches a single thread for playing a file
- *	- joins the previous thread at its end
- *	-	then launches another thread if some sounds are pending
- *	-	the thread never ends
- ======================================================================*/
-static gpointer
-scheduler_fx (gpointer user_data)
-{
-  char *sound = NULL;
-
-  while (TRUE)
-    {
-      if ( ( sound = get_next_sound_to_play( ) ) != NULL )
-	{
-	  thread_play_ogg(sound);
-	  g_free(sound);
-	}
-      else
-	{
-	  g_mutex_lock (lock);
-	  g_cond_wait (cond, lock);
-	  g_mutex_unlock (lock);
-	}
-    }
-  return NULL;
-}
-/* =====================================================================
- * Thread function for playing a single file
- ======================================================================*/
-static void*
-thread_play_ogg (gchar *file)
-{
-  gchar *absolute_file;
-
-  g_warning("  Thread_play_ogg %s", file);
-
-  absolute_file = gc_file_find_absolute(file);
-
-  if (!absolute_file)
-    return NULL;
-
-  g_warning("   Calling gcompris internal sdlplayer_file (%s)", absolute_file);
-  g_mutex_lock(lock_fx);
-  sdlplayer_fx(absolute_file, 128);
-  g_mutex_unlock(lock_fx);
-  g_signal_emit (gc_sound_controller,
-		 GCOMPRIS_SOUND_GET_CLASS (gc_sound_controller)->sound_played_signal_id,
-		 0 /* details */,
-		 g_strdup(file));
-  g_warning("  sdlplayer_fx(%s) ended.", absolute_file);
-
-  g_free(absolute_file);
-
-  return NULL;
-}
-
-/* =====================================================================
- * Returns the next sound play, or NULL if there is no
- ======================================================================*/
-static char*
-get_next_sound_to_play( )
-{
-  char* tmpSound = NULL;
-
-  g_mutex_lock (lock);
-
-  if ( g_list_length(pending_queue) > 0 )
-    {
-      tmpSound = g_list_nth_data( pending_queue, 0 );
-      pending_queue = g_list_remove( pending_queue, tmpSound );
-      g_warning( "... get_next_sound_to_play : %s\n", tmpSound );
-    }
-
-  g_mutex_unlock (lock);
-
-  return tmpSound;
-}
-
-/* =====================================================================
- * Play a OGG sound file.
- * gc_sound_play_ogg function to process the sounds.
- ======================================================================*/
-void
-gc_sound_play_ogg_cb(const gchar *file, GcomprisSoundCallback cb)
-{
-
-  g_assert ( cb != NULL);
-
-  /* g_intern_string is in 2.10 */
-  const gchar *intern_file = g_quark_to_string( g_quark_from_string(file));
-
-  if (!sound_callbacks)
-    sound_callbacks = g_hash_table_new_full (g_str_hash,
-					    g_str_equal,
-					    NULL,
-					    NULL);
-
-  /* i suppose there will not be two call of that function with same sound file before sound is played */
-  g_hash_table_replace (sound_callbacks,
-			(gpointer)intern_file,
-			cb);
-  gc_sound_play_ogg(intern_file, NULL);
+  return;
 }
 
 /* =====================================================================
@@ -392,59 +212,48 @@ gc_sound_play_ogg(const gchar *sound, ...)
   g_list_free(list);
 }
 
-/* =====================================================================
- * Play a list of OGG sound files.
- * The given ogg files will be first tested as a locale dependant sound file:
- * sounds/<current gcompris locale>/<sound>
- * If it doesn't exists, then the test is done with a music file:
- * music/<sound>
- =====================================================================*/
-void free_string(gpointer data,  gpointer user_data)
-{
-  g_free(data);
-}
 void
 gc_sound_play_ogg_list( GList* files )
 {
   GList* list;
-  char* tmpSound = NULL;
 
   if ( !gc_prop_get()->fx )
     return;
 
-  if ( 	sound_policy == PLAY_ONLY_IF_IDLE &&
-        g_list_length( pending_queue ) > 0 )
-    return;
-
-  if ( sound_policy == PLAY_AND_INTERRUPT ) {
-    g_warning("halt music");
-    while ( g_list_length(pending_queue) > 0 )
-    {
-      tmpSound = g_list_nth_data( pending_queue, 0 );
-      pending_queue = g_list_remove( pending_queue, tmpSound );
-      g_free(tmpSound);
-    }
-    sdlplayer_halt_fx();
-  }
-
-  g_mutex_lock (lock);
-
   list = g_list_first( files );
   while( list!=NULL )
     {
-      if (g_list_length(pending_queue) < MAX_QUEUE_LENGTH)
-	{
-	  pending_queue = g_list_append(pending_queue, g_strdup( (gchar*)(list->data) ));
-	}
+      GcSoundItem *item = gc_sound_item_from_gc_filename((gchar*)(list->data),
+						   "destroy_after_play", TRUE,
+						    NULL);
+
+      if (!item) continue;
+
+      gc_sound_item_play(item);
       list = g_list_next(list);
     }
 
-  g_mutex_unlock (lock);
+}
 
-  // Tell the scheduler to check for new sounds to play
-  g_warning("Tell the scheduler to check for new sounds to play\n");
-  g_cond_signal (cond);
+GcSoundItem *gc_sound_item_from_gc_filename(gchar *filename, const gchar *first_arg_name, ...)
+{
+  gchar *absolute_file = gc_file_find_absolute(filename);
+  va_list args;
 
+  if (!absolute_file)
+    return NULL;
+
+  GcSoundItem *item = gc_sound_item_append_child( gc_sound_channel_get_root (gc_prop_get()->fx_chan), NULL);
+  gc_sound_item_set_filename (item, absolute_file);
+
+  va_start (args, first_arg_name);
+  g_object_set_valist( G_OBJECT(item), 
+		       first_arg_name, args);
+  va_end (args);
+
+  g_free(absolute_file);
+  
+  return item;
 }
 
 /** return a string representing a letter or number audio file
@@ -488,89 +297,3 @@ gc_sound_alphabet(gchar *chars)
   return result2;
 }
 
-
-void gc_sound_callback(GcomprisSound *ctl, gchar *file, gpointer user_data)
-{
-  GcomprisSoundCallback cb;
-
-  if (!sound_callbacks)
-    return;
-
-  cb = g_hash_table_lookup (sound_callbacks, file);
-
-  if (cb){
-    g_warning("calling callback for %s", file);
-    cb(file);
-  }
-  else
-    g_warning("%s has no callback", file);
-  g_hash_table_remove(sound_callbacks, file);
-
-}
-
-/*************************************/
-/* GObject control sound             */
-struct _GcomprisSoundPrivate
-{
-};
-
-#include "gcompris-marshal.h"
-
-static void
-gc_sound_instance_init (GTypeInstance   *instance,
-			      gpointer         g_class)
-{
-        GcomprisSound *self = (GcomprisSound *)instance;
-        self->private = g_new (GcomprisSoundPrivate, 1);
-}
-
-static void
-default_sound_played_signal_handler (GcomprisSound *obj, gchar *file, gpointer user_data)
-{
-        /* Here, we trigger the real file write. */
-        g_warning ("sound_played: %s\n", file);
-}
-
-static void
-gc_sound_class_init (gpointer g_class,
-			   gpointer g_class_data)
-{
-        GcomprisSoundClass *klass = GCOMPRIS_SOUND_CLASS (g_class);
-
-	klass->sound_played = default_sound_played_signal_handler;
-
-        klass->sound_played_signal_id =
-                g_signal_new ("sound-played",
-			      G_TYPE_FROM_CLASS (g_class),
-			      G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-			      G_STRUCT_OFFSET (GcomprisSoundClass, sound_played),
-			      NULL /* accumulator */,
-			      NULL /* accu_data */,
-			      gnome_canvas_marshal_VOID__POINTER,
-			      G_TYPE_NONE /* return_type */,
-			      1     /* n_params */,
-			      G_TYPE_POINTER  /* param_types */);
-
-}
-
-GType gc_sound_get_type (void)
-{
-        static GType type = 0;
-        if (type == 0) {
-                static const GTypeInfo info = {
-                        sizeof (GcomprisSoundClass),
-                        NULL,   /* base_init */
-                        NULL,   /* base_finalize */
-                        gc_sound_class_init,   /* class_init */
-                        NULL,   /* class_finalize */
-                        NULL,   /* class_data */
-                        sizeof (GcomprisSound),
-                        0,      /* n_preallocs */
-                        gc_sound_instance_init    /* instance_init */
-                };
-                type = g_type_register_static (G_TYPE_OBJECT,
-                                               "GcomprisSoundType",
-                                               &info, 0);
-        }
-        return type;
-}

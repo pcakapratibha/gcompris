@@ -65,6 +65,11 @@ typedef struct {
   gchar        *menu_position;
   gchar        *server;
   gint  drag_mode;
+
+  /* GcSound API */
+  GcSoundMixer *mixer;
+  GcSoundChannel *music_chan;
+  GcSoundChannel *fx_chan;
 } GcomprisProperties;
 
 GcomprisProperties	*gc_prop_get (void);
