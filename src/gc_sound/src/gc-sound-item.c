@@ -18,6 +18,7 @@
  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 #include <gc-sound-item.h>
+#include <gc-sound-enumerations.h>
 #include <gc-sound-marshallers.h>
 
 
@@ -240,6 +241,7 @@ enum {
 	PROP_0,
 	PROP_CHANNEL,
 	PROP_FILENAME,
+	PROP_POLICY,
 	PROP_DESTROY_AFTER_PLAY
 };
 
@@ -288,6 +290,9 @@ gc_sound_item_get_property(GObject* object, guint prop_id, GValue* value, GParam
   case PROP_FILENAME:
     g_value_set_string(value, g_strdup(self->filename));
     break;
+  case PROP_POLICY:
+    g_value_set_enum(value, self->policy);
+    break;
   case PROP_DESTROY_AFTER_PLAY:
     g_value_set_boolean(value, self->destroy_after_play);
     break;
@@ -308,6 +313,9 @@ gc_sound_item_set_property(GObject* object, guint prop_id, GValue const* value, 
     break;
   case PROP_FILENAME:
     gc_sound_item_set_filename( self, (gchar *)g_value_get_string(value));
+    break;
+  case PROP_POLICY:
+    gc_sound_item_set_policy( self, (GcSoundPolicy) g_value_get_enum(value));
     break;
   case PROP_DESTROY_AFTER_PLAY:
     self->destroy_after_play = g_value_get_boolean(value);
@@ -345,6 +353,14 @@ gc_sound_item_class_init(GcSoundItemClass* self_class)
 						       "The sound file to play",
 						       NULL,
 						       G_PARAM_READWRITE));
+  g_object_class_install_property(go_class,
+				  PROP_POLICY,
+				  g_param_spec_enum ("policy",
+						     "gc sound policy",
+						     "Set/Get the sound Policy",
+						     GC_TYPE_SOUND_POLICY,
+						     POLICY_NONE,
+						     G_PARAM_READWRITE));
   g_object_class_install_property(go_class,
 				  PROP_DESTROY_AFTER_PLAY,
 				  g_param_spec_boolean ("destroy_after_play",

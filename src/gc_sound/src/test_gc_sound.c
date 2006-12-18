@@ -12,7 +12,7 @@ void start(GcSoundItem *item, gpointer data)
   g_warning("Return of start callback %s",  GC_SOUND_OBJECT(item)->nick);
 }
 
-main (int argc, char *argv)
+int main (int argc, char **argv)
 {
   GcSoundMixer *gcmix;
   GcSoundChannel* gcchan1, *gcchan2;
@@ -122,4 +122,5 @@ main (int argc, char *argv)
     g_warning("loop now");
    g_main_loop_run(g_main_loop_new  (NULL, FALSE));
 
+   return 0;
 }

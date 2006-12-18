@@ -40,7 +40,10 @@ static GcSoundObjectClass *parent_class;
 
 gboolean                gc_sound_channel_play_item     (GcSoundChannel * self, GcSoundItem *item)
 {
+  g_return_val_if_fail(self->running_sample == NULL, FALSE);
+
   self->running_sample = item;
+  g_object_ref(self->running_sample);
   self->stopped = FALSE;
 
   return gc_sound_mixer_play_item (GC_SOUND_MIXER(GC_SOUND_OBJECT(self)->parent), self, item);
@@ -88,31 +91,32 @@ gboolean                gc_sound_channel_play         (GcSoundChannel *self,
       else
          policy = gc_sound_item_get_policy(item);
 
+      g_warning("Playing item %s with policy %d", item->filename, policy);
+
       switch (policy) {
         case PLAY_ONLY_IF_IDLE:
-             if (self->running_sample || g_list_length (self->playlist)>0)
+             if (self->running_root || g_list_length (self->playlist)>0)
                 return FALSE;
 	     self->playlist = g_list_append (self->playlist, item);
-	     // TODO send a signal to run !!! 
-	     g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
              break;
 
       case INTERRUPT_AND_PLAY:
-	g_list_free (self->playlist);
-	self->playlist = NULL;
-	self->playlist = g_list_append (self->playlist, item);
-	if (self->running_sample){
+	if (self->running_sample) {
 	  self->stopped = TRUE;
 	  gc_sound_channel_halt(self);
 	}
-	g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
+	g_list_free (self->playlist);
+	self->playlist = NULL;
+	self->playlist = g_list_append (self->playlist, item);
 	break;
 	
       default:
 	self->playlist = g_list_append (self->playlist, item);
-	if (!self->running_sample)
-	  g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
 	break;
+      }
+
+      if (!self->running_root) {
+	g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
       }
       return TRUE;
 }
@@ -152,9 +156,6 @@ gc_sound_channel_destroy (GcSoundObject *self){
 static void
 gc_sound_channel_init(GcSoundChannel* self) 
 {
-  // initialisation des variables.
-  //g_warning("gc_sound_channel_init");
-
   self->volume = 1.0;
   self->policy = PLAY_AFTER_CURRENT;
   
@@ -200,13 +201,51 @@ gc_sound_channel_set_property(GObject* object, guint prop_id, GValue const* valu
 static void
 gc_sound_channel_signal_chunk_end (GcSoundChannel *self)
 {
+  g_return_if_fail(GC_IS_SOUND_ITEM(self->running_sample));
+
   GcSoundItem *chunk = self->running_sample;
 
+  if ( self->running_sample == self->running_root->data){
+    if (!g_signal_handler_is_connected (G_OBJECT(self->running_root->data), self->running_handler_end))
+      g_error ("RUNNING ROOT NOT CONNECTED");
+  }
+  g_object_unref(self->running_sample);
   self->running_sample = NULL;
 
-  g_return_if_fail(GC_IS_SOUND_ITEM(chunk));
-
   g_signal_emit_by_name (chunk, "chunk_end", 0, self->stopped);
+
+}
+
+void running_root_destroy(GcSoundItem *item, gpointer data)
+{
+  GcSoundChannel *self = GC_SOUND_CHANNEL(data);
+
+  g_warning("callback running_root_destroy %s", item->filename);
+
+  g_signal_handler_disconnect(item, self->running_handler_end);
+  g_signal_handler_disconnect(item, self->running_handler_destroy);
+
+  g_object_unref(G_OBJECT(self->running_root->data));
+  self->running_root = NULL;
+
+  g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
+
+}
+
+void running_root_end(GcSoundItem *item, gboolean stopped, gpointer data)
+{
+  GcSoundChannel *self = GC_SOUND_CHANNEL(data);
+
+  g_warning("callback running_root_end %s", item->filename);
+
+  g_signal_handler_disconnect(item, self->running_handler_end);
+  g_signal_handler_disconnect(item, self->running_handler_destroy);
+
+  g_object_unref(G_OBJECT(self->running_root->data));
+  self->running_root = NULL;
+
+  g_signal_emit(self, gc_sound_channel_signals[RUN], 0);
+
 }
 
 static void
@@ -218,10 +257,15 @@ gc_sound_channel_signal_run (GcSoundChannel *self)
     {
       self->running_root = g_list_first (self->playlist);
       self->playlist = g_list_remove_link  (self->playlist, self->running_root);
-
+      self->running_handler_end = g_signal_connect( G_OBJECT(self->running_root->data), "play_end", (GCallback) running_root_end, self);      
+      self->running_handler_destroy = g_signal_connect( G_OBJECT(self->running_root->data), "destroy", (GCallback) running_root_destroy, self);      
+      g_object_ref(G_OBJECT(self->running_root->data));
       ret = gc_sound_item_run_next (GC_SOUND_ITEM(self->running_root->data), FALSE);
       if (ret)
-	return ;          
+	break;
+      g_object_unref(G_OBJECT(self->running_root->data));
+      g_signal_handler_disconnect ( G_OBJECT(self->running_root->data), self->running_handler_end);
+      g_signal_handler_disconnect ( G_OBJECT(self->running_root->data), self->running_handler_destroy);
     }
 }
 

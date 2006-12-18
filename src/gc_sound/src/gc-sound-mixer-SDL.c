@@ -229,7 +229,9 @@ gc_sound_mixer_sdl_halt              (GcSoundMixer * mixer)
 
     self = GC_SOUND_MIXER_SDL(mixer);
 
-    Mix_HaltChannel(-1);
+    //Mix_HaltChannel(-1);
+    // use Expire channel to let another threaded stop them.
+    Mix_ExpireChannel( -1, 1);
 
     return TRUE;
   }
@@ -262,7 +264,9 @@ gc_sound_mixer_sdl_halt_channel      (GcSoundMixer * mixer, GcSoundChannel * cha
     g_return_val_if_fail(GC_IS_SOUND_MIXER_SDL(mixer), FALSE);
     g_return_val_if_fail(GC_IS_SOUND_CHANNEL(channel), FALSE);
 
-    Mix_HaltChannel (channel->channel_number);
+    //Mix_HaltChannel (channel->channel_number);
+    // use Expire channel to let another threaded stop them.
+    Mix_ExpireChannel( channel->channel_number, 1);
 
     return TRUE;
   }
@@ -298,18 +302,19 @@ gc_sound_mixer_sdl_play_item  (GcSoundMixer * mixer, GcSoundChannel * channel, G
 
     if ((item->volume == -1.0) || (item->volume >  channel->volume))
       Mix_VolumeChunk(sample, (int ) channel->volume * MIX_MAX_VOLUME);
-    else
+    else {
       Mix_VolumeChunk(sample, (int) item->volume * MIX_MAX_VOLUME);
+    }
 
-     if (Mix_PlayChannel(channel->channel_number, sample, 0)==-1) {
-       g_warning("Channel cannot play music %s", item->filename);
-       Mix_FreeChunk (sample);
-       return FALSE;
-     }
+    if (Mix_PlayChannel(channel->channel_number, sample, 0)==-1) {
+      g_warning("Channel cannot play music %s", item->filename);
+      Mix_FreeChunk (sample);
+      return FALSE;
+    }
 
      g_hash_table_insert( self->samples, channel, sample);
 
-     g_warning("Playing %s on channel #%d", item->filename, channel->channel_number);
+     g_warning("Playing %s volume on channel #%d", item->filename, channel->channel_number);
 
      return TRUE;
   }
@@ -323,6 +328,8 @@ void channel_finished_cb (int channel_number)
    g_return_if_fail(channel != NULL);
    g_return_if_fail(GC_IS_SOUND_MIXER_SDL(self));
    g_return_if_fail(GC_IS_SOUND_CHANNEL(channel));
+
+   g_warning("Oh My Goodness, an error : %s", Mix_GetError());
 
    g_signal_emit(self, gc_sound_mixer_sdl_signals[CHANNEL_FINISHED], 0, channel, NULL);
 

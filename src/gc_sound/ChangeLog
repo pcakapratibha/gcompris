@@ -1,3 +1,21 @@
+2006-12-19  Yves Combe <yves@ycombe.net>
+
+	Add a property for policy.
+	Fix bug if played item is destroyed at end  before it's "play_end" callback.
+	TODO: fix bug if item is destroyed when it's playing.
+
+	* src/gc-sound-channel.c: (gc_sound_channel_play_item),
+	(gc_sound_channel_play), (gc_sound_channel_init),
+	(gc_sound_channel_signal_chunk_end), (running_root_destroy),
+	(running_root_end), (gc_sound_channel_signal_run):
+	* src/gc-sound-channel.h:
+	* src/gc-sound-item.c: (gc_sound_item_get_property),
+	(gc_sound_item_set_property), (gc_sound_item_class_init):
+	* src/gc-sound-mixer-SDL.c: (gc_sound_mixer_sdl_halt),
+	(gc_sound_mixer_sdl_halt_channel), (gc_sound_mixer_sdl_play_item),
+	(channel_finished_cb):
+	* src/test_gc_sound.c: (main):
+
 2006-12-15  Yves Combe <yves@ycombe.net>
 
 	gc_sound_append_child now accepts varargs for item properties.

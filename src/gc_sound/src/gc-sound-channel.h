@@ -69,6 +69,8 @@ struct _GcSoundChannel {
   GcSoundItem*    running_sample;
   // this one is the group playing
   GList*    running_root;
+  gulong    running_handler_end;
+  gulong    running_handler_destroy;
 
   gint channel_number;
 };

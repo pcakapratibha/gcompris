@@ -536,13 +536,13 @@ item_event_bar(GnomeCanvasItem *item, GdkEvent *event, gchar *data)
 	}
       else if(!strcmp((char *)data, "back"))
 	{
-	  gc_sound_play_ogg ("gobble", NULL);
+	  gc_sound_play_ogg ("sounds/gobble.ogg", NULL);
 	  gc_bar_hide (TRUE);
 	  gc_board_stop();
 	}
       else if(!strcmp((char *)data, "help"))
 	{
-	  gc_sound_play_ogg ("gobble", NULL);
+	  gc_sound_play_ogg ("sounds/gobble.ogg", NULL);
 	  gc_help_start(gcomprisBoard);
 	}
       else if(!strcmp((char *)data, "repeat"))

@@ -247,7 +247,6 @@ static gchar *soundList[] =
    "sounds/LuneRouge/sf/LRWeird_3_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_5_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_6_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/sf/LRET_phone_home_01_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_02_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_03_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_04_by_Lionel_Allorge.ogg",
@@ -424,6 +423,7 @@ static GnomeCanvasItem *player_score;
 static GnomeCanvasItem *tux_score_s;
 static GnomeCanvasItem *player_score_s;
 
+static GcSoundItem *flip = NULL;
 /* set the type of the token returned in string in returned_type */
 void get_random_token(int token_type, gint *returned_type, gchar **string, gchar **second_value)
 {
@@ -821,7 +821,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 	  /* initial state to restore */
 	  sound_policy = gc_sound_policy_get();
 
-	  gc_sound_policy_set(INTERRUPT_AND_PLAY);
+	  //gc_sound_policy_set(INTERRUPT_AND_PLAY);
 
 	  gc_set_background(gnome_canvas_root(gcomprisBoard->canvas), "images/gcompris_band.png");
 	  base_x1 = BASE_SOUND_X1;
@@ -893,10 +893,11 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       to_tux = FALSE;
       if (currentUiMode == UIMODE_SOUND){
 	playing_sound = TRUE;
-	item = gc_sound_item_from_gc_filename("sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg", NULL);
+	item = gc_sound_item_from_gc_filename("sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg", "destroy_after_play", TRUE, NULL);
 
-	g_object_connect(G_OBJECT(item), "play_end",(GCallback) start_callback, NULL);
+	g_signal_connect(G_OBJECT(item), "play_end",(GCallback) start_callback, NULL);
 	gc_sound_item_play(item);
+	flip = gc_sound_item_from_gc_filename("sounds/flip.wav", "policy",INTERRUPT_AND_PLAY,  NULL);
       } else
 	playing_sound = FALSE;
 
@@ -908,7 +909,7 @@ static void
 end_board ()
 {
   if (currentUiMode == UIMODE_SOUND) {
-    gc_sound_policy_set(sound_policy);
+    //gc_sound_policy_set(sound_policy);
     gc_sound_object_destroy(GC_SOUND_OBJECT(gc_sound_channel_get_root(gc_prop_get()->fx_chan)));
     gc_sound_resume();
   }
@@ -1348,8 +1349,11 @@ static void create_item(GnomeCanvasGroup *parent)
 	    gdk_pixbuf_unref(pixmap);
 
 	    memoryItem->sound_item = \
-	    gc_sound_item_from_gc_filename( memoryItem->data, NULL);
-	    g_object_connect(memoryItem->sound_item, "play_end", (GCallback) sound_callback, NULL);
+	    gc_sound_item_from_gc_filename( memoryItem->data, "policy", INTERRUPT_AND_PLAY, NULL);
+
+	    if (!memoryItem->sound_item)
+	      g_error ("Cannot get gc_filename for %s", memoryItem->data);
+	    g_signal_connect(G_OBJECT(memoryItem->sound_item), "play_end", (GCallback) sound_callback, NULL);
 	  }
 	  else {
 	    if(memoryItem->type == TYPE_IMAGE) {
@@ -1553,7 +1557,7 @@ static void check_win()
 
   // Check win
   if (compare_card((gpointer) firstCard, (gpointer) secondCard) == 0) {
-    gc_sound_play_ogg ("sounds/flip.wav", NULL);
+    gc_sound_item_play (flip);
     win_id = g_timeout_add (timeout,
 			    (GSourceFunc) hide_card, NULL);
     return;
@@ -1821,6 +1825,8 @@ static void sound_callback(GcSoundItem *item, gboolean stopped, gpointer data)
   if (! gcomprisBoard)
     return;
 
+  g_warning("sound_callback");
+
   playing_sound = FALSE;
   if (currentMode == MODE_TUX){
     if (to_tux) {
@@ -1857,6 +1863,7 @@ static void start_callback(GcSoundItem *item, gboolean stopped, gpointer data)
   if (currentUiMode != UIMODE_SOUND)
     return;
 
-  playing_sound = FALSE;
   gc_sound_object_destroy(GC_SOUND_OBJECT(item));
+
+  playing_sound = FALSE;
 }
