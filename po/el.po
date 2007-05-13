@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-02 03:31+0100\n"
-"PO-Revision-Date: 2007-05-09 16:35+0300\n"
+"PO-Revision-Date: 2007-05-13 09:34+0300\n"
 "Last-Translator: Yannis Kaskamanidis <ttnfy17@sch.gr>\n"
 "Language-Team: greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,7 @@ msgstr "Μενού Διαχείρισης του GCompris"
 
 #: ../boards/administration.xml.in.h:5
 msgid "If you want to fine tune GCompris to your needs, you can use the administration module here. The ultimate goal is to provide child-specific reporting for parents and teacher who want to monitor the progress, strengths and needs of their children."
-msgstr "Εάν θέλετε να προσαρμόσετε το GCompris στις δικές σας ανάγκες, μπορείτε να χρησιμοποιήσετε το εξάρτημα διαμόρφωσης.τελειοποιήσετε τον τόνο GCompris στις ανάγκες σας, μπορείτε να χρησιμοποιήσετε την ενότητα διοίκησης εδώ. Ο τελευταίος στόχος είναι να παρασχεθεί η παιδί-συγκεκριμένη υποβολή έκθεσης για τους γονείς και το δάσκαλο που θέλουν να παρακολουθήσουν την πρόοδο, τις δυνάμεις και τις ανάγκες των παιδιών τους."
+msgstr "Εάν θέλετε να προσαρμόσετε το GCompris στις δικές σας ανάγκες, μπορείτε να χρησιμοποιήσετε τη Διαχείριση. Βασικός σκοπός είναι η παροχή, στους γονείς και το δάσκαλο, εξειδικευμένων αναφορών για κάθε παιδί, έτσι ώστε να μπορούν να εποπτεύουν την πρόοδο, τις ικανότητες και τις ανάγκες των παιδιών."
 
 #: ../boards/administration.xml.in.h:6
 msgid "Left-Click with the mouse to select an activity"
@@ -68,11 +68,11 @@ msgstr "Κάνε κλικ στο σωστό χρώμα"
 
 #: ../boards/advanced_colors.xml.in.h:4
 msgid "Click on the correct colored box."
-msgstr "Κάντε κλικ στο σωστό κουτί"
+msgstr "Κάντε κλικ στο σωστό χρωματιστό κουτί."
 
 #: ../boards/advanced_colors.xml.in.h:5
 msgid "Learn to recognize unusual colors."
-msgstr "Μάθε να αναγνωρίζεις σπάνια χρώματα"
+msgstr "Μάθε να αναγνωρίζεις σπάνια χρώματα."
 
 #: ../boards/advanced_colors/board1.xml.in.h:1
 msgid "almond"
@@ -88,7 +88,7 @@ msgstr "μπορντό"
 
 #: ../boards/advanced_colors/board1.xml.in.h:4
 msgid "cobalt"
-msgstr "κοβάλτιο"
+msgstr "βαθυκυανό"
 
 #: ../boards/advanced_colors/board1.xml.in.h:5
 msgid "coral"
@@ -96,7 +96,7 @@ msgstr "κοραλί"
 
 #: ../boards/advanced_colors/board1.xml.in.h:6
 msgid "corn"
-msgstr "σπόρος"
+msgstr "κεχριμπαρί"
 
 #: ../boards/advanced_colors/board1.xml.in.h:7
 msgid "cyan"
@@ -104,7 +104,7 @@ msgstr "κυανό"
 
 #: ../boards/advanced_colors/board1.xml.in.h:8
 msgid "sienna"
-msgstr "σιένα"
+msgstr "καστανογκρί"
 
 #: ../boards/advanced_colors/board2.xml.in.h:1
 msgid "lime"
@@ -358,7 +358,7 @@ msgstr "βερονέζος"
 
 #: ../boards/algebra_by.xml.in.h:1
 msgid "A multiplication of two numbers is displayed. At the right of the equals sign, give the answer, the product. Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
-msgstr "Εμφανίζεται ένα πρόβλημα πολλαπλασισμού δύο αριθμών. Δεξιά από το σημείο της ισότητας, δώσε το αποτέλεσμα. Χρησιμοποιήσε τα δεξί ή το αριστερό βέλος για να αλλάξεις την απάντηση σου, και πάτησε το πλήκτρο Enter για να δείς το σωστό αποτέλεσμα"
+msgstr "Εμφανίζεται ένα πρόβλημα πολλαπλασισμού δύο αριθμών. Δεξιά από το σημείο της ισότητας, δώσε το αποτέλεσμα. Χρησιμοποιήσε τα δεξί ή το αριστερό βέλος για να αλλάξεις την απάντηση σου, και πάτησε το πλήκτρο Enter για να δείς το σωστό αποτέλεσμα."
 
 #: ../boards/algebra_by.xml.in.h:2
 #: ../boards/algebra_minus.xml.in.h:2
@@ -385,12 +385,12 @@ msgstr "Πήγαινε στις δραστηριότητες Άλγεβρας"
 #: ../boards/algebra_group.xml.in.h:2
 #: ../boards/menu.xml.in.h:18
 msgid "Left-click the mouse on an activity to select it."
-msgstr "Εμφανίζεται ένα πρόβλημα πολλαπλασισμού δύο αριθμών. Δεξιά από το σημείο της ισότητας, δώσε το αποτέλεσμα. Χρησιμοποιήσε τα δεξί ή το αριστερό βέλος για να αλλάξεις την απάντηση σου, και πάτησε το πλήκτρο Enter για να δείς το σωστό αποτέλεσμα"
+msgstr "Κάνε δεξί κλικ σε μια δραστηριότητα για να την επιλέξεις."
 
 #: ../boards/algebra_guesscount.xml.in.h:1
 #: ../boards/erase_clic.xml.in.h:1
 msgid "Animal pictures come from the Animal Photography Page of Ralf Schmode (http://schmode.net/). Ralf has kindly permitted Gcompris to include his pictures. Thanks a lot, Ralf."
-msgstr "Οι φωτογραφίες των ζώων προέρχονται από την σελίδα με φωτογραφίες ζώων του Ralf Schmode (http://schmode.net/). Ο Ralf επέτρεψε ευγενικά να συμπεριληθούν οι φωτογραφίες του στο GCompris. Ευχαριστούμε πολύ Ralf."
+msgstr "Οι φωτογραφίες των ζώων προέρχονται από την σελίδα με φωτογραφίες του Ralf Schmode (http://schmode.net/). Ο Ralf επέτρεψε ευγενικά να συμπεριληφθούν οι φωτογραφίες του στο GCompris. Ευχαριστούμε πολύ Ralf."
 
 #: ../boards/algebra_guesscount.xml.in.h:2
 msgid "At the top of the board area, choose the numbers and arithmetic operators that give the specified result. You can deselect a number or operator by clicking on it again."
@@ -406,7 +406,7 @@ msgstr "Βρες τη σειρά των σωστών πράξεων ώστε ν�
 
 #: ../boards/algebra_guesscount.xml.in.h:5
 msgid "The four arithmetic operations. Combine several arithmetic operations."
-msgstr "Οι τέσσερις αριθμητικές πράξεις. Συνδύασε μερικές αριθμητικές πράξεις"
+msgstr "Οι τέσσερις αριθμητικές πράξεις. Συνδύασε μερικές αριθμητικές πράξεις."
 
 #: ../boards/algebra_guesscount.xml.in.h:6
 msgid "Work out the right combination of numbers and operations to match the given value"
@@ -454,11 +454,11 @@ msgstr "Ποικιλία δραστηριοτήτων υπολογισμού."
 
 #: ../boards/algorithm.xml.in.h:1
 msgid "Complete a list of symbols"
-msgstr "Συμπλήρωσε μια λίστα από σύμβολα"
+msgstr "Συμπλήρωσε τα αντικείμενα που λείπουν"
 
 #: ../boards/algorithm.xml.in.h:2
 msgid "Find the next symbol in a list."
-msgstr "Βρές το επόμενο σύμβολα από τον κατάλογο."
+msgstr "Βρες και τοποθέτησε τα αντικείμενα που λείπουν, έχοντας υπόψη το επαναλαμβανόμενο μοτίβο αντικειμένων."
 
 #: ../boards/algorithm.xml.in.h:3
 msgid "Logic training activity"
@@ -468,11 +468,11 @@ msgstr "Εξάσκηση λογικής"
 #: ../boards/hexagon.xml.in.h:3
 #: ../boards/melody.xml.in.h:4
 msgid "Move and click the mouse"
-msgstr "Μετακίνησε και κάνε κλικ στο ποντίκι"
+msgstr "Χειρισμός ποντικιού"
 
 #: ../boards/algorithm.xml.in.h:5
 msgid "algorithm"
-msgstr "αλγόριθμος"
+msgstr "Αλγόριθμος"
 
 #: ../boards/anim.xml.in.h:1
 msgid "Create a drawing or an animation"
@@ -480,11 +480,11 @@ msgstr "Φτιάξε μια ζωγραφιά ή ένα κινούμενο σχέ
 
 #: ../boards/anim.xml.in.h:2
 msgid "Free drawing and animation tool."
-msgstr "Εργαλείο ελέυθερης σχεδίασης και κινούμενν σχεδίων"
+msgstr "Εργαλείο ελέυθερης σχεδίασης και κινούμενων σχεδίων."
 
 #: ../boards/anim.xml.in.h:3
 msgid "In this game, children can draw freely. The goal is to discover how to create attractive drawings based on basic shapes: rectangles, ellipses and lines. To give children a wider range of choices, a set of images can also be used."
-msgstr "Σε αυτό το παιχνίδι μπορείς να σχεδιάσεις ελεύθερα. Σκοπός είναι να ανακαλύψεις πώς θα φτιάξεις ελκυστικά σχέδια χρησιμοποιώντας απλά σχήματα: ορθογώνια , ελλειπτικά σχήματα και γραμμές. Για να έχεις μεγαλύτερα περιθώρια επιλογών, μπορείς να χρησιμοποιήσεις εικόνες."
+msgstr "Σε αυτό το παιχνίδι μπορείς να σχεδιάσεις ελεύθερα. Σκοπός είναι να ανακαλύψεις πώς θα φτιάξεις ελκυστικά σχέδια χρησιμοποιώντας απλά σχήματα: ορθογώνια , ελλειπτικά και γραμμές. Για να έχεις μεγαλύτερα περιθώρια επιλογών, μπορείς να χρησιμοποιήσεις εικόνες."
 
 #: ../boards/anim.xml.in.h:4
 #: ../boards/draw.xml.in.h:4
@@ -493,15 +493,15 @@ msgstr "Πρέπει να είναι ικανός να κινεί και να κ
 
 #: ../boards/anim.xml.in.h:5
 msgid "Select a drawing tool on the left, and a color down the bottom. Then click and drag in the white area to create a new shape. Once you've completed a drawing, you can take a snapshot of it with the 'camera' button. This creates a new image with the same content, a copy of your image. You can then edit it by moving objects a little bit or adding/deleting objects. When you create several drawings and then click on the 'film' button, you will see all your images in a continuous slide-show (an infinite loop pattern). You can also change the viewing speed in this mode. In viewing mode, click on the 'drawing' button to return to drawing mode. You can then edit each image in your animation, by using the image selector in the bottom-left corner of the screen. You can also save and reload your animations with the 'floppy disk' and 'folder' buttons."
-msgstr "Επιλέξτε ένα εργαλείο σχεδίων στο αριστερό, και ένα χρώμα κάτω από το κατώτατο σημείο. Κατόπιν χτυπήστε και συρετε στην άσπρη περιοχή για να δημιουργήσετε μια νέα μορφή. Μόλις ολοκληρώσετε ένα σχέδιο, μπορείτε να πάρετε ένα στιγμιότυπο από το με το κουμπί «φωτογραφικών μηχανών». Αυτό δημιουργεί μια νέα εικόνα με το ίδιο περιεχόμενο, ένα αντίγραφο της εικόνας σας. Μπορείτε έπειτα να το εκδώσετε με να κινήσετε τα αντικείμενα λίγο ή την προσθήκη/τη διαγραφή των αντικειμένων. Όταν δημιουργείτε διάφορα σχέδια και χτυπάτε έπειτα στο κουμπί «ταινιών», θα δείτε όλες τις εικόνες σας σε μια συνεχή διαφάνεια-επίδειξη (ένα άπειρο σχέδιο βρόχων). Μπορείτε επίσης να αλλάξετε την ταχύτητα εξέτασης σε αυτόν τον τρόπο. Στην εξέταση του τρόπου, χτυπήστε στο κουμπί «σχεδίων» για να επιστρέψετε στον τρόπο σχεδίων. Μπορείτε έπειτα να εκδώσετε κάθε εικόνα στη ζωτικότητά σας, με τη χρησιμοποίηση του επιλογέα εικόνας στην κατώτατος-αριστερή γωνία της οθόνης. Μπορείτε επίσης να σώσετε και να ξαναφορτώσετε τις ζωτικότητές σας με τα κουμπιά «δισκετών» και «φακέλλων»."
+msgstr "Επέλεξε ένα εργαλείο σχεδίων στα αριστερά και ένα χρώμα από τη συλλογή στο κάτω μέρος. Κατόπιν κάνε κλικ και σύρε το ποντίκι στην άσπρη περιοχή για να δημιουργήσεις ένα σχήμα. Μόλις ολοκληρώσεις ένα σχέδιο, μπορείς να πάρεις ένα στιγμιότυπο με το κουμπί της φωτογραφικής μηχανής ή κάνοντας δεξί κλικ επάνω στο σχέδιό σου. Αυτό δημιουργεί ένα αντίγραφο της εικόνας που σχεδίασες. Κατόπιν μπορείς να την επεξεργαστείς κινώντας, προσθέτοντας ή αφαιρώντας αντικείμενα. Όταν δημιουργήσεις πολλά σχέδια, αν κάνεις κλικ στο κουμπί της ταινίας θα παρακολουθήσεις μια συνεχόμενη επίδειξη των εικόνων σου (επαναλαμβανόμενη λίστα παραγωγής). Μπορείς επίσης να αλλάξεις την ταχύτητα επίδειξης αυξάνοντας ή μειώνοντας το χρόνο έκθεσης κάθε εικόνας με τα βέλη + και -. Σε κατάσταση επίδειξης κάνε κλικ στην παλέτα για να επιστρέψεις στην κατάσταση σχεδίασης. Στη συνέχεια, μπορείς να επεξεργαστείς κάθε εικόνα χρησιμοποιώντας τον επιλογέα εικόνων στην κάτω αριστερή γωνία. Κάνοντας κλικ στο εικονίδιο με το αυτοκινητάκι, μπορείς να επιλέξεις έτοιμα εικονίδια που χωρίζονται σε έξι κατηγορίες. Μπορείς να αποθηκεύσεις τα κινούμενα σχέδια σε ένα αρχείο στον υπολογιστή σου κάνοντας κλικ στο εικονίδιο με τη δισκέτα και να τα ανοίξεις εκ νέου με κλικ στον εικονίδιο με το φάκελο."
 
 #: ../boards/awele.xml.in.h:1
 msgid "At the beginning of the game four seeds are placed in each house. Players take turns moving the seeds. In each turn, a player chooses one of the six houses under his or her control. The player removes all seeds from this house, and distributes them, dropping one in each house counter-clockwise from the original house, in a process called sowing. Seeds are not distributed into the end scoring houses, nor into the house drawn from. That is, the starting house is left empty; if it contained 12 seeds, it is skipped, and the twelfth seed is placed in the next house. After a turn, if the last seed was placed into an opponent's house and brought its total to two or three, all the seeds in that house are captured and placed in the player's scoring house (or set aside if the board has no scoring houses). If the previous-to-last seed also brought the total seeds in an opponent's house to two or three, these are captured as well, and so on. However, if a move would capture all an opponent's seeds, the capture is forfeited, and the seeds are instead left on the board, since this would prevent the opponent from continuing the game. The proscription against capturing all an opponent's seeds is related to a more general idea, that one ought to make a move that allows the opponent to continue playing. If an opponent's houses are all empty, the current player must make a move that gives the opponent seeds. If no such move is possible, the current player captures all seeds in his/her own territory, ending the game. (Source Wikipedia &lt;http://en.wikipedia.org/wiki/Oware&gt;)"
-msgstr "Στην αρχή του παιχνιδιού τέσσερις σπόροι είναι τοποθετημένοι σε κάθε σπίτι. Οι παίκτες εναλλάσσονται μετακινώντας τους σπόρους. Κάθε παίκτης, όταν είναι η σειρά του να παίξει, επιλέγει ένα από τα έξι σπίτια, ώστε να το ελέγχει. Ο παίκτης αφαιρεί όλους τους σπόρους από το σπίτι που έχει επιλέξει και τους μοιράζει αφήνοντας έναν σπόρο σε κάθε σπίτι με φορά αντίθετη από αυτήν των δεικτών του ρολογιού σε σχέση με το αρχικό σπίτι, σε μια διαδικασία που λέγεται σπορά. Οι σπόροι δεν μοιράζονται στα σπίτια που βαθμολογήθηκαν τελευταία, ούτε στο σπίτι από το οποίο αφαιρέθηκαν. Αυτό σημαίνει ότι το αρχικό σπίτι θα μείνει άδειο. Αν περιέχει 12 σπόρους, παρακάμπτεται και ο δωδέκατος σπόρος τοποθετείται στο επόμενο σπίτι. Μετά από μια στροφή παιχνιδιού, εάν ο τελευταίος σπόρος τοποθετήθηκε στο σπίτι του αντιπάλου και ανεβάζει τον αριθμό των σπόρων στους δύο ή τρεις, όλοι οι σπόροι σε αυτό το σπίτι συλλέγονται και τοποθετούνται στο βαθμολογημένο σπίτι του παίκτη (ή παραμένουν στο πλάι εάν ο πίνακας δεν έχει βαθμολογημένα σπίτια). Εάν ο προηγούμενος - τελευταίος σπόρος επίσης αυξάνει το συνολικό αριθμό των σπόρων στο σπίτι του αντιπάλου σε δύο ή  τρεις, αυτοί συλλέγονται επίσης, κ.ο.κ. Ωστόσο, εάν με μια κίνηση συλλεχθούν όλοι οι σπόροι του αντιπάλου, η συλλογή απαγορεύεται και οι σπόροι παραμένουν στον πίνακα,  	δεδομένου ότι αυτό θα απέτρεπε τον αντίπαλο από τη συνέχιση του παιχνιδιού. Αυτή η απαγόρευση ενάντια στη συλλογή όλων των σπόρων του αντιπάλου σχετίζεται με μια γενικότερη ιδέα, ότι καθένας οφείλει να κάνει μια κίνηση που επιτρέπει στον αντίπαλό του να συνεχίσει να παίζει. Εάν όλα τα σπίτια του αντιπάλου είναι άδεια, ο παίκτης πρέπει να κάνει μια κίνηση ώστε να δώσει σπόρους στον αντίπαλο. Εάν μια τέτοια κίνηση δεν είναι δυνατή, ο παίκτης συλλέγει όλους τους σπόρους στη δική του περιοχή, τελειώνοντας το παιχνίδι. (Πηγή Wikipedia &lt;http://en.wikipedia.org/wiki/Oware&gt;)"
+msgstr "Στην αρχή του παιχνιδιού τέσσερις σπόροι είναι τοποθετημένοι σε κάθε σπίτι. Οι παίκτες εναλλάσσονται μετακινώντας τους σπόρους. Κάθε παίκτης, όταν είναι η σειρά του να παίξει, επιλέγει ένα από τα έξι σπίτια, ώστε να το ελέγχει. Ο παίκτης αφαιρεί όλους τους σπόρους από το σπίτι που έχει επιλέξει και τους μοιράζει αφήνοντας έναν σπόρο σε κάθε σπίτι με φορά αντίθετη από αυτήν των δεικτών του ρολογιού σε σχέση με το αρχικό σπίτι, σε μια διαδικασία που λέγεται σπορά. Οι σπόροι δεν μοιράζονται στα σπίτια που βαθμολογήθηκαν τελευταία, ούτε στο σπίτι από το οποίο αφαιρέθηκαν. Αυτό σημαίνει ότι το αρχικό σπίτι θα μείνει άδειο. Αν περιέχει 12 σπόρους, παρακάμπτεται και ο δωδέκατος σπόρος τοποθετείται στο επόμενο σπίτι. Μετά από μια στροφή παιχνιδιού, εάν ο τελευταίος σπόρος τοποθετήθηκε στο σπίτι του αντιπάλου και ανεβάζει τον αριθμό των σπόρων στους δύο ή τρεις, όλοι οι σπόροι σε αυτό το σπίτι συλλέγονται και τοποθετούνται στο βαθμολογημένο σπίτι του παίκτη (ή παραμένουν στο πλάι εάν ο πίνακας δεν έχει βαθμολογημένα σπίτια). Εάν ο προηγούμενος - τελευταίος σπόρος επίσης αυξάνει το συνολικό αριθμό των σπόρων στο σπίτι του αντιπάλου σε δύο ή  τρεις, αυτοί συλλέγονται επίσης, κ.ο.κ. Ωστόσο, εάν με μια κίνηση συλλεχθούν όλοι οι σπόροι του αντιπάλου, η συλλογή απαγορεύεται και οι σπόροι παραμένουν στον πίνακα, δεδομένου ότι αυτό θα απέτρεπε τον αντίπαλο από τη συνέχιση του παιχνιδιού. Αυτή η απαγόρευση ενάντια στη συλλογή όλων των σπόρων του αντιπάλου σχετίζεται με μια γενικότερη ιδέα, ότι καθένας οφείλει να κάνει μια κίνηση που επιτρέπει στον αντίπαλό του να συνεχίσει να παίζει. Εάν όλα τα σπίτια του αντιπάλου είναι άδεια, ο παίκτης πρέπει να κάνει μια κίνηση ώστε να δώσει σπόρους στον αντίπαλο. Εάν μια τέτοια κίνηση δεν είναι δυνατή, ο παίκτης συλλέγει όλους τους σπόρους στη δική του περιοχή, τελειώνοντας το παιχνίδι. (Πηγή Wikipedia &lt;http://en.wikipedia.org/wiki/Oware&gt;)"
 
 #: ../boards/awele.xml.in.h:2
 msgid "Oware"
-msgstr "Oware"
+msgstr "Oware "
 
 #: ../boards/awele.xml.in.h:3
 msgid "Play the Oware strategy game against Tux"
@@ -520,11 +520,11 @@ msgstr "Σκοπός του παιχνιδιού είναι να μαζέψει�
 #: ../boards/babymatch/board6_0.xml.in.h:1
 #: ../boards/babymatch/board7_0.xml.in.h:1
 msgid "Drag and Drop the items to make them match"
-msgstr "Μετακίνησε και τοποθέτησε τα κομμάτια για να τα ταιριάξεις"
+msgstr "Μετακίνησε και ταίριαξε τα αντικείμενα"
 
 #: ../boards/babymatch.xml.in.h:2
 msgid "In the main board area, a set of objects is displayed. In the vertical box (at the left of the main board) another set of objects is shown, each object in the group on the left matching exactly one object in the main board area. This game challenges you to find the logical link between these objects. How do they fit together? Drag each object to the correct red space in the main area."
-msgstr "Στην κύρια περιοχή του πίνακα, επιδεικνύεται ένα σύνολο αντικειμένων. Στο κάθετο κιβώτιο (στα αριστερά του κύριου πίνακα) ένα άλλο σύνολο αντικειμένων παρουσιάζεται. Κάθε αντικείμενο της ομάδας στα αριστερά ταιριάζει απόλυτα με ένα αντικείμενο της κύριας περιοχής του πίνακα. Αυτό το παιχνίδι σας προκαλεί να βρείτε τη λογική σύνδεση μεταξύ αυτών των αντικειμένων. Πώς συναρμολογούνται; Σύρετε κάθε αντικείμενο στο σωστό κόκκινο διάστημα στην κύρια περιοχή."
+msgstr "Στην κύρια περιοχή του πίνακα, επιδεικνύεται ένα σύνολο αντικειμένων. Στο κάθετο κιβώτιο (στα αριστερά του κύριου πίνακα) ένα άλλο σύνολο αντικειμένων παρουσιάζεται. Κάθε αντικείμενο της ομάδας στα αριστερά ταιριάζει απόλυτα με ένα αντικείμενο της κύριας περιοχής του πίνακα. Αυτό το παιχνίδι σε προκαλεί να βρεις τη λογική σύνδεση μεταξύ αυτών των αντικειμένων. Πώς συναρμολογούνται; Σύρε κάθε αντικείμενο στο σωστό κόκκινο διάστημα στην κύρια περιοχή."
 
 #: ../boards/babymatch.xml.in.h:3
 msgid "Matching Items"
@@ -540,15 +540,15 @@ msgstr "Χειρισμός ποντιικού: κίνηση, μετακίνησ�
 
 #: ../boards/babyshapes.xml.in.h:1
 msgid "Complete the puzzle"
-msgstr "Φτιάξε το πάζλ"
+msgstr "Αντικείμενα και περιγράμματα"
 
 #: ../boards/babyshapes.xml.in.h:2
 msgid "Complete the puzzle by dragging each piece from the set of pieces on the left, to the matching space in the puzzle."
-msgstr "Φτιάξε το παζλ μετακινώντας τα κομμάτια που βρίσκονται αριστερά στο μέρος του puzzle που ταιριάζουν."
+msgstr "Φτιάξε το παζλ μετακινώντας τα αντικείμενα της αριστερής στήλης επάνω από τα σχήματα που δείχνουν το περίγραμμα του καθενός."
 
 #: ../boards/babyshapes.xml.in.h:3
 msgid "Drag and Drop the shapes on their respective targets"
-msgstr "Μετακίνησε και τοποθέτησε τις εικόνες στα αντίστοιχα τμήματα."
+msgstr "Μετακίνησε και τοποθέτησε κάθε αντικείμενο επάνω στο περίγραμμά του"
 
 #: ../boards/babyshapes.xml.in.h:4
 msgid "Good mouse-control"
@@ -593,11 +593,11 @@ msgstr "Δραστηριότητα εξάσκησης της λογικής"
 
 #: ../boards/bargame.xml.in.h:4
 msgid "Place balls in the holes. You win if the computer has to place the last ball. If you want Tux to begin, just click on him."
-msgstr "Τοποθέτησε τις μπάλες στις τρύπες. Κερδίζεις εάν ο υπολογιστής πρέπει να τοποθετήσει την τελευταία μπάλα. Εάν θέλετε να αρχίσει πρώτος ο Tux, κάντε κλικ επάνω του."
+msgstr "Κάνοντας κλικ στο κάτω δεξιά πλαίσιο, αυξάνεις ή μειώνεις τις μπάλες που θα τοποθετήσεις στις τρύπες. Όταν ορίσεις πόσες μπάλες θέλεις, πάτησε τον αντίχειρα. Αμέσως μετά, ο Tux τοποθετεί τις δικές του μπάλες, κ.ο.κ. Κερδίζεις εάν ο Tux πρέπει να τοποθετήσει την τελευταία μπάλα. Εάν θέλετε να αρχίσει πρώτος ο Tux, κάντε κλικ επάνω του."
 
 #: ../boards/bargame.xml.in.h:5
 msgid "bar game"
-msgstr "Παιχνίδι bar"
+msgstr "Ο πρώτος ... χάνει!"
 
 #: ../boards/billard.xml.in.h:1
 msgid "Kick the ball into the black hole on the right"
@@ -605,7 +605,7 @@ msgstr "Κλώτσησε τη μπάλα για να μπεί στη μαύρη 
 
 #: ../boards/billard.xml.in.h:2
 msgid "Kick the ball into the goal"
-msgstr "Κλώτσηε τη μπάλα για να μπει στο τέρμα."
+msgstr "Κλώτσησε τη μπάλα για να μπει στο τέρμα"
 
 #: ../boards/billard.xml.in.h:3
 #: ../boards/chess_computer.xml.in.h:2
@@ -625,7 +625,7 @@ msgstr "Χειρισμός ποντικιού"
 
 #: ../boards/billard.xml.in.h:4
 msgid "Point the mouse and click on the ball, to set the speed and direction of the ball. The closer you click to the centre, the slower the ball moves."
-msgstr "Σημάδεψε και κανε κλικ στη μπάλα για να δώσεις την ταχύτητα και την κατεύθυνση. Όσο πιο κοντά κάνεις κλικ στο κέντρο της μπάλας τόσο πιο αργά κινείται."
+msgstr "Σημάδεψε και κάνε κλικ στη μπάλα για να δώσεις την ταχύτητα και την κατεύθυνση. Όσο πιο κοντά κάνεις κλικ στο κέντρο της μπάλας τόσο πιο αργά κινείται."
 
 #: ../boards/billard.xml.in.h:5
 msgid "The football game"
@@ -637,11 +637,11 @@ msgstr "Είσαι ο υπεύθυνος του φράγματος στο ποτ
 
 #: ../boards/canal_lock.xml.in.h:2
 msgid "Tux is in trouble, and needs to take his boat through a lock. Help Tux and find out how a canal lock works."
-msgstr "Ο Tux έχει πρόβλημα και χρειάζεται να περάσει τη βάρκα του μέσα από τη δεξαμενή που ρυθμίζει τη στάθμη του νερού. Βοήθησε τον Tux και κατανόησε πως δουλεύει το φράγμα στο κανάλι."
+msgstr "Βοήθησε το πλοιάριο του Tux να περάσει τη διώρυγα."
 
 #: ../boards/canal_lock.xml.in.h:3
 msgid "You are in charge of the canal lock. Open the gates and the locks in the right order, so Tux can travel through the gates in both directions."
-msgstr "Είσαι ο υπεύθυνος για τα φράγματα στο κανάλι. Άνοιξε τις πύλες με την σωστή σειρά, έτσι ώστε ο Tux να ταξιδεύσει μέσα από τα φράγματα και από τις δύο κατευθύνσεις."
+msgstr "Είσαι ο υπεύθυνος για τις δεξαμενές στο κανάλι. Ο Tux έχει πρόβλημα και χρειάζεται να περάσει τη βάρκα του μέσα από τις δεξαμενές και προς τις δύο κατευθύνσεις. Για να ρυθμίσεις τη στάθμη του νερού και να ανεβάσεις το πλοιάριο στο επίπεδο του σπιτιού, κάνε κλικ στις πράσινες και κίτρινες μπάρες."
 
 #: ../boards/chat.xml.in.h:1
 msgid "Chat with your friends"
@@ -678,7 +678,7 @@ msgstr "Η μηχανή σκακιού είναι από το gnuchess."
 
 #: ../boards/chess_movelearn.xml.in.h:1
 msgid "Chess training. Catch the computer's pawns."
-msgstr "Εξάσκηση σκακιού. Φάε τα κομμάτια του υπολογιστή"
+msgstr "Εξάσκηση στο σκάκι. Συνέλαβε το πιόνια του αντιπάλου σου."
 
 #: ../boards/chess_partyend.xml.in.h:3
 msgid "Play the end of the chess game against the computer"
@@ -698,11 +698,11 @@ msgstr "Η φωτογραφία του φεγγαριού είναι πνευμ�
 
 #: ../boards/chronos.xml.in.h:4
 msgid "Pick from the pictures on the left and put them on the red dots"
-msgstr "Διάλεξε από τις εικόνες στα αριστερά και τοποθέτησέ τες στα κόκκινα σημεία"
+msgstr "Διάλεξε από τις εικόνες στα αριστερά και τοποθέτησέ τες στα κόκκινα σημεία με χρονολογική σειρά."
 
 #: ../boards/chronos.xml.in.h:5
 msgid "Sort the pictures into the order that tells the story"
-msgstr "Βάλε σε σειρά τις εικόνες για να φτιάξεις την ιστορία"
+msgstr "Βάλε σε χρονολογική σειρά τις εικόνες για να φτιάξεις την ιστορία"
 
 #: ../boards/chronos.xml.in.h:6
 msgid "Tell a short story"
@@ -710,7 +710,7 @@ msgstr "Φτιάξε μια μικρή ιστορία"
 
 #: ../boards/chronos/board1_0.xml.in.h:1
 msgid "Moonwalker"
-msgstr "Άνθρωπος στο φεγγάρι"
+msgstr "Ο άνθρωπος στο φεγγάρι"
 
 #: ../boards/chronos/board1_1.xml.in.h:1
 #: ../src/boards/wordprocessor.c:118
@@ -749,7 +749,9 @@ msgstr "Ο Tux και η μηλιά"
 #: ../boards/chronos/board3_4.xml.in.h:1
 #: ../boards/chronos/board4_2.xml.in.h:1
 msgid "1769 Cugnot's fardier"
-msgstr "1769 Cugnot's fardier"
+msgstr ""
+"1769 Τρίτροχο αυτοκίνητο\n"
+"με ατμό του Cugnot"
 
 #: ../boards/chronos/board3_0.xml.in.h:2
 #: ../boards/chronos/board3_3.xml.in.h:5
@@ -758,8 +760,8 @@ msgid ""
 "1829 Stephenson's Rocket\n"
 "Steam locomotive"
 msgstr ""
-"1829 Stephenson's Rocket\n"
-"Steam locomotive"
+"1829 Ο πύραυλος του Stephenson\n"
+"Ατμομηχανή"
 
 #: ../boards/chronos/board3_0.xml.in.h:4
 msgid ""
@@ -857,7 +859,9 @@ msgstr ""
 
 #: ../boards/chronos/board4_2.xml.in.h:2
 msgid "1878 Léon Bollé's \"La Mancelle\""
-msgstr "1878 Léon Bollé \"La Mancelle\"  αυτοκίνητο"
+msgstr ""
+"1878 Léon Bollé \"La Mancelle\"\n"
+"αυτοκίνητο"
 
 #: ../boards/chronos/board4_2.xml.in.h:3
 msgid ""
@@ -873,11 +877,13 @@ msgstr "Το αυτοκίνητο"
 
 #: ../boards/chronos/board4_3.xml.in.h:1
 msgid "1899 Renault \"voiturette\""
-msgstr "1899 Renault \"voiturette\" το πρώτο αυτοκίνητο της Renault"
+msgstr ""
+"1899 Renault \"voiturette\" το πρώτο\n"
+"αυτοκίνητο της Renault"
 
 #: ../boards/chronos/board4_3.xml.in.h:2
 msgid "1923 Lancia Lambda"
-msgstr "1923 Lancia Lambda"
+msgstr "1923 Αυτοκίνητο Lancia Lambda"
 
 #: ../boards/chronos/board4_3.xml.in.h:3
 msgid "1955 Citroën ds 19"
@@ -889,7 +895,7 @@ msgstr "Αυτοκίνητα"
 
 #: ../boards/clickanddraw.xml.in.h:1
 msgid "Click and draw"
-msgstr "Κάνε κλικ και σχεδιάσε"
+msgstr "Κάνε κλικ και σχεδίασε"
 
 #: ../boards/clickanddraw.xml.in.h:2
 msgid "Draw the picture by clicking on each blue point in sequence."
@@ -897,7 +903,7 @@ msgstr "Σχεδίασε την εικόνα κάνοντας κλικ με τη
 
 #: ../boards/clickanddraw.xml.in.h:3
 msgid "Draw the picture by clicking on the blue points."
-msgstr "Σχημάτισε την εικόνα κάνοντας κλικ πάνω στα μπλε σημεία"
+msgstr "Σχημάτισε την εικόνα κάνοντας κλικ πάνω στα μπλε σημεία."
 
 #: ../boards/click_on_letter.xml.in.h:1
 msgid "A letter is spoken. Click on the matching letter in the main area. You can listen to the letter again, by clicking on the mouth icon in the bottom box."
@@ -909,7 +915,7 @@ msgstr "Κάνε κλικ πάνω σε ένα γράμμα"
 
 #: ../boards/click_on_letter.xml.in.h:3
 msgid "Letter-name recognition"
-msgstr "Αναγνώρισε το όνομα του γράμματος"
+msgstr "Οπτική αναγνώριση των γραμμάτων του αλφαβήτου"
 
 #: ../boards/click_on_letter.xml.in.h:4
 msgid "Listen to a letter and click on the right one"
@@ -917,27 +923,27 @@ msgstr "Άκουσε ένα γράμμα και πάτησε το σωστό"
 
 #: ../boards/click_on_letter.xml.in.h:5
 msgid "Visual letter-recognition. Can move the mouse."
-msgstr "Οπτική αναγνώριση γραμμάτων. Δυνατότητα κίνησης του ποντικιού."
+msgstr "Ακουστ8ική και οπτική αναγνώριση γραμμάτων. Δυνατότητα κίνησης του ποντικιού."
 
 #: ../boards/clickgame.xml.in.h:1
 msgid "Click On Me"
-msgstr "Πάτησέ Με"
+msgstr "Πάτησέ με"
 
 #: ../boards/clickgame.xml.in.h:2
 msgid "Fish are taken from the Unix utility xfishtank. All image credits belong to Guillaume Rousse."
-msgstr "Το ψάρι είναι παρμένο από το xfishtank του Unix. Όλες οι φωτογραφίες ανήκουν στον Guillaume Rousse."
+msgstr "Τα ψάρια είναι παρμένα από το xfishtank του Unix. Όλες οι φωτογραφίες ανήκουν στον Guillaume Rousse."
 
 #: ../boards/clickgame.xml.in.h:3
 msgid "Left-Click with the mouse on all the swimming fish before they leave the fishtank"
-msgstr "Κάνε αριστερό κλικ με το ποντίκι σε όλα τα ψάρια που κολυμπούν πριν να φύγουν από το ενυδρείο"
+msgstr "Κάνε αριστερό κλικ με το ποντίκι σε όλα τα ψάρια που κολυμπούν πριν εξαφανιστούν προς τις δύο πλευρές του ενυδρείου"
 
 #: ../boards/clickgame.xml.in.h:4
 msgid "Motor coordination: moving and clicking the mouse."
-msgstr "Συγχρονισμός κινήσεων: κίνηση και πάτημα τουποντικιού."
+msgstr "Συγχρονισμός κινήσεων: κίνηση και πάτημα του ποντικιού."
 
 #: ../boards/clickgame.xml.in.h:6
 msgid "Use the left mouse button to click on the moving fish."
-msgstr "Χρησιμοποίησε το αριστερό κουμπί του ποντικιού για να κάνεις κλικ στο κινούμενο ψάρι."
+msgstr "Χρησιμοποίησε το αριστερό κουμπί του ποντικιού για να κάνεις κλικ σε κάθε ψάρι που κινείται."
 
 #: ../boards/clockgame.xml.in.h:1
 msgid "Distinguish between time-units (hour, minute and second). Set and display time on a clock."
@@ -945,15 +951,15 @@ msgstr "Ξεχώρισε τις διαφορές μεταξύ των μονάδ�
 
 #: ../boards/clockgame.xml.in.h:2
 msgid "Learn how to tell the time"
-msgstr "Μάθε πώς να λεςτην ώρα"
+msgstr "Μάθε πώς να λες την ώρα"
 
 #: ../boards/clockgame.xml.in.h:3
 msgid "Learning Clock"
-msgstr "Μαθαίνοντας την Ώρα"
+msgstr "Μαθαίνοντας την ώρα"
 
 #: ../boards/clockgame.xml.in.h:4
 msgid "Set the clock to the time given, in the time-units shown (hours:minutes or hours:minutes:seconds). Click on the different arrows, and move the mouse, to make the numbers go up or down."
-msgstr "Ρύθμισε το ρολόι στην ώρα που δίνεται, προσέχοντας τις μονάδες μέτρησης του χρόνου (ώρες:λεπτά ή ώρες:λεπτά:δευτερόλεπτα). Κάνε κλικ και σύρε τους δείκτες στη σωστή θέση."
+msgstr "Ρύθμισε το ρολόι στην ώρα που δίνεται κάτω αριστερά, προσέχοντας τις μονάδες μέτρησης του χρόνου (ώρες:λεπτά ή ώρες:λεπτά:δευτερόλεπτα). Κάνε κλικ και σύρε τους δείκτες στη σωστή θέση."
 
 #: ../boards/clockgame.xml.in.h:5
 msgid "The concept of time. Reading the time."
@@ -973,11 +979,11 @@ msgstr "Χρώματα"
 
 #: ../boards/colors.xml.in.h:4
 msgid "Listen to the color and click on the matching duck."
-msgstr "Άκουσε το χρώμα και κάνε κλικ στην αντίστοιχη πάπια"
+msgstr "Όταν ακούσεις το όνομα ενός χρώματος, κάνε κλικ στη πάπια με το αντίστοιχο χρώμα. Στο κάτω μέρος εμφανίζεται μια βοηθητική φράση."
 
 #: ../boards/colors.xml.in.h:5
 msgid "This board teaches you to recognize different colors. When you hear the name of the color, click on the duck wearing it."
-msgstr "Με αυτό το παιχνίδι μαθαίνεις να αναγνωρίζεις διαφορετικά χρώματα. Όταν ακούσεις το όνομα ενός χρώματος, κάνε κλικ στη πάπια με το αντίστοιχο χρώμα."
+msgstr "Με αυτό το παιχνίδι μαθαίνεις να αναγνωρίζεις διαφορετικά χρώματα."
 
 #: ../boards/colors_group.xml.in.h:1
 msgid "Colors based activities."
@@ -993,12 +999,12 @@ msgstr "Ανακάλυψε τον Υπολογιστή"
 
 #: ../boards/computer.xml.in.h:2
 msgid "Play with computer peripherals."
-msgstr "Παίξε με τα περιφερειακά του υπολογιστή"
+msgstr "Παίξε με τα περιφερειακά του υπολογιστή."
 
 #: ../boards/connect4.xml.in.h:1
 #: ../boards/connect4-2players.xml.in.h:1
 msgid "Arrange four coins in a row"
-msgstr "Βάλε τα τέσσερα νομίσματα σε μια γραμμή"
+msgstr "Βάλε τις τέσσερις μπάλες σε μια γραμμή"
 
 #: ../boards/connect4.xml.in.h:2
 #: ../boards/connect4-2players.xml.in.h:2
@@ -1007,7 +1013,7 @@ msgstr "Κάνε κλικ στο σημείο της γραμμής που θέ�
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
-msgstr "Σύνδεση 4"
+msgstr "Σύνδεσε 4 μπάλες (2 παίκτες)"
 
 #: ../boards/connect4.xml.in.h:4
 msgid "Create a line of 4 pieces either horizontally (lying down), vertically (standing up) or diagonally."
@@ -1019,7 +1025,7 @@ msgstr "Laurent Lacheny. Οι εικόνες και η Τεχνητή Νοημο
 
 #: ../boards/connect4-2players.xml.in.h:3
 msgid "Connect 4 (2 Players)"
-msgstr "Σύνδεσε 4 (2 παίκτες)"
+msgstr "Σύνδεσε 4 μπάλες (1 παίκτης)"
 
 #: ../boards/connect4-2players.xml.in.h:4
 msgid "Create a line of 4 pieces either horizontally (lying down) or vertically (standing up) or diagonally."
@@ -1050,7 +1056,7 @@ msgstr "Χρήση ποντικιού"
 
 #: ../boards/crane.xml.in.h:5
 msgid "Move the items in the bottom left frame to copy their position in the top right model. Below the crane itself, you will find four arrows that let you move items. To select the item to move, just click on it."
-msgstr "Μετακίνησε τα αντικείμενα στο αριστερό πλαίσιο έτσι ώστε να βρίσκονται στις θέσεις που βλέπεις στο επάνω δεξιά πλαίσιο. Κάτω από τον γερανό, θα βρεις τέσσερα βελάκια που σου επιτρέπουν να μετακινείς τα αντικείμενα. Προκειμένου να μετακινήσεις ένα αντικείμενο, κάνε κλικ επάνω του για να το επιλέξεις. Δεν μπορείς να μετακινήσεις ένα αντικείμενο αν στη διαδρομή που θα ακολουθήσεις βρίσκεται ένα άλλο."
+msgstr "Με τη βοήθεια του γερανού, μετακίνησε τα αντικείμενα του αριστερού πλαισίου, έτσι ώστε να βρίσκονται στις θέσεις που βλέπεις στο επάνω δεξιά πλαίσιο. Κάτω από τον γερανό, θα βρεις τέσσερα βελάκια που σου επιτρέπουν να μετακινείς τα αντικείμενα σε διάφορες κατευθύνσεις. Προκειμένου να μετακινήσεις ένα αντικείμενο, κάνε κλικ επάνω του για να το επιλέξεις. Δεν μπορείς να μετακινήσεις ένα αντικείμενο αν στη διαδρομή που θα ακολουθήσεις βρίσκεται ένα άλλο."
 
 #: ../boards/discovery.xml.in.h:1
 msgid "Colors, sounds, memory..."
@@ -1058,7 +1064,7 @@ msgstr "Χρώματα, ήχοι, μνήμη..."
 
 #: ../boards/discovery.xml.in.h:2
 msgid "Go to discovery activities"
-msgstr "Πήγαινε στις δραστηριότητες ανακάλυψης."
+msgstr "Πήγαινε στις δραστηριότητες ανακάλυψης"
 
 #: ../boards/doubleentry.xml.in.h:1
 msgid "Basic counting skills"
@@ -1082,7 +1088,7 @@ msgstr "Μετακίνησε στην κατάλληλη θέση τα αντι�
 
 #: ../boards/doubleentry/board3_0.xml.in.h:1
 msgid "Click on an item and listen to its target position"
-msgstr "Κάνε κλικ σε ένα αντικείμενο για να ακούσεις τη θέση στην οποία πρέπει να τοποθετηθεί."
+msgstr "Κάνε κλικ σε ένα αντικείμενο για να ακούσεις τη θέση στην οποία πρέπει να τοποθετηθεί"
 
 #: ../boards/draw.xml.in.h:1
 msgid "A creative board where you can draw freely"
@@ -1114,15 +1120,15 @@ msgstr "Σχημάτισε την εικόνα κάνοντας κλικ σε κ
 
 #: ../boards/drawnumber.xml.in.h:4
 msgid "Draw the picture by following numbers"
-msgstr "Ζωγράφισε την εικόνα με τους αριθμούς που ακολουθούν"
+msgstr "Ζωγράφισε την εικόνα με την αύξουσα σειρά των αριθμών"
 
 #: ../boards/electric.xml.in.h:1
 msgid "Create and simulate an electric schema"
-msgstr "Κατασκεύασε ένα ηλεκτρικό κύκλωμα ώστε να το αναπαραστήσεις."
+msgstr "Κατασκεύασε ένα ηλεκτρικό κύκλωμα"
 
 #: ../boards/electric.xml.in.h:2
 msgid "Drag electrical components from the selector and drop them in the working area. Create wires by clicking on a connection spot, dragging the mouse to the next connection spot, and letting go. You can also move components by dragging them. You can delete wires by clicking on them. To delete a component, select the deletion tool on top of the component selector. You can click on the switch to open and close it. You can change the rheostat value by dragging its wiper. In order to simulate what happens when a bulb is blown, you can blown it by right-clicking on it. The simulation is updated in real time by any user action."
-msgstr "Τράβηξε τα εξαρτήματα του ηλεκτρικού κυκλώματος και τοποθέτησέ τα στην επιφάνεια εργασίας στα αριστερά. Φτιάξε τα καλώδια κάνοντας κλικ στα σημεία σύνδεσης και τραβώντας με το ποντίκι μέχρι το επόμενο σημείο σύνδεσης, όπου και αφήνεις την άκρη του καλωδίου. Μπορείς, επίσης, να μετακινήσεις τα εξαρτήματα τραβώντας τα. Μπορείς να σβήσεις τα καλώδια κάνοντας κλικ επάνω σε αυτά. Για να σβήσεις ένα εξάρτημα, επέλεξε τη σβήστρα από την περιοχή των εξαρτημάτων. Μπορείς να ανοιγοκλείσεις το κύκλωμα κάνοντας κλικ επάνω στο διακόπτη. Μπορείς να αλλάξεις την τιμή του ροοστάτη τραβώντας την ψύκτρα. Για να δεις τι συμβαίνει όταν η λάμπα είναι καμμένη, κάνε δεξί κλικ επάνω της. Η προσομοίωση ενημερώνεται σε πραγματικό χρόνο από οποιαδήποτε κίνηση του χρήστη."
+msgstr "Τράβηξε τα εξαρτήματα του ηλεκτρικού κυκλώματος και τοποθέτησέ τα στην επιφάνεια εργασίας στα δεξιά. Φτιάξε τα καλώδια κάνοντας κλικ στα σημεία σύνδεσης και τραβώντας με το ποντίκι μέχρι το επόμενο σημείο σύνδεσης, όπου και αφήνεις την άκρη του καλωδίου. Μπορείς, επίσης, να μετακινήσεις τα εξαρτήματα τραβώντας τα και να σβήσεις τα καλώδια κάνοντας κλικ επάνω σε αυτά. Για να σβήσεις ένα εξάρτημα, επέλεξε τη σβήστρα από την περιοχή των εξαρτημάτων. Το κύκλωμα ανοιγοκλείνει κάνοντας κλικ επάνω στο διακόπτη, ενώ μπορείς να αλλάξεις την τιμή του ροοστάτη τραβώντας την ψύκτρα. Για να δεις τι συμβαίνει όταν η λάμπα είναι καμμένη, κάνε δεξί κλικ επάνω της. Η προσομοίωση ενημερώνεται σε πραγματικό χρόνο από οποιαδήποτε κίνηση του χρήστη."
 
 #: ../boards/electric.xml.in.h:3
 msgid "Electricity"
@@ -1130,7 +1136,7 @@ msgstr "Ηλεκτρισμός"
 
 #: ../boards/electric.xml.in.h:4
 msgid "Freely create an electric schema with a real time simulation of it."
-msgstr "Δημιουργήστε ελεύθερα ένα ηλεκτρικό κύκλωμα με προσομοίωση των αποτελεσμάτων σε πραγματικό χρόνο."
+msgstr "Κατασκεύασε ένα ηλεκτρικό κύκλωμα με προσομοίωση των αποτελεσμάτων του σε πραγματικό χρόνο."
 
 #: ../boards/electric.xml.in.h:5
 msgid "GCompris uses the Gnucap electric simulator as a backend. You can get more information on gnucap at &lt;http://geda.seul.org/tools/gnucap/&gt;."
@@ -1150,13 +1156,13 @@ msgstr "Μέτρησε τα αντικείμενα"
 
 #: ../boards/enumerate.xml.in.h:3
 msgid "First, properly organize the items so that you can count them. Then, select the item you want to answer in the bottom right area. Enter the answer with the keyboard and press the OK button or the 'Enter' key."
-msgstr "Αρχικά βάλε τα αντικείμενα στη σειρά για να μπορείς να τα μετρήσεις. Έπειτα διάλεξε το αντικείμενο που θές για να απαντήσεις στην κάτω δεξιά περιοχή. Γράψε την απάντηση με το πληκτρολόγιο και πάτησε το OK ή το πλήκτρο Enter."
+msgstr "Αρχικά βάλε τα όμοια αντικείμενα σε διαφορετικές φολίδες της χελώνας για να μπορείς να τα μετρήσεις. Έπειτα κάνε κλικ στην κάτω δεξιά περιοχή στο κάθε μετρήσιμο αντικείμενο και με το πληκτρολόγιο δώσε την απάντηση με τα αριθμητικά πλήκτρα του πληκτρολογίου. Αν γράψεις λάθος αριθμό, πάτησε Delete ή Backspace για να διορθώσεις. Όταν γράψεις τους αριθμούς, πάτησε το OK (αντίχειρας) ή το πλήκτρο Enter."
 
 #: ../boards/enumerate.xml.in.h:4
 #: ../boards/planegame.xml.in.h:5
 #: ../src/boards/enumerate.c:89
 msgid "Numeration training"
-msgstr "Εξάσκηση Αρίθμησης"
+msgstr "Εξάσκηση αρίθμησης κατ' αύξουσα σειρά"
 
 #: ../boards/enumerate.xml.in.h:5
 #: ../src/boards/enumerate.c:90
@@ -1165,7 +1171,7 @@ msgstr "Τοποθέτησε τα αντικείμενα με τέτοιο τρ�
 
 #: ../boards/erase.xml.in.h:1
 msgid "Animal pictures are taken from the Animal Photography Page of Ralf Schmode (&lt;http://schmode.net/&gt;) and from LE BERRE Daniel. These people kindly gave GCompris the authorization to include their pictures. Thanks a lot, both of you."
-msgstr "Οι φωτογραφίες από τα ζώα προέρχονται από την σελίδα με φωτογραφίες ζώων του Ralf Schmode (http://schmode.net/) και του  LE BERRE Daniel. Μας επέτρεψαν να χρησιμοποιήσουμε τις φωτογραφίες τους. Τους ευχαριστούμε. και τους δυο."
+msgstr "Οι φωτογραφίες προέρχονται από την σελίδα με φωτογραφίες ζώων του Ralf Schmode (http://schmode.net/) και του  LE BERRE Daniel. Μας επέτρεψαν να χρησιμοποιήσουμε τις φωτογραφίες τους. Τους ευχαριστούμε και τους δυο."
 
 #: ../boards/erase.xml.in.h:4
 #: ../src/boards/erase.c:118
@@ -1180,7 +1186,7 @@ msgstr "Κίνησε το ποντίκι για να σβήσεις την επ�
 
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
-msgstr "Κίνησε το ποντίκι μέχρι να εξαφανιστούν όλα τα τετράγωνα."
+msgstr "Κίνησε το ποντίκι, χωρίς να κάνεις κλικ, μέχρι να εξαφανιστούν όλα τα τετράγωνα."
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -1196,11 +1202,11 @@ msgstr "Κίνησε το ποντίκι για να σβήσεις την επ�
 
 #: ../boards/experience.xml.in.h:1
 msgid "Go to experiential activities"
-msgstr "Πήγαινε στις δραστηριότητες εμπειρίας"
+msgstr "Δραστηριότητες βασισμένες στη βιωματική εμπειρία"
 
 #: ../boards/experience.xml.in.h:2
 msgid "Various activities based on physical movement."
-msgstr "Ποικιλία δραστηριοτήτων που βασίζονται στη φυσική κίνηση του σώματος."
+msgstr "Ποικιλία δραστηριοτήτων που βασίζονται στη φυσική κίνηση."
 
 #: ../boards/experimental.xml.in.h:1
 msgid "Go to Experimental activities"
@@ -1212,27 +1218,27 @@ msgstr "Ενεργοποίησε το GCompris --πειράματα για να 
 
 #: ../boards/fifteen.xml.in.h:1
 msgid "Click on any item that has a free block beside it, and it will be swapped with the empty block."
-msgstr "Κάνε κλικ στον αριθμό που έχει δίπλα του ένα κενό τετράγωνο. Αυτός θα μετακινηθεί στο κενό τετράγωνο."
+msgstr "Κάνε κλικ στον αριθμό που έχει δίπλα του ένα κενό τετράγωνο. Αυτός θα μετακινηθεί στη θέση του κενού τετραγώνου."
 
 #: ../boards/fifteen.xml.in.h:3
 msgid "Move each item to make an increasing series: from the smallest to the largest"
-msgstr "Μετακίνησε κάθε αντικείμενο ώστε να δημιουργήσεις μια αυξανόμενη σειρά: από το μικρότερο στο μεγαλύτερο."
+msgstr "Μετακίνησε τους αριθμούς, ώστε να δημιουργήσεις μια αυξανόμενη σειρά: από τον μικρότερο στον μεγαλύτερο"
 
 #: ../boards/fifteen.xml.in.h:4
 msgid "Original code taken from the libgnomecanvas demo"
-msgstr "Ο αρχικός κώδικας προέρχεται από το libgnomecanvas."
+msgstr "Ο αρχικός κώδικας προέρχεται από το libgnomecanvas"
 
 #: ../boards/fifteen.xml.in.h:5
 msgid "The fifteen game"
-msgstr "Το παιχνίδι Δεκαπέντε"
+msgstr "Δεκαπέντε"
 
 #: ../boards/followline.xml.in.h:1
 msgid "Control the hose-pipe"
-msgstr "Έλεγξε τον ελαστικό σωλήνα"
+msgstr "Έλεγξε τη ροή του νερού στον ελαστικό σωλήνα"
 
 #: ../boards/followline.xml.in.h:2
 msgid "Fine motor coordination"
-msgstr "Καλός μηχανικός συντονισμός."
+msgstr "Συντονισμός κινήσεων"
 
 #: ../boards/followline.xml.in.h:3
 msgid "Move the mouse over the red part of the hose-pipe. This will move it, bringing it, part by part, up to the flowers. Be careful, if you move off the hose, the red part will go back down."
@@ -1272,7 +1278,7 @@ msgstr "κείμενο επεξεργαστή κειμένου"
 
 #: ../boards/geography.xml.in.h:1
 msgid "Drag and Drop the items to redraw the whole map"
-msgstr "Μετακίνησε και τοποθέτησε τα κομμάτια για να ξαναδημιουργήσεες τον χάρτη"
+msgstr "Μετακίνησε και τοποθέτησε τα τμήματα για να ξαναδημιουργήσεις τον χάρτη"
 
 #: ../boards/geography.xml.in.h:2
 msgid "Locate the countries"
@@ -1830,7 +1836,7 @@ msgstr "Ζιμπάμπουε"
 
 #: ../boards/geography_country.xml.in.h:1
 msgid "Drag and Drop the regions to redraw the whole country"
-msgstr "Μετακίνησε και τοποθέτησε περιοχές για να ξαναδημιουργήσετε τον χάρτη"
+msgstr "Μετακίνησε και τοποθέτησε περιοχές για να ξαναδημιουργήσεις το χάρτη κάθε χώρας"
 
 #: ../boards/geography_country.xml.in.h:2
 msgid "Locate the region"
@@ -1838,7 +1844,7 @@ msgstr "Εντόπισε την περιοχή"
 
 #: ../boards/geography_country.xml.in.h:4
 msgid "The map of Germany comes from Wikipedia and is released under the GNU Free Documentation License. Olaf Ronneberger and his children Lina and Julia Ronneberger created the German level."
-msgstr "Ο χάρτης της Γερμανίας προέρχεται από τη Wikipedia και κυκλοφορεί κάτω από τους όρους της GNU Free Documentation License. Ο Olaf Ronneberger και τα παιδιά του Lina και Julia Ronneberger κατασκεύασαν το γερμανικό επίπεδο."
+msgstr "Ο χάρτης της Γερμανίας προέρχεται από τη Wikipedia και κυκλοφορεί κάτω από τους όρους της GNU Free Documentation License. Ο Olaf Ronneberger και τα παιδιά του Lina και Julia Ronneberger κατασκεύασαν τα τμήματα του γερμανικού χάρτη."
 
 #: ../boards/geography_country/board1_0.xml.in.h:1
 msgid "Regions of France"
@@ -1875,7 +1881,7 @@ msgstr "Γεωμετρία"
 
 #: ../boards/geometry.xml.in.h:2
 msgid "Geometry activities."
-msgstr "Δραστηριότητες Γεωμετρίας"
+msgstr "Δραστηριότητες Γεωμετρίας."
 
 #: ../boards/gletters.xml.in.h:1
 #: ../boards/wordsgame.xml.in.h:2
@@ -1898,11 +1904,11 @@ msgstr "Πληκτρολογήστε τα γράμματα που πέφτουν
 
 #: ../boards/gnumch-equality.xml.in.h:1
 msgid "Equality Number Munchers"
-msgstr "Κριτσανιστές ισοτήτων"
+msgstr "Αριθμοφάγοι ισοτήτων"
 
 #: ../boards/gnumch-equality.xml.in.h:2
 msgid "Guide the Number Muncher to the expressions that equal the number at the top of the screen."
-msgstr "Οδήγησε τον Κριτσανιστή αριθμών στις στις αριθμητικές πράξεις των οποίων το αποτέλεσμα ισούται με τον αριθμό στο επάνω μέρος της οθόνης."
+msgstr "Οδήγησε τον Αριθμοφάγο στις αριθμητικές πράξεις των οποίων το αποτέλεσμα ισούται με τον αριθμό στο επάνω μέρος της οθόνης."
 
 #: ../boards/gnumch-equality.xml.in.h:3
 msgid "Practice addition, multiplication, division and subtraction."
@@ -1911,15 +1917,15 @@ msgstr "Εξάσκηση στην πρόσθεση, αφαίρεση, διαίρ
 #: ../boards/gnumch-equality.xml.in.h:4
 #: ../boards/gnumch-inequality.xml.in.h:4
 msgid "Use the arrow keys to navigate around the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr "Χρησιμοποίησε τα κουμπιά με τα βελάκια για να μετακινηθείς στον πίνακα, αποφεύγοντας τα λάθη. Πάτησε τη μπάρα διαστήματος ώστε ο Κριτσανιστής να φάει τους αριθμούς."
+msgstr "Χρησιμοποίησε τα κουμπιά με τα βελάκια για να μετακινηθείς στον πίνακα, αποφεύγοντας τα λάθη. Πάτησε τη μπάρα διαστήματος ώστε ο Αριθμοφάγος να φάει τους αριθμούς."
 
 #: ../boards/gnumch-factors.xml.in.h:1
 msgid "Factor Number Munchers"
-msgstr "Κριτσανιστές διαιρετών"
+msgstr "Αριθμοφάγοι διαιρετών"
 
 #: ../boards/gnumch-factors.xml.in.h:2
 msgid "Guide the Number Muncher to all the factors of the number at the top of the screen."
-msgstr "Οδήγησε τον Κριτσανιστή αριθμών σε όλους τους διαιρέτες του αριθμού που εμφανίζεται στο επάνω μέρος της οθόνης"
+msgstr "Οδήγησε τον Αριθμοφάγο σε όλους τους διαιρέτες του αριθμού που εμφανίζεται στο επάνω μέρος της οθόνης."
 
 #: ../boards/gnumch-factors.xml.in.h:3
 msgid "Learn about factors and multiples."
@@ -1931,11 +1937,11 @@ msgstr "Οι διαιρέτες ενός αριθμού είναι εκείνο�
 
 #: ../boards/gnumch-inequality.xml.in.h:1
 msgid "Guide the Number Muncher to the all the expressions that do not equal the number at the top of the screen."
-msgstr "Οδήγησε τον Κριτσανιστή των αριθμών σε όλες τις αριθμητικές παραστάσεις, το αποτέλεσμα των οποίων δεν ισούται με τον αριθμό που εμφανίζεται στο πάνω μέρος της οθόνης."
+msgstr "Οδήγησε τον Αριθμοφάγο των αριθμών σε όλες τις αριθμητικές παραστάσεις, το αποτέλεσμα των οποίων δεν ισούται με τον αριθμό που εμφανίζεται στο πάνω μέρος της οθόνης."
 
 #: ../boards/gnumch-inequality.xml.in.h:2
 msgid "Inequality Number Munchers"
-msgstr "Κριτσανιστές ανισοτήτων"
+msgstr "Αριθμοφάγοι ανισοτήτων"
 
 #: ../boards/gnumch-inequality.xml.in.h:3
 msgid "Practice addition, subtraction, multiplication and division."
@@ -1943,7 +1949,7 @@ msgstr "Εξάσκηση στην πρόσθεση, αφαίρεση, διαίρ
 
 #: ../boards/gnumch-multiples.xml.in.h:1
 msgid "Guide the Number Muncher to all the multiples of the number at the top of the screen."
-msgstr "Οδήγησε τον Κριτσανιστή σε όλα τα πολλαπλάσια του αριθμού που εμφανίζεται στο πάνω μέρος της οθόνης."
+msgstr "Οδήγησε τον Αριθμοφάγο σε όλα τα πολλαπλάσια του αριθμού που εμφανίζεται στο πάνω μέρος της οθόνης."
 
 #: ../boards/gnumch-multiples.xml.in.h:2
 msgid "Learn about multiples and factors."
@@ -1951,7 +1957,7 @@ msgstr "Μάθε για τα πολλαπλάσια και τους διαιρέ
 
 #: ../boards/gnumch-multiples.xml.in.h:3
 msgid "Multiple Number Munchers"
-msgstr "Κριτσανιστής πολλαπλασίων"
+msgstr "Αριθμοφάγος πολλαπλασίων"
 
 #: ../boards/gnumch-multiples.xml.in.h:4
 msgid "The multiples of a number are all the numbers that are equal to the original number times another number. For example, 24, 36, 48 and 60 are all multiples of 12. 25 is not a multiple of 12 because there isn't any number that can be multiplied by 12 to get 25. If one number is a factor of a second number, then the second number is a multiple of the first number. Again, you can think of multiples as families, and factors are the people who belong to those families. The factor 5, has parents 10, grandparents 15, great-grandparents 20, great-great-grandparents 25, and every extra step of 5 is another great- in front! But the number 5 does not belong in the 8 or 23 families. You can't fit any number of 5s into 8 or 23 with nothing left over. So '8 isn't a multiple of 5, nor is 23. Only 5, 10, 15, 20, 25 ... are multiples (or families or steps) of 5. Use the arrow keys to navigate around the board and to avoid the Troggles. Press the spacebar to eat a number."
@@ -1959,7 +1965,7 @@ msgstr "Τα πολλαπλάσια ενός αριθμού είναι όλοι 
 
 #: ../boards/gnumch-primes.xml.in.h:1
 msgid "Guide the Number Muncher to all the prime numbers."
-msgstr "Οδήγησε τον Κριτσανιστή σε όλους τους πρώτους αριθμούς."
+msgstr "Οδήγησε τον Αριθμοφάγο σε όλους τους πρώτους αριθμούς."
 
 #: ../boards/gnumch-primes.xml.in.h:2
 msgid "Learn about prime numbers"
@@ -1967,19 +1973,19 @@ msgstr "Μάθε για τους πρώτους αριθμούς"
 
 #: ../boards/gnumch-primes.xml.in.h:3
 msgid "Prime Number Munchers"
-msgstr "Κριτσανιστής πρώτων αριθμών"
+msgstr "Αριθμοφάγος πρώτων αριθμών"
 
 #: ../boards/gnumch-primes.xml.in.h:4
 msgid "Prime numbers are numbers that are only divisible by themselves and 1. For example, 3 is a prime number, but 4 isn't (because 4 is divisible by 2). You can think of prime numbers as very small families: they only ever have two people in them! Only themselves and 1. You can't fit any other numbers into them with nothing left over. 5 is one of these lonely numbers (only 5 × 1 = 5), but you can see that 6 has 2 and 3 in its family as well (6 × 1 = 6, 2 × 3 = 6). So 6 is not a prime number. Use the arrow keys to navigate around the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr "Πρώτοι λέγονται οι αριθμοί που διαιρούνται μόνον με το 1 και τον εαυτό τους. Παραδείγματος χάριν, το 3 είναι πρώτος αριθμός, αλλά το 4 δεν είναι (επειδή διαιρείται με το 2). Μπορείτε να παρομοιάσετε τους πρώτους αριθμούς ως πολύ μικρές οικογένειες που έχουν μόνο δύο μέλη: τον εαυτό τους και το 1! Το 5 ανήκει σε αυτή την κατηγορία, όχι όμως και το 6 γιατί έχει το 2 και το 3 στην οικογένειά του (6 × 1 = 6, 2 × 3 = 6). Το 6 λοιπόν δεν είναι πρώτος αριθμός. Χρησιμοποιήστε τα βέλη για να περιηγηθείτε στον πίνακα, αποφεύγοντας τα λάθη. Πιέστε το πλήκτρο διαστήματος για να \"φάτε\" έναν αριθμό."
+msgstr "Πρώτοι λέγονται οι αριθμοί που διαιρούνται μόνον με το 1 και τον εαυτό τους. Παραδείγματος χάριν, το 3 είναι πρώτος αριθμός, αλλά το 4 δεν είναι (επειδή διαιρείται με το 2). Μπορείτε να παρομοιάσετε τους πρώτους αριθμούς ως πολύ μικρές οικογένειες που έχουν μόνο δύο μέλη: τον εαυτό τους και το 1! Το 5 ανήκει σε αυτή την κατηγορία, όχι όμως και το 6 γιατί έχει το 2 και το 3 στην οικογένειά του (6 × 1 = 6, 2 × 3 = 6). Το 6 λοιπόν δεν είναι πρώτος αριθμός. Χρησιμοποιήστε τα βέλη για να περιηγηθείτε στον πίνακα, αποφεύγοντας τους Τρωγλοδύτες. Πιέστε το πλήκτρο διαστήματος για να \"φάτε\" έναν αριθμό."
 
 #: ../boards/gnumchmenu.xml.in.h:1
 msgid "Go to Number Munchers activities"
-msgstr "Πήγαινε στις δραστηριότητες με τον Κριτσανιστή αριθμών"
+msgstr "Πήγαινε στις δραστηριότητες με τον Αριθμοφάγο"
 
 #: ../boards/gnumchmenu.xml.in.h:2
 msgid "Number Munchers are games to play with arithmetic."
-msgstr "Οι Κριτσανιστές αριθμών είναι παιχνίδια αριθμητικής."
+msgstr "Οι Αριθμοφάγοι αριθμών είναι παιχνίδια αριθμητικής."
 
 #: ../boards/guessnumber.xml.in.h:1
 msgid "Guess a number"
@@ -1987,7 +1993,7 @@ msgstr "Μάντεψε το νούμερο"
 
 #: ../boards/guessnumber.xml.in.h:2
 msgid "Help Tux escape the cave. Tux hides a number for you to find."
-msgstr "Βοήθησε τον Tux να αποδράσει από τη σπηλιά. O Tux κρύβει ένα νούμερο που πρέπει να το βρεις."
+msgstr "Βοήθησε τον Tux με το ελικόπτερο βγει από τη σπηλιά. O Tux κρύβει ένα νούμερο που πρέπει να βρεις."
 
 #: ../boards/guessnumber.xml.in.h:3
 msgid "Numbers from 1 to 1000 for the last level."
@@ -1995,7 +2001,7 @@ msgstr "Αριθμοί από το 1 ως το 1000 για το τελευταί
 
 #: ../boards/guessnumber.xml.in.h:4
 msgid "Read the instructions that give you the range of the number to find. Enter a number in the top right blue entry box. Tux will tell you if your number is higher or lower. Then enter another number. The distance between Tux and the escape area on the right represents how far you are from the correct number. If Tux is over or under the escape area, it means your number is over or under the correct number."
-msgstr "Διάβασε τις οδηγίες που σου δίνουν τη σειρά των αριθμών που πρέπει να ανακαλύψεις. Καταχώρησε έναν αριθμό στο επάνω δεξιά μπλε πλαίσιο εισαγωγής. O Tux θα σου πει εάν ο αριθμός που έβαλες είναι μικρότερος ή μεγαλύτερος από αυτόν που χρειάζεται. Κατόπιν, βάλε άλλον αριθμό. Η απόσταση μεταξύ του Tux και της περιοχής απόδρασης στα δεξιά, αναπαριστά την απόσταση που σε χωρίζει από το σωστό αριθμό. Εάν ο Tux είναι πάνω ή κάτω από την περιοχή απόδρασης, αυτό σημαίνει ότι ο αριθμός που έβαλες είναι μικρότερος ή μεγαλύτερος από το σωστό αριθμό. "
+msgstr "Διάβασε την πρόταση στο επάνω μέρος της οθόνης που σου δίνει το αριθμητικό εύρος μέσα στο οποίο βρίσκεται ο αριθμός που πρέπει να μαντέψεις. Καταχώρησε έναν αριθμό στο επάνω δεξιά πλαίσιο εισαγωγής. O Tux θα σου πει εάν ο αριθμός που έβαλες είναι μικρότερος ή μεγαλύτερος από αυτόν που χρειάζεται. Κατόπιν, βάλε άλλον αριθμό. Η απόσταση μεταξύ του ελικοπτέρου και της εξόδου στα δεξιά, αναπαριστά την απόσταση που σε χωρίζει από το σωστό αριθμό. Εάν ο Tux είναι πάνω ή κάτω από την περιοχή απόδρασης, αυτό σημαίνει ότι ο αριθμός που έβαλες είναι μικρότερος ή μεγαλύτερος από το σωστό αριθμό. Υπάρχουν τέσσερα επίπεδα δυσκολίας ανάλογα με το εύρος των αριθμών: για το πρώτο επίπεδο πρέπει να βρεις έναν αριθμό μεταξύ 1 και 10, για το δεύτερο μεταξύ 1 και 100, για το τρίτο μεταξύ 1 και 500 και για το τέταρτο μεταξύ 1 και 1000."
 
 #: ../boards/hanoi.xml.in.h:1
 msgid "Concept taken from EPI games."
@@ -2012,7 +2018,7 @@ msgstr "Φτίαξε τον ίδιο πύργο"
 
 #: ../boards/hanoi.xml.in.h:5
 msgid "Reproduce the tower on the right in the empty space on the left"
-msgstr "Φτιάξε στην κενή στήλη αριστερά σου τον ίδιο πύργο που βρίσκεται δεξιά."
+msgstr "Φτιάξε στον κενό αριστερό πάσσαλο τον ίδιο πύργο που βρίσκεται στα δεξιά"
 
 #: ../boards/hanoi.xml.in.h:6
 #: ../src/boards/hanoi.c:96
@@ -2021,7 +2027,7 @@ msgstr "Απλοποιημένος πύργος του Ανόι"
 
 #: ../boards/hanoi_real.xml.in.h:1
 msgid "Drag and Drop the top pieces only from one peg to another, to reproduce the tower on the right in the empty space on the left."
-msgstr "Μετακίνησε και τοποθέτησε τα κομμάτια από πάνω από τη μια στήλη στην άλλη, για να φτιάξεις στην κενή στήλη έναν ίδιο πύργο όπως αυτός στα δεξιά σου."
+msgstr "Μετακίνησε και τοποθέτησε τα κομμάτια από τον έναν πάσσαλο στον άλλο, για να φτιάξεις στον κενό πάσσαλο έναν ίδιο πύργο, όπως αυτός στα αριστερά σου. Στον ενδιάμεσο πάσσαλο μπορείς να βάζεις τους δίσκους προσωρινά."
 
 #: ../boards/hanoi_real.xml.in.h:3
 msgid "Reproduce the tower on the right side"
@@ -2043,23 +2049,23 @@ msgstr ""
 
 #: ../boards/hanoi_real.xml.in.h:8
 msgid "The puzzle was invented by the French mathematician Edouard Lucas in 1883. There is a legend about a Hindu temple whose priests were constantly engaged in moving a set of 64 discs according to the rules of the Tower of Hanoi puzzle. According to the legend, the world would end when the priests finished their work. The puzzle is therefore also known as the Tower of Brahma puzzle. It is not clear whether Lucas invented this legend or was inspired by it. (source Wikipedia &lt;http://en.wikipedia.org/wiki/Tower_of_hanoi&gt;)"
-msgstr "Το puzzle εφευρέθηκε από τον γάλλο μαθηματικό Edouard Lucas το 1883. Υπάρχει ένας μύθος για έναν ινδικό ναό, οι ιερείς του οποίου προσπαθούσαν αδιάκοπα να μετακινήσουν 64 δίσκους σύμφωνα με τους κανόνες ενός άλλου puzzle που ονομαζόταν Πύργος του Ανόι. Σύμφωνα με το μύθο αυτό, το τέλος του κόσμου θα ερχόταν όταν οι ιερείς τελείωναν τη δουλειά τους. Το puzzle αυτό είναι επίσης γνωστό ως puzzle του Πύργουτου Βράχμα. Δεν είναι ξεκάθαρο αν ο Lucas  επινόησε το μύθο, ή αν εμπνεύστηκε από αυτόν  (πηγή Wikipedia &lt;http://en.wikipedia.org/wiki/Tower_of_hanoi&gt;)"
+msgstr "Το παζλ εφευρέθηκε από τον γάλλο μαθηματικό Edouard Lucas το 1883. Υπάρχει ένας μύθος για έναν ινδικό ναό, οι ιερείς του οποίου προσπαθούσαν αδιάκοπα να μετακινήσουν 64 δίσκους σύμφωνα με τους κανόνες ενός άλλου παζλ που ονομαζόταν Πύργος του Ανόι. Σύμφωνα με το μύθο αυτό, το τέλος του κόσμου θα ερχόταν όταν οι ιερείς τελείωναν τη δουλειά τους. Το παζλ αυτό είναι επίσης γνωστό ως παζλ του Πύργουτου Βράχμα. Δεν είναι ξεκάθαρο αν ο Lucas  επινόησε το μύθο, ή αν εμπνεύστηκε από αυτόν  (πηγή Wikipedia &lt;http://en.wikipedia.org/wiki/Tower_of_hanoi&gt;)"
 
 #: ../boards/hexagon.xml.in.h:1
 msgid "Find the strawberry by clicking on the blue fields"
-msgstr "Βρες τη φράουλα κάνοντας κλικ πάνω στα μπλε χωράφια"
+msgstr "Βρες τη φράουλα κάνοντας κλικ πάνω στις μπλε κυψέλες"
 
 #: ../boards/hexagon.xml.in.h:4
 msgid "Try to find the strawberry under the blue fields. The fields become redder as you get closer."
-msgstr "Βρες τη φράουλα κάτω από τα μπλε χωράφια. Όσο θα πλησιάζεις τα χωράφια θα γίνονται όλο και πιο κόκκινα."
+msgstr "Βρες τη φράουλα που κρύβεται κάτω από τις μπλε κυψέλες. Όσο θα πλησιάζεις οι κυψέλες θα γίνονται όλο και πιο κόκκινες."
 
 #: ../boards/hexagon.xml.in.h:5
 msgid "hexagon"
-msgstr "εξάγωνο"
+msgstr "Εξάγωνο"
 
 #: ../boards/imageid.xml.in.h:1
 msgid "Click on the word corresponding to the printed image."
-msgstr "Κάνε κλικ στην αντίστοιχη λέξη στην εμφανιζόμενη εικόνα."
+msgstr "Κάνε κλικ στο όνομα του αντικειμένου της εικόνας."
 
 #: ../boards/imageid.xml.in.h:2
 msgid "Practice reading by finding the word matching an image"
@@ -2183,7 +2189,9 @@ msgstr "σακίδιο"
 #: ../boards/imagename/board5_0.xml.in.h:1
 #: ../boards/imagename/board6_0.xml.in.h:1
 msgid "Drag and Drop each item onto its name"
-msgstr "Μετακίνησε και τοποθέτησε κάθε αντικείμενοπάνω από το όνομά του"
+msgstr ""
+"Μετακίνησε και τοποθέτησε κάθε αντικείμενο\n"
+"πάνω από το όνομά του"
 
 #: ../boards/imagename.xml.in.h:2
 msgid "Drag each image from the (vertical) box on the left to its (corresponding) name on the right. Click the OK button to check your answer."
@@ -2191,7 +2199,7 @@ msgstr "Μετακίνησε τις εικόνες από την αριστερ�
 
 #: ../boards/imagename.xml.in.h:3
 msgid "Image Name"
-msgstr "Όνομα Εικόνας"
+msgstr "Όνομα εικόνας"
 
 #: ../boards/imagename.xml.in.h:5
 msgid "Vocabulary and reading"
@@ -2199,7 +2207,7 @@ msgstr "Λεξιλόγιο και ανάγνωση"
 
 #: ../boards/imagename/board1_0.xml.in.h:2
 msgid "bulb"
-msgstr "λάμπα"
+msgstr "πορτατίφ"
 
 #: ../boards/imagename/board1_0.xml.in.h:3
 msgid "fishing boat"
@@ -2308,7 +2316,7 @@ msgstr "ρακέτα"
 
 #: ../boards/keyboard.xml.in.h:1
 msgid "Discover the keyboard."
-msgstr "Ανακάλυψε το πληκτρολόγιο"
+msgstr "Ανακάλυψε το πληκτρολόγιο."
 
 #: ../boards/keyboard.xml.in.h:2
 msgid "Keyboard-manipulation boards"
@@ -2320,16 +2328,16 @@ msgstr "Όρισε εάν είναι το αριστερό ή το δεξί χέ
 
 #: ../boards/leftright.xml.in.h:2
 msgid "Distinguish right and left hands from different points of view. Spatial representation"
-msgstr "Διέκρινε από διαφορετική γωνία κάθε φορά εάν προκειται για αριστερό ή για δεξί χέρι. Εικονίζεται από διάφορες πλευρές"
+msgstr "Διέκρινε από διαφορετική γωνία κάθε φορά εάν πρόκειται για αριστερό ή για δεξί χέρι. Εικονίζεται από διάφορες πλευρές"
 
 #: ../boards/leftright.xml.in.h:3
 msgid "Find your left and right hands"
-msgstr "Βρες το αριστερό σου και το δεξί σου χέρι"
+msgstr "Βρες το αριστερό και το δεξί σου χέρι"
 
 #: ../boards/leftright.xml.in.h:4
 #: ../boards/railroad.xml.in.h:4
 msgid "None"
-msgstr "Κανένα"
+msgstr "Ψυχοκινητικές δεξιότητες"
 
 #: ../boards/leftright.xml.in.h:5
 msgid "You can see a hand: is it a left hand or a right hand? Click on the red button on the left, or the green button on the right."
@@ -2372,11 +2380,11 @@ msgstr "Πρόσθεση"
 
 #: ../boards/magic_hat_plus.xml.in.h:2
 msgid "Click on the hat to open or close it. Under the hat, how many stars can you see moving around? Count carefully. :) Click in the bottom-right area to input your answer."
-msgstr ""
+msgstr "Κάνε κλικ στο καπέλο για να το ανοίξεις. Μέτρησε προσεκτικά τα αστεράκια που κινούνται και μπαίνουν κάτω από το καπέλο. Με το ποντίκι κάνε κλικ σε τόσα αστεράκια, όσα μπήκαν κάτω από το καπέλο. Ανάλογα με το επίπεδο δυσκολίας, τα χρώματα των αστεριών μπορεί να είναι 1, 2 ή και 3, οπότε θα πρέπει να επιλέξεις από κάθε χρώμα, όσα αστεράκια μπήκαν κάτω από το καπέλο."
 
 #: ../boards/magic_hat_plus.xml.in.h:3
 msgid "Count how many items are under the magic hat"
-msgstr "Μέτρησε πόσα αντικείμενα είναι κάτω από το μαγικό καπέλο"
+msgstr "Μέτρησε πόσα αντικείμενα είναι κάτω από το μαγικό καπέλο (πρόσθεση)"
 
 #: ../boards/magic_hat_plus.xml.in.h:4
 msgid "Learn addition"
@@ -2389,7 +2397,7 @@ msgstr "Το καπέλο του μάγου"
 
 #: ../boards/magic_hat_minus.xml.in.h:1
 msgid "Count how many items are under the magic hat after some have got away"
-msgstr "Μέτρησε πόσα αντικείμενα είναι κάτω από το μαγικό καπέλο αν αφαιρεθούν μερικά"
+msgstr "Μέτρησε πόσα αντικείμενα είναι κάτω από το μαγικό καπέλο (αφαίρεση)"
 
 #: ../boards/magic_hat_minus.xml.in.h:2
 msgid "Learn subtraction"
@@ -2397,7 +2405,7 @@ msgstr "Μαθαίνω αφαίρεση"
 
 #: ../boards/magic_hat_minus.xml.in.h:3
 msgid "Look at the magician, he tells the number of stars that are under his magic hat. Then, click on the hat to open it. A few stars escape. Click again on the hat to close it. You have to count how many are still under the hat. Click on the bottom right area to answer."
-msgstr "Κοιτάξτε τον μάγο που λέει τον αριθμό των αστεριών που είναι κάτω από το μαγικό του καπέλο. Μετά, κάντε κλικ στο καπέλο για να το ανοίξετε. Λείπουν μερικά αστέρια. Κάντε κλικ ξανά στο καπέλο για να το κλείσετε. Πρέπει να μετρήσετε πόσα καπέλα βρίσκονται ακόμη κάτω από το καπέλο. Κάντε κλικ στην κάτω αριστερή περιοχή για να απαντήσετε."
+msgstr "Κάνε κλικ στο καπέλο για να το ανοίξεις. Μέτρησε προσεκτικά τα αστεράκια που κινούνται και μπαίνουν κάτω από το καπέλο, αλλά και όσα βγαίνουν και τοποθετούνται στη δεύτερη γραμμή. Τη διαφορά των δύο αριθμών, επέλεξέ την με κλικ στα αστεράκια στην κάτω γραμμή δεξιά. Ανάλογα με το επίπεδο δυσκολίας, τα χρώματα των αστεριών μπορεί να είναι 1, 2 ή και 3, οπότε θα πρέπει να επιλέξεις από κάθε χρώμα, τόσα αστεράκια όσα αντιστοιχούν στη διαφορά των αστεριών κάθε χρώματος."
 
 #: ../boards/magic_hat_minus.xml.in.h:4
 #: ../boards/memory_add_minus.xml.in.h:3
@@ -2451,11 +2459,11 @@ msgstr "Βρες το δρόμο που θα σε οδηγήσει έξω από
 
 #: ../boards/maze2DRelative.xml.in.h:5
 msgid "Use the keyboard arrows to move Tux up to the door. In this maze, the move is relative (first person). Use the up arrow to go forward. The other arrow let you turn Tux in another direction."
-msgstr ""
+msgstr "Χρησιμοποίησε τα πλήκτρα με τα βέλη για να βοηθήσεις τον Tux να βγει από την πόρτα. Χρησιμοποίησε το επάνω βέλος για να κινήσεις τον Tux εμπρός. Τα υπόλοιπα βέλη σου επιτρέπουν να περιστρέψεις τον Tux σε όποια κατεύθυνση επιθυμείς."
 
 #: ../boards/maze3D.xml.in.h:1
 msgid "3D Maze"
-msgstr "τρισδιάστατος λαβύρινθος"
+msgstr "Τρισδιάστατος λαβύρινθος"
 
 #: ../boards/maze3D.xml.in.h:3
 msgid "Find your way out of the 3D maze"
@@ -2479,7 +2487,7 @@ msgstr "Βρες το δρόμο που θα σε οδηγήσει έξω από
 
 #: ../boards/mazeMenu.xml.in.h:2
 msgid "Go to Maze activities"
-msgstr "Πήγαινε στις δραστηριότητες με λαβύρινθους"
+msgstr "Δραστηριότητες με λαβύρινθους"
 
 #: ../boards/melody.xml.in.h:1
 msgid "Ear-training activity"
@@ -2487,7 +2495,7 @@ msgstr "Δραστηριότητα ακουστικής εξάσκησης"
 
 #: ../boards/melody.xml.in.h:2
 msgid "Listen to the sound sequence played, and repeat it by clicking on the elements. You can listen again by clicking on the repeat button."
-msgstr "Άκουσε την σειρά των ήχων που ακούγονται και επανέλαβε τους κάνοντας κλικ στα αντίστοιχα αντικείμενα. Κάνοντας κλικ στο αντίστοιχο κουμπί μπορείς να ακούσεις τους ήχους ξανά."
+msgstr "Άκουσε την σειρά των ήχων που ακούγονται και επανέλαβε τους κάνοντας κλικ στα αντίστοιχα αντικείμενα. Κάνοντας κλικ στο αντίστοιχο κουμπί μπορείς να ακούσεις τους ήχους ξανά. Από το εικονίδιο πάνω αριστερά μπορείς να διαλέξεις το μεταλλόφωνο, την κιθάρα ή τις κατσαρόλες."
 
 #: ../boards/melody.xml.in.h:3
 msgid "Melody"
@@ -2499,7 +2507,7 @@ msgstr "Επανάληψη μιας μελωδίας"
 
 #: ../boards/memory.xml.in.h:1
 msgid "A set of blank cards is shown. Each card has a picture on the other side, and each picture card has a twin exactly the same. Click on a card to see its hidden picture, and try to match the twins. You can only turn over two cards at once, so you need to remember where a picture is, while you look for its twin. When you turn over the twins, they both disappear."
-msgstr "Εμφανίζεται ένα ζευγάρι κενών καρτών. Κάθε κάρτα έχει μια εικόνα στην άλλη πλευρά και κάθε εικόνα έχει τη δίδυμή της. Κάνε κλικ σε μια κάρτα για να δεις την κρυμμένη εικόνα της και προσπάθησε με κλικ στις άλλες κάρτες να ανακαλύψεις τη δίδυμη εικόνα.  Όμως δεν μπορείς να δεις δύο κρυμμένες εικόνες συγχρόνως. Θα πρέπει να θυμάσαι την θέση των εικόνων ώστε να τις ταιριάξεις. Για να απομακρύνεις ένα ζευγάρι χαρτιών θα πρέπει να ταιριάξεις τη εικόνα που κρύβουν."
+msgstr "Εμφανίζεται ένα ζευγάρι κενών καρτών. Κάθε κάρτα έχει μια εικόνα στην άλλη πλευρά και κάθε εικόνα έχει τη δίδυμή της. Κάνε κλικ σε μια κάρτα για να δεις την κρυμμένη εικόνα της και προσπάθησε με κλικ στις άλλες κάρτες να ανακαλύψεις τη δίδυμη εικόνα.  Όμως δεν μπορείς να δεις δύο κρυμμένες εικόνες συγχρόνως. Θα πρέπει να θυμάσαι την θέση των εικόνων ώστε να τις ταιριάξεις. Για να απομακρύνεις ένα ζευγάρι καρτών θα πρέπει να ταιριάξεις την εικόνα που κρύβουν."
 
 #: ../boards/memory.xml.in.h:2
 msgid "Flip the cards to find the matching pairs"
@@ -2512,7 +2520,7 @@ msgstr "Παιχνίδι Μνήμης με εικόνες"
 #: ../boards/memory.xml.in.h:5
 #: ../boards/memory_tux.xml.in.h:4
 msgid "Train your memory and remove all the cards"
-msgstr "Εξάσκησε την μνήμη σου και απομάκρυνε όλα τα χαρτιά."
+msgstr "Εξάσκησε την μνήμη σου και απομάκρυνε όλα τα χαρτιά"
 
 #: ../boards/memory_add.xml.in.h:2
 msgid "Addition memory game"
@@ -2526,7 +2534,7 @@ msgstr "Εξάσκηση στην πρόσθεση μέχρι να εξαφαν�
 #: ../boards/memory_add.xml.in.h:4
 #: ../boards/memory_add_tux.xml.in.h:4
 msgid "Turn the cards over to find two numbers which add up the same, until all the cards are gone."
-msgstr ""
+msgstr "Με κλικ μπορείς να γυρίσεις τις κάρτες, ώστε να βρεις ζεύγη καρτών που εμφανίζουν το ίδιο άθροισμα, ώσπου να τελειώσουν όλες οι κάρτες."
 
 #: ../boards/memory_add.xml.in.h:5
 #: ../boards/memory_add_tux.xml.in.h:5
@@ -2537,6 +2545,11 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of an adding-up sum (also called an addition sum). You need to find the two parts of the sum, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole sum. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper sum. When you do that, both those cards disappear! When you've made them all disappear, found all the sums, you've won the game! :)"
 msgstr ""
+"Μπορείς να δεις ορισμένες κάρτες, αλλά δεν γνωρίζεις τι υπάρχει στην άλλη τους πλευρά. Κάθε κάρτα κρύβει ένα άθροισμα ή την απάντηση ενός αθροίσματος.\n"
+"Ένα άθροισμα έχει την εξής μορφή: 2+2=4\n"
+"Οι αριθμοί στη μια μεριά των συμβόλων της ισότητας (=) πρέπει να είναι ίδιοι με τους αριθμούς της άλλης πλευράς. Έτσι 2(1, 2) και 2 ακόμη (3, 4) κάνουν 4. Μέτρησε φωναχτά ή μέτρα με τα δάχτυλά σου όταν υπολογίζεις, δηλαδή χρησιμοποίησε διαφορετικούς τρόπους υπολογισμού, επειδή αυτό θα σε βοηθήσει να θυμάσαι καλύτερα. Μπορείς επίσης να χρησιμοποιήσεις κυβάκια ή κουμπιά, ή οτιδήποτε άλλο σε βοηθά στους υπολογισμούς. Ακόμη, μπορείς να μετρήσεις τους συμμαθητές σου στο σχολείο, ή να τραγουδήσεις τραγούδια αρίθμησης. Μέτρησε όσο πιο πολλά πράγματα μπορείς και θα καταφέρεις να γίνεις πολύ καλός στις προσθέσεις!\n"
+"\n"
+"Σε αυτό το παιχνίδι, οι κάρτες κρύβουν τα δύο τμήματα ενός αθροίσματος. Πρέπει να βρεις τα δύο τμήματα του αθροίσματος και να τα βάλεις μαζί. Κάνε κλικ σε μια κάρτα για να δεις τι κρύβει και έπειτα προσπάθησε να βρεις την κάρτα που συμπληρώνει το άθροισμα. Μπορείς να γυρίσεις μόνο δύο κάρτες κάθε φορά, γι' αυτό πρέπει να θυμάσαι τι κρύβει κάθε κάρτα που άνοιξες, ώστε να μπορείς να ταιριάξεις τα ζευγάρια. Κάθε φορά που βρίσκεις τις κάρτες που κρύβουν τα σωστά τμήματα ενός αθροίσματος, αυτές εξαφανίζονται! Το παιχνίδι ολοκληρώνεται όταν εξαφανιστούν από τον πίνακα όλες οι κάρτες! "
 
 #: ../boards/memory_add_minus.xml.in.h:1
 msgid "Addition and subtraction memory game"
@@ -2545,12 +2558,12 @@ msgstr "Παιχνίδι μνήμης με πρόσθεση και αφαίρε�
 #: ../boards/memory_add_minus.xml.in.h:2
 #: ../boards/memory_add_minus_tux.xml.in.h:2
 msgid "Practise addition, subtraction, until all the cards are gone."
-msgstr ""
+msgstr "Εξάσκηση πρόσθεσης και αφαίρεσης, μέχρι να εξαφανιστούν όλες οι κάρτες."
 
 #: ../boards/memory_add_minus.xml.in.h:4
 #: ../boards/memory_add_minus_tux.xml.in.h:4
 msgid "Turn the cards over to find two numbers which add or subtract the same, until all the cards are gone."
-msgstr ""
+msgstr "Γύρνα τις κάρτες για να ταιριάξεις την κάρτα που δείχνει μια πρόσθεση ή αφαίρεση με την κάρτα που εμφανίζει το σωστό αποτέλεσμα της πράξης."
 
 #: ../boards/memory_add_minus.xml.in.h:5
 #: ../boards/memory_add_minus_mult_div.xml.in.h:5
@@ -2567,6 +2580,9 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of an operation. You need to find the two parts of the operation, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole operation. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper equality. When you do that, both those cards disappear! When you've made them all disappear, found all the operations, you've won the game! :)"
 msgstr ""
+"Θα δεις κάποιες κάρτες, αλλά δεν μπορείς να δεις τι υπάρχει στην κάτω πλευρά τους. Κάθε κάρτα κρύβει μια αριθμητική πράξη, ή την απάντησή της.\n"
+"\n"
+"Σε αυτό το παιχνίδι οι κάρτες κρύβουν τα δυο τμήματα μιας πράξης. Πρέπει να βρεις τα δύο τμήματα της πράξης και να τα βάλεις μαζί. Κάνε κλικ σε μια κάρτα για να δεις ποιον αριθμό κρύβει και μετά προσπάθησε να βρεις την κάρτα που ταιριάζει με αυτήν, ώστε να ολοκληρώσεις την αριθμητική πράξη. Κάθε φορά μπορείς να γυρίσεις δύο κάρτες, γι' αυτό πρέπει να θυμάσαι τι κρύβει κάθε κάρτα, ώστε να μπορείς στη συνέχεια να ταιριάξεις τα ζευγάρια. Θα πρέπει να συμπληρώσεις ισότητες βρίσκοντας τα τμήματα που ταιριάζουν. Κάθε φορά που ταιριάζεις δύο κάρτες, αυτές εξαφανίζονται! Όταν θα έχουν εξαφανιστεί όλες, σημαίνει ότι έχεις ολοκληρώσει το παιχνίδι! :)"
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:1
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:1
@@ -2575,12 +2591,12 @@ msgstr "Πρόσθεση, αφαίρεση, πολλαπλασιασμός, δι
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:2
 msgid "All operations memory game"
-msgstr ""
+msgstr "Παιχνίδι μνήμης αριθμητικών πράξεων"
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:3
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:3
 msgid "Practise addition, subtraction, multiplication, division, until all the cards are gone."
-msgstr ""
+msgstr "Εξάσκηση στην πρόσθεση, αφαίρεση, πολλαπλασιασμό και διαίρεση μέχρι να εξαφανιστούν όλες οι κάρτες."
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:4
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:4
@@ -2590,19 +2606,19 @@ msgstr ""
 #: ../boards/memory_mult_div_tux.xml.in.h:4
 #: ../boards/memory_mult_tux.xml.in.h:4
 msgid "Turn the cards over to find a matching operation, until all the cards are gone."
-msgstr ""
+msgstr "Γύρνα τις κάρτες για να βρεις τα ζευγάρια των καρτών που ταιριάζουν σε μια αριθμητική πράξη, μέχρι να εξαφανιστούν όλες οι κάρτες."
 
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:2
 msgid "All operations memory game against Tux"
-msgstr ""
+msgstr "Παιχνίδι μνήμης αριθμητικών πράξεων με αντίπαλο τον Tux"
 
 #: ../boards/memory_add_minus_tux.xml.in.h:1
 msgid "Addition and subtraction memory game against Tux"
-msgstr ""
+msgstr "Παιχνίδι μνήμης προσθέσεων  και αφαιρέσεων με αντίπαλο τον Tux"
 
 #: ../boards/memory_add_tux.xml.in.h:1
 msgid "Addition memory game against Tux"
-msgstr ""
+msgstr "Παιχνίδι πρόσθεσης με αντίπαλο τον Tux"
 
 #: ../boards/memory_add_tux.xml.in.h:2
 #: ../boards/memory_mult_tux.xml.in.h:1
@@ -2647,7 +2663,7 @@ msgstr "Παιχνίδι μνήμης με αφαίρεση"
 #: ../boards/memory_minus.xml.in.h:4
 #: ../boards/memory_minus_tux.xml.in.h:4
 msgid "Turn the cards over to find two numbers which subtract the same, until all the cards are gone."
-msgstr ""
+msgstr "Γύρνα τις κάρτες για να βρεις δυο αριθμούς συμπληρώνουν μια ισότητα αφαίρεσης, μέχρι να εξαφανιστούν όλες οι κάρτες."
 
 #: ../boards/memory_minus.xml.in.h:5
 #: ../boards/memory_minus_tux.xml.in.h:5
@@ -2658,10 +2674,15 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of a subtraction. You need to find the two parts of the subraction, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole sum. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper sum. When you do that, both those cards disappear! When you've made them all disappear, found all the subtracts, you've won the game! :)"
 msgstr ""
+"Μπορείς να δεις ορισμένες κάρτες, αλλά δεν γνωρίζεις τι υπάρχει στην άλλη τους πλευρά. Κάθε κάρτα κρύβει μια αφαίρεση ή την απάντησή της.\n"
+"Ένα άθροισμα εμφανίζεται ως εξής: 3-1=2\n"
+"Οι αριθμοί στη μια μεριά των συμβόλων της ισότητας (=) πρέπει να είναι ίσοι με τους αριθμούς της άλλης πλευράς. Έτσι, από το 3 βγάζω 1, μας κάνει 2. Μέτρησε φωναχτά ή μέτρα με τα δάχτυλά σου όταν υπολογίζεις, δηλαδή χρησιμοποίησε διαφορετικούς τρόπους υπολογισμού, επειδή αυτό θα σε βοηθήσει να θυμάσαι καλύτερα. Μπορείς επίσης να χρησιμοποιήσεις κυβάκια ή κουμπιά, ή οτιδήποτε άλλο σε βοηθά στους υπολογισμούς. Ακόμη, μπορείς να μετρήσεις τους συμμαθητές σου στο σχολείο, ή να τραγουδήσεις τραγούδια αρίθμησης. Μέτρησε όσο πιο πολλά πράγματα μπορείς και θα καταφέρεις να γίνεις πολύ καλός στις αφαιρέσεις!\n"
+"\n"
+"Σε αυτό το παιχνίδι, οι κάρτες κρύβουν τα δύο τμήματα μιας αφαίρεσης. Πρέπει να βρεις τα δύο τμήματα της αφαίρεσης και να τα βάλεις μαζί. Κάνε κλικ σε μια κάρτα για να δεις τι κρύβει και έπειτα προσπάθησε να βρεις την κάρτα που συμπληρώνει την ισότητα. Μπορείς να γυρίσεις μόνο δύο κάρτες κάθε φορά, γι' αυτό πρέπει να θυμάσαι τι κρύβει κάθε κάρτα που άνοιξες, ώστε να μπορείς να ταιριάξεις τα ζευγάρια. Κάθε φορά που βρίσκεις τις κάρτες που κρύβουν τα σωστά τμήματα μιας αφαίρεσης, αυτές εξαφανίζονται! Το παιχνίδι ολοκληρώνεται όταν εξαφανιστούν από τον πίνακα όλες οι κάρτες! :)"
 
 #: ../boards/memory_minus_tux.xml.in.h:3
 msgid "Subtraction memory game against Tux"
-msgstr ""
+msgstr "Παιχνίδι αφαίρεσης με αντίπαλο τον Tux"
 
 #: ../boards/memory_mult.xml.in.h:1
 msgid "Multiplication"
@@ -2672,17 +2693,16 @@ msgid "Multiplication memory game"
 msgstr "Άσκηση πολλαπλασιασμού για την εξάσκηση της μνήμης"
 
 #: ../boards/memory_mult.xml.in.h:3
-#, fuzzy
 msgid "Practise multiplication, until all the cards are gone."
-msgstr "Εξάσκηση στον πολλαπλασιασμό"
+msgstr "Εξάσκηση στον πολλαπλασιασμό μέχρι να εξαφανιστούν οι κάρτες."
 
 #: ../boards/memory_mult.xml.in.h:4
 msgid "Turn the cards over to find two numbers which multiply the same, until all the cards are gone."
-msgstr ""
+msgstr "Γύρνα τις κάρτες μέχρι να βρεις τα δύο τμήματα ενός γινομένου, μέχρι να εξαφανιστούν όλες οι κάρτες."
 
 #: ../boards/memory_mult_div.xml.in.h:1
 msgid "Multiplication and division memory game"
-msgstr ""
+msgstr "Παιχνίδι πολλαπλασιαμού και διαίρεσης"
 
 #: ../boards/memory_mult_div.xml.in.h:2
 #: ../boards/memory_mult_div_tux.xml.in.h:2
@@ -2692,39 +2712,39 @@ msgstr "Πολλαπλασιασμός, διαίρεση"
 #: ../boards/memory_mult_div.xml.in.h:3
 #: ../boards/memory_mult_div_tux.xml.in.h:3
 msgid "Practise multiplication, division, until all the cards are gone."
-msgstr ""
+msgstr "Εξάσκηση στον πολλαπλασιασμό και τη διαίρεση μέχρι να εξαφανιστούν όλες οι κάρτες."
 
 #: ../boards/memory_mult_div_tux.xml.in.h:1
 msgid "Multiplication and division memory game against Tux"
-msgstr ""
+msgstr "Παιχνίδι πολλαπλασιασμού και διαίρεσης με αντίπαλο τον Tux"
 
 #: ../boards/memory_mult_tux.xml.in.h:2
 msgid "Multiplication memory game against Tux"
-msgstr ""
+msgstr "Παιχνίδι πολλαπλασιασμού με αντίπαλο τον Tux"
 
 #: ../boards/memory_mult_tux.xml.in.h:3
 msgid "Practise multiplication until all the cards are gone."
 msgstr "Εξάσκηση στον πολλαπλασιασμό μέχρι να εξαφανιστούν οι κάρτες."
 
 #: ../boards/memory_op_group.xml.in.h:1
-#, fuzzy
 msgid "Go to mathematics memory activities"
 msgstr "Πήγαινε στις δραστηριότητες μαθηματικών"
 
 #: ../boards/memory_op_group.xml.in.h:2
 #: ../boards/memory_op_group_tux.xml.in.h:2
-#, fuzzy
 msgid "Memory activities based on operations"
-msgstr "Κάνε εξάσκηση στην πράξη της πρόσθεσης"
+msgstr "Μνημονικές δραστηριότητες βασισμένες σε αριθμητικές πράξεις"
 
 #: ../boards/memory_op_group_tux.xml.in.h:1
 msgid "Go to mathematics memory activities against Tux"
-msgstr "Πήγαινε στις δραστηριότητες μαθηματικών με αντίπαλο τον Tux"
+msgstr ""
+"Πήγαινε στις δραστηριότητες μαθηματικών\n"
+"με αντίπαλο τον Tux"
 
 #: ../boards/memory_sound.xml.in.h:1
 #: ../boards/memory_sound_tux.xml.in.h:1
 msgid "A set of violinist Tux is shown. Each Tux has an associated sound, and each sound has a twin exactly the same. Click on a Tux to see its hidden sound, and try to match the twins. You can only activate two Tux at once, so you need to remember where a sound is, while you listen to its twin. When you turn over the twins, they both disappear."
-msgstr ""
+msgstr "Εμφανίζεται μια ομάδα με βιολονίστες Tux. Κάθε βιολονίστας σχετίζεται με έναν ήχο και κάθε ήχος με έναν βιολονίστα. Κάνε κλικ σε έναν βιολονίστα για να ακούσεις τον ήχο του και προσπάθησε να τον ταιριάξεις με τον δίδυμό του. Κάθε φορά μπορείς να ακούσεις τους ήχους δύο βιολονιστών, γι' αυτό πρέπει να θυμάσαι τι ήχο βγάζει ο καθένας. Κάθε φορά που βρίσκεις τους δίδυμους, αυτοί εξαφανίζονται."
 
 #: ../boards/memory_sound.xml.in.h:2
 msgid "Audio memory game"
@@ -2732,13 +2752,13 @@ msgstr "Παιχνίδι ακουστικής μνήμης"
 
 #: ../boards/memory_sound.xml.in.h:3
 msgid "Click on Tux the violinist and listen to find the matching sounds"
-msgstr ""
+msgstr "Κάνε κλικ στο βιολονίστα Tux και άκουσε τον ήχο, ώστε να βρεις δυο βιολονίστες που παράγουν τον ίδιο ήχο"
 
 #: ../boards/memory_sound.xml.in.h:4
 #: ../boards/memory_sound_tux.xml.in.h:3
 #: ../boards/memory_tux.xml.in.h:3
 msgid "Mouse manipulation, Brain."
-msgstr "Χειρισμός ποντικιού, Διανοητικές ικανότητες."
+msgstr "Χειρισμός ποντικιού, ακουστικές δεξιότητες"
 
 #: ../boards/memory_sound.xml.in.h:5
 #: ../boards/memory_sound_tux.xml.in.h:5
@@ -2747,7 +2767,7 @@ msgstr "Εξάσκησε την ακουστική μνήμη σου και απ
 
 #: ../boards/memory_sound_tux.xml.in.h:2
 msgid "Audio memory game against Tux"
-msgstr "Παιχνίδι μνήμης με ήχους με αντίπαλο τον Tux"
+msgstr "Ποιος έχει καλύτερη ακουστική μνήμη;"
 
 #: ../boards/memory_sound_tux.xml.in.h:4
 msgid "Play the audio memory game against Tux"
@@ -2759,11 +2779,11 @@ msgstr "Διαγωνισμός μνήμης με τον Tux."
 
 #: ../boards/memory_tux.xml.in.h:2
 msgid "Memory Game with images, against Tux"
-msgstr "Παιχνίδι Μνήμης με εικόνες με αντίπαλο τον Tux"
+msgstr "Παιχνίδι Μνήμης με αντίπαλο τον Tux"
 
 #: ../boards/memory_tux.xml.in.h:5
 msgid "You can see a set of cards that all look the same. Each card has a picture on the other side, and each picture has a twin somewhere in the set. You can only turn over two cards at once, so you need to remember where the pictures are until you can find the twin. When you turn over twins, they disappear! You take turns with Tux, and to win the game, you have to find more pairs of twins than he does."
-msgstr ""
+msgstr "Θα δεις μερικές κάρτες που δεν διαφέρουν καθόλου. Κάθε κάρτα έχει μια εικόνα στην άλλη πλευρά και κάθε εικόνα έχει τη δίδυμή της σε μια άλλη κάρτα. Μπορείς να γυρίσεις δυο κάρτες κάθε φορά, γι' αυτό πρέπει να θυμάσαι ποια εικόνα είδες σε κάθε κάρτα, ώστε να μπορέσεις να βρεις τη δίδυμή της. Μόλις εντοπίσεις δυο κάρτες με την ίδια εικόνα, αυτές εξαφανίζονται! Αντίπαλός σου είναι ο Tux και για να κερδίσεις το παιχνίδι, πρέπει να βρεις περισσότερα ζεύγη διδύμων, απ' ότι αυτός."
 
 #: ../boards/menu.xml.in.h:1
 msgid ""
@@ -2783,25 +2803,39 @@ msgid ""
 "    1, 2 or 3 simple stars  - from 2 to 6 years old\n"
 "    1, 2 or 3 complex stars - 7 years and up"
 msgstr ""
+"Ένα απλό κλικ σε μια εικόνα σε μεταφέρει σε μια δραστηριότητα ή σε ένα μενού δραστηριοτήτων.\n"
+"Στο κάτω μέρος της οθόνης είναι η μπάρα ελέγχου του Gcompris.\n"
+"Οι παρακάτω εικόνες εμφανίζονται από τα δεξιά προς τα αριστερά.\n"
+"(λάβε υπόψη σου ότι κάθε εικόνα εμφανίζεται μόνον αν είναι διαθέσιμη στην τρέχουσα δραστηριότητα)\n"
+"    Αρχική σελίδα - Έξοδος από μία δραστηριότητα, επιστροφή στο μενού\n"
+"    Αντίχειρας - ΟΚ. Επαλήθευση της απάντησης\n"
+"    Ζάρι - Εμφανίζει το τρέχον επίπεδο. Κάνε κλικ για να επιλέξεις\n"
+"    διαφορετικό επίπεδο\n"
+"    Χείλη - Επανάληψη της ερώτησης\n"
+"    Ερωτηματικό - Βοήθεια\n"
+"    Εργαλείο - Ρυθμίσεις\n"
+"    Αεροπλάνο - Σχετικά με το GCompris\n"
+"    Νύχτα - Έξοδος από το GCompris\n"
+"Τα αστέρια δείχνουν την κατάλληλη ηλικιακή ομάδα για κάθε παιχνίδι:\n"
+"    1, 2 ή 3 απλά αστέρια - από 2 έως 6 ετών\n"
+"    1, 2 ή 3 σύνθετα αστέρια - από 7 έως 10 ετών"
 
 #: ../boards/menu.xml.in.h:16
 msgid "GCompris Main Menu"
-msgstr "Εμφάνιση του κυρίως GCompris μενού"
+msgstr "Κύριο μενού του GCompris "
 
 #: ../boards/menu.xml.in.h:17
 #: ../src/boards/menu2.c:1007
-#, fuzzy
 msgid "GCompris is a collection of educational games that provides different activities for children aged 2 and up."
-msgstr "Το GCompris είναι μια συλλογή εκπαιαδευτικών παιχνιδιών που παρέχει διάφορες δραστηριότητεςγια παιδιά 3 ως 8 χρονών."
+msgstr "Το GCompris είναι μια συλλογή εκπαιδευτικών δραστηριοτήτων για παιδιά από 2 έως 10 ετών."
 
 #: ../boards/menu.xml.in.h:19
 msgid "The goal of gcompris is to provide a free alternative to popular proprietary edutainment software"
-msgstr "Ο σκοπός του gcompris είναι να διαθέσει μια ελεύθερη εναλλακτική πρόταση λογισμικού εκπαιδευτικής ψυχαγωγίας."
+msgstr "Το GCompris είναι μια εναλλακτική πρόταση λογισμικού εκπαιδευτικής ψυχαγωγίας"
 
 #: ../boards/miscelaneous.xml.in.h:1
-#, fuzzy
 msgid "Miscellaneous activities"
-msgstr "Πήγαινε στις δραστηριότητες με τα χρώματα"
+msgstr "Συλλογή ποικίλων δραστηριοτήτων"
 
 #: ../boards/miscelaneous.xml.in.h:2
 msgid "Time, Geography, ..."
@@ -2809,21 +2843,19 @@ msgstr "Χρόνος, Γεωγραφία, ..."
 
 #: ../boards/missing_letter.xml.in.h:1
 msgid "An object is displayed in the main area, and an incomplete word is printed under the picture. Select the missing letter to complete the word."
-msgstr ""
+msgstr "Ένα αντικείμενο εμφανίζεται στην κύρια περιοχή και μια ελλιπής λέξη κάτω από την εικόνα. Επέλεξε το γράμμα που λείπει για να συμπληρώσεις τη λέξη."
 
 #: ../boards/missing_letter.xml.in.h:2
-#, fuzzy
 msgid "Fill in the missing letter"
-msgstr "Συμπληρώστε το γράμμα που λείπει"
+msgstr "Συμπλήρωσε το γράμμα που λείπει"
 
 #: ../boards/missing_letter.xml.in.h:3
 msgid "Missing Letter"
-msgstr "Γράμμα που Λείπει"
+msgstr "Γράμμα που λείπει"
 
 #: ../boards/missing_letter.xml.in.h:4
-#, fuzzy
 msgid "Training reading skills"
-msgstr "Εξασκηση ικανότητας ανάγνωσης"
+msgstr "Εξάσκηση αναγνωστικών δεξιοτήτων"
 
 #: ../boards/missing_letter.xml.in.h:5
 msgid "Word reading"
@@ -2879,7 +2911,7 @@ msgstr "κρεβάτι/κρεβά_ι/τ/σ/π"
 
 #: ../boards/missing_letter/board1.xml.in.h:13
 msgid "bottle/_ottle/b/t/p"
-msgstr "υ"
+msgstr "μπουκάλι/_πουκάλι/μ/π/ρ"
 
 #: ../boards/missing_letter/board1.xml.in.h:14
 msgid "bottle/b_ttle/o/u/d"
@@ -2980,9 +3012,8 @@ msgstr "Δυνατότητα μέτρησης"
 
 #: ../boards/money.xml.in.h:2
 #: ../boards/money_cents.xml.in.h:2
-#, fuzzy
 msgid "Click on the coins or paper money at the bottom of the screen to pay. If you want to remove a coin or note, click on it on the upper screen area."
-msgstr "Για να πληρώσεις κάνε κλικ στα κέρματα ή στα χαρτονομίσματα στο κάτω μέρος της οθόνης. Αν θές να πάρεις πίσω ένακέρμα ή ένα χαρτονόμισμα, κάνε κλικ στο πάνω μέρος της οθόνης."
+msgstr "Για να πληρώσεις κάνε κλικ στα κέρματα ή στα χαρτονομίσματα στο κάτω μέρος της οθόνης. Αν θες να πάρεις πίσω ένα κέρμα ή ένα χαρτονόμισμα, κάνε κλικ στο πάνω μέρος της οθόνης."
 
 #: ../boards/money.xml.in.h:3
 #: ../boards/money_cents.xml.in.h:3
@@ -2991,94 +3022,88 @@ msgstr "Χρήματα"
 
 #: ../boards/money.xml.in.h:4
 msgid "Practice money usage"
-msgstr "Εξάσκηση χρήσης χρημάτων"
+msgstr "Εξάσκηση στη χρήση των χρημάτων"
 
 #: ../boards/money.xml.in.h:5
 #: ../boards/money_cents.xml.in.h:5
 msgid "You must buy the different items and give the exact price. At higher levels, several items are displayed, and you must first calculate the total price."
-msgstr ""
+msgstr "Πρέπει να αγοράσεις διαφορετικά αντικείμενα και να δώσεις την ακριβή τιμή τους. Στα μεγαλύτερα επίπεδα, εμφανίζονται αρκετά αντικείμενα και πρέπει πρώτα να υπολογίσεις τη συνολική τιμή."
 
 #: ../boards/money_cents.xml.in.h:4
 msgid "Practice money usage including cents"
-msgstr "Εξάσκηση χρήσης ευρώ και λεπτών"
+msgstr "Εξάσκηση στη χρήση ευρώ και λεπτών"
 
 #: ../boards/mosaic.xml.in.h:1
 msgid "Rebuild the mosaic"
-msgstr "Ξαναχτίσε το μωσαϊκό"
+msgstr "Μωσαϊκό"
 
 #: ../boards/mouse.xml.in.h:1
-#, fuzzy
 msgid "Mouse-manipulation activities."
-msgstr "Χρήση ποντικιού"
+msgstr "Δραστηριότητες χειρισμού του ποντικιού."
 
 #: ../boards/mouse.xml.in.h:2
 msgid "Various mouse-based activities (clicking, moving)"
-msgstr ""
+msgstr "Διάφορες δραστηριότητες χειρισμού του ποντικιού (πάτημα, μετακίνηση, σύρσιμο)"
 
 #: ../boards/numeration.xml.in.h:1
-#, fuzzy
 msgid "Numeration"
-msgstr "Εξάσκηση Αρίθμησης"
+msgstr "Αρίθμηση"
 
 #: ../boards/numeration.xml.in.h:2
-#, fuzzy
 msgid "Numeration activities."
-msgstr "Εξάσκηση Αρίθμησης"
+msgstr "Δραστηριότητες εξάσκησης της αρίθμησης."
 
 #: ../boards/oscar_and_friends.xml.in.h:1
 msgid "Improve reading skill and the ability to understand what is read."
-msgstr ""
+msgstr "Βελτιώνει την αναγνωστική δεξιότητα και την ικανότητα κατανόησης μέσω αυτής."
 
 #: ../boards/oscar_and_friends.xml.in.h:2
 msgid "Read and play with the story"
-msgstr ""
+msgstr "Διάβασε και παίξε με την ιστορία"
 
 #: ../boards/oscar_and_friends.xml.in.h:3
 msgid "The story of Oscar and friend"
-msgstr ""
+msgstr "Η ιστορία του Oscar και του φίλου του"
 
 #: ../boards/oscar_and_friends.xml.in.h:4
-#, fuzzy
 msgid "reading"
 msgstr "Ανάγνωση"
 
 #: ../boards/paintings.xml.in.h:1
-#, fuzzy
 msgid "Assemble the puzzle"
-msgstr "Φτιάξε το πάζλ"
+msgstr "Συναρμολόγησε το παζλ"
 
 #: ../boards/paintings.xml.in.h:2
 msgid "Drag and Drop the items to rebuild the original paintings"
-msgstr "Μετακινείστε και Αποθέσατε τα κομμάτια για να ξαναφτιάξετε τις αρχικές ζωγραφιές"
+msgstr "Βάλε τα κομμάτια στην κατάλληλη θέση για να ξαναφτιάξετε τις αρχικές ζωγραφιές"
 
 #: ../boards/paintings.xml.in.h:3
 msgid "Drag the image parts from the box on the left to create a painting on the main board."
-msgstr "Μετακίνησε τα κομμάτια της εικόνας από τα κουτί στα αριστερά σου για να φτιάξεις τον πίνακα στο κύριοταμπλώ."
+msgstr "Μετακίνησε τα κομμάτια της εικόνας από αριστερά για να φτιάξεις τον πίνακα τοποθετώντας κάθε κομμάτι στην κατάλληλη θέση (οι θέσεις υποδεικνύονται με κόκκινες τελείες)."
 
 #: ../boards/paintings.xml.in.h:4
-#, fuzzy
 msgid "Mouse-manipulation: movement, drag and drop"
-msgstr "Χειρισμός ποντιικού: κίνηση, μετακίνηση και τοποθέτηση. Πολιτιστικές αναφορές."
+msgstr "Χειρισμός ποντικού: κίνηση, μετακίνηση και τοποθέτηση"
 
 #: ../boards/paintings.xml.in.h:5
 msgid "Spatial representation"
-msgstr ""
+msgstr "Αναπαράσταση του χώρου"
 
 #: ../boards/paintings/board1_0.xml.in.h:1
 msgid "Edgar Degas, The Dancing Class - 1873-75"
-msgstr "Edgar Degas, The Dancing Class - 1873-75"
+msgstr "Edgar Degas, Η τάξη του χορού - 1873-75"
 
 #: ../boards/paintings/board2_0.xml.in.h:1
 msgid "Pierre-Auguste Renoir, Le Moulin de la Galette - 1876"
-msgstr "Pierre-Auguste Renoir, Le Moulin de la Galette - 1876"
+msgstr "Pierre-Auguste Renoir, Χορός στο Le Moulin de la Galette - 1876"
 
 #: ../boards/paintings/board3_0.xml.in.h:1
 msgid "Pierre-Auguste Renoir, Girls At The Piano - 1892"
-msgstr "Pierre-Auguste Renoir, Girls At The Piano - 1892"
+msgstr "Pierre-Auguste Renoir, Κορίτσια στο πιάνο - 1892"
 
 #: ../boards/paintings/board3_1.xml.in.h:1
 msgid "Kandinsky, Wassily, Composition VIII - 1923"
-msgstr "Kandinsky, Wassily, Composition VIII - 1923"
+msgstr "Kandinsky, Wassily, Σύνθεση VIII - 1923"
 
 #: ../boards/paintings/board3_1.xml.in.h:2
 msgid "Oil on canvas, 140 x 201 cm; Solomon R. Guggenheim Museum, New York"
@@ -3086,28 +3111,27 @@ msgstr "Ελαιογραφία, 140 x 201 cm; Μουσείο Solomon R. Guggenhe
 
 #: ../boards/paintings/board4_0.xml.in.h:1
 msgid "Bazille, The Ramparts at Aigues-Mortes - 1867"
-msgstr "Bazille, The Ramparts at Aigues-Mortes - 1867"
+msgstr "Bazille, Ο Ramparts στο Aigues-Mortes - 1867"
 
 #: ../boards/paintings/board5_0.xml.in.h:1
 msgid "Cassatt, Mary - Summertime - 1894"
-msgstr "Cassatt, Mary - Summertime - 1894"
+msgstr "Cassatt, Mary - Καλοκαίρι - 1894"
 
 #: ../boards/paintings/board6_0.xml.in.h:1
 msgid "Vincent Van Gogh, Village Street in Auvers - 1890"
-msgstr "Vincent Van Gogh, Village Street in Auvers - 1890"
+msgstr "Vincent Van Gogh, Επαρχιακός δρόμος στο Auvers - 1890"
 
 #: ../boards/paratrooper.xml.in.h:1
-#, fuzzy
 msgid "Help Tux the parachutist land safely"
-msgstr "Οδήγησε τον Tux τον αλεξιπτωτιστή να προσγειωθεί ομαλά"
+msgstr "Βοήθησε τον αλεξιπτωτιστή Tux να προσγειωθεί ομαλά με ασφάλεια"
 
 #: ../boards/paratrooper.xml.in.h:2
 msgid "Hit any key or click on the plane to make Tux jump. Hit another key or click on Tux to open the parachute."
-msgstr "Πάτησε ένα οποιοδήποτε πλήκτρο ή κάνε κλικ στο αεροπλανάκι για να πηδήξει ο Tux. Πάτησε ένα άλλο πλήκτρο ή κάνε κλικ στον Tux για να ανοίξει το αλεξίπτωτό του."
+msgstr "Πάτησε ένα οποιοδήποτε πλήκτρο ή κάνε κλικ στο αεροπλανάκι για να πηδήξει ο Tux. Πάτησε ένα άλλο πλήκτρο ή κάνε κλικ στον Tux για να ανοίξει το αλεξίπτωτό του. Με τα βελάκια του πληκτρολογίου καθοδήγησέ τον, ώστε να κατέβει στο πλοιάριο."
 
 #: ../boards/paratrooper.xml.in.h:3
 msgid "In this game, Tux the parachutist needs help to land safely on the fishing boat. He needs to allow for the wind direction and speed."
-msgstr "Σε αυτό το παιχνίδι ο αλεξιπτωτιστής Tux χρειάζεται βοήθεια για να προσεδαφιστεί με ασφάλεια στο αλιευτικό πλοιάριο. Χρειάζεται να πάρει τα μέτρα του για την κατεύθυνση του ανέμου και την ταχύτητα."
+msgstr "Σε αυτό το παιχνίδι ο αλεξιπτωτιστής Tux χρειάζεται βοήθεια για να κατέβει με ασφάλεια στο πλοιάριο. Πρέπει να προσέξεις την κατεύθυνση του ανέμου και την ταχύτητα."
 
 #: ../boards/paratrooper.xml.in.h:4
 msgid "Parachutist"
@@ -3127,12 +3151,12 @@ msgstr "Κίνησε το ελικόπερο για να πιάσει τα σύ�
 
 #: ../boards/planegame.xml.in.h:3
 msgid "Number"
-msgstr "Αριθμός"
+msgstr "Αριθμοί κατά αύξουσα σειρά"
 
 #: ../boards/planegame.xml.in.h:4
 #: ../src/boards/planegame.c:74
 msgid "Numbers in Order"
-msgstr "Αριθμοί στη Σειρά"
+msgstr "Αριθμοί σε αύξουσα σειρά"
 
 #: ../boards/puzzle.xml.in.h:1
 msgid "Puzzles"
@@ -3175,23 +3199,20 @@ msgid "Memory-training"
 msgstr "Εξάσκηση μνήμης"
 
 #: ../boards/railroad.xml.in.h:5
-#, fuzzy
 msgid "Railway"
 msgstr "Σιδηρόδρομος"
 
 #: ../boards/read_colors.xml.in.h:2
 msgid "Click on the correct colored object."
-msgstr "Πάτησε στο σωστό χρωματιστό αντικείμενο"
+msgstr "Πάτησε στο σωστό χρωματιστό αντικείμενο."
 
 #: ../boards/read_colors.xml.in.h:3
-#, fuzzy
 msgid "Click on the matching color"
 msgstr "Κάνε κλικ στο σωστό χρώμα"
 
 #: ../boards/read_colors.xml.in.h:4
-#, fuzzy
 msgid "Read the names of colors"
-msgstr "Ανάγνωση χρωμάτων"
+msgstr "Διάβασε τα ονόματα των χρωμάτων"
 
 #: ../boards/read_colors.xml.in.h:5
 msgid "This board teaches basic colors."
@@ -3243,43 +3264,38 @@ msgstr "κίτρινο"
 
 #: ../boards/reading.xml.in.h:1
 msgid "Go to the Reading activities"
-msgstr "Μετάβαση στις δραστηριότητες ανάγνωσης"
+msgstr "Ανάγνωση"
 
 #: ../boards/reading.xml.in.h:2
-#, fuzzy
 msgid "Reading activities."
-msgstr "Μετάβαση στις δραστηριότητες ανάγνωσης"
+msgstr "Δραστηριότητες ανάγνωσης."
 
 #: ../boards/readingh.xml.in.h:1
 #: ../boards/readingv.xml.in.h:1
 msgid "A word is shown at the top right of the board. A list of words will appear and disappear on the left. Does the given word belong to the list?"
-msgstr "Μια λέξη εμφανίζεται στο επάνω δεξιό μέρος του πίνακα. Ένας κατάλογος με λέξεις θα εμφανιστεί για λίγο στα αριστερά. Η εμφανιζόμενη λέξη ανήκει ή όχι στον κατάλογο που είδες?"
+msgstr "Μια λέξη εμφανίζεται στο επάνω δεξιό μέρος του πίνακα. Ένας κατάλογος με λέξεις θα εμφανιστεί για λίγο στα αριστερά. Η εμφανιζόμενη λέξη ανήκει ή όχι (κάνε κλικ στο 'Ναι, το είδα' ή στο 'Όχι, δεν υπήρχε') στον κατάλογο που είδες?"
 
 #: ../boards/readingh.xml.in.h:2
 msgid "Horizontal reading practice"
 msgstr "Εξάσκηση οριζόντιας ανάγνωσης"
 
 #: ../boards/readingh.xml.in.h:3
-#, fuzzy
 msgid "Read a list of words and work out if a given word is in it"
-msgstr "Διάβασε ένα κατάλογο λέξεων και πές αν μια λέξη υπάρχει σ' αυτόν"
+msgstr "Διάβασε τον κατάλογο των λέξεων και δες αν η δοσμένη λέξη βρίσκεται σ' αυτόν"
 
 #: ../boards/readingh.xml.in.h:5
-#, fuzzy
 msgid "Reading training in a limited time"
 msgstr "Εξάσκηση ανάγνωσης σε συγκεκριμένο χρόνο"
 
 #: ../boards/readingv.xml.in.h:2
-#, fuzzy
 msgid "Read a vertical list of words and work out if a given word is in it"
-msgstr "Διάβασε ένα κάθετο κατάλογο λέξεων και πές αν μια λέξη υπάρχει σ' αυτόν"
+msgstr "Διάβασε τον κάθετο κατάλογο λέξεων και δες αν η δοσμένη λέξη υπάρχει σ' αυτόν"
 
 #: ../boards/readingv.xml.in.h:3
 msgid "Read training in a limited time"
 msgstr "Εξάσκηση ανάγνωσης σε συγκεκριμένο χρόνο"
 
 #: ../boards/readingv.xml.in.h:5
-#, fuzzy
 msgid "Vertical-reading practice"
 msgstr "Εξάσκηση κάθετης ανάγνωσης"
 
@@ -3293,7 +3309,7 @@ msgstr "Καταρχήν, διάλεξε το κατάλληλο εργαλεί�
 
 #: ../boards/redraw.xml.in.h:3
 msgid "Redraw the given item"
-msgstr "Ξανασχεδίασε το δοσμένο αντικείμενο."
+msgstr "Ξανασχεδίασε το δοσμένο αντικείμενο"
 
 #: ../boards/redraw_symmetrical.xml.in.h:1
 msgid "Copy the mirror image of an object from the box on the right into the box on the left."
@@ -3316,7 +3332,6 @@ msgid "Click on the dice to show how many ice spots there are between Tux and th
 msgstr "Κάνε κλικ στο ζάρι για να δείξεις πόσες παγωμένες στάλες υπάρχουν μεταξύ του Tux και του ψαριού. Κάνε δεξί κλικ στο ζάρι για να μετρήσεις αντίστροφα. Όταν ολοκληρώσεις, κάνε κλικ στο OK ή πάτα το πλήκτρο Enter."
 
 #: ../boards/reversecount.xml.in.h:3
-#, fuzzy
 msgid "Practice subtraction with a fun game"
 msgstr "Εξάσκηση στην αφαίρεση με ένα αστείο παιχνίδι"
 
@@ -3325,9 +3340,8 @@ msgid "Tux is hungry. Help him find fish by counting to the correct ice spot."
 msgstr "Ο Tux πεινάει. Βοήθησε τον να βρεί ψάρια με το να μετρήσεις τα σωστά παγάκια."
 
 #: ../boards/scalesboard.xml.in.h:1
-#, fuzzy
 msgid "Balance the scales properly"
-msgstr "Ισορροπήστε τη ζυγαριά"
+msgstr "Ισορρόπησε τη ζυγαριά"
 
 #: ../boards/scalesboard.xml.in.h:2
 msgid "Drag and Drop masses to balance the scales"
@@ -3339,15 +3353,15 @@ msgstr "Νοεροί υπολογισμοί, αριθμητικές ισότητ
 
 #: ../boards/scalesboard.xml.in.h:4
 msgid "The painting is an original painting created by Virginie MOREAU (virginie.moreau@free.fr) in 2001. Its name is 'Spices Seller in Egypt'. It is released under the GPL licence."
-msgstr ""
+msgstr "Ο πίνακας της Virginie MOREAU (virginie.moreau@free.fr) είναι αυθεντικός και δημιουργήθηκε το 2001. Ο τίτλος του πίνακα είναι \"Πωλητής μπαχαρικών στην Αίγυπτο\". Κυκλοφορεί υπό τους όρους της άδειας GPL."
 
 #: ../boards/scalesboard.xml.in.h:5
 msgid "To balance the scales, move the masses on the left or the right side. The masses can be arranged in any order."
-msgstr ""
+msgstr "Για να ισορροπήσεις τη ζυγαριά, μετακίνησε τα σταθμά στην αριστερά ή τη δεξιά πλευρά της. Τα σταθμά μπορείς να τα διευθετήσεις με όποια σειρά θέλεις."
 
 #: ../boards/searace.xml.in.h:1
 msgid "Direct your boat accurately to win the race."
-msgstr ""
+msgstr "Οδήγησε τη βάρκα σου με ακρίβεια για να κερδίσεις τον αγώνα."
 
 #: ../boards/searace.xml.in.h:2
 msgid ""
@@ -3358,19 +3372,25 @@ msgid ""
 "- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
 "The goal is to reach the right of the screen (the red line). When done, you can try to improve your program and start a new race with the same weather conditions by using the retry button. You can click and drag your mouse anywhere on the map to get a measurement in distance and angle. Going to the next level will give you more complex weather conditions."
 msgstr ""
+"Στο πλαίσιο κειμένου, δώσε μια εντολή σε κάθε γραμμή για να ελέγξεις τη βάρκα.\n"
+"Οι εντολές που υποστηρίζονται, εμφανίζονται μεταξύ των δύο πλαισίων κειμένου. Οι \"αριστερές\" και οι \"δεξιές\" εντολές πρέπει να ακολουθούνται από τον αριθμό των μοιρών της γωνίας. Η τιμή κάθε γωνίας χαρακτηρίζεται επίσης και ως 'παράμετρος' στην αριστερή ή δεξιά εντολή. Ως προεπιλεγμένη τιμή χρησιμοποιούνται οι 45 μοίρες. Η εντολή 'μπροστά' δέχεται παραμέτρους απόστασης. Προεπιλεγμένη τιμή είναι το 1.\n"
+"Για παράδειγμα:\n"
+"- αριστερά 90: κάθετη στροφή αριστερά\n"
+"- μπροστά 10: Πήγαινε μπροστά για 10 μονάδες (όπως εμφανίζονται στο χάρακα).\n"
+"Σκοπός του παιχνιδιού είναι να φτάσεις στην κόκκινη γραμμή στα δεξιά. Όταν ολοκληρώσεις, μπορείς να προσπαθήσεις να βελτιώσεις τις κινήσεις σου ξεκινώντας ένα νέο παιχνίδι με τις ίδιες καιρικές συνθήκες πατώντας στο πλήκτρο με τα πράσινα βέλη. Κάνοντας κλικ και τραβώντας με το ποντίκι επάνω στην επιφάνεια του παιχνιδιού, μπορείς να μετρήσεις την απόσταση και τη γωνία οποιουδήποτε σημείου. Η μεταπήδηση σε επόμενο επίπεδο σου προσφέρει πιο σύνθετες καιρικές συνθήκες."
 
 #: ../boards/searace.xml.in.h:8
 #: ../boards/searace1player.xml.in.h:7
 msgid "In this activity, you will learn how to enter commands into a computer. Even if the language is extremely basic, you learn here how to think ahead and construct a program. This activity can be used to introduce the programming concept to children."
-msgstr ""
+msgstr "Με αυτή τη δραστηριότητα θα μάθεις πώς να εισάγεις εντολές στον υπολογιστή. Ακόμη και αν η γλώσσα είνα εντελώς βασική, θα μάθεις να σκέφτεσαι και να κατασκευάζεις μια εφαρμογή. Αυτό το παιχνίδι είναι μια εισαγωγική δραστηριότητα στην έννοια του προγραμματισμού για παιδιά."
 
 #: ../boards/searace.xml.in.h:9
 msgid "Sea race (2 Players)"
-msgstr ""
+msgstr "Θαλάσσιος αγώνας (2 παίκτες)"
 
 #: ../boards/searace1player.xml.in.h:1
 msgid "Give good instructions to your ship in order to be first in the race."
-msgstr ""
+msgstr "Δώσε τις κατάλληλες οδηγίες στο πλοιάριό σου, ώστε να είσαι πρώτος στον αγώνα."
 
 #: ../boards/searace1player.xml.in.h:2
 msgid ""
@@ -3380,10 +3400,15 @@ msgid ""
 "- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
 "The goal is to reach the right of the screen (the red line). When done, you can try to improve your program and start a new race with the same weather conditions by using the retry button. You can click and drag your mouse anywhere on the map to get a measurement in distance and angle. Going to the next level will give you more complex weather conditions."
 msgstr ""
+"Στο πλαίσιο κειμένου, δώσε μια εντολή σε κάθε γραμμή για να ελέγξεις τη βάρκα. Οι εντολές που υποστηρίζονται, εμφανίζονται μεταξύ των δύο πλαισίων κειμένου. Οι \"αριστερές\" και οι \"δεξιές\" εντολές πρέπει να ακολουθούνται από τον αριθμό των μοιρών της γωνίας. Η τιμή κάθε γωνίας χαρακτηρίζεται επίσης και ως 'παράμετρος' στην αριστερή ή δεξιά εντολή. Ως προεπιλεγμένη τιμή χρησιμοποιούνται οι 45 μοίρες. Η εντολή 'μπροστά' δέχεται παραμέτρους απόστασης. Προεπιλεγμένη τιμή είναι το 1.\n"
+"Για παράδειγμα:\n"
+"- αριστερά 90: κάθετη στροφή αριστερά\n"
+"- μπροστά 10: Πήγαινε μπροστά για 10 μονάδες (όπως εμφανίζονται στο χάρακα).\n"
+"Σκοπός του παιχνιδιού είναι να φτάσεις στην κόκκινη γραμμή στα δεξιά. Όταν ολοκληρώσεις, μπορείς να προσπαθήσεις να βελτιώσεις τις κινήσεις σου ξεκινώντας ένα νέο παιχνίδι με τις ίδιες καιρικές συνθήκες πατώντας στο πλήκτρο με τα πράσινα βέλη. Κάνοντας κλικ και τραβώντας με το ποντίκι επάνω στην επιφάνεια του παιχνιδιού, μπορείς να μετρήσεις την απόσταση και τη γωνία οποιουδήποτε σημείου. Η μεταπήδηση σε επόμενο επίπεδο σου προσφέρει πιο σύνθετες καιρικές συνθήκες."
 
 #: ../boards/searace1player.xml.in.h:8
 msgid "Sea race (Single Player)"
-msgstr ""
+msgstr "Θαλάσσιος αγώνας (2 παίκτης)"
 
 #: ../boards/smallnumbers.xml.in.h:1
 #: ../boards/smallnumbers2.xml.in.h:1
@@ -3392,14 +3417,13 @@ msgstr "Μέτρησε τις κουκίδες στα ζάρια πριν φτά
 
 #: ../boards/smallnumbers.xml.in.h:2
 #: ../boards/smallnumbers2.xml.in.h:2
-#, fuzzy
 msgid "Counting skills"
 msgstr "Βασικές ικανότητες αρίθμησης"
 
 #: ../boards/smallnumbers.xml.in.h:3
 #: ../boards/smallnumbers2.xml.in.h:3
 msgid "In a limited time, count the number of dots"
-msgstr ""
+msgstr "Σε περιορισμένο χρόνο, μέτρησε τον αριθμό των κουκκίδων"
 
 #: ../boards/smallnumbers.xml.in.h:4
 msgid "Numbers With Dice"
@@ -3407,14 +3431,12 @@ msgstr "Ζάρια με αριθμούς"
 
 #: ../boards/smallnumbers.xml.in.h:5
 #: ../boards/smallnumbers2.xml.in.h:5
-#, fuzzy
 msgid "With the keyboard, type the number of dots you see on the falling dice."
-msgstr "Πληκτρολόγησε τον αριθμό που αντιστοιχεί στον αριθμό των κουκίδων του ζαριού που πέφτει."
+msgstr "Πρόσθεσε τις κουκκίδες των δύο ζαριών που πέφτουν και πληκτρολόγησε το άθροισμα."
 
 #: ../boards/smallnumbers2.xml.in.h:4
-#, fuzzy
 msgid "Numbers with pairs of dice"
-msgstr "Ζάρια με αριθμούς"
+msgstr "Ζευγάρια ζαριών με αριθμούς"
 
 #: ../boards/sound_group.xml.in.h:1
 msgid "Go to Sound activities"
@@ -3430,11 +3452,11 @@ msgstr "Παιχνίδια στρατηγικής"
 
 #: ../boards/strategy.xml.in.h:2
 msgid "Strategy games like chess, connect4, ..."
-msgstr "Παιχνίδια στρατηγικής, όπως το σκάκι, σύνδεση 4, ..."
+msgstr "Παιχνίδια στρατηγικής, όπως το σκάκι, σύνδεσε 4, ..."
 
 #: ../boards/submarine.xml.in.h:1
 msgid "Click on different active elements : engine, rudders and air tanks, in order to navigate to the required depth. There is a close gate on the right. Catch the jewel to open it, then pass through it to reach the next level."
-msgstr "Κάνε κλικ στα διαφορετικά μηχανικά μέρη (κινητήρας, τιμόνι και ντεπόζιτο αέρα) με σκοπό να πλοηγηθείς στο απαιτούμενο βάθος. Υπάρχει μια κλειστή πύλη στα δεξιά. Πιάσε την πολύτιμη πέτρα για να την ανοίξεις και πέρνα για να φθάσεις στο επόμενο επίπεδο."
+msgstr "Κάνε κλικ στα διαφορετικά μηχανικά μέρη (κινητήρας, τιμόνι και δεξαμενή αέρα) με σκοπό να πλοηγηθείς στο απαιτούμενο βάθος. Υπάρχει μια κλειστή πύλη στα δεξιά. Πιάσε την πολύτιμη πέτρα για να την ανοίξεις και πέρνα για να φθάσεις στο επόμενο επίπεδο."
 
 #: ../boards/submarine.xml.in.h:2
 msgid "Learn how a submarine works"
@@ -3442,7 +3464,7 @@ msgstr "Εκμάθηση λειτουργίας υποβρυχίου"
 
 #: ../boards/submarine.xml.in.h:3
 msgid "Physics basics"
-msgstr ""
+msgstr "Βασικές αρχές φυσικής"
 
 #: ../boards/submarine.xml.in.h:4
 msgid "Pilot a submarine"
@@ -3450,15 +3472,15 @@ msgstr "Πιλοτάρισε ένα υποβρύχιο"
 
 #: ../boards/submarine.xml.in.h:5
 msgid "Pilot a submarine using air tanks and dive rudders"
-msgstr ""
+msgstr "Οδήγησε το υποβρύχιο χρησιμοποιώντας δεξαμενές αέρα και το πηδάλιο κατάδυσης"
 
 #: ../boards/sudoku.xml.in.h:1
 msgid "Completing the puzzle requires patience and logical ability"
-msgstr ""
+msgstr "Υπομονή και λογικές ικανότητες"
 
 #: ../boards/sudoku.xml.in.h:2
 msgid "For the first level with colored symbols, drag symbols on the left to their target position. For the higher levels, click on an empty square to give it the keyboard focus. Then enter a possible letter or number. GCompris will not let you enter invalid data."
-msgstr ""
+msgstr "Για το πρώτο επίπεδο με τα χρωματιστά σύμβολα, μετακίνησε τα σύμβολα που βρίσκονται αριστερά στη σωστή τους θέση. Για τα ανώτερα επίπεδα, κάνε κλικ σε ένα άδειο ορθογώνιο για να ενεργοποιήσεις τη δυνατότητα εισαγωγής γραμμάτων ή ψηφίων με το πληκτρολόγιο. Κατόπιν πληκτρολόγησε ένα πιθανό γράμμα ή έναν αριθμό. Το GCompris δεν θα σου επιτρέψει να εισάγεις λανθασμένα δεδομένα."
 
 #: ../boards/sudoku.xml.in.h:3
 msgid "Sudoku, place unique symbols in a square."
@@ -3470,22 +3492,21 @@ msgstr "Τα σύμβολα πρέπει να είναι μοναδικά σε �
 
 #: ../boards/sudoku.xml.in.h:5
 msgid "The aim of the puzzle is to enter a symbol or numeral from 1 through 9 in each cell of a grid, most frequently a 9x9 grid made up of 3x3 subgrids (called 'regions'), starting with various symbols or numerals given in some cells (the 'givens'). Each row, column and region must contain only one instance of each symbol or numeral (Source &lt;http://en.wikipedia.org/wiki/Sudoku&gt;)."
-msgstr ""
+msgstr "Ο σκοπός του παζλ είναι να εισάγεις ένα σύμβολο ή έναν αριθμό από το 1 ως το 9 σε κάθε κελί του πλέγματος. Πολύ συχνά ένα πλέγμα 9Χ9 φτιάχνεται από εννιά υποπλέγματα των 3Χ3, ξεκινώντας από μια ποικιλία συμβόλων ή αριθμών που δίνονται σε ορισμένα κελιά (τα 'δεδομένα'). Κάθε γραμμή, στήλη και περιοχή πρέπει να περιέχει μόνο μια φορά ένα σύμβολο ή έναν αριθμό (Πηγή &lt;http://en.wikipedia.org/wiki/Sudoku&gt;)."
 
 #: ../boards/superbrain.xml.in.h:1
 msgid "Click on the items until you find what you think is the correct answer. Then, click on the OK button in the control bar. In the lower levels, Tux gives you an indication if you found a hiding place by marking the item with a black box. You can use the right mouse button to flip the colors in the opposite order."
-msgstr ""
+msgstr "Κάνε κλικ στα αντικείμενα, μέχρι να βρεις τη σωστή απάντηση. Κατόπιν, κάνε κλικ στο κουμπί OK στη γραμμή εργασιών. Στα πρώτα επίπεδα, όταν βρεις ένα κρυμμένο μέρος ο Tux σου δίνει μια ένδειξη επισημαίνοντας το αντικείμενο με ένα μαύρο κουτί. Μπορείς να χρησιμοποιήσεις το δεξί πλήκτρο του ποντικιού για να διευθετήσεις τα χρώματα με την αντίστροφη σειρά."
 
 #: ../boards/superbrain.xml.in.h:2
 #: ../src/boards/superbrain.c:106
-#, fuzzy
 msgid "Super Brain"
-msgstr "Super A3"
+msgstr "Η σωστή σειρά"
 
 #: ../boards/superbrain.xml.in.h:3
 #: ../src/boards/superbrain.c:107
 msgid "Tux has hidden several items. Find them again in the correct order"
-msgstr "Ο Tux έχει κρύψει μερικά αντικείμενα. Βρές τα ξανά με την σωστή σειρά."
+msgstr "Ο Tux έχει κρύψει μερικά αντικείμενα. Βρες τα ξανά με την σωστή σειρά"
 
 #: ../boards/tangram.xml.in.h:1
 msgid ""
@@ -3497,33 +3518,39 @@ msgid ""
 "\t* 1 square (side of 1)\n"
 "\t* 1 parallelogram (sides of 1 and square root of 2)"
 msgstr ""
+"Από τη Wikipedia, την ελεύθερη εγκυκλοπαίδεια: \"Το Τάνγκραμ (στα κινέζικα κυριολεκτικά σημαίνει 'εφτά κομμάτια για επιδέξιους/διορατικούς') είναι ένα κινέζικο παζλ. Ενώ συχνά λέγεται ότι το τάγκραμ είναι αρχαίο, έχει εξακριβωθεί η ύπαρξή του από το 1800 και μετά. Αποτελείται από 7 κομμάτια, που ονομάζονται 'τανς', τα οποία σχηματίζουν ένα τετράγωνο. Παίρνοντας ένα τετράγωνο ως μονάδα:\n"
+"\t* 5 ισοσκελή τρίγωνα\n"
+"\t\to 2 μικρά\n"
+"\t\to 1 μεσαίο\n"
+"\t\to 2 μεγάλα\n"
+"\t* 1 τετράγωνο\n"
+"\t* 1 παραλληλόγραμμο"
 
 #: ../boards/tangram.xml.in.h:9
 msgid "Select the tangram to form. Move a piece by dragging it. Right-click on it to create a symmetrical item. Select an item and drag around it to show the rotation you want. Once you've shown what shape you want, the computer will create it. If you need help, click on the shape button, and the border of the shape will be drawn."
-msgstr ""
+msgstr "Με τα δυο ανοιχτοπράσινα βέλη διάλεξε το τάγκραμ που θέλεις να σχηματίσεις.Μετακίνησε ένα κομμάτι τραβώντας το. Κάνε δεξί κλικ σε αυτό για να το περιστρέψεις κατά 180 μοίρες. Κάνοντας κλικ σε ένα κομμάτι και έπειτα πατώντας και τραβώντας γύρω από αυτό θα εμφανιστεί μια ευθεία που σου επιτρέπει να το περιστρέψεις. Το κουμπί με τα μαύρα κομμάτια σου δείχνει σε ποιο σημείο του τάγκραμ αντιστοιχεί κάθε κομμάτι. Το κουμπί με τα κόκκινα περιγράμματα σχηματίζει στην δεξιά επιφάνεια το περίγραμμα του τάγκραμ.  Τα δυο μονά σκουρόχρωμα βέλη περιστρέφουν το κομμάτι κατά 10 περίπου μοίρες, τα δύο επόμενα κατά 45 μοίρες, ενώ το τελευταίο διπλό κατά 180 μοίρες. Το παιχνιι τελειώνει μόλις τοποθετήσεις σωστά και τα 7 κομμάτια."
 
 #: ../boards/tangram.xml.in.h:10
 msgid "The objective is to form a given shape with seven pieces"
-msgstr ""
+msgstr "Σχημάτισε το δοσμένο σχήμα με 7 κομμάτια"
 
 #: ../boards/tangram.xml.in.h:11
 msgid "The original code was written by Philippe Banwarth in 1999. It was ported to GCompris by Yves Combe in 2005."
-msgstr ""
+msgstr "Ο αρχικός κώδικας γράφτηκε από τον Philippe Banwarth το 1999. Ενσωματώθηκε στο GCompris από τον Yves Combe το 2005."
 
 #: ../boards/tangram.xml.in.h:12
 msgid "The tangram puzzle game"
-msgstr ""
+msgstr "Παιχνίδι Τάγκραμ"
 
 #: ../boards/target.xml.in.h:1
 msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
-msgstr ""
+msgstr "Κίνησε το ποντίκι, διάβασε αριθμούς και μέτρησε μέχρι το 15 (για το πρώτο επίπεδο)"
 
 #: ../boards/target.xml.in.h:2
 msgid "Check the wind speed and direction, and then click on the target to launch a dart. When you all your darts are thrown, a window appears asking you to count your score. Enter the score with the keyboard then press the Enter key or the OK button."
-msgstr ""
+msgstr "Έλεγξε την ταχύτητα και την κατεύθυνση το ανέμου και κάνε κλικ για να εκτοξεύσεις το βέλος. Όταν εκτοξευθούν όλα τα βέλη, ένα παράθυρο εμφανίζεται και σου ζητά να υπολογίσεις τη βαθμολογία σου. Πληκτρολόγησε τη βαθμολογία σου και πάτησε Enter ή το κουμπί OK."
 
 #: ../boards/target.xml.in.h:3
-#, fuzzy
 msgid "Hit the target and count your points"
 msgstr "Ακούμπησε το στόχο και μέτρα τους βαθμούς"
 
@@ -3533,36 +3560,35 @@ msgstr "Εξάσκηση στην πρόσθεση με ένα παιχνίδι 
 
 #: ../boards/target.xml.in.h:5
 msgid "Throw darts at a target and count your score."
-msgstr "Πέταξε τα βελάκια στον στόχο και μέτρα το σκόρ σου"
+msgstr "Πέταξε τα βελάκια στον στόχο και μέτρα το σκορ σου."
 
 #: ../boards/traffic.xml.in.h:1
 msgid "A sliding-block puzzle game"
-msgstr ""
+msgstr "Puzzle με συρταρωτά κομμάτια"
 
 #: ../boards/traffic.xml.in.h:2
 msgid "Each car can only move either horizontally or vertically. You must make some room in order to let the red car move through the gate on the right."
-msgstr ""
+msgstr "Στο κεντρικό μέρος και μπροστά από το αυτοκίνητο βλέπεις την κάτοψη ενός πάρκιγκ. Κάθε παραλληλόγραμμο αντιστοιχεί σε ένα αυτοκίνητο, ενώ το κόκκινο είναι το δικό σου. Στα δεξιά εμφανίζεται ένα βέλος που δείχνει την έξοδο από το πάρκιγκ. Κάθε αυτοκίνητο μπορεί να κινηθεί οριζόντια ή κάθετα. Πρέπει να μετακινήσεις τα αυτοκίνητα, έτσι ώστε να επιτρέψεις στο κόκκινο αυτοκίνητο να βγει από την έξοδο στα δεξιά."
 
 #: ../boards/traffic.xml.in.h:3
 msgid "Remove the red car from the parking lot through the gate on the right"
-msgstr ""
+msgstr "Βγάλε το παρκαρισμένο κόκκινο αυτοκίνητο από την έξοδο στα δεξιά"
 
 #: ../boards/tuxpaint.xml.in.h:1
-#, fuzzy
 msgid "Drawing activity (pixmap)"
-msgstr "Δραστηριότητα ακουστικής εξάσκησης "
+msgstr "Δραστηριότητα σχεδίασης"
 
 #: ../boards/tuxpaint.xml.in.h:2
 msgid "Launch Tuxpaint"
-msgstr ""
+msgstr "Εκκίνηση Tuxpaint"
 
 #: ../boards/tuxpaint.xml.in.h:3
 msgid "Tuxpaint"
-msgstr "Tuxpaint"
+msgstr "Tuxpaint "
 
 #: ../boards/tuxpaint.xml.in.h:4
 msgid "Use Tuxpaint to draw. When Tuxpaint is finished this board will end."
-msgstr ""
+msgstr "Χρησιμοποίησε το Tuxpaint για να σχεδιάσεις. Όταν το Tuxpaint τελειώσει, ο πίνακας αυτός θα κλείσει."
 
 #: ../boards/tuxpaint.xml.in.h:5
 msgid "mouse and keyboard manipulation"
@@ -3570,7 +3596,7 @@ msgstr "χειρισμός ποντικιού και πληκτρολογίου"
 
 #: ../boards/watercycle.xml.in.h:1
 msgid "Click on different active elements : sun, cloud, water pump station, and water cleanup station, in order to reactivate the entire water system. When the system is back up and Tux is in the shower, push the shower button for him."
-msgstr "Κάνε κλικ στα διάφορα ενεργά στοιχεία: ήλιος, σύννεφο, σταθμός αντλίας νερού και σταθμός καθαρισμού νερού,για να ενεργοποιήσεις όλο το σύστημα ύδρευσης. Όταν το σύστημα ύδρευσης λειουργήσεια ξανά και ο Tux είναι στο ντούζ, πάτησε το κουμπί του ντουζ για να κάνει μπάνιο."
+msgstr "Κάνε κλικ στα διάφορα ενεργά στοιχεία: ήλιος, σύννεφο, σταθμός άντλησης νερού υδραγωγείο και βιολογικός καθαρισμός,για να ενεργοποιήσεις όλο το σύστημα ύδρευσης. Όταν το σύστημα ύδρευσης λειτουργήσει και ο Tux είναι στο ντουζ, πάτησε το κουμπί του ντουζ για να κάνει μπάνιο. Όταν κατεβαίνει η στάθμη του νερού στο υδραγωγείο, κάνε κλικ στο σταθμό άντλησης για να γεμίσει και να τροφοδοτήσεις το σπίτι του Tux."
 
 #: ../boards/watercycle.xml.in.h:2
 msgid "Learn about the water cycle"
@@ -3582,7 +3608,7 @@ msgstr "Εκμάθηση του κύκλου του νερού"
 
 #: ../boards/watercycle.xml.in.h:4
 msgid "Tux has come back from a long fishing party on his boat. Bring the water system back up so he can take a shower."
-msgstr ""
+msgstr "Ο Tux επέστρεψε από το ψάρεμα. Φέρε το νερό στο υδραυλικό σύστημα του σπιτιού του ώστε να κάνει ένα μπάνιο."
 
 #: ../boards/wordsgame.xml.in.h:1
 #: ../src/boards/wordsgame.c:110
@@ -3604,7 +3630,7 @@ msgstr "Πληκτρολόγησε τις λέξεις που πέφτουν π�
 
 #: ../boards/wordprocessor.xml.in.h:1
 msgid "A simple word processor to enter and save any text"
-msgstr "Απλός επεξεργαστής κειμένου και εισαγωγή και αποθήκευση κειμένου"
+msgstr "Απλός επεξεργαστής κειμένου για εισαγωγή και αποθήκευση κειμένου"
 
 #: ../boards/wordprocessor.xml.in.h:2
 msgid "In this wordprocessor you can type the text you want, save and get it back later. You can add some style to your text by using the buttons on the left. The first 4 buttons let you select the style of the line on which your insert cursor is. The 2 others buttons with multiple choices let you select from a predefined document and color theme."
@@ -3612,7 +3638,7 @@ msgstr "Στον επεξεργαστή κειμένου μπορείς να π�
 
 #: ../boards/wordprocessor.xml.in.h:3
 msgid "Learn how to enter text in a wordprocessor. This wordprocessor is special in that it enforces the use of styles. This way, the children will understand their benefit when moving to more feature full wordprocessor like OpenOffice.org."
-msgstr "Μάθε πώς να εισάγεις κείμενο σε έναν επεξεργαστή κειμένου. Αυτός ο επεξεργαστής κειμένου ενισχύει τη χρήση διαφορετικών στιλ κειμένου. Έτσι, θα κατανοήσεις καλύτερα τα οφέλη όταν μεταβείς σε έναν πλήρη επεξεργαστή κειμένου όπως το OpenOffice.org."
+msgstr "Μάθε πώς να εισάγεις κείμενο σε έναν επεξεργαστή κειμένου. Αυτός ο επεξεργαστής ενισχύει τη χρήση διαφορετικών στιλ κειμένου. Έτσι, θα κατανοήσεις καλύτερα τα οφέλη όταν μεταβείς σε έναν πλήρη επεξεργαστή κειμένου όπως το OpenOffice.org."
 
 #: ../boards/wordprocessor.xml.in.h:4
 msgid "The children can type their own text or copy one given by the teacher."
@@ -3628,7 +3654,7 @@ msgstr "Επεξεργαστής gcompris"
 
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
-msgstr "Εκπαιδευτικό παιχνίδι για παιδιά από 2 ως 10 ετών."
+msgstr "Εκπαιδευτικό παιχνίδι για παιδιά από 2 έως 10 ετών"
 
 #: ../gcompris.desktop.in.h:2
 msgid "Educational suite GCompris"
@@ -3668,7 +3694,7 @@ msgstr "Δεν επιτρέπεται! Προσπάθησε ξανά!"
 
 #: ../src/boards/chess.c:179
 msgid "Error: The external program gnuchess died unexpectedly"
-msgstr ""
+msgstr "Σφάλμα: Η εξωτερική εφαρμογή gnuchess τερματίστηκε απροσδόκητα"
 
 #: ../src/boards/chess.c:199
 msgid ""
@@ -3678,6 +3704,11 @@ msgid ""
 "GNU/Linux distribution\n"
 "And check it is located here: "
 msgstr ""
+"Σφάλμα: Η εξωτερική εφαρμογή gnuchess είναι απαραίτητη\n"
+"για να παίξεις σκάκι στο GCompris.\n"
+"Βρς την εφαρμογή αυτή στο http://www.rpmfind.net ή στη δική σου\n"
+"διανομή GNU/Linux\n"
+"και έλεγξε αν υπάρχει σ' αυτήν: "
 
 #: ../src/boards/chess.c:244
 msgid ""
@@ -3685,47 +3716,55 @@ msgid ""
 "to play chess in gcompris.\n"
 "First install it, and check it is in "
 msgstr ""
+"Σφάλμα: Η εξωτερική εφαρμογή gnuchess είναι υποχρεωτική\n"
+"για να παίξεις σκάκι στο Gcompris.\n"
+"Εγκατέστησές την πρώτα και έλεγξε ότι υπάρχει"
 
 #: ../src/boards/chess.c:587
-#, fuzzy
 msgid "White's Turn"
-msgstr "&Ενεργοποίηση όλων"
+msgstr ""
+"Σειρά του παίκτη\n"
+"με τα άσπρα πιόνια"
 
 #: ../src/boards/chess.c:587
-#, fuzzy
 msgid "Black's Turn"
-msgstr "&Ενεργοποίηση όλων"
+msgstr ""
+"Σειρά του παίκτη\n"
+"με τα μαύρα πιόνια"
 
 #: ../src/boards/chess.c:731
-#, fuzzy
 msgid "White checks"
-msgstr "κουτί επιλογής"
+msgstr ""
+"Ο παίκτης με τα άσπρα απειλεί\n"
+"το βασιλιά του αντιπάλου"
 
 #: ../src/boards/chess.c:733
-#, fuzzy
 msgid "Black checks"
-msgstr "κουτί επιλογής"
+msgstr ""
+"Ο παίκτης με τα μαύρα απειλεί\n"
+"το βασιλιά του αντιπάλου"
 
 #: ../src/boards/chess.c:1090
-#, fuzzy
 msgid "Black mates"
-msgstr "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ _οΏ½οΏ½οΏ½οΏ½οΏ½"
+msgstr ""
+"Κίνηση ματ του παίκτη\n"
+"με τα μαύρα πιόνια"
 
 #: ../src/boards/chess.c:1095
-#, fuzzy
 msgid "White mates"
-msgstr "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ _οΏ½οΏ½οΏ½οΏ½οΏ½"
+msgstr ""
+"Κίνηση ματ του παίκτη\n"
+"με τα άσπρα πιόνια"
 
 #: ../src/boards/chess.c:1100
 #: ../src/gcompris/bonus.c:364
 #: ../src/gcompris/bonus.c:373
-#, fuzzy
 msgid "Drawn game"
 msgstr "Ισόπαλο παιχνίδι"
 
 #: ../src/boards/chess.c:1128
 msgid "Error: The external program gnuchess died unexpectingly"
-msgstr ""
+msgstr "Σφάλμα: Η εξωτερική εφαρμογή gnuchess τερματίστηκε απροσδόκητα"
 
 #: ../src/boards/click_on_letter.c:259
 #: ../src/boards/memory.c:813
@@ -3735,6 +3774,10 @@ msgid ""
 "Go to the configuration dialog to\n"
 "enable the sound"
 msgstr ""
+"Σφάλμα: αυτή η εφαρμογή δεν μπορεί να εκτελεστεί\n"
+"με απενεργοποιημένα εφέ ήχων.\n"
+"Από τη Διαχείριση του Gcompris\n"
+"ενεργοποίησε τον ήχο"
 
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
@@ -3743,7 +3786,7 @@ msgstr ""
 #: ../src/boards/gletters.c:231
 #: ../src/boards/memory.c:835
 msgid "abcdefghijklmnopqrstuvwxyz"
-msgstr ""
+msgstr "αβγδεζηθικλμνξοπρστυφχψω"
 
 #: ../src/boards/click_on_letter.c:286
 #, c-format
@@ -3751,6 +3794,8 @@ msgid ""
 "Error: this activity requires that you first install\n"
 "the packages with gcompris voices for the locale '%s' or '%s'"
 msgstr ""
+"Σφάλμα: αυτή η δραστηριότητα απαιτεί την εγκατάσταση\n"
+"των εξελληνισμένων ήχων του Gcompris '%s' or '%s'"
 
 #: ../src/boards/click_on_letter.c:294
 #, c-format
@@ -3758,6 +3803,8 @@ msgid ""
 "Error: this activity requires that you first install\n"
 "the packages with GCompris voices for the locale '%s' ! Fallback to english, sorry!"
 msgstr ""
+"Σφάλμα: αυτή η δραστηριότητα απαιτεί την εγκατάσταση\n"
+"των εξελληνισμένων ήχων του Gcompris '%s ! 'Επιστροφή στους αγγλικούς ήχους, συγγνώμη!"
 
 #. Init configuration window:
 #. all the configuration functions will use it
@@ -3785,13 +3832,15 @@ msgid ""
 "<b>%s</b> configuration\n"
 " for profile <b>%s</b>"
 msgstr ""
+"<b>%s</b> Διαχείριση\n"
+" για το προφίλ <b>%s</b>"
 
 #. toggle box
 #: ../src/boards/click_on_letter.c:646
 #: ../src/boards/gletters.c:890
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
-msgstr ""
+msgstr "Κείμενο μόνο με κεφαλαία γράμματα"
 
 #: ../src/boards/clockgame.c:550
 #: ../src/boards/clockgame.c:560
@@ -3849,7 +3898,7 @@ msgstr "Διάλεξε τοπικοποιημένο σύνολο ήχων"
 #: ../src/boards/gletters.c:227
 #: ../src/boards/memory.c:831
 msgid "0123456789"
-msgstr "0123456789"
+msgstr "0123456789 "
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
 #: ../src/boards/gletters.c:237
@@ -3860,22 +3909,21 @@ msgstr "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"
 #: ../src/boards/gletters.c:886
 #: ../src/boards/smallnumbers.c:608
 msgid "Enable sounds"
-msgstr ""
+msgstr "Ενεργοποίηση ήχων"
 
 #: ../src/boards/hanoi.c:332
 #: ../src/boards/hanoi.c:343
 msgid "Build the same tower in the empty area as the one you see on the right-hand side."
-msgstr ""
+msgstr "Κατασκεύασε τον ίδιο πύργο στον άδειο πάσσαλο, όπως ακριβώς τον βλέπεις στη δεξιά πλευρά."
 
 #: ../src/boards/hanoi_real.c:72
-#, fuzzy
 msgid "Tower of Hanoi"
-msgstr "Απλοποιημένος πύργος του Ανόι"
+msgstr "Πύργος του Ανόι"
 
 #: ../src/boards/hanoi_real.c:277
 #: ../src/boards/hanoi_real.c:288
 msgid "Move the entire stack to the right peg, one disc at a time"
-msgstr ""
+msgstr "Μετακίνησε ολόκληρη τη στοίβα από τον αριστερό πάσσαλο. Μπορείς να μετακινείς ένα δίσκο κάθε φορά"
 
 #: ../src/boards/imageid.c:104
 #: ../src/boards/missingletter.c:102
@@ -3905,14 +3953,14 @@ msgid "right"
 msgstr "δεξιά"
 
 #: ../src/boards/maze.c:492
-#, fuzzy
 msgid "Look at your position, then switch back to invisible mode to continue your moves"
-msgstr "Κοίταξε την θέση σου και ξαναγύρνα στην αόρατη λειτουργία για κινηθείς"
+msgstr ""
+"Κοίταξε σε ποια θέση βρίσκεσαι αυτή τη στιγμή  και ξαναγύρνα\n"
+"στην τρισδιάστατη λειτουργία για να συνεχίσεις τις κινήσεις σου"
 
 #: ../src/boards/maze.c:494
-#, fuzzy
 msgid "Look at your position, then switch back to 3D mode to continue your moves"
-msgstr "Κοίταξε την θέση σου και ξαναγύρνα στην τρισδιάσταστη λειτουργία για κινηθείς"
+msgstr "Κοίταξε την θέση σου και ξαναγύρνα στην τρισδιάσταστη λειτουργία για να συνεχίσεις τις κινήσεις σου"
 
 #: ../src/boards/memory.c:266
 msgid "Memory"
@@ -3920,11 +3968,11 @@ msgstr "Μνήμη"
 
 #: ../src/boards/memory.c:267
 msgid "Find the matching pair"
-msgstr "Βρές το ζευγάρι που ταιριάζει"
+msgstr "Βρες το ζευγάρι που ταιριάζει"
 
 #: ../src/boards/menu2.c:133
 msgid "Main Menu Second Version"
-msgstr ""
+msgstr "Κυρίως Μενού Δεύτερη Έκδοση"
 
 #: ../src/boards/menu2.c:134
 msgid "Select a Board"
@@ -3934,16 +3982,16 @@ msgstr "Διάλεξε πίνακα"
 #: ../src/boards/money.c:488
 #, c-format
 msgid "$ %.2f"
-msgstr ""
+msgstr "$ %.2f "
 
 #: ../src/boards/money.c:501
 #, c-format
 msgid "$ %.0f"
-msgstr ""
+msgstr "$ %.0f"
 
 #: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
-msgstr ""
+msgstr "Ρύθμισε την ταχύτητα πτώσης με τα βέλη των πλήκτρων (πάνω και κάτω)."
 
 #: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
@@ -3957,34 +4005,31 @@ msgstr "Python Board"
 #: ../src/boards/python.c:64
 #: ../src/boards/python.c:88
 msgid "Special board that embeds python into gcompris."
-msgstr ""
+msgstr "Ειδικός πίνακας που ενσωματώνει τη γλώσσα προγραμματισμού python στο GCompris."
 
 #: ../src/boards/python/admin/board_list.py:89
-#, fuzzy
 msgid "Select a profile:"
-msgstr "Διάλεξε πίνακα"
+msgstr "Διάλεξε προφίλ:"
 
 #: ../src/boards/python/admin/board_list.py:145
-#, fuzzy
 msgid "Filter"
-msgstr "Χειμώνας"
+msgstr "Φίλτρο"
 
 #: ../src/boards/python/admin/board_list.py:150
-#, fuzzy
 msgid "Select all"
-msgstr "Διάλεξε πίνακα"
+msgstr "Επιλογή όλων"
 
 #: ../src/boards/python/admin/board_list.py:155
 msgid "Unselect all"
-msgstr "Αποεπιλέξτε τα όλα"
+msgstr "Αποεπιλογή όλων"
 
 #: ../src/boards/python/admin/board_list.py:160
 msgid "Locales"
-msgstr "Σκηνές"
+msgstr "Γλώσσα"
 
 #: ../src/boards/python/admin/board_list.py:165
 msgid "Locales sound"
-msgstr ""
+msgstr "Ήχος"
 
 #: ../src/boards/python/admin/board_list.py:170
 msgid "Wordlist"
@@ -3994,10 +4039,9 @@ msgstr "Κατάλογος λέξεων"
 #: ../src/boards/python/admin/group_user_list.py:144
 #: ../src/boards/python/admin/user_list.py:186
 msgid "Login"
-msgstr ""
+msgstr "Σύνδεση"
 
 #: ../src/boards/python/admin/board_list.py:235
-#, fuzzy
 msgid "Main menu"
 msgstr "Κύριο Μενού"
 
@@ -4008,16 +4052,16 @@ msgstr "Κύριο Μενού"
 #. column_pref.set_widget(image)
 #: ../src/boards/python/admin/board_list.py:302
 msgid "Active"
-msgstr ""
+msgstr "Ενεργό"
 
 #: ../src/boards/python/admin/board_list.py:303
 msgid "Board title"
-msgstr ""
+msgstr "Τίτλος πίνακα"
 
 #: ../src/boards/python/admin/board_list.py:419
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
-msgstr ""
+msgstr "Επιλογή επιπέδων δυσκολίας για τους Πίνακες σε κάθε προφίλ%s"
 
 #: ../src/boards/python/admin/board_list.py:450
 #, python-format
@@ -4025,14 +4069,16 @@ msgid ""
 "<span size='x-large'> Select the difficulty range \n"
 "for profile <b>%s</b></span>"
 msgstr ""
+"<μέγεθος='x-large'> Επέλεξε το βαθμό δυσκολίας \n"
+"για το προφίλ <b>%s</b></span>"
 
 #: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
-msgstr "Επεξεργαστείτε την τάξη:"
+msgstr "Επεξεργαστείτε την τάξη"
 
 #: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
-msgstr "Επεξεργαστείτε τάξη:"
+msgstr "Επεξεργαστείτε τάξη: "
 
 #: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
@@ -4108,9 +4154,8 @@ msgstr "Ομάδα:"
 #. Label and Entry for the first name
 #: ../src/boards/python/admin/group_edit.py:102
 #: ../src/boards/python/admin/profile_edit.py:98
-#, fuzzy
 msgid "Description:"
-msgstr "Περιγραφή"
+msgstr "Περιγραφή:"
 
 #. Top message gives instructions
 #: ../src/boards/python/admin/group_edit.py:113
@@ -4119,16 +4164,15 @@ msgstr "Ορίστε όλους τους χρήστες που ανήκουν σ
 
 #: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
-msgstr ""
+msgstr "Πρέπει να βάλεις ένα όνομα για την ομάδα σου"
 
 #: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "Υπάρχει ήδη μια ομάδα με αυτό το όνομα"
 
 #: ../src/boards/python/admin/group_list.py:86
-#, fuzzy
 msgid "Select a class:"
-msgstr "Διάλεξε πίνακα"
+msgstr "Διάλεξε τάξη:"
 
 #: ../src/boards/python/admin/group_list.py:214
 #: ../src/boards/python/admin/profile_edit.py:279
@@ -4153,9 +4197,8 @@ msgid "Birth Date"
 msgstr "Ημερομηνία γέννησης"
 
 #: ../src/boards/python/admin/log_list.py:91
-#, fuzzy
 msgid "Select a user:"
-msgstr "Διάλεξε πίνακα"
+msgstr "Διάλεξε χρήστη:"
 
 #. Insert the ALL option (HACK, use the user_id -2 to indicate ALL)
 #: ../src/boards/python/admin/log_list.py:102
@@ -4184,9 +4227,8 @@ msgid "User"
 msgstr "Χρήστης"
 
 #: ../src/boards/python/admin/log_list.py:228
-#, fuzzy
 msgid "Board"
-msgstr "μπροστά"
+msgstr "Πίνακας"
 
 #: ../src/boards/python/admin/log_list.py:238
 #: ../src/boards/python/redraw.py:347
@@ -4195,14 +4237,12 @@ msgid "Level"
 msgstr "Επίπεδο"
 
 #: ../src/boards/python/admin/log_list.py:248
-#, fuzzy
 msgid "Sublevel"
-msgstr "Επίπεδο"
+msgstr "Υποεπίπεδο"
 
 #: ../src/boards/python/admin/log_list.py:258
-#, fuzzy
 msgid "Duration"
-msgstr "Περιγραφή"
+msgstr "Διάρκεια"
 
 #: ../src/boards/python/admin/log_list.py:268
 msgid "Status"
@@ -4210,9 +4250,8 @@ msgstr "Κατάσταση"
 
 #: ../src/boards/python/admin/module_boards.py:42
 #: ../src/boards/python/admin/module_boards.py:67
-#, fuzzy
 msgid "Boards"
-msgstr "Λευκορωσία"
+msgstr "Πίνακες"
 
 #: ../src/boards/python/admin/module_groups.py:40
 #: ../src/boards/python/admin/module_groups.py:66
@@ -4237,9 +4276,8 @@ msgstr "Χρήστες"
 
 #: ../src/boards/python/admin/module_users.py:41
 #: ../src/boards/python/admin/module_users.py:67
-#, fuzzy
 msgid "Classes"
-msgstr "ποτήρι"
+msgstr "Τάξεις"
 
 #: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
@@ -4264,16 +4302,15 @@ msgstr "Προσδιορίστε όλες τις ομάδες που ανήκο�
 
 #: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
-msgstr ""
+msgstr "Πρέπει να βάλεις ένα όνομα για το προφίλ σου"
 
 #: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
-msgstr ""
+msgstr "Υπάρχει ήδη ένα προφίλ με αυτό το όνομα"
 
 #: ../src/boards/python/admin/profile_list.py:188
-#, fuzzy
 msgid "Profile"
-msgstr "Χωρίς φίλτρο"
+msgstr "Προφίλ"
 
 #: ../src/boards/python/admin/profile_list.py:315
 msgid "[Default]"
@@ -4313,11 +4350,11 @@ msgstr "Ημερομηνία γέννησης:"
 
 #: ../src/boards/python/admin/user_edit.py:159
 msgid "You need to provide at least a login, first name and last name for your users"
-msgstr ""
+msgstr "Για τη σύνδεση, πρέπει να δώσεις το λιγότερο ένα όνομα και ένα επώνυμο για τους χρήστες"
 
 #: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
-msgstr ""
+msgstr "Υπάρχει ήδη ένας χρήστης με αυτό το όνομα"
 
 #: ../src/boards/python/admin/user_list.py:291
 msgid ""
@@ -4326,6 +4363,10 @@ msgid ""
 "login;First name;Last name;Date of birth\n"
 "The separator is autodetected and can be one of ',', ';' or ':'"
 msgstr ""
+"Για να εισάγεις μια κατάσταση χρηστών από ένα αρχείο, επέλεξε πρώτα τάξη.\n"
+"Μορφή αρχείου: Το αρχείο πρέπει να έχει την εξής μορφή:\n"
+"σύνδεση;Όνομα;Επώνυμο; Ημερομηνία Γέννησης\n"
+"Το σύμβολο διαχωρισμού των στοιχείων μπορεί να είναι: ',', ';' or ':'"
 
 #: ../src/boards/python/admin/user_list.py:370
 #, python-format
@@ -4333,42 +4374,44 @@ msgid ""
 "One or more logins are not unique !\n"
 "You need to change them: %s !"
 msgstr ""
+"Μία ή περισσότερες συνδέσεις δεν είναι μοναδικές !\n"
+"Πρέπει να τις τροποποιήσεις: %s !"
 
 #: ../src/boards/python/anim.py:2226
 msgid "SVG is disabled. Install python xml module to enable it"
-msgstr ""
+msgstr "Το SVG είνα απενεργοποιημένο. Εγκατέστησε το άρθρωμα python xml για να το ενεργοποιήσεις"
 
 #: ../src/boards/python/anim.py:2382
 msgid "Warning: the following images cannot be accessed on your system.\n"
-msgstr ""
+msgstr "Προσοχή: οι παρακάτω εικόνες δεν μπορούν να προσπελαστούν από το σύστημά σου.\n"
 
 #: ../src/boards/python/anim.py:2384
 msgid "The corresponding items have been skipped."
-msgstr ""
+msgstr "Τα όμοια αντικείμενα έχουν παραβλεφθεί."
 
 #: ../src/boards/python/chat.py:80
 msgid "All messages will be displayed here.\n"
-msgstr ""
+msgstr "Όλα τα μηνύματα θα εμφανιστούν εδώ.\n"
 
 #: ../src/boards/python/chat.py:130
 msgid "Your Friends"
-msgstr ""
+msgstr "Οι φίλοι σου"
 
 #: ../src/boards/python/chat.py:162
 msgid "Your Channel"
-msgstr ""
+msgstr "Το κανάλι σου"
 
 #: ../src/boards/python/chat.py:188
 msgid "Type your message here, to send to other GCompris users on your local network."
-msgstr ""
+msgstr "Πληκτρολόγησε εδώ το μήνυμά σου για να το στείλεις σε άλλους χρήστες του GCompris που είναι συνδεδεμένοι στο τοπικό δίκτυο."
 
 #: ../src/boards/python/chat.py:322
 msgid "You must set a channel in your channel entry box first.\n"
-msgstr ""
+msgstr "Πρέπει πρώτα να ορίσεις το κανάλι σου στο αντίστοιχο πλαίσιο.\n"
 
 #: ../src/boards/python/chat.py:323
 msgid "Your friends must set the same channel in order to communicate with you"
-msgstr ""
+msgstr "Οι φίλοι σου πρέπει να ορίσουν το ίδιο κανάλι, ώστε να μπορέσουν να επικοινωνήσουν μαζί σου"
 
 #: ../src/boards/python/electric.py:95
 msgid ""
@@ -4379,30 +4422,36 @@ msgid ""
 "/usr/bin/gnucap or /usr/local/bin/gnucap.\n"
 "You can still use this activity to draw schematics without computer simulation."
 msgstr ""
+"Δεν βρέθηκε ο προσoμοιωτής ηλεκτρικών κυκλωμάτων 'gnucap'.\n"
+"Μπορείς να τον μεταφορτώσεις και να τον εγκαταστήσεις από:\n"
+"<http://geda.seul.org/tools/gnucap/>\n"
+"Για να εντοπιστεί, πρέπει να έχει εγκατασταθεί στο φάκελο\n"
+"/usr/bin/gnucap ή /usr/local/bin/gnucap.\n"
+"Μπορείς ακόμη να χρησιμοποιήσεις αυτή τη δραστηριότητα για να σχεδιάσεις σχήματα, χωρίς την προσομοίωση του υπολογιστή."
 
 #: ../src/boards/python/gnumch.py:96
 #, python-format
 msgid ", %d"
-msgstr ""
+msgstr ", %d"
 
 #: ../src/boards/python/gnumch.py:97
 #, python-format
 msgid " and %d"
-msgstr ""
+msgstr "και %d"
 
 #: ../src/boards/python/gnumch.py:117
 #, python-format
 msgid "%d is divisible by %s."
-msgstr ""
+msgstr "%d διαιρείται από το %s."
 
 #: ../src/boards/python/gnumch.py:121
 msgid "1 is not a prime number."
-msgstr ""
+msgstr "Το 1 δεν είναι πρώτος αριθμός."
 
 #: ../src/boards/python/gnumch.py:131
 #, python-format
 msgid "Primes less than %d"
-msgstr ""
+msgstr "Πρώτοι αριθμοί μικρότεροι του %d"
 
 #. Translators: You can swap %(x)y elements in the string.
 #: ../src/boards/python/gnumch.py:153
@@ -4411,72 +4460,78 @@ msgid ""
 "Multiples of %(d1)d include %(s)s,\n"
 "but %(d2)d is not a multiple of %(d3)d."
 msgstr ""
+"Πολλαπλάσια του %(d1)d περιέχουν %(s)s,\n"
+"αλλά %(d2)d δεν είναι πολλαπλάσιο του %(d3)d."
 
 #: ../src/boards/python/gnumch.py:164
 #, python-format
 msgid "Factors of %d"
-msgstr ""
+msgstr "Διαιρέτες του %d"
 
 #: ../src/boards/python/gnumch.py:197
 #, python-format
 msgid "%s are the factors of %d."
-msgstr ""
+msgstr "%s είναι διαιρέτες του %d."
 
 #: ../src/boards/python/gnumch.py:209
 #, python-format
 msgid "Multiples of %d"
-msgstr ""
+msgstr "Πολλαπλάσια του %d"
 
 #: ../src/boards/python/gnumch.py:243
 #, python-format
 msgid "%s = %d"
-msgstr ""
+msgstr "%s = %d"
 
 #: ../src/boards/python/gnumch.py:254
 #, python-format
 msgid "%d + %d"
-msgstr ""
+msgstr "%d + %d"
 
 #: ../src/boards/python/gnumch.py:259
 #, python-format
 msgid "%d − %d"
-msgstr ""
+msgstr "%d − %d"
 
 #: ../src/boards/python/gnumch.py:264
 #, python-format
 msgid "%d × %d"
-msgstr ""
+msgstr "%d × %d"
 
 #: ../src/boards/python/gnumch.py:268
 #, python-format
 msgid "%d ÷ %d"
-msgstr ""
+msgstr "%d ÷ %d"
 
 #: ../src/boards/python/gnumch.py:276
 #, python-format
 msgid "Equal to %d"
-msgstr ""
+msgstr "Ίσο με το %d"
 
 #: ../src/boards/python/gnumch.py:297
 #, python-format
 msgid "Not equal to %d"
-msgstr ""
+msgstr "Δεν είναι ίσο με το %d"
 
 #: ../src/boards/python/gnumch.py:441
 msgid ""
 "You were eaten by a Troggle.\n"
 "Press <Return> to continue."
 msgstr ""
+"Καταβροχθίστηκες από τον Τρωγλοδύτη.\n"
+"Πάτησε <Επιστροφή> για να συνεχίσεις."
 
 #: ../src/boards/python/gnumch.py:490
 msgid "You ate a wrong number.\n"
-msgstr ""
+msgstr "Έφαγες λάθος νούμερο.\n"
 
 #: ../src/boards/python/gnumch.py:491
 msgid ""
 "\n"
 "Press <Return> to continue."
 msgstr ""
+"\n"
+"Πάτησε <Επιστροφή> για να συνεχίσεις."
 
 #: ../src/boards/python/gnumch.py:784
 msgid ""
@@ -4488,11 +4543,18 @@ msgid ""
 "L\n"
 "E"
 msgstr ""
+"Τ\n"
+"Ρ\n"
+"Ο\n"
+"Γ\n"
+"Γ\n"
+"Λ\n"
+"Ε"
 
 #: ../src/boards/python/guessnumber.py:205
 #, python-format
 msgid "Guess a number between %d and %d"
-msgstr ""
+msgstr "Μάντεψε έναν αριθμό μεταξύ %d και %d"
 
 #: ../src/boards/python/guessnumber.py:318
 #: ../src/boards/python/guessnumber.py:319
@@ -4502,23 +4564,22 @@ msgstr "Παρακαλώ βάλε έναν αριθμό μεταξύ %d και %
 
 #: ../src/boards/python/guessnumber.py:324
 #: ../src/boards/python/guessnumber.py:325
-#, fuzzy
 msgid "Out of range"
-msgstr "πορτοκαλί"
+msgstr "Εκτός ορίων"
 
 #: ../src/boards/python/guessnumber.py:331
 #: ../src/boards/python/guessnumber.py:332
 msgid "Too high"
-msgstr ""
+msgstr "Πολύ μεγάλο"
 
 #: ../src/boards/python/guessnumber.py:334
 #: ../src/boards/python/guessnumber.py:335
 msgid "Too low"
-msgstr ""
+msgstr "Πολύ μικρό"
 
 #: ../src/boards/python/login.py:114
 msgid "Profile: "
-msgstr ""
+msgstr "Προφίλ: "
 
 #: ../src/boards/python/login.py:268
 #: ../src/boards/python/login.py:277
@@ -4532,7 +4593,7 @@ msgstr "Πιέστε Σύνδεση για να συνδεθείτε"
 
 #: ../src/boards/python/mosaic.py:194
 msgid "Rebuild the same mosaic on the right area"
-msgstr ""
+msgstr "Ξαναφτιάξε το ίδιο μωσαϊκό στη δεξιά πλευρά"
 
 #: ../src/boards/python/melody.py:118
 msgid ""
@@ -4541,24 +4602,30 @@ msgid ""
 "Go to the configuration dialogue to\n"
 "enable the sound"
 msgstr ""
+"Σφάλμα: αυτή η δραστηριότητα δεν μπορεί να εκτελεστεί όταν\n"
+"τα εφέ των ήχων είναι απενεργοποιημένα.\n"
+"Πήγαινε στη Διαχείριση για \n"
+"να ενεργοποιήσεις τον ήχο"
 
 #: ../src/boards/python/oscar_and_friends.py:116
 msgid ""
 "Below the surface, Oscar the octopus and his friends sat on a rock,\n"
 "watching the bad weather above them."
 msgstr ""
+"Κάτω από την επιφάνεια, ο Όσκαρ το χταπόδι και οι φίλοι του κάθονται σε έναν βράχο,\n"
+"παρακολουθώντας τον κακό καιρό στην επιφάνεια από πάνω του."
 
 #: ../src/boards/python/oscar_and_friends.py:117
 msgid "They were all happy that the storms never reached all the way down to them."
-msgstr ""
+msgstr "Είναι όλοι ευτυχισμένοι επειδή οι καταιγίδες δεν τους πλησιάζουν."
 
 #: ../src/boards/python/oscar_and_friends.py:118
 msgid "No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr ""
+msgstr "Όσο άσχημος και αν είναι ο καιρός επάνω, εκεί κάτω είναι πάντα γαλήνιος και ήρεμος."
 
 #: ../src/boards/python/oscar_and_friends.py:119
 msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr ""
+msgstr "Οι καλύτεροι φίλοι του Oscar ήταν ο Charlie το καβουράκι και η Sandy ο αστερίας."
 
 #: ../src/boards/python/pythontest.py:148
 msgid ""
@@ -4573,16 +4640,17 @@ msgid ""
 "It is now possible to develop gcompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
 msgstr ""
+"Τώρα είναι δυνατή η ανάπτυξη δραστηριοτήτων για το GCompris με τη γλώσσα προγραμματισμού C ή Python.\n"
+"Οφείλονται ευχαριστίες στον Olivier Samys που έκανε εφικτή μια τέτοια δυνατότητα."
 
 #: ../src/boards/python/pythontest.py:166
-#, fuzzy
 msgid "This activity is not playable, just a test"
 msgstr "Δεν μπορείς να παίξεις σε αυτή την δραστηριότητα, είναι απλά μια δοκιμή"
 
 #. toggle box
 #: ../src/boards/python/pythontest.py:414
 msgid "Disable line drawing in circle"
-msgstr ""
+msgstr "Απενεργοποίησε τη σχεδίαση γραμμής στον κύκλο"
 
 #. combo box
 #: ../src/boards/python/pythontest.py:423
@@ -4604,9 +4672,8 @@ msgid "Use rectangles"
 msgstr "Χρησιμοποίησε ορθογώνια παραλληλόγραμμα"
 
 #: ../src/boards/python/pythontest.py:449
-#, fuzzy
 msgid "Choice of pattern"
-msgstr "Κάνε κλικ πάνω σε ένα γράμμα"
+msgstr "Επιλογή μοτίβου"
 
 #: ../src/boards/python/redraw.py:909
 #: ../src/boards/python/redraw.py:912
@@ -4637,7 +4704,7 @@ msgstr "ΟΙ ΕΝΤΟΛΕΣ ΕΙΝΑΙ"
 #. The two boat arrived in a close time frame (1s), it's a draw
 #: ../src/boards/python/searace.py:756
 msgid "This is a draw"
-msgstr ""
+msgstr "Αυτό είναι ένα σχέδιο"
 
 #: ../src/boards/python/searace.py:763
 msgid "The Red boat has won"
@@ -4645,7 +4712,7 @@ msgstr "Η κόκκινη βάρκα κέρδισε"
 
 #: ../src/boards/python/searace.py:766
 msgid "The Green boat has won"
-msgstr ""
+msgstr "Κέρδισε η πράσινη βάρκα"
 
 #: ../src/boards/python/searace.py:784
 #: ../src/boards/python/searace.py:1017
@@ -4662,11 +4729,11 @@ msgstr "Συντακτικό λάθος στη γραμμή"
 
 #: ../src/boards/python/searace.py:880
 msgid "The command"
-msgstr ""
+msgstr "Η εντολή"
 
 #: ../src/boards/python/searace.py:899
 msgid "Unknown command at line"
-msgstr ""
+msgstr "Άγνωστη εντολή στη γραμμή"
 
 #: ../src/boards/python/searace.py:1017
 msgid "Distance:"
@@ -4677,30 +4744,32 @@ msgid ""
 "Cannot find Tuxpaint.\n"
 "Install it to use this activity !"
 msgstr ""
+"Δεν βρέθηκε η εφαρμογή Tuxpaint.\n"
+"Εγκατέστησε την εφαρμογή για να χρησιμοποιήσεις αυτή τη δραστηριότητα!"
 
 #: ../src/boards/python/tuxpaint.py:157
 msgid "Waiting for Tuxpaint to finish"
-msgstr ""
+msgstr "Περίμενε να τελειώσει το Tuxpaint"
 
 #: ../src/boards/python/tuxpaint.py:210
 msgid "Inherit fullscreen setting from GCompris"
-msgstr ""
+msgstr "Ρύθμιση πλήρους οθόνης παρμένη από το GCompris"
 
 #: ../src/boards/python/tuxpaint.py:214
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
-msgstr ""
+msgstr "Ρυθμίσεις ανάλυσης οθόνης παρμένες από το GCompris (800x600, 640x480)"
 
 #: ../src/boards/python/tuxpaint.py:218
 msgid "Disable shape rotation"
-msgstr ""
+msgstr "Απενεργοποίησε την περιστροφή του σχήματος"
 
 #: ../src/boards/python/tuxpaint.py:222
 msgid "Show Uppercase text only"
-msgstr ""
+msgstr "Δείξε μόνο το κείμενο με τα κεφαλαία γράμματα"
 
 #: ../src/boards/python/tuxpaint.py:226
 msgid "Disable stamps"
-msgstr ""
+msgstr "Απενεργοποιημένες σφραγίδες"
 
 #: ../src/boards/railroad.c:91
 msgid "Memory game"
@@ -4716,6 +4785,8 @@ msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
 msgstr ""
+"Λάθος: δεν βρήκαμε\n"
+"κατάλογο λέξεων για να παίξουμε αυτό το παιχνίδι.\n"
 
 #: ../src/boards/reading.c:381
 msgid "Please, check if the word"
@@ -4730,7 +4801,6 @@ msgid "I am Ready"
 msgstr "Είμαι Έτοιμος"
 
 #: ../src/boards/reading.c:615
-#, fuzzy
 msgid "Yes, I saw it"
 msgstr "Ναι, το είδα"
 
@@ -4743,7 +4813,7 @@ msgstr "Όχι, δεν υπήρχε"
 #: ../src/boards/reading.c:683
 #, c-format
 msgid "The word to find was '%s'"
-msgstr ""
+msgstr "Η λέξη που βρέθηκε ήταν '%s'"
 
 #: ../src/boards/reading.c:686
 msgid "But it was not displayed"
@@ -4754,13 +4824,13 @@ msgid "And it was displayed"
 msgstr "και εμφανίζεται"
 
 #: ../src/boards/scale.c:265
-#, fuzzy, c-format
+#, c-format
 msgid "Weight = %s"
-msgstr "Πόντοι = %s"
+msgstr "Βάρος = %s"
 
 #: ../src/boards/scale.c:714
 msgid "Take care, you can drop masses on both sides of the scale."
-msgstr ""
+msgstr "Πρόσεξε, μπορείς να μετακινήσεις μάζες στις δύο πλευρές της ζυγαριάς."
 
 #: ../src/boards/target.c:281
 #: ../src/boards/target.c:546
@@ -4801,7 +4871,7 @@ msgstr "Κείμενο"
 
 #: ../src/boards/wordprocessor.c:99
 msgid "Flyer"
-msgstr ""
+msgstr "Ιπτάμενη μηχανή"
 
 #: ../src/boards/wordprocessor.c:433
 msgid "Title"
@@ -4816,7 +4886,6 @@ msgid "Heading 2"
 msgstr "Επικεφαλίδα 2"
 
 #: ../src/gcompris/about.c:57
-#, fuzzy
 msgid ""
 "Author: Bruno Coudoin\n"
 "Contribution: Pascal Georges, Jose Jorge, Yves Combe\n"
@@ -4849,15 +4918,18 @@ msgid "Translators:"
 msgstr "Μεταφραστές:"
 
 #: ../src/gcompris/about.c:193
-#, fuzzy
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
-msgstr "Αρχική Σελίδα του GCompris"
+msgstr ""
+"Αρχική Σελίδα του GCompris\n"
+"http://gcompris.net"
 
 #: ../src/gcompris/about.c:215
 msgid "This software is a GNU Package and is released under the GNU General Public License"
 msgstr ""
+"Αυτό το λογισμικό είναι ένα πακέτο GNU που εκδόθηκε και κυκλοφορεί\n"
+"υπό τους όρους της GNU General Public License"
 
 #: ../src/gcompris/about.c:278
 #: ../src/gcompris/about.c:288
@@ -4872,11 +4944,11 @@ msgstr "Εντάξει"
 
 #: ../src/gcompris/bar.c:577
 msgid "GCompris confirmation"
-msgstr "Οριστικοποίηση GCompris"
+msgstr "Επιβεβαίωση GCompris"
 
 #: ../src/gcompris/bar.c:578
 msgid "Are you sure you want to quit?"
-msgstr ""
+msgstr "Είσαι σίγουρος ότι θέλεις να φύγεις?"
 
 #: ../src/gcompris/bar.c:579
 msgid "Yes, I am sure!"
@@ -4888,17 +4960,19 @@ msgstr "Όχι, θέλω να συνεχίσω"
 
 #: ../src/gcompris/board.c:187
 msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
-msgstr ""
+msgstr "Δεν υποστηρίζεται η φόρτωση δυναμικών αρθρωμάτων. Το GCompris δεν μπορεί να φορτώσει.\n"
 
 #: ../src/gcompris/board_config.c:699
 msgid ""
 "Select the language\n"
 " to use in the board"
 msgstr ""
+"Επέλεξε γλώσσα\n"
+"για χρήση της στον πίνακα"
 
 #: ../src/gcompris/board_config.c:762
 msgid "Global GCompris mode"
-msgstr ""
+msgstr "Καθολική λειτουργία του GCompris"
 
 #: ../src/gcompris/board_config.c:763
 msgid "Normal"
@@ -4910,13 +4984,15 @@ msgstr "2 κλικ"
 
 #: ../src/gcompris/board_config.c:765
 msgid "both modes"
-msgstr ""
+msgstr "και οι δυο λειτουργίες"
 
 #: ../src/gcompris/board_config.c:793
 msgid ""
 "Select the drag and drop mode\n"
 " to use in the board"
 msgstr ""
+"Επέλεξε τη λειτουργία μετακίνησης και απόθεσης\n"
+"για να χρησιμοποιήσεις τον πίνακα"
 
 #: ../src/gcompris/config.c:59
 msgid "Your system default"
@@ -5183,8 +5259,9 @@ msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
 msgstr ""
-"<i>Χρησιμοποιείστε το εξάρτημα διαμόρφωσης του GCompris \n"
-" για να καθαρίσετε τους πίνακες</i> "
+"<i>Χρησιμοποιήστε τη Διαχείριση του\n"
+"GCompris για να καθορίσετε το\n"
+"επίπεδο δυσκολίας για κάθε προφίλ</i>"
 
 #: ../src/gcompris/config.c:192
 #: ../src/gcompris/config.c:202
@@ -5213,11 +5290,11 @@ msgstr "Αδυναμία ανοίγματος καταλόγου skin: %s"
 #: ../src/gcompris/config.c:881
 #, c-format
 msgid "Skin : %s"
-msgstr "Skin : %s"
+msgstr "Θέμα: %s"
 
 #: ../src/gcompris/config.c:418
 msgid "SKINS NOT FOUND"
-msgstr ""
+msgstr "ΔΕΝ ΒΡΕΘΗΚΕ Ο ΚΑΤΑΛΟΓΟΣ"
 
 #: ../src/gcompris/config.c:543
 msgid "English (United State)"
@@ -5236,9 +5313,8 @@ msgid "SAVE"
 msgstr "ΑΠΟΘΗΚΕΥΣΗ"
 
 #: ../src/gcompris/gameutil.c:80
-#, fuzzy
 msgid "Couldn't find or load the file"
-msgstr "Δε μπορώ να βρω το αρχείο"
+msgstr "Δε μπορώ να βρω ή να φορτώσω το αρχείο"
 
 #: ../src/gcompris/gameutil.c:82
 msgid "This activity is incomplete."
@@ -5278,7 +5354,7 @@ msgstr "εμφάνιση των δραστηριοτήτων με αυτό το 
 
 #: ../src/gcompris/gcompris.c:157
 msgid "display debug informations on the console."
-msgstr ""
+msgstr "εμφάνιση πληροφοριών αποσφαλμάτωσης στην κονσόλα."
 
 #: ../src/gcompris/gcompris.c:160
 msgid "Print the version of "
@@ -5290,15 +5366,15 @@ msgstr "Χρήση antialiased canvas (αργό)"
 
 #: ../src/gcompris/gcompris.c:166
 msgid "Disable XF86VidMode (No screen resolution change)."
-msgstr ""
+msgstr "Απενεργοποίηση XF86VidMode (Δεν υπάρχει μεταβολή στην ανάλυση οθόνης)."
 
 #: ../src/gcompris/gcompris.c:169
 msgid "Run gcompris with local menu (e.g -l /reading will let you play only activities in the reading directory, -l /strategy/connect4 only the connect4 activity)"
-msgstr ""
+msgstr "Εκτέλεσε το GCompris προεπιλέγοντας δραστηριότητες (π.χ. -l /reading σου επιτρέπει να παίξεις μόνο με τις δραστηριότητες του καταλόγου reading, -l/strategy/connect4 σου επιτρέπει να παίξεις με το παιχνίδι connect 4)"
 
 #: ../src/gcompris/gcompris.c:172
 msgid "Run GCompris with local activity directory added to menu"
-msgstr ""
+msgstr "Εκτέλεσε το GCompris με συγκεκριμένο κατάλογο δραστηριοτήτων που υπάρχει στο μενού"
 
 #: ../src/gcompris/gcompris.c:175
 msgid "Run GCompris in administration and user-management mode"
@@ -5306,31 +5382,31 @@ msgstr "Άνοιξε το GCompris σε κατάσταση λειτουργία�
 
 #: ../src/gcompris/gcompris.c:178
 msgid "Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite.db]"
-msgstr ""
+msgstr "Χρησιμοποίησε εναλλακτική βάση δεδομένων για τα προφίλ [$HOME/.config/gcompris/gcompris_sqlite.db]"
 
 #: ../src/gcompris/gcompris.c:181
 msgid "Create the alternate database for profiles"
-msgstr ""
+msgstr "Κατασκεύασε εναλλακτική βάση δεδομένων για τα προφίλ"
 
 #: ../src/gcompris/gcompris.c:184
 msgid "Re-read XML Menus and store them in the database"
-msgstr ""
+msgstr "Ξαναδιάβασε τα μενού XML και αποθήκευσέ τα στη βάση δεδομένων"
 
 #: ../src/gcompris/gcompris.c:187
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
-msgstr ""
+msgstr "Καθόρισε το προφίλ που θα χρησιμοποιηθεί. Χρησιμοποίησε την εντολή 'gcompris -a' για να φτιάξεις καινούρια προφίλ"
 
 #: ../src/gcompris/gcompris.c:190
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
-msgstr ""
+msgstr "Κατάλογος όλων των διαθέσιμων προφιλ. Χρησιμοποίησε την εντολή 'gcompris -a' για να φτιάξεις καινούρια προφίλ"
 
 #: ../src/gcompris/gcompris.c:193
 msgid "Config directory location: [$HOME/.config/gcompris]. Alternate is to set $XDG_CONFIG_HOME."
-msgstr ""
+msgstr "Τοποθεσία καταλόγου Config [$HOME/.config/gcompris]. Εναλλακτικά μπορεί να καθοριστεί στο $XDG_CONFIG_HOME."
 
 #: ../src/gcompris/gcompris.c:196
 msgid "The location of user directories: [$HOME/My GCompris]"
-msgstr ""
+msgstr "Τοποθεσία των καταλόγων του χρήστη: [$HOME/My GCompris]"
 
 #: ../src/gcompris/gcompris.c:199
 msgid "Run the experimental activities"
@@ -5342,35 +5418,35 @@ msgstr "Απενεργοποίησε το κουμπί της εξόδου"
 
 #: ../src/gcompris/gcompris.c:205
 msgid "Disable the config button"
-msgstr ""
+msgstr "Απενεργοποίηση του κουμπιού config"
 
 #: ../src/gcompris/gcompris.c:210
 msgid "Display the resources on stdout based on the selected activities"
-msgstr ""
+msgstr "Εμφάνιση των πόρων στο stdout που βασίζεται στις επιλεγμένες δραστηριότητες"
 
 #: ../src/gcompris/gcompris.c:214
 msgid "GCompris will get images, sounds and activity data from this server if not found locally."
-msgstr ""
+msgstr "Το GCompris θα φορτώσει εικόνες, ήχους και δεδομένα δραστηριοτήτων από τον εξυπηρετητή αν αυτά δεν βρεθούν τοπικά."
 
 #: ../src/gcompris/gcompris.c:217
 msgid "Only when --server is provided, disable check for local resource first. Data are always taken from the web server."
-msgstr ""
+msgstr "Απενεργοποίησε πρώτα τους τοπικούς πόρους, μόνον όταν ο εξυπηρετητής είναι διαθέσιμος. Τα δεδομένα λαμβάνονται μόνο από τον διαδικτυακό εξυπηρετητή."
 
 #: ../src/gcompris/gcompris.c:221
 msgid "In server mode, specify the cache directory used to avoid useless downloads."
-msgstr ""
+msgstr "Στη λειτουργία εξυπηρετητή, καθόρισε τον κατάλογο της λανθάνουσας μνήμης (cache) που χρησιμοποιείται για να αποφύγεις ανώφελες μεταφορτώσεις (downloads)."
 
 #: ../src/gcompris/gcompris.c:224
 msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
-msgstr ""
+msgstr "Καθολική λειτουργία μετακίνησης και απόθεσης: κανονικά, 2 κλικ, αμφότερα. Η προκαθορισμένη λειτουργία είναι ομαλή."
 
 #: ../src/gcompris/gcompris.c:227
 msgid "Do not display the background images of activities."
-msgstr ""
+msgstr "Μην εμφανίζεις τις εικόνες φόντου των δραστηριοτήτων."
 
 #: ../src/gcompris/gcompris.c:230
 msgid "Do not avoid the execution of multiple instances of GCompris."
-msgstr ""
+msgstr "Να αποφεύγετε την εκτέλεση πολλαπλών στιγμιότυπων του GCompris."
 
 #: ../src/gcompris/gcompris.c:844
 #, c-format
@@ -5380,6 +5456,10 @@ msgid ""
 "The GNU/Linux version does not have this restriction. Note that GCompris is being developed to free schools from monopolistic software vendors. If you also believe that we should teach freedom to children, please consider using GNU/Linux. Get more information at FSF:\n"
 "<http://www.fsf.org/philosophy>"
 msgstr ""
+"Το GCompris είναι ελεύθερο λογισμικό που εκδόθηκε και κυκλοφορεί υπό τους όρους της άδειας GPL. Προκειμένου να ενισχυθεί η ανάπτυξή του, η έκδοση για τα Windows παρέχει μόνο %d από το %d των δραστηριοτήτων. Μπορείτε να προμηθευτείτε την πλήρη έκδοση για Windows έναντι μιας μικρής χρηματικής εισφοράς στo\n"
+"<http://gcompris.net>\n"
+"Η έκδοση GNU/Linux δεν έχει αυτόν τον περιορισμό. Σημειώστε ότι το GCompris αναπτύσσεται για να απελευθερώσει τα σχολεία από τους μονοπωλιακούς προμηθευτές λογισμικού. Αν πιστεύετε επίσης ότι μπορούμε να διδάξουμε την ελευθερία στα παιδιά, τότε είναι απαραίτητη η χρήση λογισμικού GNU/Linux. Περισσότερες πληροφορίες στο FSF:\n"
+"<http://www.fsf.org/philosophy>"
 
 #: ../src/gcompris/gcompris.c:1539
 #, c-format
