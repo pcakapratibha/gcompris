@@ -1,3 +1,7 @@
+2007-05-13  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* Makefile.am: removed files having a .in from the tarball
+
 2007-05-07  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Included the latest binreloc detection code from autopackage svn.
