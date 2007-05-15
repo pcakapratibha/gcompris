@@ -43,28 +43,19 @@ void	 gc_sound_policy_set(int);
 int	 gc_sound_policy_get(void);
 void	 gc_sound_init(void);
 void	 gc_sound_reopen(void);
+void	 gc_sound_bg_reopen(void);
+void	 gc_sound_fx_reopen(void);
 void	 gc_sound_close(void);
-void	 gc_sound_pause(void);
-void	 gc_sound_resume(void);
+void	 gc_sound_bg_close(void);
+void	 gc_sound_fx_close(void);
+void	 gc_sound_bg_pause(void);
+void	 gc_sound_fx_pause(void);
+void	 gc_sound_bg_pause(void);
+void	 gc_sound_fx_pause(void);
+void	 gc_sound_bg_resume(void);
+void	 gc_sound_fx_resume(void);
 
 int	 decode_ogg_file(char *infile);
-void	 display_ao_devices();
-
-/*
- * SDL PLAYER
- */
-int	 sdlplayer_init();
-void	 sdlplayer_close();
-void	 sdlplayer_reopen();
-
-int	 sdlplayer_music(char *filename, int volume);
-void	 sdlplayer_halt_music();
-void	 sdlplayer_pause_music();
-void	 sdlplayer_resume_music();
-
-void	 sdlplayer_halt_fx();
-void	 sdlplayer_resume_fx();
-int	 sdlplayer_fx(char *filename, int volume);
 
 gchar *gc_sound_alphabet(gchar *chars);
 

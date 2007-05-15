@@ -25,29 +25,30 @@
 #include "gcompris.h"
 #include <signal.h>
 #include <glib.h>
+#include <gst/gst.h>
 
 static GList	*pending_queue = NULL;
 static int	 sound_policy;
-static gboolean	 music_paused = FALSE;
-static gboolean	 sound_closed = FALSE;
+static gboolean	 fx_paused = FALSE;
+static gboolean	 bg_paused = FALSE;
 
-/* mutex */
-GMutex		*lock = NULL;
-GMutex		*lock_music = NULL;
-GMutex		*lock_fx = NULL;
-GCond		*cond = NULL;
+static GstElement *bg_pipeline = NULL;
+static GstElement *fx_pipeline = NULL;
+
+static guint bg_music_index;
+static gint gc_bg_timer_id = 0;
+
+GSList *music_list;
 
 /* Singleton */
 static guint	 sound_init = 0;
 
 /* Forward function declarations */
-GThread		*thread_scheduler_fx, *thread_scheduler_music;
-
-static void	*thread_play_ogg (gchar *file);
+static void	 fx_play ();
 static char	*get_next_sound_to_play( );
 
-static gpointer  scheduler_fx (gpointer user_data);
-static gpointer  scheduler_music (gpointer user_data);
+static gpointer  bg_play (gpointer dummy);
+static GSList   *bg_build_music_list();
 
 /* sound control */
 GObject *gc_sound_controller = NULL;
@@ -61,97 +62,144 @@ void
 gc_sound_init()
 {
 
-  /* Check to run the init once only */
+  /* Check to run the init only once */
   if(sound_init == 1)
-    {
-      if(sound_closed == TRUE)
-	gc_sound_reopen();
+    return;
 
-	  return;
-    }
   sound_init = 1;
 
-  gc_sound_controller = g_object_new (GCOMPRIS_SOUND_TYPE, NULL);
-
-  g_signal_connect( gc_sound_controller,
-		    "sound-played",
-		    (GCallback) gc_sound_callback,
-		    NULL);
-
-  g_assert( gc_sound_controller != NULL );
-
-  /* Initialize the thread system */
-  if (!g_thread_supported ()) g_thread_init (NULL);
-
-  lock = g_mutex_new ();
-  lock_music = g_mutex_new ();
-  lock_fx = g_mutex_new ();
-  cond = g_cond_new ();
+  /* gstreamer init */
+  gst_init(NULL, NULL);
 
   sound_policy = PLAY_AFTER_CURRENT;
 
-  if(sdlplayer_init()!=0) {
-    /* Sound init failed. Desactivate the sound */
-    gc_prop_get()->music = 0;
-    gc_prop_get()->fx    = 0;
-    return;
+  /* Delay to let gcompris intialisatiobg_build_music_list()n and intro music to complete */
+  music_list = bg_build_music_list();
+  gc_bg_timer_id = gtk_timeout_add(25000,
+				   (GtkFunction)bg_play,
+				   NULL);
+}
+
+static gboolean
+fx_bus(GstBus* bus, GstMessage* msg, gpointer data)
+{
+  switch( GST_MESSAGE_TYPE( msg ) )
+    {
+    case GST_MESSAGE_EOS:
+      gc_sound_fx_close();
+      fx_play();
+      g_warning("fx_bus: EOS");
+      break;
+    default:
+      break;
+    }
+  return TRUE;
+}
+
+static gboolean
+bg_bus(GstBus* bus, GstMessage* msg, gpointer data)
+{
+  switch( GST_MESSAGE_TYPE( msg ) ) {
+    case GST_MESSAGE_EOS:
+        g_warning("bg_bus: EOS");
+	gc_sound_bg_close();
+	bg_play(NULL);
+	break;
+    default:
+	break;
   }
-
-  thread_scheduler_fx = g_thread_create((GThreadFunc)scheduler_fx, NULL, FALSE, NULL);
-  if (thread_scheduler_fx == NULL)
-    perror("create failed for fx scheduler");
-
-  thread_scheduler_music = g_thread_create((GThreadFunc)scheduler_music, NULL, FALSE, NULL);
-  if (thread_scheduler_music == NULL)
-    perror("create failed for music scheduler");
-
+  return TRUE;
 }
 
 void
 gc_sound_close()
 {
-  if ( !sound_closed )
+  gc_sound_bg_close();
+  gc_sound_fx_close();
+}
+
+void
+gc_sound_bg_close()
+{
+  if (bg_pipeline)
     {
-      sound_closed = TRUE;
-      if ( music_paused ) {
-         music_paused = FALSE;
-	gc_sound_resume();
-         }
-      g_mutex_lock(lock_fx);
-      sdlplayer_halt_music();
-      sdlplayer_halt_fx();
-      g_mutex_lock(lock_music);
-      sdlplayer_close();
+      gst_element_set_state(bg_pipeline, GST_STATE_NULL);
+      gst_element_get_state(bg_pipeline, NULL, NULL, 1000*GST_MSECOND);
+      gst_object_unref(GST_OBJECT(bg_pipeline));
+      bg_pipeline = NULL;
     }
+}
+
+void
+gc_sound_fx_close()
+{
+  if (fx_pipeline)
+    {
+      gst_element_set_state(fx_pipeline, GST_STATE_NULL);
+      gst_element_get_state(fx_pipeline, NULL, NULL, 1000*GST_MSECOND);
+      gst_object_unref(GST_OBJECT(fx_pipeline));
+      fx_pipeline = NULL;
+    }
+}
+
+void
+gc_sound_bg_reopen()
+{
+  bg_play(NULL);
+}
+
+void
+gc_sound_fx_reopen()
+{
 }
 
 void
 gc_sound_reopen()
 {
-  if (gc_prop_get()->fx || gc_prop_get()->music) {
-    if (sound_closed)
-      {
-	sdlplayer_reopen();
-	g_mutex_unlock(lock_fx);
-	g_mutex_unlock(lock_music);
-	sound_closed = FALSE;
-	music_paused = FALSE;
-      }
+  gc_sound_bg_reopen();
+  gc_sound_fx_reopen();
+}
+
+void
+gc_sound_bg_pause()
+{
+  if (bg_pipeline)
+  {
+    gst_element_set_state(bg_pipeline, GST_STATE_PAUSED);
   }
+  bg_paused = TRUE;
 }
 
 void
-gc_sound_pause()
+gc_sound_bg_resume()
 {
-  sdlplayer_pause_music();
-  music_paused = TRUE;
+  if(bg_pipeline)
+  {
+    gst_element_set_state(bg_pipeline, GST_STATE_PLAYING);
+    gst_element_get_state(bg_pipeline, NULL, NULL, 1000*GST_MSECOND);
+  }
+  bg_paused = FALSE;
 }
 
 void
-gc_sound_resume()
+gc_sound_fx_pause()
 {
-  sdlplayer_resume_music();
-  music_paused = FALSE;
+  if (fx_pipeline)
+  {
+    gst_element_set_state(fx_pipeline, GST_STATE_PAUSED);
+  }
+  fx_paused = TRUE;
+}
+
+void
+gc_sound_fx_resume()
+{
+  if(fx_pipeline)
+  {
+    gst_element_set_state(fx_pipeline, GST_STATE_PLAYING);
+    gst_element_get_state(fx_pipeline, NULL, NULL, 1000*GST_MSECOND);
+  }
+  fx_paused = FALSE;
 }
 
 /* =====================================================================
@@ -177,24 +225,17 @@ gc_sound_policy_get()
   return sound_policy;
 }
 
-/* =====================================================================
- * Thread scheduler background :
- *	- launches a single thread for playing and play any file found
- *        in the gcompris music directory
- ======================================================================*/
-static gpointer
-scheduler_music (gpointer user_data)
+static GSList *
+bg_build_music_list()
 {
   GcomprisProperties *properties = gc_prop_get();
-  gint i;
   gchar *str;
   gchar *music_dir;
   GSList *musiclist = NULL;
   GDir *dir;
   const gchar *one_dirent;
 
-  /* Sleep to let gcompris intialisation and intro music to complete */
-  g_usleep(25000000);
+  bg_music_index = 0;
 
   /* Load the Music directory file names */
   music_dir = g_strconcat(properties->package_data_dir, "/music/background", NULL);
@@ -213,7 +254,8 @@ scheduler_music (gpointer user_data)
       if (g_str_has_suffix(one_dirent, ".ogg"))
 	{
 	  str = g_strdup_printf("%s/%s", music_dir, one_dirent);
-	  musiclist = g_slist_insert (musiclist, str, RAND(0, g_slist_length(musiclist)));
+	  musiclist = g_slist_insert (musiclist, str,
+				      RAND(0, g_slist_length(musiclist)));
 	}
     }
   g_dir_close(dir);
@@ -225,92 +267,108 @@ scheduler_music (gpointer user_data)
       return NULL;
     }
 
-  /* Now loop over all our music files */
-  while (TRUE)
-    {
-      for(i=0; i<g_slist_length(musiclist); i++)
-	{
-	  /* Music can be disabled at any time */
-	  while(!gc_prop_get()->music || music_paused || sound_closed)
-	    g_usleep(1000000);
-
-	  /* WARNING Displaying stuff in a thread seems to make gcompris unstable */
-	  /*	  display_ogg_file_credits((char *)g_list_nth_data(musiclist, i)); */
-	  //	  if(decode_ogg_file((char *)g_list_nth_data(musiclist, i))!=0)
-	  g_mutex_lock(lock_music);
-	  if(sdlplayer_music((char *)g_slist_nth_data(musiclist, i), 128)!=0){
-	    g_warning("sdlplayer_music failed, try again in 5 seconds");
-	    g_usleep(5000000);
-	  }
-	  g_mutex_unlock(lock_music);
-
-	}
-    }
-
-  /* Never happen */
-  g_slist_free(musiclist);
-  g_warning( "The background thread music is stopped now. "\
-	     "The files in %s are not ogg vorbis OR the sound output failed",
-	     music_dir);
-  g_free(music_dir);
-  return NULL;
+  return(musiclist);
 }
+
 /* =====================================================================
- * Thread scheduler :
- *	- launches a single thread for playing a file
- *	- joins the previous thread at its end
- *	-	then launches another thread if some sounds are pending
- *	-	the thread never ends
+ * Thread scheduler background :
+ *	- launches a single thread for playing and play any file found
+ *        in the gcompris music directory
  ======================================================================*/
 static gpointer
-scheduler_fx (gpointer user_data)
-{
-  char *sound = NULL;
-
-  while (TRUE)
-    {
-      if ( ( sound = get_next_sound_to_play( ) ) != NULL )
-	{
-	  thread_play_ogg(sound);
-	  g_free(sound);
-	}
-      else
-	{
-	  g_mutex_lock (lock);
-	  g_cond_wait (cond, lock);
-	  g_mutex_unlock (lock);
-	}
-    }
-  return NULL;
-}
-/* =====================================================================
- * Thread function for playing a single file
- ======================================================================*/
-static void*
-thread_play_ogg (gchar *file)
+bg_play(gpointer dummy)
 {
   gchar *absolute_file;
 
-  g_warning("  Thread_play_ogg %s", file);
+  /* Music wrapping */
+  if(bg_music_index >= g_slist_length(music_list))
+    bg_music_index = 0;
 
-  absolute_file = gc_file_find_absolute(file);
+  absolute_file = gc_file_find_absolute(g_slist_nth_data(music_list, bg_music_index));
 
   if (!absolute_file)
     return NULL;
 
-  g_warning("   Calling gcompris internal sdlplayer_file (%s)", absolute_file);
-  g_mutex_lock(lock_fx);
-  sdlplayer_fx(absolute_file, 128);
-  g_mutex_unlock(lock_fx);
-  g_signal_emit (gc_sound_controller,
-		 GCOMPRIS_SOUND_GET_CLASS (gc_sound_controller)->sound_played_signal_id,
-		 0 /* details */,
-		 g_strdup(file));
-  g_warning("  sdlplayer_fx(%s) ended.", absolute_file);
+  bg_pipeline = gst_element_factory_make ("playbin", "play");
 
+  if(!bg_pipeline)
+    {
+      g_warning("Failed to build the gstreamer pipeline (for background music)");
+      gc_prop_get()->music = 0;
+      return NULL;
+    }
+
+  gst_bus_add_watch (gst_pipeline_get_bus (GST_PIPELINE (bg_pipeline)),
+		     bg_bus, bg_pipeline);
+
+
+  gchar *uri = g_strconcat("file://", absolute_file, NULL);
   g_free(absolute_file);
+  g_warning("  bg_play %s", uri);
 
-  return NULL;
+  g_object_set (G_OBJECT (bg_pipeline), "uri", uri, NULL);
+
+  GstStateChangeReturn statechanged = gst_element_set_state (bg_pipeline,
+							     GST_STATE_PLAYING);
+  gst_element_get_state(bg_pipeline, NULL, NULL, 1000*GST_MSECOND);
+  if( statechanged == GST_STATE_CHANGE_SUCCESS) {
+    g_warning("%s : bg_playing\n",__FUNCTION__);
+  }
+
+  g_free(uri);
+
+  return(NULL);
+}
+
+/* =====================================================================
+ * Thread function for playing a single file
+ ======================================================================*/
+static void
+fx_play()
+{
+  gchar *file = get_next_sound_to_play();
+  gchar *absolute_file;
+  GcomprisProperties *properties = gc_prop_get();
+
+  if(!file)
+    return;
+
+  g_warning("  fx_play %s", file);
+
+  absolute_file = gc_file_find_absolute(file);
+  g_free(file);
+
+  if (!absolute_file ||
+      !properties->fx)
+    return;
+
+  fx_pipeline = gst_element_factory_make ("playbin", "play");
+
+  if (!fx_pipeline)
+    {
+      g_warning("Failed to build the gstreamer pipeline");
+      gc_prop_get()->fx = 0;
+      return;
+    }
+
+  gchar *uri = g_strconcat("file://", absolute_file, NULL);
+  g_free(absolute_file);
+  g_warning("   uri '%s'", uri);
+
+  g_object_set (G_OBJECT (fx_pipeline), "uri", uri, NULL);
+  gst_bus_add_watch (gst_pipeline_get_bus (GST_PIPELINE (fx_pipeline)),
+		     fx_bus, fx_pipeline);
+
+  GstStateChangeReturn statechanged = gst_element_set_state (fx_pipeline,
+							     GST_STATE_PLAYING);
+  gst_element_get_state(fx_pipeline, NULL, NULL, 1000*GST_MSECOND);
+  if( statechanged == GST_STATE_CHANGE_SUCCESS) {
+    g_warning("%s : fx_playing\n",__FUNCTION__);
+  }
+
+  g_free(uri);
+
+  return;
 }
 
 /* =====================================================================
@@ -321,16 +379,12 @@ get_next_sound_to_play( )
 {
   char* tmpSound = NULL;
 
-  g_mutex_lock (lock);
-
   if ( g_list_length(pending_queue) > 0 )
     {
       tmpSound = g_list_nth_data( pending_queue, 0 );
       pending_queue = g_list_remove( pending_queue, tmpSound );
       g_warning( "... get_next_sound_to_play : %s\n", tmpSound );
     }
-
-  g_mutex_unlock (lock);
 
   return tmpSound;
 }
@@ -424,10 +478,8 @@ gc_sound_play_ogg_list( GList* files )
       pending_queue = g_list_remove( pending_queue, tmpSound );
       g_free(tmpSound);
     }
-    sdlplayer_halt_fx();
+    //    sdlplayer_halt_fx();
   }
-
-  g_mutex_lock (lock);
 
   list = g_list_first( files );
   while( list!=NULL )
@@ -439,12 +491,7 @@ gc_sound_play_ogg_list( GList* files )
       list = g_list_next(list);
     }
 
-  g_mutex_unlock (lock);
-
-  // Tell the scheduler to check for new sounds to play
-  g_warning("Tell the scheduler to check for new sounds to play\n");
-  g_cond_signal (cond);
-
+  fx_play();
 }
 
 /** return a string representing a letter or number audio file

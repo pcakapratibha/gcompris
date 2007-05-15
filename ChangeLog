@@ -1,3 +1,54 @@
+2007-05-16  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Based on the work of Terje Bergström <terje on terje point fi>
+	replaced sdl_mixer by gstreamer.
+	initial commit. at least, the synchrone mode with callback is not implemented
+	regular feature is in place, there is no more threads in this code.
+	there is a need for cleanup.
+
+	* configure.in:
+	* src/boards/canvas.c: (pygdk_rectangle_from_pyobject),
+	(_wrap_gnome_canvas_root),
+	(_wrap_gnome_canvas_set_pixels_per_unit),
+	(_wrap_gnome_canvas_set_scroll_region),
+	(_wrap_gnome_canvas_get_center_scroll_region),
+	(_wrap_gnome_canvas_set_center_scroll_region),
+	(_wrap_gnome_canvas_scroll_to), (_wrap_gnome_canvas_update_now),
+	(_wrap_gnome_canvas_get_item_at), (_wrap_gnome_canvas_get_color),
+	(_wrap_gnome_canvas_get_color_pixel),
+	(_wrap_gnome_canvas_set_dither), (_wrap_gnome_canvas_get_dither),
+	(_wrap_gnome_canvas_item_move), (_wrap_gnome_canvas_item_raise),
+	(_wrap_gnome_canvas_item_lower),
+	(_wrap_gnome_canvas_item_raise_to_top),
+	(_wrap_gnome_canvas_item_lower_to_bottom),
+	(_wrap_gnome_canvas_item_show), (_wrap_gnome_canvas_item_hide),
+	(_wrap_gnome_canvas_item_reparent),
+	(_wrap_gnome_canvas_item_grab_focus),
+	(_wrap_gnome_canvas_rich_text_cut_clipboard),
+	(_wrap_gnome_canvas_rich_text_copy_clipboard),
+	(_wrap_gnome_canvas_rich_text_paste_clipboard),
+	(_wrap_gnome_canvas_rich_text_set_buffer),
+	(_wrap_gnome_canvas_rich_text_get_buffer),
+	(_wrap_gnome_canvas_rich_text_get_iter_location),
+	(_wrap_gnome_canvas_rich_text_get_iter_at_location),
+	(pycanvas_register_classes):
+	* src/boards/click_on_letter.c: (start_board), (end_board):
+	* src/boards/colors.c: (start_board), (end_board):
+	* src/boards/memory.c: (start_board), (end_board):
+	* src/boards/py-mod-sound.c: (py_gc_sound_pause),
+	(py_gc_sound_resume):
+	* src/gcompris/Makefile.am:
+	* src/gcompris/bonus.c: (end_gc_bonus_end_display), (end_bonus):
+	* src/gcompris/config.c: (item_event_ok):
+	* src/gcompris/soundutil.c: (gc_sound_init), (fx_bus), (bg_bus),
+	(gc_sound_close), (gc_sound_bg_close), (gc_sound_fx_close),
+	(gc_sound_bg_reopen), (gc_sound_fx_reopen), (gc_sound_reopen),
+	(gc_sound_bg_pause), (gc_sound_bg_resume), (gc_sound_fx_pause),
+	(gc_sound_fx_resume), (bg_build_music_list), (bg_play), (fx_play),
+	(get_next_sound_to_play), (gc_sound_play_ogg_list):
+	* src/gcompris/soundutil.h:
+	* src/gcompris/sdlplayer.c: removed.
+
 2007-05-13  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* boards/sounds/HOWTO_ENCODE: added a howto reformat to 44100Hz and normalize-ogg
