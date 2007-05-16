@@ -1,3 +1,13 @@
+2007-05-17  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Implemented sound callback API. Melody works again but
+	there are a bug somewhere, sometimes sounds are missed.
+
+	* src/boards/python/melody.py:
+	* src/gcompris/soundutil.c: (gc_sound_init), (fx_bus), (fx_play),
+	(gc_sound_play_ogg_cb), (gc_sound_callback):
+	* src/gcompris/soundutil.h:
+
 2007-05-16  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Based on the work of Terje Bergström <terje on terje point fi>

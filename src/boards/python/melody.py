@@ -18,6 +18,7 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
+import gobject
 import gnomecanvas
 import gcompris
 import gcompris.utils
@@ -132,7 +133,7 @@ class Gcompris_melody:
 
     # Clear all timer
     for i in self.timers :
-      gtk.timeout_remove(i)
+      gobject.source_remove(i)
 
     self.timers = []
 
@@ -245,7 +246,7 @@ class Gcompris_melody:
   def repeat(self):
     #print("Gcompris_melody repeat.")
     # Important to use a timer here to keep self.timers up todate
-    self.timers.append(gtk.timeout_add(50, self.repeat_it))
+    self.timers.append(gobject.timeout_add(50, self.repeat_it))
 
   def repeat_it(self):
     #print("Gcompris_melody repeat it.")
@@ -262,12 +263,12 @@ class Gcompris_melody:
     timer = 0
 
     for i in self.solution:
-      self.timers.append(gtk.timeout_add(timer, self.show_bang, i))
+      self.timers.append(gobject.timeout_add(timer, self.show_bang, i))
       timer = timer + 1000
-      self.timers.append(gtk.timeout_add(timer, self.show_bang_stop, i))
+      self.timers.append(gobject.timeout_add(timer, self.show_bang_stop, i))
       timer = timer + 500
 
-    self.timers.append(gtk.timeout_add(timer, self.ready))
+    self.timers.append(gobject.timeout_add(timer, self.ready))
 
 
   def config(self):
@@ -282,7 +283,7 @@ class Gcompris_melody:
     for i in range(self.gcomprisBoard.level+2):
       self.solution.append(sound_struct[random.randint(0,len(sound_struct)-1)])
 
-    self.timers.append(gtk.timeout_add(1300, self.repeat_it))
+    self.timers.append(gobject.timeout_add(1300, self.repeat_it))
 
   def key_press(self, keyval, commit_str, preedit_str):
     #print("got key %i" % keyval)

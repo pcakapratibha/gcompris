@@ -51,8 +51,7 @@ static gpointer  bg_play (gpointer dummy);
 static GSList   *bg_build_music_list();
 
 /* sound control */
-GObject *gc_sound_controller = NULL;
-void gc_sound_callback(GcomprisSound *ctl, gchar *file, gpointer user_data);
+void gc_sound_callback(gchar *file);
 GHashTable *sound_callbacks = NULL;
 
 /* =====================================================================
@@ -75,9 +74,10 @@ gc_sound_init()
 
   /* Delay to let gcompris intialisatiobg_build_music_list()n and intro music to complete */
   music_list = bg_build_music_list();
-  gc_bg_timer_id = gtk_timeout_add(25000,
-				   (GtkFunction)bg_play,
-				   NULL);
+  if(gc_prop_get()->music)
+    gc_bg_timer_id = gtk_timeout_add(25000,
+				     (GtkFunction)bg_play,
+				     NULL);
 }
 
 static gboolean
@@ -87,12 +87,14 @@ fx_bus(GstBus* bus, GstMessage* msg, gpointer data)
     {
     case GST_MESSAGE_EOS:
       gc_sound_fx_close();
+      gc_sound_callback((gchar *)data);
       fx_play();
       g_warning("fx_bus: EOS");
       break;
     default:
       break;
     }
+
   return TRUE;
 }
 
@@ -336,7 +338,6 @@ fx_play()
   g_warning("  fx_play %s", file);
 
   absolute_file = gc_file_find_absolute(file);
-  g_free(file);
 
   if (!absolute_file ||
       !properties->fx)
@@ -357,7 +358,7 @@ fx_play()
 
   g_object_set (G_OBJECT (fx_pipeline), "uri", uri, NULL);
   gst_bus_add_watch (gst_pipeline_get_bus (GST_PIPELINE (fx_pipeline)),
-		     fx_bus, fx_pipeline);
+		     fx_bus, file);
 
   GstStateChangeReturn statechanged = gst_element_set_state (fx_pipeline,
 							     GST_STATE_PLAYING);
@@ -404,11 +405,13 @@ gc_sound_play_ogg_cb(const gchar *file, GcomprisSoundCallback cb)
 
   if (!sound_callbacks)
     sound_callbacks = g_hash_table_new_full (g_str_hash,
-					    g_str_equal,
-					    NULL,
-					    NULL);
+					     g_str_equal,
+					     NULL,
+					     NULL);
 
-  /* i suppose there will not be two call of that function with same sound file before sound is played */
+  /* i suppose there will not be two call of that function with same sound
+   * file before sound is played
+   */
   g_hash_table_replace (sound_callbacks,
 			(gpointer)intern_file,
 			cb);
@@ -453,10 +456,6 @@ gc_sound_play_ogg(const gchar *sound, ...)
  * If it doesn't exists, then the test is done with a music file:
  * music/<sound>
  =====================================================================*/
-void free_string(gpointer data,  gpointer user_data)
-{
-  g_free(data);
-}
 void
 gc_sound_play_ogg_list( GList* files )
 {
@@ -536,7 +535,7 @@ gc_sound_alphabet(gchar *chars)
 }
 
 
-void gc_sound_callback(GcomprisSound *ctl, gchar *file, gpointer user_data)
+void gc_sound_callback(gchar *file)
 {
   GcomprisSoundCallback cb;
 
@@ -545,84 +544,16 @@ void gc_sound_callback(GcomprisSound *ctl, gchar *file, gpointer user_data)
 
   cb = g_hash_table_lookup (sound_callbacks, file);
 
-  if (cb){
-    g_warning("calling callback for %s", file);
-    cb(file);
-  }
+  if (cb)
+    {
+      g_warning("calling callback for %s", file);
+      cb(file);
+    }
   else
     g_warning("%s has no callback", file);
+
   g_hash_table_remove(sound_callbacks, file);
 
+  g_free(file);
 }
 
-/*************************************/
-/* GObject control sound             */
-struct _GcomprisSoundPrivate
-{
-};
-
-/* "gcompris-marshal.h" */
-
-#include	<glib-object.h>
-
-/* VOID:POINTER (gcompris-marshal.list:3) */
-#define gnome_canvas_marshal_VOID__POINTER	g_cclosure_marshal_VOID__POINTER
-
-static void
-gc_sound_instance_init (GTypeInstance   *instance,
-			      gpointer         g_class)
-{
-        GcomprisSound *self = (GcomprisSound *)instance;
-        self->private = g_new (GcomprisSoundPrivate, 1);
-}
-
-static void
-default_sound_played_signal_handler (GcomprisSound *obj, gchar *file, gpointer user_data)
-{
-        /* Here, we trigger the real file write. */
-        g_warning ("sound_played: %s\n", file);
-}
-
-static void
-gc_sound_class_init (gpointer g_class,
-			   gpointer g_class_data)
-{
-        GcomprisSoundClass *klass = GCOMPRIS_SOUND_CLASS (g_class);
-
-	klass->sound_played = default_sound_played_signal_handler;
-
-        klass->sound_played_signal_id =
-                g_signal_new ("sound-played",
-			      G_TYPE_FROM_CLASS (g_class),
-			      G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-			      G_STRUCT_OFFSET (GcomprisSoundClass, sound_played),
-			      NULL /* accumulator */,
-			      NULL /* accu_data */,
-			      gnome_canvas_marshal_VOID__POINTER,
-			      G_TYPE_NONE /* return_type */,
-			      1     /* n_params */,
-			      G_TYPE_POINTER  /* param_types */);
-
-}
-
-GType gc_sound_get_type (void)
-{
-        static GType type = 0;
-        if (type == 0) {
-                static const GTypeInfo info = {
-                        sizeof (GcomprisSoundClass),
-                        NULL,   /* base_init */
-                        NULL,   /* base_finalize */
-                        gc_sound_class_init,   /* class_init */
-                        NULL,   /* class_finalize */
-                        NULL,   /* class_data */
-                        sizeof (GcomprisSound),
-                        0,      /* n_preallocs */
-                        gc_sound_instance_init    /* instance_init */
-                };
-                type = g_type_register_static (G_TYPE_OBJECT,
-                                               "GcomprisSoundType",
-                                               &info, 0);
-        }
-        return type;
-}
