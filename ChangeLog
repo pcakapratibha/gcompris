@@ -1,3 +1,8 @@
+2007-05-20  Danilo Šegan  <danilo@gnome.org>
+
+	* boards/sounds/sr/*: Added Serbian sounds by Mihailo and Slobodan
+	Simic.
+
 2007-05-17  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Implemented sound callback API. Melody works again but
