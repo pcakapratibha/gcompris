@@ -36,7 +36,6 @@ static GstElement *bg_pipeline = NULL;
 static GstElement *fx_pipeline = NULL;
 
 static guint bg_music_index;
-static gint gc_bg_timer_id = 0;
 
 GSList *music_list;
 
@@ -72,12 +71,7 @@ gc_sound_init()
 
   sound_policy = PLAY_AFTER_CURRENT;
 
-  /* Delay to let gcompris intialisatiobg_build_music_list()n and intro music to complete */
   music_list = bg_build_music_list();
-  if(gc_prop_get()->music)
-    gc_bg_timer_id = gtk_timeout_add(25000,
-				     (GtkFunction)bg_play,
-				     NULL);
 }
 
 static gboolean
@@ -86,10 +80,11 @@ fx_bus(GstBus* bus, GstMessage* msg, gpointer data)
   switch( GST_MESSAGE_TYPE( msg ) )
     {
     case GST_MESSAGE_EOS:
+      g_warning("fx_bus: EOS START");
       gc_sound_fx_close();
       gc_sound_callback((gchar *)data);
       fx_play();
-      g_warning("fx_bus: EOS");
+      g_warning("fx_bus: EOS END");
       break;
     default:
       break;
@@ -135,6 +130,7 @@ gc_sound_bg_close()
 void
 gc_sound_fx_close()
 {
+  g_warning("gc_sound_fx_close");
   if (fx_pipeline)
     {
       gst_element_set_state(fx_pipeline, GST_STATE_NULL);
@@ -240,7 +236,8 @@ bg_build_music_list()
   bg_music_index = 0;
 
   /* Load the Music directory file names */
-  music_dir = g_strconcat(properties->package_data_dir, "/music/background", NULL);
+  music_dir = g_strconcat(properties->package_data_dir, "/music/background",
+			  NULL);
 
   dir = g_dir_open(music_dir, 0, NULL);
 
@@ -286,7 +283,8 @@ bg_play(gpointer dummy)
   if(bg_music_index >= g_slist_length(music_list))
     bg_music_index = 0;
 
-  absolute_file = gc_file_find_absolute(g_slist_nth_data(music_list, bg_music_index));
+  absolute_file = gc_file_find_absolute(g_slist_nth_data(music_list,
+							 bg_music_index));
 
   if (!absolute_file)
     return NULL;
@@ -328,9 +326,14 @@ bg_play(gpointer dummy)
 static void
 fx_play()
 {
-  gchar *file = get_next_sound_to_play();
+  gchar *file;
   gchar *absolute_file;
   GcomprisProperties *properties = gc_prop_get();
+
+  if(fx_pipeline)
+    return;
+
+  file = get_next_sound_to_play();
 
   if(!file)
     return;
@@ -465,11 +468,11 @@ gc_sound_play_ogg_list( GList* files )
   if ( !gc_prop_get()->fx )
     return;
 
-  if ( 	sound_policy == PLAY_ONLY_IF_IDLE &&
+  if (sound_policy == PLAY_ONLY_IF_IDLE &&
         g_list_length( pending_queue ) > 0 )
     return;
 
-  if ( sound_policy == PLAY_AND_INTERRUPT ) {
+  if (sound_policy == PLAY_AND_INTERRUPT ) {
     g_warning("halt music");
     while ( g_list_length(pending_queue) > 0 )
     {
@@ -485,7 +488,8 @@ gc_sound_play_ogg_list( GList* files )
     {
       if (g_list_length(pending_queue) < MAX_QUEUE_LENGTH)
 	{
-	  pending_queue = g_list_append(pending_queue, g_strdup( (gchar*)(list->data) ));
+	  pending_queue = g_list_append(pending_queue,
+					g_strdup( (gchar*)(list->data) ));
 	}
       list = g_list_next(list);
     }

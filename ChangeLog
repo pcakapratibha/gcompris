@@ -1,3 +1,17 @@
+2007-05-20  Bruno Coudoin,,,  <set EMAIL_ADDRESS environment variable>
+
+	Improved the background music. Now the music is started when
+	the welcome sound is played using the callback api.
+	Now better respect for the PLAY_AND_INTERRUPT flag. It's
+	still not perfect, the sound being currently played is not
+	interrupted, only the queue is cleaned up.
+
+	* src/boards/wordsgame.c: (start_board), (key_press):
+	* src/gcompris/gcompris.c: (start_bg_music), (main):
+	* src/gcompris/soundutil.c: (gc_sound_init), (fx_bus),
+	(gc_sound_fx_close), (bg_build_music_list), (bg_play), (fx_play),
+	(gc_sound_play_ogg_list):
+
 2007-05-20  Danilo Šegan  <danilo@gnome.org>
 
 	* boards/sounds/sr/*: Added Serbian sounds by Mihailo and Slobodan

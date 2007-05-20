@@ -180,7 +180,8 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       /* disable im_context */
       //gcomprisBoard->disable_im_context = TRUE;
 
-      gc_set_background(gnome_canvas_root(gcomprisBoard->canvas), "opt/scenery_background.png");
+      gc_set_background(gnome_canvas_root(gcomprisBoard->canvas),
+			"opt/scenery_background.png");
 
 
       gcomprisBoard->level = 1;
@@ -262,6 +263,7 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
     g_warning("keyval %d", keyval);
     return TRUE;
   }
+
 
   if (preedit_str){
     g_warning("preedit_str %s", preedit_str);
