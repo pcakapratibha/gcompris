@@ -87,10 +87,10 @@ fx_bus(GstBus* bus, GstMessage* msg, gpointer data)
       g_warning("fx_bus: EOS END");
       break;
     default:
-      break;
+      return TRUE;
     }
 
-  return TRUE;
+  return FALSE;
 }
 
 static gboolean
@@ -103,9 +103,9 @@ bg_bus(GstBus* bus, GstMessage* msg, gpointer data)
 	bg_play(NULL);
 	break;
     default:
-	break;
+      return TRUE;
   }
-  return TRUE;
+  return FALSE;
 }
 
 void
@@ -121,7 +121,6 @@ gc_sound_bg_close()
   if (bg_pipeline)
     {
       gst_element_set_state(bg_pipeline, GST_STATE_NULL);
-      gst_element_get_state(bg_pipeline, NULL, NULL, 1000*GST_MSECOND);
       gst_object_unref(GST_OBJECT(bg_pipeline));
       bg_pipeline = NULL;
     }
@@ -134,16 +133,17 @@ gc_sound_fx_close()
   if (fx_pipeline)
     {
       gst_element_set_state(fx_pipeline, GST_STATE_NULL);
-      gst_element_get_state(fx_pipeline, NULL, NULL, 1000*GST_MSECOND);
       gst_object_unref(GST_OBJECT(fx_pipeline));
       fx_pipeline = NULL;
     }
+  g_warning("gc_sound_fx_close done");
 }
 
 void
 gc_sound_bg_reopen()
 {
-  bg_play(NULL);
+  if(!bg_paused)
+    bg_play(NULL);
 }
 
 void
@@ -172,10 +172,13 @@ void
 gc_sound_bg_resume()
 {
   if(bg_pipeline)
-  {
     gst_element_set_state(bg_pipeline, GST_STATE_PLAYING);
-    gst_element_get_state(bg_pipeline, NULL, NULL, 1000*GST_MSECOND);
-  }
+  else
+    {
+      bg_paused = FALSE;
+      gc_sound_bg_reopen();
+    }
+
   bg_paused = FALSE;
 }
 
@@ -195,7 +198,6 @@ gc_sound_fx_resume()
   if(fx_pipeline)
   {
     gst_element_set_state(fx_pipeline, GST_STATE_PLAYING);
-    gst_element_get_state(fx_pipeline, NULL, NULL, 1000*GST_MSECOND);
   }
   fx_paused = FALSE;
 }
@@ -308,12 +310,7 @@ bg_play(gpointer dummy)
 
   g_object_set (G_OBJECT (bg_pipeline), "uri", uri, NULL);
 
-  GstStateChangeReturn statechanged = gst_element_set_state (bg_pipeline,
-							     GST_STATE_PLAYING);
-  gst_element_get_state(bg_pipeline, NULL, NULL, 1000*GST_MSECOND);
-  if( statechanged == GST_STATE_CHANGE_SUCCESS) {
-    g_warning("%s : bg_playing\n",__FUNCTION__);
-  }
+  gst_element_set_state (bg_pipeline, GST_STATE_PLAYING);
 
   g_free(uri);
 
@@ -331,7 +328,10 @@ fx_play()
   GcomprisProperties *properties = gc_prop_get();
 
   if(fx_pipeline)
-    return;
+    {
+      printf("fx_play already playing\n");
+      return;
+    }
 
   file = get_next_sound_to_play();
 
@@ -363,12 +363,7 @@ fx_play()
   gst_bus_add_watch (gst_pipeline_get_bus (GST_PIPELINE (fx_pipeline)),
 		     fx_bus, file);
 
-  GstStateChangeReturn statechanged = gst_element_set_state (fx_pipeline,
-							     GST_STATE_PLAYING);
-  gst_element_get_state(fx_pipeline, NULL, NULL, 1000*GST_MSECOND);
-  if( statechanged == GST_STATE_CHANGE_SUCCESS) {
-    g_warning("%s : fx_playing\n",__FUNCTION__);
-  }
+  gst_element_set_state (fx_pipeline, GST_STATE_PLAYING);
 
   g_free(uri);
 
@@ -463,24 +458,24 @@ void
 gc_sound_play_ogg_list( GList* files )
 {
   GList* list;
-  char* tmpSound = NULL;
+  gchar* tmpSound = NULL;
 
   if ( !gc_prop_get()->fx )
     return;
 
   if (sound_policy == PLAY_ONLY_IF_IDLE &&
-        g_list_length( pending_queue ) > 0 )
+      g_list_length( pending_queue ) > 0 )
     return;
 
   if (sound_policy == PLAY_AND_INTERRUPT ) {
-    g_warning("halt music");
+    gc_sound_fx_close();
     while ( g_list_length(pending_queue) > 0 )
     {
       tmpSound = g_list_nth_data( pending_queue, 0 );
+      g_warning("removing queue file (%s)", tmpSound);
       pending_queue = g_list_remove( pending_queue, tmpSound );
-      g_free(tmpSound);
+      gc_sound_callback(tmpSound);
     }
-    //    sdlplayer_halt_fx();
   }
 
   list = g_list_first( files );
@@ -490,6 +485,7 @@ gc_sound_play_ogg_list( GList* files )
 	{
 	  pending_queue = g_list_append(pending_queue,
 					g_strdup( (gchar*)(list->data) ));
+	  g_warning("adding queue file (%s)", (gchar*)(list->data));
 	}
       list = g_list_next(list);
     }

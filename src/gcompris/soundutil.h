@@ -25,7 +25,6 @@
 #include "gcompris.h"
 
 #define MAX_QUEUE_LENGTH 5
-#define MAX_SOUND_FILES 20
 
 typedef enum
 {

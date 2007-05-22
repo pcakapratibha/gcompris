@@ -1,3 +1,24 @@
+2007-05-22  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Switched melody sounds to wav, easier to manage and less startup delay
+	- Improved the gstreamer based code to interrupt also the playing sound
+
+	* boards/melody.xml.in:
+	* src/boards/python/melody.py:
+	* src/boards/wordsgame.c: (wordsgame_create_item):
+	* src/gcompris/soundutil.c: (fx_bus), (bg_bus),
+	(gc_sound_bg_close), (gc_sound_fx_close), (gc_sound_bg_reopen),
+	(gc_sound_bg_resume), (gc_sound_fx_resume), (bg_play), (fx_play),
+	(gc_sound_play_ogg_list):
+	* src/gcompris/soundutil.h:
+
+2007-05-22  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed falling words for arabic (and Right To Left languages)
+	Bug reported by Khaled Hosny.
+
+	* src/boards/wordsgame.c: (wordsgame_create_item):
+
 2007-05-20  Bruno Coudoin,,,  <set EMAIL_ADDRESS environment variable>
 
 	Improved the background music. Now the music is started when
