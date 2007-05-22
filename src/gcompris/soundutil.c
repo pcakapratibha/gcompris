@@ -328,10 +328,7 @@ fx_play()
   GcomprisProperties *properties = gc_prop_get();
 
   if(fx_pipeline)
-    {
-      printf("fx_play already playing\n");
-      return;
-    }
+    return;
 
   file = get_next_sound_to_play();
 

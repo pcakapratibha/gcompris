@@ -1,3 +1,457 @@
+2007-05-23  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- major packaging change, imported libart_lgpl and libgnomecanvas
+	  from gnome svn (trunk). We now build them as static library.
+	  Packager change, you no more need them in GCompris require's.
+
+	* INSTALL:
+	* configure.in:
+	* install-sh:
+	* src/Makefile.am:
+	* src/gcompris/Makefile.am:
+	* src/gcompris/gcompris.c: (main):
+	* src/gcompris/soundutil.c: (fx_play):
+	* src/libart_lgpl/AUTHORS:
+	* src/libart_lgpl/COPYING:
+	* src/libart_lgpl/ChangeLog:
+	* src/libart_lgpl/Makefile:
+	* src/libart_lgpl/Makefile.am:
+	* src/libart_lgpl/Makefile.in:
+	* src/libart_lgpl/NEWS:
+	* src/libart_lgpl/README:
+	* src/libart_lgpl/README.CVS:
+	* src/libart_lgpl/art_affine.c: (art_affine_point),
+	(art_affine_invert), (art_affine_flip), (art_ftoa),
+	(art_affine_to_string), (art_affine_multiply),
+	(art_affine_identity), (art_affine_scale), (art_affine_rotate),
+	(art_affine_shear), (art_affine_translate), (art_affine_expansion),
+	(art_affine_rectilinear), (art_affine_equal):
+	* src/libart_lgpl/art_affine.h:
+	* src/libart_lgpl/art_alphagamma.c: (art_alphagamma_new),
+	(art_alphagamma_free):
+	* src/libart_lgpl/art_alphagamma.h:
+	* src/libart_lgpl/art_bpath.c: (art_bpath_affine_transform):
+	* src/libart_lgpl/art_bpath.h:
+	* src/libart_lgpl/art_filterlevel.h:
+	* src/libart_lgpl/art_gray_svp.c: (art_gray_svp_callback),
+	(art_gray_svp_aa):
+	* src/libart_lgpl/art_gray_svp.h:
+	* src/libart_lgpl/art_misc.c: (art_die), (art_warn), (art_dprint),
+	(art_alloc), (art_free), (art_realloc):
+	* src/libart_lgpl/art_misc.h:
+	* src/libart_lgpl/art_pathcode.h:
+	* src/libart_lgpl/art_pixbuf.c: (art_pixbuf_new_rgb_dnotify),
+	(art_pixbuf_new_rgba_dnotify), (art_pixbuf_new_const_rgb),
+	(art_pixbuf_new_const_rgba), (art_pixel_destroy),
+	(art_pixbuf_new_rgb), (art_pixbuf_new_rgba), (art_pixbuf_free),
+	(art_pixbuf_free_shallow), (art_pixbuf_duplicate):
+	* src/libart_lgpl/art_pixbuf.h:
+	* src/libart_lgpl/art_point.h:
+	* src/libart_lgpl/art_rect.c: (art_irect_copy), (art_irect_union),
+	(art_irect_intersect), (art_irect_empty), (irect_point_inside),
+	(art_drect_copy), (art_drect_union), (art_drect_intersect),
+	(art_drect_empty), (art_drect_affine_transform),
+	(art_drect_to_irect):
+	* src/libart_lgpl/art_rect.h:
+	* src/libart_lgpl/art_rect_svp.c: (art_drect_svp),
+	(art_drect_svp_union):
+	* src/libart_lgpl/art_rect_svp.h:
+	* src/libart_lgpl/art_rect_uta.c: (art_rect_list_from_uta):
+	* src/libart_lgpl/art_rect_uta.h:
+	* src/libart_lgpl/art_render.c: (art_render_new),
+	(art_render_clear), (art_render_clear_rgb), (art_render_nop_done),
+	(art_render_clear_render_rgb8), (art_render_clear_render_8),
+	(art_render_clear_render_16), (art_render_choose_clear_callback),
+	(art_render_composite_render_noa_8_norm), (art_render_composite),
+	(art_render_composite_8), (art_render_composite_8_opt1),
+	(art_render_composite_8_opt2),
+	(art_render_choose_compositing_callback),
+	(art_render_invoke_callbacks), (art_render_invoke),
+	(art_render_mask_solid), (art_render_add_mask_source),
+	(art_render_add_image_source), (art_render_image_solid_done),
+	(art_render_image_solid_rgb8_opaq_init),
+	(art_render_image_solid_rgb8_opaq), (art_render_image_solid_rgb8),
+	(art_render_image_solid_negotiate), (art_render_image_solid):
+	* src/libart_lgpl/art_render.h:
+	* src/libart_lgpl/art_render_gradient.c: (art_rgba_gradient_run),
+	(calc_color_at), (art_render_gradient_linear_render_8),
+	(art_render_gradient_setpix), (art_render_gradient_linear_done),
+	(art_render_gradient_linear_render),
+	(art_render_gradient_linear_negotiate),
+	(art_render_gradient_linear), (art_render_gradient_radial_done),
+	(art_render_gradient_radial_render),
+	(art_render_gradient_radial_negotiate),
+	(art_render_gradient_radial):
+	* src/libart_lgpl/art_render_gradient.h:
+	* src/libart_lgpl/art_render_mask.c: (art_render_mask_done),
+	(art_render_mask_can_drive), (art_render_mask_render),
+	(art_render_mask_prepare), (art_render_mask):
+	* src/libart_lgpl/art_render_mask.h:
+	* src/libart_lgpl/art_render_svp.c: (art_render_svp_done),
+	(art_render_svp_can_drive), (art_render_svp_callback),
+	(art_render_svp_callback_span), (art_render_svp_callback_opacity),
+	(art_render_svp_callback_opacity_span),
+	(art_render_svp_invoke_driver), (art_render_svp_prepare),
+	(art_render_svp):
+	* src/libart_lgpl/art_render_svp.h:
+	* src/libart_lgpl/art_rgb.c: (art_rgb_fill_run),
+	(art_rgb_run_alpha):
+	* src/libart_lgpl/art_rgb.h:
+	* src/libart_lgpl/art_rgb_a_affine.c: (art_rgb_a_affine):
+	* src/libart_lgpl/art_rgb_a_affine.h:
+	* src/libart_lgpl/art_rgb_affine.c: (art_rgb_affine):
+	* src/libart_lgpl/art_rgb_affine.h:
+	* src/libart_lgpl/art_rgb_affine_private.c: (art_rgb_affine_run):
+	* src/libart_lgpl/art_rgb_affine_private.h:
+	* src/libart_lgpl/art_rgb_bitmap_affine.c:
+	(art_rgb_bitmap_affine_opaque), (art_rgb_bitmap_affine):
+	* src/libart_lgpl/art_rgb_bitmap_affine.h:
+	* src/libart_lgpl/art_rgb_pixbuf_affine.c: (art_rgb_pixbuf_affine):
+	* src/libart_lgpl/art_rgb_pixbuf_affine.h:
+	* src/libart_lgpl/art_rgb_rgba_affine.c: (art_rgb_rgba_affine):
+	* src/libart_lgpl/art_rgb_rgba_affine.h:
+	* src/libart_lgpl/art_rgb_svp.c: (art_rgb_svp_callback),
+	(art_rgb_svp_aa), (art_rgb_svp_alpha_callback),
+	(art_rgb_svp_alpha_opaque_callback), (art_rgb_svp_alpha):
+	* src/libart_lgpl/art_rgb_svp.h:
+	* src/libart_lgpl/art_rgba.c: (art_rgba_rgba_composite),
+	(art_rgba_fill_run), (art_rgba_run_alpha):
+	* src/libart_lgpl/art_rgba.h:
+	* src/libart_lgpl/art_svp.c: (art_svp_add_segment), (art_svp_free),
+	(art_svp_seg_compare):
+	* src/libart_lgpl/art_svp.h:
+	* src/libart_lgpl/art_svp_intersect.c: (art_pri_new),
+	(art_pri_free), (art_pri_empty), (art_pri_bubble_up),
+	(art_pri_insert), (art_pri_sift_down_from_root), (art_pri_choose),
+	(double_rand), (art_pri_pt_pool_new), (art_pri_pt_alloc),
+	(art_pri_pt_free), (art_pri_pt_pool_free), (main),
+	(art_svp_writer_rewind_add_segment),
+	(art_svp_writer_rewind_add_point),
+	(art_svp_writer_rewind_close_segment),
+	(art_svp_writer_rewind_reap), (art_svp_writer_rewind_new),
+	(art_svp_intersect_setup_seg), (art_svp_intersect_add_horiz),
+	(art_svp_intersect_push_pt), (art_svp_intersect_break),
+	(art_svp_intersect_add_point), (art_svp_intersect_swap_active),
+	(art_svp_intersect_test_cross), (art_svp_intersect_active_delete),
+	(art_svp_intersect_active_free), (art_svp_intersect_insert_cross),
+	(art_svp_intersect_horiz), (art_svp_intersect_insert_line),
+	(art_svp_intersect_process_intersection),
+	(art_svp_intersect_advance_cursor), (art_svp_intersect_add_seg),
+	(art_svp_intersect_sanitycheck_winding),
+	(art_svp_intersect_horiz_commit), (art_svp_intersect_print_active),
+	(art_svp_intersect_sanitycheck), (art_svp_intersector):
+	* src/libart_lgpl/art_svp_intersect.h:
+	* src/libart_lgpl/art_svp_ops.c: (art_svp_merge), (print_ps_vpath),
+	(print_ps_svp), (art_svp_merge_perturbed), (art_svp_union),
+	(art_svp_intersect), (art_svp_diff), (art_svp_minus):
+	* src/libart_lgpl/art_svp_ops.h:
+	* src/libart_lgpl/art_svp_point.c: (art_svp_point_wind),
+	(art_svp_point_dist):
+	* src/libart_lgpl/art_svp_point.h:
+	* src/libart_lgpl/art_svp_render_aa.c:
+	(art_svp_render_insert_active), (art_svp_render_delete_active),
+	(art_svp_render_aa_iter), (art_svp_render_aa_iter_step),
+	(art_svp_render_aa_iter_done), (art_svp_render_aa):
+	* src/libart_lgpl/art_svp_render_aa.h:
+	* src/libart_lgpl/art_svp_vpath.c: (reverse_points),
+	(art_svp_from_vpath):
+	* src/libart_lgpl/art_svp_vpath.h:
+	* src/libart_lgpl/art_svp_vpath_stroke.c:
+	(art_svp_vpath_stroke_arc), (render_seg), (render_cap),
+	(art_svp_vpath_stroke_raw), (print_ps_vpath), (print_ps_svp),
+	(art_svp_vpath_stroke):
+	* src/libart_lgpl/art_svp_vpath_stroke.h:
+	* src/libart_lgpl/art_svp_wind.c: (intersect_lines),
+	(trap_epsilon), (x_order), (x_order_2), (traverse), (insert_ip),
+	(intersect_neighbors), (svp_add_point), (find_crossing),
+	(fix_crossing), (art_svp_uncross), (art_svp_rewind_uncrossed):
+	* src/libart_lgpl/art_svp_wind.h:
+	* src/libart_lgpl/art_uta.c: (art_uta_new), (art_uta_new_coords),
+	(art_uta_free):
+	* src/libart_lgpl/art_uta.h:
+	* src/libart_lgpl/art_uta_ops.c: (art_uta_union):
+	* src/libart_lgpl/art_uta_ops.h:
+	* src/libart_lgpl/art_uta_rect.c: (art_uta_from_irect):
+	* src/libart_lgpl/art_uta_rect.h:
+	* src/libart_lgpl/art_uta_svp.c: (art_uta_from_svp):
+	* src/libart_lgpl/art_uta_svp.h:
+	* src/libart_lgpl/art_uta_vpath.c: (art_uta_add_line),
+	(art_uta_from_vpath):
+	* src/libart_lgpl/art_uta_vpath.h:
+	* src/libart_lgpl/art_vpath.c: (art_vpath_add_point),
+	(art_vpath_new_circle), (art_vpath_affine_transform),
+	(art_vpath_bbox_drect), (art_vpath_bbox_irect),
+	(art_vpath_perturb):
+	* src/libart_lgpl/art_vpath.h:
+	* src/libart_lgpl/art_vpath_bpath.c: (art_bezier_to_vec),
+	(art_vpath_render_bez), (art_bez_path_to_vec):
+	* src/libart_lgpl/art_vpath_bpath.h:
+	* src/libart_lgpl/art_vpath_dash.c: (art_vpath_dash_max_subpath),
+	(art_vpath_dash):
+	* src/libart_lgpl/art_vpath_dash.h:
+	* src/libart_lgpl/art_vpath_svp.c: (art_vpath_svp_point_compare),
+	(art_vpath_svp_compare), (art_vpath_from_svp):
+	* src/libart_lgpl/art_vpath_svp.h:
+	* src/libart_lgpl/gen_art_config.c: (die), (main):
+	* src/libart_lgpl/libart-config.in:
+	* src/libart_lgpl/libart-features.c: (libart_preinit),
+	(libart_postinit):
+	* src/libart_lgpl/libart-features.h:
+	* src/libart_lgpl/libart-features.h.in:
+	* src/libart_lgpl/libart.h:
+	* src/libart_lgpl/libartConf.sh.in:
+	* src/libart_lgpl/makefile.msc:
+	* src/libart_lgpl/test_gradient.c: (randstar), (rect), (draw_test),
+	(configure_event), (expose_event), (button_press_event),
+	(motion_notify_event), (quit), (change_gradient), (change_spread),
+	(main):
+	* src/libart_lgpl/testart.c: (test_affine), (randstar),
+	(print_svp), (print_vpath), (make_testpat), (test_dist),
+	(test_dash), (test_render_gradient), (test_render_rad_gradient),
+	(test_gradient), (output_svp_ppm), (test_intersect), (usage),
+	(main):
+	* src/libart_lgpl/testuta.c: (print_uta_ps), (print_rbuf_ps),
+	(randline), (print_ps_vpath), (randstar), (main):
+	* src/libgnomecanvas/Makefile:
+	* src/libgnomecanvas/Makefile.am:
+	* src/libgnomecanvas/Makefile.in:
+	* src/libgnomecanvas/gnome-canvas-bpath.c:
+	(gnome_canvas_bpath_get_type), (gnome_canvas_bpath_class_init),
+	(gnome_canvas_bpath_init), (gnome_canvas_bpath_destroy),
+	(gnome_canvas_bpath_set_property),
+	(gnome_canvas_bpath_get_property), (gnome_canvas_bpath_update):
+	* src/libgnomecanvas/gnome-canvas-bpath.h:
+	* src/libgnomecanvas/gnome-canvas-clipgroup.c:
+	(gnome_canvas_clipgroup_get_type),
+	(gnome_canvas_clipgroup_class_init), (gnome_canvas_clipgroup_init),
+	(gnome_canvas_clipgroup_destroy),
+	(gnome_canvas_clipgroup_set_property),
+	(gnome_canvas_clipgroup_get_property),
+	(gnome_canvas_clipgroup_update), (gnome_canvas_clipgroup_render),
+	(gcg_buf_new), (gcg_buf_free), (gcg_mask_new), (gcg_mask_free):
+	* src/libgnomecanvas/gnome-canvas-clipgroup.h:
+	* src/libgnomecanvas/gnome-canvas-i18n.h:
+	* src/libgnomecanvas/gnome-canvas-line.c:
+	(gnome_canvas_line_get_type), (gnome_canvas_line_class_init),
+	(gnome_canvas_line_init), (gnome_canvas_line_destroy),
+	(get_bounds), (get_bounds_canvas), (reconfigure_arrows),
+	(set_line_gc_foreground), (set_line_gc_width), (set_stipple),
+	(gnome_canvas_line_set_property), (get_points),
+	(gnome_canvas_line_get_property), (gnome_canvas_line_render),
+	(svp_from_points), (gnome_canvas_line_update),
+	(gnome_canvas_line_realize), (gnome_canvas_line_unrealize),
+	(item_to_canvas), (gnome_canvas_line_draw),
+	(gnome_canvas_line_point), (gnome_canvas_line_bounds):
+	* src/libgnomecanvas/gnome-canvas-line.h:
+	* src/libgnomecanvas/gnome-canvas-marshal.list:
+	* src/libgnomecanvas/gnome-canvas-path-def.c:
+	(path_def_boxed_copy), (gnome_canvas_path_def_get_type),
+	(gnome_canvas_path_def_new), (gnome_canvas_path_def_new_sized),
+	(gnome_canvas_path_def_new_from_bpath),
+	(gnome_canvas_path_def_new_from_static_bpath),
+	(gnome_canvas_path_def_new_from_foreign_bpath),
+	(gnome_canvas_path_def_ref), (gnome_canvas_path_def_finish),
+	(gnome_canvas_path_def_ensure_space), (gnome_canvas_path_def_copy),
+	(gnome_canvas_path_def_duplicate), (gnome_canvas_path_def_concat),
+	(gnome_canvas_path_def_split), (gnome_canvas_path_def_open_parts),
+	(gnome_canvas_path_def_closed_parts),
+	(gnome_canvas_path_def_close_all), (gnome_canvas_path_def_unref),
+	(gnome_canvas_path_def_reset), (gnome_canvas_path_def_moveto),
+	(gnome_canvas_path_def_lineto),
+	(gnome_canvas_path_def_lineto_moving),
+	(gnome_canvas_path_def_curveto), (gnome_canvas_path_def_closepath),
+	(gnome_canvas_path_def_closepath_current),
+	(gnome_canvas_path_def_bpath), (gnome_canvas_path_def_length),
+	(gnome_canvas_path_def_is_empty),
+	(gnome_canvas_path_def_has_currentpoint),
+	(gnome_canvas_path_def_currentpoint),
+	(gnome_canvas_path_def_last_bpath),
+	(gnome_canvas_path_def_first_bpath),
+	(gnome_canvas_path_def_any_open), (gnome_canvas_path_def_all_open),
+	(gnome_canvas_path_def_any_closed),
+	(gnome_canvas_path_def_all_closed), (sp_bpath_good),
+	(sp_bpath_check_subpath), (sp_bpath_length), (sp_bpath_all_closed),
+	(sp_bpath_all_open):
+	* src/libgnomecanvas/gnome-canvas-path-def.h:
+	* src/libgnomecanvas/gnome-canvas-pixbuf.c:
+	(gnome_canvas_pixbuf_get_type), (gnome_canvas_pixbuf_class_init),
+	(gnome_canvas_pixbuf_init), (gnome_canvas_pixbuf_destroy),
+	(gnome_canvas_pixbuf_set_property),
+	(gnome_canvas_pixbuf_get_property), (compute_xform_scaling),
+	(compute_viewport_affine), (compute_render_affine),
+	(recompute_bounding_box), (gnome_canvas_pixbuf_update),
+	(transform_pixbuf), (gnome_canvas_pixbuf_draw),
+	(gnome_canvas_pixbuf_render), (gnome_canvas_pixbuf_point),
+	(gnome_canvas_pixbuf_bounds):
+	* src/libgnomecanvas/gnome-canvas-pixbuf.h:
+	* src/libgnomecanvas/gnome-canvas-polygon.c:
+	(gnome_canvas_polygon_get_type), (gnome_canvas_polygon_class_init),
+	(gnome_canvas_polygon_init), (gnome_canvas_polygon_destroy),
+	(set_points), (gnome_canvas_polygon_set_property),
+	(gnome_canvas_polygon_get_property), (gnome_canvas_polygon_update):
+	* src/libgnomecanvas/gnome-canvas-polygon.h:
+	* src/libgnomecanvas/gnome-canvas-rect-ellipse.c:
+	(gnome_canvas_re_get_type), (gnome_canvas_re_class_init),
+	(gnome_canvas_re_init), (gnome_canvas_re_destroy),
+	(gnome_canvas_re_set_property), (gnome_canvas_re_get_property),
+	(gnome_canvas_rect_get_type), (gnome_canvas_rect_class_init),
+	(gnome_canvas_rect_update), (gnome_canvas_ellipse_get_type),
+	(gnome_canvas_ellipse_class_init), (gnome_canvas_ellipse_update):
+	* src/libgnomecanvas/gnome-canvas-rect-ellipse.h:
+	* src/libgnomecanvas/gnome-canvas-rich-text.c:
+	(gnome_canvas_rich_text_get_type),
+	(gnome_canvas_rich_text_finalize),
+	(gnome_canvas_rich_text_class_init), (gnome_canvas_rich_text_init),
+	(gnome_canvas_rich_text_set_property),
+	(gnome_canvas_rich_text_get_property),
+	(gnome_canvas_rich_text_realize),
+	(gnome_canvas_rich_text_unrealize),
+	(gnome_canvas_rich_text_move_iter_by_lines),
+	(gnome_canvas_rich_text_get_cursor_x_position),
+	(gnome_canvas_rich_text_move_cursor), (whitespace),
+	(not_whitespace), (find_whitespace_region),
+	(gnome_canvas_rich_text_delete_from_cursor),
+	(selection_motion_event_handler),
+	(gnome_canvas_rich_text_start_selection_drag),
+	(gnome_canvas_rich_text_end_selection_drag),
+	(gnome_canvas_rich_text_emit_tag_changed),
+	(gnome_canvas_rich_text_key_press_event),
+	(gnome_canvas_rich_text_key_release_event), (_click),
+	(gnome_canvas_rich_text_button_press_event),
+	(gnome_canvas_rich_text_button_release_event),
+	(gnome_canvas_rich_text_focus_in_event),
+	(gnome_canvas_rich_text_focus_out_event), (get_event_coordinates),
+	(emit_event_on_tags), (gnome_canvas_rich_text_event),
+	(gnome_canvas_rich_text_cut_clipboard),
+	(gnome_canvas_rich_text_copy_clipboard),
+	(gnome_canvas_rich_text_paste_clipboard), (preblink_cb),
+	(blink_cb), (gnome_canvas_rich_text_start_cursor_blink),
+	(gnome_canvas_rich_text_stop_cursor_blink), (request_update),
+	(invalidated_handler), (scale_fonts), (changed_handler),
+	(gnome_canvas_rich_text_set_buffer), (get_buffer),
+	(gnome_canvas_rich_text_get_buffer),
+	(gnome_canvas_rich_text_get_iter_location),
+	(gnome_canvas_rich_text_get_iter_at_location),
+	(gnome_canvas_rich_text_set_attributes_from_style),
+	(gnome_canvas_rich_text_ensure_layout),
+	(gnome_canvas_rich_text_destroy_layout), (adjust_for_anchors),
+	(get_bounds), (gnome_canvas_rich_text_get_bounds),
+	(gnome_canvas_rich_text_update), (gnome_canvas_rich_text_point),
+	(gnome_canvas_rich_text_draw), (gnome_canvas_rich_text_render),
+	(gnome_canvas_rich_text_add_tag):
+	* src/libgnomecanvas/gnome-canvas-rich-text.h:
+	* src/libgnomecanvas/gnome-canvas-shape-private.h:
+	* src/libgnomecanvas/gnome-canvas-shape.c:
+	(gnome_canvas_shape_get_type), (gnome_canvas_shape_class_init),
+	(gnome_canvas_shape_init), (gnome_canvas_shape_destroy),
+	(gnome_canvas_shape_set_path_def),
+	(gnome_canvas_shape_set_property), (get_color_value),
+	(gnome_canvas_shape_get_path_def),
+	(gnome_canvas_shape_get_property), (gnome_canvas_shape_realize),
+	(gnome_canvas_shape_unrealize), (gnome_canvas_shape_render),
+	(gnome_canvas_shape_draw), (gnome_canvas_shape_ensure_gdk_points),
+	(gnome_canvas_shape_update_gdk), (gnome_canvas_shape_update),
+	(gnome_canvas_shape_point), (get_rgba_from_color),
+	(get_pixel_from_rgba), (set_gc_foreground), (set_stipple),
+	(gcbp_ensure_gdk), (gcbp_destroy_gdk), (gcbp_ensure_mask),
+	(gcbp_draw_ctx_unref), (gnome_canvas_shape_bounds):
+	* src/libgnomecanvas/gnome-canvas-shape.h:
+	* src/libgnomecanvas/gnome-canvas-text.c:
+	(gnome_canvas_text_get_type), (gnome_canvas_text_class_init),
+	(gnome_canvas_text_init), (gnome_canvas_text_destroy),
+	(get_bounds), (set_text_gc_foreground), (set_stipple),
+	(get_property_font_set_mask), (ensure_font),
+	(gnome_canvas_text_set_property), (gnome_canvas_text_get_property),
+	(gnome_canvas_text_apply_font_desc), (add_attr),
+	(gnome_canvas_text_apply_attributes),
+	(gnome_canvas_text_set_font_desc), (gnome_canvas_text_set_markup),
+	(gnome_canvas_text_update), (gnome_canvas_text_realize),
+	(gnome_canvas_text_unrealize), (gnome_canvas_text_draw),
+	(gnome_canvas_text_render), (gnome_canvas_text_point),
+	(gnome_canvas_text_bounds):
+	* src/libgnomecanvas/gnome-canvas-text.h:
+	* src/libgnomecanvas/gnome-canvas-util.c:
+	(gnome_canvas_points_new), (gnome_canvas_points_ref),
+	(gnome_canvas_points_free), (gnome_canvas_get_miter_points),
+	(gnome_canvas_get_butt_points), (gnome_canvas_polygon_to_point),
+	(gnome_canvas_render_svp), (gnome_canvas_update_svp),
+	(gnome_canvas_update_svp_clip), (gnome_canvas_item_reset_bounds),
+	(gnome_canvas_item_update_svp),
+	(gnome_canvas_item_update_svp_clip),
+	(gnome_canvas_item_request_redraw_svp), (gnome_canvas_update_bbox),
+	(gnome_canvas_buf_ensure_buf), (gnome_canvas_join_gdk_to_art),
+	(gnome_canvas_cap_gdk_to_art):
+	* src/libgnomecanvas/gnome-canvas-util.h:
+	* src/libgnomecanvas/gnome-canvas-widget.c:
+	(gnome_canvas_widget_get_type), (gnome_canvas_widget_class_init),
+	(gnome_canvas_widget_init), (gnome_canvas_widget_destroy),
+	(recalc_bounds), (do_destroy), (gnome_canvas_widget_set_property),
+	(gnome_canvas_widget_get_property), (gnome_canvas_widget_update),
+	(gnome_canvas_widget_render), (gnome_canvas_widget_draw),
+	(gnome_canvas_widget_point), (gnome_canvas_widget_bounds):
+	* src/libgnomecanvas/gnome-canvas-widget.h:
+	* src/libgnomecanvas/gnome-canvas.c: (gnome_canvas_item_get_type),
+	(gnome_canvas_item_init), (gnome_canvas_item_new),
+	(item_post_create_setup), (gnome_canvas_item_set_property),
+	(gnome_canvas_item_get_property), (gnome_canvas_item_construct),
+	(redraw_if_visible), (gnome_canvas_item_dispose),
+	(gnome_canvas_item_realize), (gnome_canvas_item_unrealize),
+	(gnome_canvas_item_map), (gnome_canvas_item_unmap),
+	(gnome_canvas_item_update), (gnome_canvas_item_invoke_update),
+	(gnome_canvas_item_invoke_point), (gnome_canvas_item_set),
+	(gnome_canvas_item_set_valist),
+	(gnome_canvas_item_affine_relative),
+	(gnome_canvas_item_affine_absolute), (gnome_canvas_item_move),
+	(put_item_after), (gnome_canvas_item_raise),
+	(gnome_canvas_item_lower), (gnome_canvas_item_raise_to_top),
+	(gnome_canvas_item_lower_to_bottom), (gnome_canvas_item_show),
+	(gnome_canvas_item_hide), (gnome_canvas_item_grab),
+	(gnome_canvas_item_ungrab), (gnome_canvas_item_i2w_affine),
+	(gnome_canvas_item_w2i), (gnome_canvas_item_i2w),
+	(gnome_canvas_item_i2c_affine), (is_descendant),
+	(gnome_canvas_item_reparent), (gnome_canvas_item_grab_focus),
+	(gnome_canvas_item_get_bounds), (gnome_canvas_item_request_update),
+	(gnome_canvas_group_get_type), (gnome_canvas_group_class_init),
+	(gnome_canvas_group_init), (gnome_canvas_ensure_translate),
+	(gnome_canvas_group_set_property),
+	(gnome_canvas_group_get_property), (gnome_canvas_group_destroy),
+	(gnome_canvas_group_update), (gnome_canvas_group_realize),
+	(gnome_canvas_group_unrealize), (gnome_canvas_group_map),
+	(gnome_canvas_group_unmap), (gnome_canvas_group_draw),
+	(gnome_canvas_group_point), (gnome_canvas_group_bounds),
+	(gnome_canvas_group_render), (group_add), (group_remove),
+	(gnome_canvas_get_type), (gnome_canvas_get_property),
+	(gnome_canvas_set_property), (gnome_canvas_class_init),
+	(panic_root_destroyed), (gnome_canvas_init), (remove_idle),
+	(shutdown_transients), (gnome_canvas_destroy), (gnome_canvas_new),
+	(gnome_canvas_new_aa), (gnome_canvas_map), (gnome_canvas_unmap),
+	(gnome_canvas_realize), (gnome_canvas_unrealize), (scroll_to),
+	(gnome_canvas_size_allocate), (emit_event), (pick_current_item),
+	(gnome_canvas_button), (gnome_canvas_motion), (gnome_canvas_key),
+	(gnome_canvas_crossing), (gnome_canvas_focus_in),
+	(gnome_canvas_focus_out), (gnome_canvas_paint_rect),
+	(gnome_canvas_expose), (paint), (gnome_canvas_draw_background),
+	(do_update), (idle_handler), (add_idle), (gnome_canvas_root),
+	(gnome_canvas_set_scroll_region), (gnome_canvas_get_scroll_region),
+	(gnome_canvas_set_center_scroll_region),
+	(gnome_canvas_get_center_scroll_region),
+	(gnome_canvas_set_pixels_per_unit), (gnome_canvas_scroll_to),
+	(gnome_canvas_get_scroll_offsets), (gnome_canvas_update_now),
+	(gnome_canvas_get_item_at), (gnome_canvas_request_update),
+	(gnome_canvas_request_update_real), (uta_union_clip),
+	(get_visible_region), (gnome_canvas_request_redraw_uta),
+	(gnome_canvas_request_redraw), (gnome_canvas_w2c_affine),
+	(gnome_canvas_w2c), (gnome_canvas_w2c_d), (gnome_canvas_c2w),
+	(gnome_canvas_window_to_world), (gnome_canvas_world_to_window),
+	(gnome_canvas_get_color), (gnome_canvas_get_color_pixel),
+	(gnome_canvas_set_stipple_origin), (gnome_canvas_set_dither),
+	(gnome_canvas_get_dither), (boolean_handled_accumulator),
+	(gnome_canvas_item_class_init):
+	* src/libgnomecanvas/gnome-canvas.h:
+	* src/libgnomecanvas/libgnomecanvas.h:
+	* src/libgnomecanvas/libgnomecanvastypes.c:
+	(gnome_canvas_points_get_type):
+
 2007-05-22  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Switched melody sounds to wav, easier to manage and less startup delay
