@@ -1,5 +1,13 @@
 2007-05-23  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- bug reported by Khaled, in arabic wordsgame is missing the character
+	  ZERO WIDTH JOINER to force joined char in Arabic and Hangul
+          see http://en.wikipedia.org/wiki/Zero-width_joiner
+
+	* src/boards/wordsgame.c: (key_press):
+
+2007-05-23  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- major packaging change, imported libart_lgpl and libgnomecanvas
 	  from gnome svn (trunk). We now build them as static library.
 	  Packager change, you no more need them in GCompris require's.
