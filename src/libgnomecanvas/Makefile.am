@@ -62,9 +62,9 @@ BUILT_SOURCES =                                 \
         $(marshal_sources)
 
 gnome-canvas-marshal.h: gnome-canvas-marshal.list $(GLIB_GENMARSHAL)
-        $(GLIB_GENMARSHAL) $< --header --prefix=gnome_canvas_marshal > $@
+	$(GLIB_GENMARSHAL) $< --header --prefix=gnome_canvas_marshal > $@
 gnome-canvas-marshal.c: gnome-canvas-marshal.list $(GLIB_GENMARSHAL)
-        $(GLIB_GENMARSHAL) $< --body --prefix=gnome_canvas_marshal > $@
+	$(GLIB_GENMARSHAL) $< --body --prefix=gnome_canvas_marshal > $@
 
 CLEANFILES = $(marshal_sources)
 
