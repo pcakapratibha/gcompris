@@ -1,0 +1,52 @@
+<informaltable pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<tbody>
+<row>
+<entry><link linkend="CcBrush">CcBrush</link></entry>
+<entry><link linkend="CcBrushColor">CcBrushColor</link></entry>
+<entry><link linkend="CcCamera">CcCamera</link></entry>
+</row>
+<row>
+<entry><link linkend="CcCircle">CcCircle</link></entry>
+<entry><link linkend="CcColor">CcColor</link></entry>
+<entry><link linkend="CcColorHsv">CcColorHsv</link></entry>
+</row>
+<row>
+<entry><link linkend="CcColorRgb">CcColorRgb</link></entry>
+<entry><link linkend="CcItem">CcItem</link></entry>
+<entry><link linkend="CcItemView">CcItemView</link></entry>
+</row>
+<row>
+<entry><link linkend="CcLine">CcLine</link></entry>
+<entry><link linkend="CcPixbuf">CcPixbuf</link></entry>
+<entry><link linkend="CcPrinter">CcPrinter</link></entry>
+</row>
+<row>
+<entry><link linkend="CcRectangle">CcRectangle</link></entry>
+<entry><link linkend="CcRoundedRectangle">CcRoundedRectangle</link></entry>
+<entry><link linkend="CcShape">CcShape</link></entry>
+</row>
+<row>
+<entry><link linkend="CcText">CcText</link></entry>
+<entry><link linkend="CcView">CcView</link></entry>
+<entry><link linkend="CcViewCellRenderer">CcViewCellRenderer</link></entry>
+</row>
+<row>
+<entry><link linkend="CcViewPNG">CcViewPNG</link></entry>
+<entry><link linkend="CcViewWidget">CcViewWidget</link></entry>
+<entry><link linkend="GInitiallyUnowned">GInitiallyUnowned</link></entry>
+</row>
+<row>
+<entry><link linkend="GInterface">GInterface</link></entry>
+<entry><link linkend="GObject">GObject</link></entry>
+<entry><link linkend="GtkCellRenderer">GtkCellRenderer</link></entry>
+</row>
+<row>
+<entry><link linkend="GtkDrawingArea">GtkDrawingArea</link></entry>
+<entry><link linkend="GtkObject">GtkObject</link></entry>
+<entry><link linkend="GtkWidget">GtkWidget</link></entry>
+</row>
+</tbody></tgroup></informaltable>

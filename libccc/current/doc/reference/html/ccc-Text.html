@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Text</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="prev" href="ccc-pixbuf.html" title="pixbuf">
+<link rel="next" href="CcCamera.html" title="CcCamera">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-pixbuf.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Canvas-Items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="CcCamera.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2578769" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2598772" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2598620" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2598662" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2598683" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Text"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2578769"></a><span class="refentrytitle">Text</span>
+</h2>
+<p>Text</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcText"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-Text.html#CcText-struct">CcText</a>;
+                    <a href="ccc-Text.html#CcTextClass">CcTextClass</a>;
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="ccc-Text.html#cc-text-new">cc_text_new</a>                         (gchar const *text);
+void                <a href="ccc-Text.html#cc-text-set-anchor">cc_text_set_anchor</a>                  (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gdouble x,
+                                                         gdouble y);
+void                <a href="ccc-Text.html#cc-text-set-anchor-type">cc_text_set_anchor_type</a>             (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         GtkAnchorType anchor);
+gcharconst*         <a href="ccc-Text.html#cc-text-get-text">cc_text_get_text</a>                    (<a href="ccc-Text.html#CcText">CcText</a> const *self);
+gboolean            <a href="ccc-Text.html#cc-text-is-editable">cc_text_is_editable</a>                 (<a href="ccc-Text.html#CcText">CcText</a> const *self);
+void                <a href="ccc-Text.html#cc-text-set-editable">cc_text_set_editable</a>                (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gboolean editable);
+void                <a href="ccc-Text.html#cc-text-set-font-description">cc_text_set_font_description</a>        (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         PangoFontDescription *desc);
+void                <a href="ccc-Text.html#cc-text-set-markup">cc_text_set_markup</a>                  (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gchar const *markup);
+void                <a href="ccc-Text.html#cc-text-set-size-pixels">cc_text_set_size_pixels</a>             (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gboolean size_pixels);
+void                <a href="ccc-Text.html#cc-text-set-text">cc_text_set_text</a>                    (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gchar const *text);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598620"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>
+               +----<a href="ccc-shape.html#CcShape">CcShape</a>
+                     +----CcText
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598662"></a><h2>Implemented Interfaces</h2>
+<p>
+CcText implements
+ <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598683"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-Text.html#CcText--anchor">anchor</a>"                   GtkAnchorType         : Read / Write / Construct
+  "<a href="ccc-Text.html#CcText--brush-caret">brush-caret</a>"              <a href="ccc-Brushes.html#CcBrush">CcBrush</a>               : Read / Write
+  "<a href="ccc-Text.html#CcText--cursor">cursor</a>"                   gint                  : 
+  "<a href="ccc-Text.html#CcText--editable">editable</a>"                 gboolean              : Read / Write
+  "<a href="ccc-Text.html#CcText--size-pixels">size-pixels</a>"              gboolean              : Read / Write
+  "<a href="ccc-Text.html#CcText--text">text</a>"                     gchararray            : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598772"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598788"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2594794"></a><h3>
+<a name="CcText-struct"></a>CcText</h3>
+<a class="indexterm" name="id2594806"></a><pre class="programlisting">typedef struct _CcText CcText;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2594821"></a><h3>
+<a name="CcTextClass"></a>CcTextClass</h3>
+<a class="indexterm" name="id2594833"></a><pre class="programlisting">typedef struct {
+	CcShapeClass base_class;
+
+	/* vtable */
+	void (*remove) (CcText     * self,
+			guint        offset,
+			gsize        length);
+	void (*insert) (CcText     * self,
+			gchar const* text,
+			gsize        offset);
+} CcTextClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2594853"></a><h3>
+<a name="cc-text-new"></a>cc_text_new ()</h3>
+<a class="indexterm" name="id2594865"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_text_new                         (gchar const *text);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>text</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2594922"></a><h3>
+<a name="cc-text-set-anchor"></a>cc_text_set_anchor ()</h3>
+<a class="indexterm" name="id2594934"></a><pre class="programlisting">void                cc_text_set_anchor                  (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gdouble x,
+                                                         gdouble y);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595022"></a><h3>
+<a name="cc-text-set-anchor-type"></a>cc_text_set_anchor_type ()</h3>
+<a class="indexterm" name="id2595033"></a><pre class="programlisting">void                cc_text_set_anchor_type             (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         GtkAnchorType anchor);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>anchor</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595100"></a><h3>
+<a name="cc-text-get-text"></a>cc_text_get_text ()</h3>
+<a class="indexterm" name="id2595113"></a><pre class="programlisting">gcharconst*         cc_text_get_text                    (<a href="ccc-Text.html#CcText">CcText</a> const *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595170"></a><h3>
+<a name="cc-text-is-editable"></a>cc_text_is_editable ()</h3>
+<a class="indexterm" name="id2595182"></a><pre class="programlisting">gboolean            cc_text_is_editable                 (<a href="ccc-Text.html#CcText">CcText</a> const *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605002"></a><h3>
+<a name="cc-text-set-editable"></a>cc_text_set_editable ()</h3>
+<a class="indexterm" name="id2605013"></a><pre class="programlisting">void                cc_text_set_editable                (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gboolean editable);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>editable</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605080"></a><h3>
+<a name="cc-text-set-font-description"></a>cc_text_set_font_description ()</h3>
+<a class="indexterm" name="id2605091"></a><pre class="programlisting">void                cc_text_set_font_description        (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         PangoFontDescription *desc);</pre>
+<p>
+Sets the font description to be used for rendering.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Text.html#CcText"><span class="type">CcText</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>desc</code></em>&#160;:</span></td>
+<td> a <span class="type">PangoFontDescription</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605175"></a><h3>
+<a name="cc-text-set-markup"></a>cc_text_set_markup ()</h3>
+<a class="indexterm" name="id2605188"></a><pre class="programlisting">void                cc_text_set_markup                  (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gchar const *markup);</pre>
+<p>
+Set the markup displayed by this item.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Text.html#CcText"><span class="type">CcText</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>markup</code></em>&#160;:</span></td>
+<td> the markup to be set
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605265"></a><h3>
+<a name="cc-text-set-size-pixels"></a>cc_text_set_size_pixels ()</h3>
+<a class="indexterm" name="id2605276"></a><pre class="programlisting">void                cc_text_set_size_pixels             (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gboolean size_pixels);</pre>
+<p>
+Specify whether the text size is given in pixels. If it is, the text won't
+scale with the zoom level.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <span class="type">Cctext</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>size_pixels</code></em>&#160;:</span></td>
+<td> the value to be set
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605356"></a><h3>
+<a name="cc-text-set-text"></a>cc_text_set_text ()</h3>
+<a class="indexterm" name="id2605368"></a><pre class="programlisting">void                cc_text_set_text                    (<a href="ccc-Text.html#CcText">CcText</a> *self,
+                                                         gchar const *text);</pre>
+<p>
+Set the text to be displayed by a <a href="ccc-Text.html#CcText"><span class="type">CcText</span></a> item.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Text.html#CcText"><span class="type">CcText</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>text</code></em>&#160;:</span></td>
+<td> the text to be set
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2607588"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2607598"></a><h3>
+<a name="CcText--anchor"></a>The "<code class="literal">anchor</code>" property</h3>
+<a class="indexterm" name="id2607610"></a><pre class="programlisting">  "anchor"                   GtkAnchorType         : Read / Write / Construct</pre>
+<p>The location of the anchor point of the text element.</p>
+<p>Default value: GTK_ANCHOR_NORTH_WEST</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607633"></a><h3>
+<a name="CcText--brush-caret"></a>The "<code class="literal">brush-caret</code>" property</h3>
+<a class="indexterm" name="id2607646"></a><pre class="programlisting">  "brush-caret"              <a href="ccc-Brushes.html#CcBrush">CcBrush</a>               : Read / Write</pre>
+<p>The brush used to paint the caret (text cursor).</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607666"></a><h3>
+<a name="CcText--cursor"></a>The "<code class="literal">cursor</code>" property</h3>
+<a class="indexterm" name="id2607679"></a><pre class="programlisting">  "cursor"                   gint                  : </pre>
+<p>cursor.</p>
+<p>Allowed values: [0,0]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607708"></a><h3>
+<a name="CcText--editable"></a>The "<code class="literal">editable</code>" property</h3>
+<a class="indexterm" name="id2607723"></a><pre class="programlisting">  "editable"                 gboolean              : Read / Write</pre>
+<p>editable.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607748"></a><h3>
+<a name="CcText--size-pixels"></a>The "<code class="literal">size-pixels</code>" property</h3>
+<a class="indexterm" name="id2607763"></a><pre class="programlisting">  "size-pixels"              gboolean              : Read / Write</pre>
+<p>Specifies whether the given size is in pixels or in canvas units.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607790"></a><h3>
+<a name="CcText--text"></a>The "<code class="literal">text</code>" property</h3>
+<a class="indexterm" name="id2607805"></a><pre class="programlisting">  "text"                     gchararray            : Read / Write</pre>
+<p>The displayed text.</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+</body>
+</html>

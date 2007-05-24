@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>CcCamera</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="prev" href="ccc-Text.html" title="Text">
+<link rel="next" href="ccc-View-Elements.html" title="View Elements">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Text.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Canvas-Items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-View-Elements.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2548505" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2604894" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2604831" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2604867" class="shortcut">Implemented Interfaces</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="CcCamera"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2548505"></a><span class="refentrytitle">CcCamera</span>
+</h2>
+<p>CcCamera</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+typedef             <a href="CcCamera.html" title="CcCamera">CcCamera</a>;
+typedef             <a href="CcCamera.html#CcCameraClass">CcCameraClass</a>;
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="CcCamera.html#cc-camera-new">cc_camera_new</a>                       (void);
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="CcCamera.html#cc-camera-new-root">cc_camera_new_root</a>                  (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="CcCamera.html#cc-camera-get-root">cc_camera_get_root</a>                  (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*self);
+void                <a href="CcCamera.html#cc-camera-set-root">cc_camera_set_root</a>                  (<a href="CcCamera.html" title="CcCamera">CcCamera</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2604831"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>
+               +----CcCamera
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2604867"></a><h2>Implemented Interfaces</h2>
+<p>
+CcCamera implements
+ <a href="ccc-Canvas-Views.html#CcView">CcView</a> and  <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2604894"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598407"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2598418"></a><h3>
+<a name="CcCamera"></a>CcCamera</h3>
+<a class="indexterm" name="id2598429"></a><pre class="programlisting">typedef CcItem      CcCamera;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598445"></a><h3>
+<a name="CcCameraClass"></a>CcCameraClass</h3>
+<a class="indexterm" name="id2598457"></a><pre class="programlisting">typedef CcItemClass CcCameraClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598473"></a><h3>
+<a name="cc-camera-new"></a>cc_camera_new ()</h3>
+<a class="indexterm" name="id2598485"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_camera_new                       (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598522"></a><h3>
+<a name="cc-camera-new-root"></a>cc_camera_new_root ()</h3>
+<a class="indexterm" name="id2598534"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_camera_new_root                  (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>root</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604662"></a><h3>
+<a name="cc-camera-get-root"></a>cc_camera_get_root ()</h3>
+<a class="indexterm" name="id2604674"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_camera_get_root                  (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604731"></a><h3>
+<a name="cc-camera-set-root"></a>cc_camera_set_root ()</h3>
+<a class="indexterm" name="id2604743"></a><pre class="programlisting">void                cc_camera_set_root                  (<a href="CcCamera.html" title="CcCamera">CcCamera</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>root</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

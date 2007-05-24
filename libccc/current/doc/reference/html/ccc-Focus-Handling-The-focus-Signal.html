@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>The focus signal</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="prev" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="next" href="ccc-hashmap.html" title="hashmap">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="ccc-Focus-Handling.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Focus-Handling.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-hashmap.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="ccc-Focus-Handling-The-focus-Signal"></a>The focus signal</h2></div></div></div>
+<p>
+      The focus signal is used to let the focus switch between elements in a
+      way as easy as possible. FIXME: be more verbose here
+    </p>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="ccc-Focus-handling-The-Beginning"></a>The Beginning</h3></div></div></div>
+<p>
+        At the beginning, there is no focus. So, once the focus enters the
+	view, it emits the 'focus' signal on the root, FIXME: continue here
+      </p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="ccc-Focus-Handling-The-Sequel"></a>The Sequel</h3></div></div></div>
+<p>
+        If there is a focus, we can easily find out which element the focus
+	has, the we can move up the canvas tree and find the next item to be
+	focused.
+      </p>
+<div class="sect3" lang="en">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="ccc-Focus-Handling-Focus-Chain"></a>The Focus Chain</h4></div></div></div>
+<p>
+	  Emit CcItem::focus-next - which actually gets the focus chain, finds
+	  out which child currently has he focus and then steps through the
+	  list to find the next focus-able child.
+	</p>
+<p>
+	  If there is no focus chain, the canvas uses the list of child
+	  elements from top to bottom.
+	</p>
+</div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="ccc-Focus-Handling-The-Final"></a>The Final</h3></div></div></div>
+<p>
+        Once there's no item which can take the focus in a cycle, we just
+	return FALSE, so the parent's signal handler for the focus event can
+	take the focus off us and move it on to the next element.
+      </p>
+</div>
+</div>
+</body>
+</html>

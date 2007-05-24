@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Grid-fitting</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="prev" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="next" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="ccc-Writing-custom-canvas-items.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Writing-custom-canvas-items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Internals.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="ccc-Grid-Fitting"></a>Grid-fitting</h2></div></div></div>
+<p>
+      When you create a custom item, you want it to look well on the displays;
+      e.g. you want to avoid unnecessary fuzzyness of lines. You can improve
+      the rendering quality of the item by using grid-fitting.
+    </p>
+<p>
+      Grid-Fitting is the process of streching/moving the item by a minimum
+      extent to let it have sharp borders. Here are two examples from the
+      CcRectangle class:
+    </p>
+<div class="figure">
+<a name="id2502166"></a><p class="title"><b>Figure&#160;1.&#160;Rectangles rendered without grid-fitting</b></p>
+<div class="figure-contents"><div><img src="ccc-grid-fitting-without.png" alt="Rectangles rendered without grid-fitting"></div></div>
+</div>
+<br class="figure-break"><div class="figure">
+<a name="id2502180"></a><p class="title"><b>Figure&#160;2.&#160;Rectangles rendered with grid-fitting</b></p>
+<div class="figure-contents"><div><img src="ccc-grid-fitting-with.png" alt="Rectangles rendered with grid-fitting"></div></div>
+</div>
+<br class="figure-break"><p>
+      As you can see, grid-fitting can let your application look better if
+      you're not completely in control of the item coordinates. Grid fitting
+      works like this: if you know where a line should be displayed and how
+      thick it is, you can move the line by a small value to get its borders as
+      close to the pixel borders as possible.
+    </p>
+<p>
+      This adjustment needs a small amount of time, so it should be possible to
+      turn it off (honestly, it needs to be activated manually for your items).
+      Here's some example code from the CcRectangle class.
+    </p>
+<div class="informalexample"><pre class="programlisting">
+cc_view_world_to_window(view, self-&gt;x, self-&gt;y, &amp;x1, &amp;y1);
+cc_view_world_to_window(view, self-&gt;x + self-&gt;w, self-&gt;y + self-&gt;h, &amp;x2, &amp;y2);
+
+if(CC_ITEM_GRID_ALIGNED(item)) {
+    cc_point_grid_align(&amp;x1, &amp;y1, &amp;width, CC_GRID_ALIGN_DOWN);
+    cc_point_grid_align(&amp;x2, &amp;y2, &amp;width, CC_GRID_ALIGN_UP);
+}
+</pre></div>
+<p>
+      You see, it's quite easy to render pixel-aligned.
+    </p>
+</div>
+</body>
+</html>

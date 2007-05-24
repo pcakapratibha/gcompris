@@ -1,0 +1,64 @@
+<!-- ##### SECTION Title ##### -->
+printer
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcPrinter ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcPrinter:filename ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcPrinterClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+
+<!-- ##### FUNCTION cc_printer_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_printer_new ##### -->
+<para>
+
+</para>
+
+@filename: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_printer_print_page ##### -->
+<para>
+
+</para>
+
+@self: 
+
+

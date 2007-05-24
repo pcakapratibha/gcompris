@@ -1,0 +1,199 @@
+<!-- ##### SECTION Title ##### -->
+Canvas Views
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### ENUM CcZoomMode ##### -->
+<para>
+
+</para>
+
+@CC_ZOOM_PIXELS: 
+@CC_ZOOM_WIDTH: 
+@CC_ZOOM_HEIGHT: 
+@CC_ZOOM_AUTO: 
+
+<!-- ##### STRUCT CcView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcView:focus ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcView:root ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcView:scrolled-region ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcView:zoom ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcView:zoom-mode ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcViewIface ##### -->
+<para>
+
+</para>
+
+@base_iface: 
+@grab_item: 
+@ungrab_item: 
+@window_to_world: 
+@world_to_window: 
+@world_to_window_distance: 
+
+<!-- ##### FUNCTION cc_view_get_root ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_set_root ##### -->
+<para>
+
+</para>
+
+@self: 
+@root: 
+
+
+<!-- ##### FUNCTION cc_view_get_zoom ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_set_zoom ##### -->
+<para>
+
+</para>
+
+@self: 
+@zoom: 
+
+
+<!-- ##### FUNCTION cc_view_window_to_world ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION cc_view_world_to_window ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION cc_view_get_focus ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_get_scrolled_region ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_grab_item ##### -->
+<para>
+
+</para>
+
+@self: 
+@item: 
+@mask: 
+@cursor: 
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_set_focus ##### -->
+<para>
+
+</para>
+
+@self: 
+@focus: 
+
+
+<!-- ##### FUNCTION cc_view_set_scrolled_region ##### -->
+<para>
+
+</para>
+
+@self: 
+@scrolled_region: 
+
+
+<!-- ##### FUNCTION cc_view_ungrab_item ##### -->
+<para>
+
+</para>
+
+@self: 
+@item: 
+@time: 
+
+
+<!-- ##### FUNCTION cc_view_world_to_window_distance ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+

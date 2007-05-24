@@ -1,0 +1,68 @@
+<!-- ##### SECTION Title ##### -->
+Rectangle
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcDRect ##### -->
+<para>
+
+</para>
+
+@x1: 
+@y1: 
+@x2: 
+@y2: 
+
+<!-- ##### FUNCTION cc_d_rect_copy ##### -->
+<para>
+
+</para>
+
+@one: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_d_rect_equal ##### -->
+<para>
+
+</para>
+
+@one: 
+@two: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_d_rect_intersect ##### -->
+<para>
+
+</para>
+
+@one: 
+@two: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_d_rect_union ##### -->
+<para>
+
+</para>
+
+@one: 
+@two: 
+@merged: 
+
+

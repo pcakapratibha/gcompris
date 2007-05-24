@@ -1,0 +1,110 @@
+<!-- ##### SECTION Title ##### -->
+Rectangles
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcRectangle ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcRectangle:position-h ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcRectangle:position-w ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcRectangle:position-x ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcRectangle:position-y ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcRectangleClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+
+<!-- ##### FUNCTION cc_rectangle_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_rectangle_set_position ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+@w: 
+@h: 
+
+
+<!-- ##### FUNCTION cc_rectangle_set_height ##### -->
+<para>
+
+</para>
+
+@self: 
+@height: 
+
+
+<!-- ##### FUNCTION cc_rectangle_set_width ##### -->
+<para>
+
+</para>
+
+@self: 
+@width: 
+
+
+<!-- ##### FUNCTION cc_rectangle_set_x ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+
+
+<!-- ##### FUNCTION cc_rectangle_set_y ##### -->
+<para>
+
+</para>
+
+@self: 
+@y: 
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Focus Handling</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="prev" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="next" href="ccc-Focus-Handling-The-focus-Signal.html" title="The focus signal">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="ccc-Event-Handling.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Internals.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Focus-Handling-The-focus-Signal.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter" lang="en">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="ccc-Focus-Handling"></a>Focus Handling</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="sect1"><a href="ccc-Focus-Handling.html#ccc-Focus-Handling-Introduction">Introduction</a></span></dt>
+<dt><span class="sect1"><a href="ccc-Focus-Handling-The-focus-Signal.html">The focus signal</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="ccc-Focus-Handling-The-focus-Signal.html#ccc-Focus-handling-The-Beginning">The Beginning</a></span></dt>
+<dt><span class="sect2"><a href="ccc-Focus-Handling-The-focus-Signal.html#ccc-Focus-Handling-The-Sequel">The Sequel</a></span></dt>
+<dt><span class="sect2"><a href="ccc-Focus-Handling-The-focus-Signal.html#ccc-Focus-Handling-The-Final">The Final</a></span></dt>
+</dl></dd>
+</dl></div>
+<p>
+    This chapter describes the implementation of focus handling in the canvas,
+    which is used for the criawips presentation application.
+  </p>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="ccc-Focus-Handling-Introduction"></a>Introduction</h2></div></div></div>
+<p>
+      The focus is a meta-information, which is correctly called 'the focused
+      item'. The focused item is the one which receives keyboard events. The
+      focus can be moved by using the keys up, down, left, right, tab and
+      shift-tab (usually also available with ctrl if the keys are used for
+      other things - like text editing).
+    </p>
+<p>
+      The focus is view-dependent, there may even be views (like the tree or
+      pixbuf renderers) which don't have a focus at all. This make the focus
+      implementation slightly harder than GnomeCanvas' focus handling has been.
+    </p>
+<p>
+      The focus list (which is the list starting with the focused item and then
+      mentioning all its parents up to the root of the view - which might not
+      always be the root of the model) is very important as we need to know
+      which items already were focused and which were not. As we cannot store
+      the focused elements in the model - which was possible with the
+      GnomeCanvas - we need to store it in the view. So the view needs to take
+      care about the focus list.
+    </p>
+</div>
+</div>
+</body>
+</html>

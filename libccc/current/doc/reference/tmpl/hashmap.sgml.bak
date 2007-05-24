@@ -1,0 +1,83 @@
+<!-- ##### SECTION Title ##### -->
+hashmap
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### TYPEDEF CcHashMap ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION cc_hash_map_foreach ##### -->
+<para>
+
+</para>
+
+@self: 
+@func: 
+@user_data: 
+
+
+<!-- ##### FUNCTION cc_hash_map_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_hash_map_insert ##### -->
+<para>
+
+</para>
+
+@self: 
+@key: 
+@data: 
+
+
+<!-- ##### FUNCTION cc_hash_map_lookup ##### -->
+<para>
+
+</para>
+
+@self: 
+@key: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_hash_map_new ##### -->
+<para>
+
+</para>
+
+@content_type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_hash_map_remove ##### -->
+<para>
+
+</para>
+
+@self: 
+@key: 
+
+

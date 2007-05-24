@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Utilities</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="prev" href="ccc-Rectangle.html" title="Rectangle">
+<link rel="next" href="ccc-Canvas-Items.html" title="Canvas Items">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Rectangle.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Fundamentals.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Canvas-Items.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2578050" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2566984" class="shortcut">Description</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Utilities"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2578050"></a><span class="refentrytitle">Utilities</span>
+</h2>
+<p>Utilities</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+gboolean            <a href="ccc-Utilities.html#cc-accumulator-boolean">cc_accumulator_boolean</a>              (GSignalInvocationHint *hint,
+                                                         GValue *return_accu,
+                                                         GValue const *handler_return,
+                                                         gpointer data);
+void                <a href="ccc-Utilities.html#cc-point-grid-align">cc_point_grid_align</a>                 (gdouble *x,
+                                                         gdouble *y,
+                                                         gdouble *width);
+#define             <a href="ccc-Utilities.html#cc-return-if-unimplemented">cc_return_if_unimplemented</a>          (klass, member)
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2566984"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2567000"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2567011"></a><h3>
+<a name="cc-accumulator-boolean"></a>cc_accumulator_boolean ()</h3>
+<a class="indexterm" name="id2567022"></a><pre class="programlisting">gboolean            cc_accumulator_boolean              (GSignalInvocationHint *hint,
+                                                         GValue *return_accu,
+                                                         GValue const *handler_return,
+                                                         gpointer data);</pre>
+<p>
+Serves as a simple accumulator for signal emission. If you set
+<a href="ccc-Utilities.html#cc-accumulator-boolean"><code class="function">cc_accumulator_boolean()</code></a> as the accumulator for a signal, the signal will
+abort execution once a signal handler returns <code class="literal">TRUE</code>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>hint</code></em>&#160;:</span></td>
+<td> a <span class="type">GSignalInvocationHint</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>return_accu</code></em>&#160;:</span></td>
+<td> a <span class="type">GValue</span> for the emission
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>handler_return</code></em>&#160;:</span></td>
+<td> a <span class="type">GValue</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>data</code></em>&#160;:</span></td>
+<td> unused
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">FALSE</code> to stop, <code class="literal">TRUE</code> to continue.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2577172"></a><h3>
+<a name="cc-point-grid-align"></a>cc_point_grid_align ()</h3>
+<a class="indexterm" name="id2577185"></a><pre class="programlisting">void                cc_point_grid_align                 (gdouble *x,
+                                                         gdouble *y,
+                                                         gdouble *width);</pre>
+<p>
+Rounds the coordinates <em class="parameter"><code>x</code></em> and <em class="parameter"><code>y</code></em>. Rounds <em class="parameter"><code>width</code></em> to the nearest integer, the
+result of this conversion is needed for the other calculation.
+</p>
+<p>
+If the rounded <em class="parameter"><code>width</code></em> is a multiple of 2.0, then <em class="parameter"><code>x</code></em> and <em class="parameter"><code>y</code></em> will be set to be
+multiples of 1.0. They will be set to values of the form (x + 0.5)
+otherwise.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td> an x coordinate
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td> a y coordinate
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>width</code></em>&#160;:</span></td>
+<td> the width of a line
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2548234"></a><h3>
+<a name="cc-return-if-unimplemented"></a>cc_return_if_unimplemented()</h3>
+<a class="indexterm" name="id2548245"></a><pre class="programlisting">#define             cc_return_if_unimplemented(klass, member)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>klass</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>member</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

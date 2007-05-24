@@ -1,0 +1,68 @@
+<!-- ##### SECTION Title ##### -->
+CcCamera
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### TYPEDEF CcCamera ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### TYPEDEF CcCameraClass ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION cc_camera_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_camera_new_root ##### -->
+<para>
+
+</para>
+
+@root: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_camera_get_root ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_camera_set_root ##### -->
+<para>
+
+</para>
+
+@self: 
+@root: 
+
+

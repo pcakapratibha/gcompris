@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-hashmap">
+<refmeta>
+<refentrytitle role="top_of_page">hashmap</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>hashmap</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+typedef             <link linkend="CcHashMap">CcHashMap</link>;
+<link linkend="void">void</link>                <link linkend="cc-hash-map-foreach">cc_hash_map_foreach</link>                 (<link linkend="CcHashMap">CcHashMap</link> *self,
+                                                         <link linkend="GHFunc">GHFunc</link> func,
+                                                         <link linkend="gpointer">gpointer</link> user_data);
+<link linkend="GType">GType</link>               <link linkend="cc-hash-map-get-type">cc_hash_map_get_type</link>                (void);
+<link linkend="void">void</link>                <link linkend="cc-hash-map-insert">cc_hash_map_insert</link>                  (<link linkend="CCHashMap">CCHashMap</link> *self,
+                                                         <link linkend="gpointer">gpointer</link> key,
+                                                         <link linkend="gpointer">gpointer</link> data);
+<link linkend="gpointer">gpointer</link>            <link linkend="cc-hash-map-lookup">cc_hash_map_lookup</link>                  (<link linkend="CcHashMap">CcHashMap</link> *self,
+                                                         <link linkend="gconstpointer">gconstpointer</link> key);
+<link linkend="CcHashMap">CcHashMap</link>*          <link linkend="cc-hash-map-new">cc_hash_map_new</link>                     (<link linkend="GType">GType</link> content_type);
+<link linkend="void">void</link>                <link linkend="cc-hash-map-remove">cc_hash_map_remove</link>                  (<link linkend="CCHashMap">CCHashMap</link> *self,
+                                                         <link linkend="gconstpointer">gconstpointer</link> key);
+
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcHashMap" role="typedef"/>CcHashMap</title>
+<indexterm><primary>CcHashMap</primary></indexterm><programlisting>typedef struct _CCHashMap      CcHashMap;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-hash-map-foreach" role="function"/>cc_hash_map_foreach ()</title>
+<indexterm><primary>cc_hash_map_foreach</primary></indexterm><programlisting><link linkend="void">void</link>                cc_hash_map_foreach                 (<link linkend="CcHashMap">CcHashMap</link> *self,
+                                                         <link linkend="GHFunc">GHFunc</link> func,
+                                                         <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-hash-map-get-type" role="function"/>cc_hash_map_get_type ()</title>
+<indexterm><primary>cc_hash_map_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               cc_hash_map_get_type                (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-hash-map-insert" role="function"/>cc_hash_map_insert ()</title>
+<indexterm><primary>cc_hash_map_insert</primary></indexterm><programlisting><link linkend="void">void</link>                cc_hash_map_insert                  (<link linkend="CCHashMap">CCHashMap</link> *self,
+                                                         <link linkend="gpointer">gpointer</link> key,
+                                                         <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-hash-map-lookup" role="function"/>cc_hash_map_lookup ()</title>
+<indexterm><primary>cc_hash_map_lookup</primary></indexterm><programlisting><link linkend="gpointer">gpointer</link>            cc_hash_map_lookup                  (<link linkend="CcHashMap">CcHashMap</link> *self,
+                                                         <link linkend="gconstpointer">gconstpointer</link> key);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-hash-map-new" role="function"/>cc_hash_map_new ()</title>
+<indexterm><primary>cc_hash_map_new</primary></indexterm><programlisting><link linkend="CcHashMap">CcHashMap</link>*          cc_hash_map_new                     (<link linkend="GType">GType</link> content_type);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>content_type</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-hash-map-remove" role="function"/>cc_hash_map_remove ()</title>
+<indexterm><primary>cc_hash_map_remove</primary></indexterm><programlisting><link linkend="void">void</link>                cc_hash_map_remove                  (<link linkend="CCHashMap">CCHashMap</link> *self,
+                                                         <link linkend="gconstpointer">gconstpointer</link> key);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

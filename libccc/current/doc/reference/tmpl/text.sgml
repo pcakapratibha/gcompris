@@ -1,0 +1,155 @@
+<!-- ##### SECTION Title ##### -->
+Text
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcText ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcText:anchor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcText:brush-caret ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcText:cursor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcText:editable ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcText:size-pixels ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcText:text ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcTextClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+@remove: 
+@insert: 
+
+<!-- ##### FUNCTION cc_text_new ##### -->
+<para>
+
+</para>
+
+@text: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_text_set_anchor ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION cc_text_set_anchor_type ##### -->
+<para>
+
+</para>
+
+@self: 
+@anchor: 
+
+
+<!-- ##### FUNCTION cc_text_get_text ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_text_is_editable ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_text_set_editable ##### -->
+<para>
+
+</para>
+
+@self: 
+@editable: 
+
+
+<!-- ##### FUNCTION cc_text_set_font_description ##### -->
+<para>
+
+</para>
+
+@self: 
+@desc: 
+
+
+<!-- ##### FUNCTION cc_text_set_markup ##### -->
+<para>
+
+</para>
+
+@self: 
+@markup: 
+
+
+<!-- ##### FUNCTION cc_text_set_size_pixels ##### -->
+<para>
+
+</para>
+
+@self: 
+@size_pixels: 
+
+
+<!-- ##### FUNCTION cc_text_set_text ##### -->
+<para>
+
+</para>
+
+@self: 
+@text: 
+
+

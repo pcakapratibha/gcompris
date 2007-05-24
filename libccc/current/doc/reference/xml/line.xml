@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-line">
+<refmeta>
+<refentrytitle role="top_of_page">line</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>line</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcLine"/>
+<synopsis>
+
+
+
+typedef             <link linkend="CcLine">CcLine</link>;
+typedef             <link linkend="CcLineClass">CcLineClass</link>;
+<link linkend="void">void</link>                <link linkend="cc-line-clear">cc_line_clear</link>                       (<link linkend="CcLine">CcLine</link> *self);
+<link linkend="GType">GType</link>               <link linkend="cc-line-get-type">cc_line_get_type</link>                    (void);
+<link linkend="void">void</link>                <link linkend="cc-line-line">cc_line_line</link>                        (<link linkend="CcLine">CcLine</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);
+<link linkend="void">void</link>                <link linkend="cc-line-move">cc_line_move</link>                        (<link linkend="CcLine">CcLine</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-line-new">cc_line_new</link>                         (void);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----<link linkend="CcShape">CcShape</link>
+                     +----CcLine
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcLine implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcLine" role="typedef"/>CcLine</title>
+<indexterm><primary>CcLine</primary></indexterm><programlisting>typedef CcShape      CcLine;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcLineClass" role="typedef"/>CcLineClass</title>
+<indexterm><primary>CcLineClass</primary></indexterm><programlisting>typedef CcShapeClass CcLineClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-line-clear" role="function"/>cc_line_clear ()</title>
+<indexterm><primary>cc_line_clear</primary></indexterm><programlisting><link linkend="void">void</link>                cc_line_clear                       (<link linkend="CcLine">CcLine</link> *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-line-get-type" role="function"/>cc_line_get_type ()</title>
+<indexterm><primary>cc_line_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               cc_line_get_type                    (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-line-line" role="function"/>cc_line_line ()</title>
+<indexterm><primary>cc_line_line</primary></indexterm><programlisting><link linkend="void">void</link>                cc_line_line                        (<link linkend="CcLine">CcLine</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-line-move" role="function"/>cc_line_move ()</title>
+<indexterm><primary>cc_line_move</primary></indexterm><programlisting><link linkend="void">void</link>                cc_line_move                        (<link linkend="CcLine">CcLine</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-line-new" role="function"/>cc_line_new ()</title>
+<indexterm><primary>cc_line_new</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_line_new                         (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

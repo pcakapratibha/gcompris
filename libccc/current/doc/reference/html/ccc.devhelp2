@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="libccc Reference Manual" link="index.html" author="" name="ccc" version="2">
+  <chapters>
+    <sub name="Working with the Canvas" link="ccc-Working-with-the-Canvas.html">
+      <sub name="Known Bugs" link="ccc-Known-Bugs.html">
+        <sub name="Rendering Bugs" link="ccc-Known-Bugs.html#ccc-Rendering-Bugs"/>
+      </sub>
+      <sub name="Writing custom canvas items" link="ccc-Writing-custom-canvas-items.html">
+        <sub name="Deriving from the Item" link="ccc-Writing-custom-canvas-items.html#ccc-Deriving-from-the Item"/>
+        <sub name="Grid-fitting" link="ccc-Grid-Fitting.html"/>
+      </sub>
+    </sub>
+    <sub name="Internals" link="ccc-Internals.html">
+      <sub name="Bounds Handling" link="ccc-Bounds-Handling.html">
+        <sub name="Bound Caching" link="ccc-Bounds-Handling.html#ccc-Bounds-Caching"/>
+        <sub name="Redrawing" link="ccc-Redrawing.html"/>
+      </sub>
+      <sub name="Event Handling" link="ccc-Event-Handling.html">
+        <sub name="Picking Events" link="ccc-Event-Handling.html#ccc-Picking-Events"/>
+      </sub>
+      <sub name="Focus Handling" link="ccc-Focus-Handling.html">
+        <sub name="Introduction" link="ccc-Focus-Handling.html#ccc-Focus-Handling-Introduction"/>
+        <sub name="The focus signal" link="ccc-Focus-Handling-The-focus-Signal.html"/>
+      </sub>
+      <sub name="hashmap" link="ccc-hashmap.html"/>
+      <sub name="Zooming and Scrolling" link="ccc-Zoom-and-Scroll.html">
+        <sub name="Scrolling" link="ccc-Zoom-and-Scroll.html#ccc-Scrolling"/>
+        <sub name="Zooming" link="ccc-Zooming.html"/>
+      </sub>
+      <sub name="Known Bugs" link="ccc-Known-Bugs.html">
+        <sub name="Rendering Bugs" link="ccc-Known-Bugs.html#ccc-Rendering-Bugs"/>
+      </sub>
+    </sub>
+    <sub name="API Reference" link="ccc-API-Reference.html">
+      <sub name="Object Hierarchy" link="ccc-Object-Hierarchy.html"/>
+      <sub name="Fundamentals" link="ccc-Fundamentals.html">
+        <sub name="Brushes" link="ccc-Brushes.html"/>
+        <sub name="Color Brush" link="ccc-Color-Brush.html"/>
+        <sub name="Colors" link="ccc-Colors.html"/>
+        <sub name="Rectangle" link="ccc-Rectangle.html"/>
+        <sub name="Utilities" link="ccc-Utilities.html"/>
+      </sub>
+      <sub name="Canvas Items" link="ccc-Canvas-Items.html">
+        <sub name="The Base Item" link="ccc-The-Base-Item.html"/>
+        <sub name="shape" link="ccc-shape.html"/>
+        <sub name="line" link="ccc-line.html"/>
+        <sub name="circle" link="ccc-circle.html"/>
+        <sub name="Rectangles" link="ccc-Rectangles.html"/>
+        <sub name="rounded-rectangle" link="ccc-rounded-rectangle.html"/>
+        <sub name="pixbuf" link="ccc-pixbuf.html"/>
+        <sub name="Text" link="ccc-Text.html"/>
+        <sub name="CcCamera" link="CcCamera.html"/>
+      </sub>
+      <sub name="View Elements" link="ccc-View-Elements.html">
+        <sub name="Item View" link="ccc-Item-View.html"/>
+        <sub name="Canvas Views" link="ccc-Canvas-Views.html"/>
+        <sub name="Cell Renderer" link="ccc-Cell-Renderer.html"/>
+        <sub name="Widget" link="ccc-Widget.html"/>
+        <sub name="printer" link="ccc-printer.html"/>
+        <sub name="png-writer" link="ccc-png-writer.html"/>
+      </sub>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="typedef" name="CcHashMap" link="ccc-hashmap.html#CcHashMap"/>
+    <keyword type="function" name="cc_hash_map_foreach ()" link="ccc-hashmap.html#cc-hash-map-foreach"/>
+    <keyword type="function" name="cc_hash_map_get_type ()" link="ccc-hashmap.html#cc-hash-map-get-type"/>
+    <keyword type="function" name="cc_hash_map_insert ()" link="ccc-hashmap.html#cc-hash-map-insert"/>
+    <keyword type="function" name="cc_hash_map_lookup ()" link="ccc-hashmap.html#cc-hash-map-lookup"/>
+    <keyword type="function" name="cc_hash_map_new ()" link="ccc-hashmap.html#cc-hash-map-new"/>
+    <keyword type="function" name="cc_hash_map_remove ()" link="ccc-hashmap.html#cc-hash-map-remove"/>
+    <keyword type="struct" name="CcBrush" link="ccc-Brushes.html#CcBrush-struct"/>
+    <keyword type="struct" name="CcBrushClass" link="ccc-Brushes.html#CcBrushClass"/>
+    <keyword type="function" name="cc_brush_apply ()" link="ccc-Brushes.html#cc-brush-apply"/>
+    <keyword type="struct" name="CcBrushColor" link="ccc-Color-Brush.html#CcBrushColor-struct"/>
+    <keyword type="struct" name="CcBrushColorClass" link="ccc-Color-Brush.html#CcBrushColorClass"/>
+    <keyword type="function" name="cc_brush_color_new ()" link="ccc-Color-Brush.html#cc-brush-color-new"/>
+    <keyword type="function" name="cc_brush_color_get_color ()" link="ccc-Color-Brush.html#cc-brush-color-get-color"/>
+    <keyword type="function" name="cc_brush_color_set_color ()" link="ccc-Color-Brush.html#cc-brush-color-set-color"/>
+    <keyword type="" name="The &quot;color&quot; property" link="ccc-Color-Brush.html#CcBrushColor--color"/>
+    <keyword type="struct" name="CcColor" link="ccc-Colors.html#CcColor-struct"/>
+    <keyword type="typedef" name="CcColorRgb" link="ccc-Colors.html#CcColorRgb"/>
+    <keyword type="typedef" name="CcColorHsv" link="ccc-Colors.html#CcColorHsv"/>
+    <keyword type="struct" name="CcColorClass" link="ccc-Colors.html#CcColorClass"/>
+    <keyword type="function" name="cc_color_new_hsv ()" link="ccc-Colors.html#cc-color-new-hsv"/>
+    <keyword type="function" name="cc_color_new_hsva ()" link="ccc-Colors.html#cc-color-new-hsva"/>
+    <keyword type="function" name="cc_color_new_rgb ()" link="ccc-Colors.html#cc-color-new-rgb"/>
+    <keyword type="function" name="cc_color_new_rgba ()" link="ccc-Colors.html#cc-color-new-rgba"/>
+    <keyword type="function" name="cc_color_apply ()" link="ccc-Colors.html#cc-color-apply"/>
+    <keyword type="" name="The &quot;alpha&quot; property" link="ccc-Colors.html#CcColor--alpha"/>
+    <keyword type="" name="The &quot;blue&quot; property" link="ccc-Colors.html#CcColorRgb--blue"/>
+    <keyword type="" name="The &quot;green&quot; property" link="ccc-Colors.html#CcColorRgb--green"/>
+    <keyword type="" name="The &quot;red&quot; property" link="ccc-Colors.html#CcColorRgb--red"/>
+    <keyword type="" name="The &quot;hue&quot; property" link="ccc-Colors.html#CcColorHsv--hue"/>
+    <keyword type="" name="The &quot;saturation&quot; property" link="ccc-Colors.html#CcColorHsv--saturation"/>
+    <keyword type="" name="The &quot;value&quot; property" link="ccc-Colors.html#CcColorHsv--value"/>
+    <keyword type="struct" name="CcDRect" link="ccc-Rectangle.html#CcDRect"/>
+    <keyword type="function" name="cc_d_rect_copy ()" link="ccc-Rectangle.html#cc-d-rect-copy"/>
+    <keyword type="function" name="cc_d_rect_equal ()" link="ccc-Rectangle.html#cc-d-rect-equal"/>
+    <keyword type="function" name="cc_d_rect_intersect ()" link="ccc-Rectangle.html#cc-d-rect-intersect"/>
+    <keyword type="function" name="cc_d_rect_union ()" link="ccc-Rectangle.html#cc-d-rect-union"/>
+    <keyword type="function" name="cc_accumulator_boolean ()" link="ccc-Utilities.html#cc-accumulator-boolean"/>
+    <keyword type="function" name="cc_point_grid_align ()" link="ccc-Utilities.html#cc-point-grid-align"/>
+    <keyword type="macro" name="cc_return_if_unimplemented()" link="ccc-Utilities.html#cc-return-if-unimplemented"/>
+    <keyword type="struct" name="CcItem" link="ccc-The-Base-Item.html#CcItem-struct"/>
+    <keyword type="struct" name="CcItemClass" link="ccc-The-Base-Item.html#CcItemClass"/>
+    <keyword type="function" name="cc_item_new ()" link="ccc-The-Base-Item.html#cc-item-new"/>
+    <keyword type="function" name="cc_item_append ()" link="ccc-The-Base-Item.html#cc-item-append"/>
+    <keyword type="function" name="cc_item_dirty ()" link="ccc-The-Base-Item.html#cc-item-dirty"/>
+    <keyword type="function" name="cc_item_distance ()" link="ccc-The-Base-Item.html#cc-item-distance"/>
+    <keyword type="function" name="cc_item_insert ()" link="ccc-The-Base-Item.html#cc-item-insert"/>
+    <keyword type="function" name="cc_item_remove ()" link="ccc-The-Base-Item.html#cc-item-remove"/>
+    <keyword type="function" name="cc_item_render ()" link="ccc-The-Base-Item.html#cc-item-render"/>
+    <keyword type="function" name="cc_item_set_grid_aligned ()" link="ccc-The-Base-Item.html#cc-item-set-grid-aligned"/>
+    <keyword type="enum" name="enum CcItemFlags" link="ccc-The-Base-Item.html#CcItemFlags"/>
+    <keyword type="macro" name="CC_ITEM_FLAGS()" link="ccc-The-Base-Item.html#CC-ITEM-FLAGS:CAPS"/>
+    <keyword type="macro" name="CC_ITEM_DISPOSED()" link="ccc-The-Base-Item.html#CC-ITEM-DISPOSED:CAPS"/>
+    <keyword type="macro" name="CC_ITEM_GRID_ALIGNED()" link="ccc-The-Base-Item.html#CC-ITEM-GRID-ALIGNED:CAPS"/>
+    <keyword type="macro" name="CC_ITEM_SET_FLAGS()" link="ccc-The-Base-Item.html#CC-ITEM-SET-FLAGS:CAPS"/>
+    <keyword type="macro" name="CC_ITEM_UNSET_FLAGS()" link="ccc-The-Base-Item.html#CC-ITEM-UNSET-FLAGS:CAPS"/>
+    <keyword type="macro" name="CC_ITEM_CAN_FOCUS()" link="ccc-The-Base-Item.html#CC-ITEM-CAN-FOCUS:CAPS"/>
+    <keyword type="function" name="CcItemFunc ()" link="ccc-The-Base-Item.html#CcItemFunc"/>
+    <keyword type="function" name="cc_item_add_view ()" link="ccc-The-Base-Item.html#cc-item-add-view"/>
+    <keyword type="function" name="cc_item_bounds_changed ()" link="ccc-The-Base-Item.html#cc-item-bounds-changed"/>
+    <keyword type="function" name="cc_item_flags_get_type ()" link="ccc-The-Base-Item.html#cc-item-flags-get-type"/>
+    <keyword type="function" name="cc_item_foreach_view ()" link="ccc-The-Base-Item.html#cc-item-foreach-view"/>
+    <keyword type="function" name="cc_item_get_all_bounds ()" link="ccc-The-Base-Item.html#cc-item-get-all-bounds"/>
+    <keyword type="function" name="cc_item_grab_focus ()" link="ccc-The-Base-Item.html#cc-item-grab-focus"/>
+    <keyword type="function" name="cc_item_is_child_of ()" link="ccc-The-Base-Item.html#cc-item-is-child-of"/>
+    <keyword type="function" name="cc_item_remove_view ()" link="ccc-The-Base-Item.html#cc-item-remove-view"/>
+    <keyword type="function" name="cc_item_update_bounds ()" link="ccc-The-Base-Item.html#cc-item-update-bounds"/>
+    <keyword type="function" name="cc_item_update_bounds_for_view ()" link="ccc-The-Base-Item.html#cc-item-update-bounds-for-view"/>
+    <keyword type="" name="The &quot;all-bounds-changed&quot; signal" link="ccc-The-Base-Item.html#CcItem-all-bounds-changed"/>
+    <keyword type="" name="The &quot;button-press-event&quot; signal" link="ccc-The-Base-Item.html#CcItem-button-press-event"/>
+    <keyword type="" name="The &quot;button-release-event&quot; signal" link="ccc-The-Base-Item.html#CcItem-button-release-event"/>
+    <keyword type="" name="The &quot;dirty&quot; signal" link="ccc-The-Base-Item.html#CcItem-dirty"/>
+    <keyword type="" name="The &quot;enter-notify-event&quot; signal" link="ccc-The-Base-Item.html#CcItem-enter-notify-event"/>
+    <keyword type="" name="The &quot;event&quot; signal" link="ccc-The-Base-Item.html#CcItem-event"/>
+    <keyword type="" name="The &quot;focus&quot; signal" link="ccc-The-Base-Item.html#CcItem-focus"/>
+    <keyword type="" name="The &quot;focus-enter&quot; signal" link="ccc-The-Base-Item.html#CcItem-focus-enter"/>
+    <keyword type="" name="The &quot;focus-leave&quot; signal" link="ccc-The-Base-Item.html#CcItem-focus-leave"/>
+    <keyword type="" name="The &quot;item-added&quot; signal" link="ccc-The-Base-Item.html#CcItem-item-added"/>
+    <keyword type="" name="The &quot;item-removed&quot; signal" link="ccc-The-Base-Item.html#CcItem-item-removed"/>
+    <keyword type="" name="The &quot;key-press-event&quot; signal" link="ccc-The-Base-Item.html#CcItem-key-press-event"/>
+    <keyword type="" name="The &quot;key-release-event&quot; signal" link="ccc-The-Base-Item.html#CcItem-key-release-event"/>
+    <keyword type="" name="The &quot;leave-notify-event&quot; signal" link="ccc-The-Base-Item.html#CcItem-leave-notify-event"/>
+    <keyword type="" name="The &quot;motion-notify-event&quot; signal" link="ccc-The-Base-Item.html#CcItem-motion-notify-event"/>
+    <keyword type="" name="The &quot;view-register&quot; signal" link="ccc-The-Base-Item.html#CcItem-view-register"/>
+    <keyword type="" name="The &quot;view-unregister&quot; signal" link="ccc-The-Base-Item.html#CcItem-view-unregister"/>
+    <keyword type="struct" name="CcShape" link="ccc-shape.html#CcShape-struct"/>
+    <keyword type="struct" name="CcShapeClass" link="ccc-shape.html#CcShapeClass"/>
+    <keyword type="function" name="cc_shape_get_brush_border ()" link="ccc-shape.html#cc-shape-get-brush-border"/>
+    <keyword type="function" name="cc_shape_get_brush_content ()" link="ccc-shape.html#cc-shape-get-brush-content"/>
+    <keyword type="function" name="cc_shape_get_type ()" link="ccc-shape.html#cc-shape-get-type"/>
+    <keyword type="function" name="cc_shape_get_width ()" link="ccc-shape.html#cc-shape-get-width"/>
+    <keyword type="function" name="cc_shape_set_brush_border ()" link="ccc-shape.html#cc-shape-set-brush-border"/>
+    <keyword type="function" name="cc_shape_set_brush_content ()" link="ccc-shape.html#cc-shape-set-brush-content"/>
+    <keyword type="function" name="cc_shape_set_width_pixels ()" link="ccc-shape.html#cc-shape-set-width-pixels"/>
+    <keyword type="function" name="cc_shape_set_width_units ()" link="ccc-shape.html#cc-shape-set-width-units"/>
+    <keyword type="" name="The &quot;brush-border&quot; property" link="ccc-shape.html#CcShape--brush-border"/>
+    <keyword type="" name="The &quot;brush-content&quot; property" link="ccc-shape.html#CcShape--brush-content"/>
+    <keyword type="" name="The &quot;width-pixels&quot; property" link="ccc-shape.html#CcShape--width-pixels"/>
+    <keyword type="" name="The &quot;width-units&quot; property" link="ccc-shape.html#CcShape--width-units"/>
+    <keyword type="typedef" name="CcLine" link="ccc-line.html#CcLine"/>
+    <keyword type="typedef" name="CcLineClass" link="ccc-line.html#CcLineClass"/>
+    <keyword type="function" name="cc_line_clear ()" link="ccc-line.html#cc-line-clear"/>
+    <keyword type="function" name="cc_line_get_type ()" link="ccc-line.html#cc-line-get-type"/>
+    <keyword type="function" name="cc_line_line ()" link="ccc-line.html#cc-line-line"/>
+    <keyword type="function" name="cc_line_move ()" link="ccc-line.html#cc-line-move"/>
+    <keyword type="function" name="cc_line_new ()" link="ccc-line.html#cc-line-new"/>
+    <keyword type="struct" name="CcCircle" link="ccc-circle.html#CcCircle-struct"/>
+    <keyword type="struct" name="CcCircleClass" link="ccc-circle.html#CcCircleClass"/>
+    <keyword type="function" name="cc_circle_get_type ()" link="ccc-circle.html#cc-circle-get-type"/>
+    <keyword type="function" name="cc_circle_new ()" link="ccc-circle.html#cc-circle-new"/>
+    <keyword type="function" name="cc_circle_set_anchor ()" link="ccc-circle.html#cc-circle-set-anchor"/>
+    <keyword type="function" name="cc_circle_set_radius ()" link="ccc-circle.html#cc-circle-set-radius"/>
+    <keyword type="" name="The &quot;anchor&quot; property" link="ccc-circle.html#CcCircle--anchor"/>
+    <keyword type="" name="The &quot;radius&quot; property" link="ccc-circle.html#CcCircle--radius"/>
+    <keyword type="struct" name="CcRectangle" link="ccc-Rectangles.html#CcRectangle-struct"/>
+    <keyword type="struct" name="CcRectangleClass" link="ccc-Rectangles.html#CcRectangleClass"/>
+    <keyword type="function" name="cc_rectangle_new ()" link="ccc-Rectangles.html#cc-rectangle-new"/>
+    <keyword type="function" name="cc_rectangle_set_position ()" link="ccc-Rectangles.html#cc-rectangle-set-position"/>
+    <keyword type="function" name="cc_rectangle_set_height ()" link="ccc-Rectangles.html#cc-rectangle-set-height"/>
+    <keyword type="function" name="cc_rectangle_set_width ()" link="ccc-Rectangles.html#cc-rectangle-set-width"/>
+    <keyword type="function" name="cc_rectangle_set_x ()" link="ccc-Rectangles.html#cc-rectangle-set-x"/>
+    <keyword type="function" name="cc_rectangle_set_y ()" link="ccc-Rectangles.html#cc-rectangle-set-y"/>
+    <keyword type="" name="The &quot;position-h&quot; property" link="ccc-Rectangles.html#CcRectangle--position-h"/>
+    <keyword type="" name="The &quot;position-w&quot; property" link="ccc-Rectangles.html#CcRectangle--position-w"/>
+    <keyword type="" name="The &quot;position-x&quot; property" link="ccc-Rectangles.html#CcRectangle--position-x"/>
+    <keyword type="" name="The &quot;position-y&quot; property" link="ccc-Rectangles.html#CcRectangle--position-y"/>
+    <keyword type="struct" name="CcRoundedRectangle" link="ccc-rounded-rectangle.html#CcRoundedRectangle-struct"/>
+    <keyword type="struct" name="CcRoundedRectangleClass" link="ccc-rounded-rectangle.html#CcRoundedRectangleClass"/>
+    <keyword type="" name="The &quot;corner-radius&quot; property" link="ccc-rounded-rectangle.html#CcRoundedRectangle--corner-radius"/>
+    <keyword type="typedef" name="CcPixbuf" link="ccc-pixbuf.html#CcPixbuf"/>
+    <keyword type="typedef" name="CcPixbufClass" link="ccc-pixbuf.html#CcPixbufClass"/>
+    <keyword type="function" name="cc_pixbuf_get_rotation ()" link="ccc-pixbuf.html#cc-pixbuf-get-rotation"/>
+    <keyword type="function" name="cc_pixbuf_get_type ()" link="ccc-pixbuf.html#cc-pixbuf-get-type"/>
+    <keyword type="function" name="cc_pixbuf_new ()" link="ccc-pixbuf.html#cc-pixbuf-new"/>
+    <keyword type="function" name="cc_pixbuf_set_pixbuf ()" link="ccc-pixbuf.html#cc-pixbuf-set-pixbuf"/>
+    <keyword type="function" name="cc_pixbuf_set_position ()" link="ccc-pixbuf.html#cc-pixbuf-set-position"/>
+    <keyword type="function" name="cc_pixbuf_set_rotation ()" link="ccc-pixbuf.html#cc-pixbuf-set-rotation"/>
+    <keyword type="function" name="cc_pixbuf_set_position_x ()" link="ccc-pixbuf.html#cc-pixbuf-set-position-x"/>
+    <keyword type="function" name="cc_pixbuf_set_position_y ()" link="ccc-pixbuf.html#cc-pixbuf-set-position-y"/>
+    <keyword type="" name="The &quot;pixbuf&quot; property" link="ccc-pixbuf.html#CcPixbuf--pixbuf"/>
+    <keyword type="" name="The &quot;position-h&quot; property" link="ccc-pixbuf.html#CcPixbuf--position-h"/>
+    <keyword type="" name="The &quot;position-h-set&quot; property" link="ccc-pixbuf.html#CcPixbuf--position-h-set"/>
+    <keyword type="" name="The &quot;position-w&quot; property" link="ccc-pixbuf.html#CcPixbuf--position-w"/>
+    <keyword type="" name="The &quot;position-w-set&quot; property" link="ccc-pixbuf.html#CcPixbuf--position-w-set"/>
+    <keyword type="" name="The &quot;position-x&quot; property" link="ccc-pixbuf.html#CcPixbuf--position-x"/>
+    <keyword type="" name="The &quot;position-y&quot; property" link="ccc-pixbuf.html#CcPixbuf--position-y"/>
+    <keyword type="" name="The &quot;rotation&quot; property" link="ccc-pixbuf.html#CcPixbuf--rotation"/>
+    <keyword type="struct" name="CcText" link="ccc-Text.html#CcText-struct"/>
+    <keyword type="struct" name="CcTextClass" link="ccc-Text.html#CcTextClass"/>
+    <keyword type="function" name="cc_text_new ()" link="ccc-Text.html#cc-text-new"/>
+    <keyword type="function" name="cc_text_set_anchor ()" link="ccc-Text.html#cc-text-set-anchor"/>
+    <keyword type="function" name="cc_text_set_anchor_type ()" link="ccc-Text.html#cc-text-set-anchor-type"/>
+    <keyword type="function" name="cc_text_get_text ()" link="ccc-Text.html#cc-text-get-text"/>
+    <keyword type="function" name="cc_text_is_editable ()" link="ccc-Text.html#cc-text-is-editable"/>
+    <keyword type="function" name="cc_text_set_editable ()" link="ccc-Text.html#cc-text-set-editable"/>
+    <keyword type="function" name="cc_text_set_font_description ()" link="ccc-Text.html#cc-text-set-font-description"/>
+    <keyword type="function" name="cc_text_set_markup ()" link="ccc-Text.html#cc-text-set-markup"/>
+    <keyword type="function" name="cc_text_set_size_pixels ()" link="ccc-Text.html#cc-text-set-size-pixels"/>
+    <keyword type="function" name="cc_text_set_text ()" link="ccc-Text.html#cc-text-set-text"/>
+    <keyword type="" name="The &quot;anchor&quot; property" link="ccc-Text.html#CcText--anchor"/>
+    <keyword type="" name="The &quot;brush-caret&quot; property" link="ccc-Text.html#CcText--brush-caret"/>
+    <keyword type="" name="The &quot;cursor&quot; property" link="ccc-Text.html#CcText--cursor"/>
+    <keyword type="" name="The &quot;editable&quot; property" link="ccc-Text.html#CcText--editable"/>
+    <keyword type="" name="The &quot;size-pixels&quot; property" link="ccc-Text.html#CcText--size-pixels"/>
+    <keyword type="" name="The &quot;text&quot; property" link="ccc-Text.html#CcText--text"/>
+    <keyword type="typedef" name="CcCamera" link="CcCamera.html#CcCamera"/>
+    <keyword type="typedef" name="CcCameraClass" link="CcCamera.html#CcCameraClass"/>
+    <keyword type="function" name="cc_camera_new ()" link="CcCamera.html#cc-camera-new"/>
+    <keyword type="function" name="cc_camera_new_root ()" link="CcCamera.html#cc-camera-new-root"/>
+    <keyword type="function" name="cc_camera_get_root ()" link="CcCamera.html#cc-camera-get-root"/>
+    <keyword type="function" name="cc_camera_set_root ()" link="CcCamera.html#cc-camera-set-root"/>
+    <keyword type="struct" name="CcItemView" link="ccc-Item-View.html#CcItemView-struct"/>
+    <keyword type="struct" name="CcItemViewIface" link="ccc-Item-View.html#CcItemViewIface"/>
+    <keyword type="function" name="cc_item_view_register ()" link="ccc-Item-View.html#cc-item-view-register"/>
+    <keyword type="function" name="cc_item_view_unregister ()" link="ccc-Item-View.html#cc-item-view-unregister"/>
+    <keyword type="enum" name="enum CcZoomMode" link="ccc-Canvas-Views.html#CcZoomMode"/>
+    <keyword type="struct" name="CcView" link="ccc-Canvas-Views.html#CcView-struct"/>
+    <keyword type="struct" name="CcViewIface" link="ccc-Canvas-Views.html#CcViewIface"/>
+    <keyword type="function" name="cc_view_get_root ()" link="ccc-Canvas-Views.html#cc-view-get-root"/>
+    <keyword type="function" name="cc_view_set_root ()" link="ccc-Canvas-Views.html#cc-view-set-root"/>
+    <keyword type="function" name="cc_view_get_zoom ()" link="ccc-Canvas-Views.html#cc-view-get-zoom"/>
+    <keyword type="function" name="cc_view_set_zoom ()" link="ccc-Canvas-Views.html#cc-view-set-zoom"/>
+    <keyword type="function" name="cc_view_window_to_world ()" link="ccc-Canvas-Views.html#cc-view-window-to-world"/>
+    <keyword type="function" name="cc_view_world_to_window ()" link="ccc-Canvas-Views.html#cc-view-world-to-window"/>
+    <keyword type="function" name="cc_view_get_focus ()" link="ccc-Canvas-Views.html#cc-view-get-focus"/>
+    <keyword type="function" name="cc_view_get_scrolled_region ()" link="ccc-Canvas-Views.html#cc-view-get-scrolled-region"/>
+    <keyword type="function" name="cc_view_grab_item ()" link="ccc-Canvas-Views.html#cc-view-grab-item"/>
+    <keyword type="function" name="cc_view_set_focus ()" link="ccc-Canvas-Views.html#cc-view-set-focus"/>
+    <keyword type="function" name="cc_view_set_scrolled_region ()" link="ccc-Canvas-Views.html#cc-view-set-scrolled-region"/>
+    <keyword type="function" name="cc_view_ungrab_item ()" link="ccc-Canvas-Views.html#cc-view-ungrab-item"/>
+    <keyword type="function" name="cc_view_world_to_window_distance ()" link="ccc-Canvas-Views.html#cc-view-world-to-window-distance"/>
+    <keyword type="" name="The &quot;focus&quot; property" link="ccc-Canvas-Views.html#CcView--focus"/>
+    <keyword type="" name="The &quot;root&quot; property" link="ccc-Canvas-Views.html#CcView--root"/>
+    <keyword type="" name="The &quot;scrolled-region&quot; property" link="ccc-Canvas-Views.html#CcView--scrolled-region"/>
+    <keyword type="" name="The &quot;zoom&quot; property" link="ccc-Canvas-Views.html#CcView--zoom"/>
+    <keyword type="" name="The &quot;zoom-mode&quot; property" link="ccc-Canvas-Views.html#CcView--zoom-mode"/>
+    <keyword type="struct" name="CcViewCellRenderer" link="ccc-Cell-Renderer.html#CcViewCellRenderer-struct"/>
+    <keyword type="struct" name="CcViewCellRendererClass" link="ccc-Cell-Renderer.html#CcViewCellRendererClass"/>
+    <keyword type="function" name="cc_view_cell_renderer_new ()" link="ccc-Cell-Renderer.html#cc-view-cell-renderer-new"/>
+    <keyword type="struct" name="CcViewWidget" link="ccc-Widget.html#CcViewWidget-struct"/>
+    <keyword type="struct" name="CcViewWidgetClass" link="ccc-Widget.html#CcViewWidgetClass"/>
+    <keyword type="function" name="cc_view_widget_new ()" link="ccc-Widget.html#cc-view-widget-new"/>
+    <keyword type="function" name="cc_view_widget_new_root ()" link="ccc-Widget.html#cc-view-widget-new-root"/>
+    <keyword type="function" name="cc_view_widget_get_center_view ()" link="ccc-Widget.html#cc-view-widget-get-center-view"/>
+    <keyword type="function" name="cc_view_widget_set_center_view ()" link="ccc-Widget.html#cc-view-widget-set-center-view"/>
+    <keyword type="" name="The &quot;center-view&quot; property" link="ccc-Widget.html#CcViewWidget--center-view"/>
+    <keyword type="" name="The &quot;set-scroll-adjustments&quot; signal" link="ccc-Widget.html#CcViewWidget-set-scroll-adjustments"/>
+    <keyword type="struct" name="CcPrinter" link="ccc-printer.html#CcPrinter-struct"/>
+    <keyword type="struct" name="CcPrinterClass" link="ccc-printer.html#CcPrinterClass"/>
+    <keyword type="function" name="cc_printer_get_type ()" link="ccc-printer.html#cc-printer-get-type"/>
+    <keyword type="function" name="cc_printer_new ()" link="ccc-printer.html#cc-printer-new"/>
+    <keyword type="function" name="cc_printer_print_page ()" link="ccc-printer.html#cc-printer-print-page"/>
+    <keyword type="" name="The &quot;filename&quot; property" link="ccc-printer.html#CcPrinter--filename"/>
+    <keyword type="struct" name="CcViewPNG" link="ccc-png-writer.html#CcViewPNG-struct"/>
+    <keyword type="struct" name="CcViewPNGClass" link="ccc-png-writer.html#CcViewPNGClass"/>
+    <keyword type="function" name="cc_view_png_get_type ()" link="ccc-png-writer.html#cc-view-png-get-type"/>
+    <keyword type="function" name="cc_view_png_new ()" link="ccc-png-writer.html#cc-view-png-new"/>
+    <keyword type="" name="The &quot;filename&quot; property" link="ccc-png-writer.html#CcViewPNG--filename"/>
+  </functions>
+</book>

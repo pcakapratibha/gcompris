@@ -1,0 +1,453 @@
+<!-- ##### SECTION Title ##### -->
+The Base Item
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcItem ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL CcItem::all-bounds-changed ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### SIGNAL CcItem::button-press-event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::button-release-event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::dirty ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### SIGNAL CcItem::enter-notify-event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::focus ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@arg2: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::focus-enter ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::focus-leave ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::item-added ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### SIGNAL CcItem::item-removed ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### SIGNAL CcItem::key-press-event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::key-release-event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::leave-notify-event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::motion-notify-event ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL CcItem::view-register ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL CcItem::view-unregister ##### -->
+<para>
+
+</para>
+
+@ccitem: the object which received the signal.
+@arg1: 
+
+<!-- ##### STRUCT CcItemClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+@distance: 
+@notify_child_bounds: 
+@render: 
+@update_bounds: 
+@button_press_event: 
+@button_release_event: 
+@enter_notify_event: 
+@event: 
+@focus: 
+@focus_enter: 
+@focus_leave: 
+@key_press_event: 
+@key_release_event: 
+@leave_notify_event: 
+@motion_notify_event: 
+@item_added: 
+@item_removed: 
+@view_register: 
+@view_unregister: 
+
+<!-- ##### FUNCTION cc_item_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_item_append ##### -->
+<para>
+
+</para>
+
+@self: 
+@child: 
+
+
+<!-- ##### FUNCTION cc_item_dirty ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+@dirty_region: 
+
+
+<!-- ##### FUNCTION cc_item_distance ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+@found: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_item_insert ##### -->
+<para>
+
+</para>
+
+@self: 
+@child: 
+@position: 
+
+
+<!-- ##### FUNCTION cc_item_remove ##### -->
+<para>
+
+</para>
+
+@self: 
+@child: 
+
+
+<!-- ##### FUNCTION cc_item_render ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+@cr: 
+
+
+<!-- ##### FUNCTION cc_item_set_grid_aligned ##### -->
+<para>
+
+</para>
+
+@self: 
+@grid_aligned: 
+
+
+<!-- ##### ENUM CcItemFlags ##### -->
+<para>
+
+</para>
+
+@CC_CAN_FOCUS: 
+@CC_DISPOSED: 
+@CC_GRID_ALIGNED: 
+
+<!-- ##### MACRO CC_ITEM_FLAGS ##### -->
+<para>
+
+</para>
+
+@i: 
+
+
+<!-- ##### MACRO CC_ITEM_DISPOSED ##### -->
+<para>
+
+</para>
+
+@i: 
+
+
+<!-- ##### MACRO CC_ITEM_GRID_ALIGNED ##### -->
+<para>
+
+</para>
+
+@i: 
+
+
+<!-- ##### MACRO CC_ITEM_SET_FLAGS ##### -->
+<para>
+
+</para>
+
+@i: 
+@m: 
+
+
+<!-- ##### MACRO CC_ITEM_UNSET_FLAGS ##### -->
+<para>
+
+</para>
+
+@i: 
+@m: 
+
+
+<!-- ##### MACRO CC_ITEM_CAN_FOCUS ##### -->
+<para>
+
+</para>
+
+@i: 
+
+
+<!-- ##### USER_FUNCTION CcItemFunc ##### -->
+<para>
+
+</para>
+
+@item: 
+@view: 
+@data: 
+
+
+<!-- ##### FUNCTION cc_item_add_view ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+
+
+<!-- ##### FUNCTION cc_item_bounds_changed ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+
+
+<!-- ##### FUNCTION cc_item_flags_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_item_foreach_view ##### -->
+<para>
+
+</para>
+
+@self: 
+@func: 
+@data: 
+
+
+<!-- ##### FUNCTION cc_item_get_all_bounds ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_item_grab_focus ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+
+
+<!-- ##### FUNCTION cc_item_is_child_of ##### -->
+<para>
+
+</para>
+
+@child: 
+@parent: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_item_remove_view ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+
+
+<!-- ##### FUNCTION cc_item_update_bounds ##### -->
+<para>
+
+</para>
+
+@self: 
+@data: 
+
+
+<!-- ##### FUNCTION cc_item_update_bounds_for_view ##### -->
+<para>
+
+</para>
+
+@self: 
+@view: 
+
+

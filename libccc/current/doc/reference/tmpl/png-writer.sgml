@@ -1,0 +1,54 @@
+<!-- ##### SECTION Title ##### -->
+png-writer
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcViewPNG ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcViewPNG:filename ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcViewPNGClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+
+<!-- ##### FUNCTION cc_view_png_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_png_new ##### -->
+<para>
+
+</para>
+
+@filename: 
+@Returns: 
+
+

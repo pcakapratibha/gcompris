@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="CcCamera">
+<refmeta>
+<refentrytitle role="top_of_page">CcCamera</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>CcCamera</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+typedef             <link linkend="CcCamera">CcCamera</link>;
+typedef             <link linkend="CcCameraClass">CcCameraClass</link>;
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-camera-new">cc_camera_new</link>                       (void);
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-camera-new-root">cc_camera_new_root</link>                  (<link linkend="CcItem">CcItem</link> *root);
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-camera-get-root">cc_camera_get_root</link>                  (<link linkend="CcItem">CcItem</link> const*self);
+<link linkend="void">void</link>                <link linkend="cc-camera-set-root">cc_camera_set_root</link>                  (<link linkend="CcCamera">CcCamera</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *root);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----CcCamera
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcCamera implements
+ <link linkend="CcView">CcView</link> and  <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcCamera" role="typedef"/>CcCamera</title>
+<indexterm><primary>CcCamera</primary></indexterm><programlisting>typedef CcItem      CcCamera;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcCameraClass" role="typedef"/>CcCameraClass</title>
+<indexterm><primary>CcCameraClass</primary></indexterm><programlisting>typedef CcItemClass CcCameraClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-camera-new" role="function"/>cc_camera_new ()</title>
+<indexterm><primary>cc_camera_new</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_camera_new                       (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-camera-new-root" role="function"/>cc_camera_new_root ()</title>
+<indexterm><primary>cc_camera_new_root</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_camera_new_root                  (<link linkend="CcItem">CcItem</link> *root);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-camera-get-root" role="function"/>cc_camera_get_root ()</title>
+<indexterm><primary>cc_camera_get_root</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_camera_get_root                  (<link linkend="CcItem">CcItem</link> const*self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-camera-set-root" role="function"/>cc_camera_set_root ()</title>
+<indexterm><primary>cc_camera_set_root</primary></indexterm><programlisting><link linkend="void">void</link>                cc_camera_set_root                  (<link linkend="CcCamera">CcCamera</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *root);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

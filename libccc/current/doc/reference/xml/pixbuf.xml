@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-pixbuf">
+<refmeta>
+<refentrytitle role="top_of_page">pixbuf</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>pixbuf</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcPixbuf"/>
+<synopsis>
+
+
+
+typedef             <link linkend="CcPixbuf">CcPixbuf</link>;
+typedef             <link linkend="CcPixbufClass">CcPixbufClass</link>;
+<link linkend="gdouble">gdouble</link>             <link linkend="cc-pixbuf-get-rotation">cc_pixbuf_get_rotation</link>              (<link linkend="CcPixbuf">CcPixbuf</link> const*self);
+<link linkend="GType">GType</link>               <link linkend="cc-pixbuf-get-type">cc_pixbuf_get_type</link>                  (void);
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-pixbuf-new">cc_pixbuf_new</link>                       (void);
+<link linkend="void">void</link>                <link linkend="cc-pixbuf-set-pixbuf">cc_pixbuf_set_pixbuf</link>                (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="GdkPixbuf">GdkPixbuf</link> *pixbuf);
+<link linkend="void">void</link>                <link linkend="cc-pixbuf-set-position">cc_pixbuf_set_position</link>              (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> w,
+                                                         <link linkend="gdouble">gdouble</link> h);
+<link linkend="void">void</link>                <link linkend="cc-pixbuf-set-rotation">cc_pixbuf_set_rotation</link>              (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> rotation);
+<link linkend="void">void</link>                <link linkend="cc-pixbuf-set-position-x">cc_pixbuf_set_position_x</link>            (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> pos_x);
+<link linkend="void">void</link>                <link linkend="cc-pixbuf-set-position-y">cc_pixbuf_set_position_y</link>            (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> pos_y);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----CcPixbuf
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcPixbuf implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcPixbuf--pixbuf">pixbuf</link>&quot;                   <link linkend="GdkPixbuf">GdkPixbuf</link>             : Read / Write
+  &quot;<link linkend="CcPixbuf--position-h">position-h</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="CcPixbuf--position-h-set">position-h-set</link>&quot;           <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="CcPixbuf--position-w">position-w</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="CcPixbuf--position-w-set">position-w-set</link>&quot;           <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="CcPixbuf--position-x">position-x</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="CcPixbuf--position-y">position-y</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="CcPixbuf--rotation">rotation</link>&quot;                 <link linkend="gdouble">gdouble</link>               : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcPixbuf" role="typedef"/>CcPixbuf</title>
+<indexterm><primary>CcPixbuf</primary></indexterm><programlisting>typedef CcItem      CcPixbuf;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcPixbufClass" role="typedef"/>CcPixbufClass</title>
+<indexterm><primary>CcPixbufClass</primary></indexterm><programlisting>typedef CcItemClass CcPixbufClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-get-rotation" role="function"/>cc_pixbuf_get_rotation ()</title>
+<indexterm><primary>cc_pixbuf_get_rotation</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             cc_pixbuf_get_rotation              (<link linkend="CcPixbuf">CcPixbuf</link> const*self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-get-type" role="function"/>cc_pixbuf_get_type ()</title>
+<indexterm><primary>cc_pixbuf_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               cc_pixbuf_get_type                  (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-new" role="function"/>cc_pixbuf_new ()</title>
+<indexterm><primary>cc_pixbuf_new</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_pixbuf_new                       (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-set-pixbuf" role="function"/>cc_pixbuf_set_pixbuf ()</title>
+<indexterm><primary>cc_pixbuf_set_pixbuf</primary></indexterm><programlisting><link linkend="void">void</link>                cc_pixbuf_set_pixbuf                (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="GdkPixbuf">GdkPixbuf</link> *pixbuf);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pixbuf</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-set-position" role="function"/>cc_pixbuf_set_position ()</title>
+<indexterm><primary>cc_pixbuf_set_position</primary></indexterm><programlisting><link linkend="void">void</link>                cc_pixbuf_set_position              (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> w,
+                                                         <link linkend="gdouble">gdouble</link> h);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>w</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>h</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-set-rotation" role="function"/>cc_pixbuf_set_rotation ()</title>
+<indexterm><primary>cc_pixbuf_set_rotation</primary></indexterm><programlisting><link linkend="void">void</link>                cc_pixbuf_set_rotation              (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> rotation);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>rotation</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-set-position-x" role="function"/>cc_pixbuf_set_position_x ()</title>
+<indexterm><primary>cc_pixbuf_set_position_x</primary></indexterm><programlisting><link linkend="void">void</link>                cc_pixbuf_set_position_x            (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> pos_x);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pos_x</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-pixbuf-set-position-y" role="function"/>cc_pixbuf_set_position_y ()</title>
+<indexterm><primary>cc_pixbuf_set_position_y</primary></indexterm><programlisting><link linkend="void">void</link>                cc_pixbuf_set_position_y            (<link linkend="CcPixbuf">CcPixbuf</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> pos_y);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pos_y</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcPixbuf--pixbuf"/>The &quot;<literal>pixbuf</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:pixbuf</primary></indexterm><programlisting>  &quot;pixbuf&quot;                   <link linkend="GdkPixbuf">GdkPixbuf</link>             : Read / Write</programlisting>
+<para>pixbuf.</para></refsect2>
+<refsect2><title><anchor id="CcPixbuf--position-h"/>The &quot;<literal>position-h</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:position-h</primary></indexterm><programlisting>  &quot;position-h&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The height of the image.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcPixbuf--position-h-set"/>The &quot;<literal>position-h-set</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:position-h-set</primary></indexterm><programlisting>  &quot;position-h-set&quot;           <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Use the specified height instead of the image height.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2><title><anchor id="CcPixbuf--position-w"/>The &quot;<literal>position-w</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:position-w</primary></indexterm><programlisting>  &quot;position-w&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The width of the image.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcPixbuf--position-w-set"/>The &quot;<literal>position-w-set</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:position-w-set</primary></indexterm><programlisting>  &quot;position-w-set&quot;           <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Use the specified width instead of the image width.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2><title><anchor id="CcPixbuf--position-x"/>The &quot;<literal>position-x</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:position-x</primary></indexterm><programlisting>  &quot;position-x&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The horizontal position of the pixbuf.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcPixbuf--position-y"/>The &quot;<literal>position-y</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:position-y</primary></indexterm><programlisting>  &quot;position-y&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The vertical position of the pixbuf.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcPixbuf--rotation"/>The &quot;<literal>rotation</literal>&quot; property</title>
+<indexterm><primary>CcPixbuf:rotation</primary></indexterm><programlisting>  &quot;rotation&quot;                 <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The rotation of this image.</para><para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

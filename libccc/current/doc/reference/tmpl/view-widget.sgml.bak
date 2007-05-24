@@ -1,0 +1,84 @@
+<!-- ##### SECTION Title ##### -->
+Widget
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcViewWidget ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL CcViewWidget::set-scroll-adjustments ##### -->
+<para>
+
+</para>
+
+@ccviewwidget: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### ARG CcViewWidget:center-view ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcViewWidgetClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+@set_scroll_adjustments: 
+
+<!-- ##### FUNCTION cc_view_widget_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_widget_new_root ##### -->
+<para>
+
+</para>
+
+@root: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_widget_get_center_view ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_view_widget_set_center_view ##### -->
+<para>
+
+</para>
+
+@self: 
+@center_view: 
+
+

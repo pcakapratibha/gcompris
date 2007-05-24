@@ -1,0 +1,1657 @@
+<STRUCT>
+<NAME>CcView</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcViewIface</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_VIEW</NAME>
+#define CC_TYPE_VIEW         (cc_view_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW</NAME>
+#define CC_VIEW(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_VIEW, CcView))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_VIEW</NAME>
+#define CC_IS_VIEW(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_VIEW))
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_GET_CLASS</NAME>
+#define CC_VIEW_GET_CLASS(i) (G_TYPE_INSTANCE_GET_INTERFACE((i), CC_TYPE_VIEW, CcViewIface))
+</MACRO>
+<FUNCTION>
+<NAME>cc_view_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_get_focus</NAME>
+<RETURNS>CcItem*</RETURNS>
+const CcView* self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_get_root</NAME>
+<RETURNS>CcItem*</RETURNS>
+CcView      * self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_get_scrolled_region</NAME>
+<RETURNS>CcDRect*</RETURNS>
+CcView      * self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_get_zoom</NAME>
+<RETURNS>gdouble </RETURNS>
+CcView      * self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_set_focus</NAME>
+<RETURNS>void    </RETURNS>
+CcView      * self,CcItem      * focus
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_set_root</NAME>
+<RETURNS>void    </RETURNS>
+CcView * self,CcItem * root
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_set_scrolled_region</NAME>
+<RETURNS>void    </RETURNS>
+CcView      * self,CcDRect     * scrolled_region
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_set_zoom</NAME>
+<RETURNS>void    </RETURNS>
+CcView      * self,gdouble       zoom
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_grab_item</NAME>
+<RETURNS>gint    </RETURNS>
+CcView      * self,CcItem      * item,GdkEventMask  mask,GdkCursor   * cursor,guint32       time
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_ungrab_item</NAME>
+<RETURNS>void    </RETURNS>
+CcView      * self,CcItem      * item,guint32       time
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_window_to_world</NAME>
+<RETURNS>void    </RETURNS>
+CcView      * self,gdouble     * x,gdouble     * y
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_world_to_window</NAME>
+<RETURNS>void    </RETURNS>
+CcView * self,gdouble* x,gdouble* y
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_world_to_window_distance</NAME>
+<RETURNS>void    </RETURNS>
+CcView * self,gdouble* x,gdouble* y
+</FUNCTION>
+<STRUCT>
+<NAME>CcViewIface</NAME>
+struct _CcViewIface {
+	GTypeInterface base_iface;
+
+	/* vtable */
+	GdkGrabStatus (*grab_item)               (CcView*       self,
+				                  CcItem*       item,
+					          GdkEventMask  mask,
+					          GdkCursor   * cursor,
+					          guint32       time);
+	void          (*ungrab_item)             (CcView      * self,
+					          CcItem      * item,
+					          guint32       time);
+	void          (*window_to_world)         (CcView      * self,
+				                  gdouble     * x,
+				                  gdouble     * y);
+	void          (*world_to_window)         (CcView      * self,
+				                  gdouble     * x,
+				                  gdouble     * y);
+	void          (*world_to_window_distance)(CcView      * self,
+					          gdouble     * x,
+					          gdouble     * y);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>cc_item_flags_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<MACRO>
+<NAME>CC_TYPE_ITEM_FLAGS</NAME>
+#define CC_TYPE_ITEM_FLAGS (cc_item_flags_get_type())
+</MACRO>
+<FUNCTION>
+<NAME>cc_zoom_mode_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<MACRO>
+<NAME>CC_TYPE_ZOOM_MODE</NAME>
+#define CC_TYPE_ZOOM_MODE (cc_zoom_mode_get_type())
+</MACRO>
+<STRUCT>
+<NAME>CcCircle</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcCircleClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_CIRCLE</NAME>
+#define CC_TYPE_CIRCLE         (cc_circle_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_CIRCLE</NAME>
+#define CC_CIRCLE(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_CIRCLE, CcCircle))
+</MACRO>
+<MACRO>
+<NAME>CC_CIRCLE_CLASS</NAME>
+#define CC_CIRCLE_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_CIRCLE, CcCircleClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_CIRCLE</NAME>
+#define CC_IS_CIRCLE(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_CIRCLE))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_CIRCLE_CLASS</NAME>
+#define CC_IS_CIRCLE_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_CIRCLE))
+</MACRO>
+<MACRO>
+<NAME>CC_CIRCLE_GET_CLASS</NAME>
+#define CC_CIRCLE_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_CIRCLE, CcCircleClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_circle_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_circle_new</NAME>
+<RETURNS>CcItem*</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_circle_set_anchor</NAME>
+<RETURNS>void    </RETURNS>
+CcCircle* self,gdouble   x,gdouble   y
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_circle_set_radius</NAME>
+<RETURNS>void    </RETURNS>
+CcCircle* self,gdouble   radius
+</FUNCTION>
+<STRUCT>
+<NAME>CcCircle</NAME>
+struct _CcCircle {
+	CcShape base_instance;
+
+	gdouble x;
+	gdouble y;
+
+	gdouble radius;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcCircleClass</NAME>
+struct _CcCircleClass {
+	CcShapeClass base_class;
+};
+</STRUCT>
+<TYPEDEF>
+<NAME>CcPixbuf</NAME>
+typedef CcItem      CcPixbuf;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>CcPixbufClass</NAME>
+typedef CcItemClass CcPixbufClass;
+</TYPEDEF>
+<MACRO>
+<NAME>CC_TYPE_PIXBUF</NAME>
+#define CC_TYPE_PIXBUF         (cc_pixbuf_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_PIXBUF</NAME>
+#define CC_PIXBUF(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_PIXBUF, CcPixbuf))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_PIXBUF</NAME>
+#define CC_IS_PIXBUF(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_PIXBUF))
+</MACRO>
+<FUNCTION>
+<NAME>cc_pixbuf_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_pixbuf_new</NAME>
+<RETURNS>CcItem*</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_pixbuf_set_pixbuf</NAME>
+<RETURNS>void    </RETURNS>
+CcPixbuf * self,GdkPixbuf* pixbuf
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_pixbuf_set_position</NAME>
+<RETURNS>void    </RETURNS>
+CcPixbuf* self,gdouble   x,gdouble   y,gdouble   w,gdouble   h
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_pixbuf_set_position_x</NAME>
+<RETURNS>void    </RETURNS>
+CcPixbuf* self,gdouble   pos_x
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_pixbuf_set_position_y</NAME>
+<RETURNS>void    </RETURNS>
+CcPixbuf* self,gdouble   pos_y
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_pixbuf_get_rotation</NAME>
+<RETURNS>gdouble </RETURNS>
+CcPixbuf const* self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_pixbuf_set_rotation</NAME>
+<RETURNS>void    </RETURNS>
+CcPixbuf      * self,gdouble         rotation
+</FUNCTION>
+<STRUCT>
+<NAME>CcBrushColor</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcBrushColorClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_BRUSH_COLOR</NAME>
+#define CC_TYPE_BRUSH_COLOR         (cc_brush_color_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_BRUSH_COLOR</NAME>
+#define CC_BRUSH_COLOR(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_BRUSH_COLOR, CcBrushColor))
+</MACRO>
+<MACRO>
+<NAME>CC_BRUSH_COLOR_CLASS</NAME>
+#define CC_BRUSH_COLOR_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_BRUSH_COLOR, CcBrushColorClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_BRUSH_COLOR</NAME>
+#define CC_IS_BRUSH_COLOR(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_BRUSH_COLOR))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_BRUSH_COLOR_CLASS</NAME>
+#define CC_IS_BRUSH_COLOR_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_BRUSH_COLOR))
+</MACRO>
+<MACRO>
+<NAME>CC_BRUSH_COLOR_GET_CLASS</NAME>
+#define CC_BRUSH_COLOR_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_BRUSH_COLOR, CcBrushColorClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_brush_color_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_brush_color_new</NAME>
+<RETURNS>CcBrush      *</RETURNS>
+CcColor     * color
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_brush_color_get_color</NAME>
+<RETURNS>CcColor      *</RETURNS>
+CcBrushColor* self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_brush_color_set_color</NAME>
+<RETURNS>void           </RETURNS>
+CcBrushColor* self,CcColor     * color
+</FUNCTION>
+<STRUCT>
+<NAME>CcBrushColor</NAME>
+struct _CcBrushColor {
+	CcBrush   base;
+	gboolean  disposed;
+	CcColor * color;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcBrushColorClass</NAME>
+struct _CcBrushColorClass {
+	CcBrushClass base_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcItemView</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcItemViewIface</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_ITEM_VIEW</NAME>
+#define CC_TYPE_ITEM_VIEW         (cc_item_view_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_VIEW</NAME>
+#define CC_ITEM_VIEW(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_ITEM_VIEW, CcItemView))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_ITEM_VIEW</NAME>
+#define CC_IS_ITEM_VIEW(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_ITEM_VIEW))
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_VIEW_GET_CLASS</NAME>
+#define CC_ITEM_VIEW_GET_CLASS(i) (G_TYPE_INSTANCE_GET_INTERFACE((i), CC_TYPE_ITEM_VIEW, CcItemViewIface))
+</MACRO>
+<FUNCTION>
+<NAME>cc_item_view_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_view_register</NAME>
+<RETURNS>void  </RETURNS>
+CcItemView* self,CcItem    * item
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_view_unregister</NAME>
+<RETURNS>void  </RETURNS>
+CcItemView* self,CcItem    * item
+</FUNCTION>
+<STRUCT>
+<NAME>CcItemViewIface</NAME>
+struct _CcItemViewIface {
+	GTypeInterface base_iface;
+
+	/* vtable */
+	void (*item_added)        (CcItemView   * self,
+				   CcItem       * item,
+				   gint           position,
+				   CcItem       * child);
+	void (*item_removed)      (CcItemView   * self,
+				   CcItem       * item,
+				   gint           position,
+				   CcItem       * child);
+	void (*item_dirty)        (CcItemView   * self,
+				   CcItem       * item,
+				   CcView const * view,
+				   CcDRect const* dirty);
+	void (*notify_all_bounds) (CcItemView   * self,
+				   CcItem       * item,
+				   CcView       * view,
+				   CcDRect const* all_bounds);
+};
+</STRUCT>
+<TYPEDEF>
+<NAME>CcLine</NAME>
+typedef CcShape      CcLine;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>CcLineClass</NAME>
+typedef CcShapeClass CcLineClass;
+</TYPEDEF>
+<MACRO>
+<NAME>CC_TYPE_LINE</NAME>
+#define CC_TYPE_LINE         (cc_line_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_LINE</NAME>
+#define CC_LINE(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_LINE, CcLine))
+</MACRO>
+<MACRO>
+<NAME>CC_LINE_CLASS</NAME>
+#define CC_LINE_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_LINE, CcLineClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_LINE</NAME>
+#define CC_IS_LINE(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_LINE))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_LINE_CLASS</NAME>
+#define CC_IS_LINE_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_LINE))
+</MACRO>
+<MACRO>
+<NAME>CC_LINE_GET_CLASS</NAME>
+#define CC_LINE_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_LINE, CcLineClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_line_get_type</NAME>
+<RETURNS>GType   </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_line_new</NAME>
+<RETURNS>CcItem*</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_line_clear</NAME>
+<RETURNS>void    </RETURNS>
+CcLine * self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_line_line</NAME>
+<RETURNS>void    </RETURNS>
+CcLine * self,gdouble  x,gdouble  y
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_line_move</NAME>
+<RETURNS>void    </RETURNS>
+CcLine * self,gdouble  x,gdouble  y
+</FUNCTION>
+<STRUCT>
+<NAME>CCHashMap</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CCHashMapClass</NAME>
+</STRUCT>
+<TYPEDEF>
+<NAME>CcHashMap</NAME>
+typedef struct _CCHashMap      CcHashMap;
+</TYPEDEF>
+<MACRO>
+<NAME>CC_TYPE_HASH_MAP</NAME>
+#define CC_TYPE_HASH_MAP         (cc_hash_map_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_HASH_MAP</NAME>
+#define CC_HASH_MAP(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_HASH_MAP, CCHashMap))
+</MACRO>
+<MACRO>
+<NAME>CC_HASH_MAP_CLASS</NAME>
+#define CC_HASH_MAP_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_HASH_MAP, CCHashMapClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_HASH_MAP</NAME>
+#define CC_IS_HASH_MAP(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_HASH_MAP))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_HASH_MAP_CLASS</NAME>
+#define CC_IS_HASH_MAP_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_HASH_MAP))
+</MACRO>
+<MACRO>
+<NAME>CC_HASH_MAP_GET_CLASS</NAME>
+#define CC_HASH_MAP_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_HASH_MAP, CCHashMapClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_hash_map_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_hash_map_new</NAME>
+<RETURNS>CcHashMap*</RETURNS>
+GType content_type
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_hash_map_insert</NAME>
+<RETURNS>void              </RETURNS>
+CCHashMap* self,gpointer          key,gpointer          data
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_hash_map_lookup</NAME>
+<RETURNS>gpointer          </RETURNS>
+CcHashMap    * self,gconstpointer  key
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_hash_map_remove</NAME>
+<RETURNS>void              </RETURNS>
+CCHashMap* self,gconstpointer     key
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_hash_map_foreach</NAME>
+<RETURNS>void              </RETURNS>
+CcHashMap* self,GHFunc     func,gpointer   user_data
+</FUNCTION>
+<STRUCT>
+<NAME>CCHashMap</NAME>
+struct _CCHashMap {
+	GObject     base_instance;
+	GType       fundamental;
+	GType       content;
+	GHashTable* hash_table;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CCHashMapClass</NAME>
+struct _CCHashMapClass {
+	GObjectClass base_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>cc_accumulator_boolean</NAME>
+<RETURNS>gboolean </RETURNS>
+GSignalInvocationHint* hint,GValue		     * return_accu,GValue const         * handler_return,gpointer               data
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_point_grid_align</NAME>
+<RETURNS>void </RETURNS>
+gdouble        * x,gdouble        * y,gdouble        * width
+</FUNCTION>
+<ENUM>
+<NAME>CcZoomMode</NAME>
+typedef enum {
+	CC_ZOOM_PIXELS,
+	CC_ZOOM_WIDTH,
+	CC_ZOOM_HEIGHT,
+	CC_ZOOM_AUTO
+} CcZoomMode;
+</ENUM>
+<MACRO>
+<NAME>cc_return_if_unimplemented</NAME>
+#define cc_return_if_unimplemented(klass, member) G_STMT_START {\
+	if(!klass->member) {\
+		g_warning("%s doesn't implement %s", g_type_name(G_TYPE_FROM_CLASS(klass)), G_STRINGIFY(member));\
+		return;\
+	}\
+} G_STMT_END;
+</MACRO>
+<STRUCT>
+<NAME>CcText</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcTextClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_TEXT</NAME>
+#define CC_TYPE_TEXT         (cc_text_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_TEXT</NAME>
+#define CC_TEXT(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_TEXT, CcText))
+</MACRO>
+<MACRO>
+<NAME>CC_TEXT_CLASS</NAME>
+#define CC_TEXT_CLASS(c)     (G_TYPE_ECHCK_CLASS_CAST((c), CC_TYPE_TEXT, CcTextClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_TEXT</NAME>
+#define CC_IS_TEXT(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_TEXT))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_TEXT_CLASS</NAME>
+#define CC_IS_TEXT_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_TEXT))
+</MACRO>
+<MACRO>
+<NAME>CC_TEXT_GET_CLASS</NAME>
+#define CC_TEXT_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_TEXT, CcTextClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_text_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_new</NAME>
+<RETURNS>CcItem*</RETURNS>
+gchar const         * text
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_get_text</NAME>
+<RETURNS>gchar const*</RETURNS>
+CcText const        * self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_is_editable</NAME>
+<RETURNS>gboolean     </RETURNS>
+CcText const        * self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_set_anchor</NAME>
+<RETURNS>void         </RETURNS>
+CcText              * self,gdouble               x,gdouble               y
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_set_anchor_type</NAME>
+<RETURNS>void         </RETURNS>
+CcText              * self,GtkAnchorType         anchor
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_set_editable</NAME>
+<RETURNS>void         </RETURNS>
+CcText              * self,gboolean              editable
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_set_font_description</NAME>
+<RETURNS>void         </RETURNS>
+CcText              * self,PangoFontDescription* desc
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_set_markup</NAME>
+<RETURNS>void         </RETURNS>
+CcText              * self,gchar const         * markup
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_set_size_pixels</NAME>
+<RETURNS>void         </RETURNS>
+CcText              * self,gboolean              size_pixels
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_text_set_text</NAME>
+<RETURNS>void         </RETURNS>
+CcText              * self,gchar const         * text
+</FUNCTION>
+<STRUCT>
+<NAME>CcText</NAME>
+struct _CcText {
+	CcShape        base_instance;
+
+	GtkAnchorType  anchor;
+	gdouble        x;
+	gdouble        y;
+
+	gboolean       size_pixels;
+
+	PangoLayout         * layout;
+	PangoFontDescription* font_description;
+
+	gboolean       editable;
+	gint           cursor,
+		       cursor_trail;
+	CcHashMap    * im_contexts;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcTextClass</NAME>
+struct _CcTextClass {
+	CcShapeClass base_class;
+
+	/* vtable */
+	void (*remove) (CcText     * self,
+			guint        offset,
+			gsize        length);
+	void (*insert) (CcText     * self,
+			gchar const* text,
+			gsize        offset);
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcShape</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcShapeClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_SHAPE</NAME>
+#define CC_TYPE_SHAPE         (cc_shape_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_SHAPE</NAME>
+#define CC_SHAPE(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_SHAPE, CcShape))
+</MACRO>
+<MACRO>
+<NAME>CC_SHAPE_CLASS</NAME>
+#define CC_SHAPE_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_SHAPE, CcShapeClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_SHAPE</NAME>
+#define CC_IS_SHAPE(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_SHAPE))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_SHAPE_CLASS</NAME>
+#define CC_IS_SHAPE_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_SHAPE))
+</MACRO>
+<MACRO>
+<NAME>CC_SHAPE_GET_CLASS</NAME>
+#define CC_SHAPE_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_SHAPE, CcShapeClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_shape_get_type</NAME>
+<RETURNS>GType    </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_shape_get_brush_border</NAME>
+<RETURNS>CcBrush*</RETURNS>
+CcShape* self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_shape_set_brush_border</NAME>
+<RETURNS>void     </RETURNS>
+CcShape* self,CcBrush* brush
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_shape_get_brush_content</NAME>
+<RETURNS>CcBrush*</RETURNS>
+CcShape* self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_shape_set_brush_content</NAME>
+<RETURNS>void     </RETURNS>
+CcShape* self,CcBrush* brush
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_shape_get_width</NAME>
+<RETURNS>gdouble  </RETURNS>
+CcShape* shape,CcView * view
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_shape_set_width_pixels</NAME>
+<RETURNS>void     </RETURNS>
+CcShape* self,gdouble  width
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_shape_set_width_units</NAME>
+<RETURNS>void     </RETURNS>
+CcShape* self,gdouble  width
+</FUNCTION>
+<STRUCT>
+<NAME>CcShape</NAME>
+struct _CcShape {
+	CcItem base_instance;
+
+	CcBrush * brush_border;
+	CcBrush * brush_content;
+
+	gdouble   width;
+	gboolean  width_units;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcShapeClass</NAME>
+struct _CcShapeClass {
+	CcItemClass base_class;
+
+	void (*path)           (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+	void (*render_content) (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+	void (*render_border)  (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+};
+</STRUCT>
+<TYPEDEF>
+<NAME>CcCamera</NAME>
+typedef CcItem      CcCamera;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>CcCameraClass</NAME>
+typedef CcItemClass CcCameraClass;
+</TYPEDEF>
+<MACRO>
+<NAME>CC_TYPE_CAMERA</NAME>
+#define CC_TYPE_CAMERA         (cc_camera_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_CAMERA</NAME>
+#define CC_CAMERA(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_CAMERA, CcCamera))
+</MACRO>
+<MACRO>
+<NAME>CC_CAMERA_CLASS</NAME>
+#define CC_CAMERA_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_CAMERA, CcCameraClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_CAMERA</NAME>
+#define CC_IS_CAMERA(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_CAMERA))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_CAMERA_CLASS</NAME>
+#define CC_IS_CAMERA_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_CAMERA))
+</MACRO>
+<MACRO>
+<NAME>CC_CAMERA_GET_CLASS</NAME>
+#define CC_CAMERA_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_CAMERA, CcCameraClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_camera_get_type</NAME>
+<RETURNS>GType   </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_camera_new</NAME>
+<RETURNS>CcItem*</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_camera_new_root</NAME>
+<RETURNS>CcItem*</RETURNS>
+CcItem      * root
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_camera_set_root</NAME>
+<RETURNS>void    </RETURNS>
+CcCamera    * self,CcItem      * root
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_camera_get_root</NAME>
+<RETURNS>CcItem*</RETURNS>
+CcItem const* self
+</FUNCTION>
+<STRUCT>
+<NAME>CcViewWidget</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcViewWidgetClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_VIEW_WIDGET</NAME>
+#define CC_TYPE_VIEW_WIDGET         (cc_view_widget_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_WIDGET</NAME>
+#define CC_VIEW_WIDGET(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_VIEW_WIDGET, CcViewWidget))
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_WIDGET_CLASS</NAME>
+#define CC_VIEW_WIDGET_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_VIEW_WIDGET, CcViewWidgetClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_VIEW_WIDGET</NAME>
+#define CC_IS_VIEW_WIDGET(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_VIEW_WIDGET))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_VIEW_WIDGET_CLASS</NAME>
+#define CC_IS_VIEW_WIDGET_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_VIEW_WIDGET))
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_WIDGET_GET_CLASS</NAME>
+#define CC_VIEW_WIDGET_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_VIEW_WIDGET, CcViewWidgetClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_view_widget_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_widget_new</NAME>
+<RETURNS>GtkWidget*</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_widget_new_root</NAME>
+<RETURNS>GtkWidget*</RETURNS>
+CcItem* root
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_widget_get_center_view</NAME>
+<RETURNS>gboolean   </RETURNS>
+CcViewWidget const* self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_widget_set_center_view</NAME>
+<RETURNS>void       </RETURNS>
+CcViewWidget* self,gboolean      center_view
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_widget_get_zoom_mode</NAME>
+<RETURNS>CcZoomMode </RETURNS>
+CcViewWidget const* self
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_widget_set_zoom_mode</NAME>
+<RETURNS>void       </RETURNS>
+CcViewWidget      * self,CcZoomMode          zoom_mode
+</FUNCTION>
+<STRUCT>
+<NAME>CcViewWidget</NAME>
+struct _CcViewWidget {
+	GtkDrawingArea  base_instance;
+	gboolean        disposed;
+
+	CcDRect       * scrolled_region;
+	gdouble         zoom;
+	CcZoomMode      zoom_mode;
+	cairo_matrix_t  display_matrix;
+	CcItem        * root;
+
+	gboolean        center_view;
+	GtkAdjustment * h_adjustment;
+	GtkAdjustment * v_adjustment;
+
+	CcItem        * current;
+	CcItem        * focus;
+	CcItem        * grabbed;
+	gboolean        over_grabbed;
+	GdkEventMask    grab_mask;
+
+	struct CcViewWidgetPrivate* priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcViewWidgetClass</NAME>
+struct _CcViewWidgetClass {
+	GtkDrawingAreaClass base_class;
+
+	/* signals */
+	void (*set_scroll_adjustments) (CcViewWidget * self,
+					GtkAdjustment* hadjustment,
+					GtkAdjustment* vadjustment);
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcRoundedRectangle</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcRoundedRectangleClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_ROUNDED_RECTANGLE</NAME>
+#define CC_TYPE_ROUNDED_RECTANGLE         (cc_rounded_rectangle_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_ROUNDED_RECTANGLE</NAME>
+#define CC_ROUNDED_RECTANGLE(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_ROUNDED_RECTANGLE, CcRoundedRectangle))
+</MACRO>
+<MACRO>
+<NAME>CC_ROUNDED_RECTANGLE_CLASS</NAME>
+#define CC_ROUNDED_RECTANGLE_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_ROUNDED_RECTANGLE, CcRoundedRectangleClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_ROUNDED_RECTANGLE</NAME>
+#define CC_IS_ROUNDED_RECTANGLE(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_ROUNDED_RECTANGLE))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_ROUNDED_RECTANGLE_CLASS</NAME>
+#define CC_IS_ROUNDED_RECTANGLE_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_ROUNDED_RECTANGLE))
+</MACRO>
+<MACRO>
+<NAME>CC_ROUNDED_RECTANGLE_GET_CLASS</NAME>
+#define CC_ROUNDED_RECTANGLE_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_ROUNDED_RECTANGLE, CcRoundedRectangleClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_rounded_rectangle_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>CcRoundedRectangle</NAME>
+struct _CcRoundedRectangle {
+	CcRectangle base_instance;
+
+	gdouble corner_radius;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcRoundedRectangleClass</NAME>
+struct _CcRoundedRectangleClass {
+	CcRectangleClass base_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcBrush</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcBrushClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_BRUSH</NAME>
+#define CC_TYPE_BRUSH         (cc_brush_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_BRUSH</NAME>
+#define CC_BRUSH(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_BRUSH, CcBrush))
+</MACRO>
+<MACRO>
+<NAME>CC_BRUSH_CLASS</NAME>
+#define CC_BRUSH_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_BRUSH, CcBrushClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_BRUSH</NAME>
+#define CC_IS_BRUSH(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_BRUSH))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_BRUSH_CLASS</NAME>
+#define CC_IS_BRUSH_CLASS(c)  (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_BRUSH))
+</MACRO>
+<MACRO>
+<NAME>CC_BRUSH_GET_CLASS</NAME>
+#define CC_BRUSH_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_BRUSH, CcBrushClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_brush_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_brush_apply</NAME>
+<RETURNS>void </RETURNS>
+CcBrush* self,cairo_t* cr
+</FUNCTION>
+<STRUCT>
+<NAME>CcBrush</NAME>
+struct _CcBrush {
+	GInitiallyUnowned      base;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcBrushClass</NAME>
+struct _CcBrushClass {
+	GInitiallyUnownedClass base_class;
+
+	/* vtable */
+	void (*apply) (CcBrush* brush,
+		       cairo_t* cr);
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcDRect</NAME>
+typedef struct {
+	gdouble x1;
+	gdouble y1;
+	gdouble x2;
+	gdouble y2;
+} CcDRect;
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_D_RECT</NAME>
+#define CC_TYPE_D_RECT (cc_d_rect_get_type())
+</MACRO>
+<FUNCTION>
+<NAME>cc_d_rect_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_d_rect_copy</NAME>
+<RETURNS>CcDRect*</RETURNS>
+CcDRect* one
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_d_rect_equal</NAME>
+<RETURNS>gboolean </RETURNS>
+CcDRect  one,CcDRect  two
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_d_rect_intersect</NAME>
+<RETURNS>gboolean </RETURNS>
+CcDRect  one,CcDRect  two
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_d_rect_union</NAME>
+<RETURNS>void     </RETURNS>
+CcDRect  one,CcDRect  two,CcDRect* merged
+</FUNCTION>
+<STRUCT>
+<NAME>CcViewPNG</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcViewPNGClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_VIEW_PNG</NAME>
+#define CC_TYPE_VIEW_PNG         (cc_view_png_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_PNG</NAME>
+#define CC_VIEW_PNG(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_VIEW_PNG, CcViewPNG))
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_PNG_CLASS</NAME>
+#define CC_VIEW_PNG_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_VIEW_PNG, CcViewPNGClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_VIEW_PNG</NAME>
+#define CC_IS_VIEW_PNG(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_VIEW_PNG))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_VIEW_PNG_CLASS</NAME>
+#define CC_IS_VIEW_PNG_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_VIEW_PNG))
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_PNG_GET_CLASS</NAME>
+#define CC_VIEW_PNG_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_VIEW_PNG, CcViewPNGClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_view_png_get_type</NAME>
+<RETURNS>GType   </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_png_new</NAME>
+<RETURNS>CcView*</RETURNS>
+gchar const* filename
+</FUNCTION>
+<STRUCT>
+<NAME>CcViewPNG</NAME>
+struct _CcViewPNG {
+	GInitiallyUnowned          base_instance;
+
+	gchar          * filename;
+	cairo_surface_t* surface;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcViewPNGClass</NAME>
+struct _CcViewPNGClass {
+	GInitiallyUnownedClass base_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcItem</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcItemClass</NAME>
+</STRUCT>
+<ENUM>
+<NAME>CcItemFlags</NAME>
+typedef enum {
+	CC_CAN_FOCUS          = 1 << 1,
+	CC_DISPOSED           = 1 << 2,
+	CC_GRID_ALIGNED       = 1 << 3,
+} CcItemFlags;
+</ENUM>
+<USER_FUNCTION>
+<NAME>CcItemFunc</NAME>
+<RETURNS>void </RETURNS>
+CcItem* item, CcView* view, gpointer data
+</USER_FUNCTION>
+<MACRO>
+<NAME>CC_TYPE_ITEM</NAME>
+#define CC_TYPE_ITEM         (cc_item_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM</NAME>
+#define CC_ITEM(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_ITEM, CcItem))
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_CLASS</NAME>
+#define CC_ITEM_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_ITEM, CcItemClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_ITEM</NAME>
+#define CC_IS_ITEM(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_ITEM))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_ITEM_CLASS</NAME>
+#define CC_IS_ITEM_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_ITEM))
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_GET_CLASS</NAME>
+#define CC_ITEM_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_ITEM, CcItemClass))
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_FLAGS</NAME>
+#define CC_ITEM_FLAGS(i)         (CC_ITEM(i)->flags)
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_SET_FLAGS</NAME>
+#define CC_ITEM_SET_FLAGS(i,m)   G_STMT_START{ (CC_ITEM_FLAGS(i) |=  (m)); }G_STMT_END
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_UNSET_FLAGS</NAME>
+#define CC_ITEM_UNSET_FLAGS(i,m) G_STMT_START{ (CC_ITEM_FLAGS(i) &= ~(m)); }G_STMT_END
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_CAN_FOCUS</NAME>
+#define CC_ITEM_CAN_FOCUS(i)          ((CC_ITEM_FLAGS(i) & CC_CAN_FOCUS) != 0)
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_DISPOSED</NAME>
+#define CC_ITEM_DISPOSED(i)           ((CC_ITEM_FLAGS(i) & CC_DISPOSED) != 0)
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_GRID_ALIGNED</NAME>
+#define CC_ITEM_GRID_ALIGNED(i)       ((CC_ITEM_FLAGS(i) & CC_GRID_ALIGNED) != 0)
+</MACRO>
+<MACRO>
+<NAME>CC_ITEM_FUNC</NAME>
+#define CC_ITEM_FUNC(f) ((CcItemFunc)(f))
+</MACRO>
+<FUNCTION>
+<NAME>cc_item_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_new</NAME>
+<RETURNS>CcItem*</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_append</NAME>
+<RETURNS>void          </RETURNS>
+CcItem      * self,CcItem      * child
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_bounds_changed</NAME>
+<RETURNS>void          </RETURNS>
+CcItem      * self,CcView const* view
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_dirty</NAME>
+<RETURNS>void          </RETURNS>
+CcItem      * self,CcView const* view,CcDRect       dirty_region
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_distance</NAME>
+<RETURNS>gdouble       </RETURNS>
+CcItem      * self,gdouble       x,gdouble       y,CcItem      **found
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_foreach_view</NAME>
+<RETURNS>void          </RETURNS>
+CcItem      * self,CcItemFunc    func,gpointer      data
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_get_all_bounds</NAME>
+<RETURNS>CcDRect const*</RETURNS>
+CcItem const* self,CcView const* view
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_grab_focus</NAME>
+<RETURNS>void          </RETURNS>
+CcItem      * self,CcView      * view
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_insert</NAME>
+<RETURNS>void          </RETURNS>
+CcItem      * self,CcItem      * child,gint          position
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_is_child_of</NAME>
+<RETURNS>gboolean      </RETURNS>
+CcItem const* child,CcItem const* parent
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_remove</NAME>
+<RETURNS>void          </RETURNS>
+CcItem  * self,CcItem  * child
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_render</NAME>
+<RETURNS>void          </RETURNS>
+CcItem  * self,CcView  * view,cairo_t * cr
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_set_grid_aligned</NAME>
+<RETURNS>void          </RETURNS>
+CcItem  * self,gboolean  grid_aligned
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_update_bounds</NAME>
+<RETURNS>void          </RETURNS>
+CcItem      * self,gpointer      data
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_update_bounds_for_view</NAME>
+<RETURNS>void          </RETURNS>
+CcItem* self,CcView* view
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_add_view</NAME>
+<RETURNS>void          </RETURNS>
+CcItem* self,CcView* view
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_item_remove_view</NAME>
+<RETURNS>void          </RETURNS>
+CcItem* self,CcView* view
+</FUNCTION>
+<STRUCT>
+<NAME>CcItem</NAME>
+struct _CcItem {
+	GInitiallyUnowned      base_instance;
+	CcItem     * parent;
+	CcItemFlags  flags;
+
+	CcHashMap  * all_bounds;
+	CcHashMap  * bounds;
+	CcHashMap  * children_bounds;
+
+	GList      * children;
+	GList      * views;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcItemClass</NAME>
+struct _CcItemClass {
+	GInitiallyUnownedClass base_class;
+
+	/* vtable */
+	gdouble (*distance)             (CcItem         * self,
+				         gdouble          x,
+				         gdouble          y,
+				         CcItem         **found);
+	void    (*notify_child_bounds)  (CcItem         * self,
+				         CcItem         * child,
+					 CcView         * view,
+				         CcDRect const  * all_bounds);
+	void    (*render)               (CcItem         * self,
+		                         CcView         * view,
+			                 cairo_t        * cr);
+	void    (*update_bounds)        (CcItem         * self,
+					 CcView const   * view,
+					 gpointer         user_data);
+
+	/* signals */
+	gboolean (*button_press_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventButton  * event);
+	gboolean (*button_release_event)(CcItem          * self,
+					 CcView          * view,
+					 GdkEventButton  * event);
+	gboolean (*enter_notify_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventCrossing* event);
+	gboolean (*event)               (CcItem          * self,
+					 CcView          * view,
+					 GdkEvent        * event);
+	gboolean (*focus)		(CcItem          * self,
+					 CcView	         * view,
+					 GtkDirectionType  dir);
+	gboolean (*focus_enter)         (CcItem          * self,
+					 CcView          * view,
+					 GdkEventFocus   * event);
+	gboolean (*focus_leave)         (CcItem          * self,
+					 CcView          * view,
+					 GdkEventFocus   * focus);
+	gboolean (*key_press_event)     (CcItem          * item,
+					 CcView          * view,
+					 GdkEventKey     * event);
+	gboolean (*key_release_event)   (CcItem          * item,
+					 CcView          * view,
+					 GdkEventKey     * event);
+	gboolean (*leave_notify_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventCrossing* event);
+	gboolean (*motion_notify_event) (CcItem          * self,
+					 CcView          * view,
+					 GdkEventMotion  * event);
+
+	void     (*item_added)          (CcItem          * self,
+					 gint              position,
+					 CcItem          * child);
+	void     (*item_removed)        (CcItem          * self,
+					 gint              position,
+					 CcItem          * child);
+
+	void     (*view_register)       (CcItem          * self,
+					 CcView          * view);
+	void     (*view_unregister)     (CcItem          * self,
+					 CcView          * view);
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcPrinter</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcPrinterClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_PRINTER</NAME>
+#define CC_TYPE_PRINTER         (cc_printer_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_PRINTER</NAME>
+#define CC_PRINTER(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_PRINTER, CcPrinter))
+</MACRO>
+<MACRO>
+<NAME>CC_PRINTER_CLASS</NAME>
+#define CC_PRINTER_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_PRINTER, CcPrinterClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_PRINTER</NAME>
+#define CC_IS_PRINTER(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_PRINTER))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_PRINTER_CLASS</NAME>
+#define CC_IS_PRINTER_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_PRINTER))
+</MACRO>
+<MACRO>
+<NAME>CC_PRINTER_GET_CLASS</NAME>
+#define CC_PRINTER_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_PRINTER, CcPrinterClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_printer_get_type</NAME>
+<RETURNS>GType      </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_printer_new</NAME>
+<RETURNS>CcPrinter*</RETURNS>
+gchar const* filename
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_printer_print_page</NAME>
+<RETURNS>void       </RETURNS>
+CcPrinter* self
+</FUNCTION>
+<STRUCT>
+<NAME>CcPrinter</NAME>
+struct _CcPrinter {
+	GInitiallyUnowned base_instance;
+
+	gchar* filename;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcPrinterClass</NAME>
+struct _CcPrinterClass {
+	GInitiallyUnownedClass base_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcViewCellRenderer</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcViewCellRendererClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_VIEW_CELL_RENDERER</NAME>
+#define CC_TYPE_VIEW_CELL_RENDERER         (cc_view_cell_renderer_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_CELL_RENDERER</NAME>
+#define CC_VIEW_CELL_RENDERER(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_VIEW_CELL_RENDERER, CcViewCellRenderer))
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_CELL_RENDERER_CLASS</NAME>
+#define CC_VIEW_CELL_RENDERER_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_VIEW_CELL_RENDERER, CcViewCellRendererClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_VIEW_CELL_RENDERER</NAME>
+#define CC_IS_VIEW_CELL_RENDERER(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_VIEW_CELL_RENDERER))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_VIEW_CELL_REDNERER_CLASS</NAME>
+#define CC_IS_VIEW_CELL_REDNERER_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_VIEW_CELL_RENDERER))
+</MACRO>
+<MACRO>
+<NAME>CC_VIEW_CELL_RENDERER_GET_CLASS</NAME>
+#define CC_VIEW_CELL_RENDERER_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_VIEW_CELL_RENDERER, CcCellRendererClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_view_cell_renderer_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_view_cell_renderer_new</NAME>
+<RETURNS>GtkCellRenderer*</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>CcViewCellRenderer</NAME>
+struct _CcViewCellRenderer {
+	GtkCellRenderer  base_instance;
+	gboolean         disposed;
+
+	gdouble          zoom;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcViewCellRendererClass</NAME>
+struct _CcViewCellRendererClass {
+	GtkCellRendererClass base_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcColor</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcColorClass</NAME>
+</STRUCT>
+<TYPEDEF>
+<NAME>CcColorHsv</NAME>
+typedef CcColor CcColorHsv;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>CcColorRgb</NAME>
+typedef CcColor CcColorRgb;
+</TYPEDEF>
+<MACRO>
+<NAME>CC_TYPE_COLOR</NAME>
+#define CC_TYPE_COLOR         (cc_color_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_COLOR</NAME>
+#define CC_COLOR(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_COLOR, CcColor))
+</MACRO>
+<MACRO>
+<NAME>CC_COLOR_CLASS</NAME>
+#define CC_COLOR_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_COLOR, CcColorClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_COLOR</NAME>
+#define CC_IS_COLOR(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_COLOR))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_COLOR_CLASS</NAME>
+#define CC_IS_COLOR_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_COLOR))
+</MACRO>
+<MACRO>
+<NAME>CC_COLOR_GET_CLASS</NAME>
+#define CC_COLOR_GET_CLASS(i) (G_TYPE_INSTANCE_GET_CLASS((i), CC_TYPE_COLOR, CcColorClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_color_get_type</NAME>
+<RETURNS>GType    </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_color_hsv_get_type</NAME>
+<RETURNS>GType    </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_color_rgb_get_type</NAME>
+<RETURNS>GType    </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_color_apply</NAME>
+<RETURNS>void     </RETURNS>
+CcColor* self,cairo_t* cr
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_color_new_rgb</NAME>
+<RETURNS>CcColor*</RETURNS>
+gdouble  red,gdouble  green,gdouble  blue
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_color_new_rgba</NAME>
+<RETURNS>CcColor*</RETURNS>
+gdouble  red,gdouble  green,gdouble  blue,gdouble  alpha
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_color_new_hsv</NAME>
+<RETURNS>CcColor*</RETURNS>
+gdouble  hue,gdouble  saturation,gdouble  value
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_color_new_hsva</NAME>
+<RETURNS>CcColor*</RETURNS>
+gdouble  hue,gdouble  saturation,gdouble  value,gdouble  alpha
+</FUNCTION>
+<STRUCT>
+<NAME>CcColor</NAME>
+struct _CcColor {
+	GInitiallyUnowned base_instance;
+	gdouble alpha;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcColorClass</NAME>
+struct _CcColorClass {
+	GInitiallyUnownedClass base_class;
+
+	/* vtable */
+	void (*apply) (CcColor const* self,
+		       cairo_t      * cr);
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcRectangle</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>CcRectangleClass</NAME>
+</STRUCT>
+<MACRO>
+<NAME>CC_TYPE_RECTANGLE</NAME>
+#define CC_TYPE_RECTANGLE         (cc_rectangle_get_type())
+</MACRO>
+<MACRO>
+<NAME>CC_RECTANGLE</NAME>
+#define CC_RECTANGLE(i)           (G_TYPE_CHECK_INSTANCE_CAST((i), CC_TYPE_RECTANGLE, CcRectangle))
+</MACRO>
+<MACRO>
+<NAME>CC_RECTANGLE_CLASS</NAME>
+#define CC_RECTANGLE_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST((c), CC_TYPE_RECTANGLE, CcRectangleClass))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_RECTANGLE</NAME>
+#define CC_IS_RECTANGLE(i)        (G_TYPE_CHECK_INSTANCE_TYPE((i), CC_TYPE_RECTANGLE))
+</MACRO>
+<MACRO>
+<NAME>CC_IS_RECTANGLE_CLASS</NAME>
+#define CC_IS_RECTANGLE_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE((c), CC_TYPE_RECTNAGLE))
+</MACRO>
+<MACRO>
+<NAME>CC_RECTANGLE_GET_CLASS</NAME>
+#define CC_RECTANGLE_GET_CLASS(c) (G_TYPE_INTERFACE_GET_CLASS((i), CC_TYPE_RECTANGLE, CcRectangleClass))
+</MACRO>
+<FUNCTION>
+<NAME>cc_rectangle_get_type</NAME>
+<RETURNS>GType </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_rectangle_new</NAME>
+<RETURNS>CcItem*</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_rectangle_set_position</NAME>
+<RETURNS>void     </RETURNS>
+CcRectangle* self,gdouble      x,gdouble      y,gdouble      w,gdouble      h
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_rectangle_set_x</NAME>
+<RETURNS>void     </RETURNS>
+CcRectangle* self,gdouble      x
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_rectangle_set_y</NAME>
+<RETURNS>void     </RETURNS>
+CcRectangle* self,gdouble      y
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_rectangle_set_width</NAME>
+<RETURNS>void     </RETURNS>
+CcRectangle* self,gdouble      width
+</FUNCTION>
+<FUNCTION>
+<NAME>cc_rectangle_set_height</NAME>
+<RETURNS>void     </RETURNS>
+CcRectangle* self,gdouble      height
+</FUNCTION>
+<STRUCT>
+<NAME>CcRectangle</NAME>
+struct _CcRectangle {
+	CcShape    base;
+
+	gdouble   x,y,w,h;
+};
+</STRUCT>
+<STRUCT>
+<NAME>CcRectangleClass</NAME>
+struct _CcRectangleClass {
+	CcShapeClass base_class;
+};
+</STRUCT>

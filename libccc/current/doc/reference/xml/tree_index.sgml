@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE screen PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<screen>
+    <link linkend="GObject">GObject</link>
+        <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+            <link linkend="CcBrush">CcBrush</link>
+                <link linkend="CcBrushColor">CcBrushColor</link>
+            <link linkend="CcItem">CcItem</link>
+                <link linkend="CcCamera">CcCamera</link>
+                <link linkend="CcShape">CcShape</link>
+                    <link linkend="CcCircle">CcCircle</link>
+                    <link linkend="CcLine">CcLine</link>
+                    <link linkend="CcRectangle">CcRectangle</link>
+                        <link linkend="CcRoundedRectangle">CcRoundedRectangle</link>
+                    <link linkend="CcText">CcText</link>
+                <link linkend="CcPixbuf">CcPixbuf</link>
+            <link linkend="CcColor">CcColor</link>
+                <link linkend="CcColorHsv">CcColorHsv</link>
+                <link linkend="CcColorRgb">CcColorRgb</link>
+            <link linkend="CcPrinter">CcPrinter</link>
+            <link linkend="GtkObject">GtkObject</link>
+                <link linkend="GtkCellRenderer">GtkCellRenderer</link>
+                    <link linkend="CcViewCellRenderer">CcViewCellRenderer</link>
+                <link linkend="GtkWidget">GtkWidget</link>
+                    <link linkend="GtkDrawingArea">GtkDrawingArea</link>
+                        <link linkend="CcViewWidget">CcViewWidget</link>
+            <link linkend="CcViewPNG">CcViewPNG</link>
+    <link linkend="GInterface">GInterface</link>
+        <link linkend="CcItemView">CcItemView</link>
+        <link linkend="CcView">CcView</link>
+</screen>

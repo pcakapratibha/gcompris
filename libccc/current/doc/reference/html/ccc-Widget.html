@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Widget</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-View-Elements.html" title="View Elements">
+<link rel="prev" href="ccc-Cell-Renderer.html" title="Cell Renderer">
+<link rel="next" href="ccc-printer.html" title="printer">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Cell-Renderer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-View-Elements.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-printer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2580162" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2609887" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2608441" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2608490" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2608524" class="shortcut">Properties</a>
+                  &#160;|&#160;
+                  <a href="#id2608553" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Widget"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2580162"></a><span class="refentrytitle">Widget</span>
+</h2>
+<p>Widget</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcViewWidget"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-Widget.html#CcViewWidget-struct">CcViewWidget</a>;
+                    <a href="ccc-Widget.html#CcViewWidgetClass">CcViewWidgetClass</a>;
+GtkWidget*          <a href="ccc-Widget.html#cc-view-widget-new">cc_view_widget_new</a>                  (void);
+GtkWidget*          <a href="ccc-Widget.html#cc-view-widget-new-root">cc_view_widget_new_root</a>             (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);
+gboolean            <a href="ccc-Widget.html#cc-view-widget-get-center-view">cc_view_widget_get_center_view</a>      (<a href="ccc-Widget.html#CcViewWidget">CcViewWidget</a> const*self);
+void                <a href="ccc-Widget.html#cc-view-widget-set-center-view">cc_view_widget_set_center_view</a>      (<a href="ccc-Widget.html#CcViewWidget">CcViewWidget</a> *self,
+                                                         gboolean center_view);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608441"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkDrawingArea
+                           +----CcViewWidget
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608490"></a><h2>Implemented Interfaces</h2>
+<p>
+CcViewWidget implements
+ <a href="ccc-Canvas-Views.html#CcView">CcView</a>,  <a href="ccc-Item-View.html#CcItemView">CcItemView</a> and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608524"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-Widget.html#CcViewWidget--center-view">center-view</a>"              gboolean              : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608553"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-Widget.html#CcViewWidget-set-scroll-adjustments">set-scroll-adjustments</a>"                         : Run Last
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2609887"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2609903"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2609914"></a><h3>
+<a name="CcViewWidget-struct"></a>CcViewWidget</h3>
+<a class="indexterm" name="id2609926"></a><pre class="programlisting">typedef struct _CcViewWidget CcViewWidget;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2609941"></a><h3>
+<a name="CcViewWidgetClass"></a>CcViewWidgetClass</h3>
+<a class="indexterm" name="id2609954"></a><pre class="programlisting">typedef struct {
+	GtkDrawingAreaClass base_class;
+
+	/* signals */
+	void (*set_scroll_adjustments) (CcViewWidget * self,
+					GtkAdjustment* hadjustment,
+					GtkAdjustment* vadjustment);
+} CcViewWidgetClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2609973"></a><h3>
+<a name="cc-view-widget-new"></a>cc_view_widget_new ()</h3>
+<a class="indexterm" name="id2609985"></a><pre class="programlisting">GtkWidget*          cc_view_widget_new                  (void);</pre>
+<p>
+Create a new <a href="ccc-Widget.html#CcViewWidget"><span class="type">CcViewWidget</span></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>a newly created <a href="ccc-Widget.html#CcViewWidget"><span class="type">CcViewWidget</span></a> which can be used to display a canvas.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2610040"></a><h3>
+<a name="cc-view-widget-new-root"></a>cc_view_widget_new_root ()</h3>
+<a class="indexterm" name="id2610051"></a><pre class="programlisting">GtkWidget*          cc_view_widget_new_root             (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);</pre>
+<p>
+Create a new <a href="ccc-Widget.html#CcViewWidget"><span class="type">CcViewWidget</span></a> and set <em class="parameter"><code>root</code></em> to be the model.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>root</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>, the model of the new view
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>a new <a href="ccc-Widget.html#CcViewWidget"><span class="type">CcViewWidget</span></a> with <em class="parameter"><code>root</code></em> as the model.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607857"></a><h3>
+<a name="cc-view-widget-get-center-view"></a>cc_view_widget_get_center_view ()</h3>
+<a class="indexterm" name="id2607868"></a><pre class="programlisting">gboolean            cc_view_widget_get_center_view      (<a href="ccc-Widget.html#CcViewWidget">CcViewWidget</a> const*self);</pre>
+<p>
+Find out whether the view is centered.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Widget.html#CcViewWidget"><span class="type">CcViewWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> if <em class="parameter"><code>self</code></em> displays its model centered once there's more space
+available than the model requires.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607951"></a><h3>
+<a name="cc-view-widget-set-center-view"></a>cc_view_widget_set_center_view ()</h3>
+<a class="indexterm" name="id2607962"></a><pre class="programlisting">void                cc_view_widget_set_center_view      (<a href="ccc-Widget.html#CcViewWidget">CcViewWidget</a> *self,
+                                                         gboolean center_view);</pre>
+<p>
+Specify whether the model should be displayed centered if there is as much
+space.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Widget.html#CcViewWidget"><span class="type">CcViewWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>center_view</code></em>&#160;:</span></td>
+<td> a <span class="type">gboolean</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608050"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2608061"></a><h3>
+<a name="CcViewWidget--center-view"></a>The "<code class="literal">center-view</code>" property</h3>
+<a class="indexterm" name="id2608075"></a><pre class="programlisting">  "center-view"              gboolean              : Read / Write</pre>
+<p>Display the model centered if there is more space than the model needs.</p>
+<p>Default value: TRUE</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608103"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2608114"></a><h3>
+<a name="CcViewWidget-set-scroll-adjustments"></a>The "set-scroll-adjustments" signal</h3>
+<a class="indexterm" name="id2608123"></a><pre class="programlisting">void                user_function                      (<a href="ccc-Widget.html#CcViewWidget">CcViewWidget</a>  *hadjustment,
+                                                        GtkAdjustment *vadjustment,
+                                                        GtkAdjustment *arg2,
+                                                        gpointer       user_data)        : Run Last</pre>
+<p>
+This signal gets emitted when the widget is being added to a
+scrollable container.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>hadjustment</code></em>&#160;:</span></td>
+<td> a <span class="type">GtkAdjustment</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>vadjustment</code></em>&#160;:</span></td>
+<td> a <span class="type">GtkAdjustment</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

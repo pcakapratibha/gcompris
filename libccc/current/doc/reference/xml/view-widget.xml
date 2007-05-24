@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-Widget">
+<refmeta>
+<refentrytitle role="top_of_page">Widget</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Widget</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcViewWidget"/>
+<synopsis>
+
+
+
+                    <link linkend="CcViewWidget-struct">CcViewWidget</link>;
+                    <link linkend="CcViewWidgetClass">CcViewWidgetClass</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="cc-view-widget-new">cc_view_widget_new</link>                  (void);
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="cc-view-widget-new-root">cc_view_widget_new_root</link>             (<link linkend="CcItem">CcItem</link> *root);
+<link linkend="gboolean">gboolean</link>            <link linkend="cc-view-widget-get-center-view">cc_view_widget_get_center_view</link>      (<link linkend="CcViewWidget">CcViewWidget</link> const*self);
+<link linkend="void">void</link>                <link linkend="cc-view-widget-set-center-view">cc_view_widget_set_center_view</link>      (<link linkend="CcViewWidget">CcViewWidget</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> center_view);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkDrawingArea">GtkDrawingArea</link>
+                           +----CcViewWidget
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcViewWidget implements
+ <link linkend="CcView">CcView</link>,  <link linkend="CcItemView">CcItemView</link> and  <link linkend="AtkImplementorIface">AtkImplementorIface</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcViewWidget--center-view">center-view</link>&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+
+  &quot;<link linkend="CcViewWidget-set-scroll-adjustments">set-scroll-adjustments</link>&quot;                         : Run Last
+</synopsis>
+</refsect1>
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcViewWidget-struct" role="struct"/>CcViewWidget</title>
+<indexterm><primary>CcViewWidget</primary></indexterm><programlisting>typedef struct _CcViewWidget CcViewWidget;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcViewWidgetClass" role="struct"/>CcViewWidgetClass</title>
+<indexterm><primary>CcViewWidgetClass</primary></indexterm><programlisting>typedef struct {
+	GtkDrawingAreaClass base_class;
+
+	/* signals */
+	void (*set_scroll_adjustments) (CcViewWidget * self,
+					GtkAdjustment* hadjustment,
+					GtkAdjustment* vadjustment);
+} CcViewWidgetClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-view-widget-new" role="function"/>cc_view_widget_new ()</title>
+<indexterm><primary>cc_view_widget_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          cc_view_widget_new                  (void);</programlisting>
+<para>
+Create a new <link linkend="CcViewWidget"><type>CcViewWidget</type></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>a newly created <link linkend="CcViewWidget"><type>CcViewWidget</type></link> which can be used to display a canvas.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-widget-new-root" role="function"/>cc_view_widget_new_root ()</title>
+<indexterm><primary>cc_view_widget_new_root</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          cc_view_widget_new_root             (<link linkend="CcItem">CcItem</link> *root);</programlisting>
+<para>
+Create a new <link linkend="CcViewWidget"><type>CcViewWidget</type></link> and set <parameter>root</parameter> to be the model.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>, the model of the new view
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>a new <link linkend="CcViewWidget"><type>CcViewWidget</type></link> with <parameter>root</parameter> as the model.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-widget-get-center-view" role="function"/>cc_view_widget_get_center_view ()</title>
+<indexterm><primary>cc_view_widget_get_center_view</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            cc_view_widget_get_center_view      (<link linkend="CcViewWidget">CcViewWidget</link> const*self);</programlisting>
+<para>
+Find out whether the view is centered.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcViewWidget"><type>CcViewWidget</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if <parameter>self</parameter> displays its model centered once there's more space
+available than the model requires.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-widget-set-center-view" role="function"/>cc_view_widget_set_center_view ()</title>
+<indexterm><primary>cc_view_widget_set_center_view</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_widget_set_center_view      (<link linkend="CcViewWidget">CcViewWidget</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> center_view);</programlisting>
+<para>
+Specify whether the model should be displayed centered if there is as much
+space.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcViewWidget"><type>CcViewWidget</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>center_view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="gboolean"><type>gboolean</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcViewWidget--center-view"/>The &quot;<literal>center-view</literal>&quot; property</title>
+<indexterm><primary>CcViewWidget:center-view</primary></indexterm><programlisting>  &quot;center-view&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Display the model centered if there is more space than the model needs.</para><para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+<refsect1 role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2><title><anchor id="CcViewWidget-set-scroll-adjustments"/>The &quot;set-scroll-adjustments&quot; signal</title>
+<indexterm><primary>CcViewWidget::set-scroll-adjustments</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="CcViewWidget">CcViewWidget</link>  *hadjustment,
+                                                        <link linkend="GtkAdjustment">GtkAdjustment</link> *vadjustment,
+                                                        <link linkend="GtkAdjustment">GtkAdjustment</link> *arg2,
+                                                        <link linkend="gpointer">gpointer</link>       user_data)        : Run Last</programlisting>
+<para>
+This signal gets emitted when the widget is being added to a
+scrollable container.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hadjustment</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>vadjustment</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

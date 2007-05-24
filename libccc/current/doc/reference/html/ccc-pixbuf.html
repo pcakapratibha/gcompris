@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>pixbuf</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="prev" href="ccc-rounded-rectangle.html" title="rounded-rectangle">
+<link rel="next" href="ccc-Text.html" title="Text">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-rounded-rectangle.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Canvas-Items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Text.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2548527" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2599297" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2596819" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2596855" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2596876" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-pixbuf"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2548527"></a><span class="refentrytitle">pixbuf</span>
+</h2>
+<p>pixbuf</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcPixbuf"></a><pre class="synopsis">
+
+
+
+typedef             <a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a>;
+typedef             <a href="ccc-pixbuf.html#CcPixbufClass">CcPixbufClass</a>;
+gdouble             <a href="ccc-pixbuf.html#cc-pixbuf-get-rotation">cc_pixbuf_get_rotation</a>              (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> const*self);
+GType               <a href="ccc-pixbuf.html#cc-pixbuf-get-type">cc_pixbuf_get_type</a>                  (void);
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="ccc-pixbuf.html#cc-pixbuf-new">cc_pixbuf_new</a>                       (void);
+void                <a href="ccc-pixbuf.html#cc-pixbuf-set-pixbuf">cc_pixbuf_set_pixbuf</a>                (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         GdkPixbuf *pixbuf);
+void                <a href="ccc-pixbuf.html#cc-pixbuf-set-position">cc_pixbuf_set_position</a>              (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble x,
+                                                         gdouble y,
+                                                         gdouble w,
+                                                         gdouble h);
+void                <a href="ccc-pixbuf.html#cc-pixbuf-set-rotation">cc_pixbuf_set_rotation</a>              (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble rotation);
+void                <a href="ccc-pixbuf.html#cc-pixbuf-set-position-x">cc_pixbuf_set_position_x</a>            (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble pos_x);
+void                <a href="ccc-pixbuf.html#cc-pixbuf-set-position-y">cc_pixbuf_set_position_y</a>            (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble pos_y);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596819"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>
+               +----CcPixbuf
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596855"></a><h2>Implemented Interfaces</h2>
+<p>
+CcPixbuf implements
+ <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596876"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-pixbuf.html#CcPixbuf--pixbuf">pixbuf</a>"                   GdkPixbuf             : Read / Write
+  "<a href="ccc-pixbuf.html#CcPixbuf--position-h">position-h</a>"               gdouble               : Read / Write
+  "<a href="ccc-pixbuf.html#CcPixbuf--position-h-set">position-h-set</a>"           gboolean              : Read / Write
+  "<a href="ccc-pixbuf.html#CcPixbuf--position-w">position-w</a>"               gdouble               : Read / Write
+  "<a href="ccc-pixbuf.html#CcPixbuf--position-w-set">position-w-set</a>"           gboolean              : Read / Write
+  "<a href="ccc-pixbuf.html#CcPixbuf--position-x">position-x</a>"               gdouble               : Read / Write
+  "<a href="ccc-pixbuf.html#CcPixbuf--position-y">position-y</a>"               gdouble               : Read / Write
+  "<a href="ccc-pixbuf.html#CcPixbuf--rotation">rotation</a>"                 gdouble               : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2599297"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2599313"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2599324"></a><h3>
+<a name="CcPixbuf"></a>CcPixbuf</h3>
+<a class="indexterm" name="id2599336"></a><pre class="programlisting">typedef CcItem      CcPixbuf;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599351"></a><h3>
+<a name="CcPixbufClass"></a>CcPixbufClass</h3>
+<a class="indexterm" name="id2599363"></a><pre class="programlisting">typedef CcItemClass CcPixbufClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599379"></a><h3>
+<a name="cc-pixbuf-get-rotation"></a>cc_pixbuf_get_rotation ()</h3>
+<a class="indexterm" name="id2599390"></a><pre class="programlisting">gdouble             cc_pixbuf_get_rotation              (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> const*self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599446"></a><h3>
+<a name="cc-pixbuf-get-type"></a>cc_pixbuf_get_type ()</h3>
+<a class="indexterm" name="id2599459"></a><pre class="programlisting">GType               cc_pixbuf_get_type                  (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599495"></a><h3>
+<a name="cc-pixbuf-new"></a>cc_pixbuf_new ()</h3>
+<a class="indexterm" name="id2599507"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_pixbuf_new                       (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2594515"></a><h3>
+<a name="cc-pixbuf-set-pixbuf"></a>cc_pixbuf_set_pixbuf ()</h3>
+<a class="indexterm" name="id2594526"></a><pre class="programlisting">void                cc_pixbuf_set_pixbuf                (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         GdkPixbuf *pixbuf);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>pixbuf</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2594593"></a><h3>
+<a name="cc-pixbuf-set-position"></a>cc_pixbuf_set_position ()</h3>
+<a class="indexterm" name="id2594605"></a><pre class="programlisting">void                cc_pixbuf_set_position              (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble x,
+                                                         gdouble y,
+                                                         gdouble w,
+                                                         gdouble h);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>w</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>h</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2594735"></a><h3>
+<a name="cc-pixbuf-set-rotation"></a>cc_pixbuf_set_rotation ()</h3>
+<a class="indexterm" name="id2594746"></a><pre class="programlisting">void                cc_pixbuf_set_rotation              (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble rotation);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>rotation</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605449"></a><h3>
+<a name="cc-pixbuf-set-position-x"></a>cc_pixbuf_set_position_x ()</h3>
+<a class="indexterm" name="id2605460"></a><pre class="programlisting">void                cc_pixbuf_set_position_x            (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble pos_x);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>pos_x</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605519"></a><h3>
+<a name="cc-pixbuf-set-position-y"></a>cc_pixbuf_set_position_y ()</h3>
+<a class="indexterm" name="id2605530"></a><pre class="programlisting">void                cc_pixbuf_set_position_y            (<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a> *self,
+                                                         gdouble pos_y);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>pos_y</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2605592"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2605603"></a><h3>
+<a name="CcPixbuf--pixbuf"></a>The "<code class="literal">pixbuf</code>" property</h3>
+<a class="indexterm" name="id2605618"></a><pre class="programlisting">  "pixbuf"                   GdkPixbuf             : Read / Write</pre>
+<p>pixbuf.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605639"></a><h3>
+<a name="CcPixbuf--position-h"></a>The "<code class="literal">position-h</code>" property</h3>
+<a class="indexterm" name="id2605653"></a><pre class="programlisting">  "position-h"               gdouble               : Read / Write</pre>
+<p>The height of the image.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605679"></a><h3>
+<a name="CcPixbuf--position-h-set"></a>The "<code class="literal">position-h-set</code>" property</h3>
+<a class="indexterm" name="id2605693"></a><pre class="programlisting">  "position-h-set"           gboolean              : Read / Write</pre>
+<p>Use the specified height instead of the image height.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605720"></a><h3>
+<a name="CcPixbuf--position-w"></a>The "<code class="literal">position-w</code>" property</h3>
+<a class="indexterm" name="id2605734"></a><pre class="programlisting">  "position-w"               gdouble               : Read / Write</pre>
+<p>The width of the image.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605760"></a><h3>
+<a name="CcPixbuf--position-w-set"></a>The "<code class="literal">position-w-set</code>" property</h3>
+<a class="indexterm" name="id2605774"></a><pre class="programlisting">  "position-w-set"           gboolean              : Read / Write</pre>
+<p>Use the specified width instead of the image width.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605800"></a><h3>
+<a name="CcPixbuf--position-x"></a>The "<code class="literal">position-x</code>" property</h3>
+<a class="indexterm" name="id2605814"></a><pre class="programlisting">  "position-x"               gdouble               : Read / Write</pre>
+<p>The horizontal position of the pixbuf.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605840"></a><h3>
+<a name="CcPixbuf--position-y"></a>The "<code class="literal">position-y</code>" property</h3>
+<a class="indexterm" name="id2605854"></a><pre class="programlisting">  "position-y"               gdouble               : Read / Write</pre>
+<p>The vertical position of the pixbuf.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605880"></a><h3>
+<a name="CcPixbuf--rotation"></a>The "<code class="literal">rotation</code>" property</h3>
+<a class="indexterm" name="id2605895"></a><pre class="programlisting">  "rotation"                 gdouble               : Read / Write</pre>
+<p>The rotation of this image.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+</body>
+</html>

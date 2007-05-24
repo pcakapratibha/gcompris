@@ -1,0 +1,137 @@
+<!-- ##### SECTION Title ##### -->
+Colors
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcColor ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcColor:alpha ##### -->
+<para>
+
+</para>
+
+<!-- ##### TYPEDEF CcColorRgb ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcColorRgb:blue ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcColorRgb:green ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcColorRgb:red ##### -->
+<para>
+
+</para>
+
+<!-- ##### TYPEDEF CcColorHsv ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcColorHsv:hue ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcColorHsv:saturation ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcColorHsv:value ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcColorClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+@apply: 
+
+<!-- ##### FUNCTION cc_color_new_hsv ##### -->
+<para>
+
+</para>
+
+@hue: 
+@saturation: 
+@value: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_color_new_hsva ##### -->
+<para>
+
+</para>
+
+@hue: 
+@saturation: 
+@value: 
+@alpha: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_color_new_rgb ##### -->
+<para>
+
+</para>
+
+@red: 
+@green: 
+@blue: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_color_new_rgba ##### -->
+<para>
+
+</para>
+
+@red: 
+@green: 
+@blue: 
+@alpha: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_color_apply ##### -->
+<para>
+
+</para>
+
+@self: 
+@cr: 
+
+

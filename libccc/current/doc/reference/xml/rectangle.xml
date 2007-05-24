@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-Rectangles">
+<refmeta>
+<refentrytitle role="top_of_page">Rectangles</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Rectangles</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcRectangle"/>
+<synopsis>
+
+
+
+                    <link linkend="CcRectangle-struct">CcRectangle</link>;
+                    <link linkend="CcRectangleClass">CcRectangleClass</link>;
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-rectangle-new">cc_rectangle_new</link>                    (void);
+<link linkend="void">void</link>                <link linkend="cc-rectangle-set-position">cc_rectangle_set_position</link>           (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> w,
+                                                         <link linkend="gdouble">gdouble</link> h);
+<link linkend="void">void</link>                <link linkend="cc-rectangle-set-height">cc_rectangle_set_height</link>             (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> height);
+<link linkend="void">void</link>                <link linkend="cc-rectangle-set-width">cc_rectangle_set_width</link>              (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> width);
+<link linkend="void">void</link>                <link linkend="cc-rectangle-set-x">cc_rectangle_set_x</link>                  (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x);
+<link linkend="void">void</link>                <link linkend="cc-rectangle-set-y">cc_rectangle_set_y</link>                  (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> y);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----<link linkend="CcShape">CcShape</link>
+                     +----CcRectangle
+                           +----<link linkend="CcRoundedRectangle">CcRoundedRectangle</link>
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcRectangle implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcRectangle--position-h">position-h</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="CcRectangle--position-w">position-w</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="CcRectangle--position-x">position-x</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="CcRectangle--position-y">position-y</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcRectangle-struct" role="struct"/>CcRectangle</title>
+<indexterm><primary>CcRectangle</primary></indexterm><programlisting>typedef struct _CcRectangle CcRectangle;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcRectangleClass" role="struct"/>CcRectangleClass</title>
+<indexterm><primary>CcRectangleClass</primary></indexterm><programlisting>typedef struct {
+	CcShapeClass base_class;
+} CcRectangleClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-rectangle-new" role="function"/>cc_rectangle_new ()</title>
+<indexterm><primary>cc_rectangle_new</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_rectangle_new                    (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-rectangle-set-position" role="function"/>cc_rectangle_set_position ()</title>
+<indexterm><primary>cc_rectangle_set_position</primary></indexterm><programlisting><link linkend="void">void</link>                cc_rectangle_set_position           (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> w,
+                                                         <link linkend="gdouble">gdouble</link> h);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>w</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>h</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-rectangle-set-height" role="function"/>cc_rectangle_set_height ()</title>
+<indexterm><primary>cc_rectangle_set_height</primary></indexterm><programlisting><link linkend="void">void</link>                cc_rectangle_set_height             (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> height);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-rectangle-set-width" role="function"/>cc_rectangle_set_width ()</title>
+<indexterm><primary>cc_rectangle_set_width</primary></indexterm><programlisting><link linkend="void">void</link>                cc_rectangle_set_width              (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> width);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-rectangle-set-x" role="function"/>cc_rectangle_set_x ()</title>
+<indexterm><primary>cc_rectangle_set_x</primary></indexterm><programlisting><link linkend="void">void</link>                cc_rectangle_set_x                  (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-rectangle-set-y" role="function"/>cc_rectangle_set_y ()</title>
+<indexterm><primary>cc_rectangle_set_y</primary></indexterm><programlisting><link linkend="void">void</link>                cc_rectangle_set_y                  (<link linkend="CcRectangle">CcRectangle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> y);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcRectangle--position-h"/>The &quot;<literal>position-h</literal>&quot; property</title>
+<indexterm><primary>CcRectangle:position-h</primary></indexterm><programlisting>  &quot;position-h&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The height of the rectangle.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcRectangle--position-w"/>The &quot;<literal>position-w</literal>&quot; property</title>
+<indexterm><primary>CcRectangle:position-w</primary></indexterm><programlisting>  &quot;position-w&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The width of the rectangle.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcRectangle--position-x"/>The &quot;<literal>position-x</literal>&quot; property</title>
+<indexterm><primary>CcRectangle:position-x</primary></indexterm><programlisting>  &quot;position-x&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The x position of the rectangle.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcRectangle--position-y"/>The &quot;<literal>position-y</literal>&quot; property</title>
+<indexterm><primary>CcRectangle:position-y</primary></indexterm><programlisting>  &quot;position-y&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The y position of the rectangle.</para><para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

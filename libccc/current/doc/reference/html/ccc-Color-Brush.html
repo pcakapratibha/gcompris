@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Color Brush</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="prev" href="ccc-Brushes.html" title="Brushes">
+<link rel="next" href="ccc-Colors.html" title="Colors">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Brushes.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Fundamentals.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Colors.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2559071" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2559334" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2578266" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2559305" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Color-Brush"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2559071"></a><span class="refentrytitle">Color Brush</span>
+</h2>
+<p>Color Brush</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcBrushColor"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-Color-Brush.html#CcBrushColor-struct">CcBrushColor</a>;
+                    <a href="ccc-Color-Brush.html#CcBrushColorClass">CcBrushColorClass</a>;
+<a href="ccc-Brushes.html#CcBrush">CcBrush</a>*            <a href="ccc-Color-Brush.html#cc-brush-color-new">cc_brush_color_new</a>                  (<a href="ccc-Colors.html#CcColor">CcColor</a> *color);
+<a href="ccc-Colors.html#CcColor">CcColor</a>*            <a href="ccc-Color-Brush.html#cc-brush-color-get-color">cc_brush_color_get_color</a>            (<a href="ccc-Color-Brush.html#CcBrushColor">CcBrushColor</a> *self);
+void                <a href="ccc-Color-Brush.html#cc-brush-color-set-color">cc_brush_color_set_color</a>            (<a href="ccc-Color-Brush.html#CcBrushColor">CcBrushColor</a> *self,
+                                                         <a href="ccc-Colors.html#CcColor">CcColor</a> *color);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2578266"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="ccc-Brushes.html#CcBrush">CcBrush</a>
+               +----CcBrushColor
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2559305"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-Color-Brush.html#CcBrushColor--color">color</a>"                    <a href="ccc-Colors.html#CcColor">CcColor</a>               : Read / Write / Construct
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2559334"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2559350"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2559361"></a><h3>
+<a name="CcBrushColor-struct"></a>CcBrushColor</h3>
+<a class="indexterm" name="id2559373"></a><pre class="programlisting">typedef struct _CcBrushColor CcBrushColor;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2559389"></a><h3>
+<a name="CcBrushColorClass"></a>CcBrushColorClass</h3>
+<a class="indexterm" name="id2559401"></a><pre class="programlisting">typedef struct {
+	CcBrushClass base_class;
+} CcBrushColorClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2567886"></a><h3>
+<a name="cc-brush-color-new"></a>cc_brush_color_new ()</h3>
+<a class="indexterm" name="id2567898"></a><pre class="programlisting"><a href="ccc-Brushes.html#CcBrush">CcBrush</a>*            cc_brush_color_new                  (<a href="ccc-Colors.html#CcColor">CcColor</a> *color);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>color</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2567955"></a><h3>
+<a name="cc-brush-color-get-color"></a>cc_brush_color_get_color ()</h3>
+<a class="indexterm" name="id2567966"></a><pre class="programlisting"><a href="ccc-Colors.html#CcColor">CcColor</a>*            cc_brush_color_get_color            (<a href="ccc-Color-Brush.html#CcBrushColor">CcBrushColor</a> *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2568022"></a><h3>
+<a name="cc-brush-color-set-color"></a>cc_brush_color_set_color ()</h3>
+<a class="indexterm" name="id2568034"></a><pre class="programlisting">void                cc_brush_color_set_color            (<a href="ccc-Color-Brush.html#CcBrushColor">CcBrushColor</a> *self,
+                                                         <a href="ccc-Colors.html#CcColor">CcColor</a> *color);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>color</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2576736"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2576747"></a><h3>
+<a name="CcBrushColor--color"></a>The "<code class="literal">color</code>" property</h3>
+<a class="indexterm" name="id2576762"></a><pre class="programlisting">  "color"                    <a href="ccc-Colors.html#CcColor">CcColor</a>               : Read / Write / Construct</pre>
+<p>The color.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

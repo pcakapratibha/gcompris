@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Canvas Views</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-View-Elements.html" title="View Elements">
+<link rel="prev" href="ccc-Item-View.html" title="Item View">
+<link rel="next" href="ccc-Cell-Renderer.html" title="Cell Renderer">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Item-View.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-View-Elements.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Cell-Renderer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2551367" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2598874" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2608827" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2608851" class="shortcut">Prerequisites</a>
+                  &#160;|&#160;
+                  <a href="#id2608879" class="shortcut">Known Implementations</a>
+                  &#160;|&#160;
+                  <a href="#id2598796" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Canvas-Views"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2551367"></a><span class="refentrytitle">Canvas Views</span>
+</h2>
+<p>Canvas Views</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcView"></a><pre class="synopsis">
+
+
+
+enum                <a href="ccc-Canvas-Views.html#CcZoomMode">CcZoomMode</a>;
+                    <a href="ccc-Canvas-Views.html#CcView-struct">CcView</a>;
+                    <a href="ccc-Canvas-Views.html#CcViewIface">CcViewIface</a>;
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="ccc-Canvas-Views.html#cc-view-get-root">cc_view_get_root</a>                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);
+void                <a href="ccc-Canvas-Views.html#cc-view-set-root">cc_view_set_root</a>                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);
+gdouble             <a href="ccc-Canvas-Views.html#cc-view-get-zoom">cc_view_get_zoom</a>                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);
+void                <a href="ccc-Canvas-Views.html#cc-view-set-zoom">cc_view_set_zoom</a>                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble zoom);
+void                <a href="ccc-Canvas-Views.html#cc-view-window-to-world">cc_view_window_to_world</a>             (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble *x,
+                                                         gdouble *y);
+void                <a href="ccc-Canvas-Views.html#cc-view-world-to-window">cc_view_world_to_window</a>             (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble *x,
+                                                         gdouble *y);
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="ccc-Canvas-Views.html#cc-view-get-focus">cc_view_get_focus</a>                   (const <a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);
+<a href="ccc-Rectangle.html#CcDRect">CcDRect</a>*            <a href="ccc-Canvas-Views.html#cc-view-get-scrolled-region">cc_view_get_scrolled_region</a>         (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);
+gint                <a href="ccc-Canvas-Views.html#cc-view-grab-item">cc_view_grab_item</a>                   (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *item,
+                                                         GdkEventMask mask,
+                                                         GdkCursor *cursor,
+                                                         guint32 time);
+void                <a href="ccc-Canvas-Views.html#cc-view-set-focus">cc_view_set_focus</a>                   (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *focus);
+void                <a href="ccc-Canvas-Views.html#cc-view-set-scrolled-region">cc_view_set_scrolled_region</a>         (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-Rectangle.html#CcDRect">CcDRect</a> *scrolled_region);
+void                <a href="ccc-Canvas-Views.html#cc-view-ungrab-item">cc_view_ungrab_item</a>                 (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *item,
+                                                         guint32 time);
+void                <a href="ccc-Canvas-Views.html#cc-view-world-to-window-distance">cc_view_world_to_window_distance</a>    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble *x,
+                                                         gdouble *y);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608827"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GInterface
+   +----CcView
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608851"></a><h2>Prerequisites</h2>
+<p>
+CcView requires
+ <a href="ccc-Item-View.html#CcItemView">CcItemView</a> and  GObject.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608879"></a><h2>Known Implementations</h2>
+<p>
+CcView is implemented by
+ <a href="CcCamera.html" title="CcCamera">CcCamera</a>,  <a href="ccc-Cell-Renderer.html#CcViewCellRenderer">CcViewCellRenderer</a> and  <a href="ccc-Widget.html#CcViewWidget">CcViewWidget</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598796"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-Canvas-Views.html#CcView--focus">focus</a>"                    <a href="ccc-The-Base-Item.html#CcItem">CcItem</a>                : Read / Write
+  "<a href="ccc-Canvas-Views.html#CcView--root">root</a>"                     <a href="ccc-The-Base-Item.html#CcItem">CcItem</a>                : Read / Write
+  "<a href="ccc-Canvas-Views.html#CcView--scrolled-region">scrolled-region</a>"          <a href="ccc-Rectangle.html#CcDRect">CcDRect</a>               : Read / Write
+  "<a href="ccc-Canvas-Views.html#CcView--zoom">zoom</a>"                     gdouble               : Read / Write / Construct
+  "<a href="ccc-Canvas-Views.html#CcView--zoom-mode">zoom-mode</a>"                <a href="ccc-Canvas-Views.html#CcZoomMode">CcZoomMode</a>            : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598874"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598889"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2598900"></a><h3>
+<a name="CcZoomMode"></a>enum CcZoomMode</h3>
+<a class="indexterm" name="id2598912"></a><pre class="programlisting">typedef enum {
+	CC_ZOOM_PIXELS,
+	CC_ZOOM_WIDTH,
+	CC_ZOOM_HEIGHT,
+	CC_ZOOM_AUTO
+} CcZoomMode;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598929"></a><h3>
+<a name="CcView-struct"></a>CcView</h3>
+<a class="indexterm" name="id2598942"></a><pre class="programlisting">typedef struct _CcView CcView;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598957"></a><h3>
+<a name="CcViewIface"></a>CcViewIface</h3>
+<a class="indexterm" name="id2598969"></a><pre class="programlisting">typedef struct {
+	GTypeInterface base_iface;
+
+	/* vtable */
+	GdkGrabStatus (*grab_item)               (CcView*       self,
+				                  CcItem*       item,
+					          GdkEventMask  mask,
+					          GdkCursor   * cursor,
+					          guint32       time);
+	void          (*ungrab_item)             (CcView      * self,
+					          CcItem      * item,
+					          guint32       time);
+	void          (*window_to_world)         (CcView      * self,
+				                  gdouble     * x,
+				                  gdouble     * y);
+	void          (*world_to_window)         (CcView      * self,
+				                  gdouble     * x,
+				                  gdouble     * y);
+	void          (*world_to_window_distance)(CcView      * self,
+					          gdouble     * x,
+					          gdouble     * y);
+} CcViewIface;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2564761"></a><h3>
+<a name="cc-view-get-root"></a>cc_view_get_root ()</h3>
+<a class="indexterm" name="id2595641"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_view_get_root                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);</pre>
+<p>
+Get the model that's displayed by <em class="parameter"><code>self</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>the <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a> that's displayed by <em class="parameter"><code>self</code></em>, may be <code class="literal">NULL</code>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599070"></a><h3>
+<a name="cc-view-set-root"></a>cc_view_set_root ()</h3>
+<a class="indexterm" name="id2599082"></a><pre class="programlisting">void                cc_view_set_root                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *root);</pre>
+<p>
+Set <em class="parameter"><code>root</code></em> as the model to be displayed in <em class="parameter"><code>self</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>root</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599179"></a><h3>
+<a name="cc-view-get-zoom"></a>cc_view_get_zoom ()</h3>
+<a class="indexterm" name="id2599192"></a><pre class="programlisting">gdouble             cc_view_get_zoom                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);</pre>
+<p>
+Get the zoom of the view.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>the zoom of the view.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2610772"></a><h3>
+<a name="cc-view-set-zoom"></a>cc_view_set_zoom ()</h3>
+<a class="indexterm" name="id2610782"></a><pre class="programlisting">void                cc_view_set_zoom                    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble zoom);</pre>
+<p>
+Set the zoom of the canvas.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>zoom</code></em>&#160;:</span></td>
+<td> a new zoom value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2610852"></a><h3>
+<a name="cc-view-window-to-world"></a>cc_view_window_to_world ()</h3>
+<a class="indexterm" name="id2610862"></a><pre class="programlisting">void                cc_view_window_to_world             (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble *x,
+                                                         gdouble *y);</pre>
+<p>
+Convert <em class="parameter"><code>window_x</code></em> and <em class="parameter"><code>window_y</code></em> to <em class="parameter"><code>world_x</code></em> and <em class="parameter"><code>world_y</code></em> if given.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td> target for a world coordinate, may be <code class="literal">NULL</code>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td> target for a world coordinate, may be <code class="literal">NULL</code>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2610988"></a><h3>
+<a name="cc-view-world-to-window"></a>cc_view_world_to_window ()</h3>
+<a class="indexterm" name="id2610998"></a><pre class="programlisting">void                cc_view_world_to_window             (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble *x,
+                                                         gdouble *y);</pre>
+<p>
+Convert <em class="parameter"><code>x</code></em> and <em class="parameter"><code>y</code></em> to window coordinates if given.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td> target for a window coordinate, may be <code class="literal">NULL</code>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td> target for a window coordinate, may be <code class="literal">NULL</code>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611113"></a><h3>
+<a name="cc-view-get-focus"></a>cc_view_get_focus ()</h3>
+<a class="indexterm" name="id2611124"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_view_get_focus                   (const <a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611174"></a><h3>
+<a name="cc-view-get-scrolled-region"></a>cc_view_get_scrolled_region ()</h3>
+<a class="indexterm" name="id2611185"></a><pre class="programlisting"><a href="ccc-Rectangle.html#CcDRect">CcDRect</a>*            cc_view_get_scrolled_region         (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self);</pre>
+<p>
+Get the scrolled region of this view.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>the scrolled region of this view.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611246"></a><h3>
+<a name="cc-view-grab-item"></a>cc_view_grab_item ()</h3>
+<a class="indexterm" name="id2611256"></a><pre class="programlisting">gint                cc_view_grab_item                   (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *item,
+                                                         GdkEventMask mask,
+                                                         GdkCursor *cursor,
+                                                         guint32 time);</pre>
+<p>
+Grab the item.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>mask</code></em>&#160;:</span></td>
+<td> a <span class="type">GdkEventMask</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>cursor</code></em>&#160;:</span></td>
+<td> a <span class="type">GdkCursor</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>time</code></em>&#160;:</span></td>
+<td> the time
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">GDK_GRAB_NOT_VIEWABLE</code> if the view cannot grab at all.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611419"></a><h3>
+<a name="cc-view-set-focus"></a>cc_view_set_focus ()</h3>
+<a class="indexterm" name="id2611429"></a><pre class="programlisting">void                cc_view_set_focus                   (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *focus);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>focus</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611489"></a><h3>
+<a name="cc-view-set-scrolled-region"></a>cc_view_set_scrolled_region ()</h3>
+<a class="indexterm" name="id2611500"></a><pre class="programlisting">void                cc_view_set_scrolled_region         (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-Rectangle.html#CcDRect">CcDRect</a> *scrolled_region);</pre>
+<p>
+Set <em class="parameter"><code>scrolled_region</code></em> as the region to be displayed and/or reachable with
+scrollbars.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>scrolled_region</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611582"></a><h3>
+<a name="cc-view-ungrab-item"></a>cc_view_ungrab_item ()</h3>
+<a class="indexterm" name="id2611593"></a><pre class="programlisting">void                cc_view_ungrab_item                 (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *item,
+                                                         guint32 time);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>time</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611672"></a><h3>
+<a name="cc-view-world-to-window-distance"></a>cc_view_world_to_window_distance ()</h3>
+<a class="indexterm" name="id2611684"></a><pre class="programlisting">void                cc_view_world_to_window_distance    (<a href="ccc-Canvas-Views.html#CcView">CcView</a> *self,
+                                                         gdouble *x,
+                                                         gdouble *y);</pre>
+<p>
+Convert <em class="parameter"><code>x</code></em> and <em class="parameter"><code>y</code></em> to window coordinates</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td> target for a window distance, may be <code class="literal">NULL</code>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td> target for a window distance, may be <code class="literal">NULL</code>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2611803"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2611812"></a><h3>
+<a name="CcView--focus"></a>The "<code class="literal">focus</code>" property</h3>
+<a class="indexterm" name="id2611825"></a><pre class="programlisting">  "focus"                    <a href="ccc-The-Base-Item.html#CcItem">CcItem</a>                : Read / Write</pre>
+<p>Focus.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611845"></a><h3>
+<a name="CcView--root"></a>The "<code class="literal">root</code>" property</h3>
+<a class="indexterm" name="id2611857"></a><pre class="programlisting">  "root"                     <a href="ccc-The-Base-Item.html#CcItem">CcItem</a>                : Read / Write</pre>
+<p>The root element of this canvas.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611878"></a><h3>
+<a name="CcView--scrolled-region"></a>The "<code class="literal">scrolled-region</code>" property</h3>
+<a class="indexterm" name="id2611891"></a><pre class="programlisting">  "scrolled-region"          <a href="ccc-Rectangle.html#CcDRect">CcDRect</a>               : Read / Write</pre>
+<p>scrolled-region.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611911"></a><h3>
+<a name="CcView--zoom"></a>The "<code class="literal">zoom</code>" property</h3>
+<a class="indexterm" name="id2611923"></a><pre class="programlisting">  "zoom"                     gdouble               : Read / Write / Construct</pre>
+<p>Zoom.</p>
+<p>Allowed values: &gt;= G_MINDOUBLE</p>
+<p>Default value: 1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2611951"></a><h3>
+<a name="CcView--zoom-mode"></a>The "<code class="literal">zoom-mode</code>" property</h3>
+<a class="indexterm" name="id2611963"></a><pre class="programlisting">  "zoom-mode"                <a href="ccc-Canvas-Views.html#CcZoomMode">CcZoomMode</a>            : Read / Write</pre>
+<p>BLURB.</p>
+<p>Default value: CC_ZOOM_PIXELS</p>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- ##### SECTION Title ##### -->
+Item View
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcItemView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT CcItemViewIface ##### -->
+<para>
+
+</para>
+
+@base_iface: 
+@item_added: 
+@item_removed: 
+@item_dirty: 
+@notify_all_bounds: 
+
+<!-- ##### FUNCTION cc_item_view_register ##### -->
+<para>
+
+</para>
+
+@self: 
+@item: 
+
+
+<!-- ##### FUNCTION cc_item_view_unregister ##### -->
+<para>
+
+</para>
+
+@self: 
+@item: 
+
+

@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-circle">
+<refmeta>
+<refentrytitle role="top_of_page">circle</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>circle</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcCircle"/>
+<synopsis>
+
+
+
+                    <link linkend="CcCircle-struct">CcCircle</link>;
+                    <link linkend="CcCircleClass">CcCircleClass</link>;
+<link linkend="GType">GType</link>               <link linkend="cc-circle-get-type">cc_circle_get_type</link>                  (void);
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-circle-new">cc_circle_new</link>                       (void);
+<link linkend="void">void</link>                <link linkend="cc-circle-set-anchor">cc_circle_set_anchor</link>                (<link linkend="CcCircle">CcCircle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);
+<link linkend="void">void</link>                <link linkend="cc-circle-set-radius">cc_circle_set_radius</link>                (<link linkend="CcCircle">CcCircle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> radius);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----<link linkend="CcShape">CcShape</link>
+                     +----CcCircle
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcCircle implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcCircle--anchor">anchor</link>&quot;                   <link linkend="gpointer">gpointer</link>              : 
+  &quot;<link linkend="CcCircle--radius">radius</link>&quot;                   <link linkend="gdouble">gdouble</link>               : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcCircle-struct" role="struct"/>CcCircle</title>
+<indexterm><primary>CcCircle</primary></indexterm><programlisting>typedef struct _CcCircle CcCircle;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcCircleClass" role="struct"/>CcCircleClass</title>
+<indexterm><primary>CcCircleClass</primary></indexterm><programlisting>typedef struct {
+	CcShapeClass base_class;
+} CcCircleClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-circle-get-type" role="function"/>cc_circle_get_type ()</title>
+<indexterm><primary>cc_circle_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               cc_circle_get_type                  (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-circle-new" role="function"/>cc_circle_new ()</title>
+<indexterm><primary>cc_circle_new</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_circle_new                       (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-circle-set-anchor" role="function"/>cc_circle_set_anchor ()</title>
+<indexterm><primary>cc_circle_set_anchor</primary></indexterm><programlisting><link linkend="void">void</link>                cc_circle_set_anchor                (<link linkend="CcCircle">CcCircle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-circle-set-radius" role="function"/>cc_circle_set_radius ()</title>
+<indexterm><primary>cc_circle_set_radius</primary></indexterm><programlisting><link linkend="void">void</link>                cc_circle_set_radius                (<link linkend="CcCircle">CcCircle</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> radius);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>radius</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcCircle--anchor"/>The &quot;<literal>anchor</literal>&quot; property</title>
+<indexterm><primary>CcCircle:anchor</primary></indexterm><programlisting>  &quot;anchor&quot;                   <link linkend="gpointer">gpointer</link>              : </programlisting>
+<para>The center of the circle.</para></refsect2>
+<refsect2><title><anchor id="CcCircle--radius"/>The &quot;<literal>radius</literal>&quot; property</title>
+<indexterm><primary>CcCircle:radius</primary></indexterm><programlisting>  &quot;radius&quot;                   <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>Radius.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>shape</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="prev" href="ccc-The-Base-Item.html" title="The Base Item">
+<link rel="next" href="ccc-line.html" title="line">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-The-Base-Item.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Canvas-Items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-line.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2587416" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2582655" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2594141" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2594202" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2594223" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-shape"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2587416"></a><span class="refentrytitle">shape</span>
+</h2>
+<p>shape</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcShape"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-shape.html#CcShape-struct">CcShape</a>;
+                    <a href="ccc-shape.html#CcShapeClass">CcShapeClass</a>;
+<a href="ccc-Brushes.html#CcBrush">CcBrush</a>*            <a href="ccc-shape.html#cc-shape-get-brush-border">cc_shape_get_brush_border</a>           (<a href="ccc-shape.html#CcShape">CcShape</a> *self);
+<a href="ccc-Brushes.html#CcBrush">CcBrush</a>*            <a href="ccc-shape.html#cc-shape-get-brush-content">cc_shape_get_brush_content</a>          (<a href="ccc-shape.html#CcShape">CcShape</a> *self);
+GType               <a href="ccc-shape.html#cc-shape-get-type">cc_shape_get_type</a>                   (void);
+gdouble             <a href="ccc-shape.html#cc-shape-get-width">cc_shape_get_width</a>                  (<a href="ccc-shape.html#CcShape">CcShape</a> *shape,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);
+void                <a href="ccc-shape.html#cc-shape-set-brush-border">cc_shape_set_brush_border</a>           (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         <a href="ccc-Brushes.html#CcBrush">CcBrush</a> *brush);
+void                <a href="ccc-shape.html#cc-shape-set-brush-content">cc_shape_set_brush_content</a>          (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         <a href="ccc-Brushes.html#CcBrush">CcBrush</a> *brush);
+void                <a href="ccc-shape.html#cc-shape-set-width-pixels">cc_shape_set_width_pixels</a>           (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         gdouble width);
+void                <a href="ccc-shape.html#cc-shape-set-width-units">cc_shape_set_width_units</a>            (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         gdouble width);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2594141"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>
+               +----CcShape
+                     +----<a href="ccc-circle.html#CcCircle">CcCircle</a>
+                     +----<a href="ccc-line.html#CcLine">CcLine</a>
+                     +----<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a>
+                     +----<a href="ccc-Text.html#CcText">CcText</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2594202"></a><h2>Implemented Interfaces</h2>
+<p>
+CcShape implements
+ <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2594223"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-shape.html#CcShape--brush-border">brush-border</a>"             <a href="ccc-Brushes.html#CcBrush">CcBrush</a>               : Read / Write
+  "<a href="ccc-shape.html#CcShape--brush-content">brush-content</a>"            <a href="ccc-Brushes.html#CcBrush">CcBrush</a>               : Read / Write
+  "<a href="ccc-shape.html#CcShape--width-pixels">width-pixels</a>"             gdouble               : Write
+  "<a href="ccc-shape.html#CcShape--width-units">width-units</a>"              gdouble               : Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2582655"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2582670"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2582681"></a><h3>
+<a name="CcShape-struct"></a>CcShape</h3>
+<a class="indexterm" name="id2582694"></a><pre class="programlisting">typedef struct _CcShape CcShape;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2582709"></a><h3>
+<a name="CcShapeClass"></a>CcShapeClass</h3>
+<a class="indexterm" name="id2582721"></a><pre class="programlisting">typedef struct {
+	CcItemClass base_class;
+
+	void (*path)           (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+	void (*render_content) (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+	void (*render_border)  (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+} CcShapeClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2582742"></a><h3>
+<a name="cc-shape-get-brush-border"></a>cc_shape_get_brush_border ()</h3>
+<a class="indexterm" name="id2582753"></a><pre class="programlisting"><a href="ccc-Brushes.html#CcBrush">CcBrush</a>*            cc_shape_get_brush_border           (<a href="ccc-shape.html#CcShape">CcShape</a> *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595712"></a><h3>
+<a name="cc-shape-get-brush-content"></a>cc_shape_get_brush_content ()</h3>
+<a class="indexterm" name="id2595724"></a><pre class="programlisting"><a href="ccc-Brushes.html#CcBrush">CcBrush</a>*            cc_shape_get_brush_content          (<a href="ccc-shape.html#CcShape">CcShape</a> *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595780"></a><h3>
+<a name="cc-shape-get-type"></a>cc_shape_get_type ()</h3>
+<a class="indexterm" name="id2595792"></a><pre class="programlisting">GType               cc_shape_get_type                   (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595828"></a><h3>
+<a name="cc-shape-get-width"></a>cc_shape_get_width ()</h3>
+<a class="indexterm" name="id2595841"></a><pre class="programlisting">gdouble             cc_shape_get_width                  (<a href="ccc-shape.html#CcShape">CcShape</a> *shape,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>shape</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595918"></a><h3>
+<a name="cc-shape-set-brush-border"></a>cc_shape_set_brush_border ()</h3>
+<a class="indexterm" name="id2595930"></a><pre class="programlisting">void                cc_shape_set_brush_border           (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         <a href="ccc-Brushes.html#CcBrush">CcBrush</a> *brush);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>brush</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571451"></a><h3>
+<a name="cc-shape-set-brush-content"></a>cc_shape_set_brush_content ()</h3>
+<a class="indexterm" name="id2571463"></a><pre class="programlisting">void                cc_shape_set_brush_content          (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         <a href="ccc-Brushes.html#CcBrush">CcBrush</a> *brush);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>brush</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571530"></a><h3>
+<a name="cc-shape-set-width-pixels"></a>cc_shape_set_width_pixels ()</h3>
+<a class="indexterm" name="id2571541"></a><pre class="programlisting">void                cc_shape_set_width_pixels           (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         gdouble width);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>width</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571608"></a><h3>
+<a name="cc-shape-set-width-units"></a>cc_shape_set_width_units ()</h3>
+<a class="indexterm" name="id2571619"></a><pre class="programlisting">void                cc_shape_set_width_units            (<a href="ccc-shape.html#CcShape">CcShape</a> *self,
+                                                         gdouble width);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>width</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2571687"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2571698"></a><h3>
+<a name="CcShape--brush-border"></a>The "<code class="literal">brush-border</code>" property</h3>
+<a class="indexterm" name="id2571712"></a><pre class="programlisting">  "brush-border"             <a href="ccc-Brushes.html#CcBrush">CcBrush</a>               : Read / Write</pre>
+<p>The brush for drawing the border.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571732"></a><h3>
+<a name="CcShape--brush-content"></a>The "<code class="literal">brush-content</code>" property</h3>
+<a class="indexterm" name="id2571746"></a><pre class="programlisting">  "brush-content"            <a href="ccc-Brushes.html#CcBrush">CcBrush</a>               : Read / Write</pre>
+<p>The brush for drawing the content.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571767"></a><h3>
+<a name="CcShape--width-pixels"></a>The "<code class="literal">width-pixels</code>" property</h3>
+<a class="indexterm" name="id2571781"></a><pre class="programlisting">  "width-pixels"             gdouble               : Write</pre>
+<p>The width of the outline in pixels.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571809"></a><h3>
+<a name="CcShape--width-units"></a>The "<code class="literal">width-units</code>" property</h3>
+<a class="indexterm" name="id2571823"></a><pre class="programlisting">  "width-units"              gdouble               : Write</pre>
+<p>The width of the outline in canvas units.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+</div>
+</div>
+</body>
+</html>

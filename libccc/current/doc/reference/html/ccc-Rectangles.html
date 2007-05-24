@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Rectangles</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="prev" href="ccc-circle.html" title="circle">
+<link rel="next" href="ccc-rounded-rectangle.html" title="rounded-rectangle">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-circle.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Canvas-Items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-rounded-rectangle.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2563981" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2584249" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2584114" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2584163" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2584184" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Rectangles"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2563981"></a><span class="refentrytitle">Rectangles</span>
+</h2>
+<p>Rectangles</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcRectangle"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-Rectangles.html#CcRectangle-struct">CcRectangle</a>;
+                    <a href="ccc-Rectangles.html#CcRectangleClass">CcRectangleClass</a>;
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="ccc-Rectangles.html#cc-rectangle-new">cc_rectangle_new</a>                    (void);
+void                <a href="ccc-Rectangles.html#cc-rectangle-set-position">cc_rectangle_set_position</a>           (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble x,
+                                                         gdouble y,
+                                                         gdouble w,
+                                                         gdouble h);
+void                <a href="ccc-Rectangles.html#cc-rectangle-set-height">cc_rectangle_set_height</a>             (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble height);
+void                <a href="ccc-Rectangles.html#cc-rectangle-set-width">cc_rectangle_set_width</a>              (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble width);
+void                <a href="ccc-Rectangles.html#cc-rectangle-set-x">cc_rectangle_set_x</a>                  (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble x);
+void                <a href="ccc-Rectangles.html#cc-rectangle-set-y">cc_rectangle_set_y</a>                  (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble y);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2584114"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>
+               +----<a href="ccc-shape.html#CcShape">CcShape</a>
+                     +----CcRectangle
+                           +----<a href="ccc-rounded-rectangle.html#CcRoundedRectangle">CcRoundedRectangle</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2584163"></a><h2>Implemented Interfaces</h2>
+<p>
+CcRectangle implements
+ <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2584184"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-Rectangles.html#CcRectangle--position-h">position-h</a>"               gdouble               : Read / Write
+  "<a href="ccc-Rectangles.html#CcRectangle--position-w">position-w</a>"               gdouble               : Read / Write
+  "<a href="ccc-Rectangles.html#CcRectangle--position-x">position-x</a>"               gdouble               : Read / Write
+  "<a href="ccc-Rectangles.html#CcRectangle--position-y">position-y</a>"               gdouble               : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2584249"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2584264"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2597923"></a><h3>
+<a name="CcRectangle-struct"></a>CcRectangle</h3>
+<a class="indexterm" name="id2597936"></a><pre class="programlisting">typedef struct _CcRectangle CcRectangle;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2597950"></a><h3>
+<a name="CcRectangleClass"></a>CcRectangleClass</h3>
+<a class="indexterm" name="id2597963"></a><pre class="programlisting">typedef struct {
+	CcShapeClass base_class;
+} CcRectangleClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2597980"></a><h3>
+<a name="cc-rectangle-new"></a>cc_rectangle_new ()</h3>
+<a class="indexterm" name="id2597992"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_rectangle_new                    (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598028"></a><h3>
+<a name="cc-rectangle-set-position"></a>cc_rectangle_set_position ()</h3>
+<a class="indexterm" name="id2598040"></a><pre class="programlisting">void                cc_rectangle_set_position           (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble x,
+                                                         gdouble y,
+                                                         gdouble w,
+                                                         gdouble h);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>w</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>h</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598170"></a><h3>
+<a name="cc-rectangle-set-height"></a>cc_rectangle_set_height ()</h3>
+<a class="indexterm" name="id2595998"></a><pre class="programlisting">void                cc_rectangle_set_height             (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble height);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>height</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596065"></a><h3>
+<a name="cc-rectangle-set-width"></a>cc_rectangle_set_width ()</h3>
+<a class="indexterm" name="id2596076"></a><pre class="programlisting">void                cc_rectangle_set_width              (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble width);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>width</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596143"></a><h3>
+<a name="cc-rectangle-set-x"></a>cc_rectangle_set_x ()</h3>
+<a class="indexterm" name="id2596156"></a><pre class="programlisting">void                cc_rectangle_set_x                  (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble x);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596223"></a><h3>
+<a name="cc-rectangle-set-y"></a>cc_rectangle_set_y ()</h3>
+<a class="indexterm" name="id2596235"></a><pre class="programlisting">void                cc_rectangle_set_y                  (<a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a> *self,
+                                                         gdouble y);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596538"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2596549"></a><h3>
+<a name="CcRectangle--position-h"></a>The "<code class="literal">position-h</code>" property</h3>
+<a class="indexterm" name="id2596563"></a><pre class="programlisting">  "position-h"               gdouble               : Read / Write</pre>
+<p>The height of the rectangle.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596587"></a><h3>
+<a name="CcRectangle--position-w"></a>The "<code class="literal">position-w</code>" property</h3>
+<a class="indexterm" name="id2596601"></a><pre class="programlisting">  "position-w"               gdouble               : Read / Write</pre>
+<p>The width of the rectangle.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596626"></a><h3>
+<a name="CcRectangle--position-x"></a>The "<code class="literal">position-x</code>" property</h3>
+<a class="indexterm" name="id2596640"></a><pre class="programlisting">  "position-x"               gdouble               : Read / Write</pre>
+<p>The x position of the rectangle.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596664"></a><h3>
+<a name="CcRectangle--position-y"></a>The "<code class="literal">position-y</code>" property</h3>
+<a class="indexterm" name="id2596678"></a><pre class="programlisting">  "position-y"               gdouble               : Read / Write</pre>
+<p>The y position of the rectangle.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+</body>
+</html>
