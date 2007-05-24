@@ -1,0 +1,36 @@
+GObject
+  GInitiallyUnowned
+    CcBrush
+      CcBrushColor
+    CcItem
+      CcCamera
+      CcShape
+        CcCircle
+        CcLine
+        CcRectangle
+          CcRoundedRectangle
+        CcText
+      CcPixbuf
+    CcColor
+      CcColorHsv
+      CcColorRgb
+    CcPrinter
+    GtkObject
+      GtkCellRenderer
+        CcViewCellRenderer
+      GtkWidget
+        GtkDrawingArea
+          CcViewWidget
+        GtkContainer
+      GtkAdjustment
+    CcViewPNG
+  CCHashMap
+  GdkPixbuf
+  GtkStyle
+  GdkDragContext
+  GdkScreen
+GInterface
+  CcItemView
+  CcView
+  AtkImplementorIface
+  GtkCellEditable

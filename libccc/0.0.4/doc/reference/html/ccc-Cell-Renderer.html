@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Cell Renderer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-View-Elements.html" title="View Elements">
+<link rel="prev" href="ccc-Canvas-Views.html" title="Canvas Views">
+<link rel="next" href="ccc-Widget.html" title="Widget">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Canvas-Views.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-View-Elements.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Widget.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2588430" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2608636" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2587560" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2608609" class="shortcut">Implemented Interfaces</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Cell-Renderer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2588430"></a><span class="refentrytitle">Cell Renderer</span>
+</h2>
+<p>Cell Renderer</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcViewCellRenderer"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-Cell-Renderer.html#CcViewCellRenderer-struct">CcViewCellRenderer</a>;
+                    <a href="ccc-Cell-Renderer.html#CcViewCellRendererClass">CcViewCellRendererClass</a>;
+GtkCellRenderer*    <a href="ccc-Cell-Renderer.html#cc-view-cell-renderer-new">cc_view_cell_renderer_new</a>           (void);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2587560"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkCellRenderer
+                     +----CcViewCellRenderer
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608609"></a><h2>Implemented Interfaces</h2>
+<p>
+CcViewCellRenderer implements
+ <a href="ccc-Canvas-Views.html#CcView">CcView</a> and  <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608636"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608652"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2606008"></a><h3>
+<a name="CcViewCellRenderer-struct"></a>CcViewCellRenderer</h3>
+<a class="indexterm" name="id2606020"></a><pre class="programlisting">typedef struct _CcViewCellRenderer CcViewCellRenderer;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2606037"></a><h3>
+<a name="CcViewCellRendererClass"></a>CcViewCellRendererClass</h3>
+<a class="indexterm" name="id2606048"></a><pre class="programlisting">typedef struct {
+	GtkCellRendererClass base_class;
+} CcViewCellRendererClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2606064"></a><h3>
+<a name="cc-view-cell-renderer-new"></a>cc_view_cell_renderer_new ()</h3>
+<a class="indexterm" name="id2606076"></a><pre class="programlisting">GtkCellRenderer*    cc_view_cell_renderer_new           (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-Text">
+<refmeta>
+<refentrytitle role="top_of_page">Text</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Text</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcText"/>
+<synopsis>
+
+
+
+                    <link linkend="CcText-struct">CcText</link>;
+                    <link linkend="CcTextClass">CcTextClass</link>;
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-text-new">cc_text_new</link>                         (<link linkend="gchar">gchar</link> const *text);
+<link linkend="void">void</link>                <link linkend="cc-text-set-anchor">cc_text_set_anchor</link>                  (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);
+<link linkend="void">void</link>                <link linkend="cc-text-set-anchor-type">cc_text_set_anchor_type</link>             (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="GtkAnchorType">GtkAnchorType</link> anchor);
+<link linkend="gchar">gchar</link>const*         <link linkend="cc-text-get-text">cc_text_get_text</link>                    (<link linkend="CcText">CcText</link> const *self);
+<link linkend="gboolean">gboolean</link>            <link linkend="cc-text-is-editable">cc_text_is_editable</link>                 (<link linkend="CcText">CcText</link> const *self);
+<link linkend="void">void</link>                <link linkend="cc-text-set-editable">cc_text_set_editable</link>                (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> editable);
+<link linkend="void">void</link>                <link linkend="cc-text-set-font-description">cc_text_set_font_description</link>        (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="PangoFontDescription">PangoFontDescription</link> *desc);
+<link linkend="void">void</link>                <link linkend="cc-text-set-markup">cc_text_set_markup</link>                  (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gchar">gchar</link> const *markup);
+<link linkend="void">void</link>                <link linkend="cc-text-set-size-pixels">cc_text_set_size_pixels</link>             (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> size_pixels);
+<link linkend="void">void</link>                <link linkend="cc-text-set-text">cc_text_set_text</link>                    (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gchar">gchar</link> const *text);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----<link linkend="CcShape">CcShape</link>
+                     +----CcText
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcText implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcText--anchor">anchor</link>&quot;                   <link linkend="GtkAnchorType">GtkAnchorType</link>         : Read / Write / Construct
+  &quot;<link linkend="CcText--brush-caret">brush-caret</link>&quot;              <link linkend="CcBrush">CcBrush</link>               : Read / Write
+  &quot;<link linkend="CcText--cursor">cursor</link>&quot;                   <link linkend="gint">gint</link>                  : 
+  &quot;<link linkend="CcText--editable">editable</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="CcText--size-pixels">size-pixels</link>&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="CcText--text">text</link>&quot;                     <link linkend="gchararray">gchararray</link>            : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcText-struct" role="struct"/>CcText</title>
+<indexterm><primary>CcText</primary></indexterm><programlisting>typedef struct _CcText CcText;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcTextClass" role="struct"/>CcTextClass</title>
+<indexterm><primary>CcTextClass</primary></indexterm><programlisting>typedef struct {
+	CcShapeClass base_class;
+
+	/* vtable */
+	void (*remove) (CcText     * self,
+			guint        offset,
+			gsize        length);
+	void (*insert) (CcText     * self,
+			gchar const* text,
+			gsize        offset);
+} CcTextClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-text-new" role="function"/>cc_text_new ()</title>
+<indexterm><primary>cc_text_new</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_text_new                         (<link linkend="gchar">gchar</link> const *text);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>text</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-set-anchor" role="function"/>cc_text_set_anchor ()</title>
+<indexterm><primary>cc_text_set_anchor</primary></indexterm><programlisting><link linkend="void">void</link>                cc_text_set_anchor                  (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-set-anchor-type" role="function"/>cc_text_set_anchor_type ()</title>
+<indexterm><primary>cc_text_set_anchor_type</primary></indexterm><programlisting><link linkend="void">void</link>                cc_text_set_anchor_type             (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="GtkAnchorType">GtkAnchorType</link> anchor);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>anchor</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-get-text" role="function"/>cc_text_get_text ()</title>
+<indexterm><primary>cc_text_get_text</primary></indexterm><programlisting><link linkend="gchar">gchar</link>const*         cc_text_get_text                    (<link linkend="CcText">CcText</link> const *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-is-editable" role="function"/>cc_text_is_editable ()</title>
+<indexterm><primary>cc_text_is_editable</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            cc_text_is_editable                 (<link linkend="CcText">CcText</link> const *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-set-editable" role="function"/>cc_text_set_editable ()</title>
+<indexterm><primary>cc_text_set_editable</primary></indexterm><programlisting><link linkend="void">void</link>                cc_text_set_editable                (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> editable);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>editable</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-set-font-description" role="function"/>cc_text_set_font_description ()</title>
+<indexterm><primary>cc_text_set_font_description</primary></indexterm><programlisting><link linkend="void">void</link>                cc_text_set_font_description        (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="PangoFontDescription">PangoFontDescription</link> *desc);</programlisting>
+<para>
+Sets the font description to be used for rendering.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcText"><type>CcText</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>desc</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PangoFontDescription"><type>PangoFontDescription</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-set-markup" role="function"/>cc_text_set_markup ()</title>
+<indexterm><primary>cc_text_set_markup</primary></indexterm><programlisting><link linkend="void">void</link>                cc_text_set_markup                  (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gchar">gchar</link> const *markup);</programlisting>
+<para>
+Set the markup displayed by this item.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcText"><type>CcText</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>markup</parameter>&nbsp;:</term>
+<listitem><simpara> the markup to be set
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-set-size-pixels" role="function"/>cc_text_set_size_pixels ()</title>
+<indexterm><primary>cc_text_set_size_pixels</primary></indexterm><programlisting><link linkend="void">void</link>                cc_text_set_size_pixels             (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> size_pixels);</programlisting>
+<para>
+Specify whether the text size is given in pixels. If it is, the text won't
+scale with the zoom level.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="Cctext"><type>Cctext</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>size_pixels</parameter>&nbsp;:</term>
+<listitem><simpara> the value to be set
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-text-set-text" role="function"/>cc_text_set_text ()</title>
+<indexterm><primary>cc_text_set_text</primary></indexterm><programlisting><link linkend="void">void</link>                cc_text_set_text                    (<link linkend="CcText">CcText</link> *self,
+                                                         <link linkend="gchar">gchar</link> const *text);</programlisting>
+<para>
+Set the text to be displayed by a <link linkend="CcText"><type>CcText</type></link> item.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcText"><type>CcText</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>text</parameter>&nbsp;:</term>
+<listitem><simpara> the text to be set
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcText--anchor"/>The &quot;<literal>anchor</literal>&quot; property</title>
+<indexterm><primary>CcText:anchor</primary></indexterm><programlisting>  &quot;anchor&quot;                   <link linkend="GtkAnchorType">GtkAnchorType</link>         : Read / Write / Construct</programlisting>
+<para>The location of the anchor point of the text element.</para><para>Default value: GTK_ANCHOR_NORTH_WEST</para>
+</refsect2>
+<refsect2><title><anchor id="CcText--brush-caret"/>The &quot;<literal>brush-caret</literal>&quot; property</title>
+<indexterm><primary>CcText:brush-caret</primary></indexterm><programlisting>  &quot;brush-caret&quot;              <link linkend="CcBrush">CcBrush</link>               : Read / Write</programlisting>
+<para>The brush used to paint the caret (text cursor).</para></refsect2>
+<refsect2><title><anchor id="CcText--cursor"/>The &quot;<literal>cursor</literal>&quot; property</title>
+<indexterm><primary>CcText:cursor</primary></indexterm><programlisting>  &quot;cursor&quot;                   <link linkend="gint">gint</link>                  : </programlisting>
+<para>cursor.</para><para>Allowed values: [0,0]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcText--editable"/>The &quot;<literal>editable</literal>&quot; property</title>
+<indexterm><primary>CcText:editable</primary></indexterm><programlisting>  &quot;editable&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>editable.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2><title><anchor id="CcText--size-pixels"/>The &quot;<literal>size-pixels</literal>&quot; property</title>
+<indexterm><primary>CcText:size-pixels</primary></indexterm><programlisting>  &quot;size-pixels&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Specifies whether the given size is in pixels or in canvas units.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2><title><anchor id="CcText--text"/>The &quot;<literal>text</literal>&quot; property</title>
+<indexterm><primary>CcText:text</primary></indexterm><programlisting>  &quot;text&quot;                     <link linkend="gchararray">gchararray</link>            : Read / Write</programlisting>
+<para>The displayed text.</para><para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-rounded-rectangle">
+<refmeta>
+<refentrytitle role="top_of_page">rounded-rectangle</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>rounded-rectangle</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcRoundedRectangle"/>
+<synopsis>
+
+
+
+                    <link linkend="CcRoundedRectangle-struct">CcRoundedRectangle</link>;
+                    <link linkend="CcRoundedRectangleClass">CcRoundedRectangleClass</link>;
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----<link linkend="CcShape">CcShape</link>
+                     +----<link linkend="CcRectangle">CcRectangle</link>
+                           +----CcRoundedRectangle
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcRoundedRectangle implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcRoundedRectangle--corner-radius">corner-radius</link>&quot;            <link linkend="gdouble">gdouble</link>               : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcRoundedRectangle-struct" role="struct"/>CcRoundedRectangle</title>
+<indexterm><primary>CcRoundedRectangle</primary></indexterm><programlisting>typedef struct _CcRoundedRectangle CcRoundedRectangle;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcRoundedRectangleClass" role="struct"/>CcRoundedRectangleClass</title>
+<indexterm><primary>CcRoundedRectangleClass</primary></indexterm><programlisting>typedef struct {
+	CcRectangleClass base_class;
+} CcRoundedRectangleClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcRoundedRectangle--corner-radius"/>The &quot;<literal>corner-radius</literal>&quot; property</title>
+<indexterm><primary>CcRoundedRectangle:corner-radius</primary></indexterm><programlisting>  &quot;corner-radius&quot;            <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>The radius used for the rounded corners.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 5</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

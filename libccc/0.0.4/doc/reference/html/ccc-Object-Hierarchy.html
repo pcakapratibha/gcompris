@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Object Hierarchy</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="prev" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="next" href="ccc-Fundamentals.html" title="Fundamentals">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="ccc-API-Reference.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-API-Reference.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Fundamentals.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter" lang="en">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="ccc-Object-Hierarchy"></a>Object Hierarchy</h2></div></div></div>
+<pre class="screen">
+    GObject
+        GInitiallyUnowned
+            <a href="ccc-Brushes.html#CcBrush">CcBrush</a>
+                <a href="ccc-Color-Brush.html#CcBrushColor">CcBrushColor</a>
+            <a href="ccc-The-Base-Item.html#CcItem">CcItem</a>
+                <a href="CcCamera.html" title="CcCamera">CcCamera</a>
+                <a href="ccc-shape.html#CcShape">CcShape</a>
+                    <a href="ccc-circle.html#CcCircle">CcCircle</a>
+                    <a href="ccc-line.html#CcLine">CcLine</a>
+                    <a href="ccc-Rectangles.html#CcRectangle">CcRectangle</a>
+                        <a href="ccc-rounded-rectangle.html#CcRoundedRectangle">CcRoundedRectangle</a>
+                    <a href="ccc-Text.html#CcText">CcText</a>
+                <a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a>
+            <a href="ccc-Colors.html#CcColor">CcColor</a>
+                <a href="ccc-Colors.html#CcColorHsv">CcColorHsv</a>
+                <a href="ccc-Colors.html#CcColorRgb">CcColorRgb</a>
+            <a href="ccc-printer.html#CcPrinter">CcPrinter</a>
+            GtkObject
+                GtkCellRenderer
+                    <a href="ccc-Cell-Renderer.html#CcViewCellRenderer">CcViewCellRenderer</a>
+                GtkWidget
+                    GtkDrawingArea
+                        <a href="ccc-Widget.html#CcViewWidget">CcViewWidget</a>
+            <a href="ccc-png-writer.html#CcViewPNG">CcViewPNG</a>
+    GInterface
+        <a href="ccc-Item-View.html#CcItemView">CcItemView</a>
+        <a href="ccc-Canvas-Views.html#CcView">CcView</a>
+</pre>
+</div>
+</body>
+</html>

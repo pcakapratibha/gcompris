@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-Canvas-Views">
+<refmeta>
+<refentrytitle role="top_of_page">Canvas Views</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Canvas Views</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcView"/>
+<synopsis>
+
+
+
+enum                <link linkend="CcZoomMode">CcZoomMode</link>;
+                    <link linkend="CcView-struct">CcView</link>;
+                    <link linkend="CcViewIface">CcViewIface</link>;
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-view-get-root">cc_view_get_root</link>                    (<link linkend="CcView">CcView</link> *self);
+<link linkend="void">void</link>                <link linkend="cc-view-set-root">cc_view_set_root</link>                    (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *root);
+<link linkend="gdouble">gdouble</link>             <link linkend="cc-view-get-zoom">cc_view_get_zoom</link>                    (<link linkend="CcView">CcView</link> *self);
+<link linkend="void">void</link>                <link linkend="cc-view-set-zoom">cc_view_set_zoom</link>                    (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> zoom);
+<link linkend="void">void</link>                <link linkend="cc-view-window-to-world">cc_view_window_to_world</link>             (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y);
+<link linkend="void">void</link>                <link linkend="cc-view-world-to-window">cc_view_world_to_window</link>             (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y);
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-view-get-focus">cc_view_get_focus</link>                   (const <link linkend="CcView">CcView</link> *self);
+<link linkend="CcDRect">CcDRect</link>*            <link linkend="cc-view-get-scrolled-region">cc_view_get_scrolled_region</link>         (<link linkend="CcView">CcView</link> *self);
+<link linkend="gint">gint</link>                <link linkend="cc-view-grab-item">cc_view_grab_item</link>                   (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item,
+                                                         <link linkend="GdkEventMask">GdkEventMask</link> mask,
+                                                         <link linkend="GdkCursor">GdkCursor</link> *cursor,
+                                                         <link linkend="guint32">guint32</link> time);
+<link linkend="void">void</link>                <link linkend="cc-view-set-focus">cc_view_set_focus</link>                   (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *focus);
+<link linkend="void">void</link>                <link linkend="cc-view-set-scrolled-region">cc_view_set_scrolled_region</link>         (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcDRect">CcDRect</link> *scrolled_region);
+<link linkend="void">void</link>                <link linkend="cc-view-ungrab-item">cc_view_ungrab_item</link>                 (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item,
+                                                         <link linkend="guint32">guint32</link> time);
+<link linkend="void">void</link>                <link linkend="cc-view-world-to-window-distance">cc_view_world_to_window_distance</link>    (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GInterface">GInterface</link>
+   +----CcView
+</synopsis>
+
+</refsect1>
+
+<refsect1 role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+CcView requires
+ <link linkend="CcItemView">CcItemView</link> and  <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+
+
+
+<refsect1 role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+CcView is implemented by
+ <link linkend="CcCamera">CcCamera</link>,  <link linkend="CcViewCellRenderer">CcViewCellRenderer</link> and  <link linkend="CcViewWidget">CcViewWidget</link>.</para>
+
+</refsect1>
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcView--focus">focus</link>&quot;                    <link linkend="CcItem">CcItem</link>                : Read / Write
+  &quot;<link linkend="CcView--root">root</link>&quot;                     <link linkend="CcItem">CcItem</link>                : Read / Write
+  &quot;<link linkend="CcView--scrolled-region">scrolled-region</link>&quot;          <link linkend="CcDRect">CcDRect</link>               : Read / Write
+  &quot;<link linkend="CcView--zoom">zoom</link>&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+  &quot;<link linkend="CcView--zoom-mode">zoom-mode</link>&quot;                <link linkend="CcZoomMode">CcZoomMode</link>            : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcZoomMode" role="enum"/>enum CcZoomMode</title>
+<indexterm><primary>CcZoomMode</primary></indexterm><programlisting>typedef enum {
+	CC_ZOOM_PIXELS,
+	CC_ZOOM_WIDTH,
+	CC_ZOOM_HEIGHT,
+	CC_ZOOM_AUTO
+} CcZoomMode;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcView-struct" role="struct"/>CcView</title>
+<indexterm><primary>CcView</primary></indexterm><programlisting>typedef struct _CcView CcView;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcViewIface" role="struct"/>CcViewIface</title>
+<indexterm><primary>CcViewIface</primary></indexterm><programlisting>typedef struct {
+	GTypeInterface base_iface;
+
+	/* vtable */
+	GdkGrabStatus (*grab_item)               (CcView*       self,
+				                  CcItem*       item,
+					          GdkEventMask  mask,
+					          GdkCursor   * cursor,
+					          guint32       time);
+	void          (*ungrab_item)             (CcView      * self,
+					          CcItem      * item,
+					          guint32       time);
+	void          (*window_to_world)         (CcView      * self,
+				                  gdouble     * x,
+				                  gdouble     * y);
+	void          (*world_to_window)         (CcView      * self,
+				                  gdouble     * x,
+				                  gdouble     * y);
+	void          (*world_to_window_distance)(CcView      * self,
+					          gdouble     * x,
+					          gdouble     * y);
+} CcViewIface;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-view-get-root" role="function"/>cc_view_get_root ()</title>
+<indexterm><primary>cc_view_get_root</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_view_get_root                    (<link linkend="CcView">CcView</link> *self);</programlisting>
+<para>
+Get the model that's displayed by <parameter>self</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>the <link linkend="CcItem"><type>CcItem</type></link> that's displayed by <parameter>self</parameter>, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-set-root" role="function"/>cc_view_set_root ()</title>
+<indexterm><primary>cc_view_set_root</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_set_root                    (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *root);</programlisting>
+<para>
+Set <parameter>root</parameter> as the model to be displayed in <parameter>self</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-get-zoom" role="function"/>cc_view_get_zoom ()</title>
+<indexterm><primary>cc_view_get_zoom</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             cc_view_get_zoom                    (<link linkend="CcView">CcView</link> *self);</programlisting>
+<para>
+Get the zoom of the view.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>the zoom of the view.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-set-zoom" role="function"/>cc_view_set_zoom ()</title>
+<indexterm><primary>cc_view_set_zoom</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_set_zoom                    (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> zoom);</programlisting>
+<para>
+Set the zoom of the canvas.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>zoom</parameter>&nbsp;:</term>
+<listitem><simpara> a new zoom value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-window-to-world" role="function"/>cc_view_window_to_world ()</title>
+<indexterm><primary>cc_view_window_to_world</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_window_to_world             (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y);</programlisting>
+<para>
+Convert <parameter>window_x</parameter> and <parameter>window_y</parameter> to <parameter>world_x</parameter> and <parameter>world_y</parameter> if given.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara> target for a world coordinate, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara> target for a world coordinate, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-world-to-window" role="function"/>cc_view_world_to_window ()</title>
+<indexterm><primary>cc_view_world_to_window</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_world_to_window             (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y);</programlisting>
+<para>
+Convert <parameter>x</parameter> and <parameter>y</parameter> to window coordinates if given.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara> target for a window coordinate, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara> target for a window coordinate, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-get-focus" role="function"/>cc_view_get_focus ()</title>
+<indexterm><primary>cc_view_get_focus</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_view_get_focus                   (const <link linkend="CcView">CcView</link> *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-get-scrolled-region" role="function"/>cc_view_get_scrolled_region ()</title>
+<indexterm><primary>cc_view_get_scrolled_region</primary></indexterm><programlisting><link linkend="CcDRect">CcDRect</link>*            cc_view_get_scrolled_region         (<link linkend="CcView">CcView</link> *self);</programlisting>
+<para>
+Get the scrolled region of this view.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>the scrolled region of this view.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-grab-item" role="function"/>cc_view_grab_item ()</title>
+<indexterm><primary>cc_view_grab_item</primary></indexterm><programlisting><link linkend="gint">gint</link>                cc_view_grab_item                   (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item,
+                                                         <link linkend="GdkEventMask">GdkEventMask</link> mask,
+                                                         <link linkend="GdkCursor">GdkCursor</link> *cursor,
+                                                         <link linkend="guint32">guint32</link> time);</programlisting>
+<para>
+Grab the item.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>item</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GdkEventMask"><type>GdkEventMask</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cursor</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GdkCursor"><type>GdkCursor</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>time</parameter>&nbsp;:</term>
+<listitem><simpara> the time
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="GDK-GRAB-NOT-VIEWABLE:CAPS"><literal>GDK_GRAB_NOT_VIEWABLE</literal></link> if the view cannot grab at all.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-set-focus" role="function"/>cc_view_set_focus ()</title>
+<indexterm><primary>cc_view_set_focus</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_set_focus                   (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *focus);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>focus</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-set-scrolled-region" role="function"/>cc_view_set_scrolled_region ()</title>
+<indexterm><primary>cc_view_set_scrolled_region</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_set_scrolled_region         (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcDRect">CcDRect</link> *scrolled_region);</programlisting>
+<para>
+Set <parameter>scrolled_region</parameter> as the region to be displayed and/or reachable with
+scrollbars.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scrolled_region</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-ungrab-item" role="function"/>cc_view_ungrab_item ()</title>
+<indexterm><primary>cc_view_ungrab_item</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_ungrab_item                 (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item,
+                                                         <link linkend="guint32">guint32</link> time);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>item</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>time</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-view-world-to-window-distance" role="function"/>cc_view_world_to_window_distance ()</title>
+<indexterm><primary>cc_view_world_to_window_distance</primary></indexterm><programlisting><link linkend="void">void</link>                cc_view_world_to_window_distance    (<link linkend="CcView">CcView</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y);</programlisting>
+<para>
+Convert <parameter>x</parameter> and <parameter>y</parameter> to window coordinates</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara> target for a window distance, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara> target for a window distance, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcView--focus"/>The &quot;<literal>focus</literal>&quot; property</title>
+<indexterm><primary>CcView:focus</primary></indexterm><programlisting>  &quot;focus&quot;                    <link linkend="CcItem">CcItem</link>                : Read / Write</programlisting>
+<para>Focus.</para></refsect2>
+<refsect2><title><anchor id="CcView--root"/>The &quot;<literal>root</literal>&quot; property</title>
+<indexterm><primary>CcView:root</primary></indexterm><programlisting>  &quot;root&quot;                     <link linkend="CcItem">CcItem</link>                : Read / Write</programlisting>
+<para>The root element of this canvas.</para></refsect2>
+<refsect2><title><anchor id="CcView--scrolled-region"/>The &quot;<literal>scrolled-region</literal>&quot; property</title>
+<indexterm><primary>CcView:scrolled-region</primary></indexterm><programlisting>  &quot;scrolled-region&quot;          <link linkend="CcDRect">CcDRect</link>               : Read / Write</programlisting>
+<para>scrolled-region.</para></refsect2>
+<refsect2><title><anchor id="CcView--zoom"/>The &quot;<literal>zoom</literal>&quot; property</title>
+<indexterm><primary>CcView:zoom</primary></indexterm><programlisting>  &quot;zoom&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Zoom.</para><para>Allowed values: &gt;= G_MINDOUBLE</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2><title><anchor id="CcView--zoom-mode"/>The &quot;<literal>zoom-mode</literal>&quot; property</title>
+<indexterm><primary>CcView:zoom-mode</primary></indexterm><programlisting>  &quot;zoom-mode&quot;                <link linkend="CcZoomMode">CcZoomMode</link>            : Read / Write</programlisting>
+<para>BLURB.</para><para>Default value: CC_ZOOM_PIXELS</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

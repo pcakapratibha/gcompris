@@ -1,0 +1,160 @@
+<SIGNAL>
+<NAME>CcItem::all-bounds-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS></FLAGS>
+CcItem *ccitem
+CcView *arg1
+CcDRect *arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::button-press-event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEventButton *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::button-release-event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEventButton *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::dirty</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS></FLAGS>
+CcItem *ccitem
+CcView *arg1
+CcDRect *arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::enter-notify-event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEventCrossing *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEvent *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::focus</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GtkDirectionType  arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::focus-enter</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEvent *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::focus-leave</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEvent *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::item-added</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+gint  arg1
+CcItem *arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::item-removed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+gint  arg1
+CcItem *arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::key-press-event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEventKey *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::key-release-event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEventKey *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::leave-notify-event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEventCrossing *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::motion-notify-event</NAME>
+<RETURNS>gboolean</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+GdkEventMotion *event
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::view-register</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>f</FLAGS>
+CcItem *ccitem
+CcView *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcItem::view-unregister</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+CcItem *ccitem
+CcView *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>CcViewWidget::set-scroll-adjustments</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+CcViewWidget *ccviewwidget
+GtkAdjustment *arg1
+GtkAdjustment *arg2
+</SIGNAL>
+

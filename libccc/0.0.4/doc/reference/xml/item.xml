@@ -1,0 +1,1066 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-The-Base-Item">
+<refmeta>
+<refentrytitle role="top_of_page">The Base Item</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>The Base Item</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcItem"/>
+<synopsis>
+
+
+
+                    <link linkend="CcItem-struct">CcItem</link>;
+                    <link linkend="CcItemClass">CcItemClass</link>;
+<link linkend="CcItem">CcItem</link>*             <link linkend="cc-item-new">cc_item_new</link>                         (void);
+<link linkend="void">void</link>                <link linkend="cc-item-append">cc_item_append</link>                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *child);
+<link linkend="void">void</link>                <link linkend="cc-item-dirty">cc_item_dirty</link>                       (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> const*view,
+                                                         <link linkend="CcDRect">CcDRect</link> dirty_region);
+<link linkend="gdouble">gdouble</link>             <link linkend="cc-item-distance">cc_item_distance</link>                    (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="CcItem">CcItem</link> **found);
+<link linkend="void">void</link>                <link linkend="cc-item-insert">cc_item_insert</link>                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *child,
+                                                         <link linkend="gint">gint</link> position);
+<link linkend="void">void</link>                <link linkend="cc-item-remove">cc_item_remove</link>                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *child);
+<link linkend="void">void</link>                <link linkend="cc-item-render">cc_item_render</link>                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view,
+                                                         <link linkend="cairo-t">cairo_t</link> *cr);
+<link linkend="void">void</link>                <link linkend="cc-item-set-grid-aligned">cc_item_set_grid_aligned</link>            (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> grid_aligned);
+enum                <link linkend="CcItemFlags">CcItemFlags</link>;
+#define             <link linkend="CC-ITEM-FLAGS:CAPS">CC_ITEM_FLAGS</link>                       (i)
+#define             <link linkend="CC-ITEM-DISPOSED:CAPS">CC_ITEM_DISPOSED</link>                    (i)
+#define             <link linkend="CC-ITEM-GRID-ALIGNED:CAPS">CC_ITEM_GRID_ALIGNED</link>                (i)
+#define             <link linkend="CC-ITEM-SET-FLAGS:CAPS">CC_ITEM_SET_FLAGS</link>                   (i,m)
+#define             <link linkend="CC-ITEM-UNSET-FLAGS:CAPS">CC_ITEM_UNSET_FLAGS</link>                 (i,m)
+#define             <link linkend="CC-ITEM-CAN-FOCUS:CAPS">CC_ITEM_CAN_FOCUS</link>                   (i)
+<link linkend="void">void</link>                (<link linkend="CcItemFunc">*CcItemFunc</link>)                       (<link linkend="CcItem">CcItem</link> *item,
+                                                         <link linkend="CcView">CcView</link> *view,
+                                                         <link linkend="gpointer">gpointer</link> data);
+<link linkend="void">void</link>                <link linkend="cc-item-add-view">cc_item_add_view</link>                    (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);
+<link linkend="void">void</link>                <link linkend="cc-item-bounds-changed">cc_item_bounds_changed</link>              (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> const*view);
+<link linkend="GType">GType</link>               <link linkend="cc-item-flags-get-type">cc_item_flags_get_type</link>              (void);
+<link linkend="void">void</link>                <link linkend="cc-item-foreach-view">cc_item_foreach_view</link>                (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItemFunc">CcItemFunc</link> func,
+                                                         <link linkend="gpointer">gpointer</link> data);
+<link linkend="CcDRect">CcDRect</link>const*       <link linkend="cc-item-get-all-bounds">cc_item_get_all_bounds</link>              (<link linkend="CcItem">CcItem</link> const*self,
+                                                         <link linkend="CcView">CcView</link> const*view);
+<link linkend="void">void</link>                <link linkend="cc-item-grab-focus">cc_item_grab_focus</link>                  (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);
+<link linkend="gboolean">gboolean</link>            <link linkend="cc-item-is-child-of">cc_item_is_child_of</link>                 (<link linkend="CcItem">CcItem</link> const*child,
+                                                         <link linkend="CcItem">CcItem</link> const*parent);
+<link linkend="void">void</link>                <link linkend="cc-item-remove-view">cc_item_remove_view</link>                 (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);
+<link linkend="void">void</link>                <link linkend="cc-item-update-bounds">cc_item_update_bounds</link>               (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="gpointer">gpointer</link> data);
+<link linkend="void">void</link>                <link linkend="cc-item-update-bounds-for-view">cc_item_update_bounds_for_view</link>      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----CcItem
+               +----<link linkend="CcCamera">CcCamera</link>
+               +----<link linkend="CcShape">CcShape</link>
+               +----<link linkend="CcPixbuf">CcPixbuf</link>
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcItem implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+
+<refsect1 role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+
+  &quot;<link linkend="CcItem-all-bounds-changed">all-bounds-changed</link>&quot;                             
+  &quot;<link linkend="CcItem-button-press-event">button-press-event</link>&quot;                             : Run Last
+  &quot;<link linkend="CcItem-button-release-event">button-release-event</link>&quot;                           : Run Last
+  &quot;<link linkend="CcItem-dirty">dirty</link>&quot;                                          
+  &quot;<link linkend="CcItem-enter-notify-event">enter-notify-event</link>&quot;                             : Run Last
+  &quot;<link linkend="CcItem-event">event</link>&quot;                                          : Run Last
+  &quot;<link linkend="CcItem-focus">focus</link>&quot;                                          : Run Last
+  &quot;<link linkend="CcItem-focus-enter">focus-enter</link>&quot;                                    : Run Last
+  &quot;<link linkend="CcItem-focus-leave">focus-leave</link>&quot;                                    : Run Last
+  &quot;<link linkend="CcItem-item-added">item-added</link>&quot;                                     : Run Last
+  &quot;<link linkend="CcItem-item-removed">item-removed</link>&quot;                                   : Run Last
+  &quot;<link linkend="CcItem-key-press-event">key-press-event</link>&quot;                                : Run Last
+  &quot;<link linkend="CcItem-key-release-event">key-release-event</link>&quot;                              : Run Last
+  &quot;<link linkend="CcItem-leave-notify-event">leave-notify-event</link>&quot;                             : Run Last
+  &quot;<link linkend="CcItem-motion-notify-event">motion-notify-event</link>&quot;                            : Run Last
+  &quot;<link linkend="CcItem-view-register">view-register</link>&quot;                                  : Run First
+  &quot;<link linkend="CcItem-view-unregister">view-unregister</link>&quot;                                : Run Last
+</synopsis>
+</refsect1>
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcItem-struct" role="struct"/>CcItem</title>
+<indexterm><primary>CcItem</primary></indexterm><programlisting>typedef struct _CcItem CcItem;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcItemClass" role="struct"/>CcItemClass</title>
+<indexterm><primary>CcItemClass</primary></indexterm><programlisting>typedef struct {
+	GInitiallyUnownedClass base_class;
+
+	/* vtable */
+	gdouble (*distance)             (CcItem         * self,
+				         gdouble          x,
+				         gdouble          y,
+				         CcItem         **found);
+	void    (*notify_child_bounds)  (CcItem         * self,
+				         CcItem         * child,
+					 CcView         * view,
+				         CcDRect const  * all_bounds);
+	void    (*render)               (CcItem         * self,
+		                         CcView         * view,
+			                 cairo_t        * cr);
+	void    (*update_bounds)        (CcItem         * self,
+					 CcView const   * view,
+					 gpointer         user_data);
+
+	/* signals */
+	gboolean (*button_press_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventButton  * event);
+	gboolean (*button_release_event)(CcItem          * self,
+					 CcView          * view,
+					 GdkEventButton  * event);
+	gboolean (*enter_notify_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventCrossing* event);
+	gboolean (*event)               (CcItem          * self,
+					 CcView          * view,
+					 GdkEvent        * event);
+	gboolean (*focus)		(CcItem          * self,
+					 CcView	         * view,
+					 GtkDirectionType  dir);
+	gboolean (*focus_enter)         (CcItem          * self,
+					 CcView          * view,
+					 GdkEventFocus   * event);
+	gboolean (*focus_leave)         (CcItem          * self,
+					 CcView          * view,
+					 GdkEventFocus   * focus);
+	gboolean (*key_press_event)     (CcItem          * item,
+					 CcView          * view,
+					 GdkEventKey     * event);
+	gboolean (*key_release_event)   (CcItem          * item,
+					 CcView          * view,
+					 GdkEventKey     * event);
+	gboolean (*leave_notify_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventCrossing* event);
+	gboolean (*motion_notify_event) (CcItem          * self,
+					 CcView          * view,
+					 GdkEventMotion  * event);
+
+	void     (*item_added)          (CcItem          * self,
+					 gint              position,
+					 CcItem          * child);
+	void     (*item_removed)        (CcItem          * self,
+					 gint              position,
+					 CcItem          * child);
+
+	void     (*view_register)       (CcItem          * self,
+					 CcView          * view);
+	void     (*view_unregister)     (CcItem          * self,
+					 CcView          * view);
+} CcItemClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-item-new" role="function"/>cc_item_new ()</title>
+<indexterm><primary>cc_item_new</primary></indexterm><programlisting><link linkend="CcItem">CcItem</link>*             cc_item_new                         (void);</programlisting>
+<para>
+Create a new <link linkend="CcItem"><type>CcItem</type></link> that can be used to group several items together.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>a new <link linkend="CcItem"><type>CcItem</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-append" role="function"/>cc_item_append ()</title>
+<indexterm><primary>cc_item_append</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_append                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *child);</programlisting>
+<para>
+Insert an item at the end of this item. A <link linkend="CcItem"><type>CcItem</type></link> can serve as a container
+for several items.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&nbsp;:</term>
+<listitem><simpara> another <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-dirty" role="function"/>cc_item_dirty ()</title>
+<indexterm><primary>cc_item_dirty</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_dirty                       (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> const*view,
+                                                         <link linkend="CcDRect">CcDRect</link> dirty_region);</programlisting>
+<para>
+Let emit a signal to tell <parameter>view</parameter> that it needs to be redrawn.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dirty_region</parameter>&nbsp;:</term>
+<listitem><simpara> the region that needs to be redrawn
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-distance" role="function"/>cc_item_distance ()</title>
+<indexterm><primary>cc_item_distance</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             cc_item_distance                    (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="CcItem">CcItem</link> **found);</programlisting>
+<para>
+Calculates the distance from <parameter>self</parameter> to (<parameter>x</parameter>,<parameter>y</parameter>). If (<parameter>x</parameter>,<parameter>y</parameter>) is within <parameter>self</parameter> or
+one of its children <parameter>found</parameter> is set to the matching element.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&nbsp;:</term>
+<listitem><simpara> the x coordinate to query for
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><simpara> the y coordinate to query for
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>found</parameter>&nbsp;:</term>
+<listitem><simpara> the return location for a found <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>the distance between <parameter>self</parameter> (or one of its children) to (<parameter>x</parameter>,<parameter>y</parameter>).
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-insert" role="function"/>cc_item_insert ()</title>
+<indexterm><primary>cc_item_insert</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_insert                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *child,
+                                                         <link linkend="gint">gint</link> position);</programlisting>
+<para>
+Inserts <parameter>child</parameter> at <parameter>position</parameter> into <parameter>self</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&nbsp;:</term>
+<listitem><simpara> another <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>position</parameter>&nbsp;:</term>
+<listitem><simpara> the position to insert the child at (0 means at the bottom,
+bigger numbers mean higher layers, -1 means top layer)
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-remove" role="function"/>cc_item_remove ()</title>
+<indexterm><primary>cc_item_remove</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_remove                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *child);</programlisting>
+<para>
+Removes <parameter>child</parameter> from <parameter>self</parameter>. Does nothing if <parameter>child</parameter> was not a child of <parameter>self</parameter>
+or if <parameter>child</parameter> is a child of one of <parameter>self</parameter>'s children.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&nbsp;:</term>
+<listitem><simpara> another <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-render" role="function"/>cc_item_render ()</title>
+<indexterm><primary>cc_item_render</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_render                      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view,
+                                                         <link linkend="cairo-t">cairo_t</link> *cr);</programlisting>
+<para>
+Renders <parameter>self</parameter> to <parameter>cr</parameter> which is supposed to be a cairo context of <parameter>view</parameter> as
+the transformation matrix of <parameter>view</parameter> will be used for rendering.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="Ccview"><type>Ccview</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cr</parameter>&nbsp;:</term>
+<listitem><simpara> a cairo context (<link linkend="cairo-t"><type>cairo_t</type></link>)
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-set-grid-aligned" role="function"/>cc_item_set_grid_aligned ()</title>
+<indexterm><primary>cc_item_set_grid_aligned</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_set_grid_aligned            (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="gboolean">gboolean</link> grid_aligned);</programlisting>
+<para>
+Sets <parameter>self</parameter> to be rendered grid-aligned if <parameter>grid_aligned</parameter> is <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>, sets it to
+be allowed to render fuzzyly if <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>grid_aligned</parameter>&nbsp;:</term>
+<listitem><simpara> a gboolean
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CcItemFlags" role="enum"/>enum CcItemFlags</title>
+<indexterm><primary>CcItemFlags</primary></indexterm><programlisting>typedef enum {
+	CC_CAN_FOCUS          = 1 &lt;&lt; 1,
+	CC_DISPOSED           = 1 &lt;&lt; 2,
+	CC_GRID_ALIGNED       = 1 &lt;&lt; 3,
+} CcItemFlags;
+</programlisting>
+<para>
+</para>
+<para>
+
+</para><variablelist role="enum">
+<varlistentry>
+<term><anchor id="CC-CAN-FOCUS:CAPS" role="constant"/><literal>CC_CAN_FOCUS</literal></term>
+<listitem><simpara>
+</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><anchor id="CC-DISPOSED:CAPS" role="constant"/><literal>CC_DISPOSED</literal></term>
+<listitem><simpara> specifies whether dispose has already been run on an item.
+</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><anchor id="CC-GRID-ALIGNED:CAPS" role="constant"/><literal>CC_GRID_ALIGNED</literal></term>
+<listitem><simpara> specifies whether an item should be rendered to match an
+existing grid.
+</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CC-ITEM-FLAGS:CAPS" role="macro"/>CC_ITEM_FLAGS()</title>
+<indexterm><primary>CC_ITEM_FLAGS</primary></indexterm><programlisting>#define CC_ITEM_FLAGS(i)         (CC_ITEM(i)-&gt;flags)
+</programlisting>
+<para>
+Get the flags which are set on the <link linkend="CcItem"><type>CcItem</type></link> <parameter>i</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>i</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CC-ITEM-DISPOSED:CAPS" role="macro"/>CC_ITEM_DISPOSED()</title>
+<indexterm><primary>CC_ITEM_DISPOSED</primary></indexterm><programlisting>#define CC_ITEM_DISPOSED(i)           ((CC_ITEM_FLAGS(i) &amp; CC_DISPOSED) != 0)
+</programlisting>
+<para>
+Queries the <link linkend="CcItem"><type>CcItem</type></link> <parameter>i</parameter> whether it has the <link linkend="CC-DISPOSED:CAPS"><literal>CC_DISPOSED</literal></link> flag set. This is
+very useful in the dispose handler for the GObject derived types. This flag
+gets set automatically if you chain up your dispose calls correctly.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>i</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CC-ITEM-GRID-ALIGNED:CAPS" role="macro"/>CC_ITEM_GRID_ALIGNED()</title>
+<indexterm><primary>CC_ITEM_GRID_ALIGNED</primary></indexterm><programlisting>#define CC_ITEM_GRID_ALIGNED(i)       ((CC_ITEM_FLAGS(i) &amp; CC_GRID_ALIGNED) != 0)
+</programlisting>
+<para>
+Queries the <link linkend="CcItem"><type>CcItem</type></link> <parameter>i</parameter> whether it has the <link linkend="CC-GRID-ALIGNED:CAPS"><literal>CC_GRID_ALIGNED</literal></link> flag set.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>i</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CC-ITEM-SET-FLAGS:CAPS" role="macro"/>CC_ITEM_SET_FLAGS()</title>
+<indexterm><primary>CC_ITEM_SET_FLAGS</primary></indexterm><programlisting>#define CC_ITEM_SET_FLAGS(i,m)   G_STMT_START{ (CC_ITEM_FLAGS(i) |=  (m)); }G_STMT_END
+</programlisting>
+<para>
+Sets on <parameter>i</parameter> the <link linkend="CcItemFlags"><type>CcItemFlags</type></link> that have been specified in <parameter>m</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>i</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>m</parameter>&nbsp;:</term>
+<listitem><simpara> a CcItemFlags mask
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CC-ITEM-UNSET-FLAGS:CAPS" role="macro"/>CC_ITEM_UNSET_FLAGS()</title>
+<indexterm><primary>CC_ITEM_UNSET_FLAGS</primary></indexterm><programlisting>#define CC_ITEM_UNSET_FLAGS(i,m) G_STMT_START{ (CC_ITEM_FLAGS(i) &amp;= ~(m)); }G_STMT_END
+</programlisting>
+<para>
+Unsets from <parameter>i</parameter> the <link linkend="CcItemFlags"><type>CcItemFlags</type></link> that have been specified in <parameter>m</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>i</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>m</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItemFlags"><type>CcItemFlags</type></link> mask
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CC-ITEM-CAN-FOCUS:CAPS" role="macro"/>CC_ITEM_CAN_FOCUS()</title>
+<indexterm><primary>CC_ITEM_CAN_FOCUS</primary></indexterm><programlisting>#define CC_ITEM_CAN_FOCUS(i)          ((CC_ITEM_FLAGS(i) &amp; CC_CAN_FOCUS) != 0)
+</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>i</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="CcItemFunc" role="function"/>CcItemFunc ()</title>
+<indexterm><primary>CcItemFunc</primary></indexterm><programlisting><link linkend="void">void</link>                (*CcItemFunc)                       (<link linkend="CcItem">CcItem</link> *item,
+                                                         <link linkend="CcView">CcView</link> *view,
+                                                         <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>item</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-add-view" role="function"/>cc_item_add_view ()</title>
+<indexterm><primary>cc_item_add_view</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_add_view                    (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);</programlisting>
+<para>
+Registers a view at the item. The item and its children can now set up data
+for this view.
+</para>
+<para>
+This function should not be called by application code. Use
+<link linkend="cc-item-view-register"><function>cc_item_view_register()</function></link> instead.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-bounds-changed" role="function"/>cc_item_bounds_changed ()</title>
+<indexterm><primary>cc_item_bounds_changed</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_bounds_changed              (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> const*view);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-flags-get-type" role="function"/>cc_item_flags_get_type ()</title>
+<indexterm><primary>cc_item_flags_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               cc_item_flags_get_type              (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-foreach-view" role="function"/>cc_item_foreach_view ()</title>
+<indexterm><primary>cc_item_foreach_view</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_foreach_view                (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcItemFunc">CcItemFunc</link> func,
+                                                         <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-get-all-bounds" role="function"/>cc_item_get_all_bounds ()</title>
+<indexterm><primary>cc_item_get_all_bounds</primary></indexterm><programlisting><link linkend="CcDRect">CcDRect</link>const*       cc_item_get_all_bounds              (<link linkend="CcItem">CcItem</link> const*self,
+                                                         <link linkend="CcView">CcView</link> const*view);</programlisting>
+<para>
+Get the bounds of <parameter>self</parameter> as it would e displayed by <parameter>view</parameter> (including all of its children).</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>the bounds of the item, may be <link linkend="NULL:CAPS"><literal>NULL</literal></link> (in this case the item is not
+tied visible area).
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-grab-focus" role="function"/>cc_item_grab_focus ()</title>
+<indexterm><primary>cc_item_grab_focus</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_grab_focus                  (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-is-child-of" role="function"/>cc_item_is_child_of ()</title>
+<indexterm><primary>cc_item_is_child_of</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            cc_item_is_child_of                 (<link linkend="CcItem">CcItem</link> const*child,
+                                                         <link linkend="CcItem">CcItem</link> const*parent);</programlisting>
+<para>
+Find out whether <parameter>child</parameter> is a child of <parameter>parent</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>child</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><simpara> another <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> is <parameter>child</parameter> is a child of <parameter>parent</parameter>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-remove-view" role="function"/>cc_item_remove_view ()</title>
+<indexterm><primary>cc_item_remove_view</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_remove_view                 (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);</programlisting>
+<para>
+Unregisters a view at the item. The item and the children can now free data
+kept for this view.
+</para>
+<para>
+This function should not be called by application code. Use
+<link linkend="cc-item-view-unregister"><function>cc_item_view_unregister()</function></link> instead.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-update-bounds" role="function"/>cc_item_update_bounds ()</title>
+<indexterm><primary>cc_item_update_bounds</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_update_bounds               (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-update-bounds-for-view" role="function"/>cc_item_update_bounds_for_view ()</title>
+<indexterm><primary>cc_item_update_bounds_for_view</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_update_bounds_for_view      (<link linkend="CcItem">CcItem</link> *self,
+                                                         <link linkend="CcView">CcView</link> *view);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2><title><anchor id="CcItem-all-bounds-changed"/>The &quot;all-bounds-changed&quot; signal</title>
+<indexterm><primary>CcItem::all-bounds-changed</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="CcItem">CcItem</link>  *ccitem,
+                                                        <link linkend="CcView">CcView</link>  *arg1,
+                                                        <link linkend="CcDRect">CcDRect</link> *arg2,
+                                                        <link linkend="gpointer">gpointer</link> user_data)</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>ccitem</parameter>&nbsp;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg2</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-button-press-event"/>The &quot;button-press-event&quot; signal</title>
+<indexterm><primary>CcItem::button-press-event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>         *self,
+                                                        <link linkend="CcView">CcView</link>         *view,
+                                                        <link linkend="GdkEventButton">GdkEventButton</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>        user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when a mouse button got pressed on top of
+an element.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="CcView"><type>CcView</type></link> which emitted this event
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GdkEventButton"><type>GdkEventButton</type></link> with coordinates translated to canvas
+coordinates.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to stop other signal handlers from being called.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-button-release-event"/>The &quot;button-release-event&quot; signal</title>
+<indexterm><primary>CcItem::button-release-event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>         *self,
+                                                        <link linkend="CcView">CcView</link>         *view,
+                                                        <link linkend="GdkEventButton">GdkEventButton</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>        user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when a mouse button got released on top of
+an item.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="CcView"><type>CcView</type></link> which emitted this event
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GdkEventButton"><type>GdkEventButton</type></link> with coordinates translated to canvas
+coordinates
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to stop other signal handlers from being called.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-dirty"/>The &quot;dirty&quot; signal</title>
+<indexterm><primary>CcItem::dirty</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="CcItem">CcItem</link>  *self,
+                                                        <link linkend="CcView">CcView</link>  *dirty_region,
+                                                        <link linkend="CcDRect">CcDRect</link> *arg2,
+                                                        <link linkend="gpointer">gpointer</link> user_data)</programlisting>
+<para>
+This signal gets emitted when an item changes. It's used to request
+redraws of the affected items.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dirty_region</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcDRect"><type>CcDRect</type></link> that specifies the dirty region
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-enter-notify-event"/>The &quot;enter-notify-event&quot; signal</title>
+<indexterm><primary>CcItem::enter-notify-event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>           *self,
+                                                        <link linkend="CcView">CcView</link>           *view,
+                                                        <link linkend="GdkEventCrossing">GdkEventCrossing</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>          user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when the mouse pointer enters an item.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="CcView"><type>CcView</type></link> which emitted this event
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GdkEventCrossing"><type>GdkEventCrossing</type></link> with x and y coordinates translated into
+canvas coordinates
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to stop other signal handlers from being invoked.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-event"/>The &quot;event&quot; signal</title>
+<indexterm><primary>CcItem::event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>   *self,
+                                                        <link linkend="CcView">CcView</link>   *view,
+                                                        <link linkend="GdkEvent">GdkEvent</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>  user_data)      : Run Last</programlisting>
+<para>
+This signal catches all events before they are distributes into more
+specified signals.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="CcView"><type>CcView</type></link> which emitted this event
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara> the event that got emitted (with canvas coordinates)
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to stop other signal handlers from being called.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-focus"/>The &quot;focus&quot; signal</title>
+<indexterm><primary>CcItem::focus</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>          *self,
+                                                        <link linkend="CcView">CcView</link>          *view,
+                                                        <link linkend="GtkDirectionType">GtkDirectionType</link> dir,
+                                                        <link linkend="gpointer">gpointer</link>         user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when a focus event on the view happended to
+let focus-handling happen.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dir</parameter>&nbsp;:</term>
+<listitem><simpara> the focus direction
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to stop other signal handlers from being called (such
+as the one which lets the focus leave the canvas view)
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-focus-enter"/>The &quot;focus-enter&quot; signal</title>
+<indexterm><primary>CcItem::focus-enter</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>   *ccitem,
+                                                        <link linkend="CcView">CcView</link>   *arg1,
+                                                        <link linkend="GdkEvent">GdkEvent</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>  user_data)      : Run Last</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>ccitem</parameter>&nbsp;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-focus-leave"/>The &quot;focus-leave&quot; signal</title>
+<indexterm><primary>CcItem::focus-leave</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>   *ccitem,
+                                                        <link linkend="CcView">CcView</link>   *arg1,
+                                                        <link linkend="GdkEvent">GdkEvent</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>  user_data)      : Run Last</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>ccitem</parameter>&nbsp;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-item-added"/>The &quot;item-added&quot; signal</title>
+<indexterm><primary>CcItem::item-added</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="CcItem">CcItem</link>  *self,
+                                                        <link linkend="gint">gint</link>     position,
+                                                        <link linkend="CcItem">CcItem</link>  *child,
+                                                        <link linkend="gpointer">gpointer</link> user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when an element is added to another element.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>position</parameter>&nbsp;:</term>
+<listitem><simpara> the new index of the child
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&nbsp;:</term>
+<listitem><simpara> the child
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-item-removed"/>The &quot;item-removed&quot; signal</title>
+<indexterm><primary>CcItem::item-removed</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="CcItem">CcItem</link>  *self,
+                                                        <link linkend="gint">gint</link>     position,
+                                                        <link linkend="CcItem">CcItem</link>  *child,
+                                                        <link linkend="gpointer">gpointer</link> user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when an element is removed from another element.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>position</parameter>&nbsp;:</term>
+<listitem><simpara> the former index of the child
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&nbsp;:</term>
+<listitem><simpara> the child
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-key-press-event"/>The &quot;key-press-event&quot; signal</title>
+<indexterm><primary>CcItem::key-press-event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>      *ccitem,
+                                                        <link linkend="CcView">CcView</link>      *arg1,
+                                                        <link linkend="GdkEventKey">GdkEventKey</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>     user_data)      : Run Last</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>ccitem</parameter>&nbsp;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-key-release-event"/>The &quot;key-release-event&quot; signal</title>
+<indexterm><primary>CcItem::key-release-event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>      *ccitem,
+                                                        <link linkend="CcView">CcView</link>      *arg1,
+                                                        <link linkend="GdkEventKey">GdkEventKey</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>     user_data)      : Run Last</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>ccitem</parameter>&nbsp;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-leave-notify-event"/>The &quot;leave-notify-event&quot; signal</title>
+<indexterm><primary>CcItem::leave-notify-event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>           *self,
+                                                        <link linkend="CcView">CcView</link>           *view,
+                                                        <link linkend="GdkEventCrossing">GdkEventCrossing</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>          user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when the mouse pointer leaves an element.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="CcView"><type>CcView</type></link> which emitted this event
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GdkEventCrossing"><type>GdkEventCrossing</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to stop other signal handlers from being invoked.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-motion-notify-event"/>The &quot;motion-notify-event&quot; signal</title>
+<indexterm><primary>CcItem::motion-notify-event</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="CcItem">CcItem</link>         *self,
+                                                        <link linkend="CcView">CcView</link>         *view,
+                                                        <link linkend="GdkEventMotion">GdkEventMotion</link> *event,
+                                                        <link linkend="gpointer">gpointer</link>        user_data)      : Run Last</programlisting>
+<para>
+This signal gets emitted when the pointer (mouse cursor) moves while
+being over this item.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="CcView"><type>CcView</type></link> which emitted this event
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&nbsp;:</term>
+<listitem><simpara> the event that got emitted (with canvas coordinates)
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to stop other signal handlers from being called.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-view-register"/>The &quot;view-register&quot; signal</title>
+<indexterm><primary>CcItem::view-register</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="CcItem">CcItem</link>  *self,
+                                                        <link linkend="CcView">CcView</link>  *view,
+                                                        <link linkend="gpointer">gpointer</link> user_data)      : Run First</programlisting>
+<para>
+Registeres the view for this item. This signal can be used to create
+view-specific data for the <link linkend="CcItem"><type>CcItem</type></link>. Take a look at <link linkend="CcText"><type>CcText</type></link> to see
+how this can be used.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="CcItem-view-unregister"/>The &quot;view-unregister&quot; signal</title>
+<indexterm><primary>CcItem::view-unregister</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="CcItem">CcItem</link>  *self,
+                                                        <link linkend="CcView">CcView</link>  *view,
+                                                        <link linkend="gpointer">gpointer</link> user_data)      : Run Last</programlisting>
+<para>
+Registeres the view for this item. This signal can be used to create
+view-specific data for the <link linkend="CcItem"><type>CcItem</type></link>. Take a look at <link linkend="CcText"><type>CcText</type></link> to see
+how this can be used.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcItem"><type>CcItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="CcView"><type>CcView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

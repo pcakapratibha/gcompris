@@ -1,0 +1,1701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>The Base Item</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="prev" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="next" href="ccc-shape.html" title="shape">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Canvas-Items.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Canvas-Items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-shape.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2584633" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2585781" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2551128" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2585630" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2585651" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-The-Base-Item"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2584633"></a><span class="refentrytitle">The Base Item</span>
+</h2>
+<p>The Base Item</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcItem"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-The-Base-Item.html#CcItem-struct">CcItem</a>;
+                    <a href="ccc-The-Base-Item.html#CcItemClass">CcItemClass</a>;
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="ccc-The-Base-Item.html#cc-item-new">cc_item_new</a>                         (void);
+void                <a href="ccc-The-Base-Item.html#cc-item-append">cc_item_append</a>                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *child);
+void                <a href="ccc-The-Base-Item.html#cc-item-dirty">cc_item_dirty</a>                       (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> const*view,
+                                                         <a href="ccc-Rectangle.html#CcDRect">CcDRect</a> dirty_region);
+gdouble             <a href="ccc-The-Base-Item.html#cc-item-distance">cc_item_distance</a>                    (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         gdouble x,
+                                                         gdouble y,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> **found);
+void                <a href="ccc-The-Base-Item.html#cc-item-insert">cc_item_insert</a>                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *child,
+                                                         gint position);
+void                <a href="ccc-The-Base-Item.html#cc-item-remove">cc_item_remove</a>                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *child);
+void                <a href="ccc-The-Base-Item.html#cc-item-render">cc_item_render</a>                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view,
+                                                         cairo_t *cr);
+void                <a href="ccc-The-Base-Item.html#cc-item-set-grid-aligned">cc_item_set_grid_aligned</a>            (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         gboolean grid_aligned);
+enum                <a href="ccc-The-Base-Item.html#CcItemFlags">CcItemFlags</a>;
+#define             <a href="ccc-The-Base-Item.html#CC-ITEM-FLAGS:CAPS">CC_ITEM_FLAGS</a>                       (i)
+#define             <a href="ccc-The-Base-Item.html#CC-ITEM-DISPOSED:CAPS">CC_ITEM_DISPOSED</a>                    (i)
+#define             <a href="ccc-The-Base-Item.html#CC-ITEM-GRID-ALIGNED:CAPS">CC_ITEM_GRID_ALIGNED</a>                (i)
+#define             <a href="ccc-The-Base-Item.html#CC-ITEM-SET-FLAGS:CAPS">CC_ITEM_SET_FLAGS</a>                   (i,m)
+#define             <a href="ccc-The-Base-Item.html#CC-ITEM-UNSET-FLAGS:CAPS">CC_ITEM_UNSET_FLAGS</a>                 (i,m)
+#define             <a href="ccc-The-Base-Item.html#CC-ITEM-CAN-FOCUS:CAPS">CC_ITEM_CAN_FOCUS</a>                   (i)
+void                (<a href="ccc-The-Base-Item.html#CcItemFunc">*CcItemFunc</a>)                       (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *item,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view,
+                                                         gpointer data);
+void                <a href="ccc-The-Base-Item.html#cc-item-add-view">cc_item_add_view</a>                    (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);
+void                <a href="ccc-The-Base-Item.html#cc-item-bounds-changed">cc_item_bounds_changed</a>              (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> const*view);
+GType               <a href="ccc-The-Base-Item.html#cc-item-flags-get-type">cc_item_flags_get_type</a>              (void);
+void                <a href="ccc-The-Base-Item.html#cc-item-foreach-view">cc_item_foreach_view</a>                (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItemFunc">CcItemFunc</a> func,
+                                                         gpointer data);
+<a href="ccc-Rectangle.html#CcDRect">CcDRect</a>const*       <a href="ccc-The-Base-Item.html#cc-item-get-all-bounds">cc_item_get_all_bounds</a>              (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> const*view);
+void                <a href="ccc-The-Base-Item.html#cc-item-grab-focus">cc_item_grab_focus</a>                  (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);
+gboolean            <a href="ccc-The-Base-Item.html#cc-item-is-child-of">cc_item_is_child_of</a>                 (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*child,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*parent);
+void                <a href="ccc-The-Base-Item.html#cc-item-remove-view">cc_item_remove_view</a>                 (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);
+void                <a href="ccc-The-Base-Item.html#cc-item-update-bounds">cc_item_update_bounds</a>               (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         gpointer data);
+void                <a href="ccc-The-Base-Item.html#cc-item-update-bounds-for-view">cc_item_update_bounds_for_view</a>      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2551128"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----CcItem
+               +----<a href="CcCamera.html" title="CcCamera">CcCamera</a>
+               +----<a href="ccc-shape.html#CcShape">CcShape</a>
+               +----<a href="ccc-pixbuf.html#CcPixbuf">CcPixbuf</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2585630"></a><h2>Implemented Interfaces</h2>
+<p>
+CcItem implements
+ <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2585651"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-The-Base-Item.html#CcItem-all-bounds-changed">all-bounds-changed</a>"                             
+  "<a href="ccc-The-Base-Item.html#CcItem-button-press-event">button-press-event</a>"                             : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-button-release-event">button-release-event</a>"                           : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-dirty">dirty</a>"                                          
+  "<a href="ccc-The-Base-Item.html#CcItem-enter-notify-event">enter-notify-event</a>"                             : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-event">event</a>"                                          : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-focus">focus</a>"                                          : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-focus-enter">focus-enter</a>"                                    : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-focus-leave">focus-leave</a>"                                    : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-item-added">item-added</a>"                                     : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-item-removed">item-removed</a>"                                   : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-key-press-event">key-press-event</a>"                                : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-key-release-event">key-release-event</a>"                              : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-leave-notify-event">leave-notify-event</a>"                             : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-motion-notify-event">motion-notify-event</a>"                            : Run Last
+  "<a href="ccc-The-Base-Item.html#CcItem-view-register">view-register</a>"                                  : Run First
+  "<a href="ccc-The-Base-Item.html#CcItem-view-unregister">view-unregister</a>"                                : Run Last
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2585781"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2585797"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2585808"></a><h3>
+<a name="CcItem-struct"></a>CcItem</h3>
+<a class="indexterm" name="id2585820"></a><pre class="programlisting">typedef struct _CcItem CcItem;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2585835"></a><h3>
+<a name="CcItemClass"></a>CcItemClass</h3>
+<a class="indexterm" name="id2585847"></a><pre class="programlisting">typedef struct {
+	GInitiallyUnownedClass base_class;
+
+	/* vtable */
+	gdouble (*distance)             (CcItem         * self,
+				         gdouble          x,
+				         gdouble          y,
+				         CcItem         **found);
+	void    (*notify_child_bounds)  (CcItem         * self,
+				         CcItem         * child,
+					 CcView         * view,
+				         CcDRect const  * all_bounds);
+	void    (*render)               (CcItem         * self,
+		                         CcView         * view,
+			                 cairo_t        * cr);
+	void    (*update_bounds)        (CcItem         * self,
+					 CcView const   * view,
+					 gpointer         user_data);
+
+	/* signals */
+	gboolean (*button_press_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventButton  * event);
+	gboolean (*button_release_event)(CcItem          * self,
+					 CcView          * view,
+					 GdkEventButton  * event);
+	gboolean (*enter_notify_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventCrossing* event);
+	gboolean (*event)               (CcItem          * self,
+					 CcView          * view,
+					 GdkEvent        * event);
+	gboolean (*focus)		(CcItem          * self,
+					 CcView	         * view,
+					 GtkDirectionType  dir);
+	gboolean (*focus_enter)         (CcItem          * self,
+					 CcView          * view,
+					 GdkEventFocus   * event);
+	gboolean (*focus_leave)         (CcItem          * self,
+					 CcView          * view,
+					 GdkEventFocus   * focus);
+	gboolean (*key_press_event)     (CcItem          * item,
+					 CcView          * view,
+					 GdkEventKey     * event);
+	gboolean (*key_release_event)   (CcItem          * item,
+					 CcView          * view,
+					 GdkEventKey     * event);
+	gboolean (*leave_notify_event)  (CcItem          * self,
+					 CcView          * view,
+					 GdkEventCrossing* event);
+	gboolean (*motion_notify_event) (CcItem          * self,
+					 CcView          * view,
+					 GdkEventMotion  * event);
+
+	void     (*item_added)          (CcItem          * self,
+					 gint              position,
+					 CcItem          * child);
+	void     (*item_removed)        (CcItem          * self,
+					 gint              position,
+					 CcItem          * child);
+
+	void     (*view_register)       (CcItem          * self,
+					 CcView          * view);
+	void     (*view_unregister)     (CcItem          * self,
+					 CcView          * view);
+} CcItemClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2572484"></a><h3>
+<a name="cc-item-new"></a>cc_item_new ()</h3>
+<a class="indexterm" name="id2586842"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_item_new                         (void);</pre>
+<p>
+Create a new <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a> that can be used to group several items together.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>a new <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599815"></a><h3>
+<a name="cc-item-append"></a>cc_item_append ()</h3>
+<a class="indexterm" name="id2599825"></a><pre class="programlisting">void                cc_item_append                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *child);</pre>
+<p>
+Insert an item at the end of this item. A <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a> can serve as a container
+for several items.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>child</code></em>&#160;:</span></td>
+<td> another <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599909"></a><h3>
+<a name="cc-item-dirty"></a>cc_item_dirty ()</h3>
+<a class="indexterm" name="id2599919"></a><pre class="programlisting">void                cc_item_dirty                       (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> const*view,
+                                                         <a href="ccc-Rectangle.html#CcDRect">CcDRect</a> dirty_region);</pre>
+<p>
+Let emit a signal to tell <em class="parameter"><code>view</code></em> that it needs to be redrawn.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>dirty_region</code></em>&#160;:</span></td>
+<td> the region that needs to be redrawn
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600020"></a><h3>
+<a name="cc-item-distance"></a>cc_item_distance ()</h3>
+<a class="indexterm" name="id2600030"></a><pre class="programlisting">gdouble             cc_item_distance                    (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         gdouble x,
+                                                         gdouble y,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> **found);</pre>
+<p>
+Calculates the distance from <em class="parameter"><code>self</code></em> to (<em class="parameter"><code>x</code></em>,<em class="parameter"><code>y</code></em>). If (<em class="parameter"><code>x</code></em>,<em class="parameter"><code>y</code></em>) is within <em class="parameter"><code>self</code></em> or
+one of its children <em class="parameter"><code>found</code></em> is set to the matching element.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td> the x coordinate to query for
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td> the y coordinate to query for
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>found</code></em>&#160;:</span></td>
+<td> the return location for a found <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>the distance between <em class="parameter"><code>self</code></em> (or one of its children) to (<em class="parameter"><code>x</code></em>,<em class="parameter"><code>y</code></em>).
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600206"></a><h3>
+<a name="cc-item-insert"></a>cc_item_insert ()</h3>
+<a class="indexterm" name="id2600216"></a><pre class="programlisting">void                cc_item_insert                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *child,
+                                                         gint position);</pre>
+<p>
+Inserts <em class="parameter"><code>child</code></em> at <em class="parameter"><code>position</code></em> into <em class="parameter"><code>self</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>child</code></em>&#160;:</span></td>
+<td> another <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>position</code></em>&#160;:</span></td>
+<td> the position to insert the child at (0 means at the bottom,
+bigger numbers mean higher layers, -1 means top layer)
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600328"></a><h3>
+<a name="cc-item-remove"></a>cc_item_remove ()</h3>
+<a class="indexterm" name="id2600339"></a><pre class="programlisting">void                cc_item_remove                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *child);</pre>
+<p>
+Removes <em class="parameter"><code>child</code></em> from <em class="parameter"><code>self</code></em>. Does nothing if <em class="parameter"><code>child</code></em> was not a child of <em class="parameter"><code>self</code></em>
+or if <em class="parameter"><code>child</code></em> is a child of one of <em class="parameter"><code>self</code></em>'s children.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>child</code></em>&#160;:</span></td>
+<td> another <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600446"></a><h3>
+<a name="cc-item-render"></a>cc_item_render ()</h3>
+<a class="indexterm" name="id2600456"></a><pre class="programlisting">void                cc_item_render                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view,
+                                                         cairo_t *cr);</pre>
+<p>
+Renders <em class="parameter"><code>self</code></em> to <em class="parameter"><code>cr</code></em> which is supposed to be a cairo context of <em class="parameter"><code>view</code></em> as
+the transformation matrix of <em class="parameter"><code>view</code></em> will be used for rendering.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <span class="type">Ccview</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>cr</code></em>&#160;:</span></td>
+<td> a cairo context (<span class="type">cairo_t</span>)
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600580"></a><h3>
+<a name="cc-item-set-grid-aligned"></a>cc_item_set_grid_aligned ()</h3>
+<a class="indexterm" name="id2600590"></a><pre class="programlisting">void                cc_item_set_grid_aligned            (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         gboolean grid_aligned);</pre>
+<p>
+Sets <em class="parameter"><code>self</code></em> to be rendered grid-aligned if <em class="parameter"><code>grid_aligned</code></em> is <code class="literal">TRUE</code>, sets it to
+be allowed to render fuzzyly if <code class="literal">FALSE</code>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>grid_aligned</code></em>&#160;:</span></td>
+<td> a gboolean
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600688"></a><h3>
+<a name="CcItemFlags"></a>enum CcItemFlags</h3>
+<a class="indexterm" name="id2600699"></a><pre class="programlisting">typedef enum {
+	CC_CAN_FOCUS          = 1 &lt;&lt; 1,
+	CC_DISPOSED           = 1 &lt;&lt; 2,
+	CC_GRID_ALIGNED       = 1 &lt;&lt; 3,
+} CcItemFlags;
+</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><a name="CC-CAN-FOCUS:CAPS"></a><code class="literal">CC_CAN_FOCUS</code></span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><a name="CC-DISPOSED:CAPS"></a><code class="literal">CC_DISPOSED</code></span></td>
+<td> specifies whether dispose has already been run on an item.
+</td>
+</tr>
+<tr>
+<td><span class="term"><a name="CC-GRID-ALIGNED:CAPS"></a><code class="literal">CC_GRID_ALIGNED</code></span></td>
+<td> specifies whether an item should be rendered to match an
+existing grid.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600781"></a><h3>
+<a name="CC-ITEM-FLAGS:CAPS"></a>CC_ITEM_FLAGS()</h3>
+<a class="indexterm" name="id2600791"></a><pre class="programlisting">#define CC_ITEM_FLAGS(i)         (CC_ITEM(i)-&gt;flags)
+</pre>
+<p>
+Get the flags which are set on the <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a> <em class="parameter"><code>i</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>i</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600844"></a><h3>
+<a name="CC-ITEM-DISPOSED:CAPS"></a>CC_ITEM_DISPOSED()</h3>
+<a class="indexterm" name="id2600855"></a><pre class="programlisting">#define CC_ITEM_DISPOSED(i)           ((CC_ITEM_FLAGS(i) &amp; CC_DISPOSED) != 0)
+</pre>
+<p>
+Queries the <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a> <em class="parameter"><code>i</code></em> whether it has the <a href="ccc-The-Base-Item.html#CC-DISPOSED:CAPS"><code class="literal">CC_DISPOSED</code></a> flag set. This is
+very useful in the dispose handler for the GObject derived types. This flag
+gets set automatically if you chain up your dispose calls correctly.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>i</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600919"></a><h3>
+<a name="CC-ITEM-GRID-ALIGNED:CAPS"></a>CC_ITEM_GRID_ALIGNED()</h3>
+<a class="indexterm" name="id2600929"></a><pre class="programlisting">#define CC_ITEM_GRID_ALIGNED(i)       ((CC_ITEM_FLAGS(i) &amp; CC_GRID_ALIGNED) != 0)
+</pre>
+<p>
+Queries the <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a> <em class="parameter"><code>i</code></em> whether it has the <a href="ccc-The-Base-Item.html#CC-GRID-ALIGNED:CAPS"><code class="literal">CC_GRID_ALIGNED</code></a> flag set.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>i</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2600990"></a><h3>
+<a name="CC-ITEM-SET-FLAGS:CAPS"></a>CC_ITEM_SET_FLAGS()</h3>
+<a class="indexterm" name="id2601000"></a><pre class="programlisting">#define CC_ITEM_SET_FLAGS(i,m)   G_STMT_START{ (CC_ITEM_FLAGS(i) |=  (m)); }G_STMT_END
+</pre>
+<p>
+Sets on <em class="parameter"><code>i</code></em> the <a href="ccc-The-Base-Item.html#CcItemFlags"><span class="type">CcItemFlags</span></a> that have been specified in <em class="parameter"><code>m</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>i</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>m</code></em>&#160;:</span></td>
+<td> a CcItemFlags mask
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601072"></a><h3>
+<a name="CC-ITEM-UNSET-FLAGS:CAPS"></a>CC_ITEM_UNSET_FLAGS()</h3>
+<a class="indexterm" name="id2601082"></a><pre class="programlisting">#define CC_ITEM_UNSET_FLAGS(i,m) G_STMT_START{ (CC_ITEM_FLAGS(i) &amp;= ~(m)); }G_STMT_END
+</pre>
+<p>
+Unsets from <em class="parameter"><code>i</code></em> the <a href="ccc-The-Base-Item.html#CcItemFlags"><span class="type">CcItemFlags</span></a> that have been specified in <em class="parameter"><code>m</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>i</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>m</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItemFlags"><span class="type">CcItemFlags</span></a> mask
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601160"></a><h3>
+<a name="CC-ITEM-CAN-FOCUS:CAPS"></a>CC_ITEM_CAN_FOCUS()</h3>
+<a class="indexterm" name="id2601170"></a><pre class="programlisting">#define CC_ITEM_CAN_FOCUS(i)          ((CC_ITEM_FLAGS(i) &amp; CC_CAN_FOCUS) != 0)
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>i</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601202"></a><h3>
+<a name="CcItemFunc"></a>CcItemFunc ()</h3>
+<a class="indexterm" name="id2601213"></a><pre class="programlisting">void                (*CcItemFunc)                       (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *item,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view,
+                                                         gpointer data);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>data</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601292"></a><h3>
+<a name="cc-item-add-view"></a>cc_item_add_view ()</h3>
+<a class="indexterm" name="id2601302"></a><pre class="programlisting">void                cc_item_add_view                    (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);</pre>
+<p>
+Registers a view at the item. The item and its children can now set up data
+for this view.
+</p>
+<p>
+This function should not be called by application code. Use
+<a href="ccc-Item-View.html#cc-item-view-register"><code class="function">cc_item_view_register()</code></a> instead.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601392"></a><h3>
+<a name="cc-item-bounds-changed"></a>cc_item_bounds_changed ()</h3>
+<a class="indexterm" name="id2601402"></a><pre class="programlisting">void                cc_item_bounds_changed              (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> const*view);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601462"></a><h3>
+<a name="cc-item-flags-get-type"></a>cc_item_flags_get_type ()</h3>
+<a class="indexterm" name="id2601473"></a><pre class="programlisting">GType               cc_item_flags_get_type              (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601505"></a><h3>
+<a name="cc-item-foreach-view"></a>cc_item_foreach_view ()</h3>
+<a class="indexterm" name="id2601516"></a><pre class="programlisting">void                cc_item_foreach_view                (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-The-Base-Item.html#CcItemFunc">CcItemFunc</a> func,
+                                                         gpointer data);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>func</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>data</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601595"></a><h3>
+<a name="cc-item-get-all-bounds"></a>cc_item_get_all_bounds ()</h3>
+<a class="indexterm" name="id2601605"></a><pre class="programlisting"><a href="ccc-Rectangle.html#CcDRect">CcDRect</a>const*       cc_item_get_all_bounds              (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> const*view);</pre>
+<p>
+Get the bounds of <em class="parameter"><code>self</code></em> as it would e displayed by <em class="parameter"><code>view</code></em> (including all of its children).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>the bounds of the item, may be <code class="literal">NULL</code> (in this case the item is not
+tied visible area).
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601712"></a><h3>
+<a name="cc-item-grab-focus"></a>cc_item_grab_focus ()</h3>
+<a class="indexterm" name="id2601722"></a><pre class="programlisting">void                cc_item_grab_focus                  (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601782"></a><h3>
+<a name="cc-item-is-child-of"></a>cc_item_is_child_of ()</h3>
+<a class="indexterm" name="id2601792"></a><pre class="programlisting">gboolean            cc_item_is_child_of                 (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*child,
+                                                         <a href="ccc-The-Base-Item.html#CcItem">CcItem</a> const*parent);</pre>
+<p>
+Find out whether <em class="parameter"><code>child</code></em> is a child of <em class="parameter"><code>parent</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>child</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent</code></em>&#160;:</span></td>
+<td> another <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> is <em class="parameter"><code>child</code></em> is a child of <em class="parameter"><code>parent</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601906"></a><h3>
+<a name="cc-item-remove-view"></a>cc_item_remove_view ()</h3>
+<a class="indexterm" name="id2601916"></a><pre class="programlisting">void                cc_item_remove_view                 (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);</pre>
+<p>
+Unregisters a view at the item. The item and the children can now free data
+kept for this view.
+</p>
+<p>
+This function should not be called by application code. Use
+<a href="ccc-Item-View.html#cc-item-view-unregister"><code class="function">cc_item_view_unregister()</code></a> instead.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602006"></a><h3>
+<a name="cc-item-update-bounds"></a>cc_item_update_bounds ()</h3>
+<a class="indexterm" name="id2602016"></a><pre class="programlisting">void                cc_item_update_bounds               (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         gpointer data);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>data</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602076"></a><h3>
+<a name="cc-item-update-bounds-for-view"></a>cc_item_update_bounds_for_view ()</h3>
+<a class="indexterm" name="id2602089"></a><pre class="programlisting">void                cc_item_update_bounds_for_view      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a> *self,
+                                                         <a href="ccc-Canvas-Views.html#CcView">CcView</a> *view);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602150"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2602161"></a><h3>
+<a name="CcItem-all-bounds-changed"></a>The "all-bounds-changed" signal</h3>
+<a class="indexterm" name="id2602171"></a><pre class="programlisting">void                user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *ccitem,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>  *arg1,
+                                                        <a href="ccc-Rectangle.html#CcDRect">CcDRect</a> *arg2,
+                                                        gpointer user_data)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>ccitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg1</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg2</code></em>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602281"></a><h3>
+<a name="CcItem-button-press-event"></a>The "button-press-event" signal</h3>
+<a class="indexterm" name="id2602291"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>         *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>         *view,
+                                                        GdkEventButton *event,
+                                                        gpointer        user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when a mouse button got pressed on top of
+an element.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> the <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a> which emitted this event
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td> a <span class="type">GdkEventButton</span> with coordinates translated to canvas
+coordinates.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> to stop other signal handlers from being called.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602448"></a><h3>
+<a name="CcItem-button-release-event"></a>The "button-release-event" signal</h3>
+<a class="indexterm" name="id2602458"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>         *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>         *view,
+                                                        GdkEventButton *event,
+                                                        gpointer        user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when a mouse button got released on top of
+an item.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> the <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a> which emitted this event
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td> a <span class="type">GdkEventButton</span> with coordinates translated to canvas
+coordinates
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> to stop other signal handlers from being called.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602614"></a><h3>
+<a name="CcItem-dirty"></a>The "dirty" signal</h3>
+<a class="indexterm" name="id2602624"></a><pre class="programlisting">void                user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>  *dirty_region,
+                                                        <a href="ccc-Rectangle.html#CcDRect">CcDRect</a> *arg2,
+                                                        gpointer user_data)</pre>
+<p>
+This signal gets emitted when an item changes. It's used to request
+redraws of the affected items.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>dirty_region</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Rectangle.html#CcDRect"><span class="type">CcDRect</span></a> that specifies the dirty region
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602739"></a><h3>
+<a name="CcItem-enter-notify-event"></a>The "enter-notify-event" signal</h3>
+<a class="indexterm" name="id2602750"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>           *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>           *view,
+                                                        GdkEventCrossing *event,
+                                                        gpointer          user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when the mouse pointer enters an item.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> the <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a> which emitted this event
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td> a <span class="type">GdkEventCrossing</span> with x and y coordinates translated into
+canvas coordinates
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> to stop other signal handlers from being invoked.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602906"></a><h3>
+<a name="CcItem-event"></a>The "event" signal</h3>
+<a class="indexterm" name="id2602915"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>   *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>   *view,
+                                                        GdkEvent *event,
+                                                        gpointer  user_data)      : Run Last</pre>
+<p>
+This signal catches all events before they are distributes into more
+specified signals.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> the <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a> which emitted this event
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td> the event that got emitted (with canvas coordinates)
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> to stop other signal handlers from being called.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603064"></a><h3>
+<a name="CcItem-focus"></a>The "focus" signal</h3>
+<a class="indexterm" name="id2603074"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>          *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>          *view,
+                                                        GtkDirectionType dir,
+                                                        gpointer         user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when a focus event on the view happended to
+let focus-handling happen.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>dir</code></em>&#160;:</span></td>
+<td> the focus direction
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> to stop other signal handlers from being called (such
+as the one which lets the focus leave the canvas view)
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603224"></a><h3>
+<a name="CcItem-focus-enter"></a>The "focus-enter" signal</h3>
+<a class="indexterm" name="id2603234"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>   *ccitem,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>   *arg1,
+                                                        GdkEvent *event,
+                                                        gpointer  user_data)      : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>ccitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg1</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603354"></a><h3>
+<a name="CcItem-focus-leave"></a>The "focus-leave" signal</h3>
+<a class="indexterm" name="id2603364"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>   *ccitem,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>   *arg1,
+                                                        GdkEvent *event,
+                                                        gpointer  user_data)      : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>ccitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg1</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603485"></a><h3>
+<a name="CcItem-item-added"></a>The "item-added" signal</h3>
+<a class="indexterm" name="id2603495"></a><pre class="programlisting">void                user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *self,
+                                                        gint     position,
+                                                        <a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *child,
+                                                        gpointer user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when an element is added to another element.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>position</code></em>&#160;:</span></td>
+<td> the new index of the child
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>child</code></em>&#160;:</span></td>
+<td> the child
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603616"></a><h3>
+<a name="CcItem-item-removed"></a>The "item-removed" signal</h3>
+<a class="indexterm" name="id2603626"></a><pre class="programlisting">void                user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *self,
+                                                        gint     position,
+                                                        <a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *child,
+                                                        gpointer user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when an element is removed from another element.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>position</code></em>&#160;:</span></td>
+<td> the former index of the child
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>child</code></em>&#160;:</span></td>
+<td> the child
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603748"></a><h3>
+<a name="CcItem-key-press-event"></a>The "key-press-event" signal</h3>
+<a class="indexterm" name="id2603758"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>      *ccitem,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>      *arg1,
+                                                        GdkEventKey *event,
+                                                        gpointer     user_data)      : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>ccitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg1</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603878"></a><h3>
+<a name="CcItem-key-release-event"></a>The "key-release-event" signal</h3>
+<a class="indexterm" name="id2603889"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>      *ccitem,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>      *arg1,
+                                                        GdkEventKey *event,
+                                                        gpointer     user_data)      : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>ccitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg1</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604009"></a><h3>
+<a name="CcItem-leave-notify-event"></a>The "leave-notify-event" signal</h3>
+<a class="indexterm" name="id2604020"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>           *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>           *view,
+                                                        GdkEventCrossing *event,
+                                                        gpointer          user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when the mouse pointer leaves an element.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> the <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a> which emitted this event
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td> a <span class="type">GdkEventCrossing</span>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> to stop other signal handlers from being invoked.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604175"></a><h3>
+<a name="CcItem-motion-notify-event"></a>The "motion-notify-event" signal</h3>
+<a class="indexterm" name="id2604186"></a><pre class="programlisting">gboolean            user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>         *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>         *view,
+                                                        GdkEventMotion *event,
+                                                        gpointer        user_data)      : Run Last</pre>
+<p>
+This signal gets emitted when the pointer (mouse cursor) moves while
+being over this item.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> the <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a> which emitted this event
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td> the event that got emitted (with canvas coordinates)
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+<code class="literal">TRUE</code> to stop other signal handlers from being called.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604335"></a><h3>
+<a name="CcItem-view-register"></a>The "view-register" signal</h3>
+<a class="indexterm" name="id2604345"></a><pre class="programlisting">void                user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>  *view,
+                                                        gpointer user_data)      : Run First</pre>
+<p>
+Registeres the view for this item. This signal can be used to create
+view-specific data for the <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>. Take a look at <a href="ccc-Text.html#CcText"><span class="type">CcText</span></a> to see
+how this can be used.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604467"></a><h3>
+<a name="CcItem-view-unregister"></a>The "view-unregister" signal</h3>
+<a class="indexterm" name="id2604478"></a><pre class="programlisting">void                user_function                      (<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>  *self,
+                                                        <a href="ccc-Canvas-Views.html#CcView">CcView</a>  *view,
+                                                        gpointer user_data)      : Run Last</pre>
+<p>
+Registeres the view for this item. This signal can be used to create
+view-specific data for the <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>. Take a look at <a href="ccc-Text.html#CcText"><span class="type">CcText</span></a> to see
+how this can be used.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-The-Base-Item.html#CcItem"><span class="type">CcItem</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>view</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Canvas-Views.html#CcView"><span class="type">CcView</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

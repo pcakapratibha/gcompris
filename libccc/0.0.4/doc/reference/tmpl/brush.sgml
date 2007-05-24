@@ -1,0 +1,42 @@
+<!-- ##### SECTION Title ##### -->
+Brushes
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcBrush ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT CcBrushClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+@apply: 
+
+<!-- ##### FUNCTION cc_brush_apply ##### -->
+<para>
+
+</para>
+
+@self: 
+@cr: 
+
+

@@ -1,0 +1,66 @@
+<!-- ##### SECTION Title ##### -->
+Color Brush
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcBrushColor ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcBrushColor:color ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcBrushColorClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+
+<!-- ##### FUNCTION cc_brush_color_new ##### -->
+<para>
+
+</para>
+
+@color: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_brush_color_get_color ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_brush_color_set_color ##### -->
+<para>
+
+</para>
+
+@self: 
+@color: 
+
+

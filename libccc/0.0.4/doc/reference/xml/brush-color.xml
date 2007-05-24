@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-Color-Brush">
+<refmeta>
+<refentrytitle role="top_of_page">Color Brush</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Color Brush</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcBrushColor"/>
+<synopsis>
+
+
+
+                    <link linkend="CcBrushColor-struct">CcBrushColor</link>;
+                    <link linkend="CcBrushColorClass">CcBrushColorClass</link>;
+<link linkend="CcBrush">CcBrush</link>*            <link linkend="cc-brush-color-new">cc_brush_color_new</link>                  (<link linkend="CcColor">CcColor</link> *color);
+<link linkend="CcColor">CcColor</link>*            <link linkend="cc-brush-color-get-color">cc_brush_color_get_color</link>            (<link linkend="CcBrushColor">CcBrushColor</link> *self);
+<link linkend="void">void</link>                <link linkend="cc-brush-color-set-color">cc_brush_color_set_color</link>            (<link linkend="CcBrushColor">CcBrushColor</link> *self,
+                                                         <link linkend="CcColor">CcColor</link> *color);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcBrush">CcBrush</link>
+               +----CcBrushColor
+</synopsis>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcBrushColor--color">color</link>&quot;                    <link linkend="CcColor">CcColor</link>               : Read / Write / Construct
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcBrushColor-struct" role="struct"/>CcBrushColor</title>
+<indexterm><primary>CcBrushColor</primary></indexterm><programlisting>typedef struct _CcBrushColor CcBrushColor;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcBrushColorClass" role="struct"/>CcBrushColorClass</title>
+<indexterm><primary>CcBrushColorClass</primary></indexterm><programlisting>typedef struct {
+	CcBrushClass base_class;
+} CcBrushColorClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-brush-color-new" role="function"/>cc_brush_color_new ()</title>
+<indexterm><primary>cc_brush_color_new</primary></indexterm><programlisting><link linkend="CcBrush">CcBrush</link>*            cc_brush_color_new                  (<link linkend="CcColor">CcColor</link> *color);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>color</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-brush-color-get-color" role="function"/>cc_brush_color_get_color ()</title>
+<indexterm><primary>cc_brush_color_get_color</primary></indexterm><programlisting><link linkend="CcColor">CcColor</link>*            cc_brush_color_get_color            (<link linkend="CcBrushColor">CcBrushColor</link> *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-brush-color-set-color" role="function"/>cc_brush_color_set_color ()</title>
+<indexterm><primary>cc_brush_color_set_color</primary></indexterm><programlisting><link linkend="void">void</link>                cc_brush_color_set_color            (<link linkend="CcBrushColor">CcBrushColor</link> *self,
+                                                         <link linkend="CcColor">CcColor</link> *color);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcBrushColor--color"/>The &quot;<literal>color</literal>&quot; property</title>
+<indexterm><primary>CcBrushColor:color</primary></indexterm><programlisting>  &quot;color&quot;                    <link linkend="CcColor">CcColor</link>               : Read / Write / Construct</programlisting>
+<para>The color.</para></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

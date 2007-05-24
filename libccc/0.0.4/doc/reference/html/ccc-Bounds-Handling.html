@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Bounds Handling</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="prev" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="next" href="ccc-Redrawing.html" title="Redrawing">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="ccc-Internals.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Internals.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Redrawing.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter" lang="en">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="ccc-Bounds-Handling"></a>Bounds Handling</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="sect1"><a href="ccc-Bounds-Handling.html#ccc-Bounds-Caching">Bound Caching</a></span></dt>
+<dt><span class="sect1"><a href="ccc-Redrawing.html">Redrawing</a></span></dt>
+</dl></div>
+<p>
+    This chapter describes the way bounds are used in libccc.
+  </p>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="ccc-Bounds-Caching"></a>Bound Caching</h2></div></div></div>
+<p>
+      Every item stores three bounding rectangles. The easiest one is it's own
+      extents; this one the the one that items set before emitting the
+      'notify::bounds' signal.
+    </p>
+<p>
+      Then there is the rectangle which contains the union on all the
+      children's rectangles. This one is automatically updated when child items
+      emit the 'notify::all-bounds' signal. If it changes, the
+      'notify::children-bounds' signal will get emitted.
+    </p>
+<p>
+      If one of the former two changes, the third one will be updated
+      automatically, as it is the rectangle which contains both the items
+      extents and the ones from its children. If this rectangle changes, the
+      'notify::all-bounds' signal gets emitted.
+    </p>
+<p>
+      Custom item implementations don't need to take care about the last two.
+      These are updated automatically by the CcItem class, so you really care
+      only about the extents of your implemented item.
+    </p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-printer">
+<refmeta>
+<refentrytitle role="top_of_page">printer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>printer</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcPrinter"/>
+<synopsis>
+
+
+
+                    <link linkend="CcPrinter-struct">CcPrinter</link>;
+                    <link linkend="CcPrinterClass">CcPrinterClass</link>;
+<link linkend="GType">GType</link>               <link linkend="cc-printer-get-type">cc_printer_get_type</link>                 (void);
+<link linkend="CcPrinter">CcPrinter</link>*          <link linkend="cc-printer-new">cc_printer_new</link>                      (<link linkend="gchar">gchar</link> const*filename);
+<link linkend="void">void</link>                <link linkend="cc-printer-print-page">cc_printer_print_page</link>               (<link linkend="CcPrinter">CcPrinter</link> *self);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----CcPrinter
+</synopsis>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcPrinter--filename">filename</link>&quot;                 <link linkend="gchararray">gchararray</link>            : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcPrinter-struct" role="struct"/>CcPrinter</title>
+<indexterm><primary>CcPrinter</primary></indexterm><programlisting>typedef struct _CcPrinter CcPrinter;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcPrinterClass" role="struct"/>CcPrinterClass</title>
+<indexterm><primary>CcPrinterClass</primary></indexterm><programlisting>typedef struct {
+	GInitiallyUnownedClass base_class;
+} CcPrinterClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-printer-get-type" role="function"/>cc_printer_get_type ()</title>
+<indexterm><primary>cc_printer_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               cc_printer_get_type                 (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-printer-new" role="function"/>cc_printer_new ()</title>
+<indexterm><primary>cc_printer_new</primary></indexterm><programlisting><link linkend="CcPrinter">CcPrinter</link>*          cc_printer_new                      (<link linkend="gchar">gchar</link> const*filename);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>filename</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-printer-print-page" role="function"/>cc_printer_print_page ()</title>
+<indexterm><primary>cc_printer_print_page</primary></indexterm><programlisting><link linkend="void">void</link>                cc_printer_print_page               (<link linkend="CcPrinter">CcPrinter</link> *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcPrinter--filename"/>The &quot;<literal>filename</literal>&quot; property</title>
+<indexterm><primary>CcPrinter:filename</primary></indexterm><programlisting>  &quot;filename&quot;                 <link linkend="gchararray">gchararray</link>            : Read / Write</programlisting>
+<para>The name of the output file.</para><para>Default value: "output.pdf"</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

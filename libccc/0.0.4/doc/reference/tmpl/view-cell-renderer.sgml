@@ -1,0 +1,40 @@
+<!-- ##### SECTION Title ##### -->
+Cell Renderer
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcViewCellRenderer ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT CcViewCellRendererClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+
+<!-- ##### FUNCTION cc_view_cell_renderer_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+

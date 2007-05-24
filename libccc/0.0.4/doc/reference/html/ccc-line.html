@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>line</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="prev" href="ccc-shape.html" title="shape">
+<link rel="next" href="ccc-circle.html" title="circle">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-shape.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Canvas-Items.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-circle.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2588349" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2589059" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2597304" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2589038" class="shortcut">Implemented Interfaces</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-line"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2588349"></a><span class="refentrytitle">line</span>
+</h2>
+<p>line</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcLine"></a><pre class="synopsis">
+
+
+
+typedef             <a href="ccc-line.html#CcLine">CcLine</a>;
+typedef             <a href="ccc-line.html#CcLineClass">CcLineClass</a>;
+void                <a href="ccc-line.html#cc-line-clear">cc_line_clear</a>                       (<a href="ccc-line.html#CcLine">CcLine</a> *self);
+GType               <a href="ccc-line.html#cc-line-get-type">cc_line_get_type</a>                    (void);
+void                <a href="ccc-line.html#cc-line-line">cc_line_line</a>                        (<a href="ccc-line.html#CcLine">CcLine</a> *self,
+                                                         gdouble x,
+                                                         gdouble y);
+void                <a href="ccc-line.html#cc-line-move">cc_line_move</a>                        (<a href="ccc-line.html#CcLine">CcLine</a> *self,
+                                                         gdouble x,
+                                                         gdouble y);
+<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             <a href="ccc-line.html#cc-line-new">cc_line_new</a>                         (void);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2597304"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="ccc-The-Base-Item.html#CcItem">CcItem</a>
+               +----<a href="ccc-shape.html#CcShape">CcShape</a>
+                     +----CcLine
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2589038"></a><h2>Implemented Interfaces</h2>
+<p>
+CcLine implements
+ <a href="ccc-Item-View.html#CcItemView">CcItemView</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2589059"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2589074"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2589085"></a><h3>
+<a name="CcLine"></a>CcLine</h3>
+<a class="indexterm" name="id2589097"></a><pre class="programlisting">typedef CcShape      CcLine;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2589112"></a><h3>
+<a name="CcLineClass"></a>CcLineClass</h3>
+<a class="indexterm" name="id2589124"></a><pre class="programlisting">typedef CcShapeClass CcLineClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2589140"></a><h3>
+<a name="cc-line-clear"></a>cc_line_clear ()</h3>
+<a class="indexterm" name="id2571861"></a><pre class="programlisting">void                cc_line_clear                       (<a href="ccc-line.html#CcLine">CcLine</a> *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571907"></a><h3>
+<a name="cc-line-get-type"></a>cc_line_get_type ()</h3>
+<a class="indexterm" name="id2571920"></a><pre class="programlisting">GType               cc_line_get_type                    (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2571956"></a><h3>
+<a name="cc-line-line"></a>cc_line_line ()</h3>
+<a class="indexterm" name="id2571968"></a><pre class="programlisting">void                cc_line_line                        (<a href="ccc-line.html#CcLine">CcLine</a> *self,
+                                                         gdouble x,
+                                                         gdouble y);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2597487"></a><h3>
+<a name="cc-line-move"></a>cc_line_move ()</h3>
+<a class="indexterm" name="id2597500"></a><pre class="programlisting">void                cc_line_move                        (<a href="ccc-line.html#CcLine">CcLine</a> *self,
+                                                         gdouble x,
+                                                         gdouble y);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>x</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>y</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2597588"></a><h3>
+<a name="cc-line-new"></a>cc_line_new ()</h3>
+<a class="indexterm" name="id2597600"></a><pre class="programlisting"><a href="ccc-The-Base-Item.html#CcItem">CcItem</a>*             cc_line_new                         (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

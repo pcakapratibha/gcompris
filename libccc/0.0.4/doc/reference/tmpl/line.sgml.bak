@@ -1,0 +1,77 @@
+<!-- ##### SECTION Title ##### -->
+line
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### TYPEDEF CcLine ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### TYPEDEF CcLineClass ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION cc_line_clear ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION cc_line_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_line_line ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION cc_line_move ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION cc_line_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+

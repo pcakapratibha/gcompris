@@ -1,0 +1,60 @@
+glib-helpers.lo glib-helpers.o: glib-helpers.c glib-helpers.h \
+  /usr/include/glib-2.0/glib/glist.h /usr/include/glib-2.0/glib/gmem.h \
+  /usr/include/glib-2.0/glib/gslice.h /usr/include/glib-2.0/glib/gtypes.h \
+  /usr/lib/glib-2.0/include/glibconfig.h \
+  /usr/include/glib-2.0/glib/gmacros.h \
+  /usr/lib/gcc/i486-linux-gnu/4.1.2/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.1.2/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.1.2/include/syslimits.h \
+  /usr/include/limits.h /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h \
+  /usr/lib/gcc/i486-linux-gnu/4.1.2/include/float.h \
+  /usr/include/glib-2.0/glib/gmessages.h \
+  /usr/lib/gcc/i486-linux-gnu/4.1.2/include/stdarg.h \
+  /usr/include/glib-2.0/glib/gunicode.h \
+  /usr/include/glib-2.0/glib/gerror.h /usr/include/glib-2.0/glib/gquark.h
+
+glib-helpers.h:
+
+/usr/include/glib-2.0/glib/glist.h:
+
+/usr/include/glib-2.0/glib/gmem.h:
+
+/usr/include/glib-2.0/glib/gslice.h:
+
+/usr/include/glib-2.0/glib/gtypes.h:
+
+/usr/lib/glib-2.0/include/glibconfig.h:
+
+/usr/include/glib-2.0/glib/gmacros.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.1.2/include/stddef.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.1.2/include/limits.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.1.2/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.1.2/include/float.h:
+
+/usr/include/glib-2.0/glib/gmessages.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.1.2/include/stdarg.h:
+
+/usr/include/glib-2.0/glib/gunicode.h:
+
+/usr/include/glib-2.0/glib/gerror.h:
+
+/usr/include/glib-2.0/glib/gquark.h:

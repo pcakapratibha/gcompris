@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-Colors">
+<refmeta>
+<refentrytitle role="top_of_page">Colors</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Colors</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcColor"/><anchor id="CcColorRgb"/><anchor id="CcColorHsv"/>
+<synopsis>
+
+
+
+                    <link linkend="CcColor-struct">CcColor</link>;
+typedef             <link linkend="CcColorRgb">CcColorRgb</link>;
+typedef             <link linkend="CcColorHsv">CcColorHsv</link>;
+                    <link linkend="CcColorClass">CcColorClass</link>;
+<link linkend="CcColor">CcColor</link>*            <link linkend="cc-color-new-hsv">cc_color_new_hsv</link>                    (<link linkend="gdouble">gdouble</link> hue,
+                                                         <link linkend="gdouble">gdouble</link> saturation,
+                                                         <link linkend="gdouble">gdouble</link> value);
+<link linkend="CcColor">CcColor</link>*            <link linkend="cc-color-new-hsva">cc_color_new_hsva</link>                   (<link linkend="gdouble">gdouble</link> hue,
+                                                         <link linkend="gdouble">gdouble</link> saturation,
+                                                         <link linkend="gdouble">gdouble</link> value,
+                                                         <link linkend="gdouble">gdouble</link> alpha);
+<link linkend="CcColor">CcColor</link>*            <link linkend="cc-color-new-rgb">cc_color_new_rgb</link>                    (<link linkend="gdouble">gdouble</link> red,
+                                                         <link linkend="gdouble">gdouble</link> green,
+                                                         <link linkend="gdouble">gdouble</link> blue);
+<link linkend="CcColor">CcColor</link>*            <link linkend="cc-color-new-rgba">cc_color_new_rgba</link>                   (<link linkend="gdouble">gdouble</link> red,
+                                                         <link linkend="gdouble">gdouble</link> green,
+                                                         <link linkend="gdouble">gdouble</link> blue,
+                                                         <link linkend="gdouble">gdouble</link> alpha);
+<link linkend="void">void</link>                <link linkend="cc-color-apply">cc_color_apply</link>                      (<link linkend="CcColor">CcColor</link> *self,
+                                                         <link linkend="cairo-t">cairo_t</link> *cr);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----CcColor
+               +----<link linkend="CcColorHsv">CcColorHsv</link>
+               +----<link linkend="CcColorRgb">CcColorRgb</link>
+</synopsis>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcColor">CcColor</link>
+               +----CcColorRgb
+</synopsis>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcColor">CcColor</link>
+               +----CcColorHsv
+</synopsis>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcColor--alpha">alpha</link>&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+  &quot;<link linkend="CcColorRgb--blue">blue</link>&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+  &quot;<link linkend="CcColorRgb--green">green</link>&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+  &quot;<link linkend="CcColorRgb--red">red</link>&quot;                      <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+  &quot;<link linkend="CcColorHsv--hue">hue</link>&quot;                      <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+  &quot;<link linkend="CcColorHsv--saturation">saturation</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+  &quot;<link linkend="CcColorHsv--value">value</link>&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write / Construct
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcColor-struct" role="struct"/>CcColor</title>
+<indexterm><primary>CcColor</primary></indexterm><programlisting>typedef struct _CcColor CcColor;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcColorRgb" role="typedef"/>CcColorRgb</title>
+<indexterm><primary>CcColorRgb</primary></indexterm><programlisting>typedef CcColor CcColorRgb;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcColorHsv" role="typedef"/>CcColorHsv</title>
+<indexterm><primary>CcColorHsv</primary></indexterm><programlisting>typedef CcColor CcColorHsv;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcColorClass" role="struct"/>CcColorClass</title>
+<indexterm><primary>CcColorClass</primary></indexterm><programlisting>typedef struct {
+	GInitiallyUnownedClass base_class;
+
+	/* vtable */
+	void (*apply) (CcColor const* self,
+		       cairo_t      * cr);
+} CcColorClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-color-new-hsv" role="function"/>cc_color_new_hsv ()</title>
+<indexterm><primary>cc_color_new_hsv</primary></indexterm><programlisting><link linkend="CcColor">CcColor</link>*            cc_color_new_hsv                    (<link linkend="gdouble">gdouble</link> hue,
+                                                         <link linkend="gdouble">gdouble</link> saturation,
+                                                         <link linkend="gdouble">gdouble</link> value);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hue</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>saturation</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-color-new-hsva" role="function"/>cc_color_new_hsva ()</title>
+<indexterm><primary>cc_color_new_hsva</primary></indexterm><programlisting><link linkend="CcColor">CcColor</link>*            cc_color_new_hsva                   (<link linkend="gdouble">gdouble</link> hue,
+                                                         <link linkend="gdouble">gdouble</link> saturation,
+                                                         <link linkend="gdouble">gdouble</link> value,
+                                                         <link linkend="gdouble">gdouble</link> alpha);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hue</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>saturation</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>alpha</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-color-new-rgb" role="function"/>cc_color_new_rgb ()</title>
+<indexterm><primary>cc_color_new_rgb</primary></indexterm><programlisting><link linkend="CcColor">CcColor</link>*            cc_color_new_rgb                    (<link linkend="gdouble">gdouble</link> red,
+                                                         <link linkend="gdouble">gdouble</link> green,
+                                                         <link linkend="gdouble">gdouble</link> blue);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>red</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>green</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>blue</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-color-new-rgba" role="function"/>cc_color_new_rgba ()</title>
+<indexterm><primary>cc_color_new_rgba</primary></indexterm><programlisting><link linkend="CcColor">CcColor</link>*            cc_color_new_rgba                   (<link linkend="gdouble">gdouble</link> red,
+                                                         <link linkend="gdouble">gdouble</link> green,
+                                                         <link linkend="gdouble">gdouble</link> blue,
+                                                         <link linkend="gdouble">gdouble</link> alpha);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>red</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>green</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>blue</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>alpha</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-color-apply" role="function"/>cc_color_apply ()</title>
+<indexterm><primary>cc_color_apply</primary></indexterm><programlisting><link linkend="void">void</link>                cc_color_apply                      (<link linkend="CcColor">CcColor</link> *self,
+                                                         <link linkend="cairo-t">cairo_t</link> *cr);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cr</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcColor--alpha"/>The &quot;<literal>alpha</literal>&quot; property</title>
+<indexterm><primary>CcColor:alpha</primary></indexterm><programlisting>  &quot;alpha&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Alpha.</para><para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2><title><anchor id="CcColorRgb--blue"/>The &quot;<literal>blue</literal>&quot; property</title>
+<indexterm><primary>CcColorRgb:blue</primary></indexterm><programlisting>  &quot;blue&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Blue.</para><para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2><title><anchor id="CcColorRgb--green"/>The &quot;<literal>green</literal>&quot; property</title>
+<indexterm><primary>CcColorRgb:green</primary></indexterm><programlisting>  &quot;green&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Green.</para><para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2><title><anchor id="CcColorRgb--red"/>The &quot;<literal>red</literal>&quot; property</title>
+<indexterm><primary>CcColorRgb:red</primary></indexterm><programlisting>  &quot;red&quot;                      <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Red.</para><para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2><title><anchor id="CcColorHsv--hue"/>The &quot;<literal>hue</literal>&quot; property</title>
+<indexterm><primary>CcColorHsv:hue</primary></indexterm><programlisting>  &quot;hue&quot;                      <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Hue.</para><para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcColorHsv--saturation"/>The &quot;<literal>saturation</literal>&quot; property</title>
+<indexterm><primary>CcColorHsv:saturation</primary></indexterm><programlisting>  &quot;saturation&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Saturation.</para><para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="CcColorHsv--value"/>The &quot;<literal>value</literal>&quot; property</title>
+<indexterm><primary>CcColorHsv:value</primary></indexterm><programlisting>  &quot;value&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write / Construct</programlisting>
+<para>Value.</para><para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

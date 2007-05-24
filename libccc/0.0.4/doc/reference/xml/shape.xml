@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-shape">
+<refmeta>
+<refentrytitle role="top_of_page">shape</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>shape</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcShape"/>
+<synopsis>
+
+
+
+                    <link linkend="CcShape-struct">CcShape</link>;
+                    <link linkend="CcShapeClass">CcShapeClass</link>;
+<link linkend="CcBrush">CcBrush</link>*            <link linkend="cc-shape-get-brush-border">cc_shape_get_brush_border</link>           (<link linkend="CcShape">CcShape</link> *self);
+<link linkend="CcBrush">CcBrush</link>*            <link linkend="cc-shape-get-brush-content">cc_shape_get_brush_content</link>          (<link linkend="CcShape">CcShape</link> *self);
+<link linkend="GType">GType</link>               <link linkend="cc-shape-get-type">cc_shape_get_type</link>                   (void);
+<link linkend="gdouble">gdouble</link>             <link linkend="cc-shape-get-width">cc_shape_get_width</link>                  (<link linkend="CcShape">CcShape</link> *shape,
+                                                         <link linkend="CcView">CcView</link> *view);
+<link linkend="void">void</link>                <link linkend="cc-shape-set-brush-border">cc_shape_set_brush_border</link>           (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="CcBrush">CcBrush</link> *brush);
+<link linkend="void">void</link>                <link linkend="cc-shape-set-brush-content">cc_shape_set_brush_content</link>          (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="CcBrush">CcBrush</link> *brush);
+<link linkend="void">void</link>                <link linkend="cc-shape-set-width-pixels">cc_shape_set_width_pixels</link>           (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> width);
+<link linkend="void">void</link>                <link linkend="cc-shape-set-width-units">cc_shape_set_width_units</link>            (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> width);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="CcItem">CcItem</link>
+               +----CcShape
+                     +----<link linkend="CcCircle">CcCircle</link>
+                     +----<link linkend="CcLine">CcLine</link>
+                     +----<link linkend="CcRectangle">CcRectangle</link>
+                     +----<link linkend="CcText">CcText</link>
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+CcShape implements
+ <link linkend="CcItemView">CcItemView</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="CcShape--brush-border">brush-border</link>&quot;             <link linkend="CcBrush">CcBrush</link>               : Read / Write
+  &quot;<link linkend="CcShape--brush-content">brush-content</link>&quot;            <link linkend="CcBrush">CcBrush</link>               : Read / Write
+  &quot;<link linkend="CcShape--width-pixels">width-pixels</link>&quot;             <link linkend="gdouble">gdouble</link>               : Write
+  &quot;<link linkend="CcShape--width-units">width-units</link>&quot;              <link linkend="gdouble">gdouble</link>               : Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcShape-struct" role="struct"/>CcShape</title>
+<indexterm><primary>CcShape</primary></indexterm><programlisting>typedef struct _CcShape CcShape;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcShapeClass" role="struct"/>CcShapeClass</title>
+<indexterm><primary>CcShapeClass</primary></indexterm><programlisting>typedef struct {
+	CcItemClass base_class;
+
+	void (*path)           (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+	void (*render_content) (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+	void (*render_border)  (CcShape* self,
+				CcView * view,
+				cairo_t* cr);
+} CcShapeClass;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-get-brush-border" role="function"/>cc_shape_get_brush_border ()</title>
+<indexterm><primary>cc_shape_get_brush_border</primary></indexterm><programlisting><link linkend="CcBrush">CcBrush</link>*            cc_shape_get_brush_border           (<link linkend="CcShape">CcShape</link> *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-get-brush-content" role="function"/>cc_shape_get_brush_content ()</title>
+<indexterm><primary>cc_shape_get_brush_content</primary></indexterm><programlisting><link linkend="CcBrush">CcBrush</link>*            cc_shape_get_brush_content          (<link linkend="CcShape">CcShape</link> *self);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-get-type" role="function"/>cc_shape_get_type ()</title>
+<indexterm><primary>cc_shape_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               cc_shape_get_type                   (void);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-get-width" role="function"/>cc_shape_get_width ()</title>
+<indexterm><primary>cc_shape_get_width</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             cc_shape_get_width                  (<link linkend="CcShape">CcShape</link> *shape,
+                                                         <link linkend="CcView">CcView</link> *view);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>shape</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>view</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-set-brush-border" role="function"/>cc_shape_set_brush_border ()</title>
+<indexterm><primary>cc_shape_set_brush_border</primary></indexterm><programlisting><link linkend="void">void</link>                cc_shape_set_brush_border           (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="CcBrush">CcBrush</link> *brush);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>brush</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-set-brush-content" role="function"/>cc_shape_set_brush_content ()</title>
+<indexterm><primary>cc_shape_set_brush_content</primary></indexterm><programlisting><link linkend="void">void</link>                cc_shape_set_brush_content          (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="CcBrush">CcBrush</link> *brush);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>brush</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-set-width-pixels" role="function"/>cc_shape_set_width_pixels ()</title>
+<indexterm><primary>cc_shape_set_width_pixels</primary></indexterm><programlisting><link linkend="void">void</link>                cc_shape_set_width_pixels           (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> width);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-shape-set-width-units" role="function"/>cc_shape_set_width_units ()</title>
+<indexterm><primary>cc_shape_set_width_units</primary></indexterm><programlisting><link linkend="void">void</link>                cc_shape_set_width_units            (<link linkend="CcShape">CcShape</link> *self,
+                                                         <link linkend="gdouble">gdouble</link> width);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="CcShape--brush-border"/>The &quot;<literal>brush-border</literal>&quot; property</title>
+<indexterm><primary>CcShape:brush-border</primary></indexterm><programlisting>  &quot;brush-border&quot;             <link linkend="CcBrush">CcBrush</link>               : Read / Write</programlisting>
+<para>The brush for drawing the border.</para></refsect2>
+<refsect2><title><anchor id="CcShape--brush-content"/>The &quot;<literal>brush-content</literal>&quot; property</title>
+<indexterm><primary>CcShape:brush-content</primary></indexterm><programlisting>  &quot;brush-content&quot;            <link linkend="CcBrush">CcBrush</link>               : Read / Write</programlisting>
+<para>The brush for drawing the content.</para></refsect2>
+<refsect2><title><anchor id="CcShape--width-pixels"/>The &quot;<literal>width-pixels</literal>&quot; property</title>
+<indexterm><primary>CcShape:width-pixels</primary></indexterm><programlisting>  &quot;width-pixels&quot;             <link linkend="gdouble">gdouble</link>               : Write</programlisting>
+<para>The width of the outline in pixels.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2><title><anchor id="CcShape--width-units"/>The &quot;<literal>width-units</literal>&quot; property</title>
+<indexterm><primary>CcShape:width-units</primary></indexterm><programlisting>  &quot;width-units&quot;              <link linkend="gdouble">gdouble</link>               : Write</programlisting>
+<para>The width of the outline in canvas units.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 1</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

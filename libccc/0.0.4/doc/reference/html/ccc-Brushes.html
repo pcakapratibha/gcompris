@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Brushes</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="prev" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="next" href="ccc-Color-Brush.html" title="Color Brush">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Fundamentals.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-Fundamentals.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-Color-Brush.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2547616" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2569288" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2569252" class="shortcut">Object Hierarchy</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-Brushes"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2547616"></a><span class="refentrytitle">Brushes</span>
+</h2>
+<p>Brushes</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcBrush"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-Brushes.html#CcBrush-struct">CcBrush</a>;
+                    <a href="ccc-Brushes.html#CcBrushClass">CcBrushClass</a>;
+void                <a href="ccc-Brushes.html#cc-brush-apply">cc_brush_apply</a>                      (<a href="ccc-Brushes.html#CcBrush">CcBrush</a> *self,
+                                                         cairo_t *cr);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2569252"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----CcBrush
+               +----<a href="ccc-Color-Brush.html#CcBrushColor">CcBrushColor</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2569288"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2569304"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2569315"></a><h3>
+<a name="CcBrush-struct"></a>CcBrush</h3>
+<a class="indexterm" name="id2569328"></a><pre class="programlisting">typedef struct _CcBrush CcBrush;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2569343"></a><h3>
+<a name="CcBrushClass"></a>CcBrushClass</h3>
+<a class="indexterm" name="id2569355"></a><pre class="programlisting">typedef struct {
+	GInitiallyUnownedClass base_class;
+
+	/* vtable */
+	void (*apply) (CcBrush* brush,
+		       cairo_t* cr);
+} CcBrushClass;
+</pre>
+<p>
+A brush class.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term">GInitiallyUnownedClass&#160;<em class="structfield"><code>base_class</code></em>;</span></td>
+<td> the parent class for GType
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="structfield"><code>apply</code></em>&#160;()</span></td>
+<td> the virtual function that's called from <a href="ccc-Brushes.html#cc-brush-apply"><code class="function">cc_brush_apply()</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2586394"></a><h3>
+<a name="cc-brush-apply"></a>cc_brush_apply ()</h3>
+<a class="indexterm" name="id2586406"></a><pre class="programlisting">void                cc_brush_apply                      (<a href="ccc-Brushes.html#CcBrush">CcBrush</a> *self,
+                                                         cairo_t *cr);</pre>
+<p>
+Apply a brush to a cairo context. This is usually used from item
+implementations while rendering to a context.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td> a <a href="ccc-Brushes.html#CcBrush"><span class="type">CcBrush</span></a>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>cr</code></em>&#160;:</span></td>
+<td> a cairo context
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

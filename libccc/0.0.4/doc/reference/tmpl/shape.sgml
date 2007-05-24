@@ -1,0 +1,127 @@
+<!-- ##### SECTION Title ##### -->
+shape
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcShape ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcShape:brush-border ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcShape:brush-content ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcShape:width-pixels ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcShape:width-units ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcShapeClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+@path: 
+@render_content: 
+@render_border: 
+
+<!-- ##### FUNCTION cc_shape_get_brush_border ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_shape_get_brush_content ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_shape_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_shape_get_width ##### -->
+<para>
+
+</para>
+
+@shape: 
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_shape_set_brush_border ##### -->
+<para>
+
+</para>
+
+@self: 
+@brush: 
+
+
+<!-- ##### FUNCTION cc_shape_set_brush_content ##### -->
+<para>
+
+</para>
+
+@self: 
+@brush: 
+
+
+<!-- ##### FUNCTION cc_shape_set_width_pixels ##### -->
+<para>
+
+</para>
+
+@self: 
+@width: 
+
+
+<!-- ##### FUNCTION cc_shape_set_width_units ##### -->
+<para>
+
+</para>
+
+@self: 
+@width: 
+
+

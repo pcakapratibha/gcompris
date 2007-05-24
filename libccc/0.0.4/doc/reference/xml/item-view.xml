@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="ccc-Item-View">
+<refmeta>
+<refentrytitle role="top_of_page">Item View</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>CCC Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Item View</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="CcItemView"/>
+<synopsis>
+
+
+
+                    <link linkend="CcItemView-struct">CcItemView</link>;
+                    <link linkend="CcItemViewIface">CcItemViewIface</link>;
+<link linkend="void">void</link>                <link linkend="cc-item-view-register">cc_item_view_register</link>               (<link linkend="CcItemView">CcItemView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item);
+<link linkend="void">void</link>                <link linkend="cc-item-view-unregister">cc_item_view_unregister</link>             (<link linkend="CcItemView">CcItemView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GInterface">GInterface</link>
+   +----CcItemView
+</synopsis>
+
+</refsect1>
+
+<refsect1 role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+CcItemView requires
+ <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+
+<refsect1 role="derived_interfaces">
+<title role="derived_interfaces.title">Known Derived Interfaces</title>
+<para>
+CcItemView is required by
+ <link linkend="CcView">CcView</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+CcItemView is implemented by
+ <link linkend="CcCamera">CcCamera</link>,  <link linkend="CcText">CcText</link>,  <link linkend="CcShape">CcShape</link>,  <link linkend="CcItem">CcItem</link>,  <link linkend="CcViewCellRenderer">CcViewCellRenderer</link>,  <link linkend="CcPixbuf">CcPixbuf</link>,  <link linkend="CcLine">CcLine</link>,  <link linkend="CcRoundedRectangle">CcRoundedRectangle</link>,  <link linkend="CcViewWidget">CcViewWidget</link>,  <link linkend="CcCircle">CcCircle</link> and  <link linkend="CcRectangle">CcRectangle</link>.</para>
+
+</refsect1>
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="CcItemView-struct" role="struct"/>CcItemView</title>
+<indexterm><primary>CcItemView</primary></indexterm><programlisting>typedef struct _CcItemView CcItemView;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="CcItemViewIface" role="struct"/>CcItemViewIface</title>
+<indexterm><primary>CcItemViewIface</primary></indexterm><programlisting>typedef struct {
+	GTypeInterface base_iface;
+
+	/* vtable */
+	void (*item_added)        (CcItemView   * self,
+				   CcItem       * item,
+				   gint           position,
+				   CcItem       * child);
+	void (*item_removed)      (CcItemView   * self,
+				   CcItem       * item,
+				   gint           position,
+				   CcItem       * child);
+	void (*item_dirty)        (CcItemView   * self,
+				   CcItem       * item,
+				   CcView const * view,
+				   CcDRect const* dirty);
+	void (*notify_all_bounds) (CcItemView   * self,
+				   CcItem       * item,
+				   CcView       * view,
+				   CcDRect const* all_bounds);
+} CcItemViewIface;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="cc-item-view-register" role="function"/>cc_item_view_register ()</title>
+<indexterm><primary>cc_item_view_register</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_view_register               (<link linkend="CcItemView">CcItemView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>item</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="cc-item-view-unregister" role="function"/>cc_item_view_unregister ()</title>
+<indexterm><primary>cc_item_view_unregister</primary></indexterm><programlisting><link linkend="void">void</link>                cc_item_view_unregister             (<link linkend="CcItemView">CcItemView</link> *self,
+                                                         <link linkend="CcItem">CcItem</link> *item);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>item</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

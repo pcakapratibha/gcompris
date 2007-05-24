@@ -1,0 +1,52 @@
+<!-- ##### SECTION Title ##### -->
+Utilities
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### FUNCTION cc_accumulator_boolean ##### -->
+<para>
+
+</para>
+
+@hint: 
+@return_accu: 
+@handler_return: 
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_point_grid_align ##### -->
+<para>
+
+</para>
+
+@x: 
+@y: 
+@width: 
+
+
+<!-- ##### MACRO cc_return_if_unimplemented ##### -->
+<para>
+
+</para>
+
+@klass: 
+@member: 
+
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>printer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="libccc Reference Manual">
+<link rel="up" href="ccc-View-Elements.html" title="View Elements">
+<link rel="prev" href="ccc-Widget.html" title="Widget">
+<link rel="next" href="ccc-png-writer.html" title="png-writer">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="ccc-Working-with-the-Canvas.html" title="Part&#160;I.&#160;Working with the Canvas">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="chapter" href="ccc-Writing-custom-canvas-items.html" title="Writing custom canvas items">
+<link rel="part" href="ccc-Internals.html" title="Part&#160;II.&#160;Internals">
+<link rel="chapter" href="ccc-Bounds-Handling.html" title="Bounds Handling">
+<link rel="chapter" href="ccc-Event-Handling.html" title="Event Handling">
+<link rel="chapter" href="ccc-Focus-Handling.html" title="Focus Handling">
+<link rel="chapter" href="ccc-Zoom-and-Scroll.html" title="Zooming and Scrolling">
+<link rel="chapter" href="ccc-Known-Bugs.html" title="Known Bugs">
+<link rel="part" href="ccc-API-Reference.html" title="Part&#160;III.&#160;API Reference">
+<link rel="chapter" href="ccc-Object-Hierarchy.html" title="Object Hierarchy">
+<link rel="chapter" href="ccc-Fundamentals.html" title="Fundamentals">
+<link rel="chapter" href="ccc-Canvas-Items.html" title="Canvas Items">
+<link rel="chapter" href="ccc-View-Elements.html" title="View Elements">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ccc-Widget.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ccc-View-Elements.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libccc Reference Manual</th>
+<td><a accesskey="n" href="ccc-png-writer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2585042" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2608333" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2608272" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2608302" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="ccc-printer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2585042"></a><span class="refentrytitle">printer</span>
+</h2>
+<p>printer</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="CcPrinter"></a><pre class="synopsis">
+
+
+
+                    <a href="ccc-printer.html#CcPrinter-struct">CcPrinter</a>;
+                    <a href="ccc-printer.html#CcPrinterClass">CcPrinterClass</a>;
+GType               <a href="ccc-printer.html#cc-printer-get-type">cc_printer_get_type</a>                 (void);
+<a href="ccc-printer.html#CcPrinter">CcPrinter</a>*          <a href="ccc-printer.html#cc-printer-new">cc_printer_new</a>                      (gchar const*filename);
+void                <a href="ccc-printer.html#cc-printer-print-page">cc_printer_print_page</a>               (<a href="ccc-printer.html#CcPrinter">CcPrinter</a> *self);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608272"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----CcPrinter
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608302"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="ccc-printer.html#CcPrinter--filename">filename</a>"                 gchararray            : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608333"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608348"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2608359"></a><h3>
+<a name="CcPrinter-struct"></a>CcPrinter</h3>
+<a class="indexterm" name="id2608372"></a><pre class="programlisting">typedef struct _CcPrinter CcPrinter;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2609111"></a><h3>
+<a name="CcPrinterClass"></a>CcPrinterClass</h3>
+<a class="indexterm" name="id2609124"></a><pre class="programlisting">typedef struct {
+	GInitiallyUnownedClass base_class;
+} CcPrinterClass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2609141"></a><h3>
+<a name="cc-printer-get-type"></a>cc_printer_get_type ()</h3>
+<a class="indexterm" name="id2609153"></a><pre class="programlisting">GType               cc_printer_get_type                 (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2609189"></a><h3>
+<a name="cc-printer-new"></a>cc_printer_new ()</h3>
+<a class="indexterm" name="id2609202"></a><pre class="programlisting"><a href="ccc-printer.html#CcPrinter">CcPrinter</a>*          cc_printer_new                      (gchar const*filename);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>filename</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2609258"></a><h3>
+<a name="cc-printer-print-page"></a>cc_printer_print_page ()</h3>
+<a class="indexterm" name="id2609270"></a><pre class="programlisting">void                cc_printer_print_page               (<a href="ccc-printer.html#CcPrinter">CcPrinter</a> *self);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>self</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2609317"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2609327"></a><h3>
+<a name="CcPrinter--filename"></a>The "<code class="literal">filename</code>" property</h3>
+<a class="indexterm" name="id2609342"></a><pre class="programlisting">  "filename"                 gchararray            : Read / Write</pre>
+<p>The name of the output file.</p>
+<p>Default value: "output.pdf"</p>
+</div>
+</div>
+</div>
+</body>
+</html>

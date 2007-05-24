@@ -1,0 +1,79 @@
+<!-- ##### SECTION Title ##### -->
+circle
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT CcCircle ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcCircle:anchor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcCircle:radius ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT CcCircleClass ##### -->
+<para>
+
+</para>
+
+@base_class: 
+
+<!-- ##### FUNCTION cc_circle_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_circle_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_circle_set_anchor ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION cc_circle_set_radius ##### -->
+<para>
+
+</para>
+
+@self: 
+@radius: 
+
+

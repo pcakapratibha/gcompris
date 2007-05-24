@@ -1,0 +1,14 @@
+CcItem CcItemView
+CcCamera CcView CcItemView
+CcShape CcItemView
+CcCircle CcItemView
+CcLine CcItemView
+CcRectangle CcItemView
+CcRoundedRectangle CcItemView
+CcText CcItemView
+CcPixbuf CcItemView
+CcViewCellRenderer CcView CcItemView
+GtkWidget AtkImplementorIface
+GtkDrawingArea AtkImplementorIface
+CcViewWidget CcView CcItemView AtkImplementorIface
+GtkContainer AtkImplementorIface

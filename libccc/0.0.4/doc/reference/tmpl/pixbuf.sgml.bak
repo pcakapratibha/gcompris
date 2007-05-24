@@ -1,0 +1,146 @@
+<!-- ##### SECTION Title ##### -->
+pixbuf
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### TYPEDEF CcPixbuf ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG CcPixbuf:pixbuf ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcPixbuf:position-h ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcPixbuf:position-h-set ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcPixbuf:position-w ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcPixbuf:position-w-set ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcPixbuf:position-x ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcPixbuf:position-y ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG CcPixbuf:rotation ##### -->
+<para>
+
+</para>
+
+<!-- ##### TYPEDEF CcPixbufClass ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION cc_pixbuf_get_rotation ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_pixbuf_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_pixbuf_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION cc_pixbuf_set_pixbuf ##### -->
+<para>
+
+</para>
+
+@self: 
+@pixbuf: 
+
+
+<!-- ##### FUNCTION cc_pixbuf_set_position ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+@w: 
+@h: 
+
+
+<!-- ##### FUNCTION cc_pixbuf_set_rotation ##### -->
+<para>
+
+</para>
+
+@self: 
+@rotation: 
+
+
+<!-- ##### FUNCTION cc_pixbuf_set_position_x ##### -->
+<para>
+
+</para>
+
+@self: 
+@pos_x: 
+
+
+<!-- ##### FUNCTION cc_pixbuf_set_position_y ##### -->
+<para>
+
+</para>
+
+@self: 
+@pos_y: 
+
+
