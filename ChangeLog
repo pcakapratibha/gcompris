@@ -1,3 +1,10 @@
+2007-05-26  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Removed x86 binary used for the build and fixed the makefile to
+	make sure it's recreated.
+
+	* src/libart_lgpl/Makefile.am:
+
 2007-05-23  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- bug reported by Khaled, in arabic wordsgame is missing the character
