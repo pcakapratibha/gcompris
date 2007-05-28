@@ -1,3 +1,11 @@
+2007-05-28  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- The click on letter activity was only proposing the first 4 letters
+	  of the alphabet, whatever the level.
+	  (Bug reported by Yannis)
+
+	* src/boards/click_on_letter.c: (click_on_letter_create_item):
+
 2007-05-26  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Removed x86 binary used for the build and fixed the makefile to
