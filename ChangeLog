@@ -1,5 +1,13 @@
 2007-05-28  Bruno coudoin  <bruno.coudoin@free.fr>
 
+
+	- Patch by Hans de Goede fixes running on machines which
+	  have / use <prefix>/lib64 instead of <prefix>/lib
+
+	* src/gcompris/binreloc.c: (gbr_find_lib_dir):
+
+2007-05-28  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- The click on letter activity was only proposing the first 4 letters
 	  of the alphabet, whatever the level.
 	  (Bug reported by Yannis)
