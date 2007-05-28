@@ -1,5 +1,10 @@
 2007-05-28  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	* configure.in: fixed the gnuchess search path to accept gnome-gnuchess
+	                as well.
+
+2007-05-28  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- Patch by Hans de Goede concerning the fullscreen mode:
 	I've also attached a patch for the fullscreen support as I use it / ship it in
 	Fedora. I noticed that you removed the code which make gcmopris leave
