@@ -1,5 +1,36 @@
 2007-05-28  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- Patch by Hans de Goede concerning the fullscreen mode:
+	I've also attached a patch for the fullscreen support as I use it / ship it in
+	Fedora. I noticed that you removed the code which make gcmopris leave
+	fullscreen when it receives a focus out, I know that this is tricky code.
+	However removing this stops gnome-screensaver from kicking in when gcompris is
+	idel, this is especially bad for people who use the screensaver to lock the
+	screen for safety. This also breaks programs like rsi prevention keyboard
+	lockers (gnome-typing-monitor). I think you removed this because when gcompris
+	is initially started, there used to be lots of focus in, focus out events. Your
+	fix of not doing gtk_window_[un]fullscreen () when using xf86vidmode, together
+	with not using the set fullscreen on window mapping hack (instead just set
+	fullscreen as late as possible) fixes this. Now gcompris only gets a single
+	focus in event when starting, so there is no longer the lots of switching which
+	used to be there. Please give this a spin, to me its an improvment.
+
+	While testing I also noticed another bug in the fullscreen code, if you start
+	windowed and then change to fullscreen, there are quite a few no such canvas
+	errors from gnome canvas, this happens because in init_background() and
+	setup_window() some stuff (border / background creation) only happens when
+	gcompris is started in fullscreen mode. I think it would be best to always
+	create this, as apparently other code still tries to access these boxes when
+	switching to fullscreen later.
+
+	* src/gcompris/board_config.c: (gc_board_config_window_display):
+	* src/gcompris/gcompris.c: (gc_ignore_next_focus_out),
+	(setup_window), (gc_fullscreen_set), (cleanup),
+	(xf86_focus_changed), (main):
+	* src/gcompris/gcompris.h:
+
+2007-05-28  Bruno coudoin  <bruno.coudoin@free.fr>
+
 
 	- Patch by Hans de Goede fixes running on machines which
 	  have / use <prefix>/lib64 instead of <prefix>/lib
