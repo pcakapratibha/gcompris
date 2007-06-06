@@ -983,6 +983,9 @@ void gc_fullscreen_set(gboolean state)
 #endif
 	gtk_window_unfullscreen (GTK_WINDOW(window));
       gtk_widget_set_uposition (window, 0, 0);
+
+      /* Mandatory or on windows we get iconified */
+      gtk_window_deiconify (GTK_WINDOW(window));
     }
 
 }
@@ -1847,7 +1850,7 @@ main (int argc, char *argv[])
 
   if (properties->fullscreen)
     gc_fullscreen_set(properties->fullscreen);
-  
+
   gtk_widget_show_all (window);
 
   /* If a specific activity is selected, skeep the intro music */
