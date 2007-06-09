@@ -1,5 +1,21 @@
 2007-06-09  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- Added the support for a system configuration file which is
+	  under /etc/gcompris.conf on GNU/Linux and in it's root installation
+	  directory on Windows.
+	  This file if present is loaded after the user one so it overwrite the user
+	  properties.
+
+	* config.h.mingw.in:
+	* configure.in:
+	* src/gcompris/about.c: (gc_about_start):
+	* src/gcompris/gcompris.c: (gc_activation_check), (main):
+	* src/gcompris/properties.c: (gc_prop_old_config_migration),
+	(gc_prop_load):
+	* src/gcompris/properties.h:
+
+2007-06-09  Bruno coudoin  <bruno.coudoin@free.fr>
+
 
 	* boards/sounds/wahoo.wav: removed this sound, suspect origin
 	* src/boards/paratrooper.c: (next_state):
