@@ -1,3 +1,14 @@
+2007-06-12  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* Makefile.mingw.in: added support for gstreamer compilation, untested
+	* config.h.mingw.in: updated to compile on windows
+	* po/POTFILES.in: removed deprecated src/boards/draw.c
+	* src/gcompris/Makefile.mingw:
+	* src/gcompris/about.c: (gc_about_start): now the sponsor logo if any replaces
+	                                          the fsf one.
+	* src/gcompris/properties.c: (gc_prop_load): added support for user_dir and config_dir
+	                                             in the config file to make GCompris portable.
+
 2007-06-09  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Added the support for a system configuration file which is
