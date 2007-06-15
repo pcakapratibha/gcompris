@@ -1,3 +1,20 @@
+2007-06-16  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/boards2static.pl: removed, uneeded
+	* src/boards/python.c: (pythonboard_end): WARNING
+	    FIXME: COMMENTED Py_Finalize() BECAUSE THIS MAKES GCOMPRIS CRASHES AFTER ENTERING/EXITING
+            ANY PHYTHON PLUGIN LESS THAN 10 TIMES
+
+	* src/boards/python/chat.py: fixed cleanup, was crashing randomly on exit
+	* src/boards/python/pythontemplate.py: created an python activity for developers
+	* boards/pythontemplate.xml.in: -
+
+	* src/gcompris/board.c: (gc_board_init): removed draw activity (in C)
+
+	* src/gcompris/Makefile.mingw: fixed gstream, internal gnomecanvas, libart
+	* src/libart_lgpl/Makefile.mingw: created to compile on windows
+	* src/libgnomecanvas/Makefile.mingw: created to compile on windows
+
 2007-06-12  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* Makefile.mingw.in: added support for gstreamer compilation, untested
