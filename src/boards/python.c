@@ -460,7 +460,6 @@ static gboolean pythonboard_is_our_board (GcomprisBoard *gcomprisBoard){
 static gint pythonboard_key_press (guint keyval, gchar *commit_str, gchar *preedit_str){
   PyObject* result = NULL;
 
-  printf("keypress=%d\n", keyval);
   result = PyObject_CallMethod(python_board_instance, "key_press", "iss", keyval, commit_str, preedit_str);
 
   if (result==NULL) return FALSE;
