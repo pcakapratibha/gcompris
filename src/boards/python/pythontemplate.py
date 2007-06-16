@@ -12,9 +12,6 @@ class Gcompris_pythontemplate:
     # Needed to get key_press
     gcomprisBoard.disable_im_context = True
 
-    #initialisation to default values. Some of them will be replaced by
-    #the configured values.
-
   def start(self):
     print "template start"
 
