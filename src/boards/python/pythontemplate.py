@@ -1,4 +1,6 @@
 # PythonTemplate Board module
+import gtk
+import gtk.gdk
 
 class Gcompris_pythontemplate:
   """Empty gcompris python class"""
@@ -6,6 +8,9 @@ class Gcompris_pythontemplate:
 
   def __init__(self, gcomprisBoard):
     print "template init"
+
+    # Needed to get key_press
+    gcomprisBoard.disable_im_context = True
 
     #initialisation to default values. Some of them will be replaced by
     #the configured values.
@@ -31,8 +36,10 @@ class Gcompris_pythontemplate:
 
 
   def key_press(self, keyval, commit_str, preedit_str):
-    print "template  key_press %i" % keyval)
-    pass
+    utf8char = gtk.gdk.keyval_to_unicode(keyval)
+    strn = u'%c' % utf8char
+
+    print("Gcompris_pythontemplate key press keyval=%i %s" % (keyval, strn))
 
   def pause(self, pause):
     print("template pause. %i" % pause)
