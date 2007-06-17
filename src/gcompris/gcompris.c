@@ -65,7 +65,6 @@ gchar * exec_prefix = NULL;
 
 //static gint pause_board_cb (GtkWidget *widget, gpointer data);
 static void quit_cb (GtkWidget *widget, gpointer data);
-static void map_cb  (GtkWidget *widget, gpointer data);
 static gint board_widget_key_press_callback (GtkWidget   *widget,
 					    GdkEventKey *event,
 					    gpointer     client_data);
@@ -89,7 +88,6 @@ static GtkEntry *widget_activation_entry;
 
 static GcomprisProperties *properties = NULL;
 static gboolean		   antialiased = FALSE;
-static gboolean		   is_mapped = FALSE;
 
 /****************************************************************************/
 /* Some constants.  */
@@ -243,7 +241,8 @@ static struct
   int window_x;
   int window_y;
   gboolean fullscreen_active;
-} XF86VidModeData = { { 0 }, { 0 }, 0, 0, 0, 0, FALSE };
+  int ignore_focus_out;
+} XF86VidModeData = { { 0 }, { 0 }, 0, 0, 0, 0, FALSE, 0 };
 
 static void xf86_vidmode_init( void );
 static void xf86_vidmode_set_fullscreen( int state );
@@ -388,6 +387,13 @@ GnomeCanvas *gc_get_canvas()
 GtkWidget *gc_get_window()
 {
   return window;
+}
+
+void gc_ignore_next_focus_out()
+{
+#ifdef XF86_VIDMODE
+  XF86VidModeData.ignore_focus_out++;
+#endif
 }
 
 GnomeCanvasItem *gc_set_background(GnomeCanvasGroup *parent, gchar *file)
@@ -650,9 +656,6 @@ static void setup_window ()
 
   gtk_signal_connect (GTK_OBJECT (window), "delete_event",
 		      GTK_SIGNAL_FUNC (quit_cb), NULL);
-
-  gtk_signal_connect (GTK_OBJECT (window), "map_event",
-		      GTK_SIGNAL_FUNC (map_cb), NULL);
 
 #ifdef XF86_VIDMODE
   /* The Xf86VidMode code needs to accuratly now the window position,
@@ -971,11 +974,9 @@ void gc_fullscreen_set(gboolean state)
   else
     {
       /* The hide must be done at least for KDE */
-      if (is_mapped)
-        gtk_widget_hide (window);
+      gtk_widget_hide (window);
       gdk_window_set_decorations (window->window, GDK_DECOR_ALL);
-      if (is_mapped)
-        gtk_widget_show (window);
+      gtk_widget_show (window);
       gdk_window_set_functions (window->window, GDK_FUNC_ALL);
 #ifdef XF86_VIDMODE
       if(properties->noxf86vm)
@@ -1030,7 +1031,9 @@ static void cleanup()
 
   gc_board_stop();
   gc_db_exit();
-  gc_fullscreen_set(FALSE);
+#ifdef XF86_VIDMODE
+  xf86_vidmode_set_fullscreen(FALSE);
+#endif
   gc_menu_destroy();
   gc_prop_destroy(gc_prop_get());
   g_unlink(lock_file);
@@ -1055,20 +1058,6 @@ static void quit_cb (GtkWidget *widget, gpointer data)
    * It's like if code in the dialog callback continue after the gtk_main_quit is done
    */
   exit(0);
-}
-
-/*
- * We want GCompris to be set as fullscreen the later possible
- *
- */
-static void map_cb (GtkWidget *widget, gpointer data)
-{
-  if(is_mapped == FALSE)
-    {
-      gc_fullscreen_set(properties->fullscreen);
-      is_mapped = TRUE;
-    }
-  g_warning("gcompris window is now mapped");
 }
 
 /*
@@ -1390,9 +1379,11 @@ static gint xf86_window_configured(GtkWindow *window,
 static gint xf86_focus_changed(GtkWindow *window,
   GdkEventFocus *event, gpointer param)
 {
-  if(properties->fullscreen)
-    gdk_pointer_grab(event->window, TRUE, 0, event->window, NULL,
-		     GDK_CURRENT_TIME);
+  /* printf("focus %s\n", (event->in)? "in":"out"); */
+  if (!event->in && XF86VidModeData.ignore_focus_out)
+    XF86VidModeData.ignore_focus_out--;
+  else if (properties->fullscreen)
+    xf86_vidmode_set_fullscreen(event->in);
   /* Act as if we aren't there / aren't hooked up */
   return FALSE;
 }
@@ -1847,6 +1838,9 @@ main (int argc, char *argv[])
 
   setup_window ();
 
+  if (properties->fullscreen)
+    gc_fullscreen_set(properties->fullscreen);
+  
   gtk_widget_show_all (window);
 
   /* If a specific activity is selected, skeep the intro music */

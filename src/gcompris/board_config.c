@@ -165,6 +165,7 @@ gc_board_config_window_display(gchar *label, GcomprisConfCallback callback)
   /* Creating a config window will cause our main window to loose focus,
      this tells the main window to ignore the next focus out event (and thus
      stay in fullscreen mode if we're fullscreen). */
+  gc_ignore_next_focus_out();
 
   /* main configuration window */
   conf_window = \
