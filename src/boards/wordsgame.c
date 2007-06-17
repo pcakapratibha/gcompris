@@ -338,9 +338,18 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 
 	if(strcmp(item_on_focus->letter, letter)==0)
 	  {
+	    gchar *tmpstr;
 	    item_on_focus->count++;
 	    g_free(item_on_focus->overword);
-	    item_on_focus->overword=g_utf8_strndup(item_on_focus->word,item_on_focus->count);
+	    tmpstr = g_utf8_strndup(item_on_focus->word,
+				    item_on_focus->count);
+	    /* Add the ZERO WIDTH JOINER to force joined char in Arabic and Hangul
+	     *  http://en.wikipedia.org/wiki/Zero-width_joiner
+	     */
+	    item_on_focus->overword = g_strdup_printf("%s%2c",
+						      tmpstr,
+						      0x200D);
+	    g_free(tmpstr);
 	    gnome_canvas_item_set (item_on_focus->overwriteItem,
 				   "text", item_on_focus->overword,
 				   NULL);
