@@ -858,7 +858,7 @@ display_activation_dialog()
 int gc_activation_check(char *code)
 {
 #ifdef  DISABLE_ACTIVATION_CODE
-  return 1
+  return 1;
 #else
   int value = 0;
   int i;
