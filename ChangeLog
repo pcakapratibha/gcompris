@@ -1,3 +1,18 @@
+2007-06-19  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Typo replacement. Replaced gcompris in GCompris, our official name.
+
+	* boards/menu.xml.in:
+	* boards/pythontemplate.xml.in:
+	* boards/pythontest.xml.in:
+	* src/boards/chess.c: (start_board):
+	* src/boards/click_on_letter.c: (sounds_are_fine):
+	* src/boards/python.c:
+	* src/boards/python/pythontest.py:
+	* src/gcompris/board.c: (gc_board_init):
+	* src/gcompris/config.c:
+	* src/gcompris/gcompris.c: (gc_terminate):
+
 2007-06-16  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/boards2static.pl: removed, uneeded
