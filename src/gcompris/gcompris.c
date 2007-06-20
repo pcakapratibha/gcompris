@@ -164,7 +164,9 @@ static GOptionEntry options[] = {
    N_("Disable XF86VidMode (No screen resolution change)."), NULL},
 
   {"root-menu", 'l', 0, G_OPTION_ARG_STRING, &popt_root_menu,
-   N_("Run GCompris with local menu (e.g -l /reading will let you play only activities in the reading directory, -l /strategy/connect4 only the connect4 activity)"), NULL},
+   N_("Run GCompris with local menu"
+      " (e.g -l /reading will let you play only activities in the reading directory, -l /strategy/connect4 only the connect4 activity)."
+      " Use '-l list' to list all the availaible activities and their descriptions."), NULL},
 
   {"local-activity", 'L', 0, G_OPTION_ARG_STRING, &popt_local_activity,
    N_("Run GCompris with local activity directory added to menu"), NULL},
