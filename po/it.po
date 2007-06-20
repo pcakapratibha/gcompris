@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-25 17:39+0200\n"
-"PO-Revision-Date: 2007-04-26 15:17+0200\n"
+"POT-Creation-Date: 2007-06-20 22:49+0200\n"
+"PO-Revision-Date: 2007-06-18 22:33+0200\n"
 "Last-Translator: Immacolata Arenga <imma@eppesuigoccas.homedns.org>\n"
 "Language-Team: IT <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -1507,7 +1507,12 @@ msgid ""
 "Enter. Your message is then broadcast on the local network, and any GCompris "
 "program running the chat activity on that local network will receive and "
 "display your message."
-msgstr "Questa attività di chiacchierata funzionerà solo con gli altri utenti di GCompris nella tua rete locale, non in Internet. Per usarla, inserisci il tuo messaggio e shiaccia Invio. Il tuo messaggio sarà poi trasmesso nella rete locale e qualsiasi programma di GCompris che sta eseguendo l'attività di chiacchierata nella rete locale lo  riceverà e lo mostrerà."
+msgstr ""
+"Questa attività di chiacchierata funzionerà solo con gli altri utenti di "
+"GCompris nella tua rete locale, non in Internet. Per usarla, inserisci il "
+"tuo messaggio e shiaccia Invio. Il tuo messaggio sarà poi trasmesso nella "
+"rete locale e qualsiasi programma di GCompris che sta eseguendo l'attività "
+"di chiacchierata nella rete locale lo  riceverà e lo mostrerà."
 
 #
 # File: ../boards/chess.xml.in.h, line: 1
@@ -2035,7 +2040,9 @@ msgstr "Fai clic su di me"
 msgid ""
 "Fish are taken from the Unix utility xfishtank. All image credits belong to "
 "Guillaume Rousse."
-msgstr "I pesci sono stati presi dal programma Unix xfishtank. I ringraziamenti per le immagini vanno a Guillaume Rousse."
+msgstr ""
+"I pesci sono stati presi dal programma Unix xfishtank. I ringraziamenti per "
+"le immagini vanno a Guillaume Rousse."
 
 #
 # File: ../boards/clickgame.xml.in.h, line: 14
@@ -2202,7 +2209,10 @@ msgid ""
 "Click the position in the line where you want to drop a piece. You can also "
 "use the arrow keys to move the piece left or right, and the down or space "
 "key to drop a piece."
-msgstr "Clicca sul punto in cui vuoi inserire un pezzo nella linea. Puoi anche usare i tasti cursore per spostare i pezzi a sinistra o a destra e la freccia verso il basso o la barra spaziatrice per far cadere il pezzo."
+msgstr ""
+"Clicca sul punto in cui vuoi inserire un pezzo nella linea. Puoi anche usare "
+"i tasti cursore per spostare i pezzi a sinistra o a destra e la freccia "
+"verso il basso o la barra spaziatrice per far cadere il pezzo."
 
 #
 # File: ../boards/connect4.xml.in.h, line: 3
@@ -2268,7 +2278,12 @@ msgid ""
 "Izarra made the two players game. Images and Artificial Intelligence taken "
 "from project 4stattack by Jeroen Vloothuis. The original project can be "
 "found on &lt;http://forcedattack.sourceforge.net&gt;"
-msgstr "Il codice originale è stato scritto nel 2005 da Laurent Lacheny. Nel 2006 Miguel de Izarra ha realizzato il gioco a due giocatori. Immagini e intelligenza artificiale sono state prese dal progetto 4stattack di Jeroen Vloothuis. Il progetto originale può essere trovato su &lt;http://forcedattack.sourceforge.net&gt;"
+msgstr ""
+"Il codice originale è stato scritto nel 2005 da Laurent Lacheny. Nel 2006 "
+"Miguel de Izarra ha realizzato il gioco a due giocatori. Immagini e "
+"intelligenza artificiale sono state prese dal progetto 4stattack di Jeroen "
+"Vloothuis. Il progetto originale può essere trovato su &lt;http://"
+"forcedattack.sourceforge.net&gt;"
 
 #
 # File: ../boards/crane.xml.in.h, line: 1
@@ -6313,10 +6328,11 @@ msgstr ""
 # File: ../boards/menu.xml.in.h, line: 1
 # File: ../boards/menu.xml.in.h, line: 1
 #: ../boards/menu.xml.in.h:1
+#, fuzzy
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of "
 "activities.\n"
-"At the bottom of the screen is the gcompris control bar.\n"
+"At the bottom of the screen is the GCompris control bar.\n"
 "The following icons are displayed from right to left.\n"
 "(note that each icon is displayed only if available in the current "
 "activity)\n"
@@ -6377,8 +6393,9 @@ msgstr ""
 # File: ../boards/menu.xml.in.h, line: 18
 # File: ../boards/menu.xml.in.h, line: 18
 #: ../boards/menu.xml.in.h:19
+#, fuzzy
 msgid ""
-"The goal of gcompris is to provide a free alternative to popular proprietary "
+"The goal of GCompris is to provide a free alternative to popular proprietary "
 "edutainment software"
 msgstr ""
 "Lo scopo di gcompris è fornire una alternativa libera ai popolari software\n"
@@ -7093,17 +7110,40 @@ msgstr "Rompicapi vari."
 # File: ../boards/pythontest.xml.in.h, line: 1
 # File: ../boards/pythontest.xml.in.h, line: 1
 # File: ../boards/pythontest.xml.in.h, line: 1
-#: ../boards/pythontest.xml.in.h:1
-msgid "Add a language-binding to gcompris."
+#: ../boards/pythontemplate.xml.in.h:1 ../boards/pythontest.xml.in.h:1
+#, fuzzy
+msgid "Add a language-binding to GCompris."
 msgstr "Aggiungi a gcompris un collegamento a una lingua."
 
 #
 # File: ../boards/pythontest.xml.in.h, line: 2
 # File: ../boards/pythontest.xml.in.h, line: 2
 # File: ../boards/pythontest.xml.in.h, line: 2
-#: ../boards/pythontest.xml.in.h:2
+#: ../boards/pythontemplate.xml.in.h:2 ../boards/pythontest.xml.in.h:2
 msgid "Advanced Python Programmer :)"
 msgstr "Programmatore esperto di Python :)"
+
+#: ../boards/pythontemplate.xml.in.h:3
+msgid "An empty python activity to use as a starting point"
+msgstr "Un'attività vuota in python da usare come punto di partenza"
+
+#
+# File: ../boards/pythontest.xml.in.h, line: 3
+# File: ../boards/pythontest.xml.in.h, line: 3
+# File: ../boards/pythontest.xml.in.h, line: 3
+#: ../boards/pythontemplate.xml.in.h:4
+msgid "Python Template"
+msgstr "Modello in Python"
+
+#
+# File: ../boards/pythontest.xml.in.h, line: 5
+# File: ../boards/pythontest.xml.in.h, line: 5
+# File: ../boards/pythontest.xml.in.h, line: 5
+#: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
+msgstr ""
+"Grazie a Guido van Rossum e al gruppo Python per questo potente linguaggio!"
 
 #
 # File: ../boards/pythontest.xml.in.h, line: 3
@@ -7120,16 +7160,6 @@ msgstr "Test in Python"
 #: ../boards/pythontest.xml.in.h:4
 msgid "Test board for the python plugin"
 msgstr "Tavola di test per il plugin di Python"
-
-#
-# File: ../boards/pythontest.xml.in.h, line: 5
-# File: ../boards/pythontest.xml.in.h, line: 5
-# File: ../boards/pythontest.xml.in.h, line: 5
-#: ../boards/pythontest.xml.in.h:5
-msgid ""
-"Thanks to Guido van Rossum and the python team for this powerful language!"
-msgstr ""
-"Grazie a Guido van Rossum e al gruppo Python per questo potente linguaggio!"
 
 #
 # File: ../boards/railroad.xml.in.h, line: 1
@@ -7587,7 +7617,9 @@ msgstr ""
 msgid ""
 "To balance the scales, move the masses on the left or the right side. The "
 "masses can be arranged in any order."
-msgstr "Per equilibrare la bilancia sposta i pesi sul piatto di sinistra o di destra. I pesi possono essere sistemati in qualsiasi ordine."
+msgstr ""
+"Per equilibrare la bilancia sposta i pesi sul piatto di sinistra o di "
+"destra. I pesi possono essere sistemati in qualsiasi ordine."
 
 #
 # File: ../boards/searace.xml.in.h, line: 1
@@ -7621,12 +7653,22 @@ msgid ""
 "anywhere on the map to get a measurement in distance and angle. Going to the "
 "next level will give you more complex weather conditions."
 msgstr ""
-"Nel campo di testo inserisci un comando per riga, per dirigere la tua barca.\n"
-"I comandi supportati sono mostrati tra le due aree di inserimento. I comandi 'sinistra' e 'destra' devono essere seguiti da un angolo in gradi. Il valore dell'angolo è anche definito come un 'parametro' del comando sinistra o destra. Il valore predefinito dell'angolo è di 45 gradi. Il comando 'avanti' accetta un parametro di distanza. La distanza predefinita è 1.\n"
+"Nel campo di testo inserisci un comando per riga, per dirigere la tua "
+"barca.\n"
+"I comandi supportati sono mostrati tra le due aree di inserimento. I comandi "
+"'sinistra' e 'destra' devono essere seguiti da un angolo in gradi. Il valore "
+"dell'angolo è anche definito come un 'parametro' del comando sinistra o "
+"destra. Il valore predefinito dell'angolo è di 45 gradi. Il comando 'avanti' "
+"accetta un parametro di distanza. La distanza predefinita è 1.\n"
 "Per esempio:\n"
 "- sinistra 90: ti fa girare perpendicolarmente a sinistra;\n"
 "- avanti 10: ti fa andare avanti di 10 unità (come mostrato sul righello).\n"
-"Lo scopo è raggiungere la destra dello schermo (la linea rossa). Quando l'avrai raggiunta, puoi provare a migliorare il tuo programma ed iniziare una nuova gara con le stesse condizioni climatiche usando il pulsante riprova. Puoi cliccare e trascinare il tuo mouse ovunque sulla mappa per avere la misura di distanza e angolo. Nel livello successivo troverai condizioni climatiche più complesse."
+"Lo scopo è raggiungere la destra dello schermo (la linea rossa). Quando "
+"l'avrai raggiunta, puoi provare a migliorare il tuo programma ed iniziare "
+"una nuova gara con le stesse condizioni climatiche usando il pulsante "
+"riprova. Puoi cliccare e trascinare il tuo mouse ovunque sulla mappa per "
+"avere la misura di distanza e angolo. Nel livello successivo troverai "
+"condizioni climatiche più complesse."
 
 #
 # File: ../boards/searace.xml.in.h, line: 3
@@ -7813,7 +7855,11 @@ msgid ""
 "Click on different active elements : engine, rudders and air tanks, in order "
 "to navigate to the required depth. There is a close gate on the right. Catch "
 "the jewel to open it, then pass through it to reach the next level."
-msgstr "Fai clic sui vari elementi attivi: motore, timoni e serbatoi d'aria, in modo da navigare alla profondità richiesta. C'è una porta chiusa sulla destra. Prendi il gioiello per aprirla, poi passa attraverso la porta per raggiungere il livello successivo."
+msgstr ""
+"Fai clic sui vari elementi attivi: motore, timoni e serbatoi d'aria, in modo "
+"da navigare alla profondità richiesta. C'è una porta chiusa sulla destra. "
+"Prendi il gioiello per aprirla, poi passa attraverso la porta per "
+"raggiungere il livello successivo."
 
 #: ../boards/submarine.xml.in.h:2
 msgid "Learn how a submarine works"
@@ -8246,7 +8292,13 @@ msgid ""
 "The first 4 buttons let you select the style of the line on which your "
 "insert cursor is. The 2 others buttons with multiple choices let you select "
 "from a predefined document and color theme."
-msgstr "In questo elaboratore di testi puoi scrivere il testo che vuoi, salvarlo e riutilizzarlo. Puoi aggiungere alcuni stili al tuo testo usando i pulsanti sulla sinistra. I primi 4 pulsanti ti permettono di selezionare lo stile della riga su cui è il cursore di inserimento. Gli altri 2 pulsanti ti fanno selezionare con molteplici possibilità di scelta un documento predefinito e il colore del tema."
+msgstr ""
+"In questo elaboratore di testi puoi scrivere il testo che vuoi, salvarlo e "
+"riutilizzarlo. Puoi aggiungere alcuni stili al tuo testo usando i pulsanti "
+"sulla sinistra. I primi 4 pulsanti ti permettono di selezionare lo stile "
+"della riga su cui è il cursore di inserimento. Gli altri 2 pulsanti ti fanno "
+"selezionare con molteplici possibilità di scelta un documento predefinito e "
+"il colore del tema."
 
 #: ../boards/wordprocessor.xml.in.h:3
 msgid ""
@@ -8254,11 +8306,17 @@ msgid ""
 "that it enforces the use of styles. This way, the children will understand "
 "their benefit when moving to more feature full wordprocessor like OpenOffice."
 "org."
-msgstr "Impara come inserire un testo in un elaboratore di testi. Questo elaboratore di testi è speciale nello spingere all'utilizzo di vari stili. In questo modo i bambini ne capiranno i benefici quando passeranno a elaboratori di testo più evoluti come OpenOffice."
+msgstr ""
+"Impara come inserire un testo in un elaboratore di testi. Questo elaboratore "
+"di testi è speciale nello spingere all'utilizzo di vari stili. In questo "
+"modo i bambini ne capiranno i benefici quando passeranno a elaboratori di "
+"testo più evoluti come OpenOffice."
 
 #: ../boards/wordprocessor.xml.in.h:4
 msgid "The children can type their own text or copy one given by the teacher."
-msgstr "I bambini possono scrivere da soli il loro testo o copiarne uno assegnato dall'insegnante."
+msgstr ""
+"I bambini possono scrivere da soli il loro testo o copiarne uno assegnato "
+"dall'insegnante."
 
 #
 # File: ../boards/wordprocessor.xml.in.h, line: 2
@@ -8368,9 +8426,10 @@ msgstr "Errore: il programma esterno gnuchess  è terminato inaspettatamente"
 # File: ../src/boards/chess.c, line: 194
 # File: ../src/boards/chess.c, line: 194
 #: ../src/boards/chess.c:199
+#, fuzzy
 msgid ""
 "Error: The external program gnuchess is required\n"
-"to play chess in gcompris.\n"
+"to play chess in GCompris.\n"
 "Find this program on http://www.rpmfind.net or in your\n"
 "GNU/Linux distribution\n"
 "And check it is located here: "
@@ -8508,10 +8567,10 @@ msgstr "abcdefghijklmnopqrstuvwxyz"
 # File: ../src/boards/click_on_letter.c, line: 286
 # File: ../src/boards/click_on_letter.c, line: 286
 #: ../src/boards/click_on_letter.c:286
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
-"the packages with gcompris voices for the locale '%s' or '%s'"
+"the packages with GCompris voices for the locale '%s' or '%s'"
 msgstr ""
 "Errore: questa attività richiede che siano prima installati\n"
 "i pacchetti audio di gcompris per la lingua %s o %s"
@@ -8905,7 +8964,9 @@ msgstr "$ %.0f"
 
 #: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
-msgstr "Controlla la velocità di caduta con le freccette verso il basso o verso l'alto."
+msgstr ""
+"Controlla la velocità di caduta con le freccette verso il basso o verso "
+"l'alto."
 
 #
 # File: ../src/boards/planegame.c, line: 75
@@ -8933,7 +8994,19 @@ msgstr "Tavola Python"
 # File: ../src/boards/python.c, line: 87
 # File: ../src/boards/python.c, line: 63
 # File: ../src/boards/python.c, line: 87
-#: ../src/boards/python.c:64 ../src/boards/python.c:88
+#: ../src/boards/python.c:64
+#, fuzzy
+msgid "Special board that embeds python into GCompris."
+msgstr "Tavola speciale che utilizza Python in gcompris."
+
+#
+# File: ../src/boards/python.c, line: 63
+# File: ../src/boards/python.c, line: 87
+# File: ../src/boards/python.c, line: 63
+# File: ../src/boards/python.c, line: 87
+# File: ../src/boards/python.c, line: 63
+# File: ../src/boards/python.c, line: 87
+#: ../src/boards/python.c:88
 msgid "Special board that embeds python into gcompris."
 msgstr "Tavola speciale che utilizza Python in gcompris."
 
@@ -9362,7 +9435,7 @@ msgstr "Tutti gli utenti"
 #: ../src/boards/python/admin/log_list.py:108
 #: ../src/boards/python/admin/log_list.py:287
 #: ../src/boards/python/admin/profile_list.py:121
-#: ../src/gcompris/board_config.c:667 ../src/gcompris/board_config.c:925
+#: ../src/gcompris/board_config.c:668 ../src/gcompris/board_config.c:926
 msgid "Default"
 msgstr "Predefinito"
 
@@ -9686,7 +9759,7 @@ msgstr ""
 # File: ../src/boards/python/anim.py, line: 2208
 # File: ../src/boards/python/anim.py, line: 2208
 # File: ../src/boards/python/anim.py, line: 2208
-#: ../src/boards/python/anim.py:2226
+#: ../src/boards/python/anim.py:2225
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr ""
 "SVG è disabilitato. Bisogna installare il modulo python xml per abilitarlo"
@@ -9695,7 +9768,7 @@ msgstr ""
 # File: ../src/boards/python/anim.py, line: 2364
 # File: ../src/boards/python/anim.py, line: 2364
 # File: ../src/boards/python/anim.py, line: 2364
-#: ../src/boards/python/anim.py:2382
+#: ../src/boards/python/anim.py:2381
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr ""
 "Attenzione: non è possibile trovare le seguenti immagini sul tuo sistema.\n"
@@ -9704,33 +9777,35 @@ msgstr ""
 # File: ../src/boards/python/anim.py, line: 2366
 # File: ../src/boards/python/anim.py, line: 2366
 # File: ../src/boards/python/anim.py, line: 2366
-#: ../src/boards/python/anim.py:2384
+#: ../src/boards/python/anim.py:2383
 msgid "The corresponding items have been skipped."
 msgstr "Gli oggetti corrispondenti sono stati spostati."
 
-#: ../src/boards/python/chat.py:80
+#: ../src/boards/python/chat.py:82
 msgid "All messages will be displayed here.\n"
 msgstr "Tutti i messaggi saranno mostrati qui.\n"
 
-#: ../src/boards/python/chat.py:130
+#: ../src/boards/python/chat.py:132
 msgid "Your Friends"
 msgstr "I tuoi amici"
 
-#: ../src/boards/python/chat.py:162
+#: ../src/boards/python/chat.py:164
 msgid "Your Channel"
 msgstr "Il tuo canale"
 
-#: ../src/boards/python/chat.py:188
+#: ../src/boards/python/chat.py:190
 msgid ""
 "Type your message here, to send to other GCompris users on your local "
 "network."
-msgstr "Scrivi qui il tuo messaggio da mandare agli altri utenti di GCompris nella tua rete locale."
+msgstr ""
+"Scrivi qui il tuo messaggio da mandare agli altri utenti di GCompris nella "
+"tua rete locale."
 
-#: ../src/boards/python/chat.py:322
+#: ../src/boards/python/chat.py:325
 msgid "You must set a channel in your channel entry box first.\n"
 msgstr "Devi prima impostare un canale nella casella dei canali.\n"
 
-#: ../src/boards/python/chat.py:323
+#: ../src/boards/python/chat.py:326
 msgid "Your friends must set the same channel in order to communicate with you"
 msgstr "I tuoi amici devono impostare lo stesso canale per comunicare con te"
 
@@ -10056,7 +10131,7 @@ msgstr "Ricomponi il mosaico nell'area a destra"
 # File: ../src/boards/python/melody.py, line: 115
 # File: ../src/boards/python/melody.py, line: 115
 # File: ../src/boards/python/melody.py, line: 115
-#: ../src/boards/python/melody.py:118
+#: ../src/boards/python/melody.py:120
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -10115,8 +10190,9 @@ msgstr ""
 # File: ../src/boards/python/pythontest.py, line: 148
 # File: ../src/boards/python/pythontest.py, line: 148
 #: ../src/boards/python/pythontest.py:148
+#, fuzzy
 msgid ""
-"This is the first plugin in gcompris coded in the Python\n"
+"This is the first plugin in GCompris coded in the Python\n"
 "Programming language."
 msgstr "Questo è il primo plugin scritto nel linguaggio Python."
 
@@ -10125,8 +10201,9 @@ msgstr "Questo è il primo plugin scritto nel linguaggio Python."
 # File: ../src/boards/python/pythontest.py, line: 157
 # File: ../src/boards/python/pythontest.py, line: 157
 #: ../src/boards/python/pythontest.py:157
+#, fuzzy
 msgid ""
-"It is now possible to develop gcompris activities in C or in Python.\n"
+"It is now possible to develop GCompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
 msgstr ""
 "Ora è possibile sviluppare le attività di gcompris in C o in Python.\n"
@@ -10418,7 +10495,7 @@ msgstr "Costruisci un treno simile al modello"
 # File: ../src/boards/wordsgame.c, line: 205
 # File: ../src/boards/reading.c, line: 229
 # File: ../src/boards/wordsgame.c, line: 205
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:205
+#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:206
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -10564,7 +10641,8 @@ msgstr "Peso = %s"
 # File: ../boards/scalesboard.xml.in.h, line: 2
 #: ../src/boards/scale.c:714
 msgid "Take care, you can drop masses on both sides of the scale."
-msgstr "Fai attenzione, puoi appoggiare i pesi su entrambi i piatti della bilancia."
+msgstr ""
+"Fai attenzione, puoi appoggiare i pesi su entrambi i piatti della bilancia."
 
 #
 # File: ../src/boards/target.c, line: 281
@@ -10746,7 +10824,7 @@ msgstr "Traduttori:"
 # File: ../src/gcompris/about.c, line: 249
 # File: ../src/gcompris/about.c, line: 249
 # File: ../src/gcompris/about.c, line: 249
-#: ../src/gcompris/about.c:193
+#: ../src/gcompris/about.c:230
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -10758,7 +10836,7 @@ msgstr ""
 # File: ../src/gcompris/about.c, line: 271
 # File: ../src/gcompris/about.c, line: 271
 # File: ../src/gcompris/about.c, line: 271
-#: ../src/gcompris/about.c:215
+#: ../src/gcompris/about.c:252
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
@@ -10791,7 +10869,7 @@ msgstr ""
 # File: ../src/gcompris/help.c, line: 376
 # File: ../src/gcompris/help.c, line: 386
 # File: ../src/gcompris/images_selector.c, line: 317
-#: ../src/gcompris/about.c:278 ../src/gcompris/about.c:288
+#: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
 #: ../src/gcompris/config.c:472 ../src/gcompris/config.c:482
 #: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
 #: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
@@ -10834,8 +10912,9 @@ msgstr "No, voglio continuare"
 # File: ../src/gcompris/board.c, line: 181
 # File: ../src/gcompris/board.c, line: 181
 # File: ../src/gcompris/board.c, line: 181
-#: ../src/gcompris/board.c:187
-msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
+#: ../src/gcompris/board.c:184
+#, fuzzy
+msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr ""
 "Il caricamento dinamico dei moduli non è supportato.\n"
 "gcompris non può eseguire il caricamento.\n"
@@ -10844,7 +10923,7 @@ msgstr ""
 # File: ../src/gcompris/board_config.c, line: 700
 # File: ../src/gcompris/board_config.c, line: 700
 # File: ../src/gcompris/board_config.c, line: 700
-#: ../src/gcompris/board_config.c:699
+#: ../src/gcompris/board_config.c:700
 msgid ""
 "Select the language\n"
 " to use in the board"
@@ -10852,7 +10931,7 @@ msgstr ""
 "Seleziona la lingua\n"
 "da usare nella tavola"
 
-#: ../src/gcompris/board_config.c:762
+#: ../src/gcompris/board_config.c:763
 msgid "Global GCompris mode"
 msgstr "Modalità globale di GCompris"
 
@@ -10860,15 +10939,15 @@ msgstr "Modalità globale di GCompris"
 # File: ../boards/advanced_colors/board1.xml.in.h, line: 5
 # File: ../boards/advanced_colors/board1.xml.in.h, line: 5
 # File: ../boards/advanced_colors/board1.xml.in.h, line: 5
-#: ../src/gcompris/board_config.c:763
+#: ../src/gcompris/board_config.c:764
 msgid "Normal"
 msgstr "Normale"
 
-#: ../src/gcompris/board_config.c:764
+#: ../src/gcompris/board_config.c:765
 msgid "2 clicks"
 msgstr "2 clic"
 
-#: ../src/gcompris/board_config.c:765
+#: ../src/gcompris/board_config.c:766
 msgid "both modes"
 msgstr "entrambi i modi"
 
@@ -10876,7 +10955,7 @@ msgstr "entrambi i modi"
 # File: ../src/gcompris/board_config.c, line: 700
 # File: ../src/gcompris/board_config.c, line: 700
 # File: ../src/gcompris/board_config.c, line: 700
-#: ../src/gcompris/board_config.c:793
+#: ../src/gcompris/board_config.c:794
 msgid ""
 "Select the drag and drop mode\n"
 " to use in the board"
@@ -11307,7 +11386,14 @@ msgstr "svedese"
 # File: ../src/gcompris/config.c, line: 108
 # File: ../src/gcompris/config.c, line: 108
 # File: ../src/gcompris/config.c, line: 108
-#. "ta_IN.UTF-8",	N_("Tamil"),
+#: ../src/gcompris/config.c:113
+msgid "Tamil"
+msgstr "tamil"
+
+#
+# File: ../src/gcompris/config.c, line: 108
+# File: ../src/gcompris/config.c, line: 108
+# File: ../src/gcompris/config.c, line: 108
 #: ../src/gcompris/config.c:114
 msgid "Thai"
 msgstr "tailandese"
@@ -11389,7 +11475,8 @@ msgstr "Timer veloce"
 # File: ../src/gcompris/config.c, line: 126
 # File: ../src/gcompris/config.c, line: 126
 #: ../src/gcompris/config.c:132
-msgid "800x600 (Default for gcompris)"
+#, fuzzy
+msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (predefinito per gcompris)"
 
 #
@@ -11458,8 +11545,8 @@ msgstr "Impossibile aprire la directory %s con le skin"
 # File: ../src/gcompris/config.c, line: 410
 # File: ../src/gcompris/config.c, line: 865
 # File: ../src/gcompris/config.c, line: 879
-#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:867
-#: ../src/gcompris/config.c:881
+#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:866
+#: ../src/gcompris/config.c:880
 #, c-format
 msgid "Skin : %s"
 msgstr "Skin : %s"
@@ -11508,7 +11595,7 @@ msgstr "SALVA"
 # File: ../src/gcompris/gameutil.c, line: 79
 # File: ../src/gcompris/gameutil.c, line: 79
 # File: ../src/gcompris/gameutil.c, line: 79
-#: ../src/gcompris/gameutil.c:80
+#: ../src/gcompris/gameutil.c:104
 msgid "Couldn't find or load the file"
 msgstr "Impossibile trovare o caricare il file"
 
@@ -11516,7 +11603,7 @@ msgstr "Impossibile trovare o caricare il file"
 # File: ../src/gcompris/gameutil.c, line: 81
 # File: ../src/gcompris/gameutil.c, line: 81
 # File: ../src/gcompris/gameutil.c, line: 81
-#: ../src/gcompris/gameutil.c:82
+#: ../src/gcompris/gameutil.c:106
 msgid "This activity is incomplete."
 msgstr "Questa attività è incompleta."
 
@@ -11524,7 +11611,7 @@ msgstr "Questa attività è incompleta."
 # File: ../src/gcompris/gameutil.c, line: 82
 # File: ../src/gcompris/gameutil.c, line: 82
 # File: ../src/gcompris/gameutil.c, line: 82
-#: ../src/gcompris/gameutil.c:83
+#: ../src/gcompris/gameutil.c:107
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -11536,47 +11623,52 @@ msgstr ""
 # File: ../src/gcompris/gcompris.c, line: 123
 # File: ../src/gcompris/gcompris.c, line: 123
 # File: ../src/gcompris/gcompris.c, line: 123
-#: ../src/gcompris/gcompris.c:139
-msgid "run gcompris in fullscreen mode."
+#: ../src/gcompris/gcompris.c:137
+#, fuzzy
+msgid "run GCompris in fullscreen mode."
 msgstr "esegui gcompris a schermo intero."
 
 #
 # File: ../src/gcompris/gcompris.c, line: 126
 # File: ../src/gcompris/gcompris.c, line: 126
 # File: ../src/gcompris/gcompris.c, line: 126
-#: ../src/gcompris/gcompris.c:142
-msgid "run gcompris in window mode."
+#: ../src/gcompris/gcompris.c:140
+#, fuzzy
+msgid "run GCompris in window mode."
 msgstr "esegui gcompris all'interno di una finestra."
 
 #
 # File: ../src/gcompris/gcompris.c, line: 129
 # File: ../src/gcompris/gcompris.c, line: 129
 # File: ../src/gcompris/gcompris.c, line: 129
-#: ../src/gcompris/gcompris.c:145
-msgid "run gcompris with sound enabled."
+#: ../src/gcompris/gcompris.c:143
+#, fuzzy
+msgid "run GCompris with sound enabled."
 msgstr "esegui gcompris con il sonoro abilitato."
 
 #
 # File: ../src/gcompris/gcompris.c, line: 132
 # File: ../src/gcompris/gcompris.c, line: 132
 # File: ../src/gcompris/gcompris.c, line: 132
-#: ../src/gcompris/gcompris.c:148
-msgid "run gcompris without sound."
+#: ../src/gcompris/gcompris.c:146
+#, fuzzy
+msgid "run GCompris without sound."
 msgstr "esegui gcompris senza sonoro."
 
 #
 # File: ../src/gcompris/gcompris.c, line: 135
 # File: ../src/gcompris/gcompris.c, line: 135
 # File: ../src/gcompris/gcompris.c, line: 135
-#: ../src/gcompris/gcompris.c:151
-msgid "run gcompris with the default gnome cursor."
+#: ../src/gcompris/gcompris.c:149
+#, fuzzy
+msgid "run GCompris with the default gnome cursor."
 msgstr "esegui gcompris con il cursore di gnome."
 
 #
 # File: ../src/gcompris/gcompris.c, line: 138
 # File: ../src/gcompris/gcompris.c, line: 138
 # File: ../src/gcompris/gcompris.c, line: 138
-#: ../src/gcompris/gcompris.c:154
+#: ../src/gcompris/gcompris.c:152
 msgid "display only activities with this difficulty level."
 msgstr "mostra solo attività con questo livello di difficoltà."
 
@@ -11584,7 +11676,7 @@ msgstr "mostra solo attività con questo livello di difficoltà."
 # File: ../src/gcompris/gcompris.c, line: 141
 # File: ../src/gcompris/gcompris.c, line: 141
 # File: ../src/gcompris/gcompris.c, line: 141
-#: ../src/gcompris/gcompris.c:157
+#: ../src/gcompris/gcompris.c:155
 msgid "display debug informations on the console."
 msgstr "mostra le informazioni debug sulla console."
 
@@ -11592,7 +11684,7 @@ msgstr "mostra le informazioni debug sulla console."
 # File: ../src/gcompris/gcompris.c, line: 144
 # File: ../src/gcompris/gcompris.c, line: 144
 # File: ../src/gcompris/gcompris.c, line: 144
-#: ../src/gcompris/gcompris.c:160
+#: ../src/gcompris/gcompris.c:158
 msgid "Print the version of "
 msgstr "Stampa la versione di "
 
@@ -11600,7 +11692,7 @@ msgstr "Stampa la versione di "
 # File: ../src/gcompris/gcompris.c, line: 147
 # File: ../src/gcompris/gcompris.c, line: 147
 # File: ../src/gcompris/gcompris.c, line: 147
-#: ../src/gcompris/gcompris.c:163
+#: ../src/gcompris/gcompris.c:161
 msgid "Use the antialiased canvas (slower)."
 msgstr "Usa gli sfondi con antialias (più lento)"
 
@@ -11608,7 +11700,7 @@ msgstr "Usa gli sfondi con antialias (più lento)"
 # File: ../src/gcompris/gcompris.c, line: 150
 # File: ../src/gcompris/gcompris.c, line: 150
 # File: ../src/gcompris/gcompris.c, line: 150
-#: ../src/gcompris/gcompris.c:166
+#: ../src/gcompris/gcompris.c:164
 msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr "Disabilita XF86VidMode (Non permette il cambio di risoluzione)."
 
@@ -11616,9 +11708,10 @@ msgstr "Disabilita XF86VidMode (Non permette il cambio di risoluzione)."
 # File: ../src/gcompris/gcompris.c, line: 153
 # File: ../src/gcompris/gcompris.c, line: 153
 # File: ../src/gcompris/gcompris.c, line: 153
-#: ../src/gcompris/gcompris.c:169
+#: ../src/gcompris/gcompris.c:167
+#, fuzzy
 msgid ""
-"Run gcompris with local menu (e.g -l /reading will let you play only "
+"Run GCompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
 "activity)"
 msgstr ""
@@ -11630,7 +11723,7 @@ msgstr ""
 # File: ../src/gcompris/gcompris.c, line: 156
 # File: ../src/gcompris/gcompris.c, line: 156
 # File: ../src/gcompris/gcompris.c, line: 156
-#: ../src/gcompris/gcompris.c:172
+#: ../src/gcompris/gcompris.c:170
 msgid "Run GCompris with local activity directory added to menu"
 msgstr "Avvia GCompris con una directory di attività locale aggiunta al menù"
 
@@ -11638,7 +11731,7 @@ msgstr "Avvia GCompris con una directory di attività locale aggiunta al menù"
 # File: ../src/gcompris/gcompris.c, line: 159
 # File: ../src/gcompris/gcompris.c, line: 159
 # File: ../src/gcompris/gcompris.c, line: 159
-#: ../src/gcompris/gcompris.c:175
+#: ../src/gcompris/gcompris.c:173
 msgid "Run GCompris in administration and user-management mode"
 msgstr "Avvia GCompris nella modalità amministrazione e di gestione utenti"
 
@@ -11646,17 +11739,19 @@ msgstr "Avvia GCompris nella modalità amministrazione e di gestione utenti"
 # File: ../src/gcompris/gcompris.c, line: 162
 # File: ../src/gcompris/gcompris.c, line: 162
 # File: ../src/gcompris/gcompris.c, line: 162
-#: ../src/gcompris/gcompris.c:178
+#: ../src/gcompris/gcompris.c:176
 msgid ""
 "Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite."
 "db]"
-msgstr "Usa la base dati alternativa per i profili [$HOME/.config/gcompris/gcompris_sqlite.db]."
+msgstr ""
+"Usa la base dati alternativa per i profili [$HOME/.config/gcompris/"
+"gcompris_sqlite.db]."
 
 #
 # File: ../src/gcompris/gcompris.c, line: 168
 # File: ../src/gcompris/gcompris.c, line: 168
 # File: ../src/gcompris/gcompris.c, line: 168
-#: ../src/gcompris/gcompris.c:181
+#: ../src/gcompris/gcompris.c:179
 msgid "Create the alternate database for profiles"
 msgstr "Crea la base dati alternativa per i profili"
 
@@ -11664,7 +11759,7 @@ msgstr "Crea la base dati alternativa per i profili"
 # File: ../src/gcompris/gcompris.c, line: 171
 # File: ../src/gcompris/gcompris.c, line: 171
 # File: ../src/gcompris/gcompris.c, line: 171
-#: ../src/gcompris/gcompris.c:184
+#: ../src/gcompris/gcompris.c:182
 msgid "Re-read XML Menus and store them in the database"
 msgstr "Rileggi i menù XML ed inseriscili nella base dati"
 
@@ -11672,7 +11767,7 @@ msgstr "Rileggi i menù XML ed inseriscili nella base dati"
 # File: ../src/gcompris/gcompris.c, line: 174
 # File: ../src/gcompris/gcompris.c, line: 174
 # File: ../src/gcompris/gcompris.c, line: 174
-#: ../src/gcompris/gcompris.c:187
+#: ../src/gcompris/gcompris.c:185
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
 msgstr "Imposta il profilo da usare. Usa 'gcompris -a' per creare profili"
 
@@ -11680,24 +11775,25 @@ msgstr "Imposta il profilo da usare. Usa 'gcompris -a' per creare profili"
 # File: ../src/gcompris/gcompris.c, line: 177
 # File: ../src/gcompris/gcompris.c, line: 177
 # File: ../src/gcompris/gcompris.c, line: 177
-#: ../src/gcompris/gcompris.c:190
+#: ../src/gcompris/gcompris.c:188
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
 msgstr ""
 "Elenca tutti i profili disponibili. Usa 'gcompris -a' per creare profili"
 
-#: ../src/gcompris/gcompris.c:193
+#: ../src/gcompris/gcompris.c:191
 msgid ""
 "Config directory location: [$HOME/.config/gcompris]. Alternate is to set "
 "$XDG_CONFIG_HOME."
 msgstr ""
-"Directory per la configurazione: [$HOME/.config/gcompris]. In alternativa impostare \"\n"
+"Directory per la configurazione: [$HOME/.config/gcompris]. In alternativa "
+"impostare \"\n"
 "\"$XDG_CONFIG_HOME."
 
 #
 # File: ../src/gcompris/gcompris.c, line: 183
 # File: ../src/gcompris/gcompris.c, line: 183
 # File: ../src/gcompris/gcompris.c, line: 183
-#: ../src/gcompris/gcompris.c:196
+#: ../src/gcompris/gcompris.c:194
 msgid "The location of user directories: [$HOME/My GCompris]"
 msgstr "Il percorso delle directory utente: [$HOME/My GCompris]"
 
@@ -11705,7 +11801,7 @@ msgstr "Il percorso delle directory utente: [$HOME/My GCompris]"
 # File: ../src/gcompris/gcompris.c, line: 186
 # File: ../src/gcompris/gcompris.c, line: 186
 # File: ../src/gcompris/gcompris.c, line: 186
-#: ../src/gcompris/gcompris.c:199
+#: ../src/gcompris/gcompris.c:197
 msgid "Run the experimental activities"
 msgstr "Avvia le attività di sperimentazione"
 
@@ -11713,7 +11809,7 @@ msgstr "Avvia le attività di sperimentazione"
 # File: ../src/gcompris/gcompris.c, line: 189
 # File: ../src/gcompris/gcompris.c, line: 189
 # File: ../src/gcompris/gcompris.c, line: 189
-#: ../src/gcompris/gcompris.c:202
+#: ../src/gcompris/gcompris.c:200
 msgid "Disable the quit button"
 msgstr "Disabilita il bottone di uscita"
 
@@ -11721,7 +11817,7 @@ msgstr "Disabilita il bottone di uscita"
 # File: ../src/gcompris/gcompris.c, line: 192
 # File: ../src/gcompris/gcompris.c, line: 192
 # File: ../src/gcompris/gcompris.c, line: 192
-#: ../src/gcompris/gcompris.c:205
+#: ../src/gcompris/gcompris.c:203
 msgid "Disable the config button"
 msgstr "Disabilita il bottone di configurazione"
 
@@ -11729,7 +11825,7 @@ msgstr "Disabilita il bottone di configurazione"
 # File: ../src/gcompris/gcompris.c, line: 195
 # File: ../src/gcompris/gcompris.c, line: 195
 # File: ../src/gcompris/gcompris.c, line: 195
-#: ../src/gcompris/gcompris.c:210
+#: ../src/gcompris/gcompris.c:208
 msgid "Display the resources on stdout based on the selected activities"
 msgstr "Mostra le risorse su stdout in base alle attività selezionate"
 
@@ -11737,7 +11833,7 @@ msgstr "Mostra le risorse su stdout in base alle attività selezionate"
 # File: ../src/gcompris/gcompris.c, line: 198
 # File: ../src/gcompris/gcompris.c, line: 198
 # File: ../src/gcompris/gcompris.c, line: 198
-#: ../src/gcompris/gcompris.c:214
+#: ../src/gcompris/gcompris.c:212
 msgid ""
 "GCompris will get images, sounds and activity data from this server if not "
 "found locally."
@@ -11749,7 +11845,7 @@ msgstr ""
 # File: ../src/gcompris/gcompris.c, line: 201
 # File: ../src/gcompris/gcompris.c, line: 201
 # File: ../src/gcompris/gcompris.c, line: 201
-#: ../src/gcompris/gcompris.c:217
+#: ../src/gcompris/gcompris.c:215
 msgid ""
 "Only when --server is provided, disable check for local resource first. Data "
 "are always taken from the web server."
@@ -11761,23 +11857,25 @@ msgstr ""
 # File: ../src/gcompris/gcompris.c, line: 205
 # File: ../src/gcompris/gcompris.c, line: 205
 # File: ../src/gcompris/gcompris.c, line: 205
-#: ../src/gcompris/gcompris.c:221
+#: ../src/gcompris/gcompris.c:219
 msgid ""
 "In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 "Nella modalità server, specifica la directory cache utilizzata per evitare "
 "scaricamenti inutili."
 
-#: ../src/gcompris/gcompris.c:224
+#: ../src/gcompris/gcompris.c:222
 msgid ""
 "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
-msgstr "Modalità globale trascina e lascia: normale, 2 clic, entrambi. La modalità predefinita è normale."
+msgstr ""
+"Modalità globale trascina e lascia: normale, 2 clic, entrambi. La modalità "
+"predefinita è normale."
 
-#: ../src/gcompris/gcompris.c:227
+#: ../src/gcompris/gcompris.c:225
 msgid "Do not display the background images of activities."
 msgstr "Non mostrare gli sfondi delle attività."
 
-#: ../src/gcompris/gcompris.c:230
+#: ../src/gcompris/gcompris.c:228
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Permettere l'esecuzione di più istanze di GCompris."
 
@@ -11785,7 +11883,7 @@ msgstr "Permettere l'esecuzione di più istanze di GCompris."
 # File: ../src/gcompris/gcompris.c, line: 838
 # File: ../src/gcompris/gcompris.c, line: 838
 # File: ../src/gcompris/gcompris.c, line: 838
-#: ../src/gcompris/gcompris.c:844
+#: ../src/gcompris/gcompris.c:847
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -11802,9 +11900,11 @@ msgstr ""
 "lo sviluppo, la versione Windows fornisce solo %d delle %d attività.\n"
 "Puoi ottenere la versione completa con un piccolo contributo all'indirizzo\n"
 "<http://gcompris.net>\n"
-"La versione GNU/Linux non ha questa restrizione. Si noti che GCompris viene sviluppato\n"
+"La versione GNU/Linux non ha questa restrizione. Si noti che GCompris viene "
+"sviluppato\n"
 "per liberare le scuole dai venditori di software monopolistico. Se anche\n"
-"tu credi che noi dovremmo insegnare la libertà ai bambini, per favore considera\n"
+"tu credi che noi dovremmo insegnare la libertà ai bambini, per favore "
+"considera\n"
 "l'uso di GNU/Linux. Per ulteriori informazioni FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
@@ -11812,7 +11912,7 @@ msgstr ""
 # File: ../src/gcompris/gcompris.c, line: 1433
 # File: ../src/gcompris/gcompris.c, line: 1433
 # File: ../src/gcompris/gcompris.c, line: 1433
-#: ../src/gcompris/gcompris.c:1539
+#: ../src/gcompris/gcompris.c:1551
 #, c-format
 msgid ""
 "GCompris\n"
@@ -11830,7 +11930,7 @@ msgstr ""
 # File: ../src/gcompris/gcompris.c, line: 1522
 # File: ../src/gcompris/gcompris.c, line: 1522
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1623
+#: ../src/gcompris/gcompris.c:1635
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Usa -l per accedere direttamente ad una attività.\n"
@@ -11839,7 +11939,7 @@ msgstr "Usa -l per accedere direttamente ad una attività.\n"
 # File: ../src/gcompris/gcompris.c, line: 1523
 # File: ../src/gcompris/gcompris.c, line: 1523
 # File: ../src/gcompris/gcompris.c, line: 1523
-#: ../src/gcompris/gcompris.c:1624
+#: ../src/gcompris/gcompris.c:1636
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "La lista delle attività disponibili è :\n"
@@ -11848,7 +11948,7 @@ msgstr "La lista delle attività disponibili è :\n"
 # File: ../src/gcompris/gcompris.c, line: 1701
 # File: ../src/gcompris/gcompris.c, line: 1701
 # File: ../src/gcompris/gcompris.c, line: 1701
-#: ../src/gcompris/gcompris.c:1811
+#: ../src/gcompris/gcompris.c:1823
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "La lista dei profili disponibili è:\n"
@@ -11905,17 +12005,19 @@ msgstr "Ringraziamento"
 # File: ../boards/read_colors/board1.xml.in.h, line: 8
 # File: ../boards/read_colors/board1.xml.in.h, line: 8
 # File: ../boards/read_colors/board1.xml.in.h, line: 8
-#: ../src/gcompris/properties.c:487 ../src/gcompris/properties.c:494
+#: ../src/gcompris/properties.c:503 ../src/gcompris/properties.c:510
 msgid "readme"
 msgstr "leggimi"
 
-#: ../src/gcompris/properties.c:489
+#: ../src/gcompris/properties.c:505
 msgid ""
 "This directory contains the files you create with the GCompris educational "
 "suite\n"
-msgstr "Questa directory contiene i file che tu hai creato con GCompris educational suite\n"
+msgstr ""
+"Questa directory contiene i file che tu hai creato con GCompris educational "
+"suite\n"
 
-#: ../src/gcompris/properties.c:496
+#: ../src/gcompris/properties.c:512
 msgid ""
 "Put any number of images in this directory.\n"
 "You can include these images in your drawings and animations.\n"
