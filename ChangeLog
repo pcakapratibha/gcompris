@@ -1,3 +1,26 @@
+2007-06-24  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Fixed a major b, target activity is broken, the target never reach it's goal.
+
+	* src/boards/target.c: (animate_items):
+
+2007-06-23  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Now we don't crash if we cannot find a single image at startup.
+
+	* src/gcompris/bar.c: (gc_bar_set_repeat_icon), (gc_bar_set),
+	(gc_bar_hide):
+	* src/gcompris/board.c: (get_board_playing):
+	* src/gcompris/dialog.c: (gc_dialog):
+	* src/gcompris/gameutil.c: (gc_pixmap_load):
+
+2007-06-22  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed "-l list" option to load the menu list from the base.
+	option was not working when boards are compiled statically.
+
+	* src/gcompris/gcompris.c:
+
 2007-06-20  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Improved --help message for gcompris -l list
