@@ -604,7 +604,7 @@ static void animate_items()
   if(animate_item_size>MIN_DART_SIZE)
     animate_item_size--;
 
-  if(animate_item_distance-- == 0)
+  if(--animate_item_distance == 0)
     {
       gc_sound_play_ogg ("sounds/brick.wav", NULL);
 

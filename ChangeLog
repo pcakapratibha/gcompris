@@ -1,3 +1,10 @@
+2007-06-24  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Fixed a major bug, target activity is broken, the target never reach it's goal.
+	  Merged from trunk 2789.
+
+	* src/boards/target.c: (animate_items):
+
 2007-06-17  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* configure.in: changed to release 8.3.2
