@@ -1,6 +1,12 @@
+2007-06-26  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed bad reference to leftright.png
+
+	* src/boards/shapegame.c: (add_shape_to_list_of_shapes):
+
 2007-06-24  Bruno coudoin  <bruno.coudoin@free.fr>
 
-	- Fixed a major b, target activity is broken, the target never reach it's goal.
+	- Fixed a major bug, target activity is broken, the target never reach it's goal.
 
 	* src/boards/target.c: (animate_items):
 
