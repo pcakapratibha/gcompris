@@ -1,6 +1,7 @@
 # Vietnamese translation for GCompris.
 # Copyright © 2007 Gnome i18n Project for Vietnamese.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2007.
+# Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2007.
 # 
 msgid ""
 ""
@@ -3396,7 +3397,7 @@ msgstr "Nhấn vào biểu tượng để tới hoạt động hoặc trình đ�
 "những biểu tượng sẵn sàng trong hoạt động hiện có):\n"
 " • Về — trở về trình đơn hoặc thoát khỏi hoạt động\n"
 " • Ngón tay cái — Được; khẳng định lời giải\n"
-" • Súc sắc — hiển thị lớp hiện có; nhấn nó để chọn lớp khác\n"
+" • Súc sắc — hiển thị lớp hiện có; nhấn nó để chọn lớp khác\n"
 " • Miệng — nói lại câu hỏi\n"
 " • Dấu hỏi — trợ giúp\n"
 " • Công cụ — trình đơn cấu hình\n"
@@ -4255,7 +4256,7 @@ msgid ""
 "\t* 1 parallelogram (sides of 1 and square root of 2)"
 msgstr "(Từ Wikipedia, bách khoa tự do) Tangram (tiếng Hòa, nghĩa chữ là « bảy bảng "
 "xảo quyệt ») là một câu đố Hòa. Dù tangram có tiếng về cổ, chỉ có thông tin "
-"tin cây về nó trong năm 1800. Nó gồm 7 phần, được gọi là « tan », mà vừa với "
+"tin cậy về nó trong năm 1800. Nó gồm 7 phần, được gọi là « tan », mà vừa với "
 "nhau để tạo hình vuông. Khi lập vuông là đơn vị:\n"
 " • 5 hình tam giác cân vuông:\n"
 "\t2 nhỏ (chân là 1)\n"
@@ -5345,7 +5346,7 @@ msgstr "Hãy gõ một số giữa %d và %d"
 #: ../src/boards/python/guessnumber.py:324
 #: ../src/boards/python/guessnumber.py:325
 msgid "Out of range"
-msgstr "Ở ngoại phạm vi"
+msgstr "Ở ngoài phạm vi"
 
 #: ../src/boards/python/guessnumber.py:331
 #: ../src/boards/python/guessnumber.py:332
