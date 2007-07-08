@@ -141,7 +141,9 @@ class Gcompris_tuxpaint:
             flags=flags)
 
     except:
-       gcompris.utils.dialog(_("Cannot find Tuxpaint.\nInstall it to use this activity !"),stop_board)
+       restore_grab(self)
+       gcompris.utils.dialog(_("Cannot find Tuxpaint.\nInstall it to use this activity !"),
+                             stop_board)
        return
 
     gobject.child_watch_add(pid, child_callback, data=self, priority=gobject.PRIORITY_HIGH)
@@ -207,26 +209,33 @@ class Gcompris_tuxpaint:
                                                    self.apply_callback)
 
 
-    gcompris.boolean_box(_('Inherit fullscreen setting from GCompris'), 'fullscreen', eval(self.config_dict['fullscreen']))
+    gcompris.boolean_box(_('Inherit fullscreen setting from GCompris'), 'fullscreen',
+                         eval(self.config_dict['fullscreen']))
 
     gcompris.separator()
 
-    gcompris.boolean_box(_('Inherit size setting from GCompris (800x600, 640x480)'), 'size', eval(self.config_dict['size']))
+    gcompris.boolean_box(_('Inherit size setting from GCompris (800x600, 640x480)'),
+                         'size', eval(self.config_dict['size']))
 
     gcompris.separator()
 
-    gcompris.boolean_box(_('Disable shape rotation'), 'disable_shape_rotation', eval(self.config_dict['disable_shape_rotation']))
+    gcompris.boolean_box(_('Disable shape rotation'), 'disable_shape_rotation',
+                         eval(self.config_dict['disable_shape_rotation']))
 
     gcompris.separator()
 
-    gcompris.boolean_box(_('Show Uppercase text only'), 'uppercase_text', eval(self.config_dict['uppercase_text']))
+    gcompris.boolean_box(_('Show Uppercase text only'), 'uppercase_text',
+                         eval(self.config_dict['uppercase_text']))
 
     gcompris.separator()
 
-    stamps = gcompris.boolean_box(_('Disable stamps'), 'disable_stamps', eval(self.config_dict['disable_stamps']))
+    stamps = gcompris.boolean_box(_('Disable stamps'), 'disable_stamps',
+                                  eval(self.config_dict['disable_stamps']))
     stamps.connect("toggled", self.stamps_changed)
 
-    self.stamps_control = gcompris.boolean_box('Disable stamps control', 'disable_stamps_control', eval(self.config_dict['disable_stamps_control']))
+    self.stamps_control = gcompris.boolean_box('Disable stamps control',
+                                               'disable_stamps_control',
+                                               eval(self.config_dict['disable_stamps_control']))
     self.stamps_control.set_sensitive(not eval(self.config_dict['disable_stamps']))
 
   def stamps_changed(self, button):
@@ -246,7 +255,7 @@ class Gcompris_tuxpaint:
       }
     return default_config_dict
 
-def child_callback(fd,  cond, data):
+def restore_grab(data):
   # restore pointergrab if running fullscreen
   if (gcompris.get_properties().fullscreen and
       not gcompris.get_properties().noxf86vm):
@@ -257,11 +266,15 @@ def child_callback(fd,  cond, data):
        data.window.unfullscreen()
        data.window.fullscreen()
 
+
+def child_callback(fd,  cond, data):
+  restore_grab(data)
   global pid
   pid = None
   gcompris.bar_hide(0)
   gcompris.bonus.board_finished(gcompris.bonus.FINISHED_RANDOM)
 
 def stop_board():
+  gcompris.bar_hide(0)
   gcompris.bonus.board_finished(gcompris.bonus.FINISHED_RANDOM)
 
