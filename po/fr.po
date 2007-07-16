@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-24 21:32+0200\n"
-"PO-Revision-Date: 2007-04-24 22:08+0200\n"
+"POT-Creation-Date: 2007-07-16 23:02+0200\n"
+"PO-Revision-Date: 2007-07-16 23:28+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -3454,7 +3454,7 @@ msgstr ""
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of "
 "activities.\n"
-"At the bottom of the screen is the gcompris control bar.\n"
+"At the bottom of the screen is the GCompris control bar.\n"
 "The following icons are displayed from right to left.\n"
 "(note that each icon is displayed only if available in the current "
 "activity)\n"
@@ -3470,23 +3470,19 @@ msgid ""
 "    1, 2 or 3 simple stars  - from 2 to 6 years old\n"
 "    1, 2 or 3 complex stars - 7 years and up"
 msgstr ""
-"Un simple clic sur une icône t'amènera vers une activité ou un menu "
-"d'activités.\n"
+"Un simple clic sur une icône t'amènera vers une activité ou un menu d'activités.\n"
 "Au bas de l'écran se trouve la barre de contrôle de GCompris.\n"
-"Les icônes suivantes sont décrites ci-dessous de droite à gauche.\n"
-"(Notons que ces icônes ne sont affichées que si elles sont disponibles dans "
-"l'activité)\n"
-"    Accueil - Revient au menu précédent ou quitte GCompris si on se trouve "
-"au menu principal\n"
+"Les icônes suivantes sont décrites ci-dessous de droite à gauche (notons que ces\n"
+"icônes ne sont affichées que si elles sont disponibles dans l'activité).\n"
+"    Accueil - Quitte une activité et revient au menu\n"
 "    Pouce - Valider, confirmer ta réponse\n"
-"    Dé - Le niveau courant est affiché. Clique dessus pour sélectionner un "
-"autre niveau\n"
-"    Lèvres- Demande à GCompris de répéter la question\n"
-"    Point d'interrogation - Affiche la boîte de dialogue de l'aide\n"
-"    Boîte à outils - Menu de configuration\n"
+"    Dé - Affiche le niveau actuel. Clique dessus pour sélectionner un autre niveau\n"
+"    Lèvres - Répéte la question\n"
+"    Point d'interrogation - Aide\n"
+"    Outil - Le menu de configuration\n"
 "    L'avion de Tux - Boîte d'information sur GCompris\n"
 "Les étoiles indiquent le groupe d'âge adapté à chaque activité :\n"
-"    1, 2 ou 3 étoiles - de 2 à 6 ans\n"
+"    1, 2 ou 3 étoiles simples - de 2 à 6 ans\n"
 "    1, 2 ou 3 étoiles sophistiquées - 7 ans et plus."
 
 #: ../boards/menu.xml.in.h:16
@@ -3503,19 +3499,17 @@ msgstr ""
 
 #: ../boards/menu.xml.in.h:19
 msgid ""
-"The goal of gcompris is to provide a free alternative to popular proprietary "
+"The goal of GCompris is to provide a free alternative to popular proprietary "
 "edutainment software"
-msgstr ""
-"L'objectif de GCompris est de fournir une alternative libre aux logiciels "
-"éducatifs propriétaires."
+msgstr "L'objectif de GCompris est de fournir une alternative libre à des logiciels éducatifs populaires mais propriétaires."
 
 #: ../boards/miscelaneous.xml.in.h:1
 msgid "Miscellaneous activities"
-msgstr "Vers diverses activités."
+msgstr "Diverses activités."
 
 #: ../boards/miscelaneous.xml.in.h:2
 msgid "Time, Geography, ..."
-msgstr "Temps, Géographie, ..."
+msgstr "Temps, géographie, ..."
 
 #: ../boards/missing_letter.xml.in.h:1
 msgid ""
@@ -3870,13 +3864,27 @@ msgstr "Puzzles"
 msgid "Various puzzles."
 msgstr "Diverses sortes de puzzles."
 
-#: ../boards/pythontest.xml.in.h:1
-msgid "Add a language-binding to gcompris."
-msgstr "Ajout du support d'un langage dans GCompris."
+#: ../boards/pythontemplate.xml.in.h:1 ../boards/pythontest.xml.in.h:1
+msgid "Add a language-binding to GCompris."
+msgstr "Ajout de la prise en charge d'un langage dans GCompris."
 
-#: ../boards/pythontest.xml.in.h:2
+#: ../boards/pythontemplate.xml.in.h:2 ../boards/pythontest.xml.in.h:2
 msgid "Advanced Python Programmer :)"
 msgstr "Programmeur Python avancé :)"
+
+#: ../boards/pythontemplate.xml.in.h:3
+msgid "An empty python activity to use as a starting point"
+msgstr "Une activité Python vide à utiliser comme point de départ"
+
+#: ../boards/pythontemplate.xml.in.h:4
+msgid "Python Template"
+msgstr "Modèle Python"
+
+#: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
+msgstr ""
+"Merci à Guido van Rossum et à l'équipe python pour ce langage puissant !"
 
 #: ../boards/pythontest.xml.in.h:3
 msgid "Python Test"
@@ -3885,12 +3893,6 @@ msgstr "Test Python"
 #: ../boards/pythontest.xml.in.h:4
 msgid "Test board for the python plugin"
 msgstr "Activité test pour le plugin python"
-
-#: ../boards/pythontest.xml.in.h:5
-msgid ""
-"Thanks to Guido van Rossum and the python team for this powerful language!"
-msgstr ""
-"Merci à Guido van Rossum et à l'équipe python pour ce langage puissant !"
 
 #: ../boards/railroad.xml.in.h:1
 msgid "A memory game based on trains"
@@ -4663,7 +4665,7 @@ msgid "Multi-activity educational game"
 msgstr "Jeu éducatif multi-activités"
 
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:182 ../src/boards/memory.c:850
+#: ../src/boards/algebra.c:182 ../src/boards/memory.c:846
 msgid "+-×÷"
 msgstr "+-×÷"
 
@@ -4694,17 +4696,16 @@ msgstr "Erreur : le programme externe Gnuchess a quitté de façon inattendue."
 #: ../src/boards/chess.c:199
 msgid ""
 "Error: The external program gnuchess is required\n"
-"to play chess in gcompris.\n"
+"to play chess in GCompris.\n"
 "Find this program on http://www.rpmfind.net or in your\n"
 "GNU/Linux distribution\n"
 "And check it is located here: "
 msgstr ""
-"Erreur : Le programme externe Gnuchess est nécessaire\n"
+"Erreur : le programme externe Gnuchess est nécessaire\n"
 "pour jouer aux échecs dans GCompris.\n"
 "Récupérez ce programme sur http://www.rpmfind.net ou \n"
-"directement depuis l'outil « installation de logiciels » de votre "
-"distribution GNU/Linux.\n"
-"Ensuite vérifiez qu'il est bien présent ici :"
+"dans votre distribution GNU/Linux.\n"
+"Vérifiez ensuite qu'il est bien présent ici :"
 
 #: ../src/boards/chess.c:244
 msgid ""
@@ -4777,11 +4778,10 @@ msgstr "abcdefghijklmnopqrstuvwxyz"
 #, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
-"the packages with gcompris voices for the locale '%s' or '%s'"
+"the packages with GCompris voices for the locale '%s' or '%s'"
 msgstr ""
 "Erreur : cette activité nécessite d'abord l'installation\n"
-"des fichiers additifs contenant les voix de GCompris pour la langue« %s » ou "
-"« %s »"
+"des paquets contenant les voix de GCompris pour la langue « %s » ou « %s »"
 
 #: ../src/boards/click_on_letter.c:294
 #, c-format
@@ -4791,8 +4791,7 @@ msgid ""
 "sorry!"
 msgstr ""
 "Erreur : cette activité nécessite d'abord l'installation\n"
-"des paquets avec les voix de GCompris pour la locale « %s » ! Retour à "
-"l'anglais, désolé !"
+"des paquets avec les voix de GCompris pour la locale « %s ». Retour à l'anglais, désolé !"
 
 #. Init configuration window:
 #. all the configuration functions will use it
@@ -4806,7 +4805,7 @@ msgstr ""
 #: ../src/boards/python/admin/board_list.py:641
 #: ../src/boards/python/admin/board_list.py:659
 #: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
-#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
+#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:208
 #: ../src/boards/reading.c:833 ../src/boards/scale.c:862
 #: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:590
 #, c-format, python-format
@@ -4972,7 +4971,11 @@ msgstr "Déplace l'avion pour attraper les nuages dans le bon ordre."
 msgid "Python Board"
 msgstr "Activité Python"
 
-#: ../src/boards/python.c:64 ../src/boards/python.c:88
+#: ../src/boards/python.c:64
+msgid "Special board that embeds python into GCompris."
+msgstr "Activité spéciale qui embarque Python dans GCompris."
+
+#: ../src/boards/python.c:88
 msgid "Special board that embeds python into gcompris."
 msgstr "Activité spéciale qui embarque Python dans GCompris."
 
@@ -5177,7 +5180,7 @@ msgstr "Tous les utilisateurs"
 #: ../src/boards/python/admin/log_list.py:108
 #: ../src/boards/python/admin/log_list.py:287
 #: ../src/boards/python/admin/profile_list.py:121
-#: ../src/gcompris/board_config.c:667 ../src/gcompris/board_config.c:925
+#: ../src/gcompris/board_config.c:668 ../src/gcompris/board_config.c:926
 msgid "Default"
 msgstr "Par défaut"
 
@@ -5348,32 +5351,32 @@ msgstr ""
 "Un ou plusieurs identifiants ne sont pas uniques !\n"
 "Vous devez les modifier : %s !"
 
-#: ../src/boards/python/anim.py:2226
+#: ../src/boards/python/anim.py:2225
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr "SVG est désactivé. Installez le module python xml pour l'activer"
 
-#: ../src/boards/python/anim.py:2382
+#: ../src/boards/python/anim.py:2381
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr ""
 "Attention: les images suivantes ne peuvent être trouvées sur votre système.\n"
 
-#: ../src/boards/python/anim.py:2384
+#: ../src/boards/python/anim.py:2383
 msgid "The corresponding items have been skipped."
 msgstr "Les éléments suivants ont été enlevés."
 
-#: ../src/boards/python/chat.py:80
+#: ../src/boards/python/chat.py:82
 msgid "All messages will be displayed here.\n"
 msgstr "Tous les messages s'affichent ici.\n"
 
-#: ../src/boards/python/chat.py:130
+#: ../src/boards/python/chat.py:132
 msgid "Your Friends"
 msgstr "Tes amis"
 
-#: ../src/boards/python/chat.py:162
+#: ../src/boards/python/chat.py:164
 msgid "Your Channel"
 msgstr "Ton canal"
 
-#: ../src/boards/python/chat.py:188
+#: ../src/boards/python/chat.py:190
 msgid ""
 "Type your message here, to send to other GCompris users on your local "
 "network."
@@ -5381,12 +5384,12 @@ msgstr ""
 "Écris ton message ici afin de l'envoyer à d'autres utilisateurs de GCompris "
 "sur ton réseau local."
 
-#: ../src/boards/python/chat.py:322
+#: ../src/boards/python/chat.py:325
 msgid "You must set a channel in your channel entry box first.\n"
 msgstr ""
 "Tu dois tout d'abord choisir un canal dans la boite de saisie du canal.\n"
 
-#: ../src/boards/python/chat.py:323
+#: ../src/boards/python/chat.py:326
 msgid "Your friends must set the same channel in order to communicate with you"
 msgstr ""
 "Tes amis doivent sélectionner le même canal pour pouvoir communiquer avec "
@@ -5576,7 +5579,7 @@ msgstr "Entre ton identifiant pour te connecter"
 msgid "Rebuild the same mosaic on the right area"
 msgstr "Recopie à l'identique la mosaïque de gauche"
 
-#: ../src/boards/python/melody.py:118
+#: ../src/boards/python/melody.py:120
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -5616,17 +5619,15 @@ msgstr ""
 
 #: ../src/boards/python/pythontest.py:148
 msgid ""
-"This is the first plugin in gcompris coded in the Python\n"
+"This is the first plugin in GCompris coded in the Python\n"
 "Programming language."
-msgstr "C'est une activité de test en langage Python."
+msgstr "C'est le premier greffon de GCompris programmé en langage Python."
 
 #: ../src/boards/python/pythontest.py:157
 msgid ""
-"It is now possible to develop gcompris activities in C or in Python.\n"
+"It is now possible to develop GCompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
-msgstr ""
-"Il est maintenant possible de développer des activités en C ou en Python "
-"grâce à Olivier Samyn."
+msgstr "Il est maintenant possible de développer des activités GCompris en C ou en Python. Merci à Olivier Samyn qui a rendu cela possible."
 
 #: ../src/boards/python/pythontest.py:166
 msgid "This activity is not playable, just a test"
@@ -5718,7 +5719,7 @@ msgstr "Commande inconnue à la ligne"
 msgid "Distance:"
 msgstr "Distance :"
 
-#: ../src/boards/python/tuxpaint.py:144
+#: ../src/boards/python/tuxpaint.py:145
 msgid ""
 "Cannot find Tuxpaint.\n"
 "Install it to use this activity !"
@@ -5726,28 +5727,28 @@ msgstr ""
 "Impossible de trouver Tuxpaint.\n"
 "Installe ce logiciel pour utiliser cette activité !"
 
-#: ../src/boards/python/tuxpaint.py:157
+#: ../src/boards/python/tuxpaint.py:159
 msgid "Waiting for Tuxpaint to finish"
 msgstr "En attente de la fermeture de Tuxpaint"
 
-#: ../src/boards/python/tuxpaint.py:210
+#: ../src/boards/python/tuxpaint.py:212
 msgid "Inherit fullscreen setting from GCompris"
 msgstr "Héritage de la configuration plein écran de GCompris"
 
-#: ../src/boards/python/tuxpaint.py:214
+#: ../src/boards/python/tuxpaint.py:217
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
 msgstr ""
 "Héritage de la configuration de la taille de GCompris (800x600, 640x480)"
 
-#: ../src/boards/python/tuxpaint.py:218
+#: ../src/boards/python/tuxpaint.py:222
 msgid "Disable shape rotation"
 msgstr "Désactiver la rotation des formes"
 
-#: ../src/boards/python/tuxpaint.py:222
+#: ../src/boards/python/tuxpaint.py:227
 msgid "Show Uppercase text only"
 msgstr "Affiche le texte en capitales uniquement"
 
-#: ../src/boards/python/tuxpaint.py:226
+#: ../src/boards/python/tuxpaint.py:232
 msgid "Disable stamps"
 msgstr "Désactiver les tampons"
 
@@ -5759,7 +5760,7 @@ msgstr "Le jeu de mémoire"
 msgid "Build a train according to the model"
 msgstr "Construis un train correspondant au modèle."
 
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:205
+#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:206
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5894,7 +5895,7 @@ msgstr "À propos de GCompris"
 msgid "Translators:"
 msgstr "Traducteurs :"
 
-#: ../src/gcompris/about.c:193
+#: ../src/gcompris/about.c:230
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -5902,7 +5903,7 @@ msgstr ""
 "Page d'accueil de GCompris\n"
 "http://gcompris.net"
 
-#: ../src/gcompris/about.c:215
+#: ../src/gcompris/about.c:252
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
@@ -5910,35 +5911,34 @@ msgstr ""
 "Ce logiciel est un paquet GNU et est soumis à la Licence Publique Générale "
 "GNU (GPL)."
 
-#: ../src/gcompris/about.c:278 ../src/gcompris/about.c:288
+#: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
 #: ../src/gcompris/config.c:472 ../src/gcompris/config.c:482
-#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
+#: ../src/gcompris/dialog.c:103 ../src/gcompris/help.c:382
 #: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
 msgid "OK"
 msgstr "Valider"
 
-#: ../src/gcompris/bar.c:577
+#: ../src/gcompris/bar.c:598
 msgid "GCompris confirmation"
 msgstr "Gcompris : confirmation"
 
-#: ../src/gcompris/bar.c:578
+#: ../src/gcompris/bar.c:599
 msgid "Are you sure you want to quit?"
 msgstr "Veux-tu vraiment quitter ?"
 
-#: ../src/gcompris/bar.c:579
+#: ../src/gcompris/bar.c:600
 msgid "Yes, I am sure!"
 msgstr "Oui, je suis sûr !"
 
-#: ../src/gcompris/bar.c:580
+#: ../src/gcompris/bar.c:601
 msgid "No, I want to keep going"
 msgstr "Non, je veux continuer à jouer !"
 
-#: ../src/gcompris/board.c:187
-msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
-msgstr ""
-"Chargement dynamique non pris en charge. GCompris ne peut pas se lancer.\n"
+#: ../src/gcompris/board.c:184
+msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
+msgstr "Chargement dynamique de module non pris en charge. GCompris ne peut pas charger.\n"
 
-#: ../src/gcompris/board_config.c:699
+#: ../src/gcompris/board_config.c:700
 msgid ""
 "Select the language\n"
 " to use in the board"
@@ -5946,23 +5946,23 @@ msgstr ""
 "Sélection de la langue\n"
 "à utiliser dans cette activité"
 
-#: ../src/gcompris/board_config.c:762
+#: ../src/gcompris/board_config.c:763
 msgid "Global GCompris mode"
 msgstr "Mode GCompris global"
 
-#: ../src/gcompris/board_config.c:763
+#: ../src/gcompris/board_config.c:764
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/gcompris/board_config.c:764
+#: ../src/gcompris/board_config.c:765
 msgid "2 clicks"
 msgstr "2 clics"
 
-#: ../src/gcompris/board_config.c:765
+#: ../src/gcompris/board_config.c:766
 msgid "both modes"
 msgstr "les deux modes"
 
-#: ../src/gcompris/board_config.c:793
+#: ../src/gcompris/board_config.c:794
 msgid ""
 "Select the drag and drop mode\n"
 " to use in the board"
@@ -6182,7 +6182,10 @@ msgstr "Serbe"
 msgid "Swedish"
 msgstr "Suédois"
 
-#. "ta_IN.UTF-8",	N_("Tamil"),
+#: ../src/gcompris/config.c:113
+msgid "Tamil"
+msgstr "Tamoul"
+
 #: ../src/gcompris/config.c:114
 msgid "Thai"
 msgstr "Thaï"
@@ -6224,8 +6227,8 @@ msgid "Fast timer"
 msgstr "Compteur rapide"
 
 #: ../src/gcompris/config.c:132
-msgid "800x600 (Default for gcompris)"
-msgstr "800x600 (par défaut)"
+msgid "800x600 (Default for GCompris)"
+msgstr "800x600 (par défaut pour GCompris)"
 
 #: ../src/gcompris/config.c:137
 msgid ""
@@ -6256,8 +6259,8 @@ msgstr "Effet"
 msgid "Couldn't open skin dir: %s"
 msgstr "Impossible d'ouvrir le répertoire de thèmes : %s"
 
-#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:867
-#: ../src/gcompris/config.c:881
+#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:866
+#: ../src/gcompris/config.c:880
 #, c-format
 msgid "Skin : %s"
 msgstr "Thème : %s"
@@ -6282,15 +6285,15 @@ msgstr "CHARGER"
 msgid "SAVE"
 msgstr "ENREGISTRER"
 
-#: ../src/gcompris/gameutil.c:80
+#: ../src/gcompris/gameutil.c:104
 msgid "Couldn't find or load the file"
 msgstr "Impossible de trouver ou de charger le fichier"
 
-#: ../src/gcompris/gameutil.c:82
+#: ../src/gcompris/gameutil.c:106
 msgid "This activity is incomplete."
 msgstr "Cette activité est incomplète."
 
-#: ../src/gcompris/gameutil.c:83
+#: ../src/gcompris/gameutil.c:107
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -6298,57 +6301,55 @@ msgstr ""
 "Quitte-la et informe\n"
 "les auteurs du problème rencontré."
 
-#: ../src/gcompris/gcompris.c:139
-msgid "run gcompris in fullscreen mode."
-msgstr "Lance GCompris en mode plein écran."
+#: ../src/gcompris/gcompris.c:137
+msgid "run GCompris in fullscreen mode."
+msgstr "lance GCompris en mode plein écran."
 
-#: ../src/gcompris/gcompris.c:142
-msgid "run gcompris in window mode."
-msgstr "Lance GCompris en mode fenêtré."
+#: ../src/gcompris/gcompris.c:140
+msgid "run GCompris in window mode."
+msgstr "lance GCompris en mode fenêtré."
 
-#: ../src/gcompris/gcompris.c:145
-msgid "run gcompris with sound enabled."
-msgstr "Lance GCompris avec le son."
+#: ../src/gcompris/gcompris.c:143
+msgid "run GCompris with sound enabled."
+msgstr "lance GCompris avec le son."
 
-#: ../src/gcompris/gcompris.c:148
-msgid "run gcompris without sound."
-msgstr "Lance GCompris sans le son."
+#: ../src/gcompris/gcompris.c:146
+msgid "run GCompris without sound."
+msgstr "lance GCompris sans le son."
 
-#: ../src/gcompris/gcompris.c:151
-msgid "run gcompris with the default gnome cursor."
-msgstr "Lance GCompris avec le curseur par défaut de Gnome."
+#: ../src/gcompris/gcompris.c:149
+msgid "run GCompris with the default gnome cursor."
+msgstr "lance GCompris avec le curseur par défaut de GNOME."
 
-#: ../src/gcompris/gcompris.c:154
+#: ../src/gcompris/gcompris.c:152
 msgid "display only activities with this difficulty level."
-msgstr "Affiche uniquement les activités avec ce niveau de difficulté."
+msgstr "affiche uniquement les activités avec ce niveau de difficulté."
 
-#: ../src/gcompris/gcompris.c:157
+#: ../src/gcompris/gcompris.c:155
 msgid "display debug informations on the console."
-msgstr "Affiche les informations de débogage dans la console."
+msgstr "affiche les informations de débogage dans la console."
 
-#: ../src/gcompris/gcompris.c:160
+#: ../src/gcompris/gcompris.c:158
 msgid "Print the version of "
 msgstr "Affiche la version de "
 
-#: ../src/gcompris/gcompris.c:163
+#: ../src/gcompris/gcompris.c:161
 msgid "Use the antialiased canvas (slower)."
 msgstr "Utiliser le canvas anti-crénelé (plus lent)."
 
-#: ../src/gcompris/gcompris.c:166
+#: ../src/gcompris/gcompris.c:164
 msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr ""
 "Désactivation de XF86VidMode (Pas de modification de la résolution de "
 "l'écran)."
 
-#: ../src/gcompris/gcompris.c:169
+#: ../src/gcompris/gcompris.c:167
 msgid ""
-"Run gcompris with local menu (e.g -l /reading will let you play only "
+"Run GCompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
-"activity)"
-msgstr ""
-"Lance GCompris avec un menu local (ex : -l /reading pour jouer uniquement "
-"avec les activités du menu lecture, -l /strategy/connect4 pour accéder "
-"uniquement à l'activité Puissance 4)"
+"activity). Use '-l list' to list all the availaible activities and their "
+"descriptions."
+msgstr "Lance GCompris avec un menu local (ex : -l /reading pour jouer uniquement avec les activités du menu lecture, -l /strategy/connect4 pour accéder uniquement à l'activité Puissance 4). Utilisez -l pour lister toutes les activités disponibles ainsi que leurs descriptions."
 
 #: ../src/gcompris/gcompris.c:172
 msgid "Run GCompris with local activity directory added to menu"
@@ -6456,7 +6457,7 @@ msgstr "Ne pas afficher les images de fond dans les activités."
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Ne pas empêcher l'exécution de plusieurs instances de GCompris."
 
-#: ../src/gcompris/gcompris.c:844
+#: ../src/gcompris/gcompris.c:849
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6480,7 +6481,18 @@ msgstr ""
 "apprendre la liberté à nos enfants, merci d'utiliser GNU/Linux. Vous pouvez "
 "obtenir plus d'informations sur http://www.fsf.org/philosophy"
 
-#: ../src/gcompris/gcompris.c:1539
+#: ../src/gcompris/gcompris.c:1522
+#, c-format
+msgid ""
+"GCompris won't start because the lock file is less than %d seconds old.\n"
+msgstr "GCompris ne va pas démarrer car le fichier verrou est posé depuis seulement %d secondes.\n"
+
+#: ../src/gcompris/gcompris.c:1524
+#, c-format
+msgid "The lock file is: %s\n"
+msgstr "Le fichier verrou est « %s »\n"
+
+#: ../src/gcompris/gcompris.c:1559
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6494,26 +6506,26 @@ msgstr ""
 "Plus d'informations sur http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1623
+#: ../src/gcompris/gcompris.c:1643
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Utilise l'option -l pour accéder directement à une activité.\n"
 
-#: ../src/gcompris/gcompris.c:1624
+#: ../src/gcompris/gcompris.c:1644
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "La liste des activités disponibles est :\n"
 
-#: ../src/gcompris/gcompris.c:1811
+#: ../src/gcompris/gcompris.c:1831
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "La liste des profils disponibles est :\n"
 
-#: ../src/gcompris/gcompris_db.c:266
+#: ../src/gcompris/gcompris_db.c:265
 msgid "Unaffected"
 msgstr "Non affecté"
 
-#: ../src/gcompris/gcompris_db.c:267
+#: ../src/gcompris/gcompris_db.c:266
 msgid "Users without a class"
 msgstr "Utilisateurs sans classe"
 
@@ -6533,11 +6545,11 @@ msgstr "Manuel"
 msgid "Credit"
 msgstr "Remerciements"
 
-#: ../src/gcompris/properties.c:487 ../src/gcompris/properties.c:494
+#: ../src/gcompris/properties.c:503 ../src/gcompris/properties.c:510
 msgid "readme"
 msgstr "lisezmoi"
 
-#: ../src/gcompris/properties.c:489
+#: ../src/gcompris/properties.c:505
 msgid ""
 "This directory contains the files you create with the GCompris educational "
 "suite\n"
@@ -6545,7 +6557,7 @@ msgstr ""
 "Ce répertoire contient les fichiers que vous avez créés avec la suite "
 "éducative GCompris\n"
 
-#: ../src/gcompris/properties.c:496
+#: ../src/gcompris/properties.c:512
 msgid ""
 "Put any number of images in this directory.\n"
 "You can include these images in your drawings and animations.\n"
@@ -6564,41 +6576,3 @@ msgstr "Temps écoulé"
 msgid "Remaining Time = %d"
 msgstr "Temps restant = %d"
 
-#~ msgid "1829 Stephenson's Rocket\\nSteam locomotive"
-#~ msgstr ""
-#~ "1829, La fusée de Stephenson\n"
-#~ "Une des premières locomotives à vapeur"
-
-#~ msgid "spruce"
-#~ msgstr "sapin"
-
-#~ msgid "Choose brush and colors and draw. have fun!"
-#~ msgstr "Choisis pinceaux et couleurs pour dessiner. Amuse-toi bien !"
-
-#~ msgid "MyPaint"
-#~ msgstr "Ma Peinture"
-
-#~ msgid "Painting activity. Uses pressure device if any."
-#~ msgstr "Activité de peinture. Utilise si possible une tablette graphique."
-
-#~ msgid "Painting application"
-#~ msgstr "Application de peinture"
-
-#~ msgid "mouse manipulation"
-#~ msgstr "manipulation de la souris"
-
-#~ msgid "Double-Click the mouse to erase the area and discover the background"
-#~ msgstr ""
-#~ "Double-clique avec la souris pour tout effacer et découvrir l'image de "
-#~ "fond."
-
-#~ msgid "Double-click the mouse"
-#~ msgstr "Double-clique avec la souris"
-
-#~ msgid "Double-click the mouse on rectangles until all the blocks disappear."
-#~ msgstr ""
-#~ "Double-clique sur les rectangles avec la souris jusqu'à ce que les blocs "
-#~ "disparaissent."
-
-#~ msgid "Use alternate database for logs"
-#~ msgstr "Utilise une base de données alternative pour l'historique"
