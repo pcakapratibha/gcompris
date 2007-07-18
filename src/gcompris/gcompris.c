@@ -1406,6 +1406,51 @@ start_bg_music (gchar *file)
   gc_sound_bg_reopen();
 }
 
+/* Single instance Check */
+static void
+single_instance_check()
+{
+  lock_file = g_strdup_printf("%s/%s", properties->config_dir, GC_LOCK_FILE);
+  if(!popt_nolockcheck)
+    {
+      GTimeVal current_time;
+      g_get_current_time(&current_time);
+
+      if (g_file_test (lock_file, G_FILE_TEST_EXISTS))
+	{
+	  char *result;
+	  gsize length;
+	  glong seconds;
+	  /* Read it's content */
+	  g_file_get_contents(lock_file,
+			      &result,
+			      &length,
+			      NULL);
+	  sscanf(result, "%ld", &seconds);
+
+	  if(current_time.tv_sec - seconds < GC_LOCK_LIMIT)
+	    {
+	      printf(_("GCompris won't start because the lock file is less than %d seconds old.\n"),
+		     GC_LOCK_LIMIT);
+	      printf(_("The lock file is: %s\n"),
+		     lock_file);
+	      exit(0);
+	    }
+	}
+
+      {
+	/* Update the date in it (in seconds) */
+	char date_str[64];
+	sprintf(date_str, "%ld", current_time.tv_sec);
+	g_file_set_contents(lock_file,
+			    date_str,
+			    strlen(date_str),
+			    NULL);
+      }
+    }
+  g_free(lock_file);
+}
+
 /*****************************************
  * Main
  *
@@ -1497,47 +1542,6 @@ main (int argc, char *argv[])
      whatever the user saved
   */
   gc_prop_load(properties, GC_PROP_FROM_SYSTEM_CONF);
-
-  /* Single instance Check */
-  lock_file = g_strdup_printf("%s/%s", properties->config_dir, GC_LOCK_FILE);
-  if(!popt_nolockcheck)
-    {
-      GTimeVal current_time;
-      g_get_current_time(&current_time);
-
-      if (g_file_test (lock_file, G_FILE_TEST_EXISTS))
-	{
-	  char *result;
-	  gsize length;
-	  glong seconds;
-	  /* Read it's content */
-	  g_file_get_contents(lock_file,
-			      &result,
-			      &length,
-			      NULL);
-	  sscanf(result, "%ld", &seconds);
-
-	  if(current_time.tv_sec - seconds < GC_LOCK_LIMIT)
-	    {
-	      printf(_("GCompris won't start because the lock file is less than %d seconds old.\n"),
-		     GC_LOCK_LIMIT);
-	      printf(_("The lock file is: %s\n"),
-		     lock_file);
-	      exit(0);
-	    }
-	}
-
-      {
-	/* Update the date in it (in seconds) */
-	char date_str[64];
-	sprintf(date_str, "%ld", current_time.tv_sec);
-	g_file_set_contents(lock_file,
-			    date_str,
-			    strlen(date_str),
-			    NULL);
-      }
-    }
-  g_free(lock_file);
 
   /* Set the locale */
 #if defined WIN32
@@ -1850,6 +1854,8 @@ main (int argc, char *argv[])
   }
 
   /*------------------------------------------------------------*/
+
+  single_instance_check();
 
   gc_skin_load(properties->skin);
 

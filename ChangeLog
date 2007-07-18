@@ -1,3 +1,10 @@
+2007-07-19  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Moved the lock file checking downstairs in the startup
+	sequence to avoid for exemple 'gcompris -v' to being locked.
+
+	* src/gcompris/gcompris.c:
+
 2007-06-26  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Fixed bad reference to leftright.png
