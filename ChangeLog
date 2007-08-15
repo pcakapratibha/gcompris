@@ -1,9 +1,28 @@
+	*** RELEASE 8.3.3 ***
+
+2007-08-16  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* configure.in: changed to release 8.3.3
+
+	* src/boards/missingletter.c: GCompris was asserting when you
+	click on the target image in missingletter activity.
+
+	* src/gcompris/bonus.c: Potentially display a NULL pointer that crashes on windows.
+	fixes bug#463961
+
+	* src/gcompris/gameutil.c:  There is a design issue in gc_file_find_absolute().
+	When called twice, it doesn't work if the properties->package_data_dir if not an
+	absolute directory. This is expecialy the case on windows and the most visible bug
+	is that congratulations are not spoken on this platform.
+
 2007-06-24  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Fixed a major bug, target activity is broken, the target never reach it's goal.
 	  Merged from trunk 2789.
 
 	* src/boards/target.c: (animate_items):
+
+	*** RELEASE 8.3.2 ***
 
 2007-06-17  Bruno coudoin  <bruno.coudoin@free.fr>
 
