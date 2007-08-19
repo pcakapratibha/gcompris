@@ -4481,7 +4481,7 @@ msgstr ""
 #: ../src/boards/python/admin/module_users.py:41
 #: ../src/boards/python/admin/module_users.py:67
 msgid "Users"
-msgstr "Usancièrs"
+msgstr "Utilizaires"
 
 #: ../src/boards/python/admin/module_users.py:41
 #: ../src/boards/python/admin/module_users.py:67
