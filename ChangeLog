@@ -1,3 +1,10 @@
+2007-08-21  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	svn commit#2898
+	* src/boards/shapegame.c: (shapegame_init_canvas), (item_event): Fixed bug#467615
+	Translated The Text In Tooltip Were Invalid.
+	Removed text shadow as it isn't always cute depending on the fonts.
+
 2007-08-16  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/missingletter.c: GCompris was asserting when you
