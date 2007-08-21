@@ -115,7 +115,6 @@ static GnomeCanvasItem	*shape_list_root_item;
 /* The tooltip */
 static GnomeCanvasGroup	*tooltip_root_item;
 static GnomeCanvasItem	*tooltip_text_item;
-static GnomeCanvasItem	*tooltip_text_item_s;
 static GnomeCanvasItem	*tooltip_bg_item;
 
 static void		 start_board (GcomprisBoard *agcomprisBoard);
@@ -574,17 +573,6 @@ static void shapegame_init_canvas(GnomeCanvasGroup *parent)
 			   NULL);
   gdk_pixbuf_unref(pixmap);
 
-  tooltip_text_item_s = \
-    gnome_canvas_item_new (GNOME_CANVAS_GROUP(tooltip_root_item),
-			   gnome_canvas_text_get_type (),
-			   "text", "",
-			   "font", gc_skin_font_board_small,
-			   "x", (double)gdk_pixbuf_get_width(pixmap)/2 + 1.0,
-			   "y", 24.0 + 1.0,
-			   "anchor", GTK_ANCHOR_CENTER,
-			   "justification", GTK_JUSTIFY_CENTER,
-			   "fill_color_rgba", gc_skin_color_shadow,
-			   NULL);
   tooltip_text_item = \
     gnome_canvas_item_new (GNOME_CANVAS_GROUP(tooltip_root_item),
 			   gnome_canvas_text_get_type (),
@@ -1095,11 +1083,8 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, Shape *shape)
 	 gnome_canvas_item_set(GNOME_CANVAS_ITEM(tooltip_bg_item),
 			       "y", 0.0,
 			       NULL);
-	 gnome_canvas_item_set(GNOME_CANVAS_ITEM(tooltip_text_item_s),
-			       "text", shape->tooltip,
-			       NULL);
 	 gnome_canvas_item_set(GNOME_CANVAS_ITEM(tooltip_text_item),
-			       "text", shape->tooltip,
+			       "text", gettext(shape->tooltip),
 			       NULL);
 	 gnome_canvas_item_show(GNOME_CANVAS_ITEM(tooltip_root_item));
        }
