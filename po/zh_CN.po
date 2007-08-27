@@ -3,10 +3,9 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Pengyong Su <supy06@gmail.com>, 2007.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-13 03:37+0100\n"
 "PO-Revision-Date: 2007-08-23 03:00+0800\n"
@@ -2775,7 +2774,7 @@ msgstr "你将看到一些卡片，但你不能看到他们的另一面。每张
 "在这个游戏中，这些卡片分开隐藏了加法式的两个部分。你要同时找出这两个部分。点击卡片显示被隐藏的数字，然后"
 "找到另一张卡片，使他们成为一个完整的加法式子。每次你只能同时翻开两张卡片，因此你要记住隐藏数字的位置，"
 "然后找出和他们相匹配的另一半。你做的是‘等号’的工作，把加法式和适当的和放到一起。当你做了这些后，"
-"两张卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）" 
+"两张卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）"
 
 #: ../boards/memory_add_minus.xml.in.h:1
 msgid "Addition and subtraction memory game"
@@ -4163,7 +4162,7 @@ msgid ""
 "Error: this activity requires that you first install\n"
 "the packages with GCompris voices for the locale '%s' ! Fallback to english, "
 "sorry!"
-msgstr "错误：这个游戏需要首先安装 GCompris 本地语音包 '%s' 或  '%s' ！\n"
+msgstr "错误：这个游戏需要首先安装 GCompris 本地语音包 '%s' ！\n"
 "回放到英语，抱歉！"
 
 #. Init configuration window:
@@ -4853,7 +4852,7 @@ msgid ""
 "You were eaten by a Troggle.\n"
 "Press <Return> to continue."
 msgstr "你被野蛮人吃掉了。\n"
-"按 回车键 继续。" 
+"按 回车键 继续。"
 
 #: ../src/boards/python/gnumch.py:490
 msgid "You ate a wrong number.\n"
