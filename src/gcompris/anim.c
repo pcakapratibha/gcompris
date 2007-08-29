@@ -1,12 +1,12 @@
 /* gcompris - anim.c
  *
- * Time-stamp: <2005/02/13 11:59:55 joe>
+ * Time-stamp: <2007-08-22 01:21:27 bruno>
  *
  * Copyright (C) 2005 Joe Neeman
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation; either version 2 of the License, or
+ *   the Free Software Foundation; either version 3 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -15,8 +15,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program; if not, write to the Free Software
- *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "anim.h"
@@ -58,7 +57,7 @@ gc_anim_load(char *filename)
   while(fscanf(f, "%99s", tmp) == 1)
     {
       GcomprisBoard   *gcomprisBoard = gc_board_get_current();
-      files = g_slist_append(files, 
+      files = g_slist_append(files,
                              g_strdup_printf("%s/%s", gcomprisBoard->board_dir, tmp));
     }
   fclose(f);
@@ -185,7 +184,7 @@ anim_tick(void *ignore)
       GcomprisAnimCanvasItem *a = (GcomprisAnimCanvasItem*)cur->data;
       if( gdk_pixbuf_animation_iter_advance( a->iter, NULL) )
         {
-          gnome_canvas_item_set((GnomeCanvasItem*)a->canvas, "pixbuf", 
+          gnome_canvas_item_set((GnomeCanvasItem*)a->canvas, "pixbuf",
                                 gdk_pixbuf_animation_iter_get_pixbuf(a->iter),
                                 NULL);
         }

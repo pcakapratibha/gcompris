@@ -7,7 +7,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -15,8 +15,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -697,27 +696,27 @@ art_render_composite_8_opt1 (ArtRenderCallback *self, ArtRender *render,
 	  for (x = run_x0; x < run_x1; x++)
 	    {
 	      src_mul = run_alpha * 0x101;
-	      
+
 	      tmp = dstptr[3];
 	      /* range 0..0xff */
 	      dst_alpha = (tmp << 8) + tmp + (tmp >> 7);
 	      dst_mul = dst_alpha;
 	      /* dst_alpha is the alpha of the dest pixel,
 		 range 0..0x10000 */
-	      
+
 	      dst_mul *= 0x101;
-	      
+
 	      dst_alpha += ((((0x10000 - dst_alpha) * run_alpha) >> 8) + 0x80) >> 8;
 	      if (dst_alpha == 0)
 		  dst_save_mul = 0xff;
 	      else /* (dst_alpha != 0) */
 		  dst_save_mul = 0xff0000 / dst_alpha;
-	      
+
 	      for (j = 0; j < 3; j++)
 		{
 		  art_u32 src, dst;
 		  art_u32 tmp;
-		  
+
 		  src = (bufptr[j] * src_mul + 0x8000) >> 16;
 		  dst = (dstptr[j] * dst_mul + 0x8000) >> 16;
 		  tmp = ((dst * (0x10000 - run_alpha) + 0x8000) >> 16) + src;
@@ -725,7 +724,7 @@ art_render_composite_8_opt1 (ArtRenderCallback *self, ArtRender *render,
 		  dstptr[j] = (tmp * dst_save_mul + 0x8000) >> 16;
 		}
 	      dstptr[3] = (dst_alpha * 0xff + 0x8000) >> 16;
-	      
+
 	      bufptr += 3;
 	      dstptr += 4;
 	    }
@@ -786,28 +785,28 @@ art_render_composite_8_opt2 (ArtRenderCallback *self, ArtRender *render,
 	      src_alpha = (bufptr[3] << 8) + bufptr[3] + (bufptr[3] >> 7);
 	      /* src_alpha is the (alpha of the source pixel),
 		 range 0..0x10000 */
-	      
+
 	      dst_alpha = (dstptr[3] << 8) + dstptr[3] + (dstptr[3] >> 7);
 	      /* dst_alpha is the alpha of the dest pixel,
 		 range 0..0x10000 */
-	      
+
 	      dst_mul = dst_alpha*0x101;
-	      
+
 	      if (src_alpha >= 0x10000)
 		dst_alpha = 0x10000;
 	      else
 		dst_alpha += ((((0x10000 - dst_alpha) * src_alpha) >> 8) + 0x80) >> 8;
-	      
+
 	      if (dst_alpha == 0)
 		  dst_save_mul = 0xff;
 	      else /* dst_alpha != 0) */
 		  dst_save_mul = 0xff0000 / dst_alpha;
-	      
+
 	      for (j = 0; j < 3; j++)
 		{
 		  art_u32 src, dst;
 		  art_u32 tmp;
-		  
+
 		  src = (bufptr[j] << 8) |  bufptr[j];
 		  dst = (dstptr[j] * dst_mul + 0x8000) >> 16;
 		  tmp = ((dst * (0x10000 - src_alpha) + 0x8000) >> 16) + src;
@@ -815,7 +814,7 @@ art_render_composite_8_opt2 (ArtRenderCallback *self, ArtRender *render,
 		  dstptr[j] = (tmp * dst_save_mul + 0x8000) >> 16;
 		}
 	      dstptr[3] = (dst_alpha * 0xff + 0x8000) >> 16;
-	      
+
 	      bufptr += 4;
 	      dstptr += 4;
 	    }
@@ -829,23 +828,23 @@ art_render_composite_8_opt2 (ArtRenderCallback *self, ArtRender *render,
 	      src_alpha = (tmp + (tmp >> 8) + (tmp >> 16)) >> 8;
 	      /* src_alpha is the (alpha of the source pixel * alpha),
 		 range 0..0x10000 */
-	      
+
 	      src_mul = run_alpha * 0x101;
-	      
+
 	      tmp = dstptr[3];
 	      /* range 0..0xff */
 	      dst_alpha = (tmp << 8) + tmp + (tmp >> 7);
 	      dst_mul = dst_alpha;
 	      /* dst_alpha is the alpha of the dest pixel,
 		 range 0..0x10000 */
-	      
+
 	      dst_mul *= 0x101;
-	      
+
 	      if (src_alpha >= 0x10000)
 		dst_alpha = 0x10000;
 	      else
 		dst_alpha += ((((0x10000 - dst_alpha) * src_alpha) >> 8) + 0x80) >> 8;
-	      
+
 	      if (dst_alpha == 0)
 		{
 		  dst_save_mul = 0xff;
@@ -854,12 +853,12 @@ art_render_composite_8_opt2 (ArtRenderCallback *self, ArtRender *render,
 		{
 		  dst_save_mul = 0xff0000 / dst_alpha;
 		}
-	      
+
 	      for (j = 0; j < 3; j++)
 		{
 		  art_u32 src, dst;
 		  art_u32 tmp;
-		  
+
 		  src = (bufptr[j] * src_mul + 0x8000) >> 16;
 		  dst = (dstptr[j] * dst_mul + 0x8000) >> 16;
 		  tmp = ((dst * (0x10000 - src_alpha) + 0x8000) >> 16) + src;
@@ -867,7 +866,7 @@ art_render_composite_8_opt2 (ArtRenderCallback *self, ArtRender *render,
 		  dstptr[j] = (tmp * dst_save_mul + 0x8000) >> 16;
 		}
 	      dstptr[3] = (dst_alpha * 0xff + 0x8000) >> 16;
-	      
+
 	      bufptr += 4;
 	      dstptr += 4;
 	    }
@@ -897,7 +896,7 @@ art_render_choose_compositing_callback (ArtRender *render)
 	  else if (render->buf_alpha == ART_ALPHA_PREMUL)
 	    return (ArtRenderCallback *)&art_render_composite_8_opt2_obj;
 	}
-	  
+
       return (ArtRenderCallback *)&art_render_composite_8_obj;
     }
   return (ArtRenderCallback *)&art_render_composite_obj;

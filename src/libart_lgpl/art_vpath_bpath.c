@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,8 +12,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -88,7 +87,7 @@ art_bezier_to_vec (double x0, double y0,
 #define RENDER_SIZE (1 << (RENDER_LEVEL))
 
 /**
- * art_vpath_render_bez: Render a bezier segment into the vpath. 
+ * art_vpath_render_bez: Render a bezier segment into the vpath.
  * @p_vpath: Where the pointer to the #ArtVpath structure is stored.
  * @pn_points: Pointer to the number of points in *@p_vpath.
  * @pn_points_max: Pointer to the number of points allocated.
@@ -213,7 +212,7 @@ art_vpath_render_bez (ArtVpath **p_vpath, int *pn, int *pn_max,
   if (z2_dot + z2_dot > z3_0_dot)
     goto subdivide;
 
-      
+
  nosubdivide:
   /* don't subdivide */
   art_vpath_add_point (p_vpath, pn, pn_max,

@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,8 +12,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -217,7 +216,7 @@ art_svp_render_aa_iter_step (ArtSVPRenderAAIter *iter, int *p_start,
   artfloat dy;
 
   int sx;
-  
+
   /* insert new active segments */
   for (; i < svp->n_segs && svp->segs[i].bbox.y0 < y + 1; i++)
     {
@@ -310,7 +309,7 @@ art_svp_render_aa_iter_step (ArtSVPRenderAAIter *iter, int *p_start,
 		if (ix_min >= x0)
 		  {
 		    ADD_STEP(ix_min, xdelta)
-		    
+
 		    x = ix_min + 1;
 		  }
 		else
@@ -339,7 +338,7 @@ art_svp_render_aa_iter_step (ArtSVPRenderAAIter *iter, int *p_start,
 		    last = this;
 
 		    ADD_STEP(x, xdelta)
-		    
+
 		    if (x + 1 < x1)
 		      {
 			xdelta = delta - last;
@@ -433,7 +432,7 @@ art_svp_render_aa_iter_done (ArtSVPRenderAAIter *iter)
  * 0xff8000 represents 100% coverage. This format is designed so that
  * >> 16 results in a standard 0x00..0xff value range, with nice
  * rounding.
- * 
+ *
  **/
 void
 art_svp_render_aa (const ArtSVP *svp,

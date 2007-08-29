@@ -7,7 +7,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -15,8 +15,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  *
  * Authors: Raph Levien <raph@acm.org>
@@ -41,7 +40,7 @@
 # undef alloca
 # define alloca(size)   __builtin_alloca (size)
 #elif defined (HAVE_ALLOCA_H)
-/* a native and working alloca.h is there */ 
+/* a native and working alloca.h is there */
 # include <alloca.h>
 #else /* !__GNUC__ && !HAVE_ALLOCA_H */
 # ifdef _MSC_VER
@@ -100,11 +99,11 @@ art_rgba_gradient_run (art_u8 *buf,
 
 #ifdef DEBUG_SPEW
   printf ("gradient run from %3d %3d %3d %3d to %3d %3d %3d %3d in %d pixels\n",
-	  color1[0], color1[1], color1[2], color1[3], 
+	  color1[0], color1[1], color1[2], color1[3],
 	  color2[0], color2[1], color2[2], color2[3],
 	  len);
 #endif
-  
+
   r = (color1[0] << 16) + 0x8000;
   g = (color1[1] << 16) + 0x8000;
   b = (color1[2] << 16) + 0x8000;
@@ -140,7 +139,7 @@ calc_color_at (ArtGradientStop *stops,
 {
   double off0, off1;
   int j;
-  
+
   if (spread == ART_GRADIENT_PAD)
     {
       if (offset < 0.0)
@@ -170,17 +169,17 @@ calc_color_at (ArtGradientStop *stops,
 	  double interp;
 	  double o;
 	  o = offset_fraction;
-	  
+
 	  if ((fabs (o) < EPSILON) && (!favor_start))
 	    o = 1.0;
 	  else if ((fabs (o-1.0) < EPSILON) && (favor_start))
 	    o = 0.0;
-	  
+
 	  /*
 	  if (offset_fraction == 0.0  && !favor_start)
 	    offset_fraction = 1.0;
 	  */
-	  
+
 	  interp = (o - off0) / (off1 - off0);
 	  for (j = 0; j < 4; j++)
 	    {
@@ -238,7 +237,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
   printf ("\n");
   printf ("a: %f, b: %f, c: %f\n", gradient->a, gradient->b, gradient->c);
 #endif
-  
+
   offset = render->x0 * gradient->a + y * gradient->b + gradient->c;
   d_offset = gradient->a;
 
@@ -278,7 +277,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 #endif
 
   }
-  
+
   if (spread == ART_GRADIENT_REFLECT)
     {
       tmp_stops = stops;
@@ -291,11 +290,11 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 	  memcpy (stops[n_stops * 2 - 1 - i].color, stops[i].color, sizeof (stops[i].color));
 	  stops[i].offset = stops[i].offset / 2.0;
 	}
-      
+
       spread = ART_GRADIENT_REPEAT;
       offset = offset / 2.0;
       d_offset = d_offset / 2.0;
-      
+
       n_stops = 2 * n_stops;
 
 #ifdef DEBUG_SPEW
@@ -330,7 +329,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 #ifdef DEBUG_SPEW
   printf ("Initial ix: %d\n", ix);
 #endif
-  
+
   assert (ix > 0);
   assert (ix < n_stops);
   assert ((stops[ix-1].offset <= offset_fraction + EPSILON) ||
@@ -344,7 +343,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
   assert ((offset_fraction != stops[ix].offset) ||
 	  (d_offset <= 0.0));
   */
-  
+
   while (width > 0)
     {
 #ifdef DEBUG_SPEW
@@ -371,7 +370,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 	{
 	  double o;
 	  o = offset_fraction;
-	  
+
 	  if ((fabs (o) <= EPSILON) && (ix == n_stops - 1))
 	    o = 1.0;
 	  else if ((fabs (o-1.0) <= EPSILON) && (ix == 1))
@@ -397,7 +396,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 	  offset_fraction = offset - floor (offset);
 #ifdef DEBUG_SPEW
 	  printf ("end offset: %f, fraction: %f\n", offset, offset_fraction);
-#endif	  
+#endif
 	  calc_color_at (stops, n_stops,
 			 spread,
 			 offset,
@@ -405,7 +404,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 			 (d_offset < EPSILON),
 			 ix,
 			 color2);
-	  
+
 	  art_rgba_gradient_run (bufp,
 				 color1,
 				 color2,
@@ -429,7 +428,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 	    }
 	  while (!((stops[ix-1].offset <= offset_fraction &&
 		   offset_fraction < stops[ix].offset) ||
-		   (ix == 1 && offset_fraction > (1.0 - EPSILON)))); 
+		   (ix == 1 && offset_fraction > (1.0 - EPSILON))));
 	}
       else
 	{
@@ -443,7 +442,7 @@ art_render_gradient_linear_render_8 (ArtRenderCallback *self,
 		    offset_fraction <= stops[ix].offset) ||
 		   (ix == n_stops - 1 && offset_fraction < EPSILON /* == 0.0*/)));
 	}
-      
+
       bufp += 4*len;
       width -= len;
     }
@@ -573,7 +572,7 @@ art_render_gradient_linear_negotiate (ArtImageSource *self, ArtRender *render,
       *p_alpha = ART_ALPHA_PREMUL;
       return;
     }
-  
+
   self->super.render = art_render_gradient_linear_render;
   *p_flags = 0;
   *p_buf_depth = render->depth;

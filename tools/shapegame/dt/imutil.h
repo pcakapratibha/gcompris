@@ -4,7 +4,7 @@
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation; either version 2 of the License, or
+ *   the Free Software Foundation; either version 3 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -13,8 +13,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program; if not, write to the Free Software
- *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 /* some image utilities */
 
@@ -29,7 +28,7 @@ template <class T>
 void min_max(image<T> *im, T *ret_min, T *ret_max) {
   int width = im->width();
   int height = im->height();
-  
+
   T min = imRef(im, 0, 0);
   T max = imRef(im, 0, 0);
   for (int y = 0; y < height; y++) {
@@ -44,7 +43,7 @@ void min_max(image<T> *im, T *ret_min, T *ret_max) {
 
   *ret_min = min;
   *ret_max = max;
-} 
+}
 
 /* threshold image */
 template <class T>
@@ -52,7 +51,7 @@ image<uchar> *threshold(image<T> *src, int t) {
   int width = src->width();
   int height = src->height();
   image<uchar> *dst = new image<uchar>(width, height);
-  
+
   for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {
       imRef(dst, x, y) = (imRef(src, x, y) >= t);

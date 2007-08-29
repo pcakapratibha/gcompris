@@ -7,7 +7,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -15,8 +15,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  *
  * Authors: Raph Levien <raph@acm.org>
@@ -74,13 +73,13 @@ art_render_mask_render (ArtRenderCallback *self, ArtRender *render,
 
       if (z_x0 > x0)
 	memset (alpha_buf, 0, z_x0 - x0);
-      
+
       if (z->first)
 	memcpy (dst_line, src_line, z_width);
       else
 	{
 	  int x;
-	  
+
 	  for (x = 0; x < z_width; x++)
 	    {
 	      int v;
@@ -97,7 +96,7 @@ art_render_mask_render (ArtRenderCallback *self, ArtRender *render,
 		}
 	    }
 	}
-      
+
       if (z_x1 < x1)
 	memset (alpha_buf + z_x1 - x0, 0, x1 - z_x1);
     }

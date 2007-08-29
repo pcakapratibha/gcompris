@@ -7,7 +7,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -15,8 +15,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -113,7 +112,7 @@ art_rgba_rgba_composite (art_u8 *dst, const art_u8 *src, int n)
 	    ((art_u32 *)dst)[i] = (r << 24) | (g << 16) | (b << 8) | a;
 #else
 	    ((art_u32 *)dst)[i] = (a << 24) | (b << 16) | (g << 8) | r;
-#endif	      
+#endif
 	    }
 	}
 #if 0
@@ -172,7 +171,7 @@ art_rgba_fill_run (art_u8 *buf, art_u8 r, art_u8 g, art_u8 b, int n)
 #else
       ((art_u32 *)buf)[i] = src_abgr;
 #endif
-    }    
+    }
 }
 
 /**

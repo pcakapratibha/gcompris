@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,8 +12,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -263,7 +262,7 @@ make_testpat (void)
   affine[3] = 0.5;
   affine[4] = 64;
   affine[5] = 64;
-  
+
   affine2[0] = 1;
   affine2[1] = -.2;
   affine2[2] = .2;
@@ -395,11 +394,11 @@ test_dash (void)
   ArtVpath *vpath, *vpath2;
   double dash_data[] = { 10, 4, 1, 4};
   ArtVpathDash dash;
-	  
+
   dash.offset = 0;
   dash.n_dash = 3;
   dash.dash = dash_data;
-  
+
   vpath = randstar (50);
   vpath2 = art_vpath_dash (vpath, &dash);
   printf ("%%!\n");
@@ -461,7 +460,7 @@ test_render_rad_gradient (art_u8 *buf)
   gradient.affine[5] = -1.5;
   gradient.fx = 0.9;
   gradient.fy = 0.1;
-  
+
   gradient.n_stops = sizeof(stops) / sizeof(stops[0]);
   gradient.stops = stops;
 

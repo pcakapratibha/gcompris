@@ -4,7 +4,7 @@
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation; either version 2 of the License, or
+ *   the Free Software Foundation; either version 3 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -13,8 +13,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program; if not, write to the Free Software
- *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 /* image conversion */
 
@@ -58,7 +57,7 @@ static image<rgb> *imageGRAYtoRGB(image<uchar> *input) {
       imRef(output, x, y).b = imRef(input, x, y);
     }
   }
-  return output;  
+  return output;
 }
 
 static image<float> *imageUCHARtoFLOAT(image<uchar> *input) {
@@ -71,7 +70,7 @@ static image<float> *imageUCHARtoFLOAT(image<uchar> *input) {
       imRef(output, x, y) = imRef(input, x, y);
     }
   }
-  return output;  
+  return output;
 }
 
 static image<float> *imageINTtoFLOAT(image<int> *input) {
@@ -84,10 +83,10 @@ static image<float> *imageINTtoFLOAT(image<int> *input) {
       imRef(output, x, y) = imRef(input, x, y);
     }
   }
-  return output;  
+  return output;
 }
 
-static image<uchar> *imageFLOATtoUCHAR(image<float> *input, 
+static image<uchar> *imageFLOATtoUCHAR(image<float> *input,
 				       float min, float max) {
   int width = input->width();
   int height = input->height();
@@ -122,7 +121,7 @@ static image<long> *imageUCHARtoLONG(image<uchar> *input) {
       imRef(output, x, y) = imRef(input, x, y);
     }
   }
-  return output;  
+  return output;
 }
 
 static image<uchar> *imageLONGtoUCHAR(image<long> *input, long min, long max) {
@@ -149,7 +148,7 @@ static image<uchar> *imageLONGtoUCHAR(image<long> *input) {
   return imageLONGtoUCHAR(input, min, max);
 }
 
-static image<uchar> *imageSHORTtoUCHAR(image<short> *input, 
+static image<uchar> *imageSHORTtoUCHAR(image<short> *input,
 					short min, short max) {
   int width = input->width();
   int height = input->height();

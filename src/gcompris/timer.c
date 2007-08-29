@@ -1,12 +1,12 @@
 /* gcompris - timer.c
  *
- * Time-stamp: <2001/10/15 01:10:21 bruno>
+ * Time-stamp: <2007-08-22 01:21:26 bruno>
  *
  * Copyright (C) 2002 Bruno coudoin
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -15,8 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "gcompris_config.h"
@@ -81,13 +80,13 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
 	gchar		*filefull = NULL;
 	gchar		*filename = NULL;
 	gint		fileid;
-	
+
 	fileid = (gint)timer;
 	if(type==GCOMPRIS_TIMER_SAND)
 	  filename = g_strdup_printf("gcompris/timers/sablier%d.png", fileid);
 	else
 	  filename = g_strdup_printf("gcompris/timers/clock%d.png", fileid);
-	
+
 	filefull = g_strdup_printf("%s/%s", properties->package_data_dir, filename);
 	if (g_file_test ((filefull), G_FILE_TEST_EXISTS))
 	  {
@@ -95,11 +94,11 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
 
 	    gc_timer_item = gnome_canvas_item_new (boardRootItem,
 						   gnome_canvas_pixbuf_get_type (),
-						   "pixbuf", pixmap, 
+						   "pixbuf", pixmap,
 						   "x", x,
 						   "y", y,
 						   NULL);
-	    
+
 	    gdk_pixbuf_unref(pixmap);
 	  }
 	g_free(filename);
@@ -126,7 +125,7 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
       pixmap = gc_pixmap_load("gcompris/misc/tuxballoon.png");
       gc_timer_item = gnome_canvas_item_new (boardRootItem,
 					     gnome_canvas_pixbuf_get_type (),
-					     "pixbuf", pixmap, 
+					     "pixbuf", pixmap,
 					     "x", x,
 					     "y", y,
 					     NULL);
@@ -139,7 +138,7 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
       pixmap = gc_pixmap_load("gcompris/misc/sea.png");
       gnome_canvas_item_new (boardRootItem,
 			     gnome_canvas_pixbuf_get_type (),
-			     "pixbuf", pixmap, 
+			     "pixbuf", pixmap,
 			     "x", (double) 0,
 			     "y", (double) BOARDHEIGHT - gdk_pixbuf_get_height(pixmap),
 			     "width", (double) gdk_pixbuf_get_width(pixmap),
@@ -192,7 +191,7 @@ gc_timer_pause(gboolean pause)
       if (animate_id)
 	gtk_timeout_remove (animate_id);
       animate_id = 0;
-      
+
       if (subanimate_id)
 	gtk_timeout_remove (subanimate_id);
       subanimate_id = 0;

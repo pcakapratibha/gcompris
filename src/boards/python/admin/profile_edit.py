@@ -1,21 +1,20 @@
 #  gcompris - profile_edit.py
-# 
+#
 # Copyright (C) 2005 Bruno Coudoin and Yves Combe
-# 
+#
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
-#   the Free Software Foundation; either version 2 of the License, or
+#   the Free Software Foundation; either version 3 of the License, or
 #   (at your option) any later version.
-# 
+#
 #   This program is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
-# 
+#
 #   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-# 
+#   along with this program; if not, see <http://www.gnu.org/licenses/>.
+#
 
 
 import gtk
@@ -55,7 +54,7 @@ class ProfileEdit(gtk.Window):
         # A pointer to the profile_list_list class
         # Will be called to refresh the list when edit is done
         self.profile_list = profile_list
-        
+
         self.set_title(_("Editing a Profile"))
         self.set_border_width(8)
         self.set_default_size(320, 350)
@@ -71,7 +70,7 @@ class ProfileEdit(gtk.Window):
 
 
         self.add(frame)
-        
+
         vbox = gtk.VBox(False, 8)
         vbox.set_border_width(8)
         frame.add(vbox)
@@ -82,7 +81,7 @@ class ProfileEdit(gtk.Window):
         table.set_row_spacings(0)
         table.set_col_spacings(20)
         vbox.pack_start(table, True, True, 0)
-        
+
         label = gtk.Label(_('Profile:'))
         label.set_alignment(0, 0)
         table.attach(label, 0, 1, 0, 1, xoptions=gtk.SHRINK, yoptions=gtk.EXPAND)
@@ -93,7 +92,7 @@ class ProfileEdit(gtk.Window):
                      xoptions=gtk.SHRINK, yoptions=gtk.EXPAND)
 
         # FIXME: How to remove the selection
-        
+
         # Label and Entry for the first name
         label = gtk.Label(_('Description:'))
         label.set_alignment(0, 0)
@@ -130,9 +129,9 @@ class ProfileEdit(gtk.Window):
         treeview.set_rules_hint(True)
         treeview.set_search_column(COLUMN_GROUPNAME)
         treeview.get_selection().set_mode(gtk.SELECTION_MULTIPLE)
-        
+
         sw.add(treeview)
-        
+
         # add columns to the tree view
         self.__add_columns(treeview)
 
@@ -173,7 +172,7 @@ class ProfileEdit(gtk.Window):
         treeview2.get_selection().set_mode(gtk.SELECTION_MULTIPLE)
 
         sw2.add(treeview2)
-        
+
         # add columns to the tree view
         self.__add_columns(treeview2)
 
@@ -184,7 +183,7 @@ class ProfileEdit(gtk.Window):
         vbox.pack_start(gtk.HSeparator(), False, False, 0)
 
         bbox = gtk.HBox(homogeneous=False, spacing=8)
-        
+
         button = gtk.Button(stock='gtk-help')
         bbox.pack_start(button, expand=False, fill=False, padding=0)
 
@@ -251,7 +250,7 @@ class ProfileEdit(gtk.Window):
 
             # Insert the class name in the group
             group = (group[0], class_name, group[1], group[2])
-            
+
             if(with and group_is_already):
                 self.add_group_in_model(model, group)
             elif(not with and not group_is_already):
@@ -262,7 +261,7 @@ class ProfileEdit(gtk.Window):
     def __add_columns(self, treeview):
 
         model = treeview.get_model()
-        
+
         # columns for class name
         renderer = gtk.CellRendererText()
         renderer.set_data("column", COLUMN_CLASSNAME)
@@ -299,15 +298,15 @@ class ProfileEdit(gtk.Window):
     def add_group(self, button, treeview):
 
         model = treeview.get_model()
-        
+
         treestore, paths = treeview.get_selection().get_selected_rows()
-        
+
         paths.reverse()
-        
+
         for path in paths:
-            
+
             iter = treestore.get_iter(path)
-            
+
             path = model.get_path(iter)[0]
             group_id           = model.get_value(iter, COLUMN_GROUPID)
             class_name         = model.get_value(iter, COLUMN_CLASSNAME)
@@ -318,7 +317,7 @@ class ProfileEdit(gtk.Window):
             # Add in the the right view
             self.add_group_in_model(self.model_right,
                                     (group_id, class_name, group_name, group_description))
-            
+
             # Save the change in the base
             self.cur.execute('INSERT OR REPLACE INTO list_groups_in_profiles ' +
                              '(profile_id, group_id) VALUES (?, ?)',
@@ -331,15 +330,15 @@ class ProfileEdit(gtk.Window):
     def remove_group(self, button, treeview):
 
         model = treeview.get_model()
-        
+
         treestore, paths = treeview.get_selection().get_selected_rows()
-        
+
         paths.reverse()
-        
+
         for path in paths:
-            
+
             iter = treestore.get_iter(path)
-            
+
             path = model.get_path(iter)[0]
             group_id           = model.get_value(iter, COLUMN_GROUPID)
             class_name         = model.get_value(iter, COLUMN_CLASSNAME)
@@ -350,7 +349,7 @@ class ProfileEdit(gtk.Window):
             # Add in the the left view
             self.add_group_in_model(self.model_left,
                                     (group_id, class_name, group_name, group_description))
-            
+
             # Save the change in the base
             self.cur.execute('DELETE FROM list_groups_in_profiles ' +
                              'WHERE profile_id=? AND group_id=?',
@@ -364,7 +363,7 @@ class ProfileEdit(gtk.Window):
     def close(self, button):
         self.profile_list.reload_profile()
         self.destroy()
-        
+
     # Done, can quit this dialog with saving
     #
     def ok(self, button):

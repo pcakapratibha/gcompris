@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,8 +12,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -94,7 +93,7 @@ art_svp_add_segment (ArtSVP **p_vp, int *pn_segs_max,
 	}
       seg->bbox.x0 = x_min;
       seg->bbox.y0 = points[0].y;
-      
+
       seg->bbox.x1 = x_max;
       seg->bbox.y1 = points[n_points - 1].y;
     }
@@ -105,7 +104,7 @@ art_svp_add_segment (ArtSVP **p_vp, int *pn_segs_max,
 /**
  * art_svp_free: Free an #ArtSVP structure.
  * @svp: #ArtSVP to free.
- * 
+ *
  * Frees an #ArtSVP structure and all the segments in it.
  **/
 void
@@ -129,7 +128,7 @@ art_svp_free (ArtSVP *svp)
  * art_svp_seg_compare: Compare two segments of an svp.
  * @seg1: First segment to compare.
  * @seg2: Second segment to compare.
- * 
+ *
  * Compares two segments of an svp. Return 1 if @seg2 is below or to the
  * right of @seg1, -1 otherwise.
  **/

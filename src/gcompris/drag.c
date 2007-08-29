@@ -4,7 +4,7 @@
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation; either version 2 of the License, or
+ *   the Free Software Foundation; either version 3 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -13,14 +13,13 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program; if not, write to the Free Software
- *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "drag.h"
 
 static gc_Drag_Func gc_drag_func;
-static int gc_drag_status;  
+static int gc_drag_status;
 
 /*  Values of status are :
     0 - waiting for a BUTTON_PRESS
@@ -52,8 +51,8 @@ void gc_drag_item_move(GdkEvent *event)
     item_y = event->button.y;
     gnome_canvas_item_w2i(gc_drag_item->parent, &item_x, &item_y);
 
-    gnome_canvas_item_set(gc_drag_item, 
-            "x", item_x - gc_drag_offset_x, 
+    gnome_canvas_item_set(gc_drag_item,
+            "x", item_x - gc_drag_offset_x,
             "y", item_y - gc_drag_offset_y, NULL);
 }
 
@@ -76,9 +75,9 @@ void gc_drag_offset_save(GdkEvent *event)
     x=event->button.x;
     y=event->button.y;
     gnome_canvas_item_w2i(gc_drag_item->parent, &x, &y);
-    
+
     gnome_canvas_item_get_bounds(gc_drag_item, &item_x, &item_y, NULL, NULL);
-    
+
     gc_drag_offset_set(x - item_x, y - item_y);
 }
 
@@ -134,7 +133,7 @@ gint gc_drag_event_root(GnomeCanvasItem * item, GdkEvent *event, gpointer data)
 
 void gc_drag_start(GnomeCanvasGroup *root_item, gc_Drag_Func function, gc_drag_mode_type mode)
 {
-    gtk_signal_connect(GTK_OBJECT(root_item), "event", 
+    gtk_signal_connect(GTK_OBJECT(root_item), "event",
             (GtkSignalFunc) gc_drag_event_root, NULL);
     gc_drag_func = function;
     gc_drag_status = 0;

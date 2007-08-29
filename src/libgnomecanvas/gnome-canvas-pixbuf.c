@@ -7,7 +7,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -15,9 +15,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include <config.h>
@@ -53,7 +51,7 @@ typedef struct {
 	guint height_in_pixels : 1;
 	guint x_in_pixels : 1;
 	guint y_in_pixels : 1;
-	
+
 	/* Whether the pixbuf has changed */
 	guint need_pixbuf_update : 1;
 
@@ -628,7 +626,7 @@ compute_viewport_affine (GnomeCanvasPixbuf *gcp, double *viewport_affine, double
 	case GTK_ANCHOR_NE:
 		tj_len *= y;
 		break;
-		
+
 	case GTK_ANCHOR_W:
 	case GTK_ANCHOR_CENTER:
 	case GTK_ANCHOR_E:
@@ -649,7 +647,7 @@ compute_viewport_affine (GnomeCanvasPixbuf *gcp, double *viewport_affine, double
 
 	art_affine_scale (scale, si_len, sj_len);
 	art_affine_translate (translate, ti_len, tj_len);
-  	art_affine_multiply (viewport_affine, scale, translate); 
+  	art_affine_multiply (viewport_affine, scale, translate);
 }
 
 /* Computes the affine transformation with which the pixbuf needs to be
@@ -944,12 +942,12 @@ gnome_canvas_pixbuf_render (GnomeCanvasItem *item, GnomeCanvasBuf *buf)
 	    x0 = MIN (x0, buf->rect.x1 - buf->rect.x0);
 	    y0 = MAX (y0, 0);
 	    y0 = MIN (y0, buf->rect.y1 - buf->rect.y0);
-	    
+
 	    x1 = MAX (x1, 0);
 	    x1 = MIN (x1, buf->rect.x1 - buf->rect.x0);
 	    y1 = MAX (y1, 0);
 	    y1 = MIN (y1, buf->rect.y1 - buf->rect.y0);
-	    
+
 	    gdk_pixbuf_composite  (priv->pixbuf,
 				   dest_pixbuf,
 				   x0, y0,

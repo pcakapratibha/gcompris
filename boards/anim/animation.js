@@ -3,7 +3,7 @@
  //
  //   This program is free software; you can redistribute it and/or modify
  //   it under the terms of the GNU General Public License as published by
- //   the Free Software Foundation; either version 2 of the License, or
+ //   the Free Software Foundation; either version 3 of the License, or
  //   (at your option) any later version.
  //
  //   This program is distributed in the hope that it will be useful,
@@ -12,8 +12,7 @@
  //   GNU General Public License for more details.
  //
  //   You should have received a copy of the GNU General Public License
- //   along with this program; if not, write to the Free Software
- //   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ //   along with this program; if not, see <http://www.gnu.org/Licenses/>.
  //
  // Utility file for anim.py to export gcompris anim in Mozilla SVG
 
@@ -128,19 +127,19 @@ function apply_frame(frame_no){
          }
 	 // create is at end because of viewBox/use need that.
          if (AnimItemlist[i][1]['frame_' + frame_no]['create']){
-	    root.appendChild(AnimItemlist[i][0]);	
+	    root.appendChild(AnimItemlist[i][0]);
             }
          // z is after create, of course...
          if (AnimItemlist[i][1]['frame_' + frame_no]['z']){
-	    set_z(AnimItemlist[i][0], AnimItemlist[i][1]['frame_' + frame_no]['z'][1] );	
+	    set_z(AnimItemlist[i][0], AnimItemlist[i][1]['frame_' + frame_no]['z'][1] );
             }
        }
 
     }
 }
-  
+
 function apply_attr(node, name, value){
-    // alert(node.nodeName + " " + name + " " + value ); 
+    // alert(node.nodeName + " " + name + " " + value );
 }
 
 function speed_down() {
@@ -181,7 +180,7 @@ function stop_animation()
 
 function animate()
 {
-  var id = root.suspendRedraw(1000);	  
+  var id = root.suspendRedraw(1000);
 
   if (step == frames_total) {
      reinit_animation();
@@ -219,11 +218,11 @@ function reinit_animation() {
    time_base = f.getTime();
 }
 
-	
+
 function set_z(node, index) {
         index = parseInt(index) + base_stack;
 
-        if (node.parentNode.childNodes[index] == node) return;	
+        if (node.parentNode.childNodes[index] == node) return;
 
 	var parent = node.parentNode;
 	parent.removeChild(node);

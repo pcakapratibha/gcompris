@@ -4,7 +4,7 @@
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation; either version 2 of the License, or
+ *   the Free Software Foundation; either version 3 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -13,8 +13,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program; if not, write to the Free Software
- *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 /* basic image I/O */
 
@@ -34,7 +33,7 @@ class pnm_error { };
 
 static void read_packed(unsigned char *data, int size, std::ifstream &f) {
   unsigned char c = 0;
-  
+
   int bitshift = -1;
   for (int pos = 0; pos < size; pos++) {
     if (bitshift == -1) {
@@ -48,7 +47,7 @@ static void read_packed(unsigned char *data, int size, std::ifstream &f) {
 
 static void write_packed(unsigned char *data, int size, std::ofstream &f) {
   unsigned char c = 0;
-  
+
   int bitshift = 7;
   for (int pos = 0; pos < size; pos++) {
       c = c | (data[pos] << bitshift);
@@ -61,18 +60,18 @@ static void write_packed(unsigned char *data, int size, std::ofstream &f) {
   }
 }
 
-/* read PNM field, skipping comments */ 
+/* read PNM field, skipping comments */
 static void pnm_read(std::ifstream &file, char *buf) {
   char doc[BUF_SIZE];
   char c;
-  
+
   file >> c;
   while (c == '#') {
     file.getline(doc, BUF_SIZE);
     file >> c;
   }
   file.putback(c);
-  
+
   file.width(BUF_SIZE);
   file >> buf;
   file.ignore();
@@ -80,23 +79,23 @@ static void pnm_read(std::ifstream &file, char *buf) {
 
 static image<uchar> *loadPBM(const char *name) {
   char buf[BUF_SIZE];
-  
+
   /* read header */
   std::ifstream file(name, std::ios::in | std::ios::binary);
   pnm_read(file, buf);
   if (strncmp(buf, "P4", 2))
     throw pnm_error();
-    
+
   pnm_read(file, buf);
   int width = atoi(buf);
   pnm_read(file, buf);
   int height = atoi(buf);
-  
+
   /* read data */
   image<uchar> *im = new image<uchar>(width, height);
   for (int i = 0; i < height; i++)
     read_packed(imPtr(im, 0, i), width, file);
-  
+
   return im;
 }
 
@@ -112,7 +111,7 @@ static void savePBM(image<uchar> *im, const char *name) {
 
 static image<uchar> *loadPGM(const char *name) {
   char buf[BUF_SIZE];
-  
+
   /* read header */
   std::ifstream file(name, std::ios::in | std::ios::binary);
   pnm_read(file, buf);
@@ -146,7 +145,7 @@ static void savePGM(image<uchar> *im, const char *name) {
 
 static image<rgb> *loadPPM(const char *name) {
   char buf[BUF_SIZE], doc[BUF_SIZE];
-  
+
   /* read header */
   std::ifstream file(name, std::ios::in | std::ios::binary);
   pnm_read(file, buf);
@@ -181,7 +180,7 @@ static void savePPM(image<rgb> *im, const char *name) {
 template <class T>
 void load_image(image<T> **im, const char *name) {
   char buf[BUF_SIZE];
-  
+
   /* read header */
   std::ifstream file(name, std::ios::in | std::ios::binary);
   pnm_read(file, buf);

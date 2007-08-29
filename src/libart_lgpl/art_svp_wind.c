@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,8 +12,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -64,7 +63,7 @@ intersect_lines (ArtPoint z0, ArtPoint z1, ArtPoint z2, ArtPoint z3,
   a01 = z0.y - z1.y;
   b01 = z1.x - z0.x;
   c01 = -(z0.x * a01 + z0.y * b01);
-  /* = -((z0.y - z1.y) * z0.x + (z1.x - z0.x) * z0.y) 
+  /* = -((z0.y - z1.y) * z0.x + (z1.x - z0.x) * z0.y)
      = (z1.x * z0.y - z1.y * z0.x) */
 
   d2 = a01 * z2.x + b01 * z2.y + c01;
@@ -175,7 +174,7 @@ x_order (ArtPoint z0, ArtPoint z1, ArtPoint z2, ArtPoint z3)
 	      b23 = -b23;
 	      c23 = -c23;
 	    }
-	  
+
 	  d0 = trap_epsilon (a23 * z0.x + b23 * z0.y + c23);
 	  d1 = trap_epsilon (a23 * z1.x + b23 * z1.y + c23);
 
@@ -204,7 +203,7 @@ x_order (ArtPoint z0, ArtPoint z1, ArtPoint z2, ArtPoint z3)
       a01 = z0.y - z1.y;
       b01 = z1.x - z0.x;
       c01 = -(z0.x * a01 + z0.y * b01);
-      /* = -((z0.y - z1.y) * z0.x + (z1.x - z0.x) * z0.y) 
+      /* = -((z0.y - z1.y) * z0.x + (z1.x - z0.x) * z0.y)
 	 = (z1.x * z0.y - z1.y * z0.x) */
 
       if (z1.y < z0.y)
@@ -240,7 +239,7 @@ x_order (ArtPoint z0, ArtPoint z1, ArtPoint z2, ArtPoint z3)
   a01 = z0.y - z1.y;
   b01 = z1.x - z0.x;
   c01 = -(z0.x * a01 + z0.y * b01);
-  /* = -((z0.y - z1.y) * z0.x + (z1.x - z0.x) * z0.y) 
+  /* = -((z0.y - z1.y) * z0.x + (z1.x - z0.x) * z0.y)
      = -(z1.x * z0.y - z1.y * z0.x) */
 
   if (a01 > 0)
@@ -343,7 +342,7 @@ x_order_2 (ArtPoint z0, ArtPoint z1, ArtPoint z2, ArtPoint z3)
     return -1;
   if (z0.x >= z2.x && z1.x >= z2.x && z0.x >= z3.x && z1.x >= z3.x)
     return 1;
-  
+
   fprintf (stderr, "x_order_2: colinear!\n");
   return 0;
 }
@@ -561,7 +560,7 @@ svp_add_point (ArtSVP *svp, int *n_points_max,
     {
       asi_left = seg_map[active_segs[i - 1]];
       n_points_left = svp->segs[asi_left].n_points;
-      if (n_points_left > 1 && 
+      if (n_points_left > 1 &&
 	  PT_EQ (svp->segs[asi_left].points[n_points_left - 2],
 		 svp->segs[asi].points[n_points - 1]))
 	{
@@ -584,7 +583,7 @@ svp_add_point (ArtSVP *svp, int *n_points_max,
     {
       asi_right = seg_map[active_segs[i + 1]];
       n_points_right = svp->segs[asi_right].n_points;
-      if (n_points_right > 1 && 
+      if (n_points_right > 1 &&
 	  PT_EQ (svp->segs[asi_right].points[n_points_right - 2],
 		 svp->segs[asi].points[n_points - 1]))
 	{
@@ -762,7 +761,7 @@ fix_crossing (int start, int end, int *active_segs, int n_active_segs,
 
 	target = j + 1;
 	/* target is where active_seg[i] _should_ be in active_segs */
-      
+
 	if (target != i)
 	  {
 	    swap = 1;
@@ -1064,7 +1063,7 @@ art_svp_uncross (ArtSVP *vp)
 				     cursor, vp);
 
 	      i--;
-	    }	      
+	    }
 	}
 
       /* insert new segments into the active list */
@@ -1142,7 +1141,7 @@ art_svp_uncross (ArtSVP *vp)
 	}
 #endif
 
-      /* advance y to the next event 
+      /* advance y to the next event
        Note: this is quadratic. We'd probably get decent constant
        factor speed improvement by caching the y_curs values. */
       if (n_active_segs == 0)
@@ -1203,7 +1202,7 @@ art_svp_uncross (ArtSVP *vp)
 		{
 		  /* this is where crossings are detected, and if
 		     found, the active segments switched around. */
-		      
+
 		  fix_crossing (first_share, i,
 				active_segs, n_active_segs,
 				cursor, ips, n_ips, n_ips_max, vp, seg_map,
@@ -1221,7 +1220,7 @@ art_svp_uncross (ArtSVP *vp)
 		    intersect_neighbors (i, active_segs,
 					 n_ips, n_ips_max, ips,
 					 cursor, vp);
-		  
+
 		  if (i + 1 < n_active_segs)
 		    intersect_neighbors (i + 1, active_segs,
 					 n_ips, n_ips_max, ips,

@@ -34,7 +34,7 @@ class Window(gtk.Window):
 
         self.init_child_dialogs()
 
-        
+
     def create_ui(self):
         ag = gtk.ActionGroup('WindowActions')
         # FIXME: this xml menu ony creates unneeded information duplication, I think.
@@ -227,7 +227,7 @@ class Window(gtk.Window):
         return True
 
     def key_press_event_cb_after(self, win, event):
-        # Not checking modifiers because this function gets only 
+        # Not checking modifiers because this function gets only
         # called if no user keybinding accepted the event.
         if event.keyval == gtk.keysyms.KP_Add: self.zoom('ZoomIn')
         elif event.keyval == gtk.keysyms.KP_Subtract: self.zoom('ZoomOut')
@@ -237,10 +237,10 @@ class Window(gtk.Window):
     def clear_cb(self, action):
         self.mdw.clear()
         self.statusbar.pop(1)
-        
+
     def invert_color_cb(self, action):
         self.app.brush.invert_color()
-        
+
     def pick_color_cb(self, action):
         self.app.colorSelectionWindow.pick_color_at_pointer()
 
@@ -250,25 +250,25 @@ class Window(gtk.Window):
     def brush_bigger_cb(self, action):
         adj = self.app.brush_adjustment['radius_logarithmic']
         adj.set_value(adj.get_value() + 0.3)
-        
+
     def brush_smaller_cb(self, action):
         adj = self.app.brush_adjustment['radius_logarithmic']
         adj.set_value(adj.get_value() - 0.3)
 
     def brighter_cb(self, action):
-        cs = self.app.colorSelectionWindow 
+        cs = self.app.colorSelectionWindow
         cs.update()
         h, s, v = cs.get_color_hsv()
         v += 0.08
         cs.set_color_hsv((h, s, v))
-        
+
     def darker_cb(self, action):
-        cs = self.app.colorSelectionWindow 
+        cs = self.app.colorSelectionWindow
         cs.update()
         h, s, v = cs.get_color_hsv()
         v -= 0.08
         cs.set_color_hsv((h, s, v))
-        
+
     def open_file(self, filename):
         self.mdw.load(filename)
         self.statusbar.pop(1)
@@ -309,7 +309,7 @@ class Window(gtk.Window):
         if dialog.run() == gtk.RESPONSE_OK:
             self.open_file(dialog.get_filename())
         dialog.hide()
-        
+
     def save_cb(self, action):
         dialog = self.savedialog
         if dialog.run() == gtk.RESPONSE_OK:
@@ -406,7 +406,7 @@ class Window(gtk.Window):
                      "\n"
                      "This program is free software; you can redistribute it and/or modify "
                      "it under the terms of the GNU General Public License as published by "
-                     "the Free Software Foundation; either version 2 of the License, or "
+                     "the Free Software Foundation; either version 3 of the License, or "
                      "(at your option) any later version."
                      )
         d.run()

@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,8 +12,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -218,7 +217,7 @@ art_svp_merge_perturbed (const ArtSVP *svp1, const ArtSVP *svp2)
 ArtSVP *
 art_svp_union (const ArtSVP *svp1, const ArtSVP *svp2)
 {
-#ifdef ART_USE_NEW_INTERSECTOR 
+#ifdef ART_USE_NEW_INTERSECTOR
   ArtSVP *svp3, *svp_new;
   ArtSvpWriter *swr;
 
@@ -283,7 +282,7 @@ art_svp_union (const ArtSVP *svp1, const ArtSVP *svp2)
 ArtSVP *
 art_svp_intersect (const ArtSVP *svp1, const ArtSVP *svp2)
 {
-#ifdef ART_USE_NEW_INTERSECTOR 
+#ifdef ART_USE_NEW_INTERSECTOR
   ArtSVP *svp3, *svp_new;
   ArtSvpWriter *swr;
 
@@ -347,7 +346,7 @@ art_svp_intersect (const ArtSVP *svp1, const ArtSVP *svp2)
 ArtSVP *
 art_svp_diff (const ArtSVP *svp1, const ArtSVP *svp2)
 {
-#ifdef ART_USE_NEW_INTERSECTOR 
+#ifdef ART_USE_NEW_INTERSECTOR
   ArtSVP *svp3, *svp_new;
   ArtSvpWriter *swr;
 
@@ -371,7 +370,7 @@ art_svp_diff (const ArtSVP *svp1, const ArtSVP *svp2)
 #endif
 }
 
-#ifdef ART_USE_NEW_INTERSECTOR 
+#ifdef ART_USE_NEW_INTERSECTOR
 ArtSVP *
 art_svp_minus (const ArtSVP *svp1, const ArtSVP *svp2)
 {

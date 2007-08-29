@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,8 +12,7 @@
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  * Boston, MA 02111-1307, USA.
  */
 
@@ -458,7 +457,7 @@ art_svp_writer_rewind_new (ArtWindRule rule)
 
   result->rule = rule;
   result->n_segs_max = 16;
-  result->svp = art_alloc (sizeof(ArtSVP) + 
+  result->svp = art_alloc (sizeof(ArtSVP) +
 			   (result->n_segs_max - 1) * sizeof(ArtSVPSeg));
   result->svp->n_segs = 0;
   result->n_points_max = art_new (int, result->n_segs_max);
@@ -729,7 +728,7 @@ art_svp_intersect_add_point (ArtIntersectCtx *ctx, double x, double y,
   if (left == NULL)
     right = ctx->active_head;
   else
-    right = left->right; 
+    right = left->right;
   left_live = (break_flags & ART_BREAK_LEFT) && (left != NULL);
   right_live = (break_flags & ART_BREAK_RIGHT) && (right != NULL);
   while (left_live || right_live)
@@ -867,7 +866,7 @@ art_svp_intersect_test_cross (ArtIntersectCtx *ctx,
   double d0, d1, t;
   double x, y; /* intersection point */
 
-#ifdef VERBOSE 
+#ifdef VERBOSE
   static int count = 0;
 
   art_dprint ("art_svp_intersect_test_cross %lx <-> %lx: count=%d\n",
@@ -978,7 +977,7 @@ art_svp_intersect_test_cross (ArtIntersectCtx *ctx,
 	}
     }
   else /* left_y1 == right_y1 */
-    { 
+    {
       double left_x1 = left_seg->x[1];
       double right_x1 = right_seg->x[1];
 
@@ -1412,7 +1411,7 @@ art_svp_intersect_add_seg (ArtIntersectCtx *ctx, const ArtSVPSeg *in_seg)
   seg->stack = art_new (ArtPoint, seg->n_stack_max);
 
   seg->horiz_delta_wind = 0;
-  
+
   seg->wind_left = 0;
 
   pri_pt->user_data = seg;

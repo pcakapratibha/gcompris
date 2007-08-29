@@ -4,7 +4,7 @@
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation; either version 2 of the License, or
+ *   the Free Software Foundation; either version 3 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -13,15 +13,14 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program; if not, write to the Free Software
- *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
 /**************************************************************************
 **       Title: create nice target spot
 **
 **    create nice target spots for puzzle pieces in gcpomris shapegame
-**    based on distance transform from Pedro F. Felzenszwalb and 
+**    based on distance transform from Pedro F. Felzenszwalb and
 **    Daniel P. Huttenlocher.
 **
 **************************************************************************/
@@ -69,23 +68,23 @@ int main(int argc, char **argv) {
       }
     }
   }
-  
+
   // draw circle at max position into new image (not touching the border)
-  image<rgb>* circleimage = new image<rgb>( input->width(), 
+  image<rgb>* circleimage = new image<rgb>( input->width(),
                                             input->height(), false);
   rgb white;
   white.r = 255;
   white.g = 255;
   white.b = 255;
-  
+
   circleimage->init(white);
 
   float circleRadius = 3.5;
   float borderThickness = 1;
-  
+
   float innerCircleSqrRadius = square(circleRadius);
   float outerCircleSqrRadius = square(circleRadius+borderThickness);
-  
+
   rgb dotColor;
   dotColor.r = 255;
   dotColor.g = 0;
@@ -95,12 +94,12 @@ int main(int argc, char **argv) {
   borderColor.r = 0;
   borderColor.g = 0;
   borderColor.b = 0;
-  
+
 
   for (int y = 0; y < out->height(); y++) {
     for (int x = 0; x < out->width(); x++) {
       float currentSqrRadius = square(x - xmax) + square(y - ymax);
-      
+
       if( currentSqrRadius <= outerCircleSqrRadius
           && imRef(out, x, y) > 1)
       {
@@ -122,5 +121,5 @@ int main(int argc, char **argv) {
   delete input;
   delete out;
   delete circleimage;
-  
+
 }

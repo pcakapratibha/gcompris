@@ -1,21 +1,20 @@
 #  gcompris - group_edit.py
-# 
+#
 # Copyright (C) 2005 Bruno Coudoin and Yves Combe
-# 
+#
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
-#   the Free Software Foundation; either version 2 of the License, or
+#   the Free Software Foundation; either version 3 of the License, or
 #   (at your option) any later version.
-# 
+#
 #   This program is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
-# 
+#
 #   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-# 
+#   along with this program; if not, see <http://www.gnu.org/licenses/>.
+#
 
 
 import gtk
@@ -52,11 +51,11 @@ class GroupEdit(gtk.Window):
 
         self.group_id = group_id
         self.class_id = class_id
-        
+
         # A pointer to the group_user_list class
         # Will be called to refresh the list when edit is done
         self.group_user = group_user
-        
+
         self.set_title(_("Editing a Group"))
         self.set_border_width(8)
         self.set_default_size(320, 350)
@@ -74,7 +73,7 @@ class GroupEdit(gtk.Window):
 
 
         self.add(frame)
-        
+
         # Main VBOX
         vbox = gtk.VBox(False, 8)
         vbox.set_border_width(8)
@@ -86,7 +85,7 @@ class GroupEdit(gtk.Window):
         table.set_row_spacings(0)
         table.set_col_spacings(20)
         vbox.pack_start(table, True, True, 0)
-        
+
         label = gtk.Label(_('Group:'))
         label.set_alignment(0, 0)
         table.attach(label, 0, 1, 0, 1, xoptions=gtk.SHRINK, yoptions=gtk.EXPAND)
@@ -97,7 +96,7 @@ class GroupEdit(gtk.Window):
                      xoptions=gtk.SHRINK, yoptions=gtk.EXPAND)
 
         # FIXME: How to remove the selection
-        
+
         # Label and Entry for the first name
         label = gtk.Label(_('Description:'))
         label.set_alignment(0, 0)
@@ -134,9 +133,9 @@ class GroupEdit(gtk.Window):
         treeview.set_rules_hint(True)
         treeview.set_search_column(COLUMN_FIRSTNAME)
         treeview.get_selection().set_mode(gtk.SELECTION_MULTIPLE)
-        
+
         sw.add(treeview)
-        
+
         # add columns to the tree view
         self.__add_columns(treeview)
 
@@ -177,7 +176,7 @@ class GroupEdit(gtk.Window):
         treeview2.get_selection().set_mode(gtk.SELECTION_MULTIPLE)
 
         sw2.add(treeview2)
-        
+
         # add columns to the tree view
         self.__add_columns(treeview2)
 
@@ -188,7 +187,7 @@ class GroupEdit(gtk.Window):
         vbox.pack_start(gtk.HSeparator(), False, False, 0)
 
         bbox = gtk.HBox(homogeneous=False, spacing=8)
-        
+
         button = gtk.Button(stock='gtk-help')
         bbox.pack_start(button, expand=False, fill=False, padding=0)
 
@@ -246,7 +245,7 @@ class GroupEdit(gtk.Window):
             self.cur.execute('SELECT * FROM list_users_in_groups WHERE group_id=? AND user_id=?',
                              (group_id, user[0]))
             user_is_already = self.cur.fetchall()
-            
+
             if(with and user_is_already):
                 self.add_user_in_model(model, user)
             elif(not with and not user_is_already):
@@ -258,7 +257,7 @@ class GroupEdit(gtk.Window):
     def __add_columns(self, treeview):
 
         model = treeview.get_model()
-        
+
         # columns for first name
         renderer = gtk.CellRendererText()
         renderer.set_data("column", COLUMN_FIRSTNAME)
@@ -287,15 +286,15 @@ class GroupEdit(gtk.Window):
     def add_user(self, button, treeview):
 
         model = treeview.get_model()
-        
+
         treestore, paths = treeview.get_selection().get_selected_rows()
-        
+
         paths.reverse()
-        
+
         for path in paths:
-            
+
             iter = treestore.get_iter(path)
-            
+
             path = model.get_path(iter)[0]
             user_id        = model.get_value(iter, COLUMN_USERID)
             user_firstname = model.get_value(iter, COLUMN_FIRSTNAME)
@@ -304,7 +303,7 @@ class GroupEdit(gtk.Window):
 
             # Add in the the right view
             self.add_user_in_model(self.model_right, (user_id, user_firstname, user_lastname))
-            
+
             # Save the change in the base
             self.cur.execute('INSERT OR REPLACE INTO list_users_in_groups (group_id, user_id) VALUES (?, ?)',
                              (self.group_id, user_id))
@@ -316,15 +315,15 @@ class GroupEdit(gtk.Window):
     def remove_user(self, button, treeview):
 
         model = treeview.get_model()
-        
+
         treestore, paths = treeview.get_selection().get_selected_rows()
-        
+
         paths.reverse()
-        
+
         for path in paths:
-            
+
             iter = treestore.get_iter(path)
-            
+
             path = model.get_path(iter)[0]
             user_id        = model.get_value(iter, COLUMN_USERID)
             user_firstname = model.get_value(iter, COLUMN_FIRSTNAME)
@@ -333,7 +332,7 @@ class GroupEdit(gtk.Window):
 
             # Add in the the left view
             self.add_user_in_model(self.model_left, (user_id, user_firstname, user_lastname))
-            
+
             # Save the change in the base
             self.cur.execute('delete from list_users_in_groups where group_id=? and user_id=?',
                              (self.group_id, user_id))
@@ -346,7 +345,7 @@ class GroupEdit(gtk.Window):
     def close(self, button):
         self.group_user.reload_group()
         self.destroy()
-        
+
     # Done, can quit this dialog with saving
     #
     def ok(self, button):
