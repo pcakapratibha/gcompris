@@ -1,6 +1,8 @@
 2007-08-29  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* Added Afrikaans support.
+	* src/gcompris/gcompris_db.c: Fixed database creation bug when
+	the "Unaffected" or "Users without a class" translation did contains a single quote.
 
 2007-08-22  Bruno coudoin  <bruno.coudoin@free.fr>
 
