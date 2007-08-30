@@ -1,3 +1,18 @@
+2007-08-30  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* Merged from trunk commit 2915.
+
+	* Thanks to Ronny Standtke for these bug reports.
+
+	* boards/chronos/board4_3.xml.in: removed hardcoded translations
+	* boards/doubleentry/board3_0.xml.in: fixed call to audio voices.
+	  FIXME: works only with LATIN country.
+	* src/boards/python/algorithm.py: Fixed the skip of a level after the call to the help.
+	* src/boards/shapegame.c: (shapegame_init_canvas),
+	(find_closest_shape), (item_event_drag): fixed, it was missing a X offset coming from
+	the box of shapes on the left. It was mostly visible in the doubleentry activity where
+	it was not easy to spot the target.
+
 	*** RELEASE 8.3.3 ***
 
 2007-08-16  Bruno coudoin  <bruno.coudoin@free.fr>

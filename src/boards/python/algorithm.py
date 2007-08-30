@@ -100,7 +100,7 @@ class Gcompris_algorithm:
 
     # When the bonus is displayed, it call us first with pause(1) and then with pause(0)
     # the game is won
-    if(pause == 0):
+    if ((pause == 0) and self.finished_sublevel):
       self.increment_level()
       self.gamewon = 0
 
@@ -120,6 +120,7 @@ class Gcompris_algorithm:
      gcompris.score.end()
 
   def display_current_level(self):
+    self.finished_sublevel = False
     self.cleanup()
     gcompris.score.start(gcompris.score.STYLE_NOTE, 570, 305,
      self.gcomprisBoard.number_of_sublevel)
@@ -210,6 +211,7 @@ class Gcompris_algorithm:
       self.paint_image(index, self.place, 147)
       self.place +=1
       if self.place == self.anzahl:
+        self.finished_sublevel = True
         gcompris.bonus.display(gcompris.bonus.WIN, gcompris.bonus.TUX)
         return
       self.paint_qm ()

@@ -103,11 +103,9 @@ struct _ShapeBox {
 };
 static ShapeBox shapeBox;
 
-#define BUTTON_SPACE		40
-
 /* Hash table of all the shapes in the list of shapes (one by different pixmap plus icon list) */
 static GHashTable *shapelist_table = NULL;
-static gint SHAPE_BOX_WIDTH_RATIO = 18;
+static gint SHAPE_BOX_WIDTH = 44;
 
 static GnomeCanvasItem	*shape_root_item;
 static GnomeCanvasItem	*shape_list_root_item;
@@ -551,7 +549,7 @@ static void shapegame_init_canvas(GnomeCanvasGroup *parent)
   shape_root_item = \
     gnome_canvas_item_new (parent,
 			   gnome_canvas_group_get_type (),
-			   "x", (double)gcomprisBoard->width/SHAPE_BOX_WIDTH_RATIO,
+			   "x", (double)SHAPE_BOX_WIDTH,
 			   "y", (double)0,
 			   NULL);
 
@@ -824,7 +822,7 @@ static Shape *find_closest_shape(double x, double y, double limit)
     if(shape->type==SHAPE_TARGET)
       {
 	/* Calc the distance between this shape and the given coord */
-	dist = sqrt(pow((shape->x-x),2) + pow((shape->y-y),2));
+	dist = sqrt(pow((shape->x-x+SHAPE_BOX_WIDTH),2) + pow((shape->y-y),2));
 	if(dist<goodDist)
 	  {
 	    goodDist=dist;
@@ -935,7 +933,6 @@ static gint item_event_drag(GnomeCanvasItem *item, GdkEvent *event, gpointer dat
     switch(event->type)
     {
         case GDK_BUTTON_PRESS:
-	    gc_sound_play_ogg ("sounds/bleep.wav", NULL);
             switch(shape -> type)
             {
                 case SHAPE_ICON:
@@ -958,8 +955,11 @@ static gint item_event_drag(GnomeCanvasItem *item, GdkEvent *event, gpointer dat
 
                         gc_sound_play_ogg(soundfile, NULL);
                     }
+		    else
+		      gc_sound_play_ogg ("sounds/bleep.wav", NULL);
                     break;
                 case SHAPE_TARGET:
+		    gc_sound_play_ogg ("sounds/bleep.wav", NULL);
                     gnome_canvas_item_hide(shape->item);
 
                     // unplace this shape
