@@ -1,12 +1,16 @@
 GCompris Specific Instructions
 ==============================
 
+WARNING: Starting at GCompris 8.4 voices are in a separate svn module
+         To get them, you must run: make update-voices
+
 Gcompris can be installed anywhere on your hard drive.
 
 for example, you can use:
 
 sh configure --prefix=/home/bruno/gcompris
 make
+make update-voices
 make install
 
 Warning: You cannot use ~ in the prefix, it must be a full path.

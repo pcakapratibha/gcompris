@@ -669,7 +669,7 @@ class Board_list:
 
     gcompris.combo_locales_asset( _("Select sound locale"),
                                   conf_locales,
-                                  "sounds/$LOCALE/colors/purple.ogg" )
+                                  "voices/$LOCALE/colors/purple.ogg" )
 
 
   def ok_callback(self, dict):

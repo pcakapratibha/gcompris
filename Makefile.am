@@ -65,7 +65,7 @@ install-data-local:
 	@$(NORMAL_INSTALL)
 	if test -d $(srcdir)/$(PACKAGE_DATA_DIR); then \
 	  $(mkinstalldirs) $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR); \
-	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "*.in" --exclude "*~" --exclude "Makefile" --exclude "Makefile.am" --exclude .svn --exclude .xvpics --exclude "1[1-9].ogg"  --exclude "2?.ogg" * | ( cd $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) ; tar xf -) ; cd .. ; \
+	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "*.in" --exclude "*~" --exclude "Makefile" --exclude "Makefile.am" --exclude .svn --exclude "1[1-9].ogg"  --exclude "2?.ogg" * | ( cd $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) ; tar xf -) ; cd .. ; \
 	fi
 
 dist-hook:
@@ -81,17 +81,13 @@ clean-local:
 	rm -f intltool-extract intltool-merge intltool-update
 	-rm -fr $(BUNDLE_APPDIR)
 
-# Creates separates distribution files for the sounds by locale
-dist-sounds:
-	./create_dist_sounds en @ALL_LINGUAS@
-
-# Create a core dist file without localized sounds file
-dist-core:
-	cp $(distdir).tar.gz $(distcore).tar.gz
-	gzip -df $(distcore).tar.gz
-	tar f $(distcore).tar --delete $(distdir)/boards/sounds
-	gzip --best $(distcore).tar
-	@echo Created $(distcore).tar.gz
+update-voices:
+	@if test -d $(PACKAGE_DATA_DIR)/voices; then \
+	  svn up $(PACKAGE_DATA_DIR)/voices; \
+	else \
+	  mkdir $(PACKAGE_DATA_DIR)/voices; \
+	  svn co svn+ssh://bcoudoin@svn.gnome.org/svn/gcompris/voices $(PACKAGE_DATA_DIR)/voices; \
+	fi
 
 all-local:
 
