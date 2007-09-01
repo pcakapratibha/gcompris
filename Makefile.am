@@ -71,7 +71,7 @@ install-data-local:
 dist-hook:
 	if test -d $(PACKAGE_DATA_DIR); then \
 	  $(mkinstalldirs) $(distdir)/$(PACKAGE_DATA_DIR); \
-	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "Makefile" --exclude "*~" --exclude ".*" --exclude .svn --exclude .xvpics * | ( cd ../$(distdir)/$(PACKAGE_DATA_DIR) ; tar xf -) ; cd .. ; \
+	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "Makefile" --exclude "*~" --exclude ".*" --exclude .svn * | ( cd ../$(distdir)/$(PACKAGE_DATA_DIR) ; tar xf -) ; cd .. ; \
 	fi
 
 
@@ -86,7 +86,7 @@ update-voices:
 	  svn up $(PACKAGE_DATA_DIR)/voices; \
 	else \
 	  mkdir $(PACKAGE_DATA_DIR)/voices; \
-	  svn co svn+ssh://bcoudoin@svn.gnome.org/svn/gcompris/voices $(PACKAGE_DATA_DIR)/voices; \
+	  svn co http://svn.gnome.org/svn/gcompris/voices $(PACKAGE_DATA_DIR)/voices; \
 	fi
 
 all-local:
