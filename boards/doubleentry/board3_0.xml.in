@@ -14,7 +14,7 @@
   <Title x="137" y="170" justification="GTK_JUSTIFY_CENTER"><name>A</name></Title>
   <Shape name="D" pixmapfile="doubleentry/d-entry_pomme_1.png"   x="231" y="170"  zoomx="1" zoomy="1" position="0" sound="voices/$LOCALE/alphabet/U0061.ogg voices/$LOCALE/alphabet/U0031.ogg"/>
   <Shape name="E" pixmapfile="doubleentry/d-entry_pomme_2.png"   x="321" y="170"  zoomx="1" zoomy="1" position="0" sound="voices/$LOCALE/alphabet/U0061.ogg voices/$LOCALE/alphabet/U0032.ogg"/>
-  <Shape name="F" pixmapfile="doubleentry/d-entry_pomme_3.png"   x="418" y="170"  zoomx="1" zoomy="1" position="0" sound="voices/$LOCALE/lphabet/U0061.ogg voices/$LOCALE/alphabet/U0033.ogg"/>
+  <Shape name="F" pixmapfile="doubleentry/d-entry_pomme_3.png"   x="418" y="170"  zoomx="1" zoomy="1" position="0" sound="voices/$LOCALE/alphabet/U0061.ogg voices/$LOCALE/alphabet/U0033.ogg"/>
   <Title x="418" y="90" justification="GTK_JUSTIFY_CENTER"><name>3</name></Title>
   <Title x="137" y="245" justification="GTK_JUSTIFY_CENTER"><name>B</name></Title>
   <Shape name="G" pixmapfile="doubleentry/d-entry_galette_1.png" x="231" y="245"  zoomx="1" zoomy="1" position="0" sound="voices/$LOCALE/alphabet/U0062.ogg voices/$LOCALE/alphabet/U0031.ogg"/>

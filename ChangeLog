@@ -3,6 +3,7 @@
 	* boards/skins/babytoy/button_large3.png: created a larger button from button_large.png
 	* boards/skins/gartoon/button_large3.png: created a larger button from button_large.png
 	* src/boards/shapegame.c: (shapegame_init_canvas): use the larger button
+	* boards/doubleentry/board3_0.xml.in: fixed a typo, A3 was not working
 
 2007-09-01  Bruno coudoin  <bruno.coudoin@free.fr>
 
