@@ -1,5 +1,11 @@
 2007-09-01  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	* boards/skins/babytoy/button_large3.png: created a larger button from button_large.png
+	* boards/skins/gartoon/button_large3.png: created a larger button from button_large.png
+	* src/boards/shapegame.c: (shapegame_init_canvas): use the larger button
+
+2007-09-01  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	* Makefile.am: Fixed not to use bruno's svn account
 
 2007-08-31  Bruno coudoin  <bruno.coudoin@free.fr>

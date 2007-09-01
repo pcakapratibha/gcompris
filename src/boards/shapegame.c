@@ -560,7 +560,7 @@ static void shapegame_init_canvas(GnomeCanvasGroup *parent)
 					 );
 
   /* Create the tooltip area */
-  pixmap = gc_skin_pixmap_load("button_large.png");
+  pixmap = gc_skin_pixmap_load("button_large3.png");
   tooltip_bg_item = \
     gnome_canvas_item_new (GNOME_CANVAS_GROUP(tooltip_root_item),
 			   gnome_canvas_pixbuf_get_type (),
