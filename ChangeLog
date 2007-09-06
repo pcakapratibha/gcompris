@@ -1,3 +1,8 @@
+2007-09-06  Bruno Coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/python/login.py: fixed a little bug, in text entry mode
+	  it was not displayed again if you open/close the help.
+
 2007-09-01  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* boards/skins/babytoy/button_large3.png: created a larger button from button_large.png

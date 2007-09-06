@@ -44,6 +44,7 @@ class Gcompris_login:
 
   def __init__(self, gcomprisBoard):
     self.gcomprisBoard = gcomprisBoard
+    self.entry = []
 
     self.gcomprisBoard.disable_im_context = True
 
@@ -188,7 +189,7 @@ class Gcompris_login:
     if(pause):
       self.entry.hide()
     else:
-      self.entryt.show()
+      self.entry.show()
 
 
   def set_level(self, level):
