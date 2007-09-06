@@ -187,9 +187,9 @@ class Gcompris_login:
     # There is a problem with GTK widgets, they are not covered by the help
     # We hide/show them here
     if(pause):
-      self.entry.hide()
+      if self.entry: self.entry.hide()
     else:
-      self.entry.show()
+      if self.entry: self.entry.show()
 
 
   def set_level(self, level):
