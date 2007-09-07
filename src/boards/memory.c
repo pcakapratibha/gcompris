@@ -220,7 +220,6 @@ static gchar *soundList[] =
    "sounds/LuneRouge/maison/LRDoor_Open_2_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/maison/LRRing_01_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/sf/LRET_phone_home_01_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/sf/LRWeird_1_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_2_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_3_by_Lionel_Allorge.ogg",
@@ -242,7 +241,7 @@ static gchar *soundList[] =
    "sounds/melody/guitar/son2.ogg",
    "sounds/melody/guitar/son3.ogg",
    "sounds/melody/guitar/son4.ogg",
-   "sounds/melody/tachos/melody.ogg"
+   "sounds/melody/tachos/melody.ogg",
    "sounds/melody/tachos/son1.ogg",
    "sounds/melody/tachos/son2.ogg",
    "sounds/melody/tachos/son3.ogg",
