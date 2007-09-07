@@ -1,5 +1,9 @@
 2007-09-06  Bruno Coudoin  <bruno.coudoin@free.fr>
 
+	* src/boards/memory.c: space sound 2 was twice in the list. If they were
+	  both selected in the game, the children was proposed the same sound
+	  in 4 spot making the game bugged.
+
 	* src/boards/python/login.py: fixed a little bug, in text entry mode
 	  it was not displayed again if you open/close the help.
 
