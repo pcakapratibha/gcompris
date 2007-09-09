@@ -43,7 +43,6 @@ EXTRA_DIST = \
 	$(Applications_in_files) \
 	$(icon_DATA) \
 	$(Menu_DATA) \
-	gcompris.spec.in \
 	intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in \
@@ -75,7 +74,7 @@ dist-hook:
 	fi
 
 
-CLEANFILES = core-translation-report gcompris.desktop gcompris-edit.desktop gcompris.spec config.h.mingw
+CLEANFILES = core-translation-report gcompris.desktop gcompris-edit.desktop config.h.mingw
 
 clean-local:
 	rm -f intltool-extract intltool-merge intltool-update
