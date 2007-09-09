@@ -1,3 +1,5 @@
+	*** RELEASE 8.4 ***
+
 2007-09-06  Bruno Coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/memory.c: space sound 2 was twice in the list. If they were

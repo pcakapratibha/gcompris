@@ -1,4 +1,102 @@
+GCompris 8.4
+------------
+* Fixed "-l list" option to load the menu list from the base.
+  option was not working when boards are compiled statically.
+* Now we don't crash if we cannot find a single image at startup.
+* Fixed a major bug, target activity is broken, the target never reach it's goal.
+* Moved the lock file checking downstairs in the startup
+  sequence to avoid for exemple 'gcompris -v' to being locked.
+* missingletter: GCompris was asserting when you click on the target image
+* Now all voices are in a separated svn module.
+  The voices must now be put under boards/voices/<locale> instead of
+  boards/sounds/<locale>
+  To get the voices installed in the proper place, simply run:
+  make update-voices
+  Re-encoded voices in a lower bitrate, saving 40MB on the tarball
+* Chronos activity: removed hardcoded translations
+* doubleentry: fixed call to audio voices.
+* algorithm: Fixed the skip of a level after the call to the help.
+* shapegame:
+  - Fixed bad reference to hand image to catch small icon
+  - fixed, it was missing a X offset coming from
+    the box of shapes on the left. It was mostly visible in the doubleentry activity where
+    it was not easy to spot the target.
+  - use the larger button for the tooltip (country name too large)
+  - Translated The Text In Tooltip Were Invalid.
+  - Removed text shadow as it isn't always cute depending on the fonts.
+* memory: space sound 2 was twice in the list. If they were
+  both selected in the game, the children was proposed the same sound
+  in 4 spot making the game bugged.
+* login: fixed a little bug, in text entry mode
+ it was not displayed again if you open/close the help.
 
+New translation:
+* Added Afrikaans support.
+
+Updated translation:
+* af  Samuel Murray
+* ar  Khaled Hosny
+* ar_TN  Makni Bassem
+* bg  Yavor Doganov
+* ca  Xavier A. Conde Rueda
+* da  Mogens Jaeger
+* de  Ronny Standtke
+* dz  Tshewang Norbu
+* el  Yannis Kaskamanidis
+* en_GB  David Lodge
+* es  Jorge González
+* eu  Iñaki Larrañaga Murgoitio
+* fr  Stéphane Raimbault
+* hi  Bruno Coudoin
+* id  Umar Said
+* it  Immacolata Arenga
+* mr  Anand Kulkarni
+* nb  Klaus Ade Johnstad
+* nl  Reinout van Schouwen
+* nn  Karl Ove Hufthammer
+* oc  Yannig Marchegay
+* pt_BR  Frederico Goncalves Guimaraes
+* pt  Jose Jorge
+* sr@Latn  Slobodan Simić
+* sr  Слободан Симић
+* sv  Daniel Nylander
+* th  Theppitak Karoonboonyanan
+* vi  Clytie Siddall
+* zh_CN  Pengyong Su
+
+New voices:
+* Added Serbian sounds by Mihailo and Slobodan Simic.
+
+
+GCompris 8.4BETA2
+-----------------
+* Switched GCompris to GPL V3 and Later.
+* Translated The Text In shapegame Tooltips Were Invalid
+  (i.e, in the geography activity).
+* GCompris was asserting when you clicked on the target image in
+  missingletter activity.
+
+GCompris 8.4BETA1
+-----------------
+* sdl_mixer replaced by gstreamer.
+* Fixed falling words for arabic
+* Internal static gnomecanvas and libart
+* The click on letter activity was only proposing the first 4 letters
+  of the alphabet, whatever the level.
+* Fixed running on machines which
+  have / use prefix/lib64 instead of prefix/lib
+* Fixed concerns releated to the fullscreen mode
+* Fixed the gnuchess search path to accept gnome-gnuchess
+* Major fix, GCompris was crashing if you clicked during bonus display
+* Added a request to deiconify the window at startup. It&amp;amp;#039;s needed
+  for windows or we start iconified.
+* Several translation updated
+* New Serbian voices
+
+<<< SNIP JUST FORGOT TO UPDATE THIS FILE FOR 6 YEARS >>>
+
+GCompris 0.6.1
+--------------
 2001-05-21  Bruno Coudoin  <bruno.coudoin@free.fr>
 	* GCompris 0.6.1
 	* GCompris is now a GNU Package
@@ -23,13 +121,12 @@
 	* Added the planegame board. This board let you drive a plane
 	  and your goal is to catch the clouds in the increasing order.
 	  The way the plane is moved (relative speed) confuses a lot the
-	  children. I feel it is good to have them learn this way of 
+	  children. I feel it is good to have them learn this way of
 	  controlling an object.
-	* Added the shape board which feature a puzzle of old 
+	* Added the shape board which feature a puzzle of old
 	  impresionists paintings.
 	* Removed the sounds. I discovered that the sounds I were using
 	  was the standard Gnome ones. I now point to them, so no sounds
 	  are included in GCompris. I did this to be sure that I don't
 	  include file I am not sure of their origin and copyright status.
 
-	
