@@ -151,6 +151,10 @@ PKG_CHECK_MODULES(XML, libxml-2.0)
 AC_SUBST(XML_CFLAGS)
 AC_SUBST(XML_LIBS)
 
+dnl Freetype2 flags (needed for libgnomecanvas)
+PKG_CHECK_MODULES(FT2, freetype2)
+AC_SUBST(FT2_CFLAGS)
+
 dnl glib-genmarshal
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 
@@ -559,8 +563,7 @@ fi
 #        ])
 
 dnl Autoconf output
-AC_OUTPUT([ gcompris.spec
-Makefile.mingw
+AC_OUTPUT([ Makefile.mingw
 config.h.mingw
 gcompris-installer.nsi
 Makefile
