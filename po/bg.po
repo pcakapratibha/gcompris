@@ -1,16 +1,14 @@
-# Bulgarian translation of gcompris.
+# Bulgarian translation of gcompris po-file.
 # Copyright (C) 2005, 2006, 2007 Free Software Foundation, Inc
 # This file is distributed under the same license as the gcompris package.
 # Yavor Doganov <yavor@gnu.org>, 2005, 2006, 2007.
-#
-#
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-05 11:03+0300\n"
-"PO-Revision-Date: 2007-04-24 18:27+0300\n"
+"POT-Creation-Date: 2007-09-10 10:37+0300\n"
+"PO-Revision-Date: 2007-09-04 19:19+0300\n"
 "Last-Translator: Yavor Doganov <yavor@gnu.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -3350,7 +3348,6 @@ msgstr ""
 "намерите повече двойки близнаци от него."
 
 #: ../boards/menu.xml.in.h:1
-#, fuzzy
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of "
 "activities.\n"
@@ -3383,6 +3380,7 @@ msgstr ""
 "    Въпросителен знак - Помощ\n"
 "    Инструмент - Меню за настройки\n"
 "    Самолетът на Тъкс - Относно GCompris\n"
+"    Нощ - Спиране на GCompris\n"
 "Звездите означават нивото на трудност за всяко занимание:\n"
 "    1, 2 или 3 обикновени звезди - за деца от 2 до 6 годишна възраст\n"
 "    1, 2 или 3 сложни звезди - за деца от 7 годишна възраст и по-големи"
@@ -3400,7 +3398,6 @@ msgstr ""
 "занимания за деца от 2 годишна възраст нагоре."
 
 #: ../boards/menu.xml.in.h:19
-#, fuzzy
 msgid ""
 "The goal of GCompris is to provide a free alternative to popular proprietary "
 "edutainment software"
@@ -3772,7 +3769,6 @@ msgid "Various puzzles."
 msgstr "Различни пъзели."
 
 #: ../boards/pythontemplate.xml.in.h:1 ../boards/pythontest.xml.in.h:1
-#, fuzzy
 msgid "Add a language-binding to GCompris."
 msgstr "Добавяне на езикова поддръжка към GCompris."
 
@@ -3783,11 +3779,11 @@ msgstr "Напреднал програмист на Питон :)"
 #: ../boards/pythontemplate.xml.in.h:3
 msgid "An empty python activity to use as a starting point"
 msgstr ""
+"Неразработено занимание на Питон, което да се използва като отправна точка"
 
 #: ../boards/pythontemplate.xml.in.h:4
-#, fuzzy
 msgid "Python Template"
-msgstr "Тест по Питон"
+msgstr "Шаблон на Питон"
 
 #: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
 msgid ""
@@ -4484,7 +4480,7 @@ msgid "Multi-activity educational game"
 msgstr "Игра с много занимания с образователна цел"
 
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:181 ../src/boards/memory.c:845
+#: ../src/boards/algebra.c:181 ../src/boards/memory.c:843
 msgid "+-×÷"
 msgstr "+-.:"
 
@@ -4513,7 +4509,6 @@ msgid "Error: The external program gnuchess died unexpectedly"
 msgstr "Грешка: Външната програма „gnuchess“ загина неочаквано"
 
 #: ../src/boards/chess.c:198
-#, fuzzy
 msgid ""
 "Error: The external program gnuchess is required\n"
 "to play chess in GCompris.\n"
@@ -4523,8 +4518,8 @@ msgid ""
 msgstr ""
 "Грешка: Външната програма gnuchess е задължителна,\n"
 "за да играете шах в GCompris.\n"
-"Можете да намерите програмата на http://www.rpmfind.net,\n"
-"http://packages.debian.org или във Вашата дистрибуция на GNU/Линукс.\n"
+"Можете да намерите програмата на http://www.rpmfind.net\n"
+"или във вашата дистрибуция на GNU/Линукс.\n"
 "И проверете дали я има тук: "
 
 #: ../src/boards/chess.c:243
@@ -4570,7 +4565,7 @@ msgstr "Равна игра"
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Грешка: Външната програма „gnuchess“ загина неочаквано"
 
-#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:812
+#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:810
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -4586,12 +4581,12 @@ msgstr ""
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
 #: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:230
-#: ../src/boards/memory.c:834
+#: ../src/boards/memory.c:832
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "абвгдежзийклмнопрстуфхцчшщъьюя"
 
 #: ../src/boards/click_on_letter.c:285
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
 "the packages with GCompris voices for the locale '%s' or '%s'"
@@ -4621,7 +4616,7 @@ msgstr ""
 #: ../src/boards/missingletter.c:770
 #: ../src/boards/python/admin/board_list.py:640
 #: ../src/boards/python/admin/board_list.py:658
-#: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:534
+#: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
 #: ../src/boards/shapegame.c:1847 ../src/boards/smallnumbers.c:589
@@ -4635,7 +4630,7 @@ msgstr ""
 
 #. toggle box
 #: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:889
-#: ../src/boards/python/login.py:539
+#: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "Само текст с главни букви"
 
@@ -4689,12 +4684,12 @@ msgid "Select sound locale"
 msgstr "Изберете локал за звука"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:226 ../src/boards/memory.c:830
+#: ../src/boards/gletters.c:226 ../src/boards/memory.c:828
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:236 ../src/boards/memory.c:840
+#: ../src/boards/gletters.c:236 ../src/boards/memory.c:838
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ"
 
@@ -4749,11 +4744,11 @@ msgstr ""
 "Погледнете местоположението си и превключете обратно в триизмерен режим, за "
 "да се движите"
 
-#: ../src/boards/memory.c:265
+#: ../src/boards/memory.c:263
 msgid "Memory"
 msgstr "Памет"
 
-#: ../src/boards/memory.c:266
+#: ../src/boards/memory.c:264
 msgid "Find the matching pair"
 msgstr "Намерете съответстващата двойка"
 
@@ -4789,7 +4784,6 @@ msgid "Python Board"
 msgstr "Дъска Питон"
 
 #: ../src/boards/python.c:63 ../src/boards/python.c:87
-#, fuzzy
 msgid "Special board that embeds python into GCompris."
 msgstr "Специална дъска, която включва Питон в GCompris."
 
@@ -5372,16 +5366,16 @@ msgstr "Твърде голямо"
 msgid "Too low"
 msgstr "Твърде малко"
 
-#: ../src/boards/python/login.py:113
+#: ../src/boards/python/login.py:114
 msgid "Profile: "
 msgstr "Профил: "
 
-#: ../src/boards/python/login.py:267 ../src/boards/python/login.py:276
+#: ../src/boards/python/login.py:268 ../src/boards/python/login.py:277
 msgid "Login: "
 msgstr "Потребителски име: "
 
 #. toggle box
-#: ../src/boards/python/login.py:549
+#: ../src/boards/python/login.py:550
 msgid "Enter login to log in"
 msgstr "Въведете потребителско име"
 
@@ -5428,7 +5422,6 @@ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
 msgstr "Най-добрите приятели на Оскар бяха рака Чарли и морската звезда Санди."
 
 #: ../src/boards/python/pythontest.py:148
-#, fuzzy
 msgid ""
 "This is the first plugin in GCompris coded in the Python\n"
 "Programming language."
@@ -5437,12 +5430,11 @@ msgstr ""
 "езика за програмиране Питон."
 
 #: ../src/boards/python/pythontest.py:157
-#, fuzzy
 msgid ""
 "It is now possible to develop GCompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
 msgstr ""
-"Сега е възможно да се усъвършенстват заниманията на GCompris на C или "
+"Сега е възможно да се усъвършенстват заниманията на GCompris на Си или "
 "Питон.\n"
 "Благодарности на Оливие Самис, който направи това възможно."
 
@@ -5748,7 +5740,6 @@ msgid "No, I want to keep going"
 msgstr "Не, искам да продължа да се занимавам"
 
 #: ../src/gcompris/board.c:183
-#, fuzzy
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr ""
 "Не се поддържа динамично зареждане на модули, GCompris не може да се "
@@ -5791,9 +5782,8 @@ msgid "Your system default"
 msgstr "По подразбиране за системата"
 
 #: ../src/gcompris/config.c:59
-#, fuzzy
 msgid "Afrikaans"
-msgstr "Африка"
+msgstr "африкаанс"
 
 #: ../src/gcompris/config.c:60
 msgid "Amharic"
@@ -6004,9 +5994,8 @@ msgid "Swedish"
 msgstr "шведски"
 
 #: ../src/gcompris/config.c:113
-#, fuzzy
 msgid "Tamil"
-msgstr "тайландски"
+msgstr "тамилски"
 
 #: ../src/gcompris/config.c:114
 msgid "Thai"
@@ -6049,7 +6038,6 @@ msgid "Fast timer"
 msgstr "Бърз хронометър"
 
 #: ../src/gcompris/config.c:132
-#, fuzzy
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (стандартно за GCompris)"
 
@@ -6125,27 +6113,22 @@ msgstr ""
 "проблема на авторите."
 
 #: ../src/gcompris/gcompris.c:136
-#, fuzzy
 msgid "run GCompris in fullscreen mode."
 msgstr "стартиране на GCompris на цял екран."
 
 #: ../src/gcompris/gcompris.c:139
-#, fuzzy
 msgid "run GCompris in window mode."
 msgstr "стартиране на GCompris в прозорец."
 
 #: ../src/gcompris/gcompris.c:142
-#, fuzzy
 msgid "run GCompris with sound enabled."
 msgstr "стартиране на GCompris с включен звук."
 
 #: ../src/gcompris/gcompris.c:145
-#, fuzzy
 msgid "run GCompris without sound."
 msgstr "стартиране на GCompris без звук."
 
 #: ../src/gcompris/gcompris.c:148
-#, fuzzy
 msgid "run GCompris with the default gnome cursor."
 msgstr ""
 "стартиране на GCompris със стандартния курсор на\n"
@@ -6174,7 +6157,6 @@ msgstr ""
 "\t\t\t   разделителната способност)."
 
 #: ../src/gcompris/gcompris.c:166
-#, fuzzy
 msgid ""
 "Run GCompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
@@ -6184,7 +6166,8 @@ msgstr ""
 "Стартиране на GCompris с локално меню (т.е. при \n"
 "\t\t\t   „-l /reading“ ще играете само заниманията за четене,\n"
 "\t\t\t   при „-l /boards/connect4“ само играта „Свързване\n"
-"\t\t\t   на 4“)"
+"\t\t\t   на 4“). Използвайте „-l list“, за да изведете списък\n"
+"\t\t\t   с всички налични занимания и техните описания."
 
 #: ../src/gcompris/gcompris.c:171
 msgid "Run GCompris with local activity directory added to menu"
@@ -6328,11 +6311,13 @@ msgstr ""
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr ""
+"GCompris няма да се стартира, защото заключващият файл е по-нов от %d "
+"секунди.\n"
 
 #: ../src/gcompris/gcompris.c:1434
 #, c-format
 msgid "The lock file is: %s\n"
-msgstr ""
+msgstr "Заключващият файл е: %s\n"
 
 #: ../src/gcompris/gcompris.c:1562
 #, c-format
