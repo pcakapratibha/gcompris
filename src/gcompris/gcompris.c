@@ -970,14 +970,27 @@ void gc_fullscreen_set(gboolean state)
     {
       gdk_window_set_decorations (window->window, 0);
       gdk_window_set_functions (window->window, 0);
+      gtk_widget_set_uposition (window, 0, 0);
 #ifdef XF86_VIDMODE
-      if(properties->noxf86vm)
+      if(!properties->noxf86vm)
+      {
+        gdk_window_set_override_redirect (window->window, 1);
+        gdk_window_set_keep_above (window->window, 1);
+        gdk_window_raise (window->window);
+      }
+      else
 #endif
 	gtk_window_fullscreen (GTK_WINDOW(window));
-      gtk_widget_set_uposition (window, 0, 0);
     }
   else
     {
+#ifdef XF86_VIDMODE
+      if(!properties->noxf86vm)
+      {
+        gdk_window_set_keep_above (window->window, 0);
+        gdk_window_set_override_redirect (window->window, 0);
+      }
+#endif
       /* The hide must be done at least for KDE */
       gtk_widget_hide (window);
       gdk_window_set_decorations (window->window, GDK_DECOR_ALL);
@@ -987,7 +1000,6 @@ void gc_fullscreen_set(gboolean state)
       if(properties->noxf86vm)
 #endif
 	gtk_window_unfullscreen (GTK_WINDOW(window));
-      gtk_widget_set_uposition (window, 0, 0);
 
       /* Mandatory or on windows we get iconified */
       gtk_window_deiconify (GTK_WINDOW(window));

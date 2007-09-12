@@ -1,3 +1,10 @@
+2007-09-13  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Patch by Hans de Goede j w r degoede hhs nl
+	  concerning the fullscreen to support latest change in gnome
+
+	* src/gcompris/gcompris.c: (gc_fullscreen_set):
+
 2007-09-12  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- revove this method to create shape game activity as
