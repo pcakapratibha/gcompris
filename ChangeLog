@@ -1,5 +1,24 @@
 2007-09-12  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- revove this method to create shape game activity as
+	the one in tools/gcompris_shapegame.py that is a gimp script
+	is much easier to use.
+
+	* tools/shapegame/HOWTO:
+	* tools/shapegame/Makefile:
+	* tools/shapegame/dt/Makefile:
+	* tools/shapegame/dt/README:
+	* tools/shapegame/dt/dt.cpp:
+	* tools/shapegame/dt/dt.h:
+	* tools/shapegame/dt/image.h:
+	* tools/shapegame/dt/imconv.h:
+	* tools/shapegame/dt/imutil.h:
+	* tools/shapegame/dt/misc.h:
+	* tools/shapegame/dt/pnmfile.h:
+	* tools/shapegame/nice_target_spot.cpp:
+
+2007-09-12  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- Added support for Breton by Alan Monfort.
 
 	* configure.in:
