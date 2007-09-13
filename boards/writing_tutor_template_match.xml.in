@@ -10,9 +10,9 @@
 	 author="Jozef Cerven (jcmail80@gmail.com)"
 	 boarddir="tutor">
 	 <_title>TBD</_title>
-	 <_description>TBD</description>
+	 <_description>TBD</_description>
 	<_prerequisite></_prerequisite>
 	<_goal></_goal>
-	<_manual></manual>
+	<_manual></_manual>
   </Board>
 </GCompris>
