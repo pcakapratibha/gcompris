@@ -1,7 +1,16 @@
+2007-09-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed web site generation, improved it's documentation
+
+	* docs/spip_oneboard.xsl:
+	* docs/gcompris2spip.pl:
+
+	- Removed require on gtk-pixbuf as it's already required by GTK.
+
 2007-09-13  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Patch by Hans de Goede j w r degoede hhs nl
-	  concerning the fullscreen to support latest change in gnome
+	  concerning the xvidmode fullscreen to support latest change in gnome
 
 	* src/gcompris/gcompris.c: (gc_fullscreen_set):
 
