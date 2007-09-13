@@ -27,11 +27,17 @@ use Data::Dumper;
 #
 #  Authors: Bruno Coudoin <bruno.coudoin@free.fr>
 #
-
-# Prerequisite: We need to have the translation in the xml files in order
-#               for this script to work.
-#               activate @INTLTOOL_XML_RULE@ in boards/Makefile.am
-
+#
+# Prerequisite: - We need to have the translation in the xml files in order
+# ------------    for this script to work.
+#                 activate @INTLTOOL_XML_RULE@ in boards/Makefile.am
+#
+#               - Need to switch svg icons to png, upload them and
+#                 replace the .svg by .png in all the .xml menus
+#                 (in boards/skins/gartoon/boardicons/):
+#                 for f in *.svg; do g=`basename $f .svg`; inkscape $f --export-png=tt/$g.png; done
+#                 (in boards/):
+#                 sed -i s/\.svg/\.png/g *.xml
 # -----------------------------------------------------------------------------------------
 # USAGE:
 # This tool requires no parameters. It must be run withing the gcompris/docs directory
@@ -536,8 +542,8 @@ close FILEREAD;
 # Summary
 print "\n\nCreated " . ($article_id - $first_article) . " Articles in $output_file\n";
 print "Insert the content of this file in the SPIP dump.xml file.\n";
-print "If screenshots were already in, remove them first\n";
-
+print "If screenshots were already in, remove them first, you can use the command:\n";
+print "./spip_screenshot_remove.pl dump.xml > dump2.xml"
 # Cleanup
 unlink $tmp_file;
 
