@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-01 11:02+0200\n"
-"PO-Revision-Date: 2007-09-01 11:00+0200\n"
+"POT-Creation-Date: 2007-09-15 22:26+0200\n"
+"PO-Revision-Date: 2007-09-13 22:02+0200\n"
 "Last-Translator: Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -1879,7 +1879,7 @@ msgstr "Croatie"
 msgid "Cyprus"
 msgstr "Chypre"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:66
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
 msgid "Czech Republic"
 msgstr "République tchèque"
 
@@ -4670,7 +4670,7 @@ msgid "Multi-activity educational game"
 msgstr "Jeu éducatif multi-activités"
 
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:181 ../src/boards/memory.c:845
+#: ../src/boards/algebra.c:181 ../src/boards/memory.c:843
 msgid "+-×÷"
 msgstr "+-×÷"
 
@@ -4759,7 +4759,7 @@ msgstr "Match nul"
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Erreur : le programme externe Gnuchess a quitté subitement"
 
-#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:812
+#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:810
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -4775,7 +4775,7 @@ msgstr ""
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
 #: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:230
-#: ../src/boards/memory.c:834
+#: ../src/boards/memory.c:832
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
@@ -4810,7 +4810,7 @@ msgstr ""
 #: ../src/boards/missingletter.c:770
 #: ../src/boards/python/admin/board_list.py:640
 #: ../src/boards/python/admin/board_list.py:658
-#: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:534
+#: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
 #: ../src/boards/shapegame.c:1847 ../src/boards/smallnumbers.c:589
@@ -4824,7 +4824,7 @@ msgstr ""
 
 #. toggle box
 #: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:889
-#: ../src/boards/python/login.py:539
+#: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "Texte en capitales uniquement"
 
@@ -4878,12 +4878,12 @@ msgid "Select sound locale"
 msgstr "Sélectionne la langue des sons"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:226 ../src/boards/memory.c:830
+#: ../src/boards/gletters.c:226 ../src/boards/memory.c:828
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:236 ../src/boards/memory.c:840
+#: ../src/boards/gletters.c:236 ../src/boards/memory.c:838
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -4938,11 +4938,11 @@ msgstr ""
 "Repère bien ta position, puis retourne à la vue tridimensionnelle pour "
 "poursuivre tes mouvements"
 
-#: ../src/boards/memory.c:265
+#: ../src/boards/memory.c:263
 msgid "Memory"
 msgstr "Memory"
 
-#: ../src/boards/memory.c:266
+#: ../src/boards/memory.c:264
 msgid "Find the matching pair"
 msgstr "Trouve les paires correspondantes."
 
@@ -5564,16 +5564,16 @@ msgstr "Trop grand"
 msgid "Too low"
 msgstr "Trop petit"
 
-#: ../src/boards/python/login.py:113
+#: ../src/boards/python/login.py:114
 msgid "Profile: "
 msgstr "Profil : "
 
-#: ../src/boards/python/login.py:267 ../src/boards/python/login.py:276
+#: ../src/boards/python/login.py:268 ../src/boards/python/login.py:277
 msgid "Login: "
 msgstr "Identifiant : "
 
 #. toggle box
-#: ../src/boards/python/login.py:549
+#: ../src/boards/python/login.py:550
 msgid "Enter login to log in"
 msgstr "Entre ton identifiant pour te connecter"
 
@@ -5916,7 +5916,7 @@ msgstr ""
 "GNU (GPL)."
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:472 ../src/gcompris/config.c:482
+#: ../src/gcompris/config.c:473 ../src/gcompris/config.c:483
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -6005,242 +6005,246 @@ msgid "Bulgarian"
 msgstr "Bulgare"
 
 #: ../src/gcompris/config.c:65
+msgid "Breton"
+msgstr "Breton"
+
+#: ../src/gcompris/config.c:66
 msgid "Catalan"
 msgstr "Catalan"
 
-#: ../src/gcompris/config.c:67
+#: ../src/gcompris/config.c:68
 msgid "Danish"
 msgstr "Danois"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:69
 msgid "German"
 msgstr "Allemand"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:70
 msgid "Greek"
 msgstr "Grec"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:71
 msgid "English (Canada)"
 msgstr "Anglais (Canada)"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:72
 msgid "English (Great Britain)"
 msgstr "Anglais (Royaume-Uni)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:73
 msgid "English (United States)"
 msgstr "Anglais (États-Unis)"
 
-#: ../src/gcompris/config.c:73
+#: ../src/gcompris/config.c:74
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:75
 msgid "Basque"
 msgstr "Basque"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:76
 msgid "Dzongkha"
 msgstr "Dzongkha"
 
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:77
 msgid "Finnish"
 msgstr "Finnois"
 
-#: ../src/gcompris/config.c:77
+#: ../src/gcompris/config.c:78
 msgid "French"
 msgstr "Français"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:79
 msgid "Irish (Gaelic)"
 msgstr "Irlandais (Gaélique)"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:80
 msgid "Hebrew"
 msgstr "Hébreu"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:81
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:82
 msgid "Indonesian"
 msgstr "Indonésien"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:83
 msgid "Japanese"
 msgstr "Japonais"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:84
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:85
 msgid "Punjabi"
 msgstr "Punjabi"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:86
 msgid "Hungarian"
 msgstr "Hongrois"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:87
 msgid "Croatian"
 msgstr "Croate"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:88
 msgid "Italian"
 msgstr "Italien"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:89
 msgid "Georgian"
 msgstr "Géorgien"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:90
 msgid "Korean"
 msgstr "Coréen"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:91
 msgid "Lithuanian"
 msgstr "Lituanien"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:92
 msgid "Macedonian"
 msgstr "Macédonien"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:93
 msgid "Malayalam"
 msgstr "Malayalam"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:94
 msgid "Marathi"
 msgstr "Marâthî"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:95
 msgid "Malay"
 msgstr "Malaisien"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:96
 msgid "Nepal"
 msgstr "Népalais"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:97
 msgid "Dutch"
 msgstr "Hollandais"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:98
 msgid "Norwegian Bokmal"
 msgstr "Norvégien Bokmal"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:99
 msgid "Norwegian Nynorsk"
 msgstr "Norvégien Nynorsk"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:100
 msgid "Occitan (languedocien)"
 msgstr "Occitan (languedocien)"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:101
 msgid "Polish"
 msgstr "Polonais"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:102
 msgid "Portuguese"
 msgstr "Portugais"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:103
 msgid "Portuguese (Brazil)"
 msgstr "Portugais (Brésil)"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:104
 msgid "Romanian"
 msgstr "Roumain"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:105
 msgid "Russian"
 msgstr "Russe"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:106
 msgid "Kinyarwanda"
 msgstr "Kinyarwandais"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:107
 msgid "Slovak"
 msgstr "Slovaque"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:108
 msgid "Slovenian"
 msgstr "Slovène"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:109
 msgid "Somali"
 msgstr "Somali"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:110
 msgid "Albanian"
 msgstr "Albanais"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:111
 msgid "Serbian (Latin)"
 msgstr "Serbe (Latin)"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:112
 msgid "Serbian"
 msgstr "Serbe"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:113
 msgid "Swedish"
 msgstr "Suédois"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:114
 msgid "Tamil"
 msgstr "Tamoul"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:115
 msgid "Thai"
 msgstr "Thaï"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:116
 msgid "Turkish"
 msgstr "Turc"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:117
 msgid "Vietnamese"
 msgstr "Vietnamien"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:118
 msgid "Walloon"
 msgstr "Wallon"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Chinese (Simplified)"
 msgstr "Chinois (simplifié)"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Chinese (Traditional)"
 msgstr "Chinois (traditionnel)"
 
-#: ../src/gcompris/config.c:124
+#: ../src/gcompris/config.c:125
 msgid "No time limit"
 msgstr "Sans limite de temps"
 
-#: ../src/gcompris/config.c:125
+#: ../src/gcompris/config.c:126
 msgid "Slow timer"
 msgstr "Compteur lent"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:127
 msgid "Normal timer"
 msgstr "Compteur normal"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "Fast timer"
 msgstr "Compteur rapide"
 
-#: ../src/gcompris/config.c:132
+#: ../src/gcompris/config.c:133
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (par défaut pour GCompris)"
 
-#: ../src/gcompris/config.c:137
+#: ../src/gcompris/config.c:138
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6248,38 +6252,38 @@ msgstr ""
 "<i>Filtrez les activités avec\n"
 "le module d'administration</i>"
 
-#: ../src/gcompris/config.c:192 ../src/gcompris/config.c:202
+#: ../src/gcompris/config.c:193 ../src/gcompris/config.c:203
 msgid "GCompris Configuration"
 msgstr "Configuration de GCompris"
 
-#: ../src/gcompris/config.c:278
+#: ../src/gcompris/config.c:279
 msgid "Fullscreen"
 msgstr "Plein écran"
 
-#: ../src/gcompris/config.c:321
+#: ../src/gcompris/config.c:322
 msgid "Music"
 msgstr "Musique"
 
-#: ../src/gcompris/config.c:349
+#: ../src/gcompris/config.c:350
 msgid "Effect"
 msgstr "Effet"
 
-#: ../src/gcompris/config.c:385
+#: ../src/gcompris/config.c:386
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Impossible d'ouvrir le répertoire de thèmes : %s"
 
-#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:866
-#: ../src/gcompris/config.c:880
+#: ../src/gcompris/config.c:417 ../src/gcompris/config.c:867
+#: ../src/gcompris/config.c:881
 #, c-format
 msgid "Skin : %s"
 msgstr "Thème : %s"
 
-#: ../src/gcompris/config.c:418
+#: ../src/gcompris/config.c:419
 msgid "SKINS NOT FOUND"
 msgstr "THÈMES INTROUVABLES"
 
-#: ../src/gcompris/config.c:543
+#: ../src/gcompris/config.c:544
 msgid "English (United State)"
 msgstr "Anglais (États-Unis)"
 
@@ -6495,7 +6499,7 @@ msgstr ""
 "apprendre la liberté à nos enfants, merci d'utiliser GNU/Linux. Vous pouvez "
 "obtenir plus d'informations sur http://www.fsf.org/philosophy"
 
-#: ../src/gcompris/gcompris.c:1432
+#: ../src/gcompris/gcompris.c:1444
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
@@ -6503,12 +6507,12 @@ msgstr ""
 "GCompris ne va pas démarrer car le fichier verrou est posé depuis seulement %"
 "d secondes.\n"
 
-#: ../src/gcompris/gcompris.c:1434
+#: ../src/gcompris/gcompris.c:1446
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Le fichier verrou est « %s »\n"
 
-#: ../src/gcompris/gcompris.c:1562
+#: ../src/gcompris/gcompris.c:1574
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6522,17 +6526,17 @@ msgstr ""
 "Plus d'informations sur http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1646
+#: ../src/gcompris/gcompris.c:1658
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Utilise l'option -l pour accéder directement à une activité.\n"
 
-#: ../src/gcompris/gcompris.c:1647
+#: ../src/gcompris/gcompris.c:1659
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "La liste des activités disponibles est :\n"
 
-#: ../src/gcompris/gcompris.c:1834
+#: ../src/gcompris/gcompris.c:1846
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "La liste des profils disponibles est :\n"
