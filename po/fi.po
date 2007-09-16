@@ -946,7 +946,7 @@ msgid ""
 msgstr ""
 "Järjestä kaikki kuvat sen mukaan, milloin\n"
 "ne on kehitetty.\n"
-"Jos et ole varma, tarkista wikipediasta ositteessa\n"
+"Jos et ole varma, tarkista wikipediasta osoitteessa\n"
 "&lt;http://www.wikipedia.org/&gt;"
 
 #: ../boards/chronos/board3_0.xml.in.h:8 ../boards/chronos/board3_1.xml.in.h:6
@@ -4550,7 +4550,7 @@ msgid ""
 "sorry!"
 msgstr ""
 "Virhe: tämä osan käyttö vaatii että asennat ensin\n"
-"paketit, joissa on gcomprisin äänet kielelle \"%s\".Käytetään sen sijasta "
+"paketit, joissa on gcomprisin äänet kielelle \"%s\". Käytetään sen sijasta "
 "englantia!"
 
 #. Init configuration window:
@@ -5167,9 +5167,9 @@ msgstr ""
 "Gnucap -elektriniikkasimulaattoria ei löydy.\n"
 "Voit hakea ja asentaa sen osoitteesta\n"
 "<http://geda.seul.org/tools/gnucap/>\n"
-"Jotta ohjelma voidaan havaita, tytyy se olla asennettu\n"
+"Jotta ohjelma voidaan havaita, täytyy se olla asennettu\n"
 "nimellä usr/bin/gnucap tai /usr/local/bin/gnucap.\n"
-"Voit käyttää tätä tehtävää sähkökaavioden piirtoon ilman elektroniikan "
+"Voit käyttää tätä tehtävää sähkökaavioiden piirtoon ilman elektroniikan "
 "simulointia."
 
 #: ../src/boards/python/gnumch.py:96
@@ -5354,7 +5354,7 @@ msgid ""
 "watching the bad weather above them."
 msgstr ""
 "Pinnan alla Matti Mustekala ja hänen ystävänsä istuivat kivellä\n"
-"katselemessa huonoa säätä."
+"katselemassa huonoa säätä."
 
 #: ../src/boards/python/oscar_and_friends.py:117
 msgid ""
@@ -6257,7 +6257,7 @@ msgstr ""
 "GCompris\n"
 "Versio: %s\n"
 "Lisenssi: GPL\n"
-"Lisää tetoja täältä: http://gcompris.net\n"
+"Lisää tietoja täältä: http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
 #: ../src/gcompris/gcompris.c:1647
