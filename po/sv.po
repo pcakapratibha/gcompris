@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-14 01:13+0200\n"
-"PO-Revision-Date: 2007-09-14 20:50+0100\n"
+"POT-Creation-Date: 2007-09-16 21:26+0200\n"
+"PO-Revision-Date: 2007-09-16 23:04+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,9 @@ msgid ""
 "- You can save multiple configurations, and switch between them easily. In the 'Profile' section add a profile, then in the 'Board' section select the profile in the combobox, then select the boards you want to be active. You can add multiple profiles, with different lists of boards, and different languages. You set the default profile in the 'Profile' section, by choosing the profile you want, then clicking on the 'Default' button. You can also choose a profile from the command line.\n"
 "- You can add users, classes and for each class, you can create groups of users. Note that you can import users from a comma-separated file. Assign one or more groups to a profile, after which those new logins will appear after restarting GCompris. Being able to identify individual children in GCompris means we can provide individual reports. It also recognizes the children as individuals; they can learn to type in and recognize their own usernames (login is configurable)."
 msgstr ""
+"- I sektionen \"Bräden\" kan du ändra listan över aktiviteter. Bara att avmarkera dem i trädvyn. Du kan till exempel ändra språket som används för läsning eller språket som används för att säga namn på färger.\n"
+"- Du kan spara flera olika konfigurationer och enkelt växla mellan dem. I sektionen \"Profile\" kan du lägga till en profil, välj sedan profilen i sektionen \"Bräde\" och sedan välj de bräden som du vill ska vara aktiva. Du kan lägga till flera profiler med olika tillgängliga bräden och med olika språk. Du kan ställa in standardprofilen i sektionen \"Profil\" genom att välja profilen och sedan klicka på knappen \"Standard\". Du kan även välja en profil från kommandoraden.\n"
+"- Du kan lägga till användare, klasser och för varje klass kan du skapa grupper av användare. Observera att du kan importera användare från en kommaseparerad fil. Tilldela en eller flera grupper till en profil, efter vilka dessa inloggningsnamn kommer att visas efter omstart av GCompris. Eftersom det går att identifiera individuella barn i GCompris så kan vi tillhandahålla individuella rapporter. Det känner även igen barnet som individuell; de kan lära sig att skriva in och känna igen sina egna användarnamn (inloggning är möjlig att konfigurera)."
 
 #: ../boards/administration.xml.in.h:4
 msgid "GCompris Administration Menu"
@@ -31,7 +34,7 @@ msgstr "Administrationsmeny för GCompris"
 
 #: ../boards/administration.xml.in.h:5
 msgid "If you want to fine tune GCompris to your needs, you can use the administration module here. The ultimate goal is to provide child-specific reporting for parents and teacher who want to monitor the progress, strengths and needs of their children."
-msgstr ""
+msgstr "Om du vill finjustera GCompris till att passa dina behov kan du använda administrationsmodulen. Det slutgiltiga målet är att tillhandahålla individuella rapporter till föräldrar och lärare som vill övervaka inlärningsförloppet, vad barnet är bra på och vad det är mindre bra på."
 
 #: ../boards/administration.xml.in.h:6
 msgid "Left-Click with the mouse to select an activity"
@@ -457,7 +460,7 @@ msgstr "Flytta och klicka musen"
 
 #: ../boards/algorithm.xml.in.h:5
 msgid "algorithm"
-msgstr "algoritm"
+msgstr "Algoritm"
 
 #: ../boards/anim.xml.in.h:1
 msgid "Create a drawing or an animation"
@@ -508,9 +511,8 @@ msgid "Drag and Drop the items to make them match"
 msgstr "Dra och släpp objekten för att få dem att passa"
 
 #: ../boards/babymatch.xml.in.h:2
-#, fuzzy
 msgid "In the main board area, a set of objects is displayed. In the vertical box (at the left of the main board) another set of objects is shown, each object in the group on the left matching exactly one object in the main board area. This game challenges you to find the logical link between these objects. How do they fit together? Drag each object to the correct red space in the main area."
-msgstr "I huvudbrädområdet finns ett antal objekt. I den lodräta ramen till vänster om huvudbrädområdet finns ett annat antal objekt. Vart och ett av dessa objekt passar endast ett objekt som finns på huvudbrädområdet. Den logiska länken mellan dessa objekt måste hittas. Detta åstadkoms genom att dra objekten till de rätta röda platserna i huvudområdet."
+msgstr "I huvudbrädområdet visas ett antal objekt. I den lodräta rutan (till vänster om huvudbrädområdet) finns ett annat antal objekt. Vart och ett av dessa objekt passar endast ett objekt som finns på huvudbrädområdet. Den logiska länken mellan dessa objekt måste hittas. Hur passar de ihop? Dra varje objekt till den rätta röda platsen i huvudområdet."
 
 #: ../boards/babymatch.xml.in.h:3
 msgid "Matching Items"
@@ -654,7 +656,7 @@ msgstr "Träna på schack"
 #: ../boards/chess_movelearn.xml.in.h:2
 #: ../boards/chess_partyend.xml.in.h:1
 msgid "Learning chess"
-msgstr "Lär schack"
+msgstr "Lär dig schack"
 
 #: ../boards/chess_computer.xml.in.h:4
 #: ../boards/chess_movelearn.xml.in.h:4
@@ -1086,9 +1088,8 @@ msgid "In this game, children can draw freely. The goal is to discover how to cr
 msgstr "I detta spel kan barnen rita fritt. Målet är att upptäcka hur man kan skapa vackra teckningar baserade på grundläggande former: rektanglar, ellipser och linjer."
 
 #: ../boards/draw.xml.in.h:5
-#, fuzzy
 msgid "Select a drawing tool on the left, and a color down the bottom, then click and drag in the white area to create a new shape. To save time, you can click with the middle mouse button to delete an object."
-msgstr "På vänstra sidan väljer du ett ritverktyg, sedan väljer du en färg nederst, och sedan klickar du på den vita ytan och drar för att skapa en ny form. För att snabba upp kan du använda musens mittknapp för att ta bort ett objekt."
+msgstr "På vänstra sidan väljer du ett ritverktyg, sedan väljer du en färg nederst, och sedan klickar du på den vita ytan och drar för att skapa en ny figur. För att spara tid kan du använda musens mittknapp för att ta bort ett objekt."
 
 #: ../boards/drawnumber.xml.in.h:1
 msgid "Can count from 1 to 50."
@@ -2340,6 +2341,13 @@ msgid ""
 "To run GCompris for a specific profile, you use 'gcompris -p profile' where 'profile'\n"
 "is the name of a profile as you created it in Administration."
 msgstr ""
+"För att aktivera inloggningsskärmen måste du först \n"
+"lägga till användare i administrationsdelen för GCompris. \n"
+"Du kommer åt Administration genom att köra \"gcompris -a\".\n"
+"I Administration kan du skapa olika profiler. I varje profil kan du\n"
+"ha olika uppsättningar användare och välja vilka aktiviteter som finns tillgängliga i dem.\n"
+"För att köra GCompris för en specifik profil använder du \"gcompris -p profil\" där \"profil\"\n"
+"är namnet på en profil som du har skapat i Administration."
 
 #: ../boards/login.xml.in.h:10
 msgid "Select or enter your name to log in to GCompris"
@@ -2377,7 +2385,7 @@ msgstr "Lär dig subtraktion"
 
 #: ../boards/magic_hat_minus.xml.in.h:3
 msgid "Look at the magician, he tells the number of stars that are under his magic hat. Then, click on the hat to open it. A few stars escape. Click again on the hat to close it. You have to count how many are still under the hat. Click on the bottom right area to answer."
-msgstr ""
+msgstr "Titta på magikern. Han berättar antalet stjärnor som finns under hans magiska hatt. Klicka sedan på hatten för att öppna den. Ett antal stjärnor har rymt. Klicka igen på hatten för att stänga den. Du måste räkna hur många som fortfarande finns kvar under hatten. Klicka på området i nedre högra hörnet för att svara."
 
 #: ../boards/magic_hat_minus.xml.in.h:4
 #: ../boards/memory_add_minus.xml.in.h:3
@@ -2431,7 +2439,7 @@ msgstr "Hitta vägen ut ur labyrinten (förflyttningarna är relativa)"
 
 #: ../boards/maze2DRelative.xml.in.h:5
 msgid "Use the keyboard arrows to move Tux up to the door. In this maze, the move is relative (first person). Use the up arrow to go forward. The other arrow let you turn Tux in another direction."
-msgstr ""
+msgstr "Använd tangentbordets pilar för att flytta Tux fram till dörren. I denna labyrint är förflyttningen relativ (förstaperson). Använd uppåtpilen för att gå framåt. Den andra pilen låter dig vända Tux mot en annan riktning."
 
 #: ../boards/maze3D.xml.in.h:1
 msgid "3D Maze"
@@ -2478,9 +2486,8 @@ msgid "Repeat a melody"
 msgstr "Upprepa en melodi"
 
 #: ../boards/memory.xml.in.h:1
-#, fuzzy
 msgid "A set of blank cards is shown. Each card has a picture on the other side, and each picture card has a twin exactly the same. Click on a card to see its hidden picture, and try to match the twins. You can only turn over two cards at once, so you need to remember where a picture is, while you look for its twin. When you turn over the twins, they both disappear."
-msgstr "En samling tomma kort visas. Varje par är associerat med samma bild i deras dolda sidan. När du klickar på ett kort kan du vända på kortet och se det dolda bilden. Du kan dock bara se två dolda bilder på en gång. Du måste komma ihåg bildernas positioner för att associera dem. För att ta bort ett par kort måste du visa dem båda."
+msgstr "En samling tomma kort visas. Varje kort har en bild på andra sidan och varje bildkort har en tvilling. När du klickar på ett kort kan du vända på kortet och se dess dolda bild och försöka att vända på dess tvillingkort. Du kan dock bara vända på två kort samtidigt. Du måste komma ihåg bildernas positioner för att associera dem. För att ta bort ett par kort måste du visa dem båda."
 
 #: ../boards/memory.xml.in.h:2
 msgid "Flip the cards to find the matching pairs"
@@ -2518,6 +2525,11 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of an adding-up sum (also called an addition sum). You need to find the two parts of the sum, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole sum. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper sum. When you do that, both those cards disappear! When you've made them all disappear, found all the sums, you've won the game! :)"
 msgstr ""
+"Du kan se några kort men du kan inte se vad det är på andra sidan av dem. Varje kort döljer en additionssumma som ska adderas eller svaret till summan.\n"
+"En additionssumma ser ut så här: 2 + 2 = 4\n"
+"Talen på ena sidan av lika med-tecknet (=) måste vara samma som talet på andra sidan. Så 2 (1, 2) och 2 till (3, 4) blir 4. Räkna högt när du funderar på det här och räkna på dina fingrar, därför att ju fler sätt du gör saker och ting på, ju bättre kommer du ihåg det. Du kan även använda block, knappar eller någonting du kan räkna med. Om du har flera bröder eller systrar kan du räkna dem! Eller varför inte barnen i din skolklass. Sjung räknesånger. Räkna massor av saker, för att träna, och du kommer att bli mycket bra på addition!\n"
+"\n"
+"I det här spelet döljer dessa kort två delar av en additionssumma. Du måste hitta de två delarna av summan och lägga ihop dem igen. Klicka på ett kort för att se vilket tal som det döljer, försök sedan hitta det andra kortet som passar med det, för att de tillsammans ska bilda summan. Du kan endast vända på två kort samtidigt, så du måste komma ihåg var talen döljer sig, sedan kan du matcha dem när du hittar deras andra hälft. Du gör jobbet för lika med-tecknet och du behöver lägga ihop talen för att bilda den korrekta summan. När du gör det kommer bägge dessa kort försvinna! När du har fått alla att försvinna, hittat alla summorna, har du vunnit spelet! :)"
 
 #: ../boards/memory_add_minus.xml.in.h:1
 msgid "Addition and subtraction memory game"
@@ -2548,6 +2560,9 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of an operation. You need to find the two parts of the operation, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole operation. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper equality. When you do that, both those cards disappear! When you've made them all disappear, found all the operations, you've won the game! :)"
 msgstr ""
+"Du kan se några kort men du kan inte se vad det är på andra sidan av dem. Varje kort döljer en operation eller svaret till den.\n"
+"\n"
+"I det här spelet döljer dessa kort två delar av en operation. Du måste hitta de två delarna av operationen och lägga ihop dem igen. Klicka på ett kort för att se vilket tal som det döljer, försök sedan hitta det andra kortet som passar med det, för att bilda en hel operation. Du kan endast vända på två kort samtidigt, så du måste komma ihåg var talen döljer sig, sedan kan du matcha dem när du hittar deras andra hälft. Du gör jobbet för lika med-tecknet och du behöver lägga ihop talen för att bilda den korrekta summan. När du gör det kommer bägge dessa kort försvinna! När du har fått alla att försvinna, hittat alla operationerna, har du vunnit spelet! :)"
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:1
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:1
@@ -2571,7 +2586,7 @@ msgstr "Träna på addition, subtraktion, multiplikation och division till alla 
 #: ../boards/memory_mult_div_tux.xml.in.h:4
 #: ../boards/memory_mult_tux.xml.in.h:4
 msgid "Turn the cards over to find a matching operation, until all the cards are gone."
-msgstr ""
+msgstr "Vänd på korten för att hitta en matchande operation tills alla korten är borta."
 
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:2
 msgid "All operations memory game against Tux"
@@ -2639,6 +2654,11 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of a subtraction. You need to find the two parts of the subraction, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole sum. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper sum. When you do that, both those cards disappear! When you've made them all disappear, found all the subtracts, you've won the game! :)"
 msgstr ""
+"Du kan se några kort men du kan inte se vad det är på andra sidan av dem. Varje kort döljer en subtraktion eller svaret till den.\n"
+"En subtraktion ser ut så här: 3 - 1 = 2\n"
+"Talen på ena sidan av lika med-tecknet (=) måste vara samma som talet på andra sidan. Så 3 (1, 2, 3) minus 1 (1) blir 2. Räkna högt när du funderar på det här och räkna på dina fingrar, därför att ju fler sätt du gör saker och ting på, ju bättre kommer du ihåg det. Du kan även använda block, knappar eller någonting du kan räkna med. Om du har flera bröder eller systrar kan du räkna dem! Eller varför inte barnen i din skolklass. Sjung räknesånger. Räkna massor av saker, för att träna, och du kommer att bli mycket bra på subtraktion!\n"
+"\n"
+"I det här spelet döljer dessa kort två delar av en subtraktion. Du måste hitta de två delarna av subtraktionen och lägga ihop dem igen. Klicka på ett kort för att se vilket tal som det döljer, försök sedan hitta det andra kortet som passar med det, för att de tillsammans ska bilda summan. Du kan endast vända på två kort samtidigt, så du behöver komma ihåg var talen döljer sig, sedan kan du matcha dem när du hittar deras andra hälft. Du gör jobbet för lika med-tecknet och du behöver lägga ihop talen för att bilda den korrekta summan. När du gör det kommer bägge dessa kort försvinna! När du har fått alla att försvinna, hittat alla subtraktionerna, har du vunnit spelet! :)"
 
 #: ../boards/memory_minus_tux.xml.in.h:3
 msgid "Subtraction memory game against Tux"
@@ -3159,7 +3179,6 @@ msgid "A memory game based on trains"
 msgstr "Ett minnesspel som bygger på tåg"
 
 #: ../boards/railroad.xml.in.h:2
-#, fuzzy
 msgid "A train - a locomotive and carriage(s) - is displayed at the top of the main area for a few seconds. Rebuild it at the top of the screen by selecting the appropriate carriages and locomotive. Deselect an item by clicking on it again. Check your construction by clicking on the hand at the bottom."
 msgstr "Ett tåg - ett lok och vagnar - visas överst i huvudområdet under ett par sekunder. Sedan måste du återskapa det överst på skärmen genom att välja rätt vagnar och lok. Du kan alltid avmarkera ett objekt genom att klicka på det. Rätta din konstruktion genom att klicka på handen längst ner."
 
@@ -3350,9 +3369,8 @@ msgstr ""
 
 #: ../boards/searace.xml.in.h:8
 #: ../boards/searace1player.xml.in.h:7
-#, fuzzy
 msgid "In this activity, you will learn how to enter commands into a computer. Even if the language is extremely basic, you learn here how to think ahead and construct a program. This activity can be used to introduce the programming concept to children."
-msgstr "I denna aktivitet, kommer du att lära dig hur man matar in kommandon till en dator. Även om språket är mycket fundamentalt, så kommer du att lära dig hur man tänker framåt och matar in ett program. Denna aktivitet kan användas för att introducera programmering till barn."
+msgstr "I denna aktivitet kommer du att lära dig hur man skriver in kommandon i en dator. Även om språket är mycket grundläggande så kommer du att lära dig hur man tänker framåt och matar in ett program. Denna aktivitet kan användas för att introducera programmering till barn."
 
 #: ../boards/searace.xml.in.h:9
 msgid "Sea race (2 Players)"
@@ -3401,12 +3419,10 @@ msgstr "Tal med tärningar"
 
 #: ../boards/smallnumbers.xml.in.h:5
 #: ../boards/smallnumbers2.xml.in.h:5
-#, fuzzy
 msgid "With the keyboard, type the number of dots you see on the falling dice."
 msgstr "Tryck på siffran på tangentbordet som motsvarar antalet prickar på den fallande tärningen."
 
 #: ../boards/smallnumbers2.xml.in.h:4
-#, fuzzy
 msgid "Numbers with pairs of dice"
 msgstr "Tal med tärningar"
 
@@ -3606,7 +3622,7 @@ msgstr "En enkel ordbehandlare att mata in och spara text med"
 
 #: ../boards/wordprocessor.xml.in.h:2
 msgid "In this wordprocessor you can type the text you want, save and get it back later. You can add some style to your text by using the buttons on the left. The first 4 buttons let you select the style of the line on which your insert cursor is. The 2 others buttons with multiple choices let you select from a predefined document and color theme."
-msgstr ""
+msgstr "I den här ordbehandlaren kan du skriva in vilken text du vill, spara den och få tillbaka den senare. Du kan lägga till vissa stilar till din text genom att använda knapparna till vänster. De första fyra knapparna låter dig välja stilen på raden din markör finns på. De två andra knapparna med flera val låter dig välja från ett fördefinierat dokument och färgtema."
 
 #: ../boards/wordprocessor.xml.in.h:3
 msgid "Learn how to enter text in a wordprocessor. This wordprocessor is special in that it enforces the use of styles. This way, the children will understand their benefit when moving to more feature full wordprocessor like OpenOffice.org."
@@ -3913,14 +3929,12 @@ msgid "right"
 msgstr "höger"
 
 #: ../src/boards/maze.c:491
-#, fuzzy
 msgid "Look at your position, then switch back to invisible mode to continue your moves"
-msgstr "Titta på din position och växla tillbaka till osynligt läge för att flytta"
+msgstr "Titta på din position och växla tillbaka till osynligt läge för att fortsätta din förflyttning"
 
 #: ../src/boards/maze.c:493
-#, fuzzy
 msgid "Look at your position, then switch back to 3D mode to continue your moves"
-msgstr "Titta på din position och växla tillbaka till tredimensionelt läge för att flytta"
+msgstr "Titta på din position och växla tillbaka till tredimensionellt läge för att fortsätta din förflyttning"
 
 #: ../src/boards/memory.c:263
 msgid "Memory"
@@ -3932,7 +3946,7 @@ msgstr "Hitta det passande paret"
 
 #: ../src/boards/menu2.c:132
 msgid "Main Menu Second Version"
-msgstr ""
+msgstr "Huvudmeny andra versionen"
 
 #: ../src/boards/menu2.c:133
 msgid "Select a Board"
@@ -3999,7 +4013,7 @@ msgstr "Ordlista"
 #: ../src/boards/python/admin/group_user_list.py:143
 #: ../src/boards/python/admin/user_list.py:185
 msgid "Login"
-msgstr "Logga in"
+msgstr "Inloggningsnamn"
 
 #: ../src/boards/python/admin/board_list.py:234
 msgid "Main menu"
@@ -4042,7 +4056,7 @@ msgstr "Redigerar klass:"
 
 #: ../src/boards/python/admin/class_edit.py:67
 msgid "Editing a new class"
-msgstr "Redigerar en ny klass"
+msgstr "Redigera en ny klass"
 
 #: ../src/boards/python/admin/class_edit.py:89
 msgid "Class:"
@@ -4074,7 +4088,7 @@ msgstr "Efternamn"
 
 #: ../src/boards/python/admin/class_edit.py:340
 msgid "You need to provide at least a name for your class"
-msgstr "Du behöver tillhandahålla minst ett namn för din klass"
+msgstr "Du behöver ange minst ett namn för din klass"
 
 #: ../src/boards/python/admin/class_edit.py:386
 msgid "There is already a class with this name"
@@ -4104,7 +4118,7 @@ msgstr " för klass: "
 
 #: ../src/boards/python/admin/group_edit.py:69
 msgid "Editing a new group"
-msgstr "Redigerar en ny grupp"
+msgstr "Redigera en ny grupp"
 
 #: ../src/boards/python/admin/group_edit.py:89
 msgid "Group:"
@@ -4249,7 +4263,7 @@ msgstr "Redigerar profil: "
 
 #: ../src/boards/python/admin/profile_edit.py:66
 msgid "Editing a new profile"
-msgstr "Redigerar en ny profil"
+msgstr "Redigera en ny profil"
 
 #: ../src/boards/python/admin/profile_edit.py:85
 msgid "Profile:"
@@ -4286,7 +4300,7 @@ msgstr "Redigerar en användare "
 
 #: ../src/boards/python/admin/user_edit.py:60
 msgid "Editing a new user"
-msgstr "Redigerar en ny användare"
+msgstr "Redigera en ny användare"
 
 #: ../src/boards/python/admin/user_edit.py:77
 msgid "Login:"
@@ -4310,7 +4324,7 @@ msgstr "Födelsedag:"
 
 #: ../src/boards/python/admin/user_edit.py:158
 msgid "You need to provide at least a login, first name and last name for your users"
-msgstr "Du behöver tillhandahålla minst ett inloggningsnamn, för- och efternamn för dina användare"
+msgstr "Du behöver ange minst ett inloggningsnamn, för- och efternamn för dina användare"
 
 #: ../src/boards/python/admin/user_edit.py:175
 msgid "There is already a user with this login"
@@ -5400,11 +5414,11 @@ msgstr "GCompris kommer att få bilder, ljud och aktivitetsdata från denna serv
 
 #: ../src/gcompris/gcompris.c:216
 msgid "Only when --server is provided, disable check for local resource first. Data are always taken from the web server."
-msgstr ""
+msgstr "Endast när --server anges, inaktivera först kontroll för lokala resurser. Data tas alltid från webbservern."
 
 #: ../src/gcompris/gcompris.c:220
 msgid "In server mode, specify the cache directory used to avoid useless downloads."
-msgstr ""
+msgstr "I serverläget, ange cachekatalogen som används för att undvika onödiga hämtningar."
 
 #: ../src/gcompris/gcompris.c:223
 msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
@@ -5497,7 +5511,7 @@ msgstr "Tack"
 #: ../src/gcompris/properties.c:502
 #: ../src/gcompris/properties.c:509
 msgid "readme"
-msgstr ""
+msgstr "readme"
 
 #: ../src/gcompris/properties.c:504
 msgid "This directory contains the files you create with the GCompris educational suite\n"
