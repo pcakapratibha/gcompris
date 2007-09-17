@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-09-16 21:26+0200\n"
-"PO-Revision-Date: 2007-09-16 23:04+0100\n"
+"PO-Revision-Date: 2007-09-17 02:06+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -485,7 +485,7 @@ msgstr "Välj ett ritningsverktyg till vänster och en färg ifrån botten. Klic
 
 #: ../boards/awele.xml.in.h:1
 msgid "At the beginning of the game four seeds are placed in each house. Players take turns moving the seeds. In each turn, a player chooses one of the six houses under his or her control. The player removes all seeds from this house, and distributes them, dropping one in each house counter-clockwise from the original house, in a process called sowing. Seeds are not distributed into the end scoring houses, nor into the house drawn from. That is, the starting house is left empty; if it contained 12 seeds, it is skipped, and the twelfth seed is placed in the next house. After a turn, if the last seed was placed into an opponent's house and brought its total to two or three, all the seeds in that house are captured and placed in the player's scoring house (or set aside if the board has no scoring houses). If the previous-to-last seed also brought the total seeds in an opponent's house to two or three, these are captured as well, and so on. However, if a move would capture all an opponent's seeds, the capture is forfeited, and the seeds are instead left on the board, since this would prevent the opponent from continuing the game. The proscription against capturing all an opponent's seeds is related to a more general idea, that one ought to make a move that allows the opponent to continue playing. If an opponent's houses are all empty, the current player must make a move that gives the opponent seeds. If no such move is possible, the current player captures all seeds in his/her own territory, ending the game. (Source Wikipedia &lt;http://en.wikipedia.org/wiki/Oware&gt;)"
-msgstr ""
+msgstr "I början av spelet placeras fyra frön i varje hus. Spelarna flyttar fröna i varsina omgångar. I varje omgång väljer en spelare ett av de sex husen under hans eller hennes kontroll. Spelaren tar bort alla frön från detta hus och distribuerar dem genom att släppa en i varje hus i motsols riktning från ursprungshuset., i en process som kallas sådd. När man sår så plockar man upp alla enheter från en grop och placerar dem en och en i de andra groparna, oftast medsols runt hela brädet. Uttrycket så kommer från att spelen historiskt ofta har spelats med frön och att man själva spelprincipen liknar att så frön i gropar i marken. I vissa spel så sår man ibland mer än en gång under sin tur. Om den sista enheten man sår hamnar i en grop där det redan finns enheter så plockas alla dessa upp och man börjar på nytt så från den gropen. Detta fortsätter i så fall oftast tills den sista enheten man sår hamnar i en tom grop. I en del spel så fortsätter man så från den grop som ligger efter den där den sista enheten hamnade istället. Då slutar spelarens tur när gropen framför den sista placerade enheten är tom. Beroende på den sista gropen man sår i så kan man samla enheter. De exakta reglerna för att samla enheterna variera kraftigt mellan spelen. I vissa spel så tillfångatar man en eller flera enheter genom att så den sista enheten i en grop med ett visst antal enheter i sig. Ibland så ska vissa formationer mellan groparna byggas upp för att samla dem och ibland så sår man helt enkelt enheter i sin samlargrop som i de vanliga groparna. (Källa Wikipedia &lt;http://sv.wikipedia.org/wiki/Mancala&gt;)"
 
 #: ../boards/awele.xml.in.h:2
 msgid "Oware"
@@ -497,7 +497,7 @@ msgstr "Spela strategispelet Oware mot Tux"
 
 #: ../boards/awele.xml.in.h:4
 msgid "The object of the game is to capture more seeds than one's opponent. Since the game has only 48 seeds, capturing 25 is sufficient to accomplish this. Since there are an even number of seeds, it is possible for the game to end in a draw, where each player has captured 24. The game is over when one player has captured 25 or more stones, or both players have taken 24 stones each (draw). If both players agree that the game has been reduced to an endless cycle, each player captures the stones on their side of the board."
-msgstr ""
+msgstr "Målet med spelet är att fånga fler frön än sin motståndare. Eftersom spelet endast har 48 frön så räcker det med att fånga 25 för att vinna. Eftersom det finns ett jämnt antal frön är det möjligt att spelet slutar med att ingen vinner, när varje spelare har fångat 24. Spelet är över när en spelare har fångat 25 eller fler stenar, eller båda spelarna har tagit 24 stenar var (ingen vinner). Om båda spelarna går med på att spelet har gått in i oändlig slinga kan varje spelare fånga stenarna på varsin sida av brädet."
 
 #: ../boards/babymatch.xml.in.h:1
 #: ../boards/babymatch/board1_0.xml.in.h:1
@@ -641,7 +641,7 @@ msgstr "Den här chattaktiviteten fungerar endast på det lokala nätverket."
 
 #: ../boards/chat.xml.in.h:3
 msgid "This chat activity will only work with other GCompris users on your local network, not on the Internet. To use it, just type in your message and hit Enter. Your message is then broadcast on the local network, and any GCompris program running the chat activity on that local network will receive and display your message."
-msgstr ""
+msgstr "Den här chattaktiviteten fungerar endast med andra GCompris-användare på ditt lokala nätverk och inte på Internet. För att använda det är det bara att skriva in ditt meddelande och trycka på Enter. Ditt meddelande kommer då att sändas ut på det lokala nätverket och andra GCompris-program som kör chattaktiviteten kommer att ta bort och visa upp ditt meddelande."
 
 #: ../boards/chess.xml.in.h:1
 #: ../boards/chess_computer.xml.in.h:3
@@ -941,7 +941,7 @@ msgstr "Lär dig klockan"
 
 #: ../boards/clockgame.xml.in.h:4
 msgid "Set the clock to the time given, in the time-units shown (hours:minutes or hours:minutes:seconds). Click on the different arrows, and move the mouse, to make the numbers go up or down."
-msgstr ""
+msgstr "Ställ in klockan till angiven tid, i de tidsenheter som visas (timmar:minuter eller timmar:minuter:sekunder). Klicka på de olika visarna och flytta muspekaren för att siffrorna ska gå upp eller ned."
 
 #: ../boards/clockgame.xml.in.h:5
 msgid "The concept of time. Reading the time."
@@ -991,7 +991,7 @@ msgstr "Lägg de fyra mynten i en rad"
 #: ../boards/connect4.xml.in.h:2
 #: ../boards/connect4-2players.xml.in.h:2
 msgid "Click the position in the line where you want to drop a piece. You can also use the arrow keys to move the piece left or right, and the down or space key to drop a piece."
-msgstr ""
+msgstr "Klicka på positionen i raden där du vill släppa ner en bit. Du kan även använda piltangenterna för att flytta biten vänster eller höger, och nedåtpil eller blankstegstangenten för att släppa biten."
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
@@ -1038,7 +1038,7 @@ msgstr "Mushantering"
 
 #: ../boards/crane.xml.in.h:5
 msgid "Move the items in the bottom left frame to copy their position in the top right model. Below the crane itself, you will find four arrows that let you move items. To select the item to move, just click on it."
-msgstr ""
+msgstr "Flytta objekten i nedre vänstra ramen för att kopiera deras position i övre högra modellen. Under själva kranen kan du hitta fyra pilar som låter dig flytta på objekt. Klicka på objektet som ska flyttas."
 
 #: ../boards/discovery.xml.in.h:1
 msgid "Colors, sounds, memory..."
@@ -1113,7 +1113,7 @@ msgstr "Skapa och simulera ett elektriskt schema"
 
 #: ../boards/electric.xml.in.h:2
 msgid "Drag electrical components from the selector and drop them in the working area. Create wires by clicking on a connection spot, dragging the mouse to the next connection spot, and letting go. You can also move components by dragging them. You can delete wires by clicking on them. To delete a component, select the deletion tool on top of the component selector. You can click on the switch to open and close it. You can change the rheostat value by dragging its wiper. In order to simulate what happens when a bulb is blown, you can blown it by right-clicking on it. The simulation is updated in real time by any user action."
-msgstr ""
+msgstr "Dra elektriska komponenter från väljaren och släpp dem på arbetsområdet. Skapa kablar genom att klicka på en anslutningspunkt och dra musen till nästa anslutningspunkt och släpp. Du kan även flytta komponenter genom att dra dem. Du kan ta bort kablar genom att klicka på dem. För att ta bort en komponent kan du välja borttagningsverktyget överst i komponentväljaren. Du kan klicka på strömbrytaren för att öppna eller stänga den. Du kan ändra rheostat-värdet genom att dra dess vippbrytare. För att simulera vad som händer när en glödlampa går sönder så kan du högerklicka på den. Simuleringen uppdateras i realtid vid varje användaråtgärd."
 
 #: ../boards/electric.xml.in.h:3
 msgid "Electricity"
@@ -1910,7 +1910,7 @@ msgstr "Talätare för faktorer"
 
 #: ../boards/gnumch-factors.xml.in.h:2
 msgid "Guide the Number Muncher to all the factors of the number at the top of the screen."
-msgstr "Guida talätaren till alla faktorerna för talet i övre delen av skärmen."
+msgstr "Guida talätaren till alla faktorerna för talet på övre delen av skärmen."
 
 #: ../boards/gnumch-factors.xml.in.h:3
 msgid "Learn about factors and multiples."
@@ -1922,7 +1922,7 @@ msgstr "Faktorerna för ett tal är talen som man kan dividera det talet med jä
 
 #: ../boards/gnumch-inequality.xml.in.h:1
 msgid "Guide the Number Muncher to the all the expressions that do not equal the number at the top of the screen."
-msgstr "Guida talätaren till alla uttryck som inte är lika med talet överst på skärmen."
+msgstr "Guida talätaren till alla uttryck som inte är lika med talet på övre delen av skärmen."
 
 #: ../boards/gnumch-inequality.xml.in.h:2
 msgid "Inequality Number Munchers"
@@ -1934,7 +1934,7 @@ msgstr "Träna på addition, subtraktion, multiplikation och division."
 
 #: ../boards/gnumch-multiples.xml.in.h:1
 msgid "Guide the Number Muncher to all the multiples of the number at the top of the screen."
-msgstr "Guida talätaren till alla multipler för talet i övre delen av skärmen."
+msgstr "Guida talätaren till alla multipler för talet på övre delen av skärmen."
 
 #: ../boards/gnumch-multiples.xml.in.h:2
 msgid "Learn about multiples and factors."
@@ -1946,7 +1946,7 @@ msgstr "Talätare för multipler"
 
 #: ../boards/gnumch-multiples.xml.in.h:4
 msgid "The multiples of a number are all the numbers that are equal to the original number times another number. For example, 24, 36, 48 and 60 are all multiples of 12. 25 is not a multiple of 12 because there isn't any number that can be multiplied by 12 to get 25. If one number is a factor of a second number, then the second number is a multiple of the first number. Again, you can think of multiples as families, and factors are the people who belong to those families. The factor 5, has parents 10, grandparents 15, great-grandparents 20, great-great-grandparents 25, and every extra step of 5 is another great- in front! But the number 5 does not belong in the 8 or 23 families. You can't fit any number of 5s into 8 or 23 with nothing left over. So '8 isn't a multiple of 5, nor is 23. Only 5, 10, 15, 20, 25 ... are multiples (or families or steps) of 5. Use the arrow keys to navigate around the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr ""
+msgstr "Multipler för ett tal är alla tal som är lika originaltalet gånger ett annat tal. Till exempel, 24, 36, 48 och 60 är alla multipler för 12. 25 är inte en multipel för 12 därför att det finns inget tal som kan multipliceras med 12 för att bli 25. Om ett tal är en faktor till ett annat tal, då är det andra talet en multipel för det första talet. Igen, du kan tänka på multipler som familjer, och faktorer är personerna som tillhör dessa familjer. Faktorn 5 har föräldern 10, farmorn 15, gammalfarmorn 20, och varje extra steg med 5 är ännu ett gammal- framför! Men talet 5 tillhör inte familjerna 8 eller 23. Du kan inte passa in något tal med 5 i 8 eller 23 utan någonting kvar. Därför är 8 inte en multipel av 5, inte heller är 23. Endast 5, 10, 15, 20, 25 ... är multipler (eller familjer eller steg) av 5. Använd piltangenterna för att navigera runt brädet och för att undvika Trogglarna. Tryck på blankstegstangenten för att äta upp ett tal."
 
 #: ../boards/gnumch-primes.xml.in.h:1
 msgid "Guide the Number Muncher to all the prime numbers."
@@ -1986,7 +1986,7 @@ msgstr "Tal från 1 till 1000 för sista nivån."
 
 #: ../boards/guessnumber.xml.in.h:4
 msgid "Read the instructions that give you the range of the number to find. Enter a number in the top right blue entry box. Tux will tell you if your number is higher or lower. Then enter another number. The distance between Tux and the escape area on the right represents how far you are from the correct number. If Tux is over or under the escape area, it means your number is over or under the correct number."
-msgstr ""
+msgstr "Läs instruktionerna som ger dig talintervallet att hitta. Ange ett tal i övre högra blåa inmatningsrutan. Tux kommer att säga om ditt tal är högre eller lägre. Ange sedan ett annat tal. Avståndet mellan Tux och rymningsområdet till höger representerar hur långt från du är det korrekta talet. Om Tux är över eller under rymningsområdet betyder det att ditt svar är över eller under det korrekta talet."
 
 #: ../boards/hanoi.xml.in.h:1
 msgid "Concept taken from EPI games."
@@ -1994,7 +1994,7 @@ msgstr "Taget från konceptet i EPI-spelen."
 
 #: ../boards/hanoi.xml.in.h:2
 msgid "Drag and Drop one top piece at a time, from one peg to another, to reproduce the tower on the right in the empty space on the left."
-msgstr "Dra och släpp toppbitarna endast ifrån en pinne till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
+msgstr "Dra och släpp toppbitarna endast ifrån en plint till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
 
 #: ../boards/hanoi.xml.in.h:4
 #: ../src/boards/hanoi.c:96
@@ -2008,11 +2008,11 @@ msgstr "Återskapa tornet till höger i den tomma ytan till vänster"
 #: ../boards/hanoi.xml.in.h:6
 #: ../src/boards/hanoi.c:95
 msgid "Simplified Tower of Hanoi"
-msgstr "Förenklat Hanois torn"
+msgstr "Förenklat Tornet i Hanoi"
 
 #: ../boards/hanoi_real.xml.in.h:1
 msgid "Drag and Drop the top pieces only from one peg to another, to reproduce the tower on the right in the empty space on the left."
-msgstr "Dra och släpp toppbitarna endast ifrån en pinne till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
+msgstr "Dra och släpp toppbitarna endast ifrån en plint till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
 
 #: ../boards/hanoi_real.xml.in.h:3
 msgid "Reproduce the tower on the right side"
@@ -2020,7 +2020,7 @@ msgstr "Återskapa tornet på högra sidan"
 
 #: ../boards/hanoi_real.xml.in.h:4
 msgid "The Tower of Hanoi"
-msgstr "Hanois torn"
+msgstr "Tornet i Hanoi"
 
 #: ../boards/hanoi_real.xml.in.h:5
 msgid ""
@@ -2028,10 +2028,19 @@ msgid ""
 "* only one disc may be moved at a time\n"
 "* no disc may be placed atop a smaller disc"
 msgstr ""
+"Målet med spelet är att flytta alla skivor till en annan plint samt följa dessa regler:\n"
+"* endast en skiva får flyttas åt gången\n"
+"* ingen skiva får placeras ovanpå en mindre ring"
 
 #: ../boards/hanoi_real.xml.in.h:8
 msgid "The puzzle was invented by the French mathematician Edouard Lucas in 1883. There is a legend about a Hindu temple whose priests were constantly engaged in moving a set of 64 discs according to the rules of the Tower of Hanoi puzzle. According to the legend, the world would end when the priests finished their work. The puzzle is therefore also known as the Tower of Brahma puzzle. It is not clear whether Lucas invented this legend or was inspired by it. (source Wikipedia &lt;http://en.wikipedia.org/wiki/Tower_of_hanoi&gt;)"
 msgstr ""
+"Tornet i Hanoi är ett matematiskt problem som också finns i skepnad som spel eller patiens.\n"
+"\n"
+"Problemet/spelet består av tre vertikala pinnar fästa på en platta. På den vänstra pinnen sitter n stycken platta cirkulära skivor med hål i. Dessa skivor är olika stora. De är sorterade i storleksordning med den största underst. Det går ut på att flytta över hela stapeln till högra pinnen likadant sorterad. Mellanpinnen är bara hjälppinne. Varje drag består i att flytta en skiva till en annan pinne med den restriktionen att man får inte lägga en större skiva på en mindre. På en tom pinne får man lägga vilken skiva som helst. Problemet är lösbart oavsett värdet på n (positivt heltal).\n"
+"\n"
+"Den optimala lösningen (dvs minsta möjliga antalet drag) med n stycken skivor är 2n - 1 drag. Denna formel kan härledas med hjälp av rekursion. Det finns ingen känd formel för minsta möjliga antalet drag om man generaliserar spelet till att innefatta godtyckligt antal (≥3) pinnar.\n"
+"(källa Wikipedia &lt;http://sv.wikipedia.org/wiki/Tornen_i_Hanoi&gt;)"
 
 #: ../boards/hexagon.xml.in.h:1
 msgid "Find the strawberry by clicking on the blue fields"
@@ -2043,7 +2052,7 @@ msgstr "Försök att hitta jordgubben under de blåa fälten. Fälten blir röda
 
 #: ../boards/hexagon.xml.in.h:5
 msgid "hexagon"
-msgstr "hexagon"
+msgstr "Hexagon"
 
 #: ../boards/imageid.xml.in.h:1
 msgid "Click on the word corresponding to the printed image."
@@ -2722,7 +2731,7 @@ msgstr "Gå till matematiska minnesaktiviteter mot Tux"
 #: ../boards/memory_sound.xml.in.h:1
 #: ../boards/memory_sound_tux.xml.in.h:1
 msgid "A set of violinist Tux is shown. Each Tux has an associated sound, and each sound has a twin exactly the same. Click on a Tux to see its hidden sound, and try to match the twins. You can only activate two Tux at once, so you need to remember where a sound is, while you listen to its twin. When you turn over the twins, they both disappear."
-msgstr ""
+msgstr "Ett antal av violinisten Tux visas. Varje Tux har ett ljud associerat med sig och varje ljud har ett exakt ljud någon annanstans. Klicka på en Tux för att se vilket ljud som döljer sig och försök att hitta det matchande ljudet. Du kan endast aktivera två Tux åt gången, så du måste komma ihåg var ljudet finns någonstans när du lyssnar på det. När du vänder två av samma ljud kommer de att försvinna."
 
 #: ../boards/memory_sound.xml.in.h:2
 msgid "Audio memory game"
@@ -2761,7 +2770,7 @@ msgstr "Spela minnesspel med bilder mot Tux"
 
 #: ../boards/memory_tux.xml.in.h:5
 msgid "You can see a set of cards that all look the same. Each card has a picture on the other side, and each picture has a twin somewhere in the set. You can only turn over two cards at once, so you need to remember where the pictures are until you can find the twin. When you turn over twins, they disappear! You take turns with Tux, and to win the game, you have to find more pairs of twins than he does."
-msgstr ""
+msgstr "Du kan se en uppsättning kort som alla ser likadana ut. Varje kort har en bild på den andra sidan och varje bild har en likadan bild någon annanstans. Du kan endast vända på två kort samtidigt så du måste komma ihåg var bilderna är tills du har hittat den andra liknande bilden. När du vänder på två likadana kort kommer de att försvinna! Du spelar i omgångar mot Tux, och för att vinna spelet måste du hitta fler likadana par än vad han gör."
 
 #: ../boards/menu.xml.in.h:1
 msgid ""
@@ -3008,7 +3017,7 @@ msgstr "Du måste köpa olika objekt och betala jämt. Vid högre nivåer visas 
 
 #: ../boards/money_cents.xml.in.h:4
 msgid "Practice money usage including cents"
-msgstr "Träna att använda pengar inklusive cent"
+msgstr "Träna att använda pengar inklusive eurocent"
 
 #: ../boards/mosaic.xml.in.h:1
 msgid "Rebuild the mosaic"
@@ -3333,7 +3342,7 @@ msgstr "Balansera vågarna"
 
 #: ../boards/scalesboard.xml.in.h:2
 msgid "Drag and Drop masses to balance the scales"
-msgstr "Dra och släpp massor för att balansera skalorna"
+msgstr "Dra och släpp vikter för att balansera vågen"
 
 #: ../boards/scalesboard.xml.in.h:3
 msgid "Mental calculation, arithmetic equality"
@@ -3480,7 +3489,7 @@ msgstr "Symboler måste vara unika i en rad, i en kolumn och (om angivet) varje 
 
 #: ../boards/sudoku.xml.in.h:5
 msgid "The aim of the puzzle is to enter a symbol or numeral from 1 through 9 in each cell of a grid, most frequently a 9x9 grid made up of 3x3 subgrids (called 'regions'), starting with various symbols or numerals given in some cells (the 'givens'). Each row, column and region must contain only one instance of each symbol or numeral (Source &lt;http://en.wikipedia.org/wiki/Sudoku&gt;)."
-msgstr ""
+msgstr "Målet med pusslet är att ange en symbol eller en siffra från 1 till 9 i varje cell i rutnätet, oftast ett 9x9 stort rutnät uppbyggt av 3x3 stora underrutnät (kallade \"regioner\"), och startar med olika symboler eller siffror angivna i några av cellerna (de så kallade \"givens\"). Varje rad, kolumn och region får endast innehåll en förekomst av varje symbol eller siffra (Källa &lt;http://sv.wikipedia.org/wiki/Sudoku&gt;)."
 
 #: ../boards/superbrain.xml.in.h:1
 msgid "Click on the items until you find what you think is the correct answer. Then, click on the OK button in the control bar. In the lower levels, Tux gives you an indication if you found a hiding place by marking the item with a black box. You can use the right mouse button to flip the colors in the opposite order."
@@ -3516,7 +3525,7 @@ msgstr ""
 
 #: ../boards/tangram.xml.in.h:9
 msgid "Select the tangram to form. Move a piece by dragging it. Right-click on it to create a symmetrical item. Select an item and drag around it to show the rotation you want. Once you've shown what shape you want, the computer will create it. If you need help, click on the shape button, and the border of the shape will be drawn."
-msgstr ""
+msgstr "Välj det tangram du vill skapa. Flytta en del genom att dra den. Högerklicka på den för att skapa ett symmetriskt objekt. Välj ett objekt och dra runt det för att visa roteringen som du vill ha. När du har visat vilken figur du vill ha kommer datorn att skapa den. Om du behöver hjälp kan du klicka på figurknappen och konturen för figuren kommer att ritas ut."
 
 #: ../boards/tangram.xml.in.h:10
 msgid "The objective is to form a given shape with seven pieces"
@@ -3894,12 +3903,12 @@ msgstr "Bygg ett liknande torn i det lediga utrymmet precis som den du ser på h
 
 #: ../src/boards/hanoi_real.c:71
 msgid "Tower of Hanoi"
-msgstr "Hanois torn"
+msgstr "Tornet i Hanoi"
 
 #: ../src/boards/hanoi_real.c:276
 #: ../src/boards/hanoi_real.c:287
 msgid "Move the entire stack to the right peg, one disc at a time"
-msgstr ""
+msgstr "Flytta alla ringar till den högra plinten, en skiva åt gången"
 
 #: ../src/boards/imageid.c:103
 #: ../src/boards/missingletter.c:101
@@ -4806,7 +4815,7 @@ msgstr "Vikt = %s"
 
 #: ../src/boards/scale.c:713
 msgid "Take care, you can drop masses on both sides of the scale."
-msgstr "Var försiktig, du kan släppa massor på båda sidorna av vågen."
+msgstr "Var försiktig, du kan släppa vikter på båda sidor av vågen."
 
 #: ../src/boards/target.c:280
 #: ../src/boards/target.c:545
