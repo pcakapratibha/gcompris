@@ -974,7 +974,6 @@ void gc_fullscreen_set(gboolean state)
 #ifdef XF86_VIDMODE
       if(!properties->noxf86vm)
       {
-        gdk_window_set_override_redirect (window->window, 1);
         gdk_window_set_keep_above (window->window, 1);
         gdk_window_raise (window->window);
       }
@@ -988,7 +987,6 @@ void gc_fullscreen_set(gboolean state)
       if(!properties->noxf86vm)
       {
         gdk_window_set_keep_above (window->window, 0);
-        gdk_window_set_override_redirect (window->window, 0);
       }
 #endif
       /* The hide must be done at least for KDE */

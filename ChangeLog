@@ -1,3 +1,13 @@
+2007-09-22  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Added Breton sounds created by Alan Monfort free fr and Victoire.
+	* boards/voices/br/*
+
+	- MAJOR FIX: the focus was not given to GCompris when in fullscreen
+	  with xvidmode.
+	* src/gcompris/gcompris.c (gc_fullscreen_set):
+ 	  removed call to gdk_window_set_override_redirect
+
 2007-09-14  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Fixed web site generation, improved it's documentation
