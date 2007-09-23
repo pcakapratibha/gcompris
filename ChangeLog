@@ -1,5 +1,12 @@
 2007-09-23  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- Fixed to compile out of tree.
+
+	* src/boards/Makefile.am:
+	* src/gcompris/Makefile.am:
+
+2007-09-23  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- MAJOR FIX by Hans de Goede: the focus IS now given to GCompris when in fullscreen
 	  with xvidmode.
 	* src/gcompris/gcompris.c: (gc_fullscreen_set), (main):
