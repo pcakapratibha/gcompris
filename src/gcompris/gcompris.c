@@ -974,8 +974,10 @@ void gc_fullscreen_set(gboolean state)
 #ifdef XF86_VIDMODE
       if(!properties->noxf86vm)
       {
+	gdk_window_set_override_redirect (window->window, 1);
         gdk_window_set_keep_above (window->window, 1);
         gdk_window_raise (window->window);
+	gdk_window_focus (window->window, GDK_CURRENT_TIME);
       }
       else
 #endif
@@ -987,6 +989,7 @@ void gc_fullscreen_set(gboolean state)
       if(!properties->noxf86vm)
       {
         gdk_window_set_keep_above (window->window, 0);
+	gdk_window_set_override_redirect (window->window, 0);
       }
 #endif
       /* The hide must be done at least for KDE */
@@ -1882,10 +1885,10 @@ main (int argc, char *argv[])
 
   setup_window ();
 
+  gtk_widget_show_all (window);
+
   if (properties->fullscreen)
     gc_fullscreen_set(properties->fullscreen);
-
-  gtk_widget_show_all (window);
 
   /* If a specific activity is selected, skeep the intro music */
   if(!popt_root_menu)
