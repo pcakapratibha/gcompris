@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-16 21:26+0200\n"
-"PO-Revision-Date: 2007-09-17 02:06+0100\n"
+"POT-Creation-Date: 2007-09-24 08:58+0200\n"
+"PO-Revision-Date: 2007-09-24 08:59+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1860,6 +1860,10 @@ msgstr "Östra distrikten i Turkiet"
 msgid "Counties of Norway"
 msgstr "Norges kommuner"
 
+#: ../boards/geography_country/board7_0.xml.in.h:1
+msgid "Counties of Brazil"
+msgstr "Brasiliens kommuner"
+
 #: ../boards/geometry.xml.in.h:1
 msgid "Geometry"
 msgstr "Geometri"
@@ -1893,7 +1897,7 @@ msgstr "Talätare för lika tal"
 
 #: ../boards/gnumch-equality.xml.in.h:2
 msgid "Guide the Number Muncher to the expressions that equal the number at the top of the screen."
-msgstr "Guida talätaren till uttrycken som är lika det tal som visas på övre delen av skärmen."
+msgstr "Guida Talätaren till uttrycken som är lika det tal som visas på övre delen av skärmen."
 
 #: ../boards/gnumch-equality.xml.in.h:3
 msgid "Practice addition, multiplication, division and subtraction."
@@ -1910,7 +1914,7 @@ msgstr "Talätare för faktorer"
 
 #: ../boards/gnumch-factors.xml.in.h:2
 msgid "Guide the Number Muncher to all the factors of the number at the top of the screen."
-msgstr "Guida talätaren till alla faktorerna för talet på övre delen av skärmen."
+msgstr "Guida Talätaren till alla faktorerna för talet på övre delen av skärmen."
 
 #: ../boards/gnumch-factors.xml.in.h:3
 msgid "Learn about factors and multiples."
@@ -1922,7 +1926,7 @@ msgstr "Faktorerna för ett tal är talen som man kan dividera det talet med jä
 
 #: ../boards/gnumch-inequality.xml.in.h:1
 msgid "Guide the Number Muncher to the all the expressions that do not equal the number at the top of the screen."
-msgstr "Guida talätaren till alla uttryck som inte är lika med talet på övre delen av skärmen."
+msgstr "Guida Talätaren till alla uttryck som inte är lika med talet på övre delen av skärmen."
 
 #: ../boards/gnumch-inequality.xml.in.h:2
 msgid "Inequality Number Munchers"
@@ -1934,7 +1938,7 @@ msgstr "Träna på addition, subtraktion, multiplikation och division."
 
 #: ../boards/gnumch-multiples.xml.in.h:1
 msgid "Guide the Number Muncher to all the multiples of the number at the top of the screen."
-msgstr "Guida talätaren till alla multipler för talet på övre delen av skärmen."
+msgstr "Guida Talätaren till alla multipler för talet på övre delen av skärmen."
 
 #: ../boards/gnumch-multiples.xml.in.h:2
 msgid "Learn about multiples and factors."
@@ -1950,7 +1954,7 @@ msgstr "Multipler för ett tal är alla tal som är lika originaltalet gånger e
 
 #: ../boards/gnumch-primes.xml.in.h:1
 msgid "Guide the Number Muncher to all the prime numbers."
-msgstr "Guida talätaren till alla primtal."
+msgstr "Guida Talätaren till alla primtal."
 
 #: ../boards/gnumch-primes.xml.in.h:2
 msgid "Learn about prime numbers"
@@ -5454,17 +5458,17 @@ msgstr ""
 "Linux-versionen har inte denna begränsning. Observera att GCompris utvecklas för att frigöra skolor ifrån monopolistiska programvarutillverkare. Om du också tycker att vi skall undervisa frihet till barn, överväg att använda GNU/Linux. Få mer information hos FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1444
+#: ../src/gcompris/gcompris.c:1445
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr "GCompris kommer inte att starta därför att låsningsfilen är mindre än %d sekunder gammal.\n"
 
-#: ../src/gcompris/gcompris.c:1446
+#: ../src/gcompris/gcompris.c:1447
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Låsningsfilen är: %s\n"
 
-#: ../src/gcompris/gcompris.c:1574
+#: ../src/gcompris/gcompris.c:1575
 #, c-format
 msgid ""
 "GCompris\n"
@@ -5478,17 +5482,17 @@ msgstr ""
 "Mer information på http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1658
+#: ../src/gcompris/gcompris.c:1659
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Använd -l för att komma åt en aktivitet direkt.\n"
 
-#: ../src/gcompris/gcompris.c:1659
+#: ../src/gcompris/gcompris.c:1660
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Listan på tillgängliga aktiviteter är :\n"
 
-#: ../src/gcompris/gcompris.c:1846
+#: ../src/gcompris/gcompris.c:1847
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Listan på tillgängliga profiler är:\n"
