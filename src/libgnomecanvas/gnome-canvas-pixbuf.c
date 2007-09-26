@@ -1000,7 +1000,6 @@ gnome_canvas_pixbuf_point (GnomeCanvasItem *item, double x, double y, int cx, in
 	ArtPoint c, p;
 	int px, py;
 	double no_hit;
-	guchar *src;
 	GdkPixbuf *pixbuf;
 
 	gcp = GNOME_CANVAS_PIXBUF (item);
@@ -1031,14 +1030,7 @@ gnome_canvas_pixbuf_point (GnomeCanvasItem *item, double x, double y, int cx, in
 	if (!gdk_pixbuf_get_has_alpha (pixbuf))
 		return 0.0;
 
-	src = gdk_pixbuf_get_pixels (pixbuf) +
-	    py * gdk_pixbuf_get_rowstride (pixbuf) +
-	    px * gdk_pixbuf_get_n_channels (pixbuf);
-
-	if (src[3] < 128)
-		return no_hit;
-	else
-		return 0.0;
+	return 0.0;
 }
 
 
