@@ -1,5 +1,15 @@
 2007-09-24  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	-  Major little change. Now all the images get the focus went the mouse enter it's bounding
+	   box and not when it's on a non transparent area.
+	   It's sometimes hard to click on images when they have transparent area in them.
+	   Please make a test to check there are no side effects to this change.
+
+	* src/libgnomecanvas/gnome-canvas-pixbuf.c(gnome_canvas_pixbuf_point): commit 3048
+
+
+2007-09-24  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- Created the Brazil map by Elisa de Castro Guerra (commit 3042)
 
 	* boards/geography_country/Makefile.am:
