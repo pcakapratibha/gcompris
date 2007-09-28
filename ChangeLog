@@ -1,3 +1,13 @@
+2007-09-29  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* tools/gcompris_shapegame.py: Improved to include a subdir
+	  and the level/sublevel
+
+	- Added the coutry borders and colored 2 white country
+	* boards/geography_country/brazil/Rondonia.png
+	* boards/geography_country/brazil/Rio_Grande_do_Sul.png
+	* boards/geography_country/brazil/background.png
+
 2007-09-28  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* docs/gcompris2spip.pl: added greek translation for the web site.

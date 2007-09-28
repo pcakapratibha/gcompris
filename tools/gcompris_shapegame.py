@@ -21,20 +21,23 @@
 #
 # Require: gimp-python
 #
-# To install, copy this script in ~/.gimp-2.2/plug-ins/ and set it executable
+# To install, copy this script in ~/.gimp-2.2/plug-ins/ (and make it is executable)
 # cp gcompris_shapegame.py ~/.gimp-2.2/plug-ins/
 # chmod +x ~/.gimp-2.2/plug-ins/gcompris_shapegame.py
 #
 #######################################################################
 #
-# To use Puzzle :
+# To create a Puzzle:
 # 1. Open an image in Gimp
-# 2. Menu Python-Fu -> Gcompris -> Puzzle
-# 3. Choice number of tile horizontaly, verticaly and type of puzzle
+# 2. Save the image
+# 3. Menu Python-Fu -> GCompris -> Puzzle
+# 4. Choice number of tile horizontaly, verticaly and type of puzzle
+# 5. The resulting data are saved under the location of the original image.
+# 6. Move the data under /usr/share/gcompris/boards/<paintings>
 #
 #######################################################################
 #
-# To use Geography :
+# To create a Geography map:
 # 1. Open a map in Gimp
 # 2. Save the image in Gimp Format (.xcf) to preserve channels
 # 3. For each region:
@@ -46,6 +49,8 @@
 #   a. Choice output directory and title (default based on image name)
 #   b. Set the border size between regions (depend on the original map)
 #   c. Choice if borders between region should be show
+# 5. The resulting data are saved under the location of the original image.
+# 6. Move the data under /usr/share/gcompris/boards/<geography>
 #
 # We can change color of a region by opening region file in gimp,
 # and fill it by a new color.
@@ -61,6 +66,10 @@ def gcompris_init(img):
         gimp.message("Error : There too many layers")
         return False
 
+    if not img.filename:
+        gimp.message("Error : save the image first (in Gimp .xcf format)")
+        return False
+
     # resize the image
     ratio = max(img.height / 500.0, img.width / 800.0)
     if ratio > 1:
@@ -68,7 +77,9 @@ def gcompris_init(img):
         pdb.gimp_image_scale(img, new_w, new_h)
     return True
 
-def gcompris_puzzle(img, sdrawable, x, y, dossier, title, puzzle_type):
+def gcompris_puzzle(img, sdrawable, x, y, activity_name,
+                    dossier, title, puzzle_type,
+                    level, sublevel):
     """ Create file png and board.xml from current image """
 
     def puzzle_layer(img, ptype, x, y):
@@ -93,6 +104,10 @@ def gcompris_puzzle(img, sdrawable, x, y, dossier, title, puzzle_type):
 
     if not gcompris_init(img):
         return
+
+    # Default values
+    if(not activity_name):
+        activity_name = "paintings"
 
     # Init
     bg_layer = img.active_layer
@@ -121,29 +136,39 @@ def gcompris_puzzle(img, sdrawable, x, y, dossier, title, puzzle_type):
     d_title["<name>"] = title
     shapebg = dict(name=1, pixmapfile="skin:gcompris-shapelabel.png",
         type="SHAPE_BACKGROUND", x=405, y=495, position=0)
-    gcompris_layer_to_board(layerlist, "paintings", dossier, d_title, shapebg, None)
+
+    gcompris_layer_to_board(layerlist, activity_name, dossier, d_title, shapebg, None,
+                            level, sublevel)
 
 register(
     "gcompris_puzzle",
-    "Make Puzzle for gcompris ",
-    "Make Puzzle for gcompris ",
+    "Make Puzzle for GCompris ",
+    "Make Puzzle for GCompris ",
     "Miguel de Izarra",
     "Miguel de Izarra",
     "2006",
-    "<Image>/Python-Fu/Gcompris/Puzzle",
+    "<Image>/Python-Fu/GCompris/Puzzle",
     "RGB*, GRAY*",
     [
         (PF_SPINNER, "x", "Number of tiles across", 3, (2, 9, 1) ),
         (PF_SPINNER, "y", "Number of tiles down", 3, (2, 9, 1) ),
-        (PF_STRING, "dossier", "relative output directory (default = image name)", ""),
+        (PF_STRING, "activity_name", "Name of the activity (default = painting)", ""),
+        (PF_STRING, "dossier", "Relative output directory (default = image name)", ""),
         (PF_STRING, "title", "GCompris puzzle title", ""),
-        (PF_SPINNER, "type", "Type of puzzle (0 Normal 1 Rectangle)", 0, (0, 1, 1) )
+        (PF_SPINNER, "type", "Type of puzzle (0 Normal 1 Rectangle)", 0, (0, 1, 1) ),
+        (PF_SPINNER, "level", "The level in the activity", 1, (1, 9, 1) ),
+        (PF_SPINNER, "sublevel", "The sub level in the activity", 1, (1, 20, 1) )
     ],
     [],
     gcompris_puzzle)
 
-def gcompris_geography(img, sdrawable, dossier, title, bordersize, keepLimit):
+def gcompris_geography(img, sdrawable, activity_name,
+                       dossier, title, bordersize, keepLimit, level, sublevel):
     """Create file for the geography activity from the current image """
+    # Default values
+    if(not activity_name):
+        activity_name = "geography"
+
     if not gcompris_init(img):
         return
     if len(img.channels) == 0:
@@ -204,7 +229,7 @@ def gcompris_geography(img, sdrawable, dossier, title, bordersize, keepLimit):
     gimp.set_foreground(58, 68, 219)
     gimp.set_background(94, 146, 229)
     pdb.gimp_edit_blend(layer_map, 0, 0, 0, 50, 0, 0, False, False, 0, 0,
-        True, 0, 0, img.width, img.height)
+                        True, 0, 0, img.width, img.height)
 
     # Water 2
     pdb.gimp_selection_load(earth)
@@ -213,7 +238,7 @@ def gcompris_geography(img, sdrawable, dossier, title, bordersize, keepLimit):
     gimp.set_foreground(110, 123, 215)
     gimp.set_background(137, 173, 225)
     pdb.gimp_edit_blend(layer_map, 0, 0, 0, 25, 0, 0, False, False, 0, 0,
-        True, 0, 0, img.width, img.height)
+                        True, 0, 0, img.width, img.height)
 
     # Remove tmp channel
     img.remove_channel(earth)
@@ -224,13 +249,14 @@ def gcompris_geography(img, sdrawable, dossier, title, bordersize, keepLimit):
     pdb.gimp_selection_none(img)
 
     shape = dict()
-    shape["sound"] = os.path.join("sounds", "$LOCALE", "geography", dossier, "%n.png")
+    shape["sound"] = os.path.join("sounds", "$LOCALE", "geography", dossier, "%n.ogg")
     shape["<tooltip>"] = "%n"
     title_d = dict(x=600, y=495, justification="GTK_JUSTIFY_CENTER")
     title_d["<name>"] = title
 
     layer_map.name = "background"
-    gcompris_layer_to_board(layerlist, "geography", dossier, title_d, layer_map, shape)
+    gcompris_layer_to_board(layerlist, activity_name, dossier, title_d, layer_map, shape,
+                            level, sublevel)
 
 register(
     "gcompris_geography",
@@ -239,26 +265,32 @@ register(
     "Miguel de Izarra",
     "Miguel de Izarra",
     "2006",
-    "<Image>/Python-Fu/Gcompris/Geography",
+    "<Image>/Python-Fu/GCompris/Geography",
     "RGB*, GRAY*",
     [
-        (PF_STRING, "dossier", "relative output directory (default = image name)", ""),
+        (PF_STRING, "activity_name", "Name of the activity (default = geography)", ""),
+        (PF_STRING, "dossier", "Relative output directory (default = image name)", ""),
         (PF_STRING, "title", "GCompris puzzle title", ""),
-        (PF_SPINNER, "bordersize", "the Size of border between country", 1, (1, 20, 1) ),
-        (PF_TOGGLE, "keepLimit", "Keep limit between country", False)
+        (PF_SPINNER, "bordersize", "The Size of border between country", 1, (1, 20, 1) ),
+        (PF_TOGGLE, "keepLimit", "Keep limit between country", False),
+        (PF_SPINNER, "level", "The level in the activity", 1, (1, 9, 1) ),
+        (PF_SPINNER, "sublevel", "The sub level in the activity", 1, (1, 20, 1) ),
     ],
     [],
     gcompris_geography)
 
-def gcompris_layer_to_board(layerlist, activity, subdir, title, background, shape):
+def gcompris_layer_to_board(layerlist, activity, subdir, title, background, shape,
+                            level, sublevel):
     """ Create png file and board.xml for gcompris
     layerlist : the list of layer to process
-    activity : gcompris activity name
-    subdir : sub directory in which png file and board.xml will be put
+    activity : gcompris activity name in which boardx_y.xml will be put
+    subdir : sub directory in which png files will be put
     title : a dictionnary with name and value of properties of element <title>
     background : a dictionnary with name and value of properties of the Shape Background
         or a background Layer
     shape : a dictonnary of extra properties of each shape. In values, "%n" replace the layer name / filename
+    level : The level in the activity
+    sublevel : The sub level in the activity
     """
     def realbasename(f):
         """Return the basename without extension"""
@@ -290,16 +322,16 @@ def gcompris_layer_to_board(layerlist, activity, subdir, title, background, shap
     filename = img.filename
     if not subdir:
         subdir = realbasename(img.filename)
-    out_dir = os.path.join(os.path.dirname(filename), subdir)
+    out_dir = os.path.join(os.path.dirname(filename), activity, subdir)
     if not os.path.isdir(out_dir):
         if os.path.exists(out_dir):
             os.remove(out_dir)
-        os.mkdir(out_dir)
+        os.makedirs(out_dir)
 
-    out_xml = os.path.join(out_dir, "board.xml")
+    out_xml = os.path.join(out_dir, "..", "board%d_%d.xml" % (level, sublevel))
     xml = file(out_xml, "w")
     xml.write("""<?xml version="1.0" encoding="UTF-8"?>
-<ShapeGame><!-- Created with GcomprisShapegame gimp script -->\n""")
+<ShapeGame><!-- Created with GComprisShapegame gimp script -->\n""")
 
     if title:
         xml.write(dict_to_str("title", title))
@@ -312,9 +344,10 @@ def gcompris_layer_to_board(layerlist, activity, subdir, title, background, shap
     deltax, deltay = (800-width)/2, (520-height)/2
 
     for tile_layer in layerlist:
-        tile_filename = tile_layer.name+".png"
+        tile_filename = tile_layer.name.lower().replace(' ', '_')+".png"
         tile_filename_long = os.path.join(out_dir, tile_filename)
-        pdb.file_png_save(img, tile_layer, tile_filename_long, tile_filename_long, 0, 0, 0, 0, 0, 0, 0)
+        pdb.file_png_save(img, tile_layer, tile_filename_long, tile_filename,
+                          0, 0, 0, 0, 0, 0, 0)
         if shape:
             shape_dict = dict(shape)
             for key, value in shape_dict.iteritems():
