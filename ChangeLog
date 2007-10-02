@@ -1,3 +1,15 @@
+2007-10-03  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- cleanup, removed useless references to cairo.
+
+	* boards/Makefile.am:
+	* configure.in:
+	* src/boards/Makefile.am:
+	* src/gcompris/Makefile.am:
+
+	- Fixed a missing column. Was not running anymore.
+	* docs/gcompris2spip.pl:
+
 2007-09-29  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* tools/gcompris_shapegame.py: Improved to include a subdir
