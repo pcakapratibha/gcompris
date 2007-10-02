@@ -49,234 +49,234 @@ use Data::Dumper;
 # Define some constants related to spip rubrique and section organisation
 # We do not detect which locale sections are. They are hardcoded here.
 my %sections = (
-		"am", 0,
-		"af", 0,
-		"ar", 176,
-		"ar_TN", 0,
-		"az", 0,
-		"bg", 0,
-		"br", 195,
-		"ca", 0,
-		"cs", 0,
-		"da", 37,
-		"de", 54,
-		"dz", 0,
-		"el", 222,
-		"en", 2,
-		"en_CA", 0,
-		"en_GB", 0,
-		"es", 40,
-		"et", 0,
-		"eu", 0,
-		"fi", 36,
-		"fr", 1,
-		"ga", 0,
-		"gl", 0,
-		"gu", 0,
-		"he", 0,
-		"hi", 0,
-		"hr", 0,
-		"hu", 121,
-		"id", 0,
-		"it", 60,
-		"ja", 0,
-		"ka", 0,
-		"ko", 0,
-		"lt", 0,
-		"mk", 0,
-		"ml", 0,
-		"mr", 0,
-		"ms", 0,
-		"nl", 92,
-		"nb", 107,
-		"nn", 38,
-		"ne", 0,
-                "oc", 0,
-		"pa", 0,
-		"pl", 125,
-		"pt", 28,
-		"pt_BR", 141,
-		"ro", 0,
-		"ru", 160,
-		"rw", 0,
-		"sk", 0,
-		"sl", 0,
-		"so", 172,
-		"sq", 0,
-		"sr", 0,
-		'sr@Latn', 0,
-		"sv", 208,
-		"ta", 154,
-		"th", 0,
-		"tr", 157,
-		"uk", 161,
-		"vi", 116,
-		"wa", 0,
-		"zh_CN", 0,
-		"zh_TW", 0,
-	       );
+    "am", 0,
+    "af", 0,
+    "ar", 176,
+    "ar_TN", 0,
+    "az", 0,
+    "bg", 0,
+    "br", 195,
+    "ca", 0,
+    "cs", 0,
+    "da", 37,
+    "de", 54,
+    "dz", 0,
+    "el", 222,
+    "en", 2,
+    "en_CA", 0,
+    "en_GB", 0,
+    "es", 40,
+    "et", 0,
+    "eu", 0,
+    "fi", 36,
+    "fr", 1,
+    "ga", 0,
+    "gl", 0,
+    "gu", 0,
+    "he", 0,
+    "hi", 0,
+    "hr", 0,
+    "hu", 121,
+    "id", 0,
+    "it", 60,
+    "ja", 0,
+    "ka", 0,
+    "ko", 0,
+    "lt", 0,
+    "mk", 0,
+    "ml", 0,
+    "mr", 0,
+    "ms", 0,
+    "nl", 92,
+    "nb", 107,
+    "nn", 38,
+    "ne", 0,
+    "oc", 0,
+    "pa", 0,
+    "pl", 125,
+    "pt", 28,
+    "pt_BR", 141,
+    "ro", 0,
+    "ru", 160,
+    "rw", 0,
+    "sk", 0,
+    "sl", 0,
+    "so", 172,
+    "sq", 0,
+    "sr", 0,
+    'sr@Latn', 0,
+    "sv", 208,
+    "ta", 154,
+    "th", 0,
+    "tr", 157,
+    "uk", 161,
+    "vi", 116,
+    "wa", 0,
+    "zh_CN", 0,
+    "zh_TW", 0,
+    );
 
 my %rubriques = (
-		 "am", 0,
-		 "af", 0,
-		 "ar", 177,
-		 "ar_TN", 0,
-		 "az", 0,
-		 "bg", 0,
-		 "br", 199,
-		 "ca", 0,
-		 "cs", 0,
-		 "da", 61,
-		 "de", 64,
-		 "dz", 0,
-		 "el", 223,
-		 "en", 12,
-		 "en_CA", 0,
-		 "en_GB", 0,
-		 "es", 47,
-		 "et", 0,
-		 "eu", 0,
-		 "fi", 73,
-		 "fr", 6,
-		 "ga", 0,
-		 "gl", 0,
-		 "gu", 0,
-		 "he", 0,
-		 "hi", 0,
-		 "hr", 0,
-		 "hu", 123,
-		 "id", 0,
-		 "it", 66,
-		 "ja", 0,
-		 "ka", 0,
-		 "ko", 0,
-		 "lt", 0,
-		 "mk", 0,
-		 "ml", 0,
-		 "mr", 0,
-		 "ms", 0,
-		 "nl", 93,
-		 "nb", 108,
-		 "nn", 69,
-		 "ne", 0,
-                 "oc", 0,
-		 "pa", 0,
-		 "pl", 134,
-		 "pt", 56,
-		 "pt_BR", 142,
-		 "ro", 0,
-		 "ru", 162,
-		 "rw", 0,
-		 "sk", 0,
-		 "sl", 0,
-		 "so", 173,
-		 "sq", 0,
-		 "sr", 0,
-		 'sr@Latn', 0,
-		 "sv", 213,
-		 "ta", 155,
-		 "th", 0,
-		 "tr", 158,
-		 "uk", 164,
-		 "vi", 117,
-		 "wa", 0,
-		 "zh_CN", 0,
-		 "zh_TW", 0,
-		);
+    "am", 0,
+    "af", 0,
+    "ar", 177,
+    "ar_TN", 0,
+    "az", 0,
+    "bg", 0,
+    "br", 199,
+    "ca", 0,
+    "cs", 0,
+    "da", 61,
+    "de", 64,
+    "dz", 0,
+    "el", 223,
+    "en", 12,
+    "en_CA", 0,
+    "en_GB", 0,
+    "es", 47,
+    "et", 0,
+    "eu", 0,
+    "fi", 73,
+    "fr", 6,
+    "ga", 0,
+    "gl", 0,
+    "gu", 0,
+    "he", 0,
+    "hi", 0,
+    "hr", 0,
+    "hu", 123,
+    "id", 0,
+    "it", 66,
+    "ja", 0,
+    "ka", 0,
+    "ko", 0,
+    "lt", 0,
+    "mk", 0,
+    "ml", 0,
+    "mr", 0,
+    "ms", 0,
+    "nl", 93,
+    "nb", 108,
+    "nn", 69,
+    "ne", 0,
+    "oc", 0,
+    "pa", 0,
+    "pl", 134,
+    "pt", 56,
+    "pt_BR", 142,
+    "ro", 0,
+    "ru", 162,
+    "rw", 0,
+    "sk", 0,
+    "sl", 0,
+    "so", 173,
+    "sq", 0,
+    "sr", 0,
+    'sr@Latn', 0,
+    "sv", 213,
+    "ta", 155,
+    "th", 0,
+    "tr", 158,
+    "uk", 164,
+    "vi", 117,
+    "wa", 0,
+    "zh_CN", 0,
+    "zh_TW", 0,
+    );
 
 
 my %rubriques_all = (
-		 "am", 0,
-		 "af", 0,
-		 "ar", 178,
-		 "ar_TN", 0,
-		 "az", 0,
-		 "bg", 0,
-		 "br", 200,
-		 "ca", 0,
-		 "cs", 0,
-		 "da", 62,
-		 "de", 65,
-		 "dz", 0,
-		 "el", 224,
-		 "en", 68,
-		 "en_CA", 0,
-		 "en_GB", 0,
-		 "es", 71,
-		 "et", 0,
-		 "eu", 0,
-		 "fi", 74,
-		 "fr", 63,
-		 "ga", 0,
-		 "gu", 0,
-		 "gl", 0,
-		 "he", 0,
-		 "hi", 0,
-		 "hr", 0,
-		 "hu", 124,
-		 "id", 0,
-		 "it", 67,
-		 "ja", 0,
-		 "ka", 0,
-		 "ko", 0,
-		 "lt", 0,
-		 "mk", 0,
-		 "ml", 0,
-		 "mr", 0,
-		 "ms", 0,
-		 "nl", 94,
-		 "nb", 109,
-		 "nn", 70,
-		 "ne", 0,
-                 "oc", 0,
-		 "pa", 0,
-		 "pl", 140,
-		 "pt", 72,
-		 "pt_BR", 143,
-		 "ro", 0,
-		 "ru", 163,
-		 "rw", 0,
-		 "sk", 0,
-		 "sl", 0,
-		 "so", 174,
-		 "sq", 0,
-		 "sr", 0,
-		 'sr@Latn', 0,
-		 "sv", 220,
-		 "ta", 156,
-		 "th", 0,
-		 "tr", 159,
-		 "uk", 165,
-		 "vi", 118,
-		 "wa", 0,
-		 "zh_CN", 0,
-		 "zh_TW", 0,
-		);
+    "am", 0,
+    "af", 0,
+    "ar", 178,
+    "ar_TN", 0,
+    "az", 0,
+    "bg", 0,
+    "br", 200,
+    "ca", 0,
+    "cs", 0,
+    "da", 62,
+    "de", 65,
+    "dz", 0,
+    "el", 224,
+    "en", 68,
+    "en_CA", 0,
+    "en_GB", 0,
+    "es", 71,
+    "et", 0,
+    "eu", 0,
+    "fi", 74,
+    "fr", 63,
+    "ga", 0,
+    "gu", 0,
+    "gl", 0,
+    "he", 0,
+    "hi", 0,
+    "hr", 0,
+    "hu", 124,
+    "id", 0,
+    "it", 67,
+    "ja", 0,
+    "ka", 0,
+    "ko", 0,
+    "lt", 0,
+    "mk", 0,
+    "ml", 0,
+    "mr", 0,
+    "ms", 0,
+    "nl", 94,
+    "nb", 109,
+    "nn", 70,
+    "ne", 0,
+    "oc", 0,
+    "pa", 0,
+    "pl", 140,
+    "pt", 72,
+    "pt_BR", 143,
+    "ro", 0,
+    "ru", 163,
+    "rw", 0,
+    "sk", 0,
+    "sl", 0,
+    "so", 174,
+    "sq", 0,
+    "sr", 0,
+    'sr@Latn', 0,
+    "sv", 220,
+    "ta", 156,
+    "th", 0,
+    "tr", 159,
+    "uk", 165,
+    "vi", 118,
+    "wa", 0,
+    "zh_CN", 0,
+    "zh_TW", 0,
+    );
 #-------------------------------------------------------------------------------
 sub spip_cleanup {
-  my $output = shift;
+    my $output = shift;
 
-  # Spip doesn't like shortucted tags like <ps/>. But xsltproc does this by default
-  # and I dod not find a way to avoid that.
-  # I put __REMOVEME__ in empty tags and I remove it there
-  $output =~ s/__REMOVEME__//g;
-  $output =~ s/__NBSP__/&nbsp;/g;
+    # Spip doesn't like shortucted tags like <ps/>. But xsltproc does this by default
+    # and I dod not find a way to avoid that.
+    # I put __REMOVEME__ in empty tags and I remove it there
+    $output =~ s/__REMOVEME__//g;
+    $output =~ s/__NBSP__/&nbsp;/g;
 
-  # We need to html backquote html tags for spip
-  # I put in uppercase all html tags
-  my @html_tag = qw/HTML IMG A BR DIV P/;
-  foreach my $tag (@html_tag) {
-    $output =~ s/<$tag/&lt;$tag/g;
-    $output =~ s/<\/$tag/&lt;\/$tag/g;
-  }
+    # We need to html backquote html tags for spip
+    # I put in uppercase all html tags
+    my @html_tag = qw/HTML IMG A BR DIV P/;
+    foreach my $tag (@html_tag) {
+	$output =~ s/<$tag/&lt;$tag/g;
+	$output =~ s/<\/$tag/&lt;\/$tag/g;
+    }
 
-  # Fix the tag <lien:auteur> because wa cannot use it in xslt name space is not defined
-  $output =~ s/lien_auteur/lien:auteur/g;
+    # Fix the tag <lien:auteur> because wa cannot use it in xslt name space is not defined
+    $output =~ s/lien_auteur/lien:auteur/g;
 
-  # Remove eMail adresses
-  $output =~ s/[a-zA-Z0-9\_\-\.\(]+@[a-zA-Z0-9\_\-\.\)]+//g;
+    # Remove eMail adresses
+    $output =~ s/[a-zA-Z0-9\_\-\.\(]+@[a-zA-Z0-9\_\-\.\)]+//g;
 
-  return $output;
+    return $output;
 }
 
 
@@ -298,12 +298,12 @@ push @ALL_LINGUAS, "en";	# Add english, it's not in the po list
 # Check we have all we need for each defined lang
 my $error = 0;
 foreach my $lang (@ALL_LINGUAS) {
-  if(! defined $sections{$lang} ||
-     ! defined $rubriques{$lang} ||
-     ! defined $rubriques_all{$lang} ) {
-    print "ERROR: Edit this script and add a lang definition for lang '$lang' in \%sections \%rubriques \%rubriques_all\n";
-    $error = 1;
-  }
+    if(! defined $sections{$lang} ||
+       ! defined $rubriques{$lang} ||
+       ! defined $rubriques_all{$lang} ) {
+	print "ERROR: Edit this script and add a lang definition for lang '$lang' in \%sections \%rubriques \%rubriques_all\n";
+	$error = 1;
+    }
 }
 
 exit 1 if $error;
@@ -340,53 +340,53 @@ print OUTPUT "<GComprisBoards>\n";
 
 foreach my $board (@files) {
 
-  print "Processing $board\n";
-  my $file = "$boards_dir/$board";
-  open(BOARD, "<$file");
+    print "Processing $board\n";
+    my $file = "$boards_dir/$board";
+    open(BOARD, "<$file");
 
-  my $board_content;
-  my $board_section;
-  my $board_name;
-  my $board_type;
-  read(BOARD, $board_content, 165535);
+    my $board_content;
+    my $board_section;
+    my $board_name;
+    my $board_type;
+    read(BOARD, $board_content, 165535);
 
-  $board_section = ($board_content =~ /section=\"([a-zA-Z\/\._]+)\"/)[0];
-  $board_name    = ($board_content =~ /name=\"([a-zA-Z\/\.\:_]+)\"/)[0];
-  $board_type    = ($board_content =~ /type=\"([a-zA-Z\/\.\:_]+)\"/)[0];
+    $board_section = ($board_content =~ /section=\"([a-zA-Z\/\._]+)\"/)[0];
+    $board_name    = ($board_content =~ /name=\"([a-zA-Z\/\.\:_]+)\"/)[0];
+    $board_type    = ($board_content =~ /type=\"([a-zA-Z\/\.\:_]+)\"/)[0];
 
-  if($board_type eq "menu" and $board_name ne "root") {
-    print "   This is a menu\n";
-    my @section;
-    if( $board_section ne "/") {
-      push(@section, "$board_section/$board_name");
-    } else {
-      push(@section, "/$board_name");
+    if($board_type eq "menu" and $board_name ne "root") {
+	print "   This is a menu\n";
+	my @section;
+	if( $board_section ne "/") {
+	    push(@section, "$board_section/$board_name");
+	} else {
+	    push(@section, "/$board_name");
+	}
+	push(@section, $board_name);
+
+	print "   Section=$board_section\n";
+	print "      Type=$board_type\n";
+	print "      Name=$board_name\n";
+
+	if($file !~ /($board_name).xml/) {
+	    print "ERROR: The board file '$file' does not match it's internal name field ('$board_name')\n";
+	    exit 1;
+	}
+
+	push(@sections, \@section);
     }
-    push(@section, $board_name);
 
-    print "   Section=$board_section\n";
-    print "      Type=$board_type\n";
-    print "      Name=$board_name\n";
-
-    if($file !~ /($board_name).xml/) {
-      print "ERROR: The board file '$file' does not match it's internal name field ('$board_name')\n";
-      exit 1;
+    # Skip experimental activities
+    if($board_content =~ /section=\"\/experimental\"/) {
+	goto done;
     }
+    # Some filtering
+    $board_content =~ s/<\?xml version="1.0" encoding="UTF-8"\?>//g;
 
-    push(@sections, \@section);
-  }
+    print OUTPUT $board_content;
 
-  # Skip experimental activities
-  if($board_content =~ /section=\"\/experimental\"/) {
-    goto done;
-  }
-  # Some filtering
-  $board_content =~ s/<\?xml version="1.0" encoding="UTF-8"\?>//g;
-
-  print OUTPUT $board_content;
-
- done:
-  close(BOARD);
+  done:
+    close(BOARD);
 }
 print OUTPUT "\n</GComprisBoards>\n";
 
@@ -394,58 +394,58 @@ close (OUTPUT);
 
 # Loop over each menu entry
 foreach my $onesection (@sections) {
-  my @deref = @{$onesection};
-  my $section = $deref[0];
-  my $name    = $deref[1];
-  print "\nProcessing section=$section name=$name\nLang:";
+    my @deref = @{$onesection};
+    my $section = $deref[0];
+    my $name    = $deref[1];
+    print "\nProcessing section=$section name=$name\nLang:";
 
-  # The first article is the reference article
-  my $traduction_id = $article_id;
+    # The first article is the reference article
+    my $traduction_id = $article_id;
 
-  # 2nd loop over each language
-  foreach my $lang (@ALL_LINGUAS) {
+    # 2nd loop over each language
+    foreach my $lang (@ALL_LINGUAS) {
 
-    my $xslfile = "spip_menuboard.xsl";
+	my $xslfile = "spip_menuboard.xsl";
 
-    $article_id++;
+	$article_id++;
 
-    print "$lang ";
+	print "$lang ";
 
-    # Remove @ from some langage to avoid non URL char
-    my $langstrip = $lang;
-    $langstrip =~ s/\@/_/g;
+	# Remove @ from some langage to avoid non URL char
+	my $langstrip = $lang;
+	$langstrip =~ s/\@/_/g;
 
-    my $cmd = "xsltproc --stringparam language $lang --stringparam langstrip $langstrip --stringparam date \"${date}\" --stringparam article_id ${article_id} --stringparam rubrique_id $rubriques{$lang} --stringparam section $section --stringparam name $name --stringparam section_id $sections{$lang} --stringparam traduction_id ${traduction_id} $xslfile $all_boards_file";
-    my $output = `$cmd`;
+	my $cmd = "xsltproc --stringparam language $lang --stringparam langstrip $langstrip --stringparam date \"${date}\" --stringparam article_id ${article_id} --stringparam rubrique_id $rubriques{$lang} --stringparam section $section --stringparam name $name --stringparam section_id $sections{$lang} --stringparam traduction_id ${traduction_id} $xslfile $all_boards_file";
+	my $output = `$cmd`;
 
-    # Uncomment to debug
-    #print "$cmd\n";
+	# Uncomment to debug
+	#print "$cmd\n";
 
-    if ($?>>8) {
-      print "#\n";
-      print "#\n";
-      print "#\n";
-      print "An error as been encountered in xslt processing: processing is left uncomplete\n";
-      print "ERROR on section $section lang $lang#\n";
-      print "#\n";
-      print "#\n";
-      exit 1;
+	if ($?>>8) {
+	    print "#\n";
+	    print "#\n";
+	    print "#\n";
+	    print "An error as been encountered in xslt processing: processing is left uncomplete\n";
+	    print "ERROR on section $section lang $lang#\n";
+	    print "#\n";
+	    print "#\n";
+	    exit 1;
 
-    } else {
+	} else {
 
-      # Make some cleanup where needed
-      # ------------------------------
+	    # Make some cleanup where needed
+	    # ------------------------------
 
-      $output = spip_cleanup($output);
+	    $output = spip_cleanup($output);
 
-      open(OUTPUT, ">>$tmp_file")
-	or die "Can't open: $!";
+	    open(OUTPUT, ">>$tmp_file")
+		or die "Can't open: $!";
 
-      print OUTPUT $output . "\n";
+	    print OUTPUT $output . "\n";
 
-      close (OUTPUT);
+	    close (OUTPUT);
+	}
     }
-  }
 }
 
 #-------------------------------------------------------------------------------
@@ -456,66 +456,66 @@ my %articles;
 
 foreach my $board (@files) {
 
-  print "\nProcessing $board\nLang:";
+    print "\nProcessing $board\nLang:";
 
-  # Skip some boards
-  if($board eq "administration.xml" ||
-     $board eq "experimental.xml") {
-    print " ($board is skipped)";
-    next;
-  }
+    # Skip some boards
+    if($board eq "administration.xml" ||
+       $board eq "experimental.xml") {
+	print " ($board is skipped)";
+	next;
+    }
 
-  # The first article is the reference article
-  my $traduction_id = $article_id;
+    # The first article is the reference article
+    my $traduction_id = $article_id;
 
-  # 2nd loop over each language
-  foreach my $lang (@ALL_LINGUAS) {
+    # 2nd loop over each language
+    foreach my $lang (@ALL_LINGUAS) {
 
-    my $file = "$boards_dir/$board";
-    my $xslfile = "spip_oneboard.xsl";
+	my $file = "$boards_dir/$board";
+	my $xslfile = "spip_oneboard.xsl";
 
-    $article_id++;
+	$article_id++;
 
-    print "$lang ";
+	print "$lang ";
 
-    # Remove @ from some language to avoid non URL char
-    my $langstrip = $lang;
-    $langstrip =~ s/\@/_/g;
+	# Remove @ from some language to avoid non URL char
+	my $langstrip = $lang;
+	$langstrip =~ s/\@/_/g;
 
 
-    # Hide the article
+	# Hide the article
 #    $rubriques{$lang} = 0;
 
-    my $output = `xsltproc --stringparam language $lang --stringparam langstrip $langstrip --stringparam date "${date}" --stringparam article_id ${article_id} --stringparam rubrique_id $rubriques_all{$lang} --stringparam section_id $sections{$lang} --stringparam traduction_id ${traduction_id} $xslfile $file`;
+	my $output = `xsltproc --stringparam language $lang --stringparam langstrip $langstrip --stringparam date "${date}" --stringparam article_id ${article_id} --stringparam rubrique_id $rubriques_all{$lang} --stringparam section_id $sections{$lang} --stringparam traduction_id ${traduction_id} $xslfile $file`;
 
-    if ($?>>8) {
-      print "#\n";
-      print "#\n";
-      print "#\n";
-      print "An error as been encountered in xslt processing: processing is left uncomplete\n";
-      print "ERROR on file $file lang $lang#\n";
-      print "#\n";
-      print "#\n";
-      exit 1;
+	if ($?>>8) {
+	    print "#\n";
+	    print "#\n";
+	    print "#\n";
+	    print "An error as been encountered in xslt processing: processing is left uncomplete\n";
+	    print "ERROR on file $file lang $lang#\n";
+	    print "#\n";
+	    print "#\n";
+	    exit 1;
 
-    } else {
+	} else {
 
-      # Make some cleanup where needed
-      # ------------------------------
+	    # Make some cleanup where needed
+	    # ------------------------------
 
-      $output = spip_cleanup($output);
+	    $output = spip_cleanup($output);
 
-      open(OUTPUT, ">>$tmp_file")
-	or die "Can't open: $!";
+	    open(OUTPUT, ">>$tmp_file")
+		or die "Can't open: $!";
 
-      print OUTPUT $output . "\n";
+	    print OUTPUT $output . "\n";
 
-      close (OUTPUT);
+	    close (OUTPUT);
 
-      # Record the article
-      $articles{"$lang:$board"} = $article_id;
+	    # Record the article
+	    $articles{"$lang:$board"} = $article_id;
+	}
     }
-  }
 }
 
 #-------------------------------------------------------------------------------
@@ -526,14 +526,14 @@ open(FILEWRITE, "> $output_file");
 
 my $line = 0;
 while (<FILEREAD>){
-  my $line = $_;
-  m/href=\"(\w+:[a-zA-Z0-9_-]+\.xml)/g;
-  if(defined($articles{"$1"})) {
-    print "Found article " . $articles{"$1"} . "\n";
-    my $article = "article.php3?id_article=$articles{$1}";
-    my $r = s/(^.*)(href=\")(\w+:[a-zA-Z0-9_-]+\.xml)(.*)/$1$2$article$4/g;
-  }
-  print FILEWRITE;
+    my $line = $_;
+    m/href=\"(\w+:[a-zA-Z0-9_-]+\.xml)/g;
+    if(defined($articles{"$1"})) {
+	print "Found article " . $articles{"$1"} . "\n";
+	my $article = "article.php3?id_article=$articles{$1}";
+	my $r = s/(^.*)(href=\")(\w+:[a-zA-Z0-9_-]+\.xml)(.*)/$1$2$article$4/g;
+    }
+    print FILEWRITE;
 }
 close FILEWRITE;
 close FILEREAD;
@@ -543,7 +543,7 @@ close FILEREAD;
 print "\n\nCreated " . ($article_id - $first_article) . " Articles in $output_file\n";
 print "Insert the content of this file in the SPIP dump.xml file.\n";
 print "If screenshots were already in, remove them first, you can use the command:\n";
-print "./spip_screenshot_remove.pl dump.xml > dump2.xml"
+print "./spip_screenshot_remove.pl dump.xml > dump2.xml\n";
 # Cleanup
 unlink $tmp_file;
 
