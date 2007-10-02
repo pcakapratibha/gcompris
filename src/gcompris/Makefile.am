@@ -120,17 +120,13 @@ gcompris_SOURCES = \
 	wordlist.h
 
 gcompris_LDFLAGS = \
-	-export-dynamic $(cairo_ldflags) \
-	$(top_builddir)/src/libgnomecanvas/libgnomecanvas-2.a \
+	-export-dynamic $(top_builddir)/src/libgnomecanvas/libgnomecanvas-2.a \
 	$(top_builddir)/src/libart_lgpl/libart_lgpl_2.a
 
 
 gcompris_LDADD = \
 	$(GCOMPRIS_LIBS) $(sqlite_ldadd) $(XML_LIBS) $(GNET_LIBS) \
         $(INTLLIBS) $(NSBUNDLE_LDFLAGS)
-
-#	$(LIBICONV)
-
 
 EXTRA_DIST = \
 	Makefile.mingw gcomprisrc.rc
