@@ -4434,7 +4434,7 @@ msgstr "Data"
 
 #: ../src/boards/python/admin/log_list.py:218
 msgid "User"
-msgstr "Usuari"
+msgstr "Utilizaire"
 
 #: ../src/boards/python/admin/log_list.py:228
 msgid "Board"
@@ -5038,15 +5038,15 @@ msgstr ""
 
 #: ../src/boards/wordprocessor.c:433
 msgid "Title"
-msgstr "Titol"
+msgstr "Títol"
 
 #: ../src/boards/wordprocessor.c:434
 msgid "Heading 1"
-msgstr "Titol 1"
+msgstr "Títol 1"
 
 #: ../src/boards/wordprocessor.c:435
 msgid "Heading 2"
-msgstr "Titol 2"
+msgstr "Títol 2"
 
 #: ../src/gcompris/about.c:57
 msgid ""
@@ -5060,8 +5060,7 @@ msgstr ""
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gcompris/about.c:65
 msgid "translator_credits"
-msgstr ""
-"La còla occitana de revirada d'Ubuntu, 2007 - ubuntu-l10n-oci@lists.ubuntu.com"
+msgstr "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org)"
 
 #: ../src/gcompris/about.c:96 ../src/gcompris/about.c:106
 msgid "About GCompris"
@@ -5162,7 +5161,7 @@ msgstr "Bulgar"
 
 #: ../src/gcompris/config.c:64
 msgid "Catalan"
-msgstr "Catalàn"
+msgstr "Catalan"
 
 #: ../src/gcompris/config.c:66
 msgid "Danish"
