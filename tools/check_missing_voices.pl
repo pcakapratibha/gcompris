@@ -18,7 +18,7 @@ if(!defined $ARGV[0])
   }
 my $TARGET_LOCALE =  $ARGV[0];
 
-my $BASEDIR="./boards/sounds";
+my $BASEDIR="./boards/voices";
 
 # I don't set alphabet dir, it's too locale specific
 my @SUBDIRS= qw/geography misc colors/;
