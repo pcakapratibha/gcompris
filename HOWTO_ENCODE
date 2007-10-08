@@ -1,13 +1,13 @@
 
-This document describes howto create a localized version of the sounds.
+This document describes howto create a localized version of the voices.
 
-1) Create your sounds directory
+1) Create your voices directory
    ----------------------------
-First copy the english sounds as a template in a new directory with you locale name (e.g. my)
-cd boards/sounds
+First copy the english voices as a template in a new directory with you locale name (e.g. my)
+cd boards/voices
 cp -r en my
 
-Provide here voice translation in boards/sounds/my for each english sounds.
+Provide here voice translation in boards/voices/my for each english voice.
 
 2) Recording / Encoding
    --------------------
@@ -37,18 +37,18 @@ It is best to choose somebody that speaks and articulate well your language.
 - Copy OGG files in the corresponding directory
 
 - Normalize them so that the all have the same volume level (replace ll by your locale)
-        cd boards/sounds/
+        cd boards/voices/
         normalize-ogg ll/*/*.ogg
 
 3) Shipping
    --------
-Once done, the easiest way is to tar all this files and send them to the gcompris maitainer.
-cd boards/sounds
-tar -cvzf sounds_my.tgz my
+Once done, the easiest way is to tar all this files and send them to the gcompris maintainer.
+cd boards/voices
+tar -cvzf voices_my.tgz my
 
 4) Integration
    -----------
-Nothing has to be done, just run 'make install' at GCompris to level. The sounds
+Nothing has to be done, just run 'make install' at GCompris to level. The voices
 will be installed in the proper directory and GCompris will play them.
 Run gcompris in your locale and you should ear your voices.
 
