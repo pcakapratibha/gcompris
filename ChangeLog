@@ -1,3 +1,22 @@
+	*** RELEASE 8.4.1 ***
+
+2007-10-08  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Updated voices translation howto and script
+
+	* README.translators:
+	* tools/check_missing_voices.pl:
+
+	- Fixed a crash on windows, %lc seems to not be supported.
+	* src/boards/wordsgame.c: (key_press):
+
+2007-10-03  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Added a little hack to avoid missing symbols from libgnomecanvas
+	  at plugin load time.
+
+	* src/gcompris/gcompris.c: (main):
+
 2007-10-03  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- cleanup, removed useless references to cairo.
