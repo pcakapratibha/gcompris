@@ -1909,12 +1909,9 @@ main (int argc, char *argv[])
   /* FIXME: HACK Needed or we have unresolved symbols at python plugin dlopen
    *        Is there a better way to fix these?
    */
-  GnomeCanvasItem *dummy = NULL;
-  GNOME_IS_CANVAS_POLYGON(dummy);
-  GNOME_IS_CANVAS_CLIPGROUP(dummy);
-  GNOME_IS_CANVAS_BPATH(dummy);
-  GType type = GNOME_TYPE_CANVAS_POLYGON;
-  type = type;
+  printf("%s\n", g_type_name(GNOME_TYPE_CANVAS_POLYGON));
+  printf("%s\n", g_type_name(GNOME_TYPE_CANVAS_CLIPGROUP));
+  printf("%s\n", g_type_name(GNOME_TYPE_CANVAS_BPATH));
 
   return(0);
 }
