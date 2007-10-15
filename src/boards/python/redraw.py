@@ -78,8 +78,8 @@ class Gcompris_redraw:
     self.image_target    = []
 
     # Define the coord of each drawing area
-    self.drawing_area = [140.0, 20.0, 420.0, 500.0]
-    self.target_area  = [440.0, 20.0, 720.0, 500.0]
+    self.drawing_area = [140, 20, 420, 500]
+    self.target_area  = [440, 20, 720, 500]
 
     # Global used for the select event
     self.in_select_ofx = -1
