@@ -396,8 +396,6 @@ static GnomeCanvasItem *enumerate_create_item(GnomeCanvasGroup *parent)
 	  gtk_signal_connect(GTK_OBJECT(item), "event", (GtkSignalFunc) item_event, NULL);
 	}
 
-      gdk_pixbuf_unref(pixmap);
-
       /* Display the answer area */
       current_y -= ANSWER_HEIGHT*2;
 
@@ -439,6 +437,7 @@ static GnomeCanvasItem *enumerate_create_item(GnomeCanvasGroup *parent)
 				    "height_set", TRUE,
 				    NULL);
 
+      gdk_pixbuf_unref(pixmap);
 
       gtk_signal_connect(GTK_OBJECT(item), "event", (GtkSignalFunc) item_event_focus,  GINT_TO_POINTER(i));
 
