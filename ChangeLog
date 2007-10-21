@@ -1,3 +1,8 @@
+2007-10-21  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/enumerate.c: (enumerate_create_item): fixed a reference to a freed
+	pixmap. It could crash or display broken image in the buttons (commit 3089).
+
 2007-10-15  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/python/redraw.py: fixed a runtime warning
