@@ -1,3 +1,19 @@
+2007-10-29  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/erase.c: (canvas_event): Fixed a crash that happens when
+	you click on the image just once it is fully erased (commit 3106)
+
+	*** RELEASE 8.3.4 ***
+
+2007-10-08  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Fixed a crash on windows, %lc seems to not be supported. (merged from trunk 3065)
+	* src/boards/wordsgame.c: (key_press):
+
+	* Added Breton support (from trunk)
+
+	* Added brazil map in geography country (from trunk)
+
 2007-08-30  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* Merged from trunk commit 2915.
