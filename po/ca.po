@@ -516,7 +516,7 @@ msgstr "Vés a les activitats amb càlculs"
 
 #: ../boards/algebramenu.xml.in.h:2
 msgid "Various calculation activities."
-msgstr "Diferents activitats de cálcul."
+msgstr "Diferents activitats de càlcul."
 
 #: ../boards/algorithm.xml.in.h:1
 msgid "Complete a list of symbols"
@@ -1911,7 +1911,7 @@ msgstr "Camerun"
 #: ../boards/geography/board4_0.xml.in.h:5
 #: ../boards/geography/board4_2.xml.in.h:8
 msgid "Central African Republic"
-msgstr "República centrafricana"
+msgstr "República Centreafricana"
 
 #: ../boards/geography/board4_0.xml.in.h:6
 #: ../boards/geography/board4_2.xml.in.h:9
@@ -2042,7 +2042,7 @@ msgstr "Togo"
 #: ../boards/geography/board4_0.xml.in.h:32
 #: ../boards/geography/board4_2.xml.in.h:36
 msgid "Tunisia"
-msgstr "Tuníssia"
+msgstr "Tunísia"
 
 #: ../boards/geography/board4_0.xml.in.h:33
 #: ../boards/geography/board4_1.xml.in.h:19
@@ -2109,7 +2109,7 @@ msgstr "República del Congo"
 #: ../boards/geography/board4_1.xml.in.h:15
 #: ../boards/geography/board4_2.xml.in.h:32
 msgid "South Africa"
-msgstr "Sudàfrica"
+msgstr "Sud-àfrica"
 
 #: ../boards/geography/board4_1.xml.in.h:16
 msgid "Southern Africa"
@@ -4089,9 +4089,9 @@ msgid ""
 "concept to children."
 msgstr ""
 "En aquesta activitat, aprendreu a introduir ordres en un ordinador. Tot i "
-"que el llenguatge és molt básic, aprendreu a pensar en termes de programció. "
+"que el llenguatge és molt bàsic, aprendreu a pensar en termes de programació. "
 "Aquesta activitat es pot fer servir per a introduir el concepte de "
-"programció als nens."
+"programació als nens."
 
 #: ../boards/searace.xml.in.h:9
 msgid "Sea race (2 Players)"
@@ -4522,7 +4522,7 @@ msgstr "És el vostre torn..."
 
 #: ../src/boards/awele.c:754
 msgid "Not allowed! Try again !"
-msgstr "Això no està permés! Proveu-ho de nou!"
+msgstr "Això no està permès! Proveu-ho de nou!"
 
 #: ../src/boards/chess.c:178
 msgid "Error: The external program gnuchess died unexpectedly"
@@ -4756,7 +4756,7 @@ msgstr "dreta"
 msgid ""
 "Look at your position, then switch back to invisible mode to continue your "
 "moves"
-msgstr "Mireu la votra posició i torneu al mode d'invisibilitat per a moure-us"
+msgstr "Mireu la vostra posició i torneu al mode d'invisibilitat per a moure-us"
 
 #: ../src/boards/maze.c:493
 msgid ""
@@ -5425,7 +5425,7 @@ msgstr ""
 #: ../src/boards/python/oscar_and_friends.py:117
 msgid ""
 "They were all happy that the storms never reached all the way down to them."
-msgstr "Es van alegrar de que les plujes no els atrapessin allà baix."
+msgstr "Es van alegrar de que les pluges no els atrapessin allà baix."
 
 #: ../src/boards/python/oscar_and_friends.py:118
 msgid ""
@@ -5521,7 +5521,7 @@ msgstr "Ha guanyat la barca verda"
 
 #: ../src/boards/python/searace.py:783 ../src/boards/python/searace.py:1016
 msgid "Angle:"
-msgstr "Àngle:"
+msgstr "Angle:"
 
 #: ../src/boards/python/searace.py:783
 msgid "Wind:"
@@ -5557,11 +5557,11 @@ msgstr "S'està esperant que acabi el Tuxpaint"
 
 #: ../src/boards/python/tuxpaint.py:211
 msgid "Inherit fullscreen setting from GCompris"
-msgstr "Hereda la configuració de pantalla competa del GCompris"
+msgstr "Hereta la configuració de pantalla completa del GCompris"
 
 #: ../src/boards/python/tuxpaint.py:216
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
-msgstr "Hereda la configuració de la mida del GCompris (800x600, 640x480)"
+msgstr "Hereta la configuració de la mida del GCompris (800x600, 640x480)"
 
 #: ../src/boards/python/tuxpaint.py:221
 msgid "Disable shape rotation"
@@ -5999,7 +5999,7 @@ msgstr "Albanès"
 
 #: ../src/gcompris/config.c:111
 msgid "Serbian (Latin)"
-msgstr "Serbi (Latí)"
+msgstr "Serbi (Llatí)"
 
 #: ../src/gcompris/config.c:112
 msgid "Serbian"
@@ -6201,7 +6201,7 @@ msgstr "Crea una base de dades alternativa per als perfils"
 
 #: ../src/gcompris/gcompris.c:183
 msgid "Re-read XML Menus and store them in the database"
-msgstr "Torna a llegir els meúns XML i emmagatzema'ls a la base de dades"
+msgstr "Torna a llegir els menús XML i emmagatzema'ls a la base de dades"
 
 #: ../src/gcompris/gcompris.c:186
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
@@ -6357,7 +6357,7 @@ msgstr "Usuaris sense classe"
 
 #: ../src/gcompris/help.c:196
 msgid "Prerequisite"
-msgstr "Prerrequisit"
+msgstr "Prerequisit"
 
 #: ../src/gcompris/help.c:224
 msgid "Goal"
