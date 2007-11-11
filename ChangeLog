@@ -1,3 +1,8 @@
+2007-11-11  Bruno Coudoin  <bruno.coudoin@free.fr>
+
+	* src/gcompris/timer.c: (gc_timer_pause): Fixed a case where the timer was run twice.
+	  if a call to gc_timer_pause is made while not paused (commit 3130).
+
 2007-10-21  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/enumerate.c: (enumerate_create_item): fixed a reference to a freed
