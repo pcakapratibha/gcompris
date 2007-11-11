@@ -196,7 +196,7 @@ gc_timer_pause(gboolean pause)
 	gtk_timeout_remove (subanimate_id);
       subanimate_id = 0;
     }
-  else
+  else if(paused)
     {
       start_animation();
     }
