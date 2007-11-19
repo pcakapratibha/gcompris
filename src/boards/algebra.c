@@ -270,7 +270,7 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
   guint c;
   gboolean stop = FALSE;
 
-  if(!boardRootItem)
+  if(board_paused || !boardRootItem)
     return FALSE;
 
   /* Add some filter for control and shift key */

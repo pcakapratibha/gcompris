@@ -175,7 +175,7 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
   char str[2];
   GnomeCanvasItem	*item = NULL;
 
-  if(!gcomprisBoard)
+  if(board_paused || !boardRootItem || !gcomprisBoard)
     return FALSE;
 
   /* Add some filter for control and shift key */

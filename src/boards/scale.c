@@ -217,8 +217,8 @@ gboolean is_our_board (GcomprisBoard *gcomprisBoard)
 /* ======================================= */
 static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 {
-    if(!gcomprisBoard)
-        return FALSE;
+  if(board_paused || !boardRootItem)
+    return FALSE;
 
     /* Add some filter for control and shift key */
     switch (keyval)

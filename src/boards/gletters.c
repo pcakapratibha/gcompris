@@ -33,6 +33,7 @@ static GcomprisBoard *gcomprisBoard = NULL;
 
 static gint dummy_id = 0;
 static gint drop_items_id = 0;
+static gboolean board_paused = TRUE;
 
 /* Sublevels are now allocated dynamically
  * based on the number of chars at that level
@@ -212,6 +213,7 @@ static void pause_board (gboolean pause)
 	dummy_id = gtk_timeout_add (1000, (GtkFunction) gletters_move_items, NULL);
       }
     }
+  board_paused = pause;
 }
 
 static gboolean uppercase_only;
@@ -398,7 +400,7 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str) {
   gchar  list_of_letters[255];
   gchar *str;
 
-  if(!gcomprisBoard)
+  if(board_paused || !gcomprisBoard || !letters_table)
     return FALSE;
 
   /* i suppose even numbers are passed through IM_context */

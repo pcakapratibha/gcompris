@@ -1,3 +1,21 @@
+2007-11-19  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed many potential crash of GCompis in the key_press activity callback.
+	A crash has be verified in gletters (falling letters) if you enter a key while
+	the bonus is displayed. (commit trunk#3138).
+
+	* src/boards/algebra.c: (key_press):
+	* src/boards/enumerate.c: (key_press):
+	* src/boards/gletters.c: (pause_board), (key_press):
+	* src/boards/paratrooper.c: (pause_board), (key_press):
+	* src/boards/planegame.c: (pause_board), (key_press):
+	* src/boards/reversecount.c: (key_press):
+	* src/boards/scale.c: (key_press):
+	* src/boards/shapegame.c: (key_press):
+	* src/boards/smallnumbers.c: (pause_board), (key_press):
+	* src/boards/target.c: (key_press):
+	* src/boards/wordsgame.c: (pause_board), (key_press):
+
 2007-10-29  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/erase.c: (canvas_event): Fixed a crash that happens when

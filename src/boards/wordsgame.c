@@ -28,6 +28,7 @@
 #define SOUNDLISTFILE PACKAGE
 #define MAXWORDSLENGTH 50
 static GcomprisWordlist *gc_wordlist = NULL;
+static gboolean board_paused = TRUE;
 
 GStaticRWLock items_lock = G_STATIC_RW_LOCK_INIT;
 GStaticRWLock items2del_lock = G_STATIC_RW_LOCK_INIT;
@@ -166,6 +167,7 @@ GET_BPLUGIN_INFO(wordsgame)
 	dummy_id = g_timeout_add (10, (GtkFunction) wordsgame_move_items, NULL);
       }
     }
+  board_paused = pause;
 }
 
 /*
@@ -255,7 +257,7 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
   gchar *str;
   gunichar unichar_letter;
 
-  if(!gcomprisBoard)
+  if(board_paused && !gcomprisBoard)
     return FALSE;
 
   if (keyval){
