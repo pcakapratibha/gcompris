@@ -227,7 +227,7 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 {
   guint c;
 
-  if(!gcomprisBoard)
+  if(board_paused || !gcomprisBoard)
     return FALSE;
 
   /* Add some filter for control and shift key */

@@ -23,6 +23,7 @@
 #define SOUNDLISTFILE PACKAGE
 
 static int gamewon;
+static gboolean board_paused = TRUE;
 
 static GList *item_list = NULL;
 static GList *item2del_list = NULL;
@@ -173,6 +174,7 @@ static void pause_board (gboolean pause)
       if(gamewon == TRUE) /* the game is won */
 	  paratrooper_next_level();
     }
+  board_paused = pause;
 }
 
 /*
@@ -233,9 +235,8 @@ set_level (guint level)
 static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 {
 
-  if(!gcomprisBoard)
-    return FALSE;
-
+  if(board_paused || !gcomprisBoard)
+     return FALSE;
 
   /* Add some filter for control and shift key */
   switch (keyval)

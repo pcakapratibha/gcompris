@@ -25,6 +25,7 @@
 static GList *item_list = NULL;
 static GList *item2del_list = NULL;
 
+static gboolean board_paused = TRUE;
 static GcomprisBoard *gcomprisBoard = NULL;
 
 static gint dummy_id = 0;
@@ -128,6 +129,7 @@ static void pause_board (gboolean pause)
 	dummy_id = gtk_timeout_add (1000, (GtkFunction) planegame_move_items, NULL);
       }
     }
+  board_paused = pause;
 }
 
 /*
@@ -186,7 +188,7 @@ set_level (guint level)
 static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 {
 
-  if(!gcomprisBoard)
+  if(board_paused || !gcomprisBoard)
     return FALSE;
 
   /* Add some filter for control and shift key */

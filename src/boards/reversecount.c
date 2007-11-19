@@ -246,7 +246,7 @@ gboolean is_our_board (GcomprisBoard *gcomprisBoard)
 gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 {
 
-  if(!gcomprisBoard)
+  if(board_paused || !boardRootItem || !gcomprisBoard)
     return FALSE;
 
   /* Add some filter for control and shift key */

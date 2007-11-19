@@ -24,6 +24,7 @@
 #define SOUNDLISTFILE PACKAGE
 
 static GcomprisBoard *gcomprisBoard = NULL;
+static gboolean board_paused = TRUE;
 
 static gint dummy_id = 0;
 static gint drop_items_id = 0;
@@ -132,6 +133,7 @@ static void pause_board (gboolean pause)
 	dummy_id = gtk_timeout_add (1000, (GtkFunction) smallnumbers_move_items, NULL);
       }
     }
+  board_paused = pause;
 }
 
 /*
@@ -212,7 +214,7 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 {
   char str[2];
 
-  if(!gcomprisBoard || !boardRootItem)
+  if(board_paused || !gcomprisBoard || !boardRootItem)
     return FALSE;
 
   /* Add some filter for control and shift key */
