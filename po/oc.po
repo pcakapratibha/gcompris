@@ -1,19 +1,22 @@
+# translation of oc.po to Occitan
 # Occitan translation of gcompris
 # Copyright (C) 2000-2007 Free Software Foundation, Inc.
 #
-# Yannig Marchegay <yannig@marchegay.org>, 2007.
 #
+# Yannig Marchegay <yannig@marchegay.org>, 2007.
+# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gcompris HEAD\n"
+"Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-04-12 12:10+0200\n"
-"PO-Revision-Date: 2007-06-28 21:17+0200\n"
-"Last-Translator: Yannig Marchegay <yannig@marchegay.org>\n"
-"Language-Team: GNOME Occitan Team <ubuntu-l10n-oci@lists.ubuntu.com>\n"
+"PO-Revision-Date: 2007-11-20 14:30+0100\n"
+"Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
+"Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -1307,8 +1310,7 @@ msgid ""
 msgstr ""
 
 #: ../boards/fifteen.xml.in.h:3
-msgid ""
-"Move each item to make an increasing series: from the smallest to the largest"
+msgid "Move each item to make an increasing series: from the smallest to the largest"
 msgstr ""
 
 #: ../boards/fifteen.xml.in.h:4
@@ -1522,7 +1524,7 @@ msgstr "Austria"
 
 #: ../boards/geography/board3_0.xml.in.h:2
 msgid "Belgium"
-msgstr "Belgica"
+msgstr "Bèlgica"
 
 #: ../boards/geography/board3_0.xml.in.h:3
 msgid "Denmark"
@@ -1662,7 +1664,7 @@ msgstr ""
 
 #: ../boards/geography/board3_1.xml.in.h:20
 msgid "Slovak Republic"
-msgstr "Republica d'Eslovaquia"
+msgstr "Republica eslovaquia"
 
 #: ../boards/geography/board3_1.xml.in.h:21
 msgid "Slovenia"
@@ -1708,7 +1710,7 @@ msgstr "Chad"
 
 #: ../boards/geography/board4_0.xml.in.h:7
 msgid "Djibouti"
-msgstr "Giboti"
+msgstr "Jiboti"
 
 #: ../boards/geography/board4_0.xml.in.h:8
 #: ../boards/geography/board4_2.xml.in.h:11
@@ -2482,8 +2484,7 @@ msgid ""
 msgstr ""
 
 #: ../boards/login.xml.in.h:1
-msgid ""
-"GCompris identifies each child, so we can provide child-specific reports."
+msgid "GCompris identifies each child, so we can provide child-specific reports."
 msgstr ""
 
 #: ../boards/login.xml.in.h:2
@@ -2550,7 +2551,7 @@ msgstr ""
 #: ../boards/memory_add_minus_tux.xml.in.h:3 ../boards/memory_minus.xml.in.h:2
 #: ../boards/memory_minus_tux.xml.in.h:2
 msgid "Subtraction"
-msgstr ""
+msgstr "Sostraccion"
 
 #: ../boards/math.xml.in.h:1
 msgid "Mathematical activities."
@@ -2858,7 +2859,7 @@ msgstr ""
 
 #: ../boards/memory_mult.xml.in.h:1
 msgid "Multiplication"
-msgstr ""
+msgstr "Multiplicacion"
 
 #: ../boards/memory_mult.xml.in.h:2
 msgid "Multiplication memory game"
@@ -3381,8 +3382,7 @@ msgid "Test board for the python plugin"
 msgstr ""
 
 #: ../boards/pythontest.xml.in.h:5
-msgid ""
-"Thanks to Guido van Rossum and the python team for this powerful language!"
+msgid "Thanks to Guido van Rossum and the python team for this powerful language!"
 msgstr ""
 
 #: ../boards/railroad.xml.in.h:1
@@ -3459,7 +3459,7 @@ msgstr ""
 
 #: ../boards/read_colors/board1.xml.in.h:10
 msgid "white"
-msgstr ""
+msgstr "blanc"
 
 #: ../boards/read_colors/board1.xml.in.h:11
 msgid "yellow"
@@ -3724,8 +3724,7 @@ msgid "Sudoku, place unique symbols in a square."
 msgstr ""
 
 #: ../boards/sudoku.xml.in.h:4
-msgid ""
-"Symbols must be unique in a row, in a column, and (if defined) each region."
+msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
 msgstr ""
 
 #: ../boards/sudoku.xml.in.h:5
@@ -3794,8 +3793,7 @@ msgid "The tangram puzzle game"
 msgstr ""
 
 #: ../boards/target.xml.in.h:1
-msgid ""
-"Can move the mouse, can read numbers and count up to 15 for the first level"
+msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
 msgstr ""
 
 #: ../boards/target.xml.in.h:2
@@ -4173,8 +4171,7 @@ msgid ""
 msgstr ""
 
 #: ../src/boards/maze.c:494
-msgid ""
-"Look at your position, then switch back to 3D mode to continue your moves"
+msgid "Look at your position, then switch back to 3D mode to continue your moves"
 msgstr ""
 
 #: ../src/boards/memory.c:266
@@ -4470,7 +4467,7 @@ msgstr "Grops"
 #: ../src/boards/python/admin/module_profiles.py:40
 #: ../src/boards/python/admin/module_profiles.py:65
 msgid "Profiles"
-msgstr ""
+msgstr "Perfils"
 
 #: ../src/boards/python/admin/module_reports.py:41
 #: ../src/boards/python/admin/module_reports.py:67
@@ -4502,7 +4499,7 @@ msgstr ""
 
 #: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
-msgstr ""
+msgstr "Perfil\\:"
 
 #. Top message gives instructions
 #: ../src/boards/python/admin/profile_edit.py:109
@@ -4558,8 +4555,7 @@ msgid "Birth date:"
 msgstr ""
 
 #: ../src/boards/python/admin/user_edit.py:159
-msgid ""
-"You need to provide at least a login, first name and last name for your users"
+msgid "You need to provide at least a login, first name and last name for your users"
 msgstr ""
 
 #: ../src/boards/python/admin/user_edit.py:176
@@ -4695,7 +4691,7 @@ msgstr "%d − %d"
 #: ../src/boards/python/gnumch.py:264
 #, python-format
 msgid "%d × %d"
-msgstr "%d × %d"
+msgstr "%d x %d"
 
 #: ../src/boards/python/gnumch.py:268
 #, python-format
@@ -4797,13 +4793,11 @@ msgid ""
 msgstr ""
 
 #: ../src/boards/python/oscar_and_friends.py:117
-msgid ""
-"They were all happy that the storms never reached all the way down to them."
+msgid "They were all happy that the storms never reached all the way down to them."
 msgstr ""
 
 #: ../src/boards/python/oscar_and_friends.py:118
-msgid ""
-"No matter how bad it was up there, the bottom was always calm and quiet."
+msgid "No matter how bad it was up there, the bottom was always calm and quiet."
 msgstr ""
 
 #: ../src/boards/python/oscar_and_friends.py:119
@@ -5346,7 +5340,7 @@ msgstr "Suedés"
 #. "ta_IN.UTF-8",	N_("Tamil"),
 #: ../src/gcompris/config.c:112
 msgid "Thai"
-msgstr "Tai"
+msgstr "Tailandés"
 
 #: ../src/gcompris/config.c:113
 msgid "Turkish"
@@ -5571,13 +5565,11 @@ msgid ""
 msgstr ""
 
 #: ../src/gcompris/gcompris.c:221
-msgid ""
-"In server mode, specify the cache directory used to avoid useless downloads."
+msgid "In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 
 #: ../src/gcompris/gcompris.c:224
-msgid ""
-"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
+msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
 msgstr ""
 
 #: ../src/gcompris/gcompris.c:227
@@ -5677,26 +5669,3 @@ msgstr ""
 msgid "Remaining Time = %d"
 msgstr ""
 
-#~ msgid "1829 Stephenson's Rocket\\nSteam locomotive"
-#~ msgstr ""
-#~ "1829 La fusée de Stephenson\n"
-#~ "Une des premières locomotives à vapeur"
-
-#~ msgid "spruce"
-#~ msgstr "sapin"
-
-#~ msgid "Double-Click the mouse to erase the area and discover the background"
-#~ msgstr ""
-#~ "Double-clique avec la souris pour tout effacer et découvrir l'image de "
-#~ "fond."
-
-#~ msgid "Double-click the mouse"
-#~ msgstr "Double-clique avec la souris"
-
-#~ msgid "Double-click the mouse on rectangles until all the blocks disappear."
-#~ msgstr ""
-#~ "Double-clique sur les rectangles avec la souris jusqu'à ce que les blocs "
-#~ "disparaissent."
-
-#~ msgid "Use alternate database for logs"
-#~ msgstr "Utilise une base de données alternative pour l'historique"
