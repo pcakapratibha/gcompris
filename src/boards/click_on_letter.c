@@ -278,7 +278,7 @@ static gboolean sounds_are_fine()
       gc_locale_reset();
       gc_locale_set("en_US");
 
-      str2 = gc_file_find_absolute("sounds/en/alphabet/%s", letter_str);
+      str2 = gc_file_find_absolute("voices/en/alphabet/%s", letter_str);
 
       if (!str2)
 	{

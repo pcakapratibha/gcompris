@@ -1,3 +1,8 @@
+2007-11-21  Bruno Coudoin,,,  <set EMAIL_ADDRESS environment variable>
+
+	* src/boards/click_on_letter.c: (sounds_are_fine): fixed fallback
+	directory for english locale (in voices instead of sounds).
+
 2007-11-19  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Fixed many potential crash of GCompis in the key_press activity callback.
