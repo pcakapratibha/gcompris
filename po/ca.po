@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-16 23:12+0200\n"
+"POT-Creation-Date: 2007-11-21 10:25+0100\n"
 "PO-Revision-Date: 2007-08-30 23:05+0200\n"
 "Last-Translator: Francesc Vilches Batet <francesc.vilches@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -2158,15 +2158,15 @@ msgstr "Regions de França"
 
 #: ../boards/geography_country/board2_0.xml.in.h:1
 msgid "Deutschland Bundesländer"
-msgstr "Regions d'Alemanya"
+msgstr "Estats federats d'Alemanya"
 
 #: ../boards/geography_country/board3_0.xml.in.h:1
 msgid "Provincias Argentinas"
-msgstr "Províncies argentines"
+msgstr "Províncies d'Argentina"
 
 #: ../boards/geography_country/board4_0.xml.in.h:1
 msgid "Polish Voivodship"
-msgstr "«Voivodship» polonès"
+msgstr "Voivodats de Polònia"
 
 #: ../boards/geography_country/board5_0.xml.in.h:1
 #: ../boards/geography_country/board5_2.xml.in.h:1
@@ -2179,7 +2179,11 @@ msgstr "Districtes orientals de Turquia"
 
 #: ../boards/geography_country/board6_0.xml.in.h:1
 msgid "Counties of Norway"
-msgstr "Regions de Noruega"
+msgstr "Comtats de Noruega"
+
+#: ../boards/geography_country/board7_0.xml.in.h:1
+msgid "Counties of Brazil"
+msgstr "Estats del Brasil"
 
 #: ../boards/geometry.xml.in.h:1
 msgid "Geometry"
@@ -2197,11 +2201,11 @@ msgstr "Manipulació amb el teclat"
 msgid "Letter association between the screen and the keyboard"
 msgstr "Associació de lletres entre la pantalla i el teclat"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:133
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "Lletres senzilles"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:134
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "Escriviu les lletres que van caient abans que arribin al terra"
 
@@ -3770,7 +3774,7 @@ msgstr "Moveu l'helicòpter per atrapar els núvols en l'ordre correcte"
 msgid "Number"
 msgstr "Nombre"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:73
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "Nombres en ordre"
 
@@ -4089,9 +4093,9 @@ msgid ""
 "concept to children."
 msgstr ""
 "En aquesta activitat, aprendreu a introduir ordres en un ordinador. Tot i "
-"que el llenguatge és molt bàsic, aprendreu a pensar en termes de programació. "
-"Aquesta activitat es pot fer servir per a introduir el concepte de "
-"programació als nens."
+"que el llenguatge és molt bàsic, aprendreu a pensar en termes de "
+"programació. Aquesta activitat es pot fer servir per a introduir el concepte "
+"de programació als nens."
 
 #: ../boards/searace.xml.in.h:9
 msgid "Sea race (2 Players)"
@@ -4426,7 +4430,7 @@ msgstr ""
 "En Tux torna d'una festa al seu vaixell. Heu de tornar a posar en marxa el "
 "sistema de l'aigua perquè es dutxi."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:109
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
 msgid "Falling Words"
 msgstr "Paraules que cauen"
 
@@ -4438,7 +4442,7 @@ msgstr "Desenvolupeu les habilitats amb el teclat"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "Escriviu les paraules que van caient abans que arribin al terra"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:110
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
 msgid "Type the falling words before they reach the ground"
 msgstr "Escriviu les paraules que van caient abans que arribin al terra"
 
@@ -4602,7 +4606,7 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:230
+#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:232
 #: ../src/boards/memory.c:832
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcçdefghijklmnopqrstuvwxyz"
@@ -4634,14 +4638,14 @@ msgstr ""
 #. the returned value is the main GtkVBox of the window,
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:622 ../src/boards/colors.c:164
-#: ../src/boards/gletters.c:856 ../src/boards/imageid.c:748
+#: ../src/boards/gletters.c:858 ../src/boards/imageid.c:748
 #: ../src/boards/missingletter.c:770
 #: ../src/boards/python/admin/board_list.py:640
 #: ../src/boards/python/admin/board_list.py:658
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1847 ../src/boards/smallnumbers.c:589
+#: ../src/boards/shapegame.c:1847 ../src/boards/smallnumbers.c:591
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4651,7 +4655,7 @@ msgstr ""
 " per al perfil <b>%s</b>"
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:889
+#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:891
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "Només text en majúscules"
@@ -4701,21 +4705,21 @@ msgid "Click on the white duck"
 msgstr "Feu clic en l'ànec blanc"
 
 #: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:670
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:609
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:611
 msgid "Select sound locale"
 msgstr "Seleccioneu l'idioma del so"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:226 ../src/boards/memory.c:828
+#: ../src/boards/gletters.c:228 ../src/boards/memory.c:828
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:236 ../src/boards/memory.c:838
+#: ../src/boards/gletters.c:238 ../src/boards/memory.c:838
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCÇDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:885 ../src/boards/smallnumbers.c:607
+#: ../src/boards/gletters.c:887 ../src/boards/smallnumbers.c:609
 msgid "Enable sounds"
 msgstr "Habilita el so"
 
@@ -4756,7 +4760,8 @@ msgstr "dreta"
 msgid ""
 "Look at your position, then switch back to invisible mode to continue your "
 "moves"
-msgstr "Mireu la vostra posició i torneu al mode d'invisibilitat per a moure-us"
+msgstr ""
+"Mireu la vostra posició i torneu al mode d'invisibilitat per a moure-us"
 
 #: ../src/boards/maze.c:493
 msgid ""
@@ -4790,11 +4795,11 @@ msgstr "%.2f€"
 msgid "$ %.0f"
 msgstr "%.0f€"
 
-#: ../src/boards/paratrooper.c:436
+#: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
 msgstr "Controleu la velocitat de caiguda amb les fletxes amunt i avall."
 
-#: ../src/boards/planegame.c:74
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "Moveu l'avió per agafar els núvols en l'ordre correcte"
 
@@ -5583,7 +5588,7 @@ msgstr "Joc de memòria"
 msgid "Build a train according to the model"
 msgstr "Construïu un tren segons el model"
 
-#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:205
+#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:207
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -6305,7 +6310,7 @@ msgstr ""
 "informació a:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1444
+#: ../src/gcompris/gcompris.c:1445
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
@@ -6313,12 +6318,12 @@ msgstr ""
 "El GCompris no ha començat perquè fa menys de %d segons que existeix el "
 "fitxer de bloqueig.\n"
 
-#: ../src/gcompris/gcompris.c:1446
+#: ../src/gcompris/gcompris.c:1447
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "El fitxer de bloqueig és: %s\n"
 
-#: ../src/gcompris/gcompris.c:1574
+#: ../src/gcompris/gcompris.c:1575
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6332,17 +6337,17 @@ msgstr ""
 "Més informació a http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1658
+#: ../src/gcompris/gcompris.c:1659
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Useu -l per accedir a una activitat directament.\n"
 
-#: ../src/gcompris/gcompris.c:1659
+#: ../src/gcompris/gcompris.c:1660
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "La llista d'activitats disponibles és:\n"
 
-#: ../src/gcompris/gcompris.c:1846
+#: ../src/gcompris/gcompris.c:1847
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "La llista de perfils disponibles és:\n"
