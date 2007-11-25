@@ -148,7 +148,7 @@ start_board (GcomprisBoard * agcomprisBoard)
 		  gc_bar_set(GC_BAR_LEVEL|GC_BAR_REPEAT);
 		}
 
-		animation = gc_anim_load( "connect4/sablier.txt" );
+		animation = gc_anim_load( "awele/sablier.txt" );
 
 		awele_next_level ();
 
