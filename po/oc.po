@@ -10,13 +10,12 @@ msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-04-12 12:10+0200\n"
-"PO-Revision-Date: 2007-11-20 14:30+0100\n"
+"PO-Revision-Date: 2007-12-08 14:23+0100\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -5323,7 +5322,7 @@ msgstr "Somali"
 
 #: ../src/gcompris/config.c:107
 msgid "Albanian"
-msgstr "Albanian"
+msgstr "Albanés"
 
 #: ../src/gcompris/config.c:108
 msgid "Serbian (Latin)"
