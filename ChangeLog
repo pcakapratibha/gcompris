@@ -1,4 +1,8 @@
-2007-11-21  Bruno Coudoin,,,  <set EMAIL_ADDRESS environment variable>
+2007-12-10  Bruno Coudoin
+
+	* boards/voices/bg: added bulgarian voices made by Iassen Kertov
+
+2007-11-21  Bruno Coudoin
 
 	* src/boards/click_on_letter.c: (sounds_are_fine): fixed fallback
 	directory for english locale (in voices instead of sounds).
