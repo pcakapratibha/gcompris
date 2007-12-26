@@ -941,6 +941,7 @@ static gint item_event_drag(GnomeCanvasItem *item, GdkEvent *event, gpointer dat
                         }
 
                         gc_sound_play_ogg(soundfile, NULL);
+			g_free(soundfile);
                     }
 		    else
 		      gc_sound_play_ogg ("sounds/bleep.wav", NULL);

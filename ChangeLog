@@ -1,3 +1,10 @@
+2007-12-26  Bruno Coudoin
+
+	* src/boards/python/drawnumber.py: fixed a potential issue in displaying
+	  the background. This fixes the issue in the XO port but was not identified
+	  in the regular version.
+	* src/boards/shapegame.c: (item_event_drag): Fixed a memory leak
+
 2007-12-11  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Ed Montgomery (edm at rocketmail dot com) created the canada

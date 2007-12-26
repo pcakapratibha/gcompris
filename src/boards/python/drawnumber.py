@@ -101,7 +101,8 @@ class Gcompris_drawnumber :
       )
 
     #Setting of the first background image of the sublevel
-    gcompris.set_background(self.ROOT, self.data[sublevel][0][1])
+    gcompris.set_background(self.gcomprisBoard.canvas.root(),
+                            self.data[sublevel][0][1])
 
     #Initialisation of sub-elements in list
     self.POINT=[0]
