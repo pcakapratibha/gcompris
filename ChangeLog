@@ -1,3 +1,8 @@
+2007-12-31  Bruno Coudoin
+
+	* Makefile.am: Now package voices files above 10, they are used
+	  by the algebra activity. Thanks Mariusz for noticing this.
+
 2007-12-26  Bruno Coudoin
 
 	* src/boards/python/drawnumber.py: fixed a potential issue in displaying
