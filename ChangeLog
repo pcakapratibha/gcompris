@@ -1,3 +1,9 @@
+2008-01-05  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/chess.c: Fixed sourceforge tracker #1835844
+	  The left lower corner square (a1 in algebraic notation)
+	  is now in the dark color.
+
 2007-12-31  Bruno Coudoin
 
 	* Makefile.am: Now package voices files above 10, they are used
