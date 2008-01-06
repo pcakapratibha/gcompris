@@ -143,7 +143,15 @@ class Gcompris_hexagon:
     return color
 
   def finished(self):
-    gcompris.bonus.board_finished(gcompris.bonus.FINISHED_RANDOM)
+    self.cleanup()
+    self.rootitem = self.gcomprisBoard.canvas.root().add(
+     gnomecanvas.CanvasGroup,
+     x=0.0,
+     y=0.0
+     )
+    self.paint_skin()
+    self.random_catx = random.randrange(21)
+    self.random_caty = random.randrange(15)
 
   def on_click (self, widget, event=None, x=0, y=0):
     if event.type == gtk.gdk.BUTTON_PRESS and event.button == 1 :
@@ -169,7 +177,7 @@ class Gcompris_hexagon:
     if self.random_caty%2:
      position +=self.sqrt3/2*self.r
     pixbuf2 = gcompris.utils.load_pixmap \
-    ("gcompris/misc/strawberry.png")
+    ("hexagon/strawberry.png")
     h2 = 30
     w2 = pixbuf2.get_width()*h2/pixbuf2.get_height()
     self.rootitem.add(gnomecanvas.CanvasPixbuf,

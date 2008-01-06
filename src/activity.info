@@ -1,6 +1,6 @@
 [Activity]
 name = @ACTIVITY_NAME@
-activity_version = 3
+activity_version = 4
 host_version = 1
 service_name = net.gcompris.@ACTIVITY_NAME@Activity
 icon = activity-gcompris

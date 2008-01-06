@@ -760,6 +760,8 @@ src/sudoku-activity/Makefile
 src/sudoku-activity/resources/Makefile
 src/sudoku-activity/resources/sudoku/Makefile
 src/hexagon-activity/Makefile
+src/hexagon-activity/resources/Makefile
+src/hexagon-activity/resources/hexagon/Makefile
 src/magic_hat_plus-activity/Makefile
 src/railroad-activity/Makefile
 src/railroad-activity/resources/Makefile

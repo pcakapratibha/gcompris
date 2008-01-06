@@ -18,6 +18,10 @@ if [ ! -d $plugindir ]; then
   plugindir=$path
 fi
 
+if [ ! -d $resourcedir ]; then
+  resourcedir=$path/resources
+fi
+
 gcompris=$1/gcompris.bin
 if [ ! -f $gcompris ]; then
   gcompris=$1/../gcompris/gcompris

@@ -671,7 +671,7 @@ class Gcompris_redraw:
     ca = 0x1D0DFFFFL
     cb = 0xAAEEAAFFL
 
-    for i in range(x1,x2,step):
+    for i in range(int(x1), int(x2), int(step)):
       if(ci%2):
         color = ca
       else:
@@ -709,7 +709,7 @@ class Gcompris_redraw:
       else:
         item.connect("event", self.target_item_event)
 
-    for i in range(y1,y2,step):
+    for i in range(int(y1),int(y2),int(step)):
       if(ci%2):
         color = ca
       else:
