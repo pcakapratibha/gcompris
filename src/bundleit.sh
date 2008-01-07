@@ -17,6 +17,7 @@ fi
 
 if test "$1" != "draw-activity" && \
     test "$1" != "anim-activity" && \
+    test "$1" != "pythontest-activity" && \
     test "$1" != "electric-activity" ; then
   draw="--exclude resources/skins/gartoon/draw"
 else
@@ -24,6 +25,8 @@ else
 fi
 
 if test "$1" = "administration-activity" || \
+   test "$1" = "tuxpaint-activity" || \
+   test "$1" = "melody-activity" || \
    test "$1" = "gcompris-activity" ; then
   echo "Skipping $1"
   exit 0
