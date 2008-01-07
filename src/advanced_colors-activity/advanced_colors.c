@@ -402,11 +402,11 @@ static gint item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data) {
  *
  * =====================================================================*/
 static void update_clock() {
-  char *str = g_strdup_printf("%s%d.png", "gcompris/timers/clock",errors);
+  char *str = g_strdup_printf("%s%d.png", "timers/clock",errors);
 
   gtk_object_destroy (GTK_OBJECT(clock_image_item));
 
-  clock_pixmap = gc_pixmap_load(str);
+  clock_pixmap = gc_skin_pixmap_load(str);
 
   clock_image_item = gnome_canvas_item_new (boardRootItem,
 					    gnome_canvas_pixbuf_get_type (),
