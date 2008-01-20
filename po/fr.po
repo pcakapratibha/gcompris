@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-15 22:26+0200\n"
-"PO-Revision-Date: 2007-09-13 22:02+0200\n"
+"POT-Creation-Date: 2008-01-20 12:16+0100\n"
+"PO-Revision-Date: 2007-09-30 18:23+0200\n"
 "Last-Translator: Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -2240,6 +2240,10 @@ msgstr "Districts orientaux de Turquie"
 msgid "Counties of Norway"
 msgstr "Comtés de Norvège"
 
+#: ../boards/geography_country/board7_0.xml.in.h:1
+msgid "Counties of Brazil"
+msgstr "Comtés du Brésil"
+
 #: ../boards/geometry.xml.in.h:1
 msgid "Geometry"
 msgstr "Géométrie"
@@ -2256,11 +2260,11 @@ msgstr "Manipulation du clavier"
 msgid "Letter association between the screen and the keyboard"
 msgstr "Associer les lettres du clavier avec celles visibles sur l'écran."
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:133
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "Jeu de lettres"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:134
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr ""
 "En les tapant au clavier, élimine les lettres qui tombent avant qu'elles ne "
@@ -3857,7 +3861,7 @@ msgstr "Déplace l'hélicoptère pour attraper les nuages dans l'ordre croissant
 msgid "Number"
 msgstr "Nombre"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:73
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "L'ordre numérique"
 
@@ -4592,7 +4596,7 @@ msgstr ""
 "Tux revient de la pêche en bateau. Réactive la distribution d'eau pour qu'il "
 "puisse se doucher."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:109
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
 msgid "Falling Words"
 msgstr "Les mots qui tombent"
 
@@ -4606,7 +4610,7 @@ msgstr ""
 "Entre au clavier les mots complets pendant qu'ils tombent, et avant qu'ils "
 "ne touchent le sol."
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:110
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
 msgid "Type the falling words before they reach the ground"
 msgstr ""
 "Saisis au clavier les mots qui tombent avant qu'ils ne touchent le sol."
@@ -4774,7 +4778,7 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:230
+#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:232
 #: ../src/boards/memory.c:832
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
@@ -4806,14 +4810,14 @@ msgstr ""
 #. the returned value is the main GtkVBox of the window,
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:622 ../src/boards/colors.c:164
-#: ../src/boards/gletters.c:856 ../src/boards/imageid.c:748
+#: ../src/boards/gletters.c:858 ../src/boards/imageid.c:748
 #: ../src/boards/missingletter.c:770
 #: ../src/boards/python/admin/board_list.py:640
 #: ../src/boards/python/admin/board_list.py:658
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1847 ../src/boards/smallnumbers.c:589
+#: ../src/boards/shapegame.c:1848 ../src/boards/smallnumbers.c:591
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4823,7 +4827,7 @@ msgstr ""
 " pour le profil <b>%s</b>"
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:889
+#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:891
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "Texte en capitales uniquement"
@@ -4873,21 +4877,21 @@ msgid "Click on the white duck"
 msgstr "Clique sur le canard blanc"
 
 #: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:670
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:609
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:611
 msgid "Select sound locale"
 msgstr "Sélectionne la langue des sons"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:226 ../src/boards/memory.c:828
+#: ../src/boards/gletters.c:228 ../src/boards/memory.c:828
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:236 ../src/boards/memory.c:838
+#: ../src/boards/gletters.c:238 ../src/boards/memory.c:838
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:885 ../src/boards/smallnumbers.c:607
+#: ../src/boards/gletters.c:887 ../src/boards/smallnumbers.c:609
 msgid "Enable sounds"
 msgstr "Activer les sons"
 
@@ -4965,11 +4969,11 @@ msgstr "%.2f €"
 msgid "$ %.0f"
 msgstr "%.0f €"
 
-#: ../src/boards/paratrooper.c:436
+#: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
 msgstr "Contrôle la vitesse de chute à l'aide des flèches haut et bas."
 
-#: ../src/boards/planegame.c:74
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "Déplace l'avion pour attraper les nuages dans le bon ordre."
 
@@ -5764,7 +5768,7 @@ msgstr "Le jeu de mémoire"
 msgid "Build a train according to the model"
 msgstr "Construis un train correspondant au modèle."
 
-#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:205
+#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:207
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5799,10 +5803,12 @@ msgid "The word to find was '%s'"
 msgstr "Le mot à trouver était « %s »"
 
 #: ../src/boards/reading.c:685
+#, c-format
 msgid "But it was not displayed"
 msgstr "mais il n'était pas affiché."
 
 #: ../src/boards/reading.c:687
+#, c-format
 msgid "And it was displayed"
 msgstr "et il était affiché."
 
@@ -6499,7 +6505,7 @@ msgstr ""
 "apprendre la liberté à nos enfants, merci d'utiliser GNU/Linux. Vous pouvez "
 "obtenir plus d'informations sur http://www.fsf.org/philosophy"
 
-#: ../src/gcompris/gcompris.c:1444
+#: ../src/gcompris/gcompris.c:1445
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
@@ -6507,12 +6513,12 @@ msgstr ""
 "GCompris ne va pas démarrer car le fichier verrou est posé depuis seulement %"
 "d secondes.\n"
 
-#: ../src/gcompris/gcompris.c:1446
+#: ../src/gcompris/gcompris.c:1447
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Le fichier verrou est « %s »\n"
 
-#: ../src/gcompris/gcompris.c:1574
+#: ../src/gcompris/gcompris.c:1575
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6526,17 +6532,17 @@ msgstr ""
 "Plus d'informations sur http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1658
+#: ../src/gcompris/gcompris.c:1659
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Utilise l'option -l pour accéder directement à une activité.\n"
 
-#: ../src/gcompris/gcompris.c:1659
+#: ../src/gcompris/gcompris.c:1660
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "La liste des activités disponibles est :\n"
 
-#: ../src/gcompris/gcompris.c:1846
+#: ../src/gcompris/gcompris.c:1847
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "La liste des profils disponibles est :\n"
