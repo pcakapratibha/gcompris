@@ -1,3 +1,9 @@
+2008-02-12  Bruno Coudoin <bruno.coudoin@free.fr>
+
+	* ru.po: updated russian by Dubrovskiy Vyacheslav.
+	* ur.po: Created Urdu translation by Dubrovskiy Vyacheslav.
+	* fr.po: Updated French translation.
+
 2008-02-03  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* hu.po: Translation updated by Miklós Merényi.
@@ -11,9 +17,9 @@
 	* fr.po: Updated French translation.
 
 2007-12-31  Yannig Marchegay <yannig@marchegay.org>
-	
+
 	* oc.po: Updated Occitan translation.
-	
+
 2007-12-10  Gintautas Miliauskas  <gintas@akl.lt>
 
 	* lt.po: Updated Lithuanian translation.
@@ -30,7 +36,7 @@
 
 	* ca.po: Fixes spelling mistakes.
 
-2007-10-22  Djihed Afifi <djihed@gmail.com> 
+2007-10-22  Djihed Afifi <djihed@gmail.com>
 
 	* ar.po: Updated Arabic Translation by Djihed Afifi.
 
