@@ -65,6 +65,10 @@ urpmi libsqlite3_0 libsqlite3_0-devel
 urpmi python-sqlite2
 urpmi libxxf86vm1-devel
 
+On a debian based system, you just need to enter the command:
+sudo apt-get build-dep gcompris
+sudo apt-get install libgstreamer0.10-dev
+
 WARNING
 =======
   We are using sqlite but it doesn't work on NFS mounted partitions.

@@ -1,3 +1,10 @@
+	*** RELEASE 8.4.3 ***
+
+2008-02-12  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/gcompris/config.c: Added support for Urdu
+	* boards/flags/ur.png: created
+
 2008-01-05  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/chess.c: Fixed sourceforge tracker #1835844
