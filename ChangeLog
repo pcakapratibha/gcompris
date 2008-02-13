@@ -1,3 +1,5 @@
+	*** RELEASE 8.4.4 ***
+
 2008-02-13  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/canvas.c: (_wrap_gnome_canvas_new),
