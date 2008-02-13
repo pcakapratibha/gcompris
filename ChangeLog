@@ -43,7 +43,7 @@
 
 2007-11-19  Bruno coudoin  <bruno.coudoin@free.fr>
 
-	Fixed many potential crash of GCompis in the key_press activity callback.
+	Fixed many potential crash of GCompris in the key_press activity callback.
 	A crash has be verified in gletters (falling letters) if you enter a key while
 	the bonus is displayed. (commit 3138).
 
