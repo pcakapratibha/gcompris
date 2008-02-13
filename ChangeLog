@@ -1,3 +1,26 @@
+2008-02-13  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/canvas.c: (_wrap_gnome_canvas_new),
+	(_wrap_gnome_canvas_get_scroll_region),
+	(_wrap_gnome_canvas_get_scroll_offsets),
+	(_wrap_gnome_canvas_w2c_affine), (_wrap_gnome_canvas_w2c),
+	(_wrap_gnome_canvas_w2c_d), (_wrap_gnome_canvas_c2w),
+	(_wrap_gnome_canvas_window_to_world),
+	(_wrap_gnome_canvas_world_to_window),
+	(_wrap_gnome_canvas_item_set),
+	(_wrap_gnome_canvas_item_affine_relative),
+	(_wrap_gnome_canvas_item_affine_absolute),
+	(_wrap_gnome_canvas_item_w2i), (_wrap_gnome_canvas_item_i2w),
+	(_wrap_gnome_canvas_item_i2w_affine),
+	(_wrap_gnome_canvas_item_i2c_affine),
+	(_wrap_gnome_canvas_item_grab),
+	(_wrap_gnome_canvas_item_get_bounds),
+	(_wrap_gnome_canvas_item_new),
+	(_wrap_gnome_canvas_bpath_set_bpath), (pycanvas_register_classes): removed useless #line
+	  and confusing #line directive.
+	* src/boards/python/mosaic.py: fixed a major bug. this activity was making GCompris
+	  crash one you clicked on the grey target button.
+
 	*** RELEASE 8.4.3 ***
 
 2008-02-12  Bruno coudoin  <bruno.coudoin@free.fr>
