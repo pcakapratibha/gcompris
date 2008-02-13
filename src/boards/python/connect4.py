@@ -31,7 +31,7 @@ import gcompris.bonus
 import gcompris.anim
 import gtk
 import gtk.gdk
-from gettext import gettext as _
+from gettext import gcompris_gettext as _
 
 from  connect4p import rules
 from  connect4p import human

@@ -27,7 +27,7 @@ import gtk.gdk
 import random
 import math
 import time
-from gettext import gettext as _
+from gettext import gcompris_gettext as _
 
 class Boat:
   """The Boat Class"""
