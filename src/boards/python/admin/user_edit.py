@@ -19,7 +19,8 @@
 
 import gtk
 import gobject
-from gettext import gcompris_gettext as _
+import gcompris
+from gcompris import gcompris_gettext as _
 
 # Database
 from pysqlite2 import dbapi2 as sqlite

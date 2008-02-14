@@ -24,7 +24,6 @@
 # in parameters of graphicals object between shots?
 
 
-from gettext import gcompris_gettext as _
 # PythonTest Board module
 import gobject
 import gnomecanvas
@@ -33,6 +32,7 @@ import gcompris.utils
 import gcompris.skin
 import gcompris.bonus
 import gcompris.sound
+from gcompris import gcompris_gettext as _
 import gtk
 import gtk.gdk
 import gtk.keysyms

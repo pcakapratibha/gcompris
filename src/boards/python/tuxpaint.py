@@ -30,7 +30,7 @@ import pango
 import platform
 
 #import gobject
-from gettext import gcompris_gettext as _
+from gcompris import gcompris_gettext as _
 
 pid = None
 

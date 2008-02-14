@@ -17,7 +17,6 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program; if not, see <http://www.gnu.org/licenses/>.
 #
-from gettext import gcompris_gettext as _
 # PythonTest Board module
 import gnomecanvas
 import gcompris
@@ -25,6 +24,7 @@ import gcompris.utils
 import gcompris.skin
 import gcompris.bonus
 import gcompris.sound
+from gcompris import gcompris_gettext as _
 import gtk
 import gtk.gdk
 import copy
