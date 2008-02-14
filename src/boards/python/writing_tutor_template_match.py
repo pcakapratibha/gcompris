@@ -47,7 +47,7 @@ import time
 
 
 #import gobject
-from gettext import gettext as _
+from gcompris import gcompris_gettext as _
 
 from  writing_tutor_common import *
 

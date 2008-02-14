@@ -81,6 +81,16 @@ clean-local:
 	rm -f intltool-extract intltool-merge intltool-update
 	-rm -fr $(BUNDLE_APPDIR)
 
+update-voices:
+	@if test -d $(PACKAGE_DATA_DIR)/voices; then \
+	  svn up $(PACKAGE_DATA_DIR)/voices; \
+	else \
+	  mkdir $(PACKAGE_DATA_DIR)/voices; \
+	  svn co http://svn.gnome.org/svn/gcompris/voices $(PACKAGE_DATA_DIR)/voices; \
+	fi
+	mv $(PACKAGE_DATA_DIR)/voices/* $(PACKAGE_DATA_DIR)/sounds
+	rm -rf $(PACKAGE_DATA_DIR)/voices
+
 # Creates separates distribution files for the sounds by locale
 dist-sounds:
 	./create_dist_sounds en @ALL_LINGUAS@

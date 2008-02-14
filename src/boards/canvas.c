@@ -7,7 +7,6 @@
 typedef int Py_ssize_t;
 #endif
 
-#line 4 "canvas.override"
 #include <Python.h>
 
 #define NO_IMPORT_PYGOBJECT
@@ -66,7 +65,6 @@ gnome_canvas_path_def_get_type(void)
 
 #endif
 
-#line 67 "canvas.c"
 
 
 /* ---------- types from other modules ---------- */
@@ -158,7 +156,6 @@ PyTypeObject PyGnomeCanvasPathDef_Type = {
 
 /* ----------- GnomeCanvas ----------- */
 
-#line 262 "canvas.override"
 static int
 _wrap_gnome_canvas_new(PyGObject *self, PyObject *args, PyObject *kwargs)
 {
@@ -181,7 +178,6 @@ _wrap_gnome_canvas_new(PyGObject *self, PyObject *args, PyObject *kwargs)
     pygobject_register_wrapper((PyObject *)self);
     return 0;
 }
-#line 182 "canvas.c"
 
 
 static PyObject *
@@ -220,7 +216,6 @@ _wrap_gnome_canvas_set_scroll_region(PyGObject *self, PyObject *args, PyObject *
     return Py_None;
 }
 
-#line 237 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_get_scroll_region(PyGObject *self, PyObject *args)
 {
@@ -231,7 +226,6 @@ _wrap_gnome_canvas_get_scroll_region(PyGObject *self, PyObject *args)
 
     return Py_BuildValue("(dddd)", x1, y1, x2, y2);
 }
-#line 232 "canvas.c"
 
 
 static PyObject *
@@ -270,7 +264,6 @@ _wrap_gnome_canvas_scroll_to(PyGObject *self, PyObject *args, PyObject *kwargs)
     return Py_None;
 }
 
-#line 249 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_get_scroll_offsets(PyGObject *self, PyObject *args)
 {
@@ -280,7 +273,6 @@ _wrap_gnome_canvas_get_scroll_offsets(PyGObject *self, PyObject *args)
 
     return Py_BuildValue("(ii)", cx, cy);
 }
-#line 281 "canvas.c"
 
 
 static PyObject *
@@ -305,7 +297,6 @@ _wrap_gnome_canvas_get_item_at(PyGObject *self, PyObject *args, PyObject *kwargs
     return pygobject_new((GObject *)ret);
 }
 
-#line 440 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_w2c_affine(PyGObject *self, PyObject *args) {
     PyObject *py_affine;
@@ -320,10 +311,8 @@ _wrap_gnome_canvas_w2c_affine(PyGObject *self, PyObject *args) {
 
     return gnomecanvasaffine_from_value(affine);
 }
-#line 321 "canvas.c"
 
 
-#line 286 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_w2c(PyGObject *self, PyObject *args, PyObject *kwargs)
 {
@@ -338,10 +327,8 @@ _wrap_gnome_canvas_w2c(PyGObject *self, PyObject *args, PyObject *kwargs)
 
     return Py_BuildValue("(ii)", cx, cy);
 }
-#line 339 "canvas.c"
 
 
-#line 302 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_w2c_d(PyGObject *self, PyObject *args, PyObject *kwargs)
 {
@@ -356,10 +343,8 @@ _wrap_gnome_canvas_w2c_d(PyGObject *self, PyObject *args, PyObject *kwargs)
 
     return Py_BuildValue("(dd)", cx, cy);
 }
-#line 357 "canvas.c"
 
 
-#line 318 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_c2w(PyGObject *self, PyObject *args, PyObject *kwargs)
 {
@@ -374,10 +359,8 @@ _wrap_gnome_canvas_c2w(PyGObject *self, PyObject *args, PyObject *kwargs)
 
     return Py_BuildValue("(dd)", wx, wy);
 }
-#line 375 "canvas.c"
 
 
-#line 334 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_window_to_world(PyGObject *self, PyObject *args,
 				   PyObject *kwargs)
@@ -394,10 +377,8 @@ _wrap_gnome_canvas_window_to_world(PyGObject *self, PyObject *args,
 
     return Py_BuildValue("(dd)", worldx, worldy);
 }
-#line 395 "canvas.c"
 
 
-#line 352 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_world_to_window(PyGObject *self, PyObject *args,
 				   PyObject *kwargs)
@@ -414,7 +395,6 @@ _wrap_gnome_canvas_world_to_window(PyGObject *self, PyObject *args,
 
     return Py_BuildValue("(dd)", winx, winy);
 }
-#line 415 "canvas.c"
 
 
 static PyObject *
@@ -549,7 +529,6 @@ PyTypeObject PyGnomeCanvas_Type = {
 
 /* ----------- GnomeCanvasItem ----------- */
 
-#line 140 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_set (PyGObject *self, PyObject *args,
 			     PyObject *kwargs)
@@ -603,7 +582,6 @@ _wrap_gnome_canvas_item_set (PyGObject *self, PyObject *args,
     Py_INCREF(Py_None);
     return Py_None;
 }
-#line 604 "canvas.c"
 
 
 static PyObject *
@@ -619,7 +597,6 @@ _wrap_gnome_canvas_item_move(PyGObject *self, PyObject *args, PyObject *kwargs)
     return Py_None;
 }
 
-#line 389 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_affine_relative(PyGObject *self, PyObject *args) {
     PyObject *py_affine;
@@ -637,10 +614,8 @@ _wrap_gnome_canvas_item_affine_relative(PyGObject *self, PyObject *args) {
     Py_INCREF(Py_None);
     return Py_None;
 }
-#line 638 "canvas.c"
 
 
-#line 370 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_affine_absolute(PyGObject *self, PyObject *args) {
     PyObject *py_affine;
@@ -658,7 +633,6 @@ _wrap_gnome_canvas_item_affine_absolute(PyGObject *self, PyObject *args) {
     Py_INCREF(Py_None);
     return Py_None;
 }
-#line 659 "canvas.c"
 
 
 static PyObject *
@@ -719,7 +693,6 @@ _wrap_gnome_canvas_item_hide(PyGObject *self)
     return Py_None;
 }
 
-#line 195 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_w2i(PyGObject *self, PyObject *args,
 			    PyObject *kwargs)
@@ -733,10 +706,8 @@ _wrap_gnome_canvas_item_w2i(PyGObject *self, PyObject *args,
 
     return Py_BuildValue("(dd)", x, y);
 }
-#line 734 "canvas.c"
 
 
-#line 210 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_i2w(PyGObject *self, PyObject *args,
 			    PyObject *kwargs)
@@ -750,10 +721,8 @@ _wrap_gnome_canvas_item_i2w(PyGObject *self, PyObject *args,
 
     return Py_BuildValue("(dd)", x, y);
 }
-#line 751 "canvas.c"
 
 
-#line 424 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_i2w_affine(PyGObject *self, PyObject *args) {
     PyObject *py_affine;
@@ -768,10 +737,8 @@ _wrap_gnome_canvas_item_i2w_affine(PyGObject *self, PyObject *args) {
 
     return gnomecanvasaffine_from_value(affine);
 }
-#line 769 "canvas.c"
 
 
-#line 408 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_i2c_affine(PyGObject *self, PyObject *args) {
     PyObject *py_affine;
@@ -786,7 +753,6 @@ _wrap_gnome_canvas_item_i2c_affine(PyGObject *self, PyObject *args) {
 
     return gnomecanvasaffine_from_value(affine);
 }
-#line 787 "canvas.c"
 
 
 static PyObject *
@@ -802,7 +768,6 @@ _wrap_gnome_canvas_item_reparent(PyGObject *self, PyObject *args, PyObject *kwar
     return Py_None;
 }
 
-#line 581 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_grab(PyGObject *self, PyObject *args,
 			     PyObject *kwargs)
@@ -841,7 +806,6 @@ _wrap_gnome_canvas_item_grab(PyGObject *self, PyObject *args,
 
     return PyInt_FromLong(retval);
 }
-#line 842 "canvas.c"
 
 
 static PyObject *
@@ -852,7 +816,6 @@ _wrap_gnome_canvas_item_grab_focus(PyGObject *self)
     return Py_None;
 }
 
-#line 225 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_get_bounds(PyGObject *self, PyObject *args)
 {
@@ -863,7 +826,6 @@ _wrap_gnome_canvas_item_get_bounds(PyGObject *self, PyObject *args)
 
     return Py_BuildValue("(dddd)", x1, y1, x2, y2);
 }
-#line 864 "canvas.c"
 
 
 static PyMethodDef _PyGnomeCanvasItem_methods[] = {
@@ -937,7 +899,6 @@ PyTypeObject PyGnomeCanvasItem_Type = {
 
 /* ----------- GnomeCanvasGroup ----------- */
 
-#line 73 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_item_new (PyGObject *self, PyObject *args,
 			     PyObject *kwargs)
@@ -1003,7 +964,6 @@ _wrap_gnome_canvas_item_new (PyGObject *self, PyObject *args,
 
     return pygobject_new ((GObject *)item);
 }
-#line 1004 "canvas.c"
 
 
 static PyMethodDef _PyGnomeCanvasGroup_methods[] = {
@@ -1011,7 +971,6 @@ static PyMethodDef _PyGnomeCanvasGroup_methods[] = {
     { NULL, NULL, 0 }
 };
 
-#line 456 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_group__get_item_list(PyGObject *self, void *closure)
 {
@@ -1028,7 +987,6 @@ _wrap_gnome_canvas_group__get_item_list(PyGObject *self, void *closure)
     return list;
 }
 
-#line 1029 "canvas.c"
 
 
 static PyGetSetDef gnome_canvas_group_getsets[] = {
@@ -1526,7 +1484,6 @@ PyTypeObject PyGnomeCanvasPolygon_Type = {
 
 /* ----------- GnomeCanvasBpath ----------- */
 
-#line 560 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_bpath_set_bpath(PyGObject *self, PyObject *args, PyObject *kwargs)
 {
@@ -1546,7 +1503,6 @@ _wrap_gnome_canvas_bpath_set_bpath(PyGObject *self, PyObject *args, PyObject *kw
     Py_INCREF(Py_None);
     return Py_None;
 }
-#line 1547 "canvas.c"
 
 
 static PyMethodDef _PyGnomeCanvasBpath_methods[] = {
@@ -1701,7 +1657,6 @@ PyTypeObject PyGnomeCanvasWidget_Type = {
 
 /* ----------- functions ----------- */
 
-#line 474 "canvas.override"
 static PyObject *
 _wrap_gnome_canvas_path_def_new(PyObject *self, PyObject *args)
 {
@@ -1786,7 +1741,6 @@ _wrap_gnome_canvas_path_def_new(PyObject *self, PyObject *args)
     return pyg_boxed_new(GNOME_TYPE_CANVAS_PATH_DEF, path, TRUE, TRUE);
 }
 
-#line 1787 "canvas.c"
 
 
 PyMethodDef pycanvas_functions[] = {
@@ -1836,7 +1790,6 @@ pycanvas_register_classes(PyObject *d)
     }
 
 
-#line 1837 "canvas.c"
     pyg_register_boxed(d, "CanvasPathDef", GNOME_TYPE_CANVAS_PATH_DEF, &PyGnomeCanvasPathDef_Type);
     pygobject_register_class(d, "GnomeCanvas", GNOME_TYPE_CANVAS, &PyGnomeCanvas_Type, Py_BuildValue("(O)", &PyGtkLayout_Type));
     pygobject_register_class(d, "GnomeCanvasItem", GNOME_TYPE_CANVAS_ITEM, &PyGnomeCanvasItem_Type, Py_BuildValue("(O)", &PyGtkObject_Type));

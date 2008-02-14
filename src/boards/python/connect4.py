@@ -32,7 +32,7 @@ import gcompris.bonus
 import gcompris.anim
 import gtk
 import gtk.gdk
-from gettext import gettext as _
+from gcompris import gcompris_gettext as _
 
 from  connect4p import rules
 from  connect4p import human
@@ -76,7 +76,7 @@ class Gcompris_connect4:
             x=0.0,
             y=0.0
             )
-        
+
         pixmap = gcompris.utils.load_pixmap(gcompris.skin.image_to_skin("button_reload.png"))
         if(pixmap):
             gcompris.bar_set_repeat_icon(pixmap)
@@ -84,7 +84,7 @@ class Gcompris_connect4:
         else:
             board_bar = board_bar | gcompris.BAR_REPEAT
         gcompris.bar_set(board_bar)
-        
+
         selector = self.rootitem.add(
             gnomecanvas.CanvasPixbuf,
             pixbuf = gcompris.utils.load_pixmap("connect4/back.png"),
@@ -92,7 +92,7 @@ class Gcompris_connect4:
             y=0.0
             )
         selector.connect("event", self.columnItemEvent, 0)
-        
+
         if self.mode == 1:
             self.prof = self.rootitem.add(
                 gnomecanvas.CanvasPixbuf,
@@ -102,13 +102,13 @@ class Gcompris_connect4:
                 )
             self.prof.connect("event", self.profItemEvent, 0)
             self.prof.connect("event", gcompris.utils.item_event_focus)
-        
+
         self.timericon = gcompris.anim.CanvasItem( gcompris.anim.Animation("connect4/sablier.txt"),
             self.rootitem )
         self.timericon.gnomecanvas.hide()
 
         self.player_stone = None
-        
+
         for i in range(2):
             self.rootitem.add(gnomecanvas.CanvasPixbuf,
                 pixbuf = gcompris.utils.load_pixmap("connect4/stone_%d.png" % (i+1)),
@@ -121,9 +121,9 @@ class Gcompris_connect4:
             y=250,
             justification=gtk.JUSTIFY_CENTER,
             fill_color_rgba=0xFF0000FFL)
-        
+
         self.update_scores((0, 0))
-        
+
         self.newGame()
 
     def end(self):
@@ -159,7 +159,7 @@ class Gcompris_connect4:
         if scores: self.scores = list(scores)
         txt = str(self.scores[0]) + "\n\n" + str(self.scores[1])
         self.score_item.set(text=txt)
-        
+
     def stone_init(self):
         if self.player_stone:
             self.player_stone.destroy()
@@ -170,7 +170,7 @@ class Gcompris_connect4:
             y=-20 )
         self.update_stone2()
     def update_stone2(self):
-        self.player_stone.set_property("x", (gcompris.BOARD_WIDTH - self.boardSize) /2 + 
+        self.player_stone.set_property("x", (gcompris.BOARD_WIDTH - self.boardSize) /2 +
             self.keyb_column * self.boardSize / self.nbColumns)
 
     def key_press(self, keyval, commit_str, preedit_str):
@@ -232,7 +232,7 @@ class Gcompris_connect4:
         self.cur_player = 1
         self.stone_init()
         self.update_stone2()
-        
+
         self.timericon.gnomecanvas.hide()
         if self.mode == 1:
             self.prof.show()
@@ -240,7 +240,7 @@ class Gcompris_connect4:
     def columnItemEvent(self, widget, event, columns):
         if self.mode == 1 and self.cur_player == 2: # AI playing
             return False
-        if self.cur_player == 0 or self.timerAnim:  # Game over or Timer animate 
+        if self.cur_player == 0 or self.timerAnim:  # Game over or Timer animate
             return False
         if event.type == gtk.gdk.BUTTON_PRESS and event.button == 1:
             column = int((event.x - (gcompris.BOARD_WIDTH-self.boardSize)/2.0) // self.stoneSize)
@@ -285,7 +285,7 @@ class Gcompris_connect4:
         if self.mode == 1:
             self.prof.hide()
         move = player.doMove(self.board, numPlayer, column)
-        
+
         if isinstance(move, int) and rules.isMoveLegal(self.board, move):
             self.board.move(move, numPlayer)
             self.drawBoard(self.board)
@@ -297,7 +297,7 @@ class Gcompris_connect4:
         x = self.board.last_move
         y = len(self.board.state[self.board.last_move])-1
         file = "connect4/stone_%d.png" % stone
-        
+
         self.stone = self.boardItem.add(
             gnomecanvas.CanvasPixbuf,
             pixbuf = gcompris.utils.load_pixmap(file),
@@ -334,17 +334,17 @@ class Gcompris_connect4:
         if player == 0:
             gcompris.bonus.display(gcompris.bonus.DRAW, gcompris.bonus.FLOWER)
             return
-   
+
         # Display the winner line
         self.scores[player-1] += 1
         self.update_scores()
-        
+
         points = ( self.winLine[0][0]*(self.boardSize/self.nbColumns)+self.stoneSize/2,
                 (self.boardSize/self.nbColumns)*(self.nbLines-1-self.winLine[0][1])+self.stoneSize/2,
                 self.winLine[1][0]*(self.boardSize/self.nbColumns)+self.stoneSize/2,
                 (self.boardSize/self.nbColumns)*(self.nbLines-1-self.winLine[1][1])+self.stoneSize/2
                 )
-        
+
         self.redLine = self.boardItem.add(
             gnomecanvas.CanvasLine,
             fill_color_rgba=0xFF0000FFL,

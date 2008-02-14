@@ -25,7 +25,7 @@ import gcompris.score
 import gtk
 import gtk.gdk
 import random
-from gettext import gettext as _
+from gcompris import gcompris_gettext as _
 
 class Gcompris_sudoku:
   """Sudoku game"""

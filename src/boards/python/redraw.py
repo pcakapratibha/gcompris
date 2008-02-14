@@ -18,7 +18,6 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
-from gettext import gettext as _
 # PythonTest Board module
 import gnomecanvas
 import gcompris
@@ -30,6 +29,7 @@ import gtk
 import gtk.gdk
 import copy
 import math
+from gcompris import gcompris_gettext as _
 
 class Gcompris_redraw:
   """The Re-drawing activity"""

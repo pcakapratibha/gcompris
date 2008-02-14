@@ -1,5 +1,76 @@
 	*** RELEASE 8.3.5 ***
 
+2008-02-13  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	boards/sounds/<locale>: removed to point to the new common
+	svn version instead. Now make update-voices is used to put
+	them in the current working directory. It must be updated
+	before a make dist.
+
+	Merge of trunk 3242
+	Windows issue. Translation was broken in all python modules.
+	Now use the gcompris gettext instead of the python one.
+
+	* README.mingw:
+	* src/boards/python/admin/board_list.py:
+	* src/boards/python/admin/class_edit.py:
+	* src/boards/python/admin/class_list.py:
+	* src/boards/python/admin/group_edit.py:
+	* src/boards/python/admin/group_list.py:
+	* src/boards/python/admin/group_user_list.py:
+	* src/boards/python/admin/log_list.py:
+	* src/boards/python/admin/module.py:
+	* src/boards/python/admin/module_boards.py:
+	* src/boards/python/admin/module_groups.py:
+	* src/boards/python/admin/module_profiles.py:
+	* src/boards/python/admin/module_reports.py:
+	* src/boards/python/admin/module_users.py:
+	* src/boards/python/admin/profile_edit.py:
+	* src/boards/python/admin/profile_group_list.py:
+	* src/boards/python/admin/profile_list.py:
+	* src/boards/python/admin/user_edit.py:
+	* src/boards/python/admin/user_list.py:
+	* src/boards/python/admin/wordlist.py:
+	* src/boards/python/administration.py:
+	* src/boards/python/anim.py:
+	* src/boards/python/ballcatch.py:
+	* src/boards/python/chat.py:
+	* src/boards/python/connect4.py:
+	* src/boards/python/followline.py:
+	* src/boards/python/gnumch.py:
+	* src/boards/python/login.py:
+	* src/boards/python/redraw.py:
+	* src/boards/python/searace.py:
+	* src/boards/python/sudoku.py:
+	* src/boards/python/tuxpaint.py:
+	* src/boards/python/writing_tutor_image_match.py:
+	* src/boards/python/writing_tutor_missing_match.py:
+	* src/boards/python/writing_tutor_pattern_admin.py:
+	* src/boards/python/writing_tutor_template_match.py:
+
+
+	Merged from GCompris trunk 3238:
+	* src/boards/canvas.c: (_wrap_gnome_canvas_new),
+	(_wrap_gnome_canvas_get_scroll_region),
+	(_wrap_gnome_canvas_get_scroll_offsets),
+	(_wrap_gnome_canvas_w2c_affine), (_wrap_gnome_canvas_w2c),
+	(_wrap_gnome_canvas_w2c_d), (_wrap_gnome_canvas_c2w),
+	(_wrap_gnome_canvas_window_to_world),
+	(_wrap_gnome_canvas_world_to_window),
+	(_wrap_gnome_canvas_item_set),
+	(_wrap_gnome_canvas_item_affine_relative),
+	(_wrap_gnome_canvas_item_affine_absolute),
+	(_wrap_gnome_canvas_item_w2i), (_wrap_gnome_canvas_item_i2w),
+	(_wrap_gnome_canvas_item_i2w_affine),
+	(_wrap_gnome_canvas_item_i2c_affine),
+	(_wrap_gnome_canvas_item_grab),
+	(_wrap_gnome_canvas_item_get_bounds),
+	(_wrap_gnome_canvas_item_new),
+	(_wrap_gnome_canvas_bpath_set_bpath), (pycanvas_register_classes): removed useless #line
+	  and confusing #line directive.
+	* src/boards/python/mosaic.py: fixed a major bug. this activity was making GCompris
+	  crash one you clicked on the grey target button.
+
 2008-02-12  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/gcompris/config.c: Added support for Urdu
