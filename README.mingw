@@ -66,6 +66,7 @@ GNUCHESS_TOP :=		/gnuchess
 
 3: BUILDING GCOMPRIS.EXE
 ========================
+* On GNU/Linux run make install to install the translations.
 * On a GNU/Linux system, create gcompris-win-prepack.tar.gz with:
   make -f Makefile.mingw prep
 * Now on the windows system:
@@ -79,7 +80,7 @@ GNUCHESS_TOP :=		/gnuchess
 
 the win32-install-dir should contain anything needed to run and package GCompris.
 
-* run make -f Makefile.make installer to create the installer
+* run make -f Makefile.mingw installer to create the installer
   The installer used is NSIS get it there:
   http://nsis.sourceforge.net/Main_Page
   And install it in it's default /c/Program Files/NSIS/makensis.exe
