@@ -1,4 +1,4 @@
-# translation of gcompris.HEAD.po to Basque
+# translation of eu.po to Basque
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -7,10 +7,10 @@
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gcompris.HEAD\n"
+"Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-29 16:45+0100\n"
-"PO-Revision-Date: 2008-01-29 11:11+0100\n"
+"POT-Creation-Date: 2008-02-16 19:05+0100\n"
+"PO-Revision-Date: 2008-02-16 19:05+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -448,8 +448,7 @@ msgstr ""
 
 #: ../boards/algebra_guesscount.xml.in.h:4
 msgid "Find the series of correct operations that matches the given answer"
-msgstr ""
-"Aurkitu eragiketa zuzenen serieak emandako erantzunarekin bat etortzeko"
+msgstr "Aurkitu eragiketa zuzenen serieak emandako erantzunarekin bat etortzeko"
 
 #: ../boards/algebra_guesscount.xml.in.h:5
 msgid "The four arithmetic operations. Combine several arithmetic operations."
@@ -459,8 +458,7 @@ msgstr "Lau eragiketa aritmetikoak. Konbinatu hainbat eragiketa aritmetiko."
 msgid ""
 "Work out the right combination of numbers and operations to match the given "
 "value"
-msgstr ""
-"Aurkitu zenbakien eta eragileen konbinazio egokia emaitza jakin bat lortzeko"
+msgstr "Aurkitu zenbakien eta eragileen konbinazio egokia emaitza jakin bat lortzeko"
 
 #: ../boards/algebra_minus.xml.in.h:1
 msgid ""
@@ -720,8 +718,7 @@ msgstr "Osatu puzzlea"
 msgid ""
 "Complete the puzzle by dragging each piece from the set of pieces on the "
 "left, to the matching space in the puzzle."
-msgstr ""
-"Osatu puzzlea ezkerreko pieza-multzoko piezak puzzleko hutsunera arrastatuz."
+msgstr "Osatu puzzlea ezkerreko pieza-multzoko piezak puzzleko hutsunera arrastatuz."
 
 #: ../boards/babyshapes.xml.in.h:3
 msgid "Drag and Drop the shapes on their respective targets"
@@ -1135,8 +1132,7 @@ msgstr "Mugimendu-koordinazioa: sagua mugitzea eta saguarekin klik egitea."
 
 #: ../boards/clickgame.xml.in.h:6
 msgid "Use the left mouse button to click on the moving fish."
-msgstr ""
-"Erabili saguaren ezkerreko botoia mugitzen ari den arrainean klik egiteko."
+msgstr "Erabili saguaren ezkerreko botoia mugitzen ari den arrainean klik egiteko."
 
 #: ../boards/clockgame.xml.in.h:1
 msgid ""
@@ -1406,8 +1402,7 @@ msgstr "Elektrizitatea"
 
 #: ../boards/electric.xml.in.h:4
 msgid "Freely create an electric schema with a real time simulation of it."
-msgstr ""
-"Sortu eskema elektriko bat denbora errealeko simuladore batekin bertan."
+msgstr "Sortu eskema elektriko bat denbora errealeko simuladore batekin bertan."
 
 #: ../boards/electric.xml.in.h:5
 msgid ""
@@ -1483,8 +1478,7 @@ msgstr "Egin klik laukizuzenetan saguarekin bloke guztiak desagertu arte."
 
 #: ../boards/erase_clic.xml.in.h:4
 msgid "Click the mouse to erase the area and discover the background"
-msgstr ""
-"Egin klik saguarekin area garbitzeko eta atzeko planoko irudia ikusteko"
+msgstr "Egin klik saguarekin area garbitzeko eta atzeko planoko irudia ikusteko"
 
 #: ../boards/experience.xml.in.h:1
 msgid "Go to experiential activities"
@@ -1511,10 +1505,8 @@ msgstr ""
 "trukatuko da."
 
 #: ../boards/fifteen.xml.in.h:3
-msgid ""
-"Move each item to make an increasing series: from the smallest to the largest"
-msgstr ""
-"Aldatu elementu bakoitza lekuz serieak handitzeko: txikienetik handienera"
+msgid "Move each item to make an increasing series: from the smallest to the largest"
+msgstr "Aldatu elementu bakoitza lekuz serieak handitzeko: txikienetik handienera"
 
 #: ../boards/fifteen.xml.in.h:4
 msgid "Original code taken from the libgnomecanvas demo"
@@ -2770,8 +2762,7 @@ msgstr ""
 "ezkerreko botoi gorrian, edo eskuineko botoi berdean."
 
 #: ../boards/login.xml.in.h:1
-msgid ""
-"GCompris identifies each child, so we can provide child-specific reports."
+msgid "GCompris identifies each child, so we can provide child-specific reports."
 msgstr ""
 "GCompris-ek haur bakoitza identifikatzen du, eta haur bakoitzeko txosten "
 "zehatza eman diezazuke."
@@ -3659,8 +3650,7 @@ msgstr "Zenbatzeko ariketak."
 
 #: ../boards/oscar_and_friends.xml.in.h:1
 msgid "Improve reading skill and the ability to understand what is read."
-msgstr ""
-"Hobetu irakurtzeko trebetasuna eta irakurtzen dena ulertzeko gaitasuna."
+msgstr "Hobetu irakurtzeko trebetasuna eta irakurtzen dena ulertzeko gaitasuna."
 
 #: ../boards/oscar_and_friends.xml.in.h:2
 msgid "Read and play with the story"
@@ -3686,8 +3676,7 @@ msgstr "Arrastatu eta jaregin piezak jatorrizko koadroak osatzeko"
 msgid ""
 "Drag the image parts from the box on the left to create a painting on the "
 "main board."
-msgstr ""
-"Arrastatu ezkerrean dauden irudien piezak arbel nagusian koadroa osatzeko."
+msgstr "Arrastatu ezkerrean dauden irudien piezak arbel nagusian koadroa osatzeko."
 
 #: ../boards/paintings.xml.in.h:4
 msgid "Mouse-manipulation: movement, drag and drop"
@@ -3807,10 +3796,8 @@ msgid "Python Template"
 msgstr "Python-en txantiloia"
 
 #: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
-msgid ""
-"Thanks to Guido van Rossum and the python team for this powerful language!"
-msgstr ""
-"Mila esker Guido van Rossum eta python taldeari lengoaia ahaltsu honengatik!"
+msgid "Thanks to Guido van Rossum and the python team for this powerful language!"
+msgstr "Mila esker Guido van Rossum eta python taldeari lengoaia ahaltsu honengatik!"
 
 #: ../boards/pythontest.xml.in.h:3
 msgid "Python Test"
@@ -4237,8 +4224,7 @@ msgid "Sudoku, place unique symbols in a square."
 msgstr "Sudoku, jarri ikur bakarrak karratuan."
 
 #: ../boards/sudoku.xml.in.h:4
-msgid ""
-"Symbols must be unique in a row, in a column, and (if defined) each region."
+msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
 msgstr ""
 "Ikurrak bakarrak izan behar dute lerroko, zutabeko, eta (definituta balego) "
 "eskualde bakoitzean."
@@ -4278,8 +4264,7 @@ msgstr "Super Garuna"
 
 #: ../boards/superbrain.xml.in.h:3 ../src/boards/superbrain.c:106
 msgid "Tux has hidden several items. Find them again in the correct order"
-msgstr ""
-"Tux-ek gauza batzuk ezkutatu ditu. Aurki itzazu, eta jarri dagokien ordenan"
+msgstr "Tux-ek gauza batzuk ezkutatu ditu. Aurki itzazu, eta jarri dagokien ordenan"
 
 #: ../boards/tangram.xml.in.h:1
 msgid ""
@@ -4338,8 +4323,7 @@ msgid "The tangram puzzle game"
 msgstr "Tangram puzzle jokoa"
 
 #: ../boards/target.xml.in.h:1
-msgid ""
-"Can move the mouse, can read numbers and count up to 15 for the first level"
+msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
 msgstr ""
 "Sagua mugitu ahal izatea, eta zenbatzen eta 15era arte kontatzen jakitea "
 "lehenengo mailan"
@@ -4762,8 +4746,7 @@ msgid ""
 msgstr "Begiratu ondo non zauden eta itzuli ikusezin modura mugitzeko"
 
 #: ../src/boards/maze.c:493
-msgid ""
-"Look at your position, then switch back to 3D mode to continue your moves"
+msgid "Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "Begiratu ondo non zauden eta itzuli 3D modura mugitzeko"
 
 #: ../src/boards/memory.c:263
@@ -4870,59 +4853,58 @@ msgstr "Iragazi arbelen zailtasuna %s profilarentzat"
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
 "for profile <b>%s</b></span>"
-msgstr ""
-"<span size='x-large'>Hautatu <b>%s</b> profilaren zailtasun barrutia</span>"
+msgstr "<span size='x-large'>Hautatu <b>%s</b> profilaren zailtasun barrutia</span>"
 
-#: ../src/boards/python/admin/class_edit.py:59
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "Editatu klasea"
 
-#: ../src/boards/python/admin/class_edit.py:64
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "Editatu klasea:"
 
-#: ../src/boards/python/admin/class_edit.py:67
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "Editatu klase berria"
 
-#: ../src/boards/python/admin/class_edit.py:89
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "Klasea:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:102
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "Irakaslea:"
 
-#: ../src/boards/python/admin/class_edit.py:112
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "Esleitu klase honi dagozkion erabiltzaile guztiak"
 
-#: ../src/boards/python/admin/class_edit.py:252
-#: ../src/boards/python/admin/group_edit.py:264
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:153
 #: ../src/boards/python/admin/user_list.py:195
 msgid "First Name"
 msgstr "Izena"
 
-#: ../src/boards/python/admin/class_edit.py:263
-#: ../src/boards/python/admin/group_edit.py:275
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:163
 #: ../src/boards/python/admin/user_list.py:205
 msgid "Last Name"
 msgstr "Abizena"
 
-#: ../src/boards/python/admin/class_edit.py:340
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "Klasearen izena eman behar duzu gutxienez"
 
-#: ../src/boards/python/admin/class_edit.py:386
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "Izen berdineko klasea badago lehendik ere"
 
 #: ../src/boards/python/admin/class_list.py:168
-#: ../src/boards/python/admin/profile_edit.py:268
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:143
 msgid "Class"
 msgstr "Klasea"
@@ -4931,43 +4913,43 @@ msgstr "Klasea"
 msgid "Teacher"
 msgstr "Irakaslea"
 
-#: ../src/boards/python/admin/group_edit.py:59
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "Editatu taldea"
 
-#: ../src/boards/python/admin/group_edit.py:65
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "Editatu taldea:"
 
-#: ../src/boards/python/admin/group_edit.py:66
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr " klasearena:"
 
-#: ../src/boards/python/admin/group_edit.py:69
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "Editatu talde berria"
 
-#: ../src/boards/python/admin/group_edit.py:89
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "Taldea:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:101
-#: ../src/boards/python/admin/profile_edit.py:97
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "Azalpena:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:112
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "Esleitu taldeari dagozkion erabiltzaile guztiak"
 
-#: ../src/boards/python/admin/group_edit.py:358
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "Taldearen izena eman behar duzu gutxienez"
 
-#: ../src/boards/python/admin/group_edit.py:372
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "Izen berdineko talde bat badago lehendik ere"
 
@@ -4976,13 +4958,13 @@ msgid "Select a class:"
 msgstr "Hautatu klasea:"
 
 #: ../src/boards/python/admin/group_list.py:213
-#: ../src/boards/python/admin/profile_edit.py:278
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:153
 msgid "Group"
 msgstr "Taldea"
 
 #: ../src/boards/python/admin/group_list.py:224
-#: ../src/boards/python/admin/profile_edit.py:288
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:163
 #: ../src/boards/python/admin/profile_list.py:197
 msgid "Description"
@@ -5078,32 +5060,32 @@ msgstr "Erabiltzaileak"
 msgid "Classes"
 msgstr "Klaseak"
 
-#: ../src/boards/python/admin/profile_edit.py:58
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "Editatu profila"
 
-#: ../src/boards/python/admin/profile_edit.py:63
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "Editatu profila:"
 
-#: ../src/boards/python/admin/profile_edit.py:66
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "Editatu profila berria"
 
-#: ../src/boards/python/admin/profile_edit.py:85
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "Profila:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:108
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "Esleitu profilari dagozkion talde guztiak"
 
-#: ../src/boards/python/admin/profile_edit.py:376
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "Profilaren izena eman behar duzu gutxienez"
 
-#: ../src/boards/python/admin/profile_edit.py:398
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "Izen berdineko profila bat badago lehendik ere"
 
@@ -5115,46 +5097,45 @@ msgstr "Profila"
 msgid "[Default]"
 msgstr "[lehenetsia]"
 
-#: ../src/boards/python/admin/user_edit.py:49
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "Editatu erabiltzailea"
 
-#: ../src/boards/python/admin/user_edit.py:54
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "Editatu erabiltzailea"
 
-#: ../src/boards/python/admin/user_edit.py:60
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "Editatu erabiltzaile berria"
 
-#: ../src/boards/python/admin/user_edit.py:77
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "Erabiltzaile-izena:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:88
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "Izena:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:97
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "Deitura:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:106
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "Jaioteguna:"
 
-#: ../src/boards/python/admin/user_edit.py:158
-msgid ""
-"You need to provide at least a login, first name and last name for your users"
+#: ../src/boards/python/admin/user_edit.py:159
+msgid "You need to provide at least a login, first name and last name for your users"
 msgstr ""
 "Zure erabiltzaileen izena, deitura eta erabiltzaile-izena eman behar dituzu "
 "gutxienez"
 
-#: ../src/boards/python/admin/user_edit.py:175
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "Erabiltzaile-izen hau badago lehendik ere"
 
@@ -5426,13 +5407,11 @@ msgstr ""
 "beraien gainean dagoen eguraldi txarrari begira."
 
 #: ../src/boards/python/oscar_and_friends.py:117
-msgid ""
-"They were all happy that the storms never reached all the way down to them."
+msgid "They were all happy that the storms never reached all the way down to them."
 msgstr "Pozik daude ekaitzak ez dielako inoiz harrapatuko."
 
 #: ../src/boards/python/oscar_and_friends.py:118
-msgid ""
-"No matter how bad it was up there, the bottom was always calm and quiet."
+msgid "No matter how bad it was up there, the bottom was always calm and quiet."
 msgstr ""
 "Berdin zion nolako txarra zegoen goian, azpian beti egoten zen barealdi eta "
 "baketsu."
@@ -5737,7 +5716,7 @@ msgstr ""
 "argitaratu da"
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:473 ../src/gcompris/config.c:483
+#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -6028,42 +6007,46 @@ msgid "Turkish"
 msgstr "Turkiera"
 
 #: ../src/gcompris/config.c:117
+msgid "Urdu"
+msgstr "Urdu"
+
+#: ../src/gcompris/config.c:118
 msgid "Vietnamese"
 msgstr "Vietnamera"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Walloon"
 msgstr "Waloiera"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Chinese (Simplified)"
 msgstr "Txinera (erraztua)"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Chinese (Traditional)"
 msgstr "Txinatar tradizionala"
 
-#: ../src/gcompris/config.c:125
+#: ../src/gcompris/config.c:126
 msgid "No time limit"
 msgstr "Denbora-mugarik ez"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:127
 msgid "Slow timer"
 msgstr "Kronometro motela"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "Normal timer"
 msgstr "Kronometro normala"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Fast timer"
 msgstr "Kronometro bizkorra"
 
-#: ../src/gcompris/config.c:133
+#: ../src/gcompris/config.c:134
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Gcompris-en lehenetsia)"
 
-#: ../src/gcompris/config.c:138
+#: ../src/gcompris/config.c:139
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6071,38 +6054,38 @@ msgstr ""
 "<i>Erabili GCompris-en administrazio-modulua\n"
 "arbelak iragazteko</i>"
 
-#: ../src/gcompris/config.c:193 ../src/gcompris/config.c:203
+#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
 msgid "GCompris Configuration"
 msgstr "GCompris-en konfigurazioa"
 
-#: ../src/gcompris/config.c:279
+#: ../src/gcompris/config.c:280
 msgid "Fullscreen"
 msgstr "Pantaila osoa"
 
-#: ../src/gcompris/config.c:322
+#: ../src/gcompris/config.c:323
 msgid "Music"
 msgstr "Musika"
 
-#: ../src/gcompris/config.c:350
+#: ../src/gcompris/config.c:351
 msgid "Effect"
 msgstr "Efektua"
 
-#: ../src/gcompris/config.c:386
+#: ../src/gcompris/config.c:387
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Ezin izan da direktorioa ireki: %s"
 
-#: ../src/gcompris/config.c:417 ../src/gcompris/config.c:867
-#: ../src/gcompris/config.c:881
+#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
+#: ../src/gcompris/config.c:882
 #, c-format
 msgid "Skin : %s"
 msgstr "Azala: %s"
 
-#: ../src/gcompris/config.c:419
+#: ../src/gcompris/config.c:420
 msgid "SKINS NOT FOUND"
 msgstr "AZALIK EZ DA AURKITU"
 
-#: ../src/gcompris/config.c:544
+#: ../src/gcompris/config.c:545
 msgid "English (United State)"
 msgstr "Ingelesa (Ameriketako Estatu Batuak)"
 
@@ -6192,8 +6175,7 @@ msgstr "Exekutatu gcompris menuan gehitutako jardueren direktorio lokalarekin"
 
 #: ../src/gcompris/gcompris.c:174
 msgid "Run GCompris in administration and user-management mode"
-msgstr ""
-"Exekutatu GCompris administratzeko eta erabiltzaileak kudeatzeko moduan"
+msgstr "Exekutatu GCompris administratzeko eta erabiltzaileak kudeatzeko moduan"
 
 #: ../src/gcompris/gcompris.c:177
 msgid ""
@@ -6268,15 +6250,13 @@ msgstr ""
 "aurrenik. Datuak beti web zerbitzaritik hartuko dira."
 
 #: ../src/gcompris/gcompris.c:220
-msgid ""
-"In server mode, specify the cache directory used to avoid useless downloads."
+msgid "In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 "Zerbitzari moduan, zehaztu cache-aren direktorioa deskarga erabilkaitzak "
 "saihesteko."
 
 #: ../src/gcompris/gcompris.c:223
-msgid ""
-"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
+msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
 msgstr ""
 "Arrastatu eta jaregiteko modu globala: arrunta, 2 klik, biak. Lehenetsia "
 "modu arrunta da."
@@ -6315,8 +6295,7 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:1445
 #, c-format
-msgid ""
-"GCompris won't start because the lock file is less than %d seconds old.\n"
+msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr ""
 "GCompris ez da abiatuko blokeoko fitxategia %d segundo baino gutxiagokoa "
 "delako.\n"
@@ -6387,8 +6366,7 @@ msgstr "irakhau"
 msgid ""
 "This directory contains the files you create with the GCompris educational "
 "suite\n"
-msgstr ""
-"Direktorio honek GCompris suite hezigarriarekin sortutako fitxategiak ditu.\n"
+msgstr "Direktorio honek GCompris suite hezigarriarekin sortutako fitxategiak ditu.\n"
 
 #: ../src/gcompris/properties.c:511
 msgid ""
@@ -6408,3 +6386,4 @@ msgstr "Igarotako denbora:"
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "Geratzen den denbora = %d"
+
