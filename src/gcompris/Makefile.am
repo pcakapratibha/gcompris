@@ -126,7 +126,7 @@ gcompris_LDFLAGS = \
 
 gcompris_LDADD = \
 	$(GCOMPRIS_LIBS) $(sqlite_ldadd) $(XML_LIBS) $(GNET_LIBS) \
-        $(INTLLIBS) $(NSBUNDLE_LDFLAGS)
+        $(INTLLIBS) $(NSBUNDLE_LDFLAGS) $(XF86VM_LIBS)
 
 EXTRA_DIST = \
 	Makefile.mingw gcomprisrc.rc

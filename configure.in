@@ -183,8 +183,7 @@ if test "x$USE_XF86VM" == "xyes" ; then
   fi
 fi
 
-#LDFLAGS="-Wl,--as-needed ${LDFLAGS} ${XF86VM_LIBS}"
-LDFLAGS="${LDFLAGS} ${XF86VM_LIBS}"
+AC_SUBST(XF86VM_LIBS)
 
 dnl Add the languages which your application supports here.
 ALL_LINGUAS="af am ar ar_TN az bg br ca cs da de dz el en_CA en_GB es et eu fi fr ga gl gu he hi hr hu id it ja ka ko lt mk ml mr ms nb ne nl nn oc pa pl pt pt_BR ro ru rw sk sl so sq sr sr@Latn sv ta th tr ur vi wa zh_CN zh_TW"

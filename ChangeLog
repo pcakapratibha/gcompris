@@ -1,3 +1,10 @@
+2008-02-18  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* configure.in: now put libxf86vm in a separate variable and no more use
+	  it to compile plugins (only core need it).
+	* src/gcompris/Makefile.am: -
+	* boards/voices/nn: created a link to nb voices until we get a voice set.
+
 2008-02-14  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Windows issue. Translation was broken in all python modules.
