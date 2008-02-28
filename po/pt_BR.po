@@ -1,23 +1,25 @@
 # Brazilian Portuguese translation of GCompris
 # This file is distributed under the same license as the gcompris packages.
+#
 # Rodrigo Lima <rdlima@terra.com.br>, 2004.
 # Viviani Ap. dos Santos <vivi_olivetti@brfree.com.br>, 2004.
 # Welther José O. Esteves <weltherjoe@yahoo.com.br>, 2004.
-# Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2006, 2007.
 # Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2007.
+# Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2006-2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gcompris\n"
+"Project-Id-Version: GCompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-22 20:17-0300\n"
-"PO-Revision-Date: 2007-09-16 00:22-0300\n"
-"Last-Translator: Frederico Gonçalves Guimarães <frederico@teia.bio.br>\n"
-"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"POT-Creation-Date: 2008-02-27 23:34-0300\n"
+"PO-Revision-Date: 2008-02-27 23:34-0300\n"
+"Last-Translator: Frederico Goncalves Guimaraes <frederico@teia.bio.br>\n"
+"Language-Team: Brazilian Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n > 1);\n"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -2183,6 +2185,10 @@ msgstr "Distritos orientais da Turquia"
 msgid "Counties of Norway"
 msgstr "Condados da Noruega"
 
+#: ../boards/geography_country/board7_0.xml.in.h:1
+msgid "Counties of Brazil"
+msgstr "Estados do Brasil"
+
 #: ../boards/geometry.xml.in.h:1
 msgid "Geometry"
 msgstr "Geometria"
@@ -2199,11 +2205,11 @@ msgstr "Manipulação do teclado"
 msgid "Letter association between the screen and the keyboard"
 msgstr "Reconhecimento, no teclado, das letras que aparecem na tela"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:133
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "Letras cadentes"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:134
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "Digite a letra que está caindo antes que ela atinja o chão"
 
@@ -3787,7 +3793,7 @@ msgstr "Movimente o helicóptero para capturar as nuvens na ordem correta"
 msgid "Number"
 msgstr "Número"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:73
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "Números em ordem"
 
@@ -4442,7 +4448,7 @@ msgstr ""
 "Tux voltou de uma longa pescaria em seu barco. Faça o sistema de água voltar "
 "a funcionar para que ele possa tomar um banho."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:109
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:108
 msgid "Falling Words"
 msgstr "Palavras cadentes"
 
@@ -4454,7 +4460,7 @@ msgstr "Treinar com o teclado"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "Digite a palavra completa, antes que ela chegue no chão"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:110
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:109
 msgid "Type the falling words before they reach the ground"
 msgstr "Digite as palavras que estão caindo antes que elas cheguem ao chão"
 
@@ -4619,7 +4625,7 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:230
+#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:232
 #: ../src/boards/memory.c:832
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijlmnopqrstuvxz"
@@ -4651,14 +4657,14 @@ msgstr ""
 #. the returned value is the main GtkVBox of the window,
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:622 ../src/boards/colors.c:164
-#: ../src/boards/gletters.c:856 ../src/boards/imageid.c:748
+#: ../src/boards/gletters.c:858 ../src/boards/imageid.c:748
 #: ../src/boards/missingletter.c:770
 #: ../src/boards/python/admin/board_list.py:640
 #: ../src/boards/python/admin/board_list.py:658
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1847 ../src/boards/smallnumbers.c:589
+#: ../src/boards/shapegame.c:1848 ../src/boards/smallnumbers.c:591
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4668,7 +4674,7 @@ msgstr ""
 " para o perfil <b>%s</b>"
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:889
+#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:891
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "Somente texto em maiúsculas"
@@ -4718,21 +4724,21 @@ msgid "Click on the white duck"
 msgstr "Clique no pato branco"
 
 #: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:670
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:609
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:611
 msgid "Select sound locale"
 msgstr "Selecione o idioma do som"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:226 ../src/boards/memory.c:828
+#: ../src/boards/gletters.c:228 ../src/boards/memory.c:828
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:236 ../src/boards/memory.c:838
+#: ../src/boards/gletters.c:238 ../src/boards/memory.c:838
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:885 ../src/boards/smallnumbers.c:607
+#: ../src/boards/gletters.c:887 ../src/boards/smallnumbers.c:609
 msgid "Enable sounds"
 msgstr "Habilitar sons"
 
@@ -4811,12 +4817,12 @@ msgstr "R$ %.2f"
 msgid "$ %.0f"
 msgstr "R$ %.0f"
 
-#: ../src/boards/paratrooper.c:436
+#: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
 msgstr ""
 "Controle a velocidade da queda com as teclas de seta para cima e para baixo."
 
-#: ../src/boards/planegame.c:74
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "Movimente o avião para capturar as nuvens na ordem correta"
 
@@ -4893,56 +4899,56 @@ msgstr ""
 "<span size=\"x-large\"> Selecione a faixa de dificuldade \n"
 "para o perfil <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:59
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "Edição de turma"
 
-#: ../src/boards/python/admin/class_edit.py:64
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "Editando a turma: "
 
-#: ../src/boards/python/admin/class_edit.py:67
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "Edição de uma nova turma"
 
-#: ../src/boards/python/admin/class_edit.py:89
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "Turma:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:102
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "Professor:"
 
-#: ../src/boards/python/admin/class_edit.py:112
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "Informe os usuários dessa turma"
 
-#: ../src/boards/python/admin/class_edit.py:252
-#: ../src/boards/python/admin/group_edit.py:264
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:153
 #: ../src/boards/python/admin/user_list.py:195
 msgid "First Name"
 msgstr "Primeiro nome"
 
-#: ../src/boards/python/admin/class_edit.py:263
-#: ../src/boards/python/admin/group_edit.py:275
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:163
 #: ../src/boards/python/admin/user_list.py:205
 msgid "Last Name"
 msgstr "Sobrenome"
 
-#: ../src/boards/python/admin/class_edit.py:340
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "Você precisa fornecer ao menos o nome da turma"
 
-#: ../src/boards/python/admin/class_edit.py:386
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "Já existe uma turma com esse nome"
 
 #: ../src/boards/python/admin/class_list.py:168
-#: ../src/boards/python/admin/profile_edit.py:268
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:143
 msgid "Class"
 msgstr "Turma"
@@ -4951,43 +4957,43 @@ msgstr "Turma"
 msgid "Teacher"
 msgstr "Professor"
 
-#: ../src/boards/python/admin/group_edit.py:59
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "Edição de grupo"
 
-#: ../src/boards/python/admin/group_edit.py:65
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "Editando o grupo: "
 
-#: ../src/boards/python/admin/group_edit.py:66
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr " for a turma: "
 
-#: ../src/boards/python/admin/group_edit.py:69
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "Edição de um novo grupo"
 
-#: ../src/boards/python/admin/group_edit.py:89
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "Grupo:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:101
-#: ../src/boards/python/admin/profile_edit.py:97
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "Descrição:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:112
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "Informe os usuários pertencentes a esse grupo"
 
-#: ../src/boards/python/admin/group_edit.py:358
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "Você precisa fornecer ao menos o nome do grupo"
 
-#: ../src/boards/python/admin/group_edit.py:372
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "Já existe um grupo com esse nome"
 
@@ -4996,13 +5002,13 @@ msgid "Select a class:"
 msgstr "Selecione uma turma:"
 
 #: ../src/boards/python/admin/group_list.py:213
-#: ../src/boards/python/admin/profile_edit.py:278
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:153
 msgid "Group"
 msgstr "Grupo"
 
 #: ../src/boards/python/admin/group_list.py:224
-#: ../src/boards/python/admin/profile_edit.py:288
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:163
 #: ../src/boards/python/admin/profile_list.py:197
 msgid "Description"
@@ -5098,32 +5104,32 @@ msgstr "Usuários"
 msgid "Classes"
 msgstr "Turmas"
 
-#: ../src/boards/python/admin/profile_edit.py:58
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "Edição de perfil"
 
-#: ../src/boards/python/admin/profile_edit.py:63
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "Editando o perfil: "
 
-#: ../src/boards/python/admin/profile_edit.py:66
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "Edição de um novo perfil"
 
-#: ../src/boards/python/admin/profile_edit.py:85
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "Perfil:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:108
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "Informe os grupos pertencentes a esse perfil"
 
-#: ../src/boards/python/admin/profile_edit.py:376
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "Você precisa fornecer ao menos o nome do perfil"
 
-#: ../src/boards/python/admin/profile_edit.py:398
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "Já existe um perfil com esse nome"
 
@@ -5135,46 +5141,46 @@ msgstr "Perfil"
 msgid "[Default]"
 msgstr "[Padrão]"
 
-#: ../src/boards/python/admin/user_edit.py:49
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "Edição de usuário"
 
-#: ../src/boards/python/admin/user_edit.py:54
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "Editando um usuário "
 
-#: ../src/boards/python/admin/user_edit.py:60
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "Edição de um novo usuário"
 
-#: ../src/boards/python/admin/user_edit.py:77
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "Login:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:88
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "Primeiro nome:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:97
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "Sobrenome:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:106
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "Data de nascimento:"
 
-#: ../src/boards/python/admin/user_edit.py:158
+#: ../src/boards/python/admin/user_edit.py:159
 msgid ""
 "You need to provide at least a login, first name and last name for your users"
 msgstr ""
 "Você precisa fornecer ao menos o login, o primeiro nome e o sobrenome para o "
 "seu usuário"
 
-#: ../src/boards/python/admin/user_edit.py:175
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "Já existe um usuário com esse login"
 
@@ -5647,10 +5653,12 @@ msgid "The word to find was '%s'"
 msgstr "A palavra a ser encontrada era \"%s\""
 
 #: ../src/boards/reading.c:685
+#, c-format
 msgid "But it was not displayed"
 msgstr "Mas ela não foi exibida"
 
 #: ../src/boards/reading.c:687
+#, c-format
 msgid "And it was displayed"
 msgstr "E ela foi exibida"
 
@@ -5762,7 +5770,7 @@ msgstr ""
 "Este software é um Pacote GNU e é liberado sob a GNU General Public License"
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:473 ../src/gcompris/config.c:483
+#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -6055,42 +6063,46 @@ msgid "Turkish"
 msgstr "Turco"
 
 #: ../src/gcompris/config.c:117
+msgid "Urdu"
+msgstr "Urdu"
+
+#: ../src/gcompris/config.c:118
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Walloon"
 msgstr "Valão"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Chinese (Simplified)"
 msgstr "Chinês (simplificado)"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Chinese (Traditional)"
 msgstr "Chinês (tradicional)"
 
-#: ../src/gcompris/config.c:125
+#: ../src/gcompris/config.c:126
 msgid "No time limit"
 msgstr "Sem limite de tempo"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:127
 msgid "Slow timer"
 msgstr "Tempo mais lento"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "Normal timer"
 msgstr "Tempo normal"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Fast timer"
 msgstr "Tempo mais rápido"
 
-#: ../src/gcompris/config.c:133
+#: ../src/gcompris/config.c:134
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Padrão para o GCompris)"
 
-#: ../src/gcompris/config.c:138
+#: ../src/gcompris/config.c:139
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6098,38 +6110,38 @@ msgstr ""
 "<i>Use o módulo de administração do GCompris\n"
 "para filtrar as atividades</i>"
 
-#: ../src/gcompris/config.c:193 ../src/gcompris/config.c:203
+#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
 msgid "GCompris Configuration"
 msgstr "Configuração do GCompris"
 
-#: ../src/gcompris/config.c:279
+#: ../src/gcompris/config.c:280
 msgid "Fullscreen"
 msgstr "Tela inteira"
 
-#: ../src/gcompris/config.c:322
+#: ../src/gcompris/config.c:323
 msgid "Music"
 msgstr "Música"
 
-#: ../src/gcompris/config.c:350
+#: ../src/gcompris/config.c:351
 msgid "Effect"
 msgstr "Efeito"
 
-#: ../src/gcompris/config.c:386
+#: ../src/gcompris/config.c:387
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Não foi possível abrir o diretório de temas: %s"
 
-#: ../src/gcompris/config.c:417 ../src/gcompris/config.c:867
-#: ../src/gcompris/config.c:881
+#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
+#: ../src/gcompris/config.c:882
 #, c-format
 msgid "Skin : %s"
 msgstr "Tema: %s"
 
-#: ../src/gcompris/config.c:419
+#: ../src/gcompris/config.c:420
 msgid "SKINS NOT FOUND"
 msgstr "OS TEMAS NÃO FORAM ENCONTRADOS"
 
-#: ../src/gcompris/config.c:544
+#: ../src/gcompris/config.c:545
 msgid "English (United State)"
 msgstr "Inglês (Estados Unidos)"
 
@@ -6339,7 +6351,7 @@ msgstr ""
 "favor considere o uso do GNU/Linux. Mais informações na FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1442
+#: ../src/gcompris/gcompris.c:1445
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
@@ -6347,12 +6359,12 @@ msgstr ""
 "O GCompris não iniciará porque o arquivo de trava possui menos de %d "
 "segundos.\n"
 
-#: ../src/gcompris/gcompris.c:1444
+#: ../src/gcompris/gcompris.c:1447
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "O arquivo de trava é: %s\n"
 
-#: ../src/gcompris/gcompris.c:1572
+#: ../src/gcompris/gcompris.c:1575
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6366,17 +6378,17 @@ msgstr ""
 "Maiores informações em http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1656
+#: ../src/gcompris/gcompris.c:1659
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Use -l para acessar uma atividade diretamente.\n"
 
-#: ../src/gcompris/gcompris.c:1657
+#: ../src/gcompris/gcompris.c:1660
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "A lista de atividades disponíveis é:\n"
 
-#: ../src/gcompris/gcompris.c:1844
+#: ../src/gcompris/gcompris.c:1847
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "A lista de perfis disponíveis é:\n"
@@ -6435,6 +6447,3 @@ msgstr "Tempo transcorrido"
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "Tempo Restante = %d"
-
-#~ msgid "Special board that embeds python into gcompris."
-#~ msgstr "Área especial que embute o Python ao GCompris."
