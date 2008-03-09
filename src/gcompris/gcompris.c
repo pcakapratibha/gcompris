@@ -1109,6 +1109,14 @@ static void load_properties ()
   else
     g_warning("Binary relocation disabled");
 
+  /* usefull for OSX bundle app */
+#ifdef NSBUNDLE
+  exec_prefix = gcompris_nsbundle_resource ();
+#else
+  exec_prefix = gbr_find_exe_dir("");
+#endif
+  g_warning("exec_prefix %s\n", exec_prefix);
+
   prefix_dir = gbr_find_prefix(NULL);
 
   /* Check if we are in the source code (developper usage) */
@@ -1473,15 +1481,6 @@ main (int argc, char *argv[])
 {
   GError *error = NULL;
   GOptionContext *context;
-
-  /* usefull for OSX bundle app */
-#ifdef NSBUNDLE
-  exec_prefix = gcompris_nsbundle_resource ();
-  printf("exec_prefix %s\n", exec_prefix);
-#else
-  exec_prefix = NULL;
-  printf("exec_prefix NULL\n");
-#endif
 
   /* First, Remove the gnome crash dialog because it locks the user when in full screen */
   signal(SIGSEGV, gc_terminate);
