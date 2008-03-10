@@ -11,6 +11,7 @@ img_DATA = \
 	football.png \
 	lamp.png \
 	light.png \
+	money-bg.png \
 	peer.png \
 	pencil.png \
 	strawberry.png
