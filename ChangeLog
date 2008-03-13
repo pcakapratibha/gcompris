@@ -1,3 +1,10 @@
+2008-03-14 Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/gcompris/dbus.c: (gc_dbus_init): Fixed olpc trac bug#6363
+	"GCompris won't start if settings are changed".
+	Added support for gthread initialization in dbus startup if
+	not yet done.
+
 2007-10-03  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Made the chess activity to search for gnuchess in usual
