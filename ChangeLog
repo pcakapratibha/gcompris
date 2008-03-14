@@ -1,9 +1,21 @@
+2008-03-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/connect4-2players-activity/init_path.sh: fixed, this activity was not
+	  running on the XO.
+	* src/runit.sh: added support for bin/gcompris
+
 2008-03-14 Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/gcompris/dbus.c: (gc_dbus_init): Fixed olpc trac bug#6363
 	"GCompris won't start if settings are changed".
 	Added support for gthread initialization in dbus startup if
 	not yet done.
+
+2008-02-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Merged from GCompris trunk 3238:
+	* src/boards/python/mosaic.py: fixed a major bug. this activity was making GCompris
+	  crash one you clicked on the grey target button.
 
 2007-10-03  Bruno coudoin  <bruno.coudoin@free.fr>
 
