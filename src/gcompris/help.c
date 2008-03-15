@@ -1,8 +1,6 @@
 /* gcompris - help.c
  *
- * Time-stamp: <2007-08-22 01:21:30 bruno>
- *
- * Copyright (C) 2000 Bruno Coudoin
+ * Copyright (C) 2000, 2008 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -100,6 +98,8 @@ void gc_help_start (GcomprisBoard *gcomprisBoard)
     return;
 
   gc_board_pause(TRUE);
+
+  gc_activity_intro_play(gcomprisBoard);
 
   item_selected = NULL;
   item_selected_text = NULL;

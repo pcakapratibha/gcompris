@@ -1,8 +1,6 @@
 /* gcompris - gameutil.c
  *
- * Time-stamp: <2007-08-22 01:21:20 bruno>
- *
- * Copyright (C) 2000-2006 Bruno Coudoin
+ * Copyright (C) 2000, 2008 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -656,4 +654,22 @@ gc_util_create_rootdir (gchar *rootdir)
   }
 
   return(g_mkdir(rootdir, 0755));
+}
+
+
+/** Play the activity intro voice
+ *
+ * \param gcomprisboard
+ *
+ * return void
+ */
+void
+gc_activity_intro_play (GcomprisBoard *gcomprisBoard)
+{
+  gchar *str;
+
+  str = gc_file_find_absolute("voices/$LOCALE/activity/%s-intro.ogg",
+			      gcomprisBoard->name, NULL);
+  gc_sound_play_ogg(str, NULL);
+  g_free(str);
 }

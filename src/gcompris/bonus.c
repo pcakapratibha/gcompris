@@ -216,9 +216,7 @@ gc_bonus_display(GCBonusStatusList gamewon, GCBonusList bonus_id)
 
   g_assert(bonus_id < GC_BONUS_LAST);
 
-  g_warning("bar_hide...");
   gc_bar_hide(TRUE);
-  g_warning("bar_hide... ok");
 
   if (bonus_display_running) {
     g_warning("error bonus_display_running !");
@@ -253,9 +251,7 @@ gc_bonus_display(GCBonusStatusList gamewon, GCBonusList bonus_id)
   }
 
   /* First pause the board */
-  g_warning("Pausing board ...");
   gc_board_pause(TRUE);
-  g_warning("Pausing board ...ok");
 
   if(bonus_id==GC_BONUS_RANDOM)
     bonus_id = RAND(1, GC_BONUS_LAST);
@@ -290,13 +286,9 @@ bonus_image(char *image, GCBonusStatusList gamewon)
   int x,y;
   GdkPixbuf *pixmap = NULL;
 
-  g_warning("Bonus_image: gc_board_get_current...");
-
   GcomprisBoard *gcomprisBoard = gc_board_get_current();
 
   g_assert(gcomprisBoard);
-
-  g_warning("Bonus_image: gc_board_get_current... ok");
 
   /* check that bonus_group is a singleton */
   if (bonus_group != NULL) {

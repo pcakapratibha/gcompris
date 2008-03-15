@@ -27,7 +27,6 @@ typedef struct  {gint count; gint max;} counter;
 
 static GcomprisBoard *gcomprisBoard = NULL;
 static gboolean board_paused = TRUE;
-static SoundPolicy sound_policy;
 static GdkPixbuf *CoverPixmap[MAX_LAYERS];
 static gulong event_handle_id;
 
@@ -202,10 +201,6 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       gamewon = FALSE;
       pause_board(FALSE);
 
-      /* initial state to restore */
-      sound_policy = gc_sound_policy_get();
-      gc_sound_policy_set(PLAY_AND_INTERRUPT);
-
       GdkPixbuf *cursor_pixbuf = gc_pixmap_load("images/sponge.png");
       if(cursor_pixbuf)
 	{
@@ -239,7 +234,6 @@ static void end_board ()
       erase_destroy_all_items();
     }
   gcomprisBoard = NULL;
-  gc_sound_policy_set(sound_policy);
 }
 
 /* ======================================= */
@@ -449,6 +443,8 @@ erase_one_item (GnomeCanvasItem *item)
 {
   double screen_x, screen_y;
   int x,y;
+  SoundPolicy sound_policy = gc_sound_policy_get();
+
   g_object_get(item, "x", &screen_x, "y", &screen_y, NULL);
   x = screen_x / (BOARDWIDTH/number_of_item_x);
   y = screen_y / (BOARDHEIGHT/number_of_item_y);
@@ -457,17 +453,26 @@ erase_one_item (GnomeCanvasItem *item)
 
   gtk_object_destroy(GTK_OBJECT(item));
 
-  if(number_of_items%2)
-    gc_sound_play_ogg ("sounds/eraser1.wav", NULL);
-  else
-    gc_sound_play_ogg ("sounds/eraser2.wav", NULL);
-
   if(--number_of_items == 0)
     {
       gamewon = TRUE;
       erase_destroy_all_items();
       timer_id = gtk_timeout_add (4000, (GtkFunction) bonus, NULL);
     }
+
+  /* force a cleanup of the sound queue */
+  if(number_of_items == 0)
+      gc_sound_policy_set(PLAY_AND_INTERRUPT);
+
+  if(number_of_items%2)
+    gc_sound_play_ogg ("sounds/eraser1.wav", NULL);
+  else
+    gc_sound_play_ogg ("sounds/eraser2.wav", NULL);
+
+  if(number_of_items == 0)
+    gc_sound_policy_set(sound_policy);
+
+
   normal_delay_id = 0;
   return FALSE;
 }

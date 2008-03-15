@@ -51,7 +51,6 @@
 #define DEFAULT_DATABASE "gcompris_sqlite.db"
 
 /* Multiple instance check */
-static gchar *lock_file;
 #define GC_LOCK_FILE "gcompris.lock"
 #define GC_LOCK_LIMIT 30 /* seconds */
 
@@ -68,6 +67,7 @@ static gint board_widget_key_press_callback (GtkWidget   *widget,
 					    GdkEventKey *event,
 					    gpointer     client_data);
 void gc_terminate(int signum);
+static void single_instance_release();
 
 /*
  * For the Activation dialog
@@ -1050,6 +1050,7 @@ static void cleanup()
   signal(SIGINT,  NULL);
   signal(SIGSEGV, NULL);
 
+  single_instance_release(); /* Must be done before property destroy */
   gc_board_stop();
   gc_db_exit();
 #ifdef XF86_VIDMODE
@@ -1057,7 +1058,6 @@ static void cleanup()
 #endif
   gc_menu_destroy();
   gc_prop_destroy(gc_prop_get());
-  g_unlink(lock_file);
 }
 
 void gc_exit()
@@ -1428,9 +1428,18 @@ start_bg_music (gchar *file)
 
 /* Single instance Check */
 static void
+single_instance_release()
+{
+  gchar *lock_file = g_strdup_printf("%s/%s", properties->config_dir, GC_LOCK_FILE);
+
+  g_unlink(lock_file);
+  g_free(lock_file);
+}
+
+static void
 single_instance_check()
 {
-  lock_file = g_strdup_printf("%s/%s", properties->config_dir, GC_LOCK_FILE);
+  gchar *lock_file = g_strdup_printf("%s/%s", properties->config_dir, GC_LOCK_FILE);
   if(!popt_nolockcheck)
     {
       GTimeVal current_time;
