@@ -1,5 +1,6 @@
 2008-03-15  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	Merged from trunk r3309.
 	- It is now possible to add activity introduction voices.
 	  If provided, it will be played when the activity starts and when
 	  it's help is requested.
