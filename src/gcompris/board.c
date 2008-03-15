@@ -367,6 +367,8 @@ gc_board_play(GcomprisBoard *gcomprisBoard)
       bp->start_board(gcomprisBoard);
       bp_data->playing = TRUE;
 
+      gc_activity_intro_play(gcomprisBoard);
+
       return;
     }
 
