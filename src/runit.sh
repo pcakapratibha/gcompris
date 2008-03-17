@@ -35,5 +35,7 @@ $gcompris -L $plugindir \
     -A $resourcedir \
     -M $menudir \
     --locale_dir=$path/locale \
-    -l $section/$activity $*
+    -l $section/$activity \
+    --drag-mode=2clicks \
+    $*
 

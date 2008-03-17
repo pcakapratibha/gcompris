@@ -131,8 +131,10 @@ static gchar *gnuchess_path[] =
     GNUCHESS,
     "/usr/bin/gnuchess",
     "/usr/games/gnuchess",
+    "/usr/games/gnome-gnuchess",
     "/usr/local/bin/gnuchess",
     "bin/gnuchess",
+    "bin/gnome-gnuchess",
     "gnuchess",
     "gnuchess.exe",
     NULL

@@ -11,9 +11,27 @@ if test -z "$1"; then
     exit 1
 fi
 
+ERROR()
+{
+  local CNONE="\033[0m"		# No color
+  local CRED="\033[0;31m"	# Red color
+
+  echo "${CRED}$1${CNONE}"
+  exit 1
+}
+
+WARNING()
+{
+  local CNONE="\033[0m"		# No color
+  local CMAG="\033[0;35m"	# Magenta color
+  echo "${CMAG}$1${CNONE}"
+}
+
 lang=
 if test -n "$2"; then
     lang=$2
+else
+  WARNING "No locale specified"
 fi
 
 activitysrc=`basename $1`
@@ -30,8 +48,9 @@ fi
 if test "$activitysrc" = "administration-activity" || \
    test "$activitysrc" = "tuxpaint-activity" || \
    test "$activitysrc" = "melody-activity" || \
-   test "$activitysrc" = "gcompris-activity" ; then
-  echo "Skipping $activitysrc"
+   test "$activitysrc" = "gcompris-activity" || \
+   test "$activitysrc" = "old-gcompris-activity" ; then
+  echo "  Skipping it, not relevant for xo or not ready for it."
   exit 0
 fi
 
@@ -39,25 +58,33 @@ extra_bin=""
 if test "$activitysrc" = "chess_computer-activity" || \
    test "$activitysrc" = "chess_movelearn-activity" || \
    test "$activitysrc" = "chess_partyend-activity" ; then
- extra_bin=`which gnuchess`
+  extra_bin=`which gnuchess`
+  if [ "$extra_bin" = "" ]; then
+    extra_bin=`which gnome-gnuchess`
+    if [ "$extra_bin" = "" ]; then
+      ERROR "  ERROR: Cannot find gnuchess or gnome-gnuchess"
+    fi
+  fi
 fi
 
 if test "$activitysrc" = "electric-activity" ; then
  extra_bin=`which gnucap`
+ if [ "$extra_bin" = "" ]; then
+   ERROR "  ERROR: Cannot find gnucap"
+ fi
 fi
 
 if test -f $activitysrc/init_path.sh; then
   . $activitysrc/init_path.sh
 else
-  echo "ERROR: Cannot find $activitysrc/init_path.sh"
-  exit 1
+  ERROR "  ERROR: Cannot find $activitysrc/init_path.sh"
 fi
 
 with_clock="--exclude resources/skins/gartoon/timers"
-for act in `grep timers/clock */*.c | cut -d/ -f1 | sort -u | xargs`
+for act in `egrep "gc_timer_display|timers/clock" */*.c | cut -d/ -f1 | sort -u | xargs`
 do
   if test "$activitysrc" = $act; then
-    echo "Adding timers/clock files"
+    echo "  Adding timers/clock files"
     with_clock=""
   fi
 done
@@ -93,22 +120,22 @@ if [ -f "$extra_bin" ]; then
 fi
 
 # Add the locale translation file
-dir=$activity_dir/locale/$lang/LC_MESSAGES
-mkdir -p $dir
-if test -r ../po/$lang.gmo; then
-    cp ../po/$lang.gmo $dir/gcompris.mo
-    echo "installing $lang.gmo as $dir/gcompris.mo"
-else
-    echo "WARNING: No translation found in ../po/$lang.gmo"
+if [ "$lang" != "" ]; then
+  dir=$activity_dir/locale/$lang/LC_MESSAGES
+  mkdir -p $dir
+  if test -r ../po/$lang.gmo; then
+      cp ../po/$lang.gmo $dir/gcompris.mo
+  else
+      WARNING "  WARNING: No translation found in ../po/$lang.gmo"
+  fi
 fi
 
 # Add the mandatory sounds of this activity
 mandatory_sound_dir=`grep mandatory_sound_dir $activity_dir/*.xml | cut -d= -f2 | sed s/\"//g`
 if test -n "$mandatory_sound_dir"
 then
-    echo "This activity defines a mandatory_sound_dir in $mandatory_sound_dir"
     mandatory_sound_dir=`echo "$mandatory_sound_dir" | sed 's/\$LOCALE/'$lang/`
-    echo "Adding mandatory sound dir directory: $mandatory_sound_dir"
+    echo "  Adding mandatory sound dir directory: $mandatory_sound_dir"
     up=`dirname $mandatory_sound_dir`
     mkdir -p $activity_dir/resources/$up
     dotdot=`echo $up | sed s/[^/]*/../g`
@@ -117,17 +144,16 @@ fi
 
 # Add the resources if they are in another activity
 if [ ! -d $activity_dir/resources ]; then
-  echo "This activity has it's resources in $resourcedir/"
   ln -s ../$resourcedir -t $activity_dir
 fi
 
 # Add the plugins in the proper place
-echo "This activity has it's plugindir in $plugindir"
 cp $plugindir/*.so $activity_dir
 rm -f $activity_dir/libmenu.so
 
 # Add the python plugins
-if [ -f $pythonplugindir/*.py ]; then
+haspyfile=`ls $pythonplugindir/*.py 2>/dev/null`
+if [ "$haspyfile" != "" ]; then
   cp $pythonplugindir/*.py $activity_dir
   # Add the GCompris binding
   rm -f $activity_dir/gcompris
@@ -154,7 +180,7 @@ tar -cjf $activity_dir.tar.bz2 -h \
 
 # Create the sugar .xo zip bundle
 rm -f $activity_dir.xo
-tar -tjf $activity_dir.tar.bz2 | zip $activity_dir.xo -@
+tar -tjf $activity_dir.tar.bz2 | zip $activity_dir.xo -@ > /dev/null
 
 # Sugar cleanup
 rm -rf $activity_dir
