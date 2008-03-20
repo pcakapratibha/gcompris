@@ -81,13 +81,11 @@ else
 fi
 
 with_clock="--exclude resources/skins/gartoon/timers"
-for act in `egrep "gc_timer_display|timers/clock" */*.c | cut -d/ -f1 | sort -u | xargs`
-do
-  if test "$activitysrc" = $act; then
+has_timer=`egrep "gc_timer_display|timers/clock" $plugindir/../*.c`
+if test "$has_timer" != ""; then
     echo "  Adding timers/clock files"
     with_clock=""
-  fi
-done
+fi
 
 # Create the Sugar specific startup scripts
 activity_dir=${activity}.activity
