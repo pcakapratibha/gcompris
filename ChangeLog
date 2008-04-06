@@ -1,5 +1,17 @@
 2008-04-06  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	Added support for Persan by Ehsan Nouri
+	(commit trunk 3352)
+
+	* configure.in:
+	* src/gcompris/config.c:
+	* global_win32.mak:
+	* po/fa.po:
+	* po/ChangeLog:
+
+
+2008-04-06  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	Updated compilation chain for windows.
 
 	* Makefile.am:
