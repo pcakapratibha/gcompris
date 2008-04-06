@@ -1,4 +1,13 @@
-2008-03-23  Bruno Coudoin,,,  <set EMAIL_ADDRESS environment variable>
+2008-04-06  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Updated compilation chain for windows.
+
+	* Makefile.am:
+	* src/boards/Makefile.mingw:
+	* src/boards/chess.c:
+	* src/gcompris/Makefile.mingw:
+
+2008-03-23  Bruno Coudoin,,, <bruno.coudoin@free.fr>
 
 	* src/boards/memory.c: (get_random_token), (create_item): Patch from
 	  Karl Ove Hufthammer to display 1 + 2 instead of 1+2 and make the text
