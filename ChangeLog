@@ -1,3 +1,14 @@
+2008-04-06  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Added support for Persan by Ehsan Nouri
+	(commit trunk 3352)
+
+	* configure.in: +added missing ur (Urdu) locale
+	* src/gcompris/config.c:
+	* po/fa.po:
+	* po/ChangeLog:
+
+
 2008-03-15  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Merged from trunk r3309.

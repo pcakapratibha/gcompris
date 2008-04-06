@@ -1,3 +1,7 @@
+2008-04-06 Ehsan Nouri <nouri@mobinssd.com>
+
+	* fa.po: Initial support for Persian (Farsi) by Ehsan Nouri
+
 2007-06-03  Theppitak Karoonboonyanan  <thep@linux.thai.net>
 
 	* th.po: Updated Thai translation.
@@ -11,7 +15,7 @@
 	* sr.po, sr@Latn.po: Updated Serbian translation by Slobodan Simic
 	<simicsl@verat.net>.
 
-2007-05-19  Djihed Afifi <djihed@gmail.com> 
+2007-05-19  Djihed Afifi <djihed@gmail.com>
 
 	* ar.po: Updated Arabic Translation by Khaled Hosny.
 
