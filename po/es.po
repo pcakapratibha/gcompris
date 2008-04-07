@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-12 21:27+0000\n"
-"PO-Revision-Date: 2008-02-18 12:19+0100\n"
+"POT-Creation-Date: 2008-04-06 16:51+0100\n"
+"PO-Revision-Date: 2008-04-07 20:31+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1476,12 +1476,12 @@ msgstr ""
 "Estas personas han dado a GCompris la autorización para incluir sus "
 "fotografías. Muchas gracias, a ambos."
 
-#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:117
+#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:116
 #: ../src/boards/machpuzzle.c:87
 msgid "Move the mouse"
 msgstr "Mueve el ratón"
 
-#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:118
+#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:117
 msgid "Move the mouse to erase the area and discover the background"
 msgstr "Mueve el ratón para aclarar la zona y descubre el dibujo escondido"
 
@@ -4460,7 +4460,7 @@ msgstr ""
 "Tux ha vuelto de una fiesta de pesca en su barco. Reactiva el sistema de "
 "aguas para que se pueda duchar."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:108
 msgid "Falling Words"
 msgstr "Palabras que caen"
 
@@ -4472,7 +4472,7 @@ msgstr "Entrenamiento con el teclado"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "Teclea la palabra completa mientras cae, antes de que llegue al suelo"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:109
 msgid "Type the falling words before they reach the ground"
 msgstr "Teclea las palabras que caen antes de que lleguen al suelo"
 
@@ -4558,25 +4558,11 @@ msgstr "Tu turno para jugar..."
 msgid "Not allowed! Try again !"
 msgstr "No permitido. Prueba otra vez."
 
-#: ../src/boards/chess.c:178
+#: ../src/boards/chess.c:201
 msgid "Error: The external program gnuchess died unexpectedly"
 msgstr "Error: El programa externo gnuchess finalizó inesperadamente"
 
-#: ../src/boards/chess.c:198
-msgid ""
-"Error: The external program gnuchess is required\n"
-"to play chess in GCompris.\n"
-"Find this program on http://www.rpmfind.net or in your\n"
-"GNU/Linux distribution\n"
-"And check it is located here: "
-msgstr ""
-"Error: Se requiere el programa externo gnuchess\n"
-"para jugar al ajedrez en GCompris.\n"
-"Busque este programa en http://www.rpmfind.net o en\n"
-"su distribución de GNU/Linux\n"
-"y verifique que éste se encuentre aquí: "
-
-#: ../src/boards/chess.c:243
+#: ../src/boards/chess.c:236 ../src/boards/chess.c:281
 msgid ""
 "Error: The external program gnuchess is mandatory\n"
 "to play chess in gcompris.\n"
@@ -4586,36 +4572,36 @@ msgstr ""
 "para jugar al ajedrez en gcompris.\n"
 "Instálalo primero, y verifique que éste se encuentre"
 
-#: ../src/boards/chess.c:586
+#: ../src/boards/chess.c:626
 msgid "White's Turn"
 msgstr "El turno de las blancas"
 
-#: ../src/boards/chess.c:586
+#: ../src/boards/chess.c:626
 msgid "Black's Turn"
 msgstr "El turno de las negras"
 
-#: ../src/boards/chess.c:730
+#: ../src/boards/chess.c:770
 msgid "White checks"
 msgstr "Jaque de blancas"
 
-#: ../src/boards/chess.c:732
+#: ../src/boards/chess.c:772
 msgid "Black checks"
 msgstr "Jaque de negras"
 
-#: ../src/boards/chess.c:1089
+#: ../src/boards/chess.c:1129
 msgid "Black mates"
 msgstr "Jaque mate de negras"
 
-#: ../src/boards/chess.c:1094
+#: ../src/boards/chess.c:1134
 msgid "White mates"
 msgstr "Jaque de blancas"
 
-#: ../src/boards/chess.c:1099 ../src/gcompris/bonus.c:362
-#: ../src/gcompris/bonus.c:371
+#: ../src/boards/chess.c:1139 ../src/gcompris/bonus.c:354
+#: ../src/gcompris/bonus.c:363
 msgid "Drawn game"
 msgstr "Tablas"
 
-#: ../src/boards/chess.c:1127
+#: ../src/boards/chess.c:1167
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Error: El programa externo gnuchess finalizó inesperadamente"
 
@@ -4905,56 +4891,56 @@ msgstr ""
 "<span size='x-large'> Selecciona el rango de \n"
 "dificultad para cada perfil <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:59
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "Editar una clase"
 
-#: ../src/boards/python/admin/class_edit.py:64
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "Editar clase: "
 
-#: ../src/boards/python/admin/class_edit.py:67
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "Editar una clase nueva"
 
-#: ../src/boards/python/admin/class_edit.py:89
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "Clase:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:102
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "Profesor:"
 
-#: ../src/boards/python/admin/class_edit.py:112
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "Asignar a todos los usuarios que pertenecen a esta clase"
 
-#: ../src/boards/python/admin/class_edit.py:252
-#: ../src/boards/python/admin/group_edit.py:264
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:153
 #: ../src/boards/python/admin/user_list.py:195
 msgid "First Name"
 msgstr "Nombre"
 
-#: ../src/boards/python/admin/class_edit.py:263
-#: ../src/boards/python/admin/group_edit.py:275
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:163
 #: ../src/boards/python/admin/user_list.py:205
 msgid "Last Name"
 msgstr "Apellidos"
 
-#: ../src/boards/python/admin/class_edit.py:340
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "Es necesario indicar al menos un nombre para su clase"
 
-#: ../src/boards/python/admin/class_edit.py:386
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "Ya existe una clase con ese nombre"
 
 #: ../src/boards/python/admin/class_list.py:168
-#: ../src/boards/python/admin/profile_edit.py:268
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:143
 msgid "Class"
 msgstr "Clase"
@@ -4963,43 +4949,43 @@ msgstr "Clase"
 msgid "Teacher"
 msgstr "Profesor"
 
-#: ../src/boards/python/admin/group_edit.py:59
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "Editar un grupo"
 
-#: ../src/boards/python/admin/group_edit.py:65
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "Editando grupo: "
 
-#: ../src/boards/python/admin/group_edit.py:66
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr " para la clase: "
 
-#: ../src/boards/python/admin/group_edit.py:69
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "Editar un grupo nuevo"
 
-#: ../src/boards/python/admin/group_edit.py:89
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "Grupo:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:101
-#: ../src/boards/python/admin/profile_edit.py:97
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "Descripción:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:112
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "Asigna a todos los usuarios que pertenecen a este grupo"
 
-#: ../src/boards/python/admin/group_edit.py:358
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "Es necesario indicar al menos un nombre para su grupo"
 
-#: ../src/boards/python/admin/group_edit.py:372
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "Ya existe un grupo con este nombre"
 
@@ -5008,13 +4994,13 @@ msgid "Select a class:"
 msgstr "Seleccione una clase:"
 
 #: ../src/boards/python/admin/group_list.py:213
-#: ../src/boards/python/admin/profile_edit.py:278
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:153
 msgid "Group"
 msgstr "Grupo"
 
 #: ../src/boards/python/admin/group_list.py:224
-#: ../src/boards/python/admin/profile_edit.py:288
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:163
 #: ../src/boards/python/admin/profile_list.py:197
 msgid "Description"
@@ -5110,32 +5096,32 @@ msgstr "Usuarios"
 msgid "Classes"
 msgstr "Clases"
 
-#: ../src/boards/python/admin/profile_edit.py:58
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "Editar un perfil"
 
-#: ../src/boards/python/admin/profile_edit.py:63
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "Editando el perfil: "
 
-#: ../src/boards/python/admin/profile_edit.py:66
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "Editando un perfil nuevo"
 
-#: ../src/boards/python/admin/profile_edit.py:85
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "Perfil:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:108
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "Asignar todos los grupos que pertenecen a este perfil"
 
-#: ../src/boards/python/admin/profile_edit.py:376
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "Es necesario indicar al menos un nombre para tu perfil"
 
-#: ../src/boards/python/admin/profile_edit.py:398
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "Ya existe un perfil con ese nombre"
 
@@ -5147,45 +5133,45 @@ msgstr "Perfil"
 msgid "[Default]"
 msgstr "[Predeterminado]"
 
-#: ../src/boards/python/admin/user_edit.py:49
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "Editar un usuario"
 
-#: ../src/boards/python/admin/user_edit.py:54
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "Editar un usuario "
 
-#: ../src/boards/python/admin/user_edit.py:60
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "Editar un usuario nuevo"
 
-#: ../src/boards/python/admin/user_edit.py:77
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "Usuario:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:88
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "Nombre:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:97
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "Apellidos:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:106
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "Fecha de nacimiento:"
 
-#: ../src/boards/python/admin/user_edit.py:158
+#: ../src/boards/python/admin/user_edit.py:159
 msgid "You need to provide at least a login, first name and last name for your users"
 msgstr ""
 "Es necesario indicar al menos un nombre de usuario, nombre y apellidos para "
 "tus usuarios"
 
-#: ../src/boards/python/admin/user_edit.py:175
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "Ya existe un usuario con ese nombre de usuario"
 
@@ -5615,7 +5601,7 @@ msgstr "Juego de memoria"
 msgid "Build a train according to the model"
 msgstr "Construye un tren de acuerdo al modelo"
 
-#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:207
+#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:205
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5650,10 +5636,12 @@ msgid "The word to find was '%s'"
 msgstr "La palabra que se busca era «%s»"
 
 #: ../src/boards/reading.c:685
+#, c-format
 msgid "But it was not displayed"
 msgstr "Pero no se muestra"
 
 #: ../src/boards/reading.c:687
+#, c-format
 msgid "And it was displayed"
 msgstr "Y se muestra"
 
@@ -5766,7 +5754,7 @@ msgstr ""
 "Licencia Pública General GNU "
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
+#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -5897,206 +5885,210 @@ msgid "Dzongkha"
 msgstr "Dzongkha"
 
 #: ../src/gcompris/config.c:77
+msgid "Persian"
+msgstr "Persa"
+
+#: ../src/gcompris/config.c:78
 msgid "Finnish"
 msgstr "Finlandés"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:79
 msgid "French"
 msgstr "Francés"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:80
 msgid "Irish (Gaelic)"
 msgstr "Irlandés (Galés)"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:81
 msgid "Hebrew"
 msgstr "Hebreo"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:82
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:83
 msgid "Indonesian"
 msgstr "Indonesio"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:84
 msgid "Japanese"
 msgstr "Japonés"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:85
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:86
 msgid "Punjabi"
 msgstr "Punjabi"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:87
 msgid "Hungarian"
 msgstr "Húngaro"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:88
 msgid "Croatian"
 msgstr "Croata"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:89
 msgid "Italian"
 msgstr "Italiano"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:90
 msgid "Georgian"
 msgstr "Georgiano"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:91
 msgid "Korean"
 msgstr "Coreano"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:92
 msgid "Lithuanian"
 msgstr "Lituano"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:93
 msgid "Macedonian"
 msgstr "Macedonio"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:94
 msgid "Malayalam"
 msgstr "Malayo"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:95
 msgid "Marathi"
 msgstr "Marathi"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:96
 msgid "Malay"
 msgstr "Malayo"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:97
 msgid "Nepal"
 msgstr "Nepal"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:98
 msgid "Dutch"
 msgstr "Holandés"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:99
 msgid "Norwegian Bokmal"
 msgstr "Noruego Bokmal"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:100
 msgid "Norwegian Nynorsk"
 msgstr "Noruego Nynorsk"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:101
 msgid "Occitan (languedocien)"
 msgstr "Occitano (languedoc)"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:102
 msgid "Polish"
 msgstr "Polaco"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:103
 msgid "Portuguese"
 msgstr "Portugués"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:104
 msgid "Portuguese (Brazil)"
 msgstr "Portugués (Brasil)"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:105
 msgid "Romanian"
 msgstr "Rumano"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:106
 msgid "Russian"
 msgstr "Ruso"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:107
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:108
 msgid "Slovak"
 msgstr "Eslovaco"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:109
 msgid "Slovenian"
 msgstr "Esloveno"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:110
 msgid "Somali"
 msgstr "Somalí"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:111
 msgid "Albanian"
 msgstr "Albanés"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:112
 msgid "Serbian (Latin)"
 msgstr "Servio (latino)"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:113
 msgid "Serbian"
 msgstr "Servio"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:114
 msgid "Swedish"
 msgstr "Sueco"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:115
 msgid "Tamil"
 msgstr "Tamil"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:116
 msgid "Thai"
 msgstr "Tailandés"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:117
 msgid "Turkish"
 msgstr "Turco"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:118
 msgid "Urdu"
 msgstr "Urdu"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Walloon"
 msgstr "Valón"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Chinese (Simplified)"
 msgstr "Chino (Simplificado)"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Traditional)"
 msgstr "Chino (tradicional)"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:127
 msgid "No time limit"
 msgstr "Sin límite de tiempo"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "Slow timer"
 msgstr "Temporizador lento"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Normal timer"
 msgstr "Temporizador normal"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Fast timer"
 msgstr "Temporizador rápido"
 
-#: ../src/gcompris/config.c:134
+#: ../src/gcompris/config.c:135
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (predeterminado para GCompris)"
 
-#: ../src/gcompris/config.c:139
+#: ../src/gcompris/config.c:140
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6104,38 +6096,38 @@ msgstr ""
 "<i>Usa el módulo de administración de GCompris\n"
 "para filtrar tableros</i>"
 
-#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
+#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
 msgid "GCompris Configuration"
 msgstr "Configuración de GCompris"
 
-#: ../src/gcompris/config.c:280
+#: ../src/gcompris/config.c:281
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
-#: ../src/gcompris/config.c:323
+#: ../src/gcompris/config.c:324
 msgid "Music"
 msgstr "Música"
 
-#: ../src/gcompris/config.c:351
+#: ../src/gcompris/config.c:352
 msgid "Effect"
 msgstr "Efecto"
 
-#: ../src/gcompris/config.c:387
+#: ../src/gcompris/config.c:388
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "No se puede abrir el directorio de apariencias: %s"
 
-#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
-#: ../src/gcompris/config.c:882
+#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:869
+#: ../src/gcompris/config.c:883
 #, c-format
 msgid "Skin : %s"
 msgstr "Apariencia : %s"
 
-#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:421
 msgid "SKINS NOT FOUND"
 msgstr "APARIENCIAS NO ENCONTRADAS"
 
-#: ../src/gcompris/config.c:545
+#: ../src/gcompris/config.c:546
 msgid "English (United State)"
 msgstr "Inglés (Estados Unidos)"
 
@@ -6151,15 +6143,15 @@ msgstr "CARGAR"
 msgid "SAVE"
 msgstr "GUARDAR"
 
-#: ../src/gcompris/gameutil.c:103
+#: ../src/gcompris/gameutil.c:101
 msgid "Couldn't find or load the file"
 msgstr "No se ha podido encontrar o cargar el archivo"
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:103
 msgid "This activity is incomplete."
 msgstr "Esta actividad está incompleta."
 
-#: ../src/gcompris/gameutil.c:106
+#: ../src/gcompris/gameutil.c:104
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -6341,19 +6333,19 @@ msgstr ""
 "\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1445
+#: ../src/gcompris/gcompris.c:1462
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr ""
 "No se iniciará GCompris porque el archivo de bloqueo es menos antiguo de %d "
 "segundos.\n"
 
-#: ../src/gcompris/gcompris.c:1447
+#: ../src/gcompris/gcompris.c:1464
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "El archivo de bloqueo es: %s\n"
 
-#: ../src/gcompris/gcompris.c:1575
+#: ../src/gcompris/gcompris.c:1583
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6367,17 +6359,17 @@ msgstr ""
 "Más información en http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1659
+#: ../src/gcompris/gcompris.c:1667
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Usa -l actividad para acceder directamente a una actividad.\n"
 
-#: ../src/gcompris/gcompris.c:1660
+#: ../src/gcompris/gcompris.c:1668
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Lista de actividades disponibles es:\n"
 
-#: ../src/gcompris/gcompris.c:1847
+#: ../src/gcompris/gcompris.c:1855
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "La lista de perfiles disponibles es:\n"
