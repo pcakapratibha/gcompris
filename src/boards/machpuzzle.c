@@ -243,7 +243,8 @@ static GnomeCanvasItem *minigolf_create_item(GnomeCanvasGroup *parent)
 							    NULL));
 
   create_machine_item(MACH_HOLE, 730.0, 260.0);
-  create_machine_item(MACH_BASKET_BALL, (double)g_random_int_range(60, 150), (double)RAND(60, 400));
+  create_machine_item(MACH_BASKET_BALL, (double)g_random_int_range(60, 150),
+		      (double)RAND(70, 400));
 
 
   return NULL;
