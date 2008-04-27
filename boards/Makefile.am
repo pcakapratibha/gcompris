@@ -37,6 +37,7 @@ xml_in_files = \
 	connect4-2players.xml.in \
 	crane.xml.in \
 	discovery.xml.in \
+	doubleclick.xml.in \
 	doubleentry.xml.in \
 	draw.xml.in \
 	drawnumber.xml.in \

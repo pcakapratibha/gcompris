@@ -1,3 +1,13 @@
+2008-04-27  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
+
+	New activity to learn the mouse doubleclick in an attractive
+	way.
+
+	* boards/Makefile.am:
+	* boards/doubleclick.xml.in:
+	* src/boards/python/Makefile.am:
+	* src/boards/python/doubleclick.py:
+
 2008-04-20  Bruno Coudoin  <bruno.coudoin@free.fr>
 
 	* src/billard-activity/billard.c: (minigolf_create_item): fixed random
