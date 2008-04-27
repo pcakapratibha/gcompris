@@ -1,3 +1,20 @@
+2008-04-28  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	New activity to learn the doubleclick in an intuite fashion.
+	* boards/images/doubleclick.svg:
+	* boards/images/foot.svg:
+	* boards/images/foot_shadow.svg:
+	* boards/images/penalty_bg.svg:
+	* boards/skins/gartoon/boardicons/doubleclick.svg:
+	* src/boards/python/doubleclick.py:
+
+	Files updated by Ubuntu 8.04
+	* docs/C/texinfo.tex:
+	* install-sh:
+
+	Added Farsi
+	* docs/gcompris2spip.pl:
+
 2008-04-27  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
 
 	New activity to learn the mouse doubleclick in an attractive
