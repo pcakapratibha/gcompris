@@ -57,8 +57,9 @@ static guint normal_delay_id = 0;
 
 static gint timer_id = 0;
 
-#define NORMAL 0
-#define CLIC   1
+#define NORMAL     0
+#define CLIC       1
+#define DOUBLECLIC 2
 
 static gint board_mode =  NORMAL;
 
@@ -189,6 +190,8 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 
       if (strcmp(gcomprisBoard->mode,"clic")==0)
 	board_mode = CLIC;
+      else if (strcmp(gcomprisBoard->mode,"doubleclic")==0)
+	board_mode = DOUBLECLIC;
       else {
 	board_mode = NORMAL;
 	gcomprisBoard->maxlevel=8;
@@ -482,7 +485,10 @@ erase_one_item (GnomeCanvasItem *item)
 static gint
 item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 {
+  static GnomeCanvasItem *previous_clicked_item = NULL;
+  static guint32 previous_click_time = 0;
   counter *c = (counter *) data;
+
   if(board_paused)
     return FALSE;
 
@@ -510,6 +516,26 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
   if (board_mode == CLIC)
     if (event->type != GDK_BUTTON_PRESS)
       return FALSE;
+
+  if (board_mode == DOUBLECLIC)
+    {
+      if (event->type != GDK_BUTTON_PRESS)
+	return FALSE;
+      else
+	{
+	  guint32 d = event->button.time - previous_click_time;
+	  /* Click duration handicap depending on the level */
+	  d += gcomprisBoard->level * 100;
+
+	  if (previous_clicked_item != item
+	      || d >= 850)
+	    {
+	      previous_clicked_item = item;
+	      previous_click_time = event->button.time;
+	      return FALSE;
+	    }
+	}
+    }
 
   erase_one_item (item);
 

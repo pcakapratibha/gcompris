@@ -37,12 +37,14 @@ xml_in_files = \
 	connect4-2players.xml.in \
 	crane.xml.in \
 	discovery.xml.in \
+	doubleclick.xml.in \
 	doubleentry.xml.in \
 	draw.xml.in \
 	drawnumber.xml.in \
 	electric.xml.in \
 	enumerate.xml.in \
 	erase_clic.xml.in \
+	erase_doubleclick.xml.in \
 	erase.xml.in \
 	experience.xml.in \
 	experimental.xml.in \

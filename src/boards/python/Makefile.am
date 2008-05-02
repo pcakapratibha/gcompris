@@ -11,6 +11,7 @@ dist_python_DATA= \
 	chat.py \
 	clickanddraw.py \
 	connect4.py \
+	doubleclick.py \
 	drawnumber.py \
 	electric.py \
 	followline.py \

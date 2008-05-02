@@ -1,3 +1,46 @@
+2008-04-27  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
+
+	Reintroduced the double click erase based activity.
+
+	* boards/Makefile.am:
+	* boards/erase_clic.xml.in:
+	* src/boards/erase.c: (start_board), (item_event):
+
+2008-04-28  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	merged from trunk
+	3370, 3372-3377 3385 3388 3389 3296
+
+2007-10-03  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Completed doubleclick activity documentation
+
+	* boards/doubleclick.xml.in:
+
+2008-04-30  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
+
+	Reintroduced the double click erase based activity.
+
+	* boards/Makefile.am:
+	* boards/erase_clic.xml.in:
+	* src/boards/erase.c: (start_board), (item_event):
+
+2008-04-28  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	New activity to learn the mouse doubleclick in an attractive
+	way.
+
+	* boards/Makefile.am:
+	* boards/doubleclick.xml.in:
+	* src/boards/python/Makefile.am:
+	* src/boards/python/doubleclick.py:
+
+2008-04-20  Bruno Coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/machpuzzle.c: (minigolf_create_item): fixed random
+	offset bug in which it was possible to have the ball placed on the
+	top line which was triggering the border touch sounds endlessly.
+
 2008-04-12  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Improved the windows version so that the administration module
