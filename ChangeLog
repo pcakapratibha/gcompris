@@ -1,3 +1,9 @@
+2008-04-27  Bruno Coudoin  <bruno.coudoin@free.fr>
+
+	Touched texte in source file to match trunk so that
+	we can take po files from trunk in this branch.
+	Updated po files from trunk.
+
 2008-04-27  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
 
 	Reintroduced the double click erase based activity.
