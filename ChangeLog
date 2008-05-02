@@ -1,3 +1,9 @@
+2008-05-02  Bruno Coudoin <bruno.coudoin@free.fr>
+
+	Completed doubleclick activity documentation
+
+	* boards/doubleclick.xml.in:
+
 2008-04-30  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
 
 	Reintroduced the double click erase based activity.
