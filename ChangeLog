@@ -1,3 +1,13 @@
+2008-05-03  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
+
+	- Added mexican geography map by Little_Bear (jorge.diaz on gmail.com)
+	- Fixed canadian map that was too much on the left so that buttons
+	  was not easily accessible.
+
+	* boards/geography_country/Makefile.am:
+	* boards/geography_country/board8_0.xml.in:
+	* boards/geography_country/board9_0.xml.in:
+
 2008-05-02  Bruno Coudoin <bruno.coudoin@free.fr>
 
 	Completed doubleclick activity documentation
