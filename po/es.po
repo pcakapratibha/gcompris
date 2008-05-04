@@ -11,12 +11,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-06 16:51+0100\n"
-"PO-Revision-Date: 2008-04-07 20:31+0200\n"
+"POT-Creation-Date: 2008-05-02 15:26+0000\n"
+"PO-Revision-Date: 2008-05-04 21:42+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type:  text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
@@ -46,13 +46,13 @@ msgstr ""
 "usado para leerlas, por ejemplo, y después el idioma usado para decir los "
 "nombres de los colores. \n"
 "- Puedes guardar configuraciones múltiples, y cambiar fácilmente entre "
-"ellas. En la sección «Perfil» añade un perfil, después en la sección "
-"«Tablero» selecciona el perfil en la lista desplegable, y después elige los "
-"tableros que quieres que estén activos. Puedes añadir un montón de perfiles, "
-"con diferentes listas de tableros, y diferentes idiomas. Puedes establecer "
-"el perfil por omisión en la sección «Perfil», eligiendo el perfil que "
-"quieras, y después pulsando el botón «Predeterminado». También puedes elegir "
-"un perfil desde la línea de comandos.\n"
+"ellas. En la sección «Perfil» añade un perfil, después en la sección «Tablero» "
+"selecciona el perfil en la lista desplegable, y después elige los tableros "
+"que quieres que estén activos. Puedes añadir un montón de perfiles, con "
+"diferentes listas de tableros, y diferentes idiomas. Puedes establecer el "
+"perfil por omisión en la sección «Perfil», eligiendo el perfil que quieras, y "
+"después pulsando el botón «Predeterminado». También puedes elegir un perfil "
+"desde la línea de comandos.\n"
 "- Puedes añadir usuarios, clases y para cada clase, puedes crear grupos de "
 "usuarios. Ten en cuenta que puedes importar usuarios de un archivo separado "
 "por comas. Asigna uno o más grupos a un perfil, y los nuevos identificadores "
@@ -420,9 +420,11 @@ msgstr "Ir a las actividades de álgebra"
 
 #: ../boards/algebra_group.xml.in.h:2 ../boards/menu.xml.in.h:18
 msgid "Left-click the mouse on an activity to select it."
-msgstr "Pulsa con el botón izquierdo del ratón en una actividad para seleccionarla."
+msgstr ""
+"Pulsa con el botón izquierdo del ratón en una actividad para seleccionarla."
 
-#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1
+#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -458,7 +460,8 @@ msgstr ""
 
 #: ../boards/algebra_guesscount.xml.in.h:5
 msgid "The four arithmetic operations. Combine several arithmetic operations."
-msgstr "Las cuatro operaciones aritméticas. Combina varias operaciones aritméticas."
+msgstr ""
+"Las cuatro operaciones aritméticas. Combina varias operaciones aritméticas."
 
 #: ../boards/algebra_guesscount.xml.in.h:6
 msgid ""
@@ -739,7 +742,8 @@ msgstr "Buen control del ratón"
 
 #: ../boards/babyshapes.xml.in.h:5
 msgid "The dog is provided by Andre Connes and released under the GPL"
-msgstr "El perro ha sido proporcionado por Andre Connes y se ha lanzado bajo la GPL"
+msgstr ""
+"El perro ha sido proporcionado por Andre Connes y se ha lanzado bajo la GPL"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -801,9 +805,9 @@ msgstr "Mete la bola en la meta"
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
-#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
-#: ../boards/tangram.xml.in.h:8
+#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
+#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
+#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
 msgstr "Manipulación del ratón"
 
@@ -1144,7 +1148,8 @@ msgstr "Coordinación motriz: movimiento del ratón y pulsación."
 
 #: ../boards/clickgame.xml.in.h:6
 msgid "Use the left mouse button to click on the moving fish."
-msgstr "Use el botón izquierdo del ratón para pulsar sobre el pez en movimiento."
+msgstr ""
+"Use el botón izquierdo del ratón para pulsar sobre el pez en movimiento."
 
 #: ../boards/clockgame.xml.in.h:1
 msgid ""
@@ -1287,7 +1292,7 @@ msgid "Drive the crane and copy the model"
 msgstr "Conduce la grúa y copia el modelo"
 
 #: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Coordinación motriz"
 
@@ -1476,18 +1481,32 @@ msgstr ""
 "Estas personas han dado a GCompris la autorización para incluir sus "
 "fotografías. Muchas gracias, a ambos."
 
-#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:116
+#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:117
 #: ../src/boards/machpuzzle.c:87
 msgid "Move the mouse"
 msgstr "Mueve el ratón"
 
-#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:117
+#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:118
 msgid "Move the mouse to erase the area and discover the background"
 msgstr "Mueve el ratón para aclarar la zona y descubre el dibujo escondido"
 
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Mueve el ratón hasta que todos los bloques desparezcan."
+
+#: ../boards/erase_doubleclick.xml.in.h:2
+msgid "Double click the mouse"
+msgstr "Pulsa dos veces el ratón"
+
+#: ../boards/erase_doubleclick.xml.in.h:3
+msgid "Double click the mouse on rectangles until all the blocks disappear."
+msgstr ""
+"Pulsa en los rectángulos con el ratón hasta que desaparezcan todos los "
+"bloques."
+
+#: ../boards/erase_doubleclick.xml.in.h:4
+msgid "Double click the mouse to erase the area and discover the background"
+msgstr "Pulsa dos veces con el ratón para borrar el área y descubrir el fondo"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -1528,7 +1547,8 @@ msgstr ""
 "intercambiará con el bloque vacío."
 
 #: ../boards/fifteen.xml.in.h:3
-msgid "Move each item to make an increasing series: from the smallest to the largest"
+msgid ""
+"Move each item to make an increasing series: from the smallest to the largest"
 msgstr ""
 "Mueve cada elemento para construir series incrementales: desde el más "
 "pequeño al más grande"
@@ -2392,7 +2412,8 @@ msgstr "Adivina un número"
 
 #: ../boards/guessnumber.xml.in.h:2
 msgid "Help Tux escape the cave. Tux hides a number for you to find."
-msgstr "Ayuda a Tux a escapar de la cueva. Tux esconde un número que debes descubrir."
+msgstr ""
+"Ayuda a Tux a escapar de la cueva. Tux esconde un número que debes descubrir."
 
 #: ../boards/guessnumber.xml.in.h:3
 msgid "Numbers from 1 to 1000 for the last level."
@@ -2786,7 +2807,8 @@ msgstr ""
 "botón rojo a la izquierda, o el botón verde a la derecha."
 
 #: ../boards/login.xml.in.h:1
-msgid "GCompris identifies each child, so we can provide child-specific reports."
+msgid ""
+"GCompris identifies each child, so we can provide child-specific reports."
 msgstr ""
 "GCompris identifica a cada niño, de modo que podemos proporcionar informes "
 "específicos para cada niño."
@@ -3348,7 +3370,8 @@ msgstr "Juego de memoria de sonidos"
 
 #: ../boards/memory_sound.xml.in.h:3
 msgid "Click on Tux the violinist and listen to find the matching sounds"
-msgstr "Pulsa en Tux el violinista y escucha para encontrar los sonidos coincidentes"
+msgstr ""
+"Pulsa en Tux el violinista y escucha para encontrar los sonidos coincidentes"
 
 #: ../boards/memory_sound.xml.in.h:4 ../boards/memory_sound_tux.xml.in.h:3
 #: ../boards/memory_tux.xml.in.h:3
@@ -3834,8 +3857,10 @@ msgid "Python Template"
 msgstr "Plantilla de Python"
 
 #: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
-msgid "Thanks to Guido van Rossum and the python team for this powerful language!"
-msgstr "¡Gracias a Guido van Rossum y al equipo de python por este potente lenguaje!"
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
+msgstr ""
+"¡Gracias a Guido van Rossum y al equipo de python por este potente lenguaje!"
 
 #: ../boards/pythontest.xml.in.h:3
 msgid "Python Test"
@@ -4103,11 +4128,11 @@ msgstr ""
 "En el campo de texto, introduce una orden por línea para controlar tu "
 "bote. \n"
 "Las órdenes válidas se muestran entre las dos áreas de entrada. Las órdenes "
-"«izquierda» y «derecha» deben llevar como sufijo el ángulo en grados. Al "
-"valor del ángulo también se le llama «parámetro» de la orden izquierda o "
-"derecha. De forma predeterminada, se usan 45 grados. La orden «hacia "
-"adelante» acepta un parámetro con la distancia. De forma predeterminada se "
-"usa un valor de 1.\n"
+"«izquierda» y «derecha» deben llevar como sufijo el ángulo en grados. Al valor "
+"del ángulo también se le llama «parámetro» de la orden izquierda o derecha. "
+"De forma predeterminada, se usan 45 grados. La orden «hacia adelante» acepta "
+"un parámetro con la distancia. De forma predeterminada se usa un valor de "
+"1.\n"
 "Por ejemplo:\n"
 "- izquierda 90 => Hacer un giro perpendicular a la izquierda\n"
 "- hacia delante 10 => Ir hacia delante 10 unidades (como se muestran en la "
@@ -4158,11 +4183,11 @@ msgid ""
 msgstr ""
 "En el campo de texto, introduce una orden por línea para controlar tu bote."
 "Las órdenes válidas se muestran entre las dos áreas de entrada. Las órdenes "
-"«izquierda» y «derecha» deben llevar como sufijo el ángulo en grados. Al "
-"valor del ángulo también se le llama «parámetro» de la orden izquierda o "
-"derecha. De forma predeterminada, se usan 45 grados. La orden «hacia "
-"adelante» acepta un parámetro con la distancia. De forma predeterminada se "
-"usa un valor de 1.\n"
+"«izquierda» y «derecha» deben llevar como sufijo el ángulo en grados. Al valor "
+"del ángulo también se le llama «parámetro» de la orden izquierda o derecha. "
+"De forma predeterminada, se usan 45 grados. La orden «hacia adelante» acepta "
+"un parámetro con la distancia. De forma predeterminada se usa un valor de "
+"1.\n"
 "Por ejemplo:\n"
 "- izquierda 90 => Hacer un giro perpendicular a la izquierda\n"
 "- hacia delante 10 => Ir hacia delante 10 unidades (como se muestran en la "
@@ -4266,7 +4291,8 @@ msgid "Sudoku, place unique symbols in a square."
 msgstr "Sudoku, coloca símbolos únicos en un cuadrado."
 
 #: ../boards/sudoku.xml.in.h:4
-msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
+msgid ""
+"Symbols must be unique in a row, in a column, and (if defined) each region."
 msgstr ""
 "Cada símbolo debe ser único en cada fila, columna y (si se define) en cada "
 "región."
@@ -4366,7 +4392,8 @@ msgid "The tangram puzzle game"
 msgstr "El juego de puzle de tangram"
 
 #: ../boards/target.xml.in.h:1
-msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
+msgid ""
+"Can move the mouse, can read numbers and count up to 15 for the first level"
 msgstr ""
 "Puede mover el ratón, puede leer números y contar hasta 15 para el primer "
 "nivel"
@@ -4411,7 +4438,8 @@ msgstr ""
 
 #: ../boards/traffic.xml.in.h:3
 msgid "Remove the red car from the parking lot through the gate on the right"
-msgstr "Saca el coche rojo del aparcamiento a través de la puerta de la derecha"
+msgstr ""
+"Saca el coche rojo del aparcamiento a través de la puerta de la derecha"
 
 #: ../boards/tuxpaint.xml.in.h:1
 msgid "Drawing activity (pixmap)"
@@ -4427,7 +4455,8 @@ msgstr "Tuxpaint"
 
 #: ../boards/tuxpaint.xml.in.h:4
 msgid "Use Tuxpaint to draw. When Tuxpaint is finished this board will end."
-msgstr "Use Tuxpaint para dibujar. Cuando Tuxpaint acabe este tablero terminará."
+msgstr ""
+"Use Tuxpaint para dibujar. Cuando Tuxpaint acabe este tablero terminará."
 
 #: ../boards/tuxpaint.xml.in.h:5
 msgid "mouse and keyboard manipulation"
@@ -4780,8 +4809,10 @@ msgstr ""
 "movimientos"
 
 #: ../src/boards/maze.c:493
-msgid "Look at your position, then switch back to 3D mode to continue your moves"
-msgstr "Mira a tu posición, después vuelve a modo 3D para continuar tus movimientos"
+msgid ""
+"Look at your position, then switch back to 3D mode to continue your moves"
+msgstr ""
+"Mira a tu posición, después vuelve a modo 3D para continuar tus movimientos"
 
 #: ../src/boards/memory.c:263
 msgid "Memory"
@@ -4812,7 +4843,8 @@ msgstr "$ %.0f"
 
 #: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
-msgstr "Controla la velocidad de caída con las teclas de flechas arriba y abajo."
+msgstr ""
+"Controla la velocidad de caída con las teclas de flechas arriba y abajo."
 
 #: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
@@ -5166,7 +5198,8 @@ msgid "Birth date:"
 msgstr "Fecha de nacimiento:"
 
 #: ../src/boards/python/admin/user_edit.py:159
-msgid "You need to provide at least a login, first name and last name for your users"
+msgid ""
+"You need to provide at least a login, first name and last name for your users"
 msgstr ""
 "Es necesario indicar al menos un nombre de usuario, nombre y apellidos para "
 "tus usuarios"
@@ -5234,7 +5267,8 @@ msgstr "Primero debes establecer un canal en la entrada de canal.\n"
 
 #: ../src/boards/python/chat.py:325
 msgid "Your friends must set the same channel in order to communicate with you"
-msgstr "Tus amigos deben establecer el mismo canal para poder comunicarse contigo"
+msgstr ""
+"Tus amigos deben establecer el mismo canal para poder comunicarse contigo"
 
 #: ../src/boards/python/electric.py:94
 msgid ""
@@ -5440,11 +5474,13 @@ msgstr ""
 "observando el mal tiempo que hacía sobre ellos."
 
 #: ../src/boards/python/oscar_and_friends.py:117
-msgid "They were all happy that the storms never reached all the way down to them."
+msgid ""
+"They were all happy that the storms never reached all the way down to them."
 msgstr "Estaban todos contentos de que las tormentas nunca les alcanzasen."
 
 #: ../src/boards/python/oscar_and_friends.py:118
-msgid "No matter how bad it was up there, the bottom was always calm and quiet."
+msgid ""
+"No matter how bad it was up there, the bottom was always calm and quiet."
 msgstr ""
 "No importa lo mal que estuvo ahí arriba, abajo siempre estuvo tranquilo y "
 "silencioso."
@@ -5776,9 +5812,10 @@ msgstr "Sí, estoy seguro."
 msgid "No, I want to keep going"
 msgstr "No, quiero continuar"
 
-#: ../src/gcompris/board.c:183
+#: ../src/gcompris/board.c:191
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
-msgstr "La carga dinámica de módulos no está soportada. GCompris no puede cargar.\n"
+msgstr ""
+"La carga dinámica de módulos no está soportada. GCompris no puede cargar.\n"
 
 #: ../src/gcompris/board_config.c:699
 msgid ""
@@ -6213,7 +6250,8 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:171
 msgid "Run GCompris with local activity directory added to menu"
-msgstr "Ejecutar GCompris con el directorio de actividades local añadido al menú"
+msgstr ""
+"Ejecutar GCompris con el directorio de actividades local añadido al menú"
 
 #: ../src/gcompris/gcompris.c:174
 msgid "Run GCompris in administration and user-management mode"
@@ -6241,7 +6279,8 @@ msgstr "Establece el perfil a usar. Usa «gcompris -a» para crear perfiles"
 
 #: ../src/gcompris/gcompris.c:189
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
-msgstr "Lista todos los perfiles disponibles. Usa «gcompris -a» para crear perfiles"
+msgstr ""
+"Lista todos los perfiles disponibles. Usa «gcompris -a» para crear perfiles"
 
 #: ../src/gcompris/gcompris.c:192
 msgid ""
@@ -6290,13 +6329,15 @@ msgstr ""
 "locales en primer lugar. Los datos siempre se obtienen del servidor web."
 
 #: ../src/gcompris/gcompris.c:220
-msgid "In server mode, specify the cache directory used to avoid useless downloads."
+msgid ""
+"In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 "En modo servidor, especifica donde está el directorio caché para evitar "
 "descargas innecesarias."
 
 #: ../src/gcompris/gcompris.c:223
-msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
+msgid ""
+"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
 msgstr ""
 "Modo global de arrastrar y soltar: normal, 2 pulsaciones, ambos. Lo "
 "predeterminado es normal."
@@ -6309,7 +6350,7 @@ msgstr "No mostrar las imágenes de fondo de las actividades."
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Permitir la ejecución de instancias múltiples de GCompris."
 
-#: ../src/gcompris/gcompris.c:848
+#: ../src/gcompris/gcompris.c:860
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6333,19 +6374,20 @@ msgstr ""
 "\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1462
+#: ../src/gcompris/gcompris.c:1476
 #, c-format
-msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
+msgid ""
+"GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr ""
 "No se iniciará GCompris porque el archivo de bloqueo es menos antiguo de %d "
 "segundos.\n"
 
-#: ../src/gcompris/gcompris.c:1464
+#: ../src/gcompris/gcompris.c:1478
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "El archivo de bloqueo es: %s\n"
 
-#: ../src/gcompris/gcompris.c:1583
+#: ../src/gcompris/gcompris.c:1597
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6359,17 +6401,17 @@ msgstr ""
 "Más información en http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1667
+#: ../src/gcompris/gcompris.c:1681
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Usa -l actividad para acceder directamente a una actividad.\n"
 
-#: ../src/gcompris/gcompris.c:1668
+#: ../src/gcompris/gcompris.c:1682
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Lista de actividades disponibles es:\n"
 
-#: ../src/gcompris/gcompris.c:1855
+#: ../src/gcompris/gcompris.c:1869
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "La lista de perfiles disponibles es:\n"
@@ -6428,4 +6470,3 @@ msgstr "Tiempo transcurrido"
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "Tiempo restante = %d"
-
