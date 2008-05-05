@@ -1,3 +1,10 @@
+	*** RELEASE 8.3.6 ***
+
+2008-05-05  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* boards/doubleclick.xml.in: Updated the manual, fixed the English text.
+	merged from trunk 3399
+
 2008-05-03  Bruno Coudoin  <bruno.coudoin@free.fr>
 
 	Merged from trunk 3396
