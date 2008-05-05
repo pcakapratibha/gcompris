@@ -1,3 +1,7 @@
+2008-05-05  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* boards/doubleclick.xml.in: Updated the manual, fixed the English text.
+
 2008-05-03  Bruno Coudoin,,,  <bruno.coudoin@free.fr>
 
 	- Added mexican geography map by Little_Bear (jorge.diaz on gmail.com)
