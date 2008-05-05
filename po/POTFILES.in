@@ -72,6 +72,7 @@ boards/connect4.xml.in
 boards/connect4-2players.xml.in
 boards/crane.xml.in
 boards/discovery.xml.in
+boards/doubleclick.xml.in
 boards/doubleentry.xml.in
 boards/doubleentry/board1_0.xml.in
 boards/doubleentry/board2_0.xml.in
@@ -259,6 +260,7 @@ src/boards/python/admin/user_edit.py
 src/boards/python/admin/user_list.py
 src/boards/python/admin/wordlist.py
 src/boards/python/anim.py
+src/boards/python/doubleclick.py
 src/boards/python/chat.py
 src/boards/python/electric.py
 src/boards/python/gnumch.py
