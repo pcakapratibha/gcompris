@@ -1,6 +1,6 @@
 # Swedish messages for GCompris.
-# Copyright (C) 2001, 2002, 2003, 2006, 2007 Free Software Foundation, Inc.
-# Daniel Nylander <po@danielnylander.se>, 2006, 2007.
+# Copyright (C) 2001, 2002, 2003, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008.
 # Christian Rose <menthos@menthos.com>, 2001, 2002, 2003, 2005.
 # Bengt Thuree <bengt@thuree.com>, 2005.
 # Göran Uddeborg <goeran@uddeborg.se>, 2005
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-08 17:07+0200\n"
-"PO-Revision-Date: 2008-04-08 17:07+0100\n"
+"POT-Creation-Date: 2008-05-06 02:54+0200\n"
+"PO-Revision-Date: 2008-05-06 02:58+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -376,6 +376,7 @@ msgid "Left-click the mouse on an activity to select it."
 msgstr "Vänsterklicka med musen för att välja en aktivitet."
 
 #: ../boards/algebra_guesscount.xml.in.h:1
+#: ../boards/erase_doubleclick.xml.in.h:1
 #: ../boards/erase_clic.xml.in.h:1
 msgid "Animal pictures come from the Animal Photography Page of Ralf Schmode (http://schmode.net/). Ralf has kindly permitted Gcompris to include his pictures. Thanks a lot, Ralf."
 msgstr "Djurbilderna har tagits från Ralf Schmodes djurfotografisida (http://schmode.net/). Ralf har gett GCompris tillstånd att inkludera hans bilder. Tack så mycket Ralf."
@@ -602,7 +603,9 @@ msgstr "Sparka bollen i målet"
 #: ../boards/clickgame.xml.in.h:5
 #: ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5
+#: ../boards/doubleclick.xml.in.h:4
 #: ../boards/erase.xml.in.h:3
+#: ../boards/erase_doubleclick.xml.in.h:6
 #: ../boards/erase_clic.xml.in.h:6
 #: ../boards/fifteen.xml.in.h:2
 #: ../boards/hanoi.xml.in.h:3
@@ -1026,7 +1029,9 @@ msgid "Drive the crane and copy the model"
 msgstr "Kör kranen och kopiera modellen"
 
 #: ../boards/crane.xml.in.h:3
+#: ../boards/doubleclick.xml.in.h:3
 #: ../boards/erase.xml.in.h:2
+#: ../boards/erase_doubleclick.xml.in.h:5
 #: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Motorik"
@@ -1047,6 +1052,18 @@ msgstr "Färg, ljud, minne..."
 #: ../boards/discovery.xml.in.h:2
 msgid "Go to discovery activities"
 msgstr "Gå till upptäcktsaktiviteter"
+
+#: ../boards/doubleclick.xml.in.h:1
+msgid "Double click the mouse on the ball to kick it. You can double click the left right or middle mouse button. If you lose, Tux catches the ball. You must click on it to bring it back to its former position"
+msgstr "Dubbelklicka med musen på bollen för att sparka den. Du kan dubbelklicka med vänster, höger eller mittenknappen. Om du förlorar kommer Tux att fånga bollen. Du måste klicka på den för att ta tillbaka den till sin tidigare position"
+
+#: ../boards/doubleclick.xml.in.h:2
+msgid "Double click the mouse on the ball to score a goal."
+msgstr "Dubbelklicka med musen på bollen för att göra mål."
+
+#: ../boards/doubleclick.xml.in.h:5
+msgid "Penalty kick"
+msgstr "Straffspark"
 
 #: ../boards/doubleentry.xml.in.h:1
 msgid "Basic counting skills"
@@ -1159,19 +1176,31 @@ msgid "Animal pictures are taken from the Animal Photography Page of Ralf Schmod
 msgstr "Djurbilderna har tagits från Ralf Schmodes djurfotografisida (&lt;http://schmode.net/&gt;) och från LE BERRE Daniel. De har gett GCompris tillstånd att inkludera deras bilder. Tack så mycket."
 
 #: ../boards/erase.xml.in.h:4
-#: ../src/boards/erase.c:116
+#: ../src/boards/erase.c:117
 #: ../src/boards/machpuzzle.c:87
 msgid "Move the mouse"
 msgstr "Flytta musen"
 
 #: ../boards/erase.xml.in.h:5
-#: ../src/boards/erase.c:117
+#: ../src/boards/erase.c:118
 msgid "Move the mouse to erase the area and discover the background"
 msgstr "Flytta musen för att radera området och upptäck bakgrunden"
 
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Flytta musen till alla block försvinner."
+
+#: ../boards/erase_doubleclick.xml.in.h:2
+msgid "Double click the mouse"
+msgstr "Dubbelklicka med musen"
+
+#: ../boards/erase_doubleclick.xml.in.h:3
+msgid "Double click the mouse on rectangles until all the blocks disappear."
+msgstr "Dubbelklicka med musen på rektanglarna tills alla block har försvunnit."
+
+#: ../boards/erase_doubleclick.xml.in.h:4
+msgid "Double click the mouse to erase the area and discover the background"
+msgstr "Dubbelklicka med musen för att radera området och upptäck bakgrunden"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -4364,6 +4393,14 @@ msgstr "Varning: följande bilder kan inte läsas på ditt system.\n"
 msgid "The corresponding items have been skipped."
 msgstr "Motsvarande objekt har hoppats över."
 
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr "Klicka på ballongen för att placera den igen."
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
+msgstr "Klicka två gånger på ballongen för att skjuta den."
+
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
 msgstr "Alla meddelanden kommer att visas här.\n"
@@ -4935,7 +4972,7 @@ msgstr "Ja, jag är säker!"
 msgid "No, I want to keep going"
 msgstr "Nej, jag vill fortsätta"
 
-#: ../src/gcompris/board.c:183
+#: ../src/gcompris/board.c:191
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr "Dynamisk inläsning av moduler stöds inte. GCompris kan inte läsa in.\n"
 
@@ -5440,7 +5477,7 @@ msgstr "Visa inte bakgrundsbilderna för aktiviteterna."
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Förhindra inte körning av flera instanser av GCompris."
 
-#: ../src/gcompris/gcompris.c:848
+#: ../src/gcompris/gcompris.c:860
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to support its development, the Windows version provides only %d of the %d activities. You can get the full version for a small fee at\n"
@@ -5453,17 +5490,17 @@ msgstr ""
 "GNU/Linux-versionen har inte denna begränsning. Observera att GCompris utvecklas för att frigöra skolor ifrån monopolistiska programvarutillverkare. Om du också tycker att vi skall undervisa frihet till barn, överväg att använda GNU/Linux. Få mer information hos FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1462
+#: ../src/gcompris/gcompris.c:1476
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr "GCompris kommer inte att starta därför att låsningsfilen är mindre än %d sekunder gammal.\n"
 
-#: ../src/gcompris/gcompris.c:1464
+#: ../src/gcompris/gcompris.c:1478
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Låsningsfilen är: %s\n"
 
-#: ../src/gcompris/gcompris.c:1583
+#: ../src/gcompris/gcompris.c:1597
 #, c-format
 msgid ""
 "GCompris\n"
@@ -5477,17 +5514,17 @@ msgstr ""
 "Mer information på http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1667
+#: ../src/gcompris/gcompris.c:1681
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Använd -l för att komma åt en aktivitet direkt.\n"
 
-#: ../src/gcompris/gcompris.c:1668
+#: ../src/gcompris/gcompris.c:1682
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Listan på tillgängliga aktiviteter är :\n"
 
-#: ../src/gcompris/gcompris.c:1855
+#: ../src/gcompris/gcompris.c:1869
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Listan på tillgängliga profiler är:\n"
@@ -5589,18 +5626,6 @@ msgstr "Återstående tid = %d"
 #, fuzzy
 #~ msgid "Click anywhere in the line where you want to drop a piece"
 #~ msgstr "Klicka var som helst i raden där du vill placera en bit"
-
-#, fuzzy
-#~ msgid "Double-Click the mouse to erase the area and discover the background"
-#~ msgstr "Dubbelklicka musen för att radera området och upptäck bakgrunden"
-
-#, fuzzy
-#~ msgid "Double-click the mouse"
-#~ msgstr "Dubbelklicka musen"
-
-#, fuzzy
-#~ msgid "Double-click the mouse on rectangles until all the blocks disappear."
-#~ msgstr "Dubbelklicka på blocken med musen tills alla har försvunnit."
 #~ msgid "Samuel Loyd"
 #~ msgstr "Samuel Loyd"
 #~ msgid "logical"
