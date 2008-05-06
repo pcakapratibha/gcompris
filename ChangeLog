@@ -1,3 +1,10 @@
+2008-05-06  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed bug531709]
+	The "Name" field in gcompris-edit.desktop is not translatable
+
+	* gcompris-edit.desktop.in:
+
 2008-05-05  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* boards/doubleclick.xml.in: Updated the manual, fixed the English text.
