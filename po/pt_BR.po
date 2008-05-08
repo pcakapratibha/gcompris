@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GCompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-27 23:34-0300\n"
+"POT-Creation-Date: 2008-05-08 17:16-0300\n"
 "PO-Revision-Date: 2008-02-27 23:34-0300\n"
 "Last-Translator: Frederico Goncalves Guimaraes <frederico@teia.bio.br>\n"
 "Language-Team: Brazilian Portuguese\n"
@@ -421,7 +421,8 @@ msgid "Left-click the mouse on an activity to select it."
 msgstr ""
 "Clique com o botão esquerdo do mouse em uma atividade para selecioná-la."
 
-#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1
+#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -796,7 +797,8 @@ msgstr "Mande a bola para o gol"
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
-#: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
+#: ../boards/connect4-2players.xml.in.h:5 ../boards/doubleclick.xml.in.h:4
+#: ../boards/erase.xml.in.h:3 ../boards/erase_doubleclick.xml.in.h:6
 #: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
 #: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
 #: ../boards/tangram.xml.in.h:8
@@ -1283,7 +1285,8 @@ msgstr "Construa o mesmo modelo"
 msgid "Drive the crane and copy the model"
 msgstr "Guie o guindaste e copie o modelo"
 
-#: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
+#: ../boards/crane.xml.in.h:3 ../boards/doubleclick.xml.in.h:3
+#: ../boards/erase.xml.in.h:2 ../boards/erase_doubleclick.xml.in.h:5
 #: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Coordenação motora"
@@ -1310,6 +1313,24 @@ msgstr "Cores, sons, memória..."
 #: ../boards/discovery.xml.in.h:2
 msgid "Go to discovery activities"
 msgstr "Ir para as atividades de descoberta"
+
+#: ../boards/doubleclick.xml.in.h:1
+msgid ""
+"Double click the mouse on the ball to kick it. You can double click the left "
+"right or middle mouse button. If you lose, Tux catches the ball. You must "
+"click on it to bring it back to its former position"
+msgstr ""
+"Dê um duplo clique do mouse na bola para chutá-la. Você dar o duplo clique "
+"no botão da esquerda, da direita ou do meio do mouse. Se você errar, o Tux "
+"pega a bola. Você deve clicar nele para que ele volte à posição inicial."
+
+#: ../boards/doubleclick.xml.in.h:2
+msgid "Double click the mouse on the ball to score a goal."
+msgstr "Dê um duplo clique com o mouse na bola para marcar um gol."
+
+#: ../boards/doubleclick.xml.in.h:5
+msgid "Penalty kick"
+msgstr "Cobrança de pênalti"
 
 #: ../boards/doubleentry.xml.in.h:1
 msgid "Basic counting skills"
@@ -1482,6 +1503,20 @@ msgstr "Movimente o mouse para apagar a área e descobrir o fundo"
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Movimente o mouse até todos os blocos desaparecerem."
+
+#: ../boards/erase_doubleclick.xml.in.h:2
+msgid "Double click the mouse"
+msgstr "Duplo clique com o mouse"
+
+#: ../boards/erase_doubleclick.xml.in.h:3
+msgid "Double click the mouse on rectangles until all the blocks disappear."
+msgstr ""
+"Dê um duplo clique com o mouse nos retângulos até que todos os blocos "
+"desapareçam."
+
+#: ../boards/erase_doubleclick.xml.in.h:4
+msgid "Double click the mouse to erase the area and discover the background"
+msgstr "Dê um duplo clique com o mouse para apagar a área e descobrir o fundo"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -4509,6 +4544,10 @@ msgstr "Seu editor de textos"
 msgid "Administration for gcompris"
 msgstr "Administração do GCompris"
 
+#: ../gcompris-edit.desktop.in.h:2
+msgid "GCompris Administration"
+msgstr "Administração do GCompris"
+
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
 msgstr "Jogo educacional para crianças dos 2 aos 10 anos"
@@ -4546,28 +4585,11 @@ msgstr "Sua vez de jogar..."
 msgid "Not allowed! Try again !"
 msgstr "Não permitido! Tente novamente."
 
-#: ../src/boards/chess.c:178
+#: ../src/boards/chess.c:201
 msgid "Error: The external program gnuchess died unexpectedly"
 msgstr "Erro: O programa externo gnuchess encerrou inesperadamente"
 
-# mudança do original, uma vez que se a distribuição em uso não for
-# baseada em RPM, o RPMFind não será muito útil
-#: ../src/boards/chess.c:198
-msgid ""
-"Error: The external program gnuchess is required\n"
-"to play chess in GCompris.\n"
-"Find this program on http://www.rpmfind.net or in your\n"
-"GNU/Linux distribution\n"
-"And check it is located here: "
-msgstr ""
-"Erro: Para jogar xadrez no GCompris\n"
-"é necessário o programa gnuchess.\n"
-"Encontre este programa em seu site oficial\n"
-"(http://www.gnu.org/software/chess)\n"
-"ou na sua distribuição GNU/Linux.\n"
-"E certifique-se de que ele esteja localizado aqui: "
-
-#: ../src/boards/chess.c:243
+#: ../src/boards/chess.c:236 ../src/boards/chess.c:281
 msgid ""
 "Error: The external program gnuchess is mandatory\n"
 "to play chess in gcompris.\n"
@@ -4577,36 +4599,36 @@ msgstr ""
 "para jogar xadrez no GCompris.\n"
 "Instale-o e certifique-se de que ele esteja em "
 
-#: ../src/boards/chess.c:586
+#: ../src/boards/chess.c:626
 msgid "White's Turn"
 msgstr "Jogada das brancas"
 
-#: ../src/boards/chess.c:586
+#: ../src/boards/chess.c:626
 msgid "Black's Turn"
 msgstr "Jogada das pretas"
 
-#: ../src/boards/chess.c:730
+#: ../src/boards/chess.c:770
 msgid "White checks"
 msgstr "Xeque das brancas"
 
-#: ../src/boards/chess.c:732
+#: ../src/boards/chess.c:772
 msgid "Black checks"
 msgstr "Xeque das pretas"
 
-#: ../src/boards/chess.c:1089
+#: ../src/boards/chess.c:1129
 msgid "Black mates"
 msgstr "Xeque-mate das pretas"
 
-#: ../src/boards/chess.c:1094
+#: ../src/boards/chess.c:1134
 msgid "White mates"
 msgstr "Xeque-mate das brancas"
 
-#: ../src/boards/chess.c:1099 ../src/gcompris/bonus.c:362
-#: ../src/gcompris/bonus.c:371
+#: ../src/boards/chess.c:1139 ../src/gcompris/bonus.c:354
+#: ../src/gcompris/bonus.c:363
 msgid "Drawn game"
 msgstr "Jogo empatado"
 
-#: ../src/boards/chess.c:1127
+#: ../src/boards/chess.c:1167
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Erro: O programa externo gnuchess encerrou inesperadamente"
 
@@ -5219,6 +5241,14 @@ msgstr ""
 msgid "The corresponding items have been skipped."
 msgstr "Os itens correspondentes foram ignorados."
 
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr "Clique no balão para recolocá-lo."
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
+msgstr "Clique duas vezes no balão para acertá-lo."
+
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
 msgstr "Todas as mensagens serão exibidas aqui.\n"
@@ -5770,7 +5800,7 @@ msgstr ""
 "Este software é um Pacote GNU e é liberado sob a GNU General Public License"
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
+#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -5792,7 +5822,7 @@ msgstr "Sim, é isso que eu quero."
 msgid "No, I want to keep going"
 msgstr "Não, prefiro continuar aqui."
 
-#: ../src/gcompris/board.c:183
+#: ../src/gcompris/board.c:191
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr ""
 "O carregamento dinâmico de módulos não é suportado. O GCompris não pode "
@@ -5903,206 +5933,210 @@ msgid "Dzongkha"
 msgstr "Dzongkha"
 
 #: ../src/gcompris/config.c:77
+msgid "Persian"
+msgstr "Persa"
+
+#: ../src/gcompris/config.c:78
 msgid "Finnish"
 msgstr "Finlandês"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:79
 msgid "French"
 msgstr "Francês"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:80
 msgid "Irish (Gaelic)"
 msgstr "Irlandês (Gaélico)"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:81
 msgid "Hebrew"
 msgstr "Hebraico"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:82
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:83
 msgid "Indonesian"
 msgstr "Indonésio"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:84
 msgid "Japanese"
 msgstr "Japonês"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:85
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:86
 msgid "Punjabi"
 msgstr "Punjabi"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:87
 msgid "Hungarian"
 msgstr "Húngaro"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:88
 msgid "Croatian"
 msgstr "Croata"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:89
 msgid "Italian"
 msgstr "Italiano"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:90
 msgid "Georgian"
 msgstr "Georgiano"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:91
 msgid "Korean"
 msgstr "Coreano"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:92
 msgid "Lithuanian"
 msgstr "Lituano"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:93
 msgid "Macedonian"
 msgstr "Macedônio"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:94
 msgid "Malayalam"
 msgstr "Malabar"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:95
 msgid "Marathi"
 msgstr "Marati"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:96
 msgid "Malay"
 msgstr "Malaio"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:97
 msgid "Nepal"
 msgstr "Nepal"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:98
 msgid "Dutch"
 msgstr "Holandês"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:99
 msgid "Norwegian Bokmal"
 msgstr "Bokmal norueguês"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:100
 msgid "Norwegian Nynorsk"
 msgstr "Nynorsk norueguês"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:101
 msgid "Occitan (languedocien)"
 msgstr "Occitano (languedociano)"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:102
 msgid "Polish"
 msgstr "Polonês"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:103
 msgid "Portuguese"
 msgstr "Português"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:104
 msgid "Portuguese (Brazil)"
 msgstr "Português (Brasil)"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:105
 msgid "Romanian"
 msgstr "Romeno"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:106
 msgid "Russian"
 msgstr "Russo"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:107
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:108
 msgid "Slovak"
 msgstr "Eslovaco"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:109
 msgid "Slovenian"
 msgstr "Esloveno"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:110
 msgid "Somali"
 msgstr "Somálio"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:111
 msgid "Albanian"
 msgstr "Albanês"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:112
 msgid "Serbian (Latin)"
 msgstr "Sérvio (latino)"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:113
 msgid "Serbian"
 msgstr "Sérvio"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:114
 msgid "Swedish"
 msgstr "Sueco"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:115
 msgid "Tamil"
 msgstr "Tâmil"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:116
 msgid "Thai"
 msgstr "Tailandês"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:117
 msgid "Turkish"
 msgstr "Turco"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:118
 msgid "Urdu"
 msgstr "Urdu"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Walloon"
 msgstr "Valão"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Chinese (Simplified)"
 msgstr "Chinês (simplificado)"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Traditional)"
 msgstr "Chinês (tradicional)"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:127
 msgid "No time limit"
 msgstr "Sem limite de tempo"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "Slow timer"
 msgstr "Tempo mais lento"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Normal timer"
 msgstr "Tempo normal"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Fast timer"
 msgstr "Tempo mais rápido"
 
-#: ../src/gcompris/config.c:134
+#: ../src/gcompris/config.c:135
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Padrão para o GCompris)"
 
-#: ../src/gcompris/config.c:139
+#: ../src/gcompris/config.c:140
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6110,38 +6144,38 @@ msgstr ""
 "<i>Use o módulo de administração do GCompris\n"
 "para filtrar as atividades</i>"
 
-#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
+#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
 msgid "GCompris Configuration"
 msgstr "Configuração do GCompris"
 
-#: ../src/gcompris/config.c:280
+#: ../src/gcompris/config.c:281
 msgid "Fullscreen"
 msgstr "Tela inteira"
 
-#: ../src/gcompris/config.c:323
+#: ../src/gcompris/config.c:324
 msgid "Music"
 msgstr "Música"
 
-#: ../src/gcompris/config.c:351
+#: ../src/gcompris/config.c:352
 msgid "Effect"
 msgstr "Efeito"
 
-#: ../src/gcompris/config.c:387
+#: ../src/gcompris/config.c:388
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Não foi possível abrir o diretório de temas: %s"
 
-#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
-#: ../src/gcompris/config.c:882
+#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:869
+#: ../src/gcompris/config.c:883
 #, c-format
 msgid "Skin : %s"
 msgstr "Tema: %s"
 
-#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:421
 msgid "SKINS NOT FOUND"
 msgstr "OS TEMAS NÃO FORAM ENCONTRADOS"
 
-#: ../src/gcompris/config.c:545
+#: ../src/gcompris/config.c:546
 msgid "English (United State)"
 msgstr "Inglês (Estados Unidos)"
 
@@ -6157,15 +6191,15 @@ msgstr "CARREGAR"
 msgid "SAVE"
 msgstr "SALVAR"
 
-#: ../src/gcompris/gameutil.c:103
+#: ../src/gcompris/gameutil.c:101
 msgid "Couldn't find or load the file"
 msgstr "Não foi possível encontrar ou carregar o arquivo"
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:103
 msgid "This activity is incomplete."
 msgstr "Essa atividade está incompleta."
 
-#: ../src/gcompris/gameutil.c:106
+#: ../src/gcompris/gameutil.c:104
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -6328,7 +6362,7 @@ msgstr "Não exibir as imagens de fundo das atividades."
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Não evitar a execução de múltiplas instâncias do GCompris."
 
-#: ../src/gcompris/gcompris.c:848
+#: ../src/gcompris/gcompris.c:860
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6351,7 +6385,7 @@ msgstr ""
 "favor considere o uso do GNU/Linux. Mais informações na FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1445
+#: ../src/gcompris/gcompris.c:1476
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
@@ -6359,12 +6393,12 @@ msgstr ""
 "O GCompris não iniciará porque o arquivo de trava possui menos de %d "
 "segundos.\n"
 
-#: ../src/gcompris/gcompris.c:1447
+#: ../src/gcompris/gcompris.c:1478
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "O arquivo de trava é: %s\n"
 
-#: ../src/gcompris/gcompris.c:1575
+#: ../src/gcompris/gcompris.c:1597
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6378,17 +6412,17 @@ msgstr ""
 "Maiores informações em http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1659
+#: ../src/gcompris/gcompris.c:1681
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Use -l para acessar uma atividade diretamente.\n"
 
-#: ../src/gcompris/gcompris.c:1660
+#: ../src/gcompris/gcompris.c:1682
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "A lista de atividades disponíveis é:\n"
 
-#: ../src/gcompris/gcompris.c:1847
+#: ../src/gcompris/gcompris.c:1869
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "A lista de perfis disponíveis é:\n"
