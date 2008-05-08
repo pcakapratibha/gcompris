@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 20:37+0200\n"
-"PO-Revision-Date: 2008-05-02 20:44+0100\n"
+"POT-Creation-Date: 2008-05-08 13:45+0200\n"
+"PO-Revision-Date: 2008-05-08 13:52+0100\n"
 "Last-Translator: Bruno Coudoin <bruno.coudoin@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -615,6 +615,7 @@ msgstr "Envoie le ballon dans les buts."
 #: ../boards/clickgame.xml.in.h:5
 #: ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5
+#: ../boards/doubleclick.xml.in.h:4
 #: ../boards/erase.xml.in.h:3
 #: ../boards/erase_doubleclick.xml.in.h:6
 #: ../boards/erase_clic.xml.in.h:6
@@ -1043,6 +1044,7 @@ msgid "Drive the crane and copy the model"
 msgstr "Pilote le bras de la grue pour déplacer des éléments suivant un modèle"
 
 #: ../boards/crane.xml.in.h:3
+#: ../boards/doubleclick.xml.in.h:3
 #: ../boards/erase.xml.in.h:2
 #: ../boards/erase_doubleclick.xml.in.h:5
 #: ../boards/erase_clic.xml.in.h:5
@@ -1065,6 +1067,18 @@ msgstr "Couleurs, sons et mémoire..."
 #: ../boards/discovery.xml.in.h:2
 msgid "Go to discovery activities"
 msgstr "Vers les activités de découverte"
+
+#: ../boards/doubleclick.xml.in.h:1
+msgid "Double click the mouse on the ball to kick it. You can double click the left right or middle mouse button. If you lose, Tux catches the ball. You must click on it to bring it back to its former position"
+msgstr "Double clique de la souris sur le ballon pour le tirer. Tu peux double cliquer avec le bouton gauche, droit ou du milieu. Si tu perds, Tux attrape le ballon. Tu dois alors cliquer dessus pour recommencer."
+
+#: ../boards/doubleclick.xml.in.h:2
+msgid "Double click the mouse on the ball to score a goal."
+msgstr "Double clique avec la souris pour tout effacer dans la zone et découvrir l'image de fond."
+
+#: ../boards/doubleclick.xml.in.h:5
+msgid "Penalty kick"
+msgstr "Penalty"
 
 #: ../boards/doubleentry.xml.in.h:1
 msgid "Basic counting skills"
@@ -3731,6 +3745,10 @@ msgstr "Ton traitement de texte"
 msgid "Administration for gcompris"
 msgstr "Administration de GCompris"
 
+#: ../gcompris-edit.desktop.in.h:2
+msgid "GCompris Administration"
+msgstr "Administration de GCompris"
+
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
 msgstr "Jeu éducatif pour les enfants de 2 à 10 ans"
@@ -4444,6 +4462,14 @@ msgstr "Attention: les images suivantes ne peuvent être trouvées sur votre sys
 #: ../src/boards/python/anim.py:2382
 msgid "The corresponding items have been skipped."
 msgstr "Les éléments suivants ont été enlevés."
+
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr "Clique sur le ballon pour recommencer."
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
+msgstr "Double clique sur le ballon pour tirer."
 
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
