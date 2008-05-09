@@ -1,4 +1,4 @@
-﻿# Afrikaans translation of GCompris.
+# Afrikaans translation of GCompris.
 # Copyright (C) 2007
 # This file is distributed under the same license as the GCompris package.
 # Friedel Wolff <friedel BY translate.org.za>, 2007
