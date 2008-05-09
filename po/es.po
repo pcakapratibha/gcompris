@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 15:26+0000\n"
-"PO-Revision-Date: 2008-05-04 21:42+0200\n"
+"POT-Creation-Date: 2008-05-06 17:57+0000\n"
+"PO-Revision-Date: 2008-05-09 08:06+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -804,10 +804,11 @@ msgstr "Mete la bola en la meta"
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
-#: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
-#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
-#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
+#: ../boards/connect4-2players.xml.in.h:5 ../boards/doubleclick.xml.in.h:4
+#: ../boards/erase.xml.in.h:3 ../boards/erase_doubleclick.xml.in.h:6
+#: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
+#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
+#: ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
 msgstr "Manipulación del ratón"
 
@@ -1291,8 +1292,9 @@ msgstr "Construye el mismo modelo"
 msgid "Drive the crane and copy the model"
 msgstr "Conduce la grúa y copia el modelo"
 
-#: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
+#: ../boards/crane.xml.in.h:3 ../boards/doubleclick.xml.in.h:3
+#: ../boards/erase.xml.in.h:2 ../boards/erase_doubleclick.xml.in.h:5
+#: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Coordinación motriz"
 
@@ -1318,6 +1320,24 @@ msgstr "Colores, sonidos, memoria..."
 #: ../boards/discovery.xml.in.h:2
 msgid "Go to discovery activities"
 msgstr "Ir a las actividades de descubrimiento"
+
+#: ../boards/doubleclick.xml.in.h:1
+msgid ""
+"Double click the mouse on the ball to kick it. You can double click the left "
+"right or middle mouse button. If you lose, Tux catches the ball. You must "
+"click on it to bring it back to its former position"
+msgstr ""
+"Pulsa dos veces con el ratón sobre el balón para golpearlo. Puedes pulsar "
+"dos veces con el botón izquierdo o el del medio del ratón. Si pierdes, Tux "
+"coge el balón. Debes pulsar sobre él para devolverlo a su posición anterior."
+
+#: ../boards/doubleclick.xml.in.h:2
+msgid "Double click the mouse on the ball to score a goal."
+msgstr "Pulsa dos veces con el ratón sobre el balón para marcar un gol."
+
+#: ../boards/doubleclick.xml.in.h:5
+msgid "Penalty kick"
+msgstr "Penalty"
 
 #: ../boards/doubleentry.xml.in.h:1
 msgid "Basic counting skills"
@@ -4550,6 +4570,10 @@ msgstr "Tu procesador de textos"
 msgid "Administration for gcompris"
 msgstr "Administración de gcompris"
 
+#: ../gcompris-edit.desktop.in.h:2
+msgid "GCompris Administration"
+msgstr "Administración de GCompris"
+
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
 msgstr "Juego educativo para niños desde 2 a 10 años"
@@ -5242,6 +5266,14 @@ msgstr "Atención: las siguientes imágenes no son accesibles en tu sistema.\n"
 #: ../src/boards/python/anim.py:2382
 msgid "The corresponding items have been skipped."
 msgstr "Se han saltado los elementos correspondientes."
+
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr "Pulsa sobre el globo para volverlo a posicionar."
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
+msgstr "Pulsa dos veces sobre el globo para dispararlo."
 
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
