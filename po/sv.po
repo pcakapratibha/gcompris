@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-06 02:54+0200\n"
-"PO-Revision-Date: 2008-05-06 02:58+0100\n"
+"POT-Creation-Date: 2008-05-10 18:49+0200\n"
+"PO-Revision-Date: 2008-05-10 18:49+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -3681,6 +3681,10 @@ msgstr "Din ordbehandlare"
 #: ../gcompris-edit.desktop.in.h:1
 msgid "Administration for gcompris"
 msgstr "Administration av gcompris"
+
+#: ../gcompris-edit.desktop.in.h:2
+msgid "GCompris Administration"
+msgstr "Administration av GCompris"
 
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
