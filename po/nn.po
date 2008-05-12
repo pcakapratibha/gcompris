@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-23 12:01+0100\n"
-"PO-Revision-Date: 2008-03-23 12:13+0100\n"
+"POT-Creation-Date: 2008-05-07 17:52+0200\n"
+"PO-Revision-Date: 2008-05-08 18:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -408,7 +408,8 @@ msgstr "Matte"
 msgid "Left-click the mouse on an activity to select it."
 msgstr "Venstreklikk med musa for å velja aktivitet."
 
-#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1
+#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -763,7 +764,8 @@ msgstr "Skyt fotballen i målet."
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
-#: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
+#: ../boards/connect4-2players.xml.in.h:5 ../boards/doubleclick.xml.in.h:4
+#: ../boards/erase.xml.in.h:3 ../boards/erase_doubleclick.xml.in.h:6
 #: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
 #: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
 #: ../boards/tangram.xml.in.h:8
@@ -1248,7 +1250,8 @@ msgstr "Bygg opp modellen"
 msgid "Drive the crane and copy the model"
 msgstr "Køyr heisekranen og lag ein kopi av modellen."
 
-#: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
+#: ../boards/crane.xml.in.h:3 ../boards/doubleclick.xml.in.h:3
+#: ../boards/erase.xml.in.h:2 ../boards/erase_doubleclick.xml.in.h:5
 #: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Auge–hand-koordinering."
@@ -1274,6 +1277,21 @@ msgstr "Fargar, lydar, hugsetrening, med meir."
 #: ../boards/discovery.xml.in.h:2
 msgid "Go to discovery activities"
 msgstr "Oppdaging"
+
+#: ../boards/doubleclick.xml.in.h:1
+msgid ""
+"Double click the mouse on the ball to kick it. You can double click the left "
+"right or middle mouse button. If you lose, Tux catches the ball. You must "
+"click on it to bring it back to its former position"
+msgstr "Spark ballen ved å dobbeltklikka med musa. Du kan bruka både venstre, midtre eller høgre museknapp. Viss du greier det, tek Tux ballen. Du må klikka på ballen for å flytta han tilbake."
+
+#: ../boards/doubleclick.xml.in.h:2
+msgid "Double click the mouse on the ball to score a goal."
+msgstr "Dobbeltklikk med musa på ballen for skåra."
+
+#: ../boards/doubleclick.xml.in.h:5
+msgid "Penalty kick"
+msgstr "Straffespark"
 
 #: ../boards/doubleentry.xml.in.h:1
 msgid "Basic counting skills"
@@ -1429,18 +1447,30 @@ msgstr ""
 "&gt;) og frå Daniel Le Berre. Dei har gjeve GCompris løyve til bruka bileta. "
 "Takk til dykk begge!"
 
-#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:116
+#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:117
 #: ../src/boards/machpuzzle.c:87
 msgid "Move the mouse"
 msgstr "Flytt på musa"
 
-#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:117
+#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:118
 msgid "Move the mouse to erase the area and discover the background"
 msgstr "Flytt på musa for å viska vekk området og visa biletet bak."
 
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Flytt på musa til heile biletet bak er synleg."
+
+#: ../boards/erase_doubleclick.xml.in.h:2
+msgid "Double click the mouse"
+msgstr "Dobbeltklikk med musa"
+
+#: ../boards/erase_doubleclick.xml.in.h:3
+msgid "Double click the mouse on rectangles until all the blocks disappear."
+msgstr "Dobbeltklikk på felta med musa, slik at heile biletet bak vert synleg."
+
+#: ../boards/erase_doubleclick.xml.in.h:4
+msgid "Double click the mouse to erase the area and discover the background"
+msgstr "Dobbeltklikk på felta med musa, slik at heile biletet bak vert synleg."
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -2682,7 +2712,7 @@ msgstr "Lær å bruka tastaturet."
 
 #: ../boards/keyboard.xml.in.h:2
 msgid "Keyboard-manipulation boards"
-msgstr "Tastaturbrett"
+msgstr "Aktivitetar med tastaturet"
 
 #: ../boards/leftright.xml.in.h:1
 msgid "Determine if a hand is a right or a left hand"
@@ -3538,7 +3568,7 @@ msgstr "Bygg opp att mosaikken"
 
 #: ../boards/mouse.xml.in.h:1
 msgid "Mouse-manipulation activities."
-msgstr "Aktivitetar med musa."
+msgstr "Aktivitetar med musa"
 
 #: ../boards/mouse.xml.in.h:2
 msgid "Various mouse-based activities (clicking, moving)"
@@ -4394,11 +4424,11 @@ msgstr "Din tur å spela …"
 msgid "Not allowed! Try again !"
 msgstr "Ulovleg trekk. Prøv på nytt."
 
-#: ../src/boards/chess.c:193
+#: ../src/boards/chess.c:201
 msgid "Error: The external program gnuchess died unexpectedly"
 msgstr "Feil: Det eksterne programmet gnuchess døydde uventa."
 
-#: ../src/boards/chess.c:228 ../src/boards/chess.c:273
+#: ../src/boards/chess.c:236 ../src/boards/chess.c:281
 msgid ""
 "Error: The external program gnuchess is mandatory\n"
 "to play chess in gcompris.\n"
@@ -4408,36 +4438,36 @@ msgstr ""
 "for å kunna spela sjakk i GCompris.\n"
 "Sjå til at det er installert i "
 
-#: ../src/boards/chess.c:618
+#: ../src/boards/chess.c:626
 msgid "White's Turn"
 msgstr "Kvit sin tur"
 
-#: ../src/boards/chess.c:618
+#: ../src/boards/chess.c:626
 msgid "Black's Turn"
 msgstr "Svart sin tur"
 
-#: ../src/boards/chess.c:762
+#: ../src/boards/chess.c:770
 msgid "White checks"
 msgstr "Kvit seier sjakk"
 
-#: ../src/boards/chess.c:764
+#: ../src/boards/chess.c:772
 msgid "Black checks"
 msgstr "Svart seier sjakk"
 
-#: ../src/boards/chess.c:1121
+#: ../src/boards/chess.c:1129
 msgid "Black mates"
 msgstr "Svart set matt"
 
-#: ../src/boards/chess.c:1126
+#: ../src/boards/chess.c:1134
 msgid "White mates"
 msgstr "Kvit set matt"
 
-#: ../src/boards/chess.c:1131 ../src/gcompris/bonus.c:354
+#: ../src/boards/chess.c:1139 ../src/gcompris/bonus.c:354
 #: ../src/gcompris/bonus.c:363
 msgid "Drawn game"
 msgstr "Remis"
 
-#: ../src/boards/chess.c:1159
+#: ../src/boards/chess.c:1167
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Feil: Det eksterne programmet gnuchess døydde uventa."
 
@@ -5040,6 +5070,14 @@ msgstr "Åtvaring: Desse bileta kan ikkje opnast:\n"
 msgid "The corresponding items have been skipped."
 msgstr "Tilhøyrande element vert ikkje tekne i bruk."
 
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr "Trykk på ballongen for å flytta han tilbake."
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
+msgstr "Trykk to gongar på ballongen for å skyta han."
+
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
 msgstr "Her vert meldingane vist.\n"
@@ -5580,7 +5618,7 @@ msgstr ""
 "License."
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
+#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -5602,7 +5640,7 @@ msgstr "Ja, eg er sikker."
 msgid "No, I want to keep going"
 msgstr "Nei, eg vil halda fram."
 
-#: ../src/gcompris/board.c:183
+#: ../src/gcompris/board.c:191
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr "Dynamisk modullasting er ikkje støtta. Kan ikkje starta GCompris.\n"
 
@@ -5711,206 +5749,210 @@ msgid "Dzongkha"
 msgstr "Dzongkha"
 
 #: ../src/gcompris/config.c:77
+msgid "Persian"
+msgstr "Persisk"
+
+#: ../src/gcompris/config.c:78
 msgid "Finnish"
 msgstr "Finsk"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:79
 msgid "French"
 msgstr "Fransk"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:80
 msgid "Irish (Gaelic)"
 msgstr "Irsk"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:81
 msgid "Hebrew"
 msgstr "Hebraisk"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:82
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:83
 msgid "Indonesian"
 msgstr "Indonesisk"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:84
 msgid "Japanese"
 msgstr "Japansk"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:85
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:86
 msgid "Punjabi"
 msgstr "Panjabi"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:87
 msgid "Hungarian"
 msgstr "Ungarsk"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:88
 msgid "Croatian"
 msgstr "Kroatisk"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:89
 msgid "Italian"
 msgstr "Italiensk"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:90
 msgid "Georgian"
 msgstr "Georgisk"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:91
 msgid "Korean"
 msgstr "Koreansk"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:92
 msgid "Lithuanian"
 msgstr "Litauisk"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:93
 msgid "Macedonian"
 msgstr "Makedonsk"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:94
 msgid "Malayalam"
 msgstr "Malayalam"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:95
 msgid "Marathi"
 msgstr "Marathi"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:96
 msgid "Malay"
 msgstr "Malayisk"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:97
 msgid "Nepal"
 msgstr "Nepal"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:98
 msgid "Dutch"
 msgstr "Nederlandsk"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:99
 msgid "Norwegian Bokmal"
 msgstr "Norsk (bokmål)"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:100
 msgid "Norwegian Nynorsk"
 msgstr "Norsk (nynorsk)"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:101
 msgid "Occitan (languedocien)"
 msgstr "Oksitansk (languedocien)"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:102
 msgid "Polish"
 msgstr "Polsk"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:103
 msgid "Portuguese"
 msgstr "Portugisisk (Portugal)"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:104
 msgid "Portuguese (Brazil)"
 msgstr "Portugisisk (Brasil)"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:105
 msgid "Romanian"
 msgstr "Rumensk"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:106
 msgid "Russian"
 msgstr "Russisk"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:107
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:108
 msgid "Slovak"
 msgstr "Slovakisk"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:109
 msgid "Slovenian"
 msgstr "Slovensk"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:110
 msgid "Somali"
 msgstr "Somali"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:111
 msgid "Albanian"
 msgstr "Albansk"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:112
 msgid "Serbian (Latin)"
 msgstr "Serbisk (latinsk alfabet)"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:113
 msgid "Serbian"
 msgstr "Serbisk"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:114
 msgid "Swedish"
 msgstr "Svensk"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:115
 msgid "Tamil"
 msgstr "Tamil"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:116
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:117
 msgid "Turkish"
 msgstr "Tyrkisk"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:118
 msgid "Urdu"
 msgstr "Urdu"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Vietnamese"
 msgstr "Vietnamesisk"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Walloon"
 msgstr "Vallonsk"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Chinese (Simplified)"
 msgstr "Kinesisk – forenkla"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Traditional)"
 msgstr "Kinesisk – tradisjonell"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:127
 msgid "No time limit"
 msgstr "Inga tidsgrense"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "Slow timer"
 msgstr "Sakte tid"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Normal timer"
 msgstr "Vanleg tid"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Fast timer"
 msgstr "Rask tid"
 
-#: ../src/gcompris/config.c:134
+#: ../src/gcompris/config.c:135
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (standard for GCompris)"
 
-#: ../src/gcompris/config.c:139
+#: ../src/gcompris/config.c:140
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5918,38 +5960,38 @@ msgstr ""
 "<i>Bruk administreringsmodulen\n"
 "for å filtrera bretta.</i>"
 
-#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
+#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
 msgid "GCompris Configuration"
 msgstr "GCompris-oppsett"
 
-#: ../src/gcompris/config.c:280
+#: ../src/gcompris/config.c:281
 msgid "Fullscreen"
 msgstr "Fullskjerm"
 
-#: ../src/gcompris/config.c:323
+#: ../src/gcompris/config.c:324
 msgid "Music"
 msgstr "Musikk"
 
-#: ../src/gcompris/config.c:351
+#: ../src/gcompris/config.c:352
 msgid "Effect"
 msgstr "Lydeffektar"
 
-#: ../src/gcompris/config.c:387
+#: ../src/gcompris/config.c:388
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Klarte ikkje opna draktmappa «%s»"
 
-#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
-#: ../src/gcompris/config.c:882
+#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:869
+#: ../src/gcompris/config.c:883
 #, c-format
 msgid "Skin : %s"
 msgstr "Drakt: %s"
 
-#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:421
 msgid "SKINS NOT FOUND"
 msgstr "FANN IKKJE TEMA"
 
-#: ../src/gcompris/config.c:545
+#: ../src/gcompris/config.c:546
 msgid "English (United State)"
 msgstr "Engelsk (USA)"
 
@@ -6129,7 +6171,7 @@ msgstr "Ikkje vis bakgrunnsbilete i aktivitetar."
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Ikkje hindra køyring av GCompris fleire gongar samtidig."
 
-#: ../src/gcompris/gcompris.c:848
+#: ../src/gcompris/gcompris.c:860
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6152,17 +6194,17 @@ msgstr ""
 "meir informasjon på nettsida til FSF, på\n"
 "<http://www.fsf.org/philosophy/>."
 
-#: ../src/gcompris/gcompris.c:1462
+#: ../src/gcompris/gcompris.c:1476
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr "GCompris kan ikkje starta, då låsefila er mindre enn %d sekund gammal.\n"
 
-#: ../src/gcompris/gcompris.c:1464
+#: ../src/gcompris/gcompris.c:1478
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Låsefila er «%s».\n"
 
-#: ../src/gcompris/gcompris.c:1583
+#: ../src/gcompris/gcompris.c:1597
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6176,17 +6218,17 @@ msgstr ""
 "Meir informasjon på http://gcompris.net/\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1667
+#: ../src/gcompris/gcompris.c:1681
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Bruk «-l aktivitet» for direkte tilgang til aktiviteten.\n"
 
-#: ../src/gcompris/gcompris.c:1668
+#: ../src/gcompris/gcompris.c:1682
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Lista over tilgjengeleg aktivitetar er:\n"
 
-#: ../src/gcompris/gcompris.c:1855
+#: ../src/gcompris/gcompris.c:1869
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Liste over tilgjengeleg profilar er:\n"
