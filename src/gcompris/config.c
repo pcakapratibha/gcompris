@@ -57,6 +57,7 @@ static gboolean is_displayed			= FALSE;
 
 static gchar *linguas[] = {
   "",			N_("Your system default"),
+  "af_ZA.UTF-8", 	N_("Afrikaans"),
   "am_ET.UTF-8", 	N_("Amharic"),
   "ar_AE.UTF-8", 	N_("Arabic"),
   "ar_TN.UTF-8", 	N_("Arabic (Tunisia)"),
