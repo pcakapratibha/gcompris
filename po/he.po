@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 22:12+0200\n"
+"POT-Creation-Date: 2007-02-18 14:11+0200\n"
 "PO-Revision-Date: 2007-02-13 14:23+0200\n"
 "Last-Translator: itzik bereby <itzik_b2@walla.co.il>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -396,12 +396,13 @@ msgstr "תרגול בפעולת הכפל"
 msgid "Go to Algebra activities"
 msgstr "עבור לפעילויות חשבון"
 
-#: ../boards/algebra_group.xml.in.h:2 ../boards/menu.xml.in.h:18
+#: ../boards/algebra_group.xml.in.h:2 ../boards/menu.xml.in.h:17
+
 msgid "Left-click the mouse on an activity to select it."
 msgstr "יש ללחוץ על מקש העכבר השמאלי מעל פעילות בכדי לבחור בה"
 
-#: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/erase_double_clic.xml.in.h:1
 #, fuzzy
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
@@ -736,7 +737,7 @@ msgstr "הכנס את הכדור לחור"
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
+#: ../boards/erase_clic.xml.in.h:6 ../boards/erase_double_clic.xml.in.h:6
 #: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
 #: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
 #, fuzzy
@@ -907,12 +908,12 @@ msgid ""
 "Place each image in the order and\n"
 "on the date it was invented.\n"
 "If not sure, research online at wikipedia:\n"
-"http://www.wikipedia.org"
+"&lt;http://www.wikipedia.org&gt;"
 msgstr ""
 
 #: ../boards/chronos/board3_0.xml.in.h:8 ../boards/chronos/board3_1.xml.in.h:6
 #: ../boards/chronos/board3_2.xml.in.h:5 ../boards/chronos/board3_3.xml.in.h:7
-#: ../boards/chronos/board3_4.xml.in.h:5
+#: ../boards/chronos/board3_4.xml.in.h:4
 msgid "Transportation"
 msgstr ""
 
@@ -923,7 +924,7 @@ msgid ""
 msgstr ""
 
 #: ../boards/chronos/board3_1.xml.in.h:3 ../boards/chronos/board3_2.xml.in.h:4
-#: ../boards/chronos/board3_4.xml.in.h:4 ../boards/chronos/board4_0.xml.in.h:1
+#: ../boards/chronos/board3_4.xml.in.h:3 ../boards/chronos/board4_0.xml.in.h:1
 msgid "1880 Clement Ader's Eole"
 msgstr ""
 
@@ -1000,19 +1001,6 @@ msgstr ""
 #: ../boards/chronos/board4_3.xml.in.h:4
 msgid "Cars"
 msgstr "מכוניות"
-
-#: ../boards/clickanddraw.xml.in.h:1
-#, fuzzy
-msgid "Click and draw"
-msgstr "לחץ עלי"
-
-#: ../boards/clickanddraw.xml.in.h:2
-msgid "Draw the picture by clicking on each blue point in sequence."
-msgstr ""
-
-#: ../boards/clickanddraw.xml.in.h:3
-msgid "Draw the picture by clicking on the blue points."
-msgstr ""
 
 #: ../boards/click_on_letter.xml.in.h:1
 #, fuzzy
@@ -1192,7 +1180,7 @@ msgid "Drive the crane and copy the model"
 msgstr ""
 
 #: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_clic.xml.in.h:5 ../boards/erase_double_clic.xml.in.h:5
 #, fuzzy
 msgid "Motor-coordination"
 msgstr "קורדינציה מוטורית"
@@ -1276,23 +1264,6 @@ msgid ""
 msgstr ""
 "בחר כלי לציור בצד שמאל. בחר צבע למטה וכעת לחץ על האזור הלבן וגרור כדי ליצור "
 "צורה חדשה. אפשר ללחוץ על הכפתור האמצעי על מנת למחוק חלק."
-
-#: ../boards/drawnumber.xml.in.h:1
-msgid "Can count from 1 to 50."
-msgstr ""
-
-#: ../boards/drawnumber.xml.in.h:2
-#, fuzzy
-msgid "Draw Number"
-msgstr "מספר"
-
-#: ../boards/drawnumber.xml.in.h:3
-msgid "Draw the picture by clicking on each numbers in the right order."
-msgstr ""
-
-#: ../boards/drawnumber.xml.in.h:4
-msgid "Draw the picture by following numbers"
-msgstr ""
 
 #: ../boards/electric.xml.in.h:1
 msgid "Create and simulate an electric schema"
@@ -1378,21 +1349,6 @@ msgstr "הזז את העכבר כדי למחוק את האזור ולגלות א
 msgid "Move the mouse until all the blocks disappear."
 msgstr "הזז את העכבר עד שכל הבלוקים נעלמים"
 
-#: ../boards/erase_doubleclick.xml.in.h:2
-#, fuzzy
-msgid "Double click the mouse"
-msgstr "יש להזיז את העכבר"
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-#, fuzzy
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr "הזז את העכבר עד שכל הבלוקים נעלמים"
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-#, fuzzy
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr "הזז את העכבר כדי למחוק את האזור ולגלות את הרקע"
-
 #: ../boards/erase_clic.xml.in.h:2
 #, fuzzy
 msgid "Click the mouse"
@@ -1407,6 +1363,21 @@ msgstr "הזז את העכבר עד שכל הבלוקים נעלמים"
 #, fuzzy
 msgid "Click the mouse to erase the area and discover the background"
 msgstr "הזז את העכבר כדי למחוק את האזור ולגלות את הרקע"
+
+#: ../boards/erase_double_clic.xml.in.h:2
+#, fuzzy
+msgid "Double-Click the mouse to erase the area and discover the background"
+msgstr "הזז את העכבר כדי למחוק את האזור ולגלות את הרקע"
+
+#: ../boards/erase_double_clic.xml.in.h:3
+#, fuzzy
+msgid "Double-click the mouse"
+msgstr "יש להזיז את העכבר"
+
+#: ../boards/erase_double_clic.xml.in.h:4
+#, fuzzy
+msgid "Double-click the mouse on rectangles until all the blocks disappear."
+msgstr "הזז את העכבר עד שכל הבלוקים נעלמים"
 
 #: ../boards/experience.xml.in.h:1
 #, fuzzy
@@ -1507,9 +1478,16 @@ msgstr " גרור ושחרר את  הפריטים כדי לצייר מחדש א�
 msgid "Locate the countries"
 msgstr ""
 
-#: ../boards/geography.xml.in.h:3 ../boards/geography_country.xml.in.h:3
+#: ../boards/geography.xml.in.h:3
 msgid "Mouse manipulation: movement, drag and drop"
 msgstr "הפעלת העכבר: הזזה,  גרירה ושחרור."
+
+#: ../boards/geography.xml.in.h:4
+msgid ""
+"The map of Germany comes from Wikipedia and is released under the GNU Free "
+"Documentation License. Olaf Ronneberger and his children Lina and Julia "
+"Ronneberger created the German level."
+msgstr ""
 
 #: ../boards/geography/board1_0.xml.in.h:1
 #: ../boards/geography/board4_2.xml.in.h:1
@@ -1766,7 +1744,7 @@ msgstr "קרואטיה"
 msgid "Cyprus"
 msgstr "קפריסין"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:65
 msgid "Czech Republic"
 msgstr ""
 
@@ -2100,50 +2078,12 @@ msgstr "זמביה"
 msgid "Zimbabwe"
 msgstr ""
 
-#: ../boards/geography_country.xml.in.h:1
-#, fuzzy
-msgid "Drag and Drop the regions to redraw the whole country"
-msgstr " גרור ושחרר את  הפריטים כדי לצייר מחדש את המפה השלמה"
-
-#: ../boards/geography_country.xml.in.h:2
-msgid "Locate the region"
-msgstr ""
-
-#: ../boards/geography_country.xml.in.h:4
-msgid ""
-"The map of Germany comes from Wikipedia and is released under the GNU Free "
-"Documentation License. Olaf Ronneberger and his children Lina and Julia "
-"Ronneberger created the German level."
-msgstr ""
-
-#: ../boards/geography_country/board1_0.xml.in.h:1
+#: ../boards/geography/board5_0.xml.in.h:1
 msgid "Regions of France"
 msgstr ""
 
-#: ../boards/geography_country/board2_0.xml.in.h:1
+#: ../boards/geography/board6_0.xml.in.h:1
 msgid "Deutschland Bundesländer"
-msgstr ""
-
-#: ../boards/geography_country/board3_0.xml.in.h:1
-#, fuzzy
-msgid "Provincias Argentinas"
-msgstr "ארגמן-אדום"
-
-#: ../boards/geography_country/board4_0.xml.in.h:1
-msgid "Polish Voivodship"
-msgstr ""
-
-#: ../boards/geography_country/board5_0.xml.in.h:1
-#: ../boards/geography_country/board5_2.xml.in.h:1
-msgid "Districts of Turkey"
-msgstr ""
-
-#: ../boards/geography_country/board5_1.xml.in.h:1
-msgid "Eastern Districts of Turkey"
-msgstr ""
-
-#: ../boards/geography_country/board6_0.xml.in.h:1
-msgid "Counties of Norway"
 msgstr ""
 
 #: ../boards/geometry.xml.in.h:1
@@ -2164,11 +2104,11 @@ msgstr "שימוש במקלדת"
 msgid "Letter association between the screen and the keyboard"
 msgstr "זיהוי אותיות בין המסך למקלדת"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:135
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "אותיות פשוטות"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:136
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "הקלד את האותיות הנופלות לפני שהן מגיעות לקרקע"
 
@@ -2590,7 +2530,7 @@ msgid "sofa"
 msgstr "ספה"
 
 #: ../boards/imagename/board3_0.xml.in.h:7
-#: ../boards/imagename/board5_0.xml.in.h:4
+#: ../boards/imagename/board5_0.xml.in.h:5
 msgid "star"
 msgstr "כוכב"
 
@@ -2607,13 +2547,16 @@ msgid "grater"
 msgstr "פומפייה"
 
 #: ../boards/imagename/board4_0.xml.in.h:7
-#: ../boards/imagename/board5_0.xml.in.h:5
 msgid "tree"
 msgstr "עץ"
 
 #: ../boards/imagename/board5_0.xml.in.h:2
 msgid "pencil"
 msgstr "עיפרון"
+
+#: ../boards/imagename/board5_0.xml.in.h:4
+msgid "spruce"
+msgstr "עץ מחט"
 
 #: ../boards/imagename/board5_0.xml.in.h:6
 msgid "truck"
@@ -3204,18 +3147,17 @@ msgstr ""
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of "
 "activities.\n"
-"At the bottom of the screen is the GCompris control bar.\n"
+"At the bottom of the screen is the gcompris control bar.\n"
 "The following icons are displayed from right to left.\n"
 "(note that each icon is displayed only if available in the current "
 "activity)\n"
-"    Home - Exit an activity, go back to menu\n"
+"    Home - Back to previous menu or exit gcompris if at the top\n"
 "    Thumb - OK. Confirm your answer\n"
 "    Dice - Display the current level. Click to select another level\n"
-"    Lips - Repeat the question\n"
+"    Music note - Repeat the question\n"
 "    Question Mark - Help\n"
 "    Tool - The configuration menu\n"
 "    Tux Plane - About GCompris\n"
-"    Night - Quit GCompris\n"
 "The stars show suitable age groups for each game:\n"
 "    1, 2 or 3 simple stars  - from 2 to 6 years old\n"
 "    1, 2 or 3 complex stars - 7 years and up"
@@ -3228,11 +3170,11 @@ msgstr ""
 "הכוכבים: כוכב אחד: גילאי 3 עד 4, שני כוכבים -גילאי 5 עד 6, שלושה כוכבים   "
 "גילאי 7 עד 8"
 
-#: ../boards/menu.xml.in.h:16
+#: ../boards/menu.xml.in.h:15
 msgid "GCompris Main Menu"
 msgstr "המסך הראשי של Gcompris"
 
-#: ../boards/menu.xml.in.h:17 ../src/boards/menu2.c:1007
+#: ../boards/menu.xml.in.h:16 ../src/boards/menu2.c:1008
 #, fuzzy
 msgid ""
 "GCompris is a collection of educational games that provides different "
@@ -3240,10 +3182,9 @@ msgid ""
 msgstr ""
 "Gcompris הוא משחק חינוכי המציג מגוון פעילויות לילדים בגילאי שלוש עד שמונה"
 
-#: ../boards/menu.xml.in.h:19
-#, fuzzy
+#: ../boards/menu.xml.in.h:18
 msgid ""
-"The goal of GCompris is to provide a free alternative to popular proprietary "
+"The goal of gcompris is to provide a free alternative to popular proprietary "
 "edutainment software"
 msgstr ""
 "מטרת gcompris היא לספק אלטרנטיבה חופשית לתוכנות קנייניות פופולריות המשלבות "
@@ -3478,6 +3419,27 @@ msgstr "הפעלת העכבר"
 msgid "Various mouse-based activities (clicking, moving)"
 msgstr ""
 
+#: ../boards/mypaint.xml.in.h:1
+msgid "Choose brush and colors and draw. have fun!"
+msgstr ""
+
+#: ../boards/mypaint.xml.in.h:2
+msgid "MyPaint"
+msgstr ""
+
+#: ../boards/mypaint.xml.in.h:3
+msgid "Painting activity. Uses pressure device if any."
+msgstr ""
+
+#: ../boards/mypaint.xml.in.h:4
+msgid "Painting application"
+msgstr ""
+
+#: ../boards/mypaint.xml.in.h:5
+#, fuzzy
+msgid "mouse manipulation"
+msgstr "הפעלת העכבר"
+
 #: ../boards/numeration.xml.in.h:1
 #, fuzzy
 msgid "Numeration"
@@ -3606,7 +3568,7 @@ msgstr "הזז את ההליקופטר כדי לתפוס את העננים בס�
 msgid "Number"
 msgstr "מספר"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:75
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "מספרים בסדר נכון"
 
@@ -3619,7 +3581,7 @@ msgid "Various puzzles."
 msgstr ""
 
 #: ../boards/pythontest.xml.in.h:1
-msgid "Add a language-binding to GCompris."
+msgid "Add a language-binding to gcompris."
 msgstr ""
 
 #: ../boards/pythontest.xml.in.h:2
@@ -3873,8 +3835,8 @@ msgstr ""
 #: ../boards/scalesboard.xml.in.h:5
 #, fuzzy
 msgid ""
-"To balance the scales, move the masses on the left or the right side. The "
-"masses can be arranged in any order."
+"To balance the scales, move the masses on the left side. The masses can be "
+"arranged in any order."
 msgstr ""
 "כדי לאזן את המאזניים, הזז את המשקלות בצד שמאל. ניתן לסדר את המשקולות בכל סדר."
 
@@ -3882,25 +3844,23 @@ msgstr ""
 msgid "Direct your boat accurately to win the race."
 msgstr ""
 
-#: ../boards/searace.xml.in.h:2
+#: ../boards/searace.xml.in.h:2 ../boards/searace1player.xml.in.h:2
 msgid ""
-"In the text entry, enter one command per line, to control your boat.\n"
+"In the text entry, enter one command per line, to control your boat. "
 "Commands supported are displayed between the two entry areas. The 'left' and "
 "'right' commands must be followed by an angle in degrees. The angle value is "
 "also called a 'parameter' to the left or right command. By default 45 "
 "degrees is used. The 'forward' command accepts a distance parameter. By "
-"default 1 is used.\n"
-"For example:\n"
-"- left 90: Make a perpendicular left turn\n"
-"- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
-"The goal is to reach the right of the screen (the red line). When done, you "
-"can try to improve your program and start a new race with the same weather "
+"default 1 is used. For example: left 90 => Make a perpendicular left turn "
+"forward 10 => Go forward for 10 units (as displayed on the ruler). The goal "
+"is to reach the right of the screen (the red line). When done, you can try "
+"to improve your program and start a new race with the same weather "
 "conditions by using the retry button. You can click and drag your mouse "
 "anywhere on the map to get a measurement in distance and angle. Going to the "
 "next level will give you more complex weather conditions."
 msgstr ""
 
-#: ../boards/searace.xml.in.h:8 ../boards/searace1player.xml.in.h:7
+#: ../boards/searace.xml.in.h:3 ../boards/searace1player.xml.in.h:3
 msgid ""
 "In this activity, you will learn how to enter commands into a computer. Even "
 "if the language is extremely basic, you learn here how to think ahead and "
@@ -3908,7 +3868,7 @@ msgid ""
 "concept to children."
 msgstr ""
 
-#: ../boards/searace.xml.in.h:9
+#: ../boards/searace.xml.in.h:4
 msgid "Sea race (2 Players)"
 msgstr ""
 
@@ -3916,25 +3876,7 @@ msgstr ""
 msgid "Give good instructions to your ship in order to be first in the race."
 msgstr ""
 
-#: ../boards/searace1player.xml.in.h:2
-msgid ""
-"In the text entry, enter one command per line, to control your boat. "
-"Commands supported are displayed between the two entry areas. The 'left' and "
-"'right' commands must be followed by an angle in degrees. The angle value is "
-"also called a 'parameter' to the left or right command. By default 45 "
-"degrees is used. The 'forward' command accepts a distance parameter. By "
-"default 1 is used.\n"
-"For example:\n"
-"- left 90: Make a perpendicular left turn\n"
-"- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
-"The goal is to reach the right of the screen (the red line). When done, you "
-"can try to improve your program and start a new race with the same weather "
-"conditions by using the retry button. You can click and drag your mouse "
-"anywhere on the map to get a measurement in distance and angle. Going to the "
-"next level will give you more complex weather conditions."
-msgstr ""
-
-#: ../boards/searace1player.xml.in.h:8
+#: ../boards/searace1player.xml.in.h:4
 msgid "Sea race (Single Player)"
 msgstr ""
 
@@ -3990,8 +3932,8 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Click on different active elements : engine, rudders and air tanks, in order "
-"to navigate to the required depth. There is a close gate on the right. Catch "
-"the jewel to open it, then pass through it to reach the next level."
+"to navigate to the required depth. There is a gate on the right. Pass "
+"through it to reach the next level."
 msgstr ""
 "לחץ על הפריטים הפעילים השונים: מנוע, הגה ומיכלי אויר על מנת לנווט בעומק "
 "הדרוש."
@@ -4204,7 +4146,7 @@ msgstr ""
 "עליך להפעיל את מערכת אספקת המים. טוקס חזר ממסיבת דייג ארוכה בסירה שלו. עזור "
 "לו להתקלח."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
 msgid "Falling Words"
 msgstr "מילים נופלות"
 
@@ -4217,7 +4159,7 @@ msgstr "אימון מקלדת"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "הקלד את האותיות הנופלות לפני שהן מגיעות לקרקע"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:112
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
 #, fuzzy
 msgid "Type the falling words before they reach the ground"
 msgstr "הקלד בשלמותם את המילים הנופלות לפני שהן פוגעות בקרקע"
@@ -4227,27 +4169,6 @@ msgid "A simple word processor to enter and save any text"
 msgstr ""
 
 #: ../boards/wordprocessor.xml.in.h:2
-msgid ""
-"In this wordprocessor you can type the text you want, save and get it back "
-"later. You can add some style to your text by using the buttons on the left. "
-"The first 4 buttons let you select the style of the line on which your "
-"insert cursor is. The 2 others buttons with multiple choices let you select "
-"from a predefined document and color theme."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:3
-msgid ""
-"Learn how to enter text in a wordprocessor. This wordprocessor is special in "
-"that it enforces the use of styles. This way, the children will understand "
-"their benefit when moving to more feature full wordprocessor like OpenOffice."
-"org."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:4
-msgid "The children can type their own text or copy one given by the teacher."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:5
 msgid "Your word processor"
 msgstr ""
 
@@ -4267,11 +4188,6 @@ msgstr ""
 
 #: ../gcompris.desktop.in.h:3
 msgid "Multi-activity educational game"
-msgstr ""
-
-#. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:182 ../src/boards/memory.c:846
-msgid "+-×÷"
 msgstr ""
 
 #: ../src/boards/awele.c:350 ../src/boards/awele.c:360
@@ -4298,60 +4214,60 @@ msgstr ""
 msgid "Error: The external program gnuchess died unexpectedly"
 msgstr ""
 
-#: ../src/boards/chess.c:199
+#: ../src/boards/chess.c:194
 msgid ""
 "Error: The external program gnuchess is required\n"
-"to play chess in GCompris.\n"
+"to play chess in gcompris.\n"
 "Find this program on http://www.rpmfind.net or in your\n"
 "GNU/Linux distribution\n"
 "And check it is located here: "
 msgstr ""
 
-#: ../src/boards/chess.c:244
+#: ../src/boards/chess.c:236
 msgid ""
 "Error: The external program gnuchess is mandatory\n"
 "to play chess in gcompris.\n"
 "First install it, and check it is in "
 msgstr ""
 
-#: ../src/boards/chess.c:587
+#: ../src/boards/chess.c:579
 #, fuzzy
 msgid "White's Turn"
 msgstr "תור הלבן"
 
-#: ../src/boards/chess.c:587
+#: ../src/boards/chess.c:579
 #, fuzzy
 msgid "Black's Turn"
 msgstr "תור השחור"
 
-#: ../src/boards/chess.c:731
+#: ../src/boards/chess.c:723
 #, fuzzy
 msgid "White checks"
 msgstr "לבן מכריז שח"
 
-#: ../src/boards/chess.c:733
+#: ../src/boards/chess.c:725
 #, fuzzy
 msgid "Black checks"
 msgstr "שחור מכריז שח"
 
-#: ../src/boards/chess.c:1090
+#: ../src/boards/chess.c:1082
 msgid "Black mates"
 msgstr "שחמט לשחור"
 
-#: ../src/boards/chess.c:1095
+#: ../src/boards/chess.c:1087
 msgid "White mates"
 msgstr "שחמט ללבן"
 
-#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:355
-#: ../src/gcompris/bonus.c:364
+#: ../src/boards/chess.c:1092 ../src/gcompris/bonus.c:359
+#: ../src/gcompris/bonus.c:368
 msgid "Drawn game"
 msgstr "המשחק הסתיים בתיקו"
 
-#: ../src/boards/chess.c:1128
+#: ../src/boards/chess.c:1120
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr ""
 
-#: ../src/boards/click_on_letter.c:259 ../src/boards/memory.c:813
+#: ../src/boards/click_on_letter.c:259 ../src/boards/memory.c:832
 #, fuzzy
 msgid ""
 "Error: this activity cannot be played with the\n"
@@ -4365,8 +4281,8 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:233
-#: ../src/boards/memory.c:835
+#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:231
+#: ../src/boards/memory.c:853
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr ""
 
@@ -4374,7 +4290,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
-"the packages with GCompris voices for the locale '%s' or '%s'"
+"the packages with gcompris voices for the locale '%s' or '%s'"
 msgstr ""
 
 #: ../src/boards/click_on_letter.c:294
@@ -4385,29 +4301,8 @@ msgid ""
 "sorry!"
 msgstr ""
 
-#. Init configuration window:
-#. all the configuration functions will use it
-#. all the configuration functions returns values for their key in
-#. the dict passed to the apply_callback
-#. the returned value is the main GtkVBox of the window,
-#. we can add what you want in it.
-#: ../src/boards/click_on_letter.c:623 ../src/boards/colors.c:165
-#: ../src/boards/gletters.c:859 ../src/boards/imageid.c:749
-#: ../src/boards/missingletter.c:771
-#: ../src/boards/python/admin/board_list.py:641
-#: ../src/boards/python/admin/board_list.py:659
-#: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
-#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
-#: ../src/boards/reading.c:833 ../src/boards/scale.c:862
-#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:592
-#, c-format, python-format
-msgid ""
-"<b>%s</b> configuration\n"
-" for profile <b>%s</b>"
-msgstr ""
-
 #. toggle box
-#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:892
+#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:899
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr ""
@@ -4466,24 +4361,14 @@ msgstr "לחץ על  הדמות שבצבע %s"
 msgid "Click on the white duck"
 msgstr "לחץ על הצבע הנכון"
 
-#: ../src/boards/colors.c:177 ../src/boards/python/admin/board_list.py:671
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
-#, fuzzy
-msgid "Select sound locale"
-msgstr "בחר לוח"
-
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:229 ../src/boards/memory.c:831
+#: ../src/boards/gletters.c:227 ../src/boards/memory.c:849
 msgid "0123456789"
 msgstr ""
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:239 ../src/boards/memory.c:841
+#: ../src/boards/gletters.c:237 ../src/boards/memory.c:859
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-msgstr ""
-
-#: ../src/boards/gletters.c:888 ../src/boards/smallnumbers.c:610
-msgid "Enable sounds"
 msgstr ""
 
 #: ../src/boards/hanoi.c:332 ../src/boards/hanoi.c:343
@@ -4498,7 +4383,7 @@ msgstr "העתק למקום הריק את המגדל שנמצא מימין"
 msgid "Tower of Hanoi"
 msgstr "המגדל של האנוי "
 
-#: ../src/boards/hanoi_real.c:277 ../src/boards/hanoi_real.c:288
+#: ../src/boards/hanoi_real.c:273 ../src/boards/hanoi_real.c:284
 msgid "Move the entire stack to the right peg, one disc at a time"
 msgstr ""
 
@@ -4507,16 +4392,16 @@ msgid "Learn how to read"
 msgstr "למד איך לקרוא"
 
 #: ../src/boards/leftright.c:277 ../src/boards/leftright.c:287
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:548 ../src/boards/python/searace.py:857
-#: ../src/boards/python/searace.py:890 ../src/boards/python/searace.py:981
+#: ../src/boards/python/searace.py:428 ../src/boards/python/searace.py:453
+#: ../src/boards/python/searace.py:543 ../src/boards/python/searace.py:855
+#: ../src/boards/python/searace.py:888 ../src/boards/python/searace.py:985
 msgid "left"
 msgstr "שמאל"
 
 #: ../src/boards/leftright.c:297 ../src/boards/leftright.c:307
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:557 ../src/boards/python/searace.py:859
-#: ../src/boards/python/searace.py:892 ../src/boards/python/searace.py:975
+#: ../src/boards/python/searace.py:428 ../src/boards/python/searace.py:453
+#: ../src/boards/python/searace.py:552 ../src/boards/python/searace.py:857
+#: ../src/boards/python/searace.py:890 ../src/boards/python/searace.py:979
 msgid "right"
 msgstr "ימין"
 
@@ -4533,13 +4418,18 @@ msgid ""
 "Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "הבט במצב שלך וחזור למצב תלת מימדי כדי לזוז"
 
-#: ../src/boards/memory.c:266
+#: ../src/boards/memory.c:286
 msgid "Memory"
 msgstr "זיכרון"
 
-#: ../src/boards/memory.c:267
+#: ../src/boards/memory.c:287
 msgid "Find the matching pair"
 msgstr "מצא את הזוג המתאים"
+
+#. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
+#: ../src/boards/memory.c:864
+msgid "+-×÷"
+msgstr ""
 
 #: ../src/boards/menu2.c:133
 msgid "Main Menu Second Version"
@@ -4560,24 +4450,19 @@ msgstr ""
 msgid "$ %.0f"
 msgstr ""
 
-#: ../src/boards/paratrooper.c:438
+#: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
 msgstr ""
 
-#: ../src/boards/planegame.c:76
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "הזז את המטוס כדי לתפוס את העננים בסדר הנכון"
 
-#: ../src/boards/python.c:63 ../src/boards/python.c:87
+#: ../src/boards/python.c:62 ../src/boards/python.c:86
 msgid "Python Board"
 msgstr "לוח פיתון"
 
-#: ../src/boards/python.c:64
-#, fuzzy
-msgid "Special board that embeds python into GCompris."
-msgstr "לוח מיוחד שמשבץ פיתון לתוך gcompris"
-
-#: ../src/boards/python.c:88
+#: ../src/boards/python.c:63 ../src/boards/python.c:87
 #, fuzzy
 msgid "Special board that embeds python into gcompris."
 msgstr "לוח מיוחד שמשבץ פיתון לתוך gcompris"
@@ -4629,78 +4514,100 @@ msgstr "תפריט ראשי"
 #. image = gtk.image_new_from_stock(gtk.STOCK_PREFERENCES, gtk.ICON_SIZE_MENU)
 #. image.show()
 #. column_pref.set_widget(image)
-#: ../src/boards/python/admin/board_list.py:302
+#: ../src/boards/python/admin/board_list.py:292
 msgid "Active"
 msgstr ""
 
-#: ../src/boards/python/admin/board_list.py:303
+#: ../src/boards/python/admin/board_list.py:293
 msgid "Board title"
 msgstr ""
 
-#: ../src/boards/python/admin/board_list.py:419
+#: ../src/boards/python/admin/board_list.py:409
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
 msgstr ""
 
-#: ../src/boards/python/admin/board_list.py:450
+#: ../src/boards/python/admin/board_list.py:440
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
 "for profile <b>%s</b></span>"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:61
+#. Init configuration window:
+#. all the configuration functions will use it
+#. all the configuration functions returns values for their key in
+#. the dict passed to the apply_callback
+#. the returned value is the main GtkVBox of the window,
+#. we can add what you want in it.
+#: ../src/boards/python/admin/board_list.py:631
+#: ../src/boards/python/admin/board_list.py:649
+#: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
+#: ../src/boards/python/pythontest.py:406 ../src/boards/python/tuxpaint.py:206
+#, python-format
+msgid ""
+"<b>%s</b> configuration\n"
+" for profile <b>%s</b>"
+msgstr ""
+
+#: ../src/boards/python/admin/board_list.py:661
+#: ../src/boards/python/pythontest.py:470
+#, fuzzy
+msgid "Select sound locale"
+msgstr "בחר לוח"
+
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:66
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:69
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:91
+#: ../src/boards/python/admin/class_edit.py:90
 #, fuzzy
 msgid "Class:"
 msgstr "זכוכית"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:104
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:114
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:254
-#: ../src/boards/python/admin/group_edit.py:266
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:154
 #: ../src/boards/python/admin/user_list.py:196
 msgid "First Name"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:265
-#: ../src/boards/python/admin/group_edit.py:277
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:164
 #: ../src/boards/python/admin/user_list.py:206
 #, fuzzy
 msgid "Last Name"
 msgstr "שם התמונה"
 
-#: ../src/boards/python/admin/class_edit.py:342
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:388
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr ""
 
 #: ../src/boards/python/admin/class_list.py:169
-#: ../src/boards/python/admin/profile_edit.py:270
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:144
 #, fuzzy
 msgid "Class"
@@ -4710,44 +4617,44 @@ msgstr "זכוכית"
 msgid "Teacher"
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:61
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:67
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:68
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:71
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:91
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr ""
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:103
-#: ../src/boards/python/admin/profile_edit.py:99
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 #, fuzzy
 msgid "Description:"
 msgstr "תיאור"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:114
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:360
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:374
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr ""
 
@@ -4757,13 +4664,13 @@ msgid "Select a class:"
 msgstr "בחר לוח"
 
 #: ../src/boards/python/admin/group_list.py:214
-#: ../src/boards/python/admin/profile_edit.py:280
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:154
 msgid "Group"
 msgstr ""
 
 #: ../src/boards/python/admin/group_list.py:225
-#: ../src/boards/python/admin/profile_edit.py:290
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:164
 #: ../src/boards/python/admin/profile_list.py:198
 msgid "Description"
@@ -4778,64 +4685,8 @@ msgstr ""
 msgid "Birth Date"
 msgstr ""
 
-#: ../src/boards/python/admin/log_list.py:91
-#, fuzzy
-msgid "Select a user:"
-msgstr "בחר לוח"
-
-#. Insert the ALL option (HACK, use the user_id -2 to indicate ALL)
-#: ../src/boards/python/admin/log_list.py:102
-msgid "All users"
-msgstr ""
-
-#: ../src/boards/python/admin/log_list.py:108
-#: ../src/boards/python/admin/log_list.py:287
-#: ../src/boards/python/admin/profile_list.py:121
-#: ../src/gcompris/board_config.c:668 ../src/gcompris/board_config.c:926
-msgid "Default"
-msgstr ""
-
-#. Reset buttons
-#: ../src/boards/python/admin/log_list.py:162
-#, fuzzy
-msgid "Reset"
-msgstr "עץ מחט"
-
-#: ../src/boards/python/admin/log_list.py:208
-#, fuzzy
-msgid "Date"
-msgstr "פומפייה"
-
-#: ../src/boards/python/admin/log_list.py:218
-msgid "User"
-msgstr ""
-
-#: ../src/boards/python/admin/log_list.py:228
-#, fuzzy
-msgid "Board"
-msgstr "פרח"
-
-#: ../src/boards/python/admin/log_list.py:238
-#: ../src/boards/python/redraw.py:347 ../src/boards/python/redraw.py:357
-msgid "Level"
-msgstr "רמה"
-
-#: ../src/boards/python/admin/log_list.py:248
-#, fuzzy
-msgid "Sublevel"
-msgstr "רמה"
-
-#: ../src/boards/python/admin/log_list.py:258
-#, fuzzy
-msgid "Duration"
-msgstr "תרגול ספירה"
-
-#: ../src/boards/python/admin/log_list.py:268
-msgid "Status"
-msgstr ""
-
 #: ../src/boards/python/admin/module_boards.py:42
-#: ../src/boards/python/admin/module_boards.py:67
+#: ../src/boards/python/admin/module_boards.py:62
 msgid "Boards"
 msgstr ""
 
@@ -4849,50 +4700,49 @@ msgstr "קבוצות"
 msgid "Profiles"
 msgstr ""
 
-#: ../src/boards/python/admin/module_reports.py:41
-#: ../src/boards/python/admin/module_reports.py:67
-msgid "Reports"
-msgstr ""
-
-#: ../src/boards/python/admin/module_reports.py:67
-#: ../src/boards/python/admin/module_users.py:41
-#: ../src/boards/python/admin/module_users.py:67
-msgid "Users"
-msgstr ""
-
 #: ../src/boards/python/admin/module_users.py:41
 #: ../src/boards/python/admin/module_users.py:67
 #, fuzzy
 msgid "Classes"
 msgstr "זכוכית"
 
-#: ../src/boards/python/admin/profile_edit.py:60
+#: ../src/boards/python/admin/module_users.py:41
+#: ../src/boards/python/admin/module_users.py:67
+msgid "Users"
+msgstr ""
+
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:65
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:68
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:87
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr ""
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:110
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:378
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:400
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
+msgstr ""
+
+#: ../src/boards/python/admin/profile_list.py:121
+#: ../src/gcompris/board_config.c:667 ../src/gcompris/board_config.c:925
+msgid "Default"
 msgstr ""
 
 #: ../src/boards/python/admin/profile_list.py:188
@@ -4903,44 +4753,44 @@ msgstr ""
 msgid "[Default]"
 msgstr ""
 
-#: ../src/boards/python/admin/user_edit.py:51
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr ""
 
-#: ../src/boards/python/admin/user_edit.py:56
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr ""
 
-#: ../src/boards/python/admin/user_edit.py:62
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr ""
 
-#: ../src/boards/python/admin/user_edit.py:79
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr ""
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:90
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr ""
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:99
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr ""
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:108
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr ""
 
-#: ../src/boards/python/admin/user_edit.py:160
+#: ../src/boards/python/admin/user_edit.py:159
 msgid ""
 "You need to provide at least a login, first name and last name for your users"
 msgstr ""
 
-#: ../src/boards/python/admin/user_edit.py:177
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr ""
 
@@ -4959,45 +4809,33 @@ msgid ""
 "You need to change them: %s !"
 msgstr ""
 
-#: ../src/boards/python/anim.py:2225
+#: ../src/boards/python/anim.py:2221
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr ""
 
-#: ../src/boards/python/anim.py:2381
+#: ../src/boards/python/anim.py:2377
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr ""
 
-#: ../src/boards/python/anim.py:2383
+#: ../src/boards/python/anim.py:2379
 msgid "The corresponding items have been skipped."
 msgstr ""
 
-#: ../src/boards/python/chat.py:82
+#: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
 msgstr ""
 
-#: ../src/boards/python/chat.py:132
+#: ../src/boards/python/chat.py:131
 msgid "Your Friends"
 msgstr ""
 
-#: ../src/boards/python/chat.py:164
-msgid "Your Channel"
-msgstr ""
-
-#: ../src/boards/python/chat.py:190
+#: ../src/boards/python/chat.py:157
 msgid ""
 "Type your message here, to send to other GCompris users on your local "
 "network."
 msgstr ""
 
-#: ../src/boards/python/chat.py:325
-msgid "You must set a channel in your channel entry box first.\n"
-msgstr ""
-
-#: ../src/boards/python/chat.py:326
-msgid "Your friends must set the same channel in order to communicate with you"
-msgstr ""
-
-#: ../src/boards/python/electric.py:95
+#: ../src/boards/python/electric.py:94
 msgid ""
 "Cannot find the 'gnucap' electric simulator.\n"
 "You can download and install it from:\n"
@@ -5161,7 +4999,7 @@ msgstr ""
 msgid "Rebuild the same mosaic on the right area"
 msgstr ""
 
-#: ../src/boards/python/melody.py:119
+#: ../src/boards/python/melody.py:118
 #, fuzzy
 msgid ""
 "Error: this activity cannot be played with the\n"
@@ -5192,107 +5030,112 @@ msgstr ""
 msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
 msgstr ""
 
-#: ../src/boards/python/pythontest.py:148
+#: ../src/boards/python/pythontest.py:145
 msgid ""
-"This is the first plugin in GCompris coded in the Python\n"
+"This is the first plugin in gcompris coded in the Python\n"
 "Programming language."
 msgstr ""
 
-#: ../src/boards/python/pythontest.py:157
+#: ../src/boards/python/pythontest.py:154
 msgid ""
-"It is now possible to develop GCompris activities in C or in Python.\n"
+"It is now possible to develop gcompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
 msgstr ""
 
-#: ../src/boards/python/pythontest.py:166
+#: ../src/boards/python/pythontest.py:163
 msgid "This activity is not playable, just a test"
 msgstr ""
 
 #. toggle box
-#: ../src/boards/python/pythontest.py:414
+#: ../src/boards/python/pythontest.py:411
 msgid "Disable line drawing in circle"
 msgstr ""
 
 #. combo box
-#: ../src/boards/python/pythontest.py:423
+#: ../src/boards/python/pythontest.py:420
 msgid "Color of the line"
 msgstr ""
 
 #. spin button for int
-#: ../src/boards/python/pythontest.py:434
+#: ../src/boards/python/pythontest.py:431
 msgid "Distance between circles"
 msgstr ""
 
 #. radio buttons for circle or rectangle
-#: ../src/boards/python/pythontest.py:445
+#: ../src/boards/python/pythontest.py:442
 msgid "Use circles"
 msgstr ""
 
-#: ../src/boards/python/pythontest.py:446
+#: ../src/boards/python/pythontest.py:443
 msgid "Use rectangles"
 msgstr ""
 
-#: ../src/boards/python/pythontest.py:449
+#: ../src/boards/python/pythontest.py:446
 #, fuzzy
 msgid "Choice of pattern"
 msgstr "יש ללחוץ על אות"
 
-#: ../src/boards/python/redraw.py:909 ../src/boards/python/redraw.py:912
+#: ../src/boards/python/redraw.py:348 ../src/boards/python/redraw.py:358
+msgid "Level"
+msgstr "רמה"
+
+#: ../src/boards/python/redraw.py:910 ../src/boards/python/redraw.py:913
 msgid "Coordinate"
 msgstr ""
 
-#: ../src/boards/python/searace.py:191
+#: ../src/boards/python/searace.py:200 ../src/boards/python/searace.py:205
+#: ../src/boards/python/searace.py:231
 msgid "The race is already being run"
 msgstr ""
 
 #. Manage default cases (no params given)
 #. Final move, add an ofset because we loose space in abs()
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:539 ../src/boards/python/searace.py:855
-#: ../src/boards/python/searace.py:884 ../src/boards/python/searace.py:973
-#: ../src/boards/python/searace.py:979 ../src/boards/python/searace.py:987
+#: ../src/boards/python/searace.py:428 ../src/boards/python/searace.py:453
+#: ../src/boards/python/searace.py:534 ../src/boards/python/searace.py:853
+#: ../src/boards/python/searace.py:882 ../src/boards/python/searace.py:977
+#: ../src/boards/python/searace.py:983 ../src/boards/python/searace.py:991
 #, fuzzy
 msgid "forward"
 msgstr "פרח"
 
-#: ../src/boards/python/searace.py:530
+#: ../src/boards/python/searace.py:525
 msgid "COMMANDS ARE"
 msgstr ""
 
 #. The two boat arrived in a close time frame (1s), it's a draw
-#: ../src/boards/python/searace.py:756
+#: ../src/boards/python/searace.py:751
 msgid "This is a draw"
 msgstr ""
 
-#: ../src/boards/python/searace.py:763
+#: ../src/boards/python/searace.py:758
 msgid "The Red boat has won"
 msgstr ""
 
-#: ../src/boards/python/searace.py:766
+#: ../src/boards/python/searace.py:761
 msgid "The Green boat has won"
 msgstr ""
 
-#: ../src/boards/python/searace.py:784 ../src/boards/python/searace.py:1017
+#: ../src/boards/python/searace.py:779 ../src/boards/python/searace.py:1021
 msgid "Angle:"
 msgstr ""
 
-#: ../src/boards/python/searace.py:784
+#: ../src/boards/python/searace.py:779
 msgid "Wind:"
 msgstr ""
 
-#: ../src/boards/python/searace.py:862
+#: ../src/boards/python/searace.py:860
 msgid "Syntax error at line"
 msgstr ""
 
-#: ../src/boards/python/searace.py:880
+#: ../src/boards/python/searace.py:878
 msgid "The command"
 msgstr ""
 
-#: ../src/boards/python/searace.py:899
+#: ../src/boards/python/searace.py:897
 msgid "Unknown command at line"
 msgstr ""
 
-#: ../src/boards/python/searace.py:1017
+#: ../src/boards/python/searace.py:1021
 msgid "Distance:"
 msgstr ""
 
@@ -5335,7 +5178,7 @@ msgstr "משחק זיכרון"
 msgid "Build a train according to the model"
 msgstr "בנה רכבת המתאימה למודל"
 
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:207
+#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:205
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5369,24 +5212,19 @@ msgid "The word to find was '%s'"
 msgstr "המילה שצריך למצוא היא '%s'"
 
 #: ../src/boards/reading.c:686
-#, fuzzy, c-format
+#, fuzzy
 msgid "But it was not displayed"
 msgstr "מופיעה"
 
 #: ../src/boards/reading.c:688
-#, fuzzy, c-format
+#, fuzzy
 msgid "And it was displayed"
 msgstr "מופיעה"
 
-#: ../src/boards/scale.c:265
+#: ../src/boards/scale.c:259
 #, fuzzy, c-format
 msgid "Weight = %s"
 msgstr "נקודות = %s"
-
-#: ../src/boards/scale.c:714
-#, fuzzy
-msgid "Take care, you can drop masses on both sides of the scale."
-msgstr "גרור ושחרר משקל כדי לאזן  את המאזניים"
 
 #: ../src/boards/target.c:281 ../src/boards/target.c:546
 #, c-format
@@ -5473,73 +5311,74 @@ msgstr "על gcompris"
 
 #: ../src/gcompris/about.c:117
 msgid "Translators:"
-msgstr "מתרגמים:"
+msgstr ""
+"מתרגמים:"
 
-#: ../src/gcompris/about.c:230
+#: ../src/gcompris/about.c:193
 #, fuzzy
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
 msgstr "עמוד הבית של gcompris"
 
-#: ../src/gcompris/about.c:252
+#: ../src/gcompris/about.c:215
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
 msgstr ""
 
-#: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
-#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
-#: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
+#: ../src/gcompris/about.c:278 ../src/gcompris/about.c:288
+#: ../src/gcompris/config.c:468 ../src/gcompris/config.c:478
+#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:380
+#: ../src/gcompris/help.c:390 ../src/gcompris/images_selector.c:317
 msgid "OK"
 msgstr "אישור"
 
-#: ../src/gcompris/bar.c:577
+#: ../src/gcompris/bar.c:579
 #, fuzzy
 msgid "GCompris confirmation"
 msgstr "תצורת gcompris"
 
-#: ../src/gcompris/bar.c:578
+#: ../src/gcompris/bar.c:580
 msgid "Are you sure you want to quit?"
 msgstr ""
 
-#: ../src/gcompris/bar.c:579
+#: ../src/gcompris/bar.c:581
 msgid "Yes, I am sure!"
 msgstr ""
 
-#: ../src/gcompris/bar.c:580
+#: ../src/gcompris/bar.c:582
 msgid "No, I want to keep going"
 msgstr ""
 
-#: ../src/gcompris/board.c:192
-msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
+#: ../src/gcompris/board.c:181
+msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
 msgstr ""
 
-#: ../src/gcompris/board_config.c:700
+#: ../src/gcompris/board_config.c:699
 msgid ""
 "Select the language\n"
 " to use in the board"
 msgstr ""
 
-#: ../src/gcompris/board_config.c:763
+#: ../src/gcompris/board_config.c:762
 msgid "Global GCompris mode"
 msgstr ""
 
-#: ../src/gcompris/board_config.c:764
+#: ../src/gcompris/board_config.c:763
 #, fuzzy
 msgid "Normal"
 msgstr "ורוד עמוק (אלמוג)"
 
-#: ../src/gcompris/board_config.c:765
+#: ../src/gcompris/board_config.c:764
 msgid "2 clicks"
 msgstr ""
 
-#: ../src/gcompris/board_config.c:766
+#: ../src/gcompris/board_config.c:765
 msgid "both modes"
 msgstr ""
 
-#: ../src/gcompris/board_config.c:794
+#: ../src/gcompris/board_config.c:793
 msgid ""
 "Select the drag and drop mode\n"
 " to use in the board"
@@ -5558,517 +5397,461 @@ msgid "Arabic"
 msgstr "ערבית"
 
 #: ../src/gcompris/config.c:62
-#, fuzzy
-msgid "Arabic (Tunisia)"
-msgstr "טוניסיה"
-
-#: ../src/gcompris/config.c:63
 msgid "Turkish (Azerbaijan)"
 msgstr ""
 
-#: ../src/gcompris/config.c:64
+#: ../src/gcompris/config.c:63
 #, fuzzy
 msgid "Bulgarian"
 msgstr "הונגרית"
 
-#: ../src/gcompris/config.c:65
-msgid "Breton"
-msgstr ""
-
-#: ../src/gcompris/config.c:66
+#: ../src/gcompris/config.c:64
 msgid "Catalan"
 msgstr "קטלנית"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:66
 #, fuzzy
 msgid "Danish"
 msgstr "ספרדית"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:67
 msgid "German"
 msgstr "גרמנית"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:68
 msgid "Greek"
 msgstr "יוונית"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:69
 #, fuzzy
 msgid "English (Canada)"
 msgstr "אנגלית"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:70
 msgid "English (Great Britain)"
 msgstr ""
 
-#: ../src/gcompris/config.c:73
+#: ../src/gcompris/config.c:71
 msgid "English (United States)"
 msgstr ""
 
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:72
 msgid "Spanish"
 msgstr "ספרדית"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:73
 msgid "Basque"
 msgstr ""
 
-#: ../src/gcompris/config.c:76
-msgid "Dzongkha"
-msgstr ""
-
-#: ../src/gcompris/config.c:77
-#, fuzzy
-msgid "Persian"
-msgstr "סרבית"
-
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:74
 msgid "Finnish"
 msgstr "סיום"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:75
 msgid "French"
 msgstr "צרפתית"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:76
 msgid "Irish (Gaelic)"
 msgstr ""
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:77
 msgid "Hebrew"
 msgstr "עברית"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:78
 #, fuzzy
 msgid "Hindi"
 msgstr "כחול כהה"
 
-#: ../src/gcompris/config.c:83
-#, fuzzy
-msgid "Indonesian"
-msgstr "הודית"
-
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:79
 #, fuzzy
 msgid "Japanese"
 msgstr "שחור (אניס)"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:80
 msgid "Gujarati"
 msgstr ""
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:81
 msgid "Punjabi"
 msgstr ""
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:82
 msgid "Hungarian"
 msgstr "הונגרית"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:83
 msgid "Croatian"
 msgstr "קרואתית"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:84
 msgid "Italian"
 msgstr "איטלקית"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:85
 #, fuzzy
 msgid "Georgian"
 msgstr "גרמנית"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:86
 #, fuzzy
 msgid "Korean"
 msgstr "כתום"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:87
 msgid "Lithuanian"
 msgstr "ליטאית"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:88
 msgid "Macedonian"
 msgstr "מקדונית"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:89
 msgid "Malayalam"
 msgstr "מליאלם"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:90
 msgid "Marathi"
 msgstr ""
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:91
 msgid "Malay"
 msgstr "מלאית"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:92
 msgid "Nepal"
 msgstr ""
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:93
 msgid "Dutch"
 msgstr "הולנדית"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:94
 #, fuzzy
 msgid "Norwegian Bokmal"
 msgstr "נורווגית"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:95
 #, fuzzy
 msgid "Norwegian Nynorsk"
 msgstr "נורווגית"
 
-#: ../src/gcompris/config.c:101
-msgid "Occitan (languedocien)"
-msgstr ""
-
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:96
 msgid "Polish"
 msgstr "פולנית"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:97
 msgid "Portuguese"
 msgstr "פורטוגזית"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:98
 #, fuzzy
 msgid "Portuguese (Brazil)"
 msgstr "פורטוגזית"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:99
 msgid "Romanian"
 msgstr "רומנית"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:100
 msgid "Russian"
 msgstr "רוסית"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:101
 msgid "Kinyarwanda"
 msgstr ""
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:102
 msgid "Slovak"
 msgstr "סלובקית"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:103
 msgid "Slovenian"
 msgstr "סלובנית"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:104
 #, fuzzy
 msgid "Somali"
 msgstr "אופאלין"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:105
 #, fuzzy
 msgid "Albanian"
 msgstr "בננה"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:106
 msgid "Serbian (Latin)"
 msgstr "סרבית"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:107
 msgid "Serbian"
 msgstr "סרבית"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:108
 msgid "Swedish"
 msgstr "שוודית"
 
-#: ../src/gcompris/config.c:115
-#, fuzzy
-msgid "Tamil"
-msgstr "גמל"
-
-#: ../src/gcompris/config.c:116
+#. "ta_IN.UTF-8",	N_("Tamil"),
+#: ../src/gcompris/config.c:110
 msgid "Thai"
 msgstr ""
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:111
 msgid "Turkish"
 msgstr "טורקית"
 
-#: ../src/gcompris/config.c:118
-msgid "Urdu"
-msgstr ""
-
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:112
 msgid "Vietnamese"
 msgstr ""
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:113
 #, fuzzy
 msgid "Walloon"
 msgstr "חום בהיר (שקד)"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:114
 msgid "Chinese (Simplified)"
 msgstr ""
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:115
 msgid "Chinese (Traditional)"
 msgstr ""
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:120
 msgid "No time limit"
 msgstr "אין הגבלת זמן"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:121
 msgid "Slow timer"
 msgstr "טיימר איטי"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:122
 msgid "Normal timer"
 msgstr "טיימר רגיל"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:123
 msgid "Fast timer"
 msgstr "טיימר מהיר"
 
-#: ../src/gcompris/config.c:135
-#, fuzzy
-msgid "800x600 (Default for GCompris)"
+#: ../src/gcompris/config.c:128
+msgid "800x600 (Default for gcompris)"
 msgstr "800X600 (מצב ברירת המחדל)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:133
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
 msgstr ""
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:188 ../src/gcompris/config.c:198
 msgid "GCompris Configuration"
 msgstr "תצורת gcompris"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:274
 msgid "Fullscreen"
 msgstr "מסך-מלא"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:317
 msgid "Music"
 msgstr "מוסיקה"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:345
 msgid "Effect"
 msgstr "אפקט"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:381
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr ""
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:412 ../src/gcompris/config.c:863
+#: ../src/gcompris/config.c:877
 #, c-format
 msgid "Skin : %s"
 msgstr "סקין: %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:414
 msgid "SKINS NOT FOUND"
 msgstr ""
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:539
 msgid "English (United State)"
 msgstr ""
 
-#: ../src/gcompris/file_selector.c:337
+#: ../src/gcompris/file_selector.c:335
 msgid "CANCEL"
 msgstr "בטל"
 
-#: ../src/gcompris/file_selector.c:368
+#: ../src/gcompris/file_selector.c:366
 msgid "LOAD"
 msgstr "טען"
 
-#: ../src/gcompris/file_selector.c:368
+#: ../src/gcompris/file_selector.c:366
 msgid "SAVE"
 msgstr "שמור"
 
-#: ../src/gcompris/gameutil.c:102
+#: ../src/gcompris/gameutil.c:80
 #, fuzzy
 msgid "Couldn't find or load the file"
 msgstr "קובץ לא נמצא %s"
 
-#: ../src/gcompris/gameutil.c:104
+#: ../src/gcompris/gameutil.c:82
 msgid "This activity is incomplete."
 msgstr "פעילות זאת הסתיימה"
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:83
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:137
-#, fuzzy
-msgid "run GCompris in fullscreen mode."
+#: ../src/gcompris/gcompris.c:126
+msgid "run gcompris in fullscreen mode."
 msgstr "הפעל את התוכנה על מסך מלא"
 
-#: ../src/gcompris/gcompris.c:140
-#, fuzzy
-msgid "run GCompris in window mode."
+#: ../src/gcompris/gcompris.c:129
+msgid "run gcompris in window mode."
 msgstr " הפעל את התוכנה בחלון"
 
-#: ../src/gcompris/gcompris.c:143
-#, fuzzy
-msgid "run GCompris with sound enabled."
+#: ../src/gcompris/gcompris.c:132
+msgid "run gcompris with sound enabled."
 msgstr "הפעל את התוכנה עם קול"
 
-#: ../src/gcompris/gcompris.c:146
-#, fuzzy
-msgid "run GCompris without sound."
+#: ../src/gcompris/gcompris.c:135
+msgid "run gcompris without sound."
 msgstr "הפעל את התוכנה ללא קול"
 
-#: ../src/gcompris/gcompris.c:149
-#, fuzzy
-msgid "run GCompris with the default gnome cursor."
+#: ../src/gcompris/gcompris.c:138
+msgid "run gcompris with the default gnome cursor."
 msgstr "הרצה של gcompris עם סמן ברירת המחדל של גנום"
 
-#: ../src/gcompris/gcompris.c:152
+#: ../src/gcompris/gcompris.c:141
 msgid "display only activities with this difficulty level."
 msgstr "הצג פעילויות עם רמת הקושי הנוכחית בלבד"
 
-#: ../src/gcompris/gcompris.c:155
+#: ../src/gcompris/gcompris.c:144
 msgid "display debug informations on the console."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:158
+#: ../src/gcompris/gcompris.c:147
 #, fuzzy
 msgid "Print the version of "
 msgstr "הדפס את הגירסא של"
 
-#: ../src/gcompris/gcompris.c:161
+#: ../src/gcompris/gcompris.c:150
 msgid "Use the antialiased canvas (slower)."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:164
+#: ../src/gcompris/gcompris.c:153
 msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:167
+#: ../src/gcompris/gcompris.c:156
 msgid ""
-"Run GCompris with local menu (e.g -l /reading will let you play only "
+"Run gcompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
 "activity)"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:170
+#: ../src/gcompris/gcompris.c:159
 msgid "Run GCompris with local activity directory added to menu"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:173
+#: ../src/gcompris/gcompris.c:162
 msgid "Run GCompris in administration and user-management mode"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:176
+#: ../src/gcompris/gcompris.c:165
 msgid ""
 "Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite."
 "db]"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:179
+#: ../src/gcompris/gcompris.c:168
+msgid "Use alternate database for logs"
+msgstr ""
+
+#: ../src/gcompris/gcompris.c:171
 msgid "Create the alternate database for profiles"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:182
+#: ../src/gcompris/gcompris.c:174
 msgid "Re-read XML Menus and store them in the database"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:185
+#: ../src/gcompris/gcompris.c:177
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:188
+#: ../src/gcompris/gcompris.c:180
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:191
+#: ../src/gcompris/gcompris.c:183
 msgid ""
 "Config directory location: [$HOME/.config/gcompris]. Alternate is to set "
 "$XDG_CONFIG_HOME."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:194
+#: ../src/gcompris/gcompris.c:186
 msgid "The location of user directories: [$HOME/My GCompris]"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:197
+#: ../src/gcompris/gcompris.c:189
 #, fuzzy
 msgid "Run the experimental activities"
 msgstr "עבור לפעילויות חוויה"
 
-#: ../src/gcompris/gcompris.c:200
+#: ../src/gcompris/gcompris.c:192
 msgid "Disable the quit button"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:203
+#: ../src/gcompris/gcompris.c:195
 msgid "Disable the config button"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:208
+#: ../src/gcompris/gcompris.c:198
 msgid "Display the resources on stdout based on the selected activities"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:212
+#: ../src/gcompris/gcompris.c:201
 msgid ""
 "GCompris will get images, sounds and activity data from this server if not "
 "found locally."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:215
+#: ../src/gcompris/gcompris.c:204
 msgid ""
 "Only when --server is provided, disable check for local resource first. Data "
 "are always taken from the web server."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:219
+#: ../src/gcompris/gcompris.c:208
 msgid ""
 "In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:222
+#: ../src/gcompris/gcompris.c:211
 msgid ""
 "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:225
-msgid "Do not display the background images of activities."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:228
-msgid "Do not avoid the execution of multiple instances of GCompris."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:859
+#: ../src/gcompris/gcompris.c:817
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
 "support its development, the Windows version provides only %d of the %d "
 "activities. You can get the full version for a small fee at\n"
 "<http://gcompris.net>\n"
-"The GNU/Linux version does not have this restriction. Note that GCompris is "
+"The Linux version does not have this restriction. Note that GCompris is "
 "being developed to free schools from monopolistic software vendors. If you "
 "also believe that we should teach freedom to children, please consider using "
 "GNU/Linux. Get more information at FSF:\n"
 "<http://www.fsf.org/philosophy>"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1447
-#, c-format
-msgid ""
-"GCompris won't start because the lock file is less than %d seconds old.\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1449
-#, c-format
-msgid "The lock file is: %s\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1579
+#: ../src/gcompris/gcompris.c:1423
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6078,63 +5861,62 @@ msgid ""
 msgstr ""
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1663
+#: ../src/gcompris/gcompris.c:1533
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1664
+#: ../src/gcompris/gcompris.c:1534
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1851
+#: ../src/gcompris/gcompris.c:1719
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris_db.c:266
+#: ../src/gcompris/gcompris_db.c:255
 #, fuzzy
 msgid "Unaffected"
 msgstr "אפקט"
 
-#: ../src/gcompris/gcompris_db.c:267
+#: ../src/gcompris/gcompris_db.c:256
 msgid "Users without a class"
 msgstr ""
 
-#: ../src/gcompris/help.c:197
+#: ../src/gcompris/help.c:195
 msgid "Prerequisite"
 msgstr "תנאי מוקדם"
 
-#: ../src/gcompris/help.c:225
+#: ../src/gcompris/help.c:223
 msgid "Goal"
 msgstr "מטרה"
 
-#: ../src/gcompris/help.c:253
+#: ../src/gcompris/help.c:251
 msgid "Manual"
 msgstr "ידני"
 
-#: ../src/gcompris/help.c:281
+#: ../src/gcompris/help.c:279
 msgid "Credit"
 msgstr "תודות"
 
-#: ../src/gcompris/properties.c:503 ../src/gcompris/properties.c:510
+#: ../src/gcompris/properties.c:484 ../src/gcompris/properties.c:491
 #, fuzzy
 msgid "readme"
 msgstr "אדום"
 
-#: ../src/gcompris/properties.c:505
+#: ../src/gcompris/properties.c:486
 msgid ""
 "This directory contains the files you create with the GCompris educational "
 "suite\n"
 msgstr "תיקייה זו מכילה את הקבצים שיצרת עם Gcompris\n"
 
-#: ../src/gcompris/properties.c:512
-#, fuzzy
+#: ../src/gcompris/properties.c:493
 msgid ""
-"Put any number of images in this directory.\n"
+"Put any numer of images in this directory.\n"
 "You can include these images in your drawings and animations.\n"
-"The image formats supported are jpeg, png and svg.\n"
+"The image format supported are jpeg, png and svg.\n"
 msgstr ""
 "הכנס כל כמות של תמונות לתיקייה\n"
 "אתה יכול לכלול את התמונות הללו בציורים ובאנימציות שלך\n"
@@ -6149,13 +5931,6 @@ msgstr "הזמן שעבר:"
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "הזמן שנותר = %d"
-
-#~ msgid "spruce"
-#~ msgstr "עץ מחט"
-
-#, fuzzy
-#~ msgid "mouse manipulation"
-#~ msgstr "הפעלת העכבר"
 
 #~ msgid "This board is dedicated to recognize unusual colors."
 #~ msgstr "לוח זה מוקדש לזיהוי צבעים לא-שגרתיים."
@@ -6329,6 +6104,9 @@ msgstr "הזמן שנותר = %d"
 
 #~ msgid "Czech"
 #~ msgstr "צ'כית"
+
+#~ msgid "Indian"
+#~ msgstr "הודית"
 
 #~ msgid "Brazil Portuguese"
 #~ msgstr "פורטוגזית ברזילאית"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gCompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 22:12+0200\n"
+"POT-Creation-Date: 2007-06-03 13:19+0700\n"
 "PO-Revision-Date: 2007-06-03 16:57+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -409,8 +409,7 @@ msgstr "เข้าสู่กิจกรรมพีชคณิต"
 msgid "Left-click the mouse on an activity to select it."
 msgstr "คลิกเมาส์ปุ่มซ้ายที่กิจกรรมเพื่อเลือกเข้ากิจกรรม"
 
-#: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -758,9 +757,9 @@ msgstr "เตะลูกบอลเข้าประตู"
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
-#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
-#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
+#: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
+#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
+#: ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
 msgstr "การควบคุมเมาส์"
 
@@ -1230,7 +1229,7 @@ msgid "Drive the crane and copy the model"
 msgstr "ขับปั้นจั่นคัดลอกรูปแบบ"
 
 #: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "การประสานการเคลื่อนไหว"
 
@@ -1415,21 +1414,6 @@ msgstr "ขยับเมาส์เพื่อลบพื้นที่แ
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "เลื่อนเมาส์จนกระทั่งบล็อคทั้งหมดหายไป"
-
-#: ../boards/erase_doubleclick.xml.in.h:2
-#, fuzzy
-msgid "Double click the mouse"
-msgstr "ดับเบิลคลิกเมาส์"
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-#, fuzzy
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr "ดับเบิลคลิกเมาส์บนสี่เหลี่ยมผืนผ้าจนกระทั่งบล็อคทั้งหมดหายไป"
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-#, fuzzy
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr "ดับเบิลคลิกเมาส์เพื่อลบพื้นที่และดูภาพพื้นหลัง"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -1769,7 +1753,7 @@ msgstr "โครเอเชีย"
 msgid "Cyprus"
 msgstr "ไซปรัส"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:66
 msgid "Czech Republic"
 msgstr "สาธารณรัฐเช็ก"
 
@@ -2146,11 +2130,11 @@ msgstr "การควบคุมแป้นพิมพ์"
 msgid "Letter association between the screen and the keyboard"
 msgstr "การเชื่อมโยงของตัวอักษรบนจอภาพกับแป้นพิมพ์"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:135
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "ตัวอักษรอย่างง่าย"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:136
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "พิมพ์อักษรที่ตกลงมาก่อนที่จะตกถึงพื้น"
 
@@ -3253,11 +3237,10 @@ msgstr ""
 "คุณจะต้องจับคู่ให้ได้มากกว่าทักซ์"
 
 #: ../boards/menu.xml.in.h:1
-#, fuzzy
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of "
 "activities.\n"
-"At the bottom of the screen is the GCompris control bar.\n"
+"At the bottom of the screen is the gcompris control bar.\n"
 "The following icons are displayed from right to left.\n"
 "(note that each icon is displayed only if available in the current "
 "activity)\n"
@@ -3301,9 +3284,8 @@ msgstr ""
 "GCompris เป็นชุดของเกมการศึกษา ซึ่งได้จัดเตรียมกิจกรรมหลากหลายสำหรับเด็กอายุ 2 ขวบขึ้นไป"
 
 #: ../boards/menu.xml.in.h:19
-#, fuzzy
 msgid ""
-"The goal of GCompris is to provide a free alternative to popular proprietary "
+"The goal of gcompris is to provide a free alternative to popular proprietary "
 "edutainment software"
 msgstr "จุดมุ่งหมายของ GCompris คือให้ทางเลือกเสรีสำหรับซอฟต์แวร์ศึกษาบันเทิงยอดนิยม"
 
@@ -3647,7 +3629,7 @@ msgstr "ย้ายเฮลิคอปเตอร์ไปจับก้อ
 msgid "Number"
 msgstr "ตัวเลข"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:75
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "ตัวเลขเรียงตามลำดับ"
 
@@ -3660,8 +3642,7 @@ msgid "Various puzzles."
 msgstr "พบกับเกมปริศนามากมาย"
 
 #: ../boards/pythontest.xml.in.h:1
-#, fuzzy
-msgid "Add a language-binding to GCompris."
+msgid "Add a language-binding to gcompris."
 msgstr "เพิ่มการเชื่อมโยงกับโปรแกรมภาษาอื่นใน GCompris"
 
 #: ../boards/pythontest.xml.in.h:2
@@ -4255,7 +4236,7 @@ msgid ""
 msgstr ""
 "ทักซ์กลับมาจากการหาปลาที่ยาวนานบนเรือของเขา ช่วยเปิดระบบน้ำกลับคืนมา เพื่อให้ทักซ์ได้อาบน้ำ"
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
 msgid "Falling Words"
 msgstr "คำหล่น"
 
@@ -4267,7 +4248,7 @@ msgstr "ฝึกหัดการใช้แป้นพิมพ์"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "พิมพ์คำที่กำลังหล่นให้เสร็จก่อนที่มันจะตกถึงพื้น"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:112
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
 msgid "Type the falling words before they reach the ground"
 msgstr "พิมพ์คำที่กำลังหล่นก่อนที่มันจะถึงพื้น"
 
@@ -4354,10 +4335,9 @@ msgid "Error: The external program gnuchess died unexpectedly"
 msgstr "ผิดพลาด: โปรแกรม gnuchess จากภายนอก ตายกลางคัน"
 
 #: ../src/boards/chess.c:199
-#, fuzzy
 msgid ""
 "Error: The external program gnuchess is required\n"
-"to play chess in GCompris.\n"
+"to play chess in gcompris.\n"
 "Find this program on http://www.rpmfind.net or in your\n"
 "GNU/Linux distribution\n"
 "And check it is located here: "
@@ -4402,8 +4382,8 @@ msgstr "ฝ่ายดำจน"
 msgid "White mates"
 msgstr "ฝ่ายขาวจน"
 
-#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:355
-#: ../src/gcompris/bonus.c:364
+#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:364
+#: ../src/gcompris/bonus.c:373
 msgid "Drawn game"
 msgstr "เสมอกัน"
 
@@ -4424,16 +4404,16 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:233
+#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:231
 #: ../src/boards/memory.c:835
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
 #: ../src/boards/click_on_letter.c:286
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
-"the packages with GCompris voices for the locale '%s' or '%s'"
+"the packages with gcompris voices for the locale '%s' or '%s'"
 msgstr ""
 "ผิดพลาด: กิจกรรมนี้จำเป็นต้องให้คุณติดตั้งแพกเกจ\n"
 "ที่มีข้อมูลเสียงของ GCompris สำหรับโลแคล '%s' หรือ '%s' เสียก่อน"
@@ -4455,14 +4435,14 @@ msgstr ""
 #. the returned value is the main GtkVBox of the window,
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:623 ../src/boards/colors.c:165
-#: ../src/boards/gletters.c:859 ../src/boards/imageid.c:749
-#: ../src/boards/missingletter.c:771
+#: ../src/boards/gletters.c:857 ../src/boards/imageid.c:749
+#: ../src/boards/missingletter.c:772
 #: ../src/boards/python/admin/board_list.py:641
 #: ../src/boards/python/admin/board_list.py:659
 #: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
 #: ../src/boards/reading.c:833 ../src/boards/scale.c:862
-#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:592
+#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:590
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4472,7 +4452,7 @@ msgstr ""
 " สำหรับโพรไฟล์ <b>%s</b>"
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:892
+#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:890
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "เฉพาะอักษรตัวพิมพ์ใหญ่"
@@ -4522,21 +4502,21 @@ msgid "Click on the white duck"
 msgstr "คลิกที่เป็ดสีขาว"
 
 #: ../src/boards/colors.c:177 ../src/boards/python/admin/board_list.py:671
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:610
 msgid "Select sound locale"
 msgstr "เลือกเสียงของท้องถิ่น"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:229 ../src/boards/memory.c:831
+#: ../src/boards/gletters.c:227 ../src/boards/memory.c:831
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:239 ../src/boards/memory.c:841
+#: ../src/boards/gletters.c:237 ../src/boards/memory.c:841
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:888 ../src/boards/smallnumbers.c:610
+#: ../src/boards/gletters.c:886 ../src/boards/smallnumbers.c:608
 msgid "Enable sounds"
 msgstr "เปิดใช้เสียง"
 
@@ -4610,11 +4590,11 @@ msgstr "$ %.2f"
 msgid "$ %.0f"
 msgstr "$ %.0f"
 
-#: ../src/boards/paratrooper.c:438
+#: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
 msgstr "ควบคุมความเร็วของการดิ่งลงด้วยปุ่มลูกศรขึ้นและลง"
 
-#: ../src/boards/planegame.c:76
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "ย้ายเครื่องบินไปจับก้อนเฆฆในลำดับที่ถูกต้อง"
 
@@ -4622,12 +4602,7 @@ msgstr "ย้ายเครื่องบินไปจับก้อนเ
 msgid "Python Board"
 msgstr "กระดานไพธอน"
 
-#: ../src/boards/python.c:64
-#, fuzzy
-msgid "Special board that embeds python into GCompris."
-msgstr "กระดานพิเศษที่ฝังไพธอนไว้ใน GCompris"
-
-#: ../src/boards/python.c:88
+#: ../src/boards/python.c:64 ../src/boards/python.c:88
 msgid "Special board that embeds python into gcompris."
 msgstr "กระดานพิเศษที่ฝังไพธอนไว้ใน GCompris"
 
@@ -4696,56 +4671,56 @@ msgstr ""
 "<span size='x-large'> เลือกช่วงระดับความยาก \n"
 "สำหรับโพรไฟล์ <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:61
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "การแก้ไขชั้นเรียน"
 
-#: ../src/boards/python/admin/class_edit.py:66
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "การแก้ไขชั้นเรียน: "
 
-#: ../src/boards/python/admin/class_edit.py:69
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "การแก้ไขชั้นเรียนใหม่"
 
-#: ../src/boards/python/admin/class_edit.py:91
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "ชั้นเรียน:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:104
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "ครูผู้สอน:"
 
-#: ../src/boards/python/admin/class_edit.py:114
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "กำหนดผู้ใช้ทั้งหมดในชั้นเรียนนี้"
 
-#: ../src/boards/python/admin/class_edit.py:254
-#: ../src/boards/python/admin/group_edit.py:266
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:154
 #: ../src/boards/python/admin/user_list.py:196
 msgid "First Name"
 msgstr "ชื่อ"
 
-#: ../src/boards/python/admin/class_edit.py:265
-#: ../src/boards/python/admin/group_edit.py:277
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:164
 #: ../src/boards/python/admin/user_list.py:206
 msgid "Last Name"
 msgstr "นามสกุล"
 
-#: ../src/boards/python/admin/class_edit.py:342
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "คุณต้องตั้งชื่อชั้นเรียนของคุณ"
 
-#: ../src/boards/python/admin/class_edit.py:388
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "มีชั้นเรียนชื่อนี้อยู่ก่อนแล้ว"
 
 #: ../src/boards/python/admin/class_list.py:169
-#: ../src/boards/python/admin/profile_edit.py:270
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:144
 msgid "Class"
 msgstr "ชั้นเรียน"
@@ -4754,43 +4729,43 @@ msgstr "ชั้นเรียน"
 msgid "Teacher"
 msgstr "ครูผู้สอน"
 
-#: ../src/boards/python/admin/group_edit.py:61
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "การแก้ไขกลุ่ม"
 
-#: ../src/boards/python/admin/group_edit.py:67
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "การแก้ไขกลุ่ม: "
 
-#: ../src/boards/python/admin/group_edit.py:68
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr " สำหรับชั้นเรียน: "
 
-#: ../src/boards/python/admin/group_edit.py:71
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "การแก้ไขกลุ่มใหม่"
 
-#: ../src/boards/python/admin/group_edit.py:91
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "กลุ่ม:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:103
-#: ../src/boards/python/admin/profile_edit.py:99
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "คำบรรยาย:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:114
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "กำหนดผู้ใช้ทั้งหมดในกลุ่มนี้"
 
-#: ../src/boards/python/admin/group_edit.py:360
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "คุณต้องตั้งชื่อกลุ่มของคุณ"
 
-#: ../src/boards/python/admin/group_edit.py:374
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "มีกลุ่มชื่อนี้อยู่ก่อนแล้ว"
 
@@ -4799,13 +4774,13 @@ msgid "Select a class:"
 msgstr "เลือกชั้นเรียน:"
 
 #: ../src/boards/python/admin/group_list.py:214
-#: ../src/boards/python/admin/profile_edit.py:280
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:154
 msgid "Group"
 msgstr "กลุ่ม"
 
 #: ../src/boards/python/admin/group_list.py:225
-#: ../src/boards/python/admin/profile_edit.py:290
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:164
 #: ../src/boards/python/admin/profile_list.py:198
 msgid "Description"
@@ -4901,32 +4876,32 @@ msgstr "ผู้ใช้"
 msgid "Classes"
 msgstr "ชั้นเรียน"
 
-#: ../src/boards/python/admin/profile_edit.py:60
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "การแก้ไขโพรไฟล์"
 
-#: ../src/boards/python/admin/profile_edit.py:65
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "การแก้ไขโพรไฟล์: "
 
-#: ../src/boards/python/admin/profile_edit.py:68
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "การแก้ไขโพรไฟล์ใหม่"
 
-#: ../src/boards/python/admin/profile_edit.py:87
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "โพรไฟล์:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:110
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "กำหนดกลุ่มทั้งหมดในโพรไฟล์นี้"
 
-#: ../src/boards/python/admin/profile_edit.py:378
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "คุณต้องตั้งชื่อโพรไฟล์ของคุณ"
 
-#: ../src/boards/python/admin/profile_edit.py:400
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "มีโพรไฟล์ชื่อนี้อยู่ก่อนแล้ว"
 
@@ -4938,44 +4913,44 @@ msgstr "โพรไฟล์"
 msgid "[Default]"
 msgstr "[ค่าปริยาย]"
 
-#: ../src/boards/python/admin/user_edit.py:51
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "การแก้ไขผู้ใช้"
 
-#: ../src/boards/python/admin/user_edit.py:56
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "การแก้ไขผู้ใช้ "
 
-#: ../src/boards/python/admin/user_edit.py:62
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "การแก้ไขผู้ใช้คนใหม่"
 
-#: ../src/boards/python/admin/user_edit.py:79
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "ชื่อสำหรับเข้าระบบ:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:90
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "ชื่อ:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:99
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "นามสกุล:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:108
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "วันเกิด:"
 
-#: ../src/boards/python/admin/user_edit.py:160
+#: ../src/boards/python/admin/user_edit.py:159
 msgid ""
 "You need to provide at least a login, first name and last name for your users"
 msgstr "อย่างน้อย คุณต้องตั้งชื่อสำหรับเข้าระบบ และกรอกชื่อ และนามสกุลของผู้ใช้"
 
-#: ../src/boards/python/admin/user_edit.py:177
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "มีผู้ใช้ชื่อนี้อยู่ก่อนแล้ว"
 
@@ -5000,41 +4975,41 @@ msgstr ""
 "มีชื่อสำหรับเข้าระบบซ้ำกัน !\n"
 "คุณจำเป็นต้องเปลี่ยนข้อมูล: %s !"
 
-#: ../src/boards/python/anim.py:2225
+#: ../src/boards/python/anim.py:2226
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr "SVG ถูกปิด คุณต้องติดตั้งมอดูล python xml เพื่อให้ใช้งาน SVG ได้"
 
-#: ../src/boards/python/anim.py:2381
+#: ../src/boards/python/anim.py:2382
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr "คำเตือน: รูปต่อไปนี้ไม่สามารถเข้าถึงได้ในระบบของคุณ\n"
 
-#: ../src/boards/python/anim.py:2383
+#: ../src/boards/python/anim.py:2384
 msgid "The corresponding items have been skipped."
 msgstr "รายการที่ตรงกันจะถูกข้ามไป"
 
-#: ../src/boards/python/chat.py:82
+#: ../src/boards/python/chat.py:80
 msgid "All messages will be displayed here.\n"
 msgstr "ข้อความทั้งหมดจะแสดงที่นี่\n"
 
-#: ../src/boards/python/chat.py:132
+#: ../src/boards/python/chat.py:130
 msgid "Your Friends"
 msgstr "เพื่อนของคุณ"
 
-#: ../src/boards/python/chat.py:164
+#: ../src/boards/python/chat.py:162
 msgid "Your Channel"
 msgstr "ช่องสัญญาณของคุณ"
 
-#: ../src/boards/python/chat.py:190
+#: ../src/boards/python/chat.py:188
 msgid ""
 "Type your message here, to send to other GCompris users on your local "
 "network."
 msgstr "พิมพ์ข้อความของคุณที่นี่ เพื่อส่งไปยังผู้ใช้ GCompris คนอื่นๆ ในเครือข่ายท้องถิ่น"
 
-#: ../src/boards/python/chat.py:325
+#: ../src/boards/python/chat.py:322
 msgid "You must set a channel in your channel entry box first.\n"
 msgstr "คุณต้องกำหนดช่องสัญญาณในกล่องกำหนดช่องสัญญาณก่อน\n"
 
-#: ../src/boards/python/chat.py:326
+#: ../src/boards/python/chat.py:323
 msgid "Your friends must set the same channel in order to communicate with you"
 msgstr "เพื่อนของคุณต้องกำหนดช่องสัญญาณเป็นช่องเดียวกัน เพื่อจะติดต่อพูดคุยกับคุณได้"
 
@@ -5220,7 +5195,7 @@ msgstr "ป้อนชื่อสำหรับเข้าระบบเพ
 msgid "Rebuild the same mosaic on the right area"
 msgstr "เรียงโมเสกตามที่กำหนดในช่องด้านขวา"
 
-#: ../src/boards/python/melody.py:119
+#: ../src/boards/python/melody.py:120
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -5252,16 +5227,14 @@ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
 msgstr "เพื่อนที่สนิทที่สุดของออสการ์ คือปูชาร์ลี และปลาดาวแซนดี้"
 
 #: ../src/boards/python/pythontest.py:148
-#, fuzzy
 msgid ""
-"This is the first plugin in GCompris coded in the Python\n"
+"This is the first plugin in gcompris coded in the Python\n"
 "Programming language."
 msgstr "นี่เป็นโปรแกรมเสริมอันแรกของ GCompris ที่เขียนด้วยภาษาไพธอน"
 
 #: ../src/boards/python/pythontest.py:157
-#, fuzzy
 msgid ""
-"It is now possible to develop GCompris activities in C or in Python.\n"
+"It is now possible to develop gcompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
 msgstr ""
 "ปัจจุบัน เราสามารถพัฒนากิจกรรมของ GCompris ด้วยภาษาซีหรือไพธอนก็ได้\n"
@@ -5397,7 +5370,7 @@ msgstr "เกมความจำ"
 msgid "Build a train according to the model"
 msgstr "สร้างรถไฟตามตัวอย่าง"
 
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:207
+#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:206
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5432,12 +5405,10 @@ msgid "The word to find was '%s'"
 msgstr "คำที่จะหาคือ '%s'"
 
 #: ../src/boards/reading.c:686
-#, c-format
 msgid "But it was not displayed"
 msgstr "แต่ไม่ได้อยู่ในรายการที่แสดงไว้"
 
 #: ../src/boards/reading.c:688
-#, c-format
 msgid "And it was displayed"
 msgstr "และอยู่ในรายการที่แสดงไว้"
 
@@ -5531,7 +5502,7 @@ msgstr "เกี่ยวกับ GCompris"
 msgid "Translators:"
 msgstr "ผู้แปล:"
 
-#: ../src/gcompris/about.c:230
+#: ../src/gcompris/about.c:193
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -5539,14 +5510,14 @@ msgstr ""
 "โฮมเพจของ GCompris\n"
 "http://gcompris.net"
 
-#: ../src/gcompris/about.c:252
+#: ../src/gcompris/about.c:215
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
 msgstr "โปรแกรมนี้เป็นชุดของ GNU และเผยแพร่ภายใต้เงื่อนไข GNU General Public License"
 
-#: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
+#: ../src/gcompris/about.c:278 ../src/gcompris/about.c:288
+#: ../src/gcompris/config.c:472 ../src/gcompris/config.c:482
 #: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
 #: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
 msgid "OK"
@@ -5568,9 +5539,8 @@ msgstr "ใช่ ขอยืนยัน!"
 msgid "No, I want to keep going"
 msgstr "ไม่ จะเล่นต่อ"
 
-#: ../src/gcompris/board.c:192
-#, fuzzy
-msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
+#: ../src/gcompris/board.c:187
+msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
 msgstr "ไม่รองรับการโหลดมอดูลอิสระ ไม่สามารถเรียก GCompris ได้\n"
 
 #: ../src/gcompris/board_config.c:700
@@ -5630,257 +5600,243 @@ msgid "Bulgarian"
 msgstr "บัลแกเรีย"
 
 #: ../src/gcompris/config.c:65
-msgid "Breton"
-msgstr ""
-
-#: ../src/gcompris/config.c:66
 msgid "Catalan"
 msgstr "ภาษาคาตะลาน"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:67
 msgid "Danish"
 msgstr "เดนมาร์ก"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:68
 msgid "German"
 msgstr "เยอรมัน"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:69
 msgid "Greek"
 msgstr "กรีก"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:70
 msgid "English (Canada)"
 msgstr "อังกฤษ (แคนาดา)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:71
 msgid "English (Great Britain)"
 msgstr "อังกฤษ (บริเตนใหญ่)"
 
-#: ../src/gcompris/config.c:73
+#: ../src/gcompris/config.c:72
 msgid "English (United States)"
 msgstr "อังกฤษ (อเมริกัน)"
 
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:73
 msgid "Spanish"
 msgstr "สเปน"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:74
 msgid "Basque"
 msgstr "แบ็ซค์"
 
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:75
 msgid "Dzongkha"
 msgstr "ภูฏาน"
 
-#: ../src/gcompris/config.c:77
-#, fuzzy
-msgid "Persian"
-msgstr "เซอร์เบีย"
-
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:76
 msgid "Finnish"
 msgstr "ฟินแลนด์"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:77
 msgid "French"
 msgstr "ฝรั่งเศส"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:78
 msgid "Irish (Gaelic)"
 msgstr "ไอริช (Gaelic)"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:79
 msgid "Hebrew"
 msgstr "ฮิบรู"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:80
 msgid "Hindi"
 msgstr "ฮินดี"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:81
 msgid "Indonesian"
 msgstr "อินโดนีเซีย"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:82
 msgid "Japanese"
 msgstr "ญี่ปุ่น"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:83
 msgid "Gujarati"
 msgstr "คุชราตี"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:84
 msgid "Punjabi"
 msgstr "ปัญจาบี"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:85
 msgid "Hungarian"
 msgstr "ฮังการี"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:86
 msgid "Croatian"
 msgstr "โครเอเชีย"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:87
 msgid "Italian"
 msgstr "อิตาลี"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:88
 msgid "Georgian"
 msgstr "จอร์เจีย"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:89
 msgid "Korean"
 msgstr "เกาหลี"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:90
 msgid "Lithuanian"
 msgstr "ลิทัวเนีย"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:91
 msgid "Macedonian"
 msgstr "มาซิโดเนีย"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:92
 msgid "Malayalam"
 msgstr "มะละยาลัม"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:93
 msgid "Marathi"
 msgstr "มาราฐี"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:94
 msgid "Malay"
 msgstr "มลายู"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:95
 msgid "Nepal"
 msgstr "เนปาล"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:96
 msgid "Dutch"
 msgstr "ดัตช์"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:97
 msgid "Norwegian Bokmal"
 msgstr "นอร์เวย์ Bokmal"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:98
 msgid "Norwegian Nynorsk"
 msgstr "นอร์เวย์ Nynorsk"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:99
 msgid "Occitan (languedocien)"
 msgstr "ออกซิแทน (แลงโดเชียน)"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:100
 msgid "Polish"
 msgstr "โปแลนด์"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:101
 msgid "Portuguese"
 msgstr "โปรตุเกส"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:102
 msgid "Portuguese (Brazil)"
 msgstr "โปรตุเกส (บราซิล)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:103
 msgid "Romanian"
 msgstr "โรมาเนีย"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:104
 msgid "Russian"
 msgstr "รัสเซีย"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:105
 msgid "Kinyarwanda"
 msgstr "คินยารวันดา"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:106
 msgid "Slovak"
 msgstr "สโลวะเกีย"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:107
 msgid "Slovenian"
 msgstr "สโลวีเนีย"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:108
 msgid "Somali"
 msgstr "โซมาลี"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:109
 msgid "Albanian"
 msgstr "แอลเบเนีย"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:110
 msgid "Serbian (Latin)"
 msgstr "เซอร์เบีย (ละติน)"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:111
 msgid "Serbian"
 msgstr "เซอร์เบีย"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:112
 msgid "Swedish"
 msgstr "สวีเดน"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:113
 msgid "Tamil"
 msgstr "ทมิฬ"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:114
 msgid "Thai"
 msgstr "ไทย"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:115
 msgid "Turkish"
 msgstr "ตุรกี"
 
-#: ../src/gcompris/config.c:118
-msgid "Urdu"
-msgstr ""
-
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:116
 msgid "Vietnamese"
 msgstr "เวียดนาม"
 
 # ชาวเบลเยี่ยมทางใต้ซึ่งพูดภาษาฝรั่งเศส
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:117
 msgid "Walloon"
 msgstr "วอลลูน"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:118
 msgid "Chinese (Simplified)"
 msgstr "จีน (ประยุกต์)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:119
 msgid "Chinese (Traditional)"
 msgstr "จีน (ดั้งเดิม)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:124
 msgid "No time limit"
 msgstr "ไม่มีการจำกัดเวลา"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:125
 msgid "Slow timer"
 msgstr "เวลาเชื่องช้า"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:126
 msgid "Normal timer"
 msgstr "เวลาปกติ"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:127
 msgid "Fast timer"
 msgstr "เวลาเร็ว"
 
-#: ../src/gcompris/config.c:135
-#, fuzzy
-msgid "800x600 (Default for GCompris)"
+#: ../src/gcompris/config.c:132
+msgid "800x600 (Default for gcompris)"
 msgstr "800x600 (ค่าปกติของ GCompris)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:137
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5888,38 +5844,38 @@ msgstr ""
 "<i>ใช้มอดูลบริหารจัดการ GCompris\n"
 "เพื่อกรองใช้กระดาน</i>"
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:192 ../src/gcompris/config.c:202
 msgid "GCompris Configuration"
 msgstr "ปรับแต่ง GCompris"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:278
 msgid "Fullscreen"
 msgstr "เต็มหน้าจอ"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:321
 msgid "Music"
 msgstr "เพลง"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:349
 msgid "Effect"
 msgstr "เอฟเฟ็กต์"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:385
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "ไม่สามารถเปิดโฟลเดอร์ของหน้ากาก: %s"
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:866
+#: ../src/gcompris/config.c:880
 #, c-format
 msgid "Skin : %s"
 msgstr "หน้ากาก : %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:418
 msgid "SKINS NOT FOUND"
 msgstr "ไม่พบหน้ากาก"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:543
 msgid "English (United State)"
 msgstr "อังกฤษ (อเมริกัน)"
 
@@ -5935,15 +5891,15 @@ msgstr "เปิด"
 msgid "SAVE"
 msgstr "บันทึก"
 
-#: ../src/gcompris/gameutil.c:102
+#: ../src/gcompris/gameutil.c:80
 msgid "Couldn't find or load the file"
 msgstr "ไม่พบแฟ้มหรือไม่สามารถอ่านแฟ้มได้"
 
-#: ../src/gcompris/gameutil.c:104
+#: ../src/gcompris/gameutil.c:82
 msgid "This activity is incomplete."
 msgstr "กิจกรรมนี้ยังไม่สมบูรณ์"
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:83
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -5952,28 +5908,23 @@ msgstr ""
 "ไปยังผู้เขียน"
 
 #: ../src/gcompris/gcompris.c:137
-#, fuzzy
-msgid "run GCompris in fullscreen mode."
+msgid "run gcompris in fullscreen mode."
 msgstr "เรียก GCompris ในแบบเต็มหน้าจอ"
 
 #: ../src/gcompris/gcompris.c:140
-#, fuzzy
-msgid "run GCompris in window mode."
+msgid "run gcompris in window mode."
 msgstr "เรียก GCompris ในแบบหน้าต่าง"
 
 #: ../src/gcompris/gcompris.c:143
-#, fuzzy
-msgid "run GCompris with sound enabled."
+msgid "run gcompris with sound enabled."
 msgstr "เรียก GCompris โดยเปิดใช้เสียง"
 
 #: ../src/gcompris/gcompris.c:146
-#, fuzzy
-msgid "run GCompris without sound."
+msgid "run gcompris without sound."
 msgstr "เรียก GCompris โดยไม่ใช้เสียง"
 
 #: ../src/gcompris/gcompris.c:149
-#, fuzzy
-msgid "run GCompris with the default gnome cursor."
+msgid "run gcompris with the default gnome cursor."
 msgstr "เรียก GCompris โดยใช้เคอร์เซอร์ปกติของ GNOME"
 
 #: ../src/gcompris/gcompris.c:152
@@ -5997,9 +5948,8 @@ msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr "ปิดใช้งาน XF86VidMode (ไม่มีการเปลี่ยนความละเอียดของจอภาพ)"
 
 #: ../src/gcompris/gcompris.c:167
-#, fuzzy
 msgid ""
-"Run GCompris with local menu (e.g -l /reading will let you play only "
+"Run gcompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
 "activity)"
 msgstr ""
@@ -6097,7 +6047,7 @@ msgstr "ไม่ต้องแสดงภาพพื้นหลังขอ
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "ไม่ต้องกีดกันการเรียกใช้ GCompris หลายหน้าต่างพร้อมกัน"
 
-#: ../src/gcompris/gcompris.c:859
+#: ../src/gcompris/gcompris.c:847
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6119,18 +6069,7 @@ msgstr ""
 "โดยสามารถอ่านข้อมูลข่าวสารเพิ่มเติมได้ที่ FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1447
-#, c-format
-msgid ""
-"GCompris won't start because the lock file is less than %d seconds old.\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1449
-#, c-format
-msgid "The lock file is: %s\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1579
+#: ../src/gcompris/gcompris.c:1537
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6144,17 +6083,17 @@ msgstr ""
 "ข้อมูลเพิ่มเติมที่ http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1663
+#: ../src/gcompris/gcompris.c:1621
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "ใช้ -l เพื่อเข้าถึงกิจกรรมโดยตรง\n"
 
-#: ../src/gcompris/gcompris.c:1664
+#: ../src/gcompris/gcompris.c:1622
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "รายชื่อของกิจกรรมที่มี:\n"
 
-#: ../src/gcompris/gcompris.c:1851
+#: ../src/gcompris/gcompris.c:1809
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "โพรไฟล์ที่ใช้ได้มีดังนี้:\n"
@@ -6183,17 +6122,17 @@ msgstr "วิธีใช้"
 msgid "Credit"
 msgstr "เครดิต"
 
-#: ../src/gcompris/properties.c:503 ../src/gcompris/properties.c:510
+#: ../src/gcompris/properties.c:487 ../src/gcompris/properties.c:494
 msgid "readme"
 msgstr "readme"
 
-#: ../src/gcompris/properties.c:505
+#: ../src/gcompris/properties.c:489
 msgid ""
 "This directory contains the files you create with the GCompris educational "
 "suite\n"
 msgstr "ไดเรกทอรีนี้เก็บแฟ้มที่คุณสร้างด้วยชุดโปรแกรมการศึกษา GCompris\n"
 
-#: ../src/gcompris/properties.c:512
+#: ../src/gcompris/properties.c:496
 msgid ""
 "Put any number of images in this directory.\n"
 "You can include these images in your drawings and animations.\n"
@@ -6249,6 +6188,15 @@ msgstr "เวลาที่เหลือ = %d"
 
 #~ msgid "Click anywhere in the line where you want to drop a piece"
 #~ msgstr "คลิกที่ตำแหน่งใดๆ ในแถวที่คุณต้องการหย่อนเหรียญ"
+
+#~ msgid "Double-Click the mouse to erase the area and discover the background"
+#~ msgstr "ดับเบิลคลิกเมาส์เพื่อลบพื้นที่และดูภาพพื้นหลัง"
+
+#~ msgid "Double-click the mouse"
+#~ msgstr "ดับเบิลคลิกเมาส์"
+
+#~ msgid "Double-click the mouse on rectangles until all the blocks disappear."
+#~ msgstr "ดับเบิลคลิกเมาส์บนสี่เหลี่ยมผืนผ้าจนกระทั่งบล็อคทั้งหมดหายไป"
 
 #~ msgid "Samuel Loyd"
 #~ msgstr "แซมมวล ลอยด์"

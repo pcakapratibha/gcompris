@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 22:12+0200\n"
+"POT-Creation-Date: 2007-07-20 22:52+0200\n"
 "PO-Revision-Date: 2007-07-20 22:54+0200\n"
 "Last-Translator: Слободан Симић <simicsl@verat.net>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
@@ -422,8 +422,7 @@ msgstr "Иди на алгебарске вежбе"
 msgid "Left-click the mouse on an activity to select it."
 msgstr "Леви клик мишем на вежбу да би је изабрао."
 
-#: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -788,9 +787,9 @@ msgstr "Шутни лопту у гол"
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
-#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
-#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
+#: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
+#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
+#: ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
 msgstr "Баратање мишем"
 
@@ -1275,7 +1274,7 @@ msgid "Drive the crane and copy the model"
 msgstr "Управљај краном и направи исти модел"
 
 #: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Координација покрета"
 
@@ -1469,21 +1468,6 @@ msgstr "Померајте миша да обришете површину и у
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Померајте миша док не нестану сва поља."
-
-#: ../boards/erase_doubleclick.xml.in.h:2
-#, fuzzy
-msgid "Double click the mouse"
-msgstr "Помери и кликни мишем"
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-#, fuzzy
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr "Кликни мишем на правоугаонике док не нестану сва поља."
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-#, fuzzy
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr "Кликни мишем да обришеш површину и откријеш позадину"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -1828,7 +1812,7 @@ msgstr "Хрватска"
 msgid "Cyprus"
 msgstr "Кипар"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:66
 msgid "Czech Republic"
 msgstr "Чешка"
 
@@ -2205,11 +2189,11 @@ msgstr "Рад са тастатуром"
 msgid "Letter association between the screen and the keyboard"
 msgstr "Спајање слова на екрану и тастатури"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:135
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "Једноставна слова"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:136
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "Укуцајте падајућа слова пре него што стигну до земље"
 
@@ -3762,7 +3746,7 @@ msgstr "Померајте хеликоптер да ухватите облак
 msgid "Number"
 msgstr "Број"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:75
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "Бројеви у поретку"
 
@@ -3774,13 +3758,27 @@ msgstr "Слагалице"
 msgid "Various puzzles."
 msgstr "Разноврсне слагалице."
 
-#: ../boards/pythontest.xml.in.h:1
+#: ../boards/pythontemplate.xml.in.h:1 ../boards/pythontest.xml.in.h:1
 msgid "Add a language-binding to GCompris."
 msgstr "Додајте спрегу са језиком у ГКомприс."
 
-#: ../boards/pythontest.xml.in.h:2
+#: ../boards/pythontemplate.xml.in.h:2 ../boards/pythontest.xml.in.h:2
 msgid "Advanced Python Programmer :)"
 msgstr "Напредан Питон програмер :о)"
+
+#: ../boards/pythontemplate.xml.in.h:3
+msgid "An empty python activity to use as a starting point"
+msgstr "Празна Питон активност која се користи као почетна тачка"
+
+#: ../boards/pythontemplate.xml.in.h:4
+msgid "Python Template"
+msgstr "Шаблон Питона"
+
+#: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
+msgstr ""
+"Хвала Гидо ван Росуму (Guido van Rossum) и Питон тиму за овај моћан језик!"
 
 #: ../boards/pythontest.xml.in.h:3
 msgid "Python Test"
@@ -3789,12 +3787,6 @@ msgstr "Проба Питона"
 #: ../boards/pythontest.xml.in.h:4
 msgid "Test board for the python plugin"
 msgstr "Пробна табла за Питон прикључак"
-
-#: ../boards/pythontest.xml.in.h:5
-msgid ""
-"Thanks to Guido van Rossum and the python team for this powerful language!"
-msgstr ""
-"Хвала Гидо ван Росуму (Guido van Rossum) и Питон тиму за овај моћан језик!"
 
 #: ../boards/railroad.xml.in.h:1
 msgid "A memory game based on trains"
@@ -4393,7 +4385,7 @@ msgstr ""
 "Пингослав се враћа са дуге пецарошке забаве на свом броду. Поправите систем "
 "за воду и помозите му да се истушира."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
 msgid "Falling Words"
 msgstr "Падајуће речи"
 
@@ -4405,7 +4397,7 @@ msgstr "Вежба куцања"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "Укуцајте целу реч док пада, пре него што стигне до земље"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:112
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
 msgid "Type the falling words before they reach the ground"
 msgstr "Укуцајте речи које падају пре него што стигну до земље"
 
@@ -4542,8 +4534,8 @@ msgstr "Мат црног"
 msgid "White mates"
 msgstr "Мат белог"
 
-#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:355
-#: ../src/gcompris/bonus.c:364
+#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:364
+#: ../src/gcompris/bonus.c:373
 msgid "Drawn game"
 msgstr "Нерешено"
 
@@ -4566,7 +4558,7 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:233
+#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:231
 #: ../src/boards/memory.c:835
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "абвгдђежзијклљмнњопрстћуфхцчџш"
@@ -4598,14 +4590,14 @@ msgstr ""
 #. the returned value is the main GtkVBox of the window,
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:623 ../src/boards/colors.c:165
-#: ../src/boards/gletters.c:859 ../src/boards/imageid.c:749
-#: ../src/boards/missingletter.c:771
+#: ../src/boards/gletters.c:857 ../src/boards/imageid.c:749
+#: ../src/boards/missingletter.c:772
 #: ../src/boards/python/admin/board_list.py:641
 #: ../src/boards/python/admin/board_list.py:659
 #: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
-#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
+#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:208
 #: ../src/boards/reading.c:833 ../src/boards/scale.c:862
-#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:592
+#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:590
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4615,7 +4607,7 @@ msgstr ""
 " за профил <b>%s</b>"
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:892
+#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:890
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "Текст само са великим словима"
@@ -4665,21 +4657,21 @@ msgid "Click on the white duck"
 msgstr "Кликните на белу патку"
 
 #: ../src/boards/colors.c:177 ../src/boards/python/admin/board_list.py:671
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:610
 msgid "Select sound locale"
 msgstr "Изаберите локалне звуке"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:229 ../src/boards/memory.c:831
+#: ../src/boards/gletters.c:227 ../src/boards/memory.c:831
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:239 ../src/boards/memory.c:841
+#: ../src/boards/gletters.c:237 ../src/boards/memory.c:841
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ"
 
-#: ../src/boards/gletters.c:888 ../src/boards/smallnumbers.c:610
+#: ../src/boards/gletters.c:886 ../src/boards/smallnumbers.c:608
 msgid "Enable sounds"
 msgstr "Укључи звуке"
 
@@ -4759,11 +4751,11 @@ msgstr "%.2f дин."
 msgid "$ %.0f"
 msgstr "%.0f дин."
 
-#: ../src/boards/paratrooper.c:438
+#: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
 msgstr "Контролишите брзину падања са тастерима са стрелицама горе и доле."
 
-#: ../src/boards/planegame.c:76
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "Померајте авион да бисте ухватили облаке у исправном редоследу"
 
@@ -4844,58 +4836,58 @@ msgstr ""
 "<span size='x-large'> Изаберите распон тежине \n"
 "за профил <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:61
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "Уређивање разреда"
 
-#: ../src/boards/python/admin/class_edit.py:66
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "Уређивање разреда: "
 
-#: ../src/boards/python/admin/class_edit.py:69
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "Уређивање новог разреда"
 
 #  Class page:
-#: ../src/boards/python/admin/class_edit.py:91
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "Разред:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:104
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "Учитељ:"
 
-#: ../src/boards/python/admin/class_edit.py:114
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "Додели све кориснике који припадају овом разреду"
 
-#: ../src/boards/python/admin/class_edit.py:254
-#: ../src/boards/python/admin/group_edit.py:266
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:154
 #: ../src/boards/python/admin/user_list.py:196
 msgid "First Name"
 msgstr "Име"
 
-#: ../src/boards/python/admin/class_edit.py:265
-#: ../src/boards/python/admin/group_edit.py:277
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:164
 #: ../src/boards/python/admin/user_list.py:206
 msgid "Last Name"
 msgstr "Презиме"
 
-#: ../src/boards/python/admin/class_edit.py:342
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "Морате дати бар име вашем разреду"
 
-#: ../src/boards/python/admin/class_edit.py:388
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "Разред са тим именом већ постоји"
 
 #  Class page:
 #: ../src/boards/python/admin/class_list.py:169
-#: ../src/boards/python/admin/profile_edit.py:270
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:144
 msgid "Class"
 msgstr "Разред"
@@ -4904,43 +4896,43 @@ msgstr "Разред"
 msgid "Teacher"
 msgstr "Учитељ"
 
-#: ../src/boards/python/admin/group_edit.py:61
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "Уређивање групе"
 
-#: ../src/boards/python/admin/group_edit.py:67
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "Уређивање групе: "
 
-#: ../src/boards/python/admin/group_edit.py:68
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr " за разред: "
 
-#: ../src/boards/python/admin/group_edit.py:71
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "Уређивање нове групе"
 
-#: ../src/boards/python/admin/group_edit.py:91
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "Група:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:103
-#: ../src/boards/python/admin/profile_edit.py:99
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "Опис:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:114
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "Додели све кориснике који припадају овој групи"
 
-#: ../src/boards/python/admin/group_edit.py:360
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "Морате дати бар име за вашу групу"
 
-#: ../src/boards/python/admin/group_edit.py:374
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "Група са тим именом већ постоји"
 
@@ -4949,13 +4941,13 @@ msgid "Select a class:"
 msgstr "Изаберите разред:"
 
 #: ../src/boards/python/admin/group_list.py:214
-#: ../src/boards/python/admin/profile_edit.py:280
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:154
 msgid "Group"
 msgstr "Група"
 
 #: ../src/boards/python/admin/group_list.py:225
-#: ../src/boards/python/admin/profile_edit.py:290
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:164
 #: ../src/boards/python/admin/profile_list.py:198
 msgid "Description"
@@ -5052,32 +5044,32 @@ msgstr "Корисници"
 msgid "Classes"
 msgstr "Разреди"
 
-#: ../src/boards/python/admin/profile_edit.py:60
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "Уређивање профила"
 
-#: ../src/boards/python/admin/profile_edit.py:65
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "Урређивање профила: "
 
-#: ../src/boards/python/admin/profile_edit.py:68
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "Уређивање новог профила"
 
-#: ../src/boards/python/admin/profile_edit.py:87
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "Профил:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:110
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "Додели све кориснике који припадају овом профилу"
 
-#: ../src/boards/python/admin/profile_edit.py:378
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "Морате дати бар име за ваш профил"
 
-#: ../src/boards/python/admin/profile_edit.py:400
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "Профил са тим именом већ постоји"
 
@@ -5089,44 +5081,44 @@ msgstr "Профил"
 msgid "[Default]"
 msgstr "[Подразумеван]"
 
-#: ../src/boards/python/admin/user_edit.py:51
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "Уређивање корисника"
 
-#: ../src/boards/python/admin/user_edit.py:56
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "Уређивање корисника"
 
-#: ../src/boards/python/admin/user_edit.py:62
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "Уређивање новог корисника"
 
-#: ../src/boards/python/admin/user_edit.py:79
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "Пријава:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:90
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "Име:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:99
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "Презиме:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:108
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "Датум рођења:"
 
-#: ../src/boards/python/admin/user_edit.py:160
+#: ../src/boards/python/admin/user_edit.py:159
 msgid ""
 "You need to provide at least a login, first name and last name for your users"
 msgstr "За корисника морате да наведете бар пријаву, име и презиме"
 
-#: ../src/boards/python/admin/user_edit.py:177
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "Корисник са овом пријавом већ постоји"
 
@@ -5373,7 +5365,7 @@ msgstr "Унесите пријаву"
 msgid "Rebuild the same mosaic on the right area"
 msgstr "Направите исти мозаик на десној страни"
 
-#: ../src/boards/python/melody.py:119
+#: ../src/boards/python/melody.py:120
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -5513,7 +5505,7 @@ msgstr "Непозната наредба на линији"
 msgid "Distance:"
 msgstr "Удаљеност:"
 
-#: ../src/boards/python/tuxpaint.py:144
+#: ../src/boards/python/tuxpaint.py:145
 msgid ""
 "Cannot find Tuxpaint.\n"
 "Install it to use this activity !"
@@ -5521,27 +5513,27 @@ msgstr ""
 "Не могу да нађем Tuxpaint.\n"
 "Инсталирајте га да би сте користили ову вежбу !"
 
-#: ../src/boards/python/tuxpaint.py:157
+#: ../src/boards/python/tuxpaint.py:159
 msgid "Waiting for Tuxpaint to finish"
 msgstr "Чекам да Tuxpaint заврши"
 
-#: ../src/boards/python/tuxpaint.py:210
+#: ../src/boards/python/tuxpaint.py:212
 msgid "Inherit fullscreen setting from GCompris"
 msgstr "Преузимам подешавања за пун екран од ГКомприса"
 
-#: ../src/boards/python/tuxpaint.py:214
+#: ../src/boards/python/tuxpaint.py:217
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
 msgstr "Преузимам подешавања величине од ГКомприса (800x600, 640x480)"
 
-#: ../src/boards/python/tuxpaint.py:218
+#: ../src/boards/python/tuxpaint.py:222
 msgid "Disable shape rotation"
 msgstr "Искључи ротацију облика"
 
-#: ../src/boards/python/tuxpaint.py:222
+#: ../src/boards/python/tuxpaint.py:227
 msgid "Show Uppercase text only"
 msgstr "Прикажи текст само великим словима"
 
-#: ../src/boards/python/tuxpaint.py:226
+#: ../src/boards/python/tuxpaint.py:232
 msgid "Disable stamps"
 msgstr "Искључи печате"
 
@@ -5553,7 +5545,7 @@ msgstr "Игра памћења"
 msgid "Build a train according to the model"
 msgstr "Сагради воз према моделу"
 
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:207
+#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:206
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5588,12 +5580,10 @@ msgid "The word to find was '%s'"
 msgstr "Реч коју је требало наћи је „%s“"
 
 #: ../src/boards/reading.c:686
-#, c-format
 msgid "But it was not displayed"
 msgstr "Али она није приказана"
 
 #: ../src/boards/reading.c:688
-#, c-format
 msgid "And it was displayed"
 msgstr "А она је приказана"
 
@@ -5705,29 +5695,29 @@ msgstr ""
 "Овај програм је ГНУ пакет и објављен је под Гнуовом општом јавном лиценцом"
 
 #: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
-#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
+#: ../src/gcompris/config.c:472 ../src/gcompris/config.c:482
+#: ../src/gcompris/dialog.c:103 ../src/gcompris/help.c:382
 #: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
 msgid "OK"
 msgstr "У реду"
 
-#: ../src/gcompris/bar.c:577
+#: ../src/gcompris/bar.c:598
 msgid "GCompris confirmation"
 msgstr "Потврда ГКомприса"
 
-#: ../src/gcompris/bar.c:578
+#: ../src/gcompris/bar.c:599
 msgid "Are you sure you want to quit?"
 msgstr "Јесте и сигурни да желите да изађете?"
 
-#: ../src/gcompris/bar.c:579
+#: ../src/gcompris/bar.c:600
 msgid "Yes, I am sure!"
 msgstr "Да, сигуран сам!"
 
-#: ../src/gcompris/bar.c:580
+#: ../src/gcompris/bar.c:601
 msgid "No, I want to keep going"
 msgstr "Не, желим да наставим"
 
-#: ../src/gcompris/board.c:192
+#: ../src/gcompris/board.c:184
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr ""
 "Динамичко учитавање модула није подржано. ГКомприс се не може учитати.\n"
@@ -5789,255 +5779,242 @@ msgid "Bulgarian"
 msgstr "Бугарски"
 
 #: ../src/gcompris/config.c:65
-msgid "Breton"
-msgstr ""
-
-#: ../src/gcompris/config.c:66
 msgid "Catalan"
 msgstr "Каталонски"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:67
 msgid "Danish"
 msgstr "Дански"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:68
 msgid "German"
 msgstr "Немачки"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:69
 msgid "Greek"
 msgstr "Грчки"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:70
 msgid "English (Canada)"
 msgstr "Енглески (Канада)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:71
 msgid "English (Great Britain)"
 msgstr "Енглески (Велика Британија)"
 
-#: ../src/gcompris/config.c:73
+#: ../src/gcompris/config.c:72
 msgid "English (United States)"
 msgstr "Енглески (Сједињене Државе)"
 
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:73
 msgid "Spanish"
 msgstr "Шпански"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:74
 msgid "Basque"
 msgstr "Баскијски"
 
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:75
 msgid "Dzongkha"
 msgstr "Џонгка"
 
-#: ../src/gcompris/config.c:77
-#, fuzzy
-msgid "Persian"
-msgstr "Српски"
-
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:76
 msgid "Finnish"
 msgstr "Фински"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:77
 msgid "French"
 msgstr "Француски"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:78
 msgid "Irish (Gaelic)"
 msgstr "Ирски (Галски)"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:79
 msgid "Hebrew"
 msgstr "Хебрејски"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:80
 msgid "Hindi"
 msgstr "Хинду"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:81
 msgid "Indonesian"
 msgstr "Индонежански"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:82
 msgid "Japanese"
 msgstr "Јапански"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:83
 msgid "Gujarati"
 msgstr "Гуџарати"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:84
 msgid "Punjabi"
 msgstr "Панџаби"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:85
 msgid "Hungarian"
 msgstr "Мађарски"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:86
 msgid "Croatian"
 msgstr "Хрватски"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:87
 msgid "Italian"
 msgstr "Италијански"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:88
 msgid "Georgian"
 msgstr "Грузијски"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:89
 msgid "Korean"
 msgstr "Корејски"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:90
 msgid "Lithuanian"
 msgstr "Литвански"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:91
 msgid "Macedonian"
 msgstr "Македонски"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:92
 msgid "Malayalam"
 msgstr "Малајамски"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:93
 msgid "Marathi"
 msgstr "Марати"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:94
 msgid "Malay"
 msgstr "Малајски"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:95
 msgid "Nepal"
 msgstr "Непалски"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:96
 msgid "Dutch"
 msgstr "Холандски"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:97
 msgid "Norwegian Bokmal"
 msgstr "Норвешки Бокмал"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:98
 msgid "Norwegian Nynorsk"
 msgstr "Норвешки Нинорск"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:99
 msgid "Occitan (languedocien)"
 msgstr "Окситански"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:100
 msgid "Polish"
 msgstr "Пољски"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:101
 msgid "Portuguese"
 msgstr "Португалски"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:102
 msgid "Portuguese (Brazil)"
 msgstr "Португалски (Бразил)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:103
 msgid "Romanian"
 msgstr "Румунски"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:104
 msgid "Russian"
 msgstr "Руски"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:105
 msgid "Kinyarwanda"
 msgstr "Кињаруанда"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:106
 msgid "Slovak"
 msgstr "Словачки"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:107
 msgid "Slovenian"
 msgstr "Словеначки"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:108
 msgid "Somali"
 msgstr "Сомалијски"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:109
 msgid "Albanian"
 msgstr "Албански"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:110
 msgid "Serbian (Latin)"
 msgstr "Српски (латиница)"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:111
 msgid "Serbian"
 msgstr "Српски"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:112
 msgid "Swedish"
 msgstr "Шведски"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:113
 msgid "Tamil"
 msgstr "Тамилски"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:114
 msgid "Thai"
 msgstr "Таи"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:115
 msgid "Turkish"
 msgstr "Турски"
 
-#: ../src/gcompris/config.c:118
-msgid "Urdu"
-msgstr ""
-
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:116
 msgid "Vietnamese"
 msgstr "Вијетнамски"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:117
 msgid "Walloon"
 msgstr "Валунски"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:118
 msgid "Chinese (Simplified)"
 msgstr "Кинески (поједностављен)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:119
 msgid "Chinese (Traditional)"
 msgstr "Кинески (традиционални)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:124
 msgid "No time limit"
 msgstr "Без временског ограничења"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:125
 msgid "Slow timer"
 msgstr "Споро тече време"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:126
 msgid "Normal timer"
 msgstr "Нормално тече време"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:127
 msgid "Fast timer"
 msgstr "Брзо тече време"
 
-#: ../src/gcompris/config.c:135
+#: ../src/gcompris/config.c:132
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (подразумевано за ГКомприс)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:137
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6045,38 +6022,38 @@ msgstr ""
 "<i>Користите администраторски модул\n"
 "ГКомприса за филтрирање табли</i>"
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:192 ../src/gcompris/config.c:202
 msgid "GCompris Configuration"
 msgstr "Подешавање ГКомприса"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:278
 msgid "Fullscreen"
 msgstr "Пун екран"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:321
 msgid "Music"
 msgstr "Музика"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:349
 msgid "Effect"
 msgstr "Ефекти"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:385
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Нисам могао да отворим директоријум са маскама: %s"
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:866
+#: ../src/gcompris/config.c:880
 #, c-format
 msgid "Skin : %s"
 msgstr "Маска : %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:418
 msgid "SKINS NOT FOUND"
 msgstr "МАСКЕ НИСУ НАЂЕНЕ"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:543
 msgid "English (United State)"
 msgstr "Енглески (Сједињене Државе)"
 
@@ -6092,15 +6069,15 @@ msgstr "УЧИТАЈ"
 msgid "SAVE"
 msgstr "САЧУВАЈ"
 
-#: ../src/gcompris/gameutil.c:102
+#: ../src/gcompris/gameutil.c:104
 msgid "Couldn't find or load the file"
 msgstr "Не могу да нађем или учитам датотеку"
 
-#: ../src/gcompris/gameutil.c:104
+#: ../src/gcompris/gameutil.c:106
 msgid "This activity is incomplete."
 msgstr "Ова вежба није довршена."
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:107
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -6149,25 +6126,25 @@ msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr "Искључи XF86VidMode (Нема измене резолуције)."
 
 #: ../src/gcompris/gcompris.c:167
-#, fuzzy
 msgid ""
 "Run GCompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
-"activity)"
+"activity). Use '-l list' to list all the availaible activities and their "
+"descriptions."
 msgstr ""
 "Покрените ГКомприс са локалним менијем (нпр. -l /reading ће вам дати само "
 "вежбе из тог директоријума, -l /strategy/connect4 само игру повежи4). "
 "Користите „-l list“ да излистате све доступне активности и њихове описе."
 
-#: ../src/gcompris/gcompris.c:170
+#: ../src/gcompris/gcompris.c:172
 msgid "Run GCompris with local activity directory added to menu"
 msgstr "Покрени ГКомприс са локалним директоријумом игара додатим у мени"
 
-#: ../src/gcompris/gcompris.c:173
+#: ../src/gcompris/gcompris.c:175
 msgid "Run GCompris in administration and user-management mode"
 msgstr "Покрени ГКомприс у режиму администрације и управљања корисницима"
 
-#: ../src/gcompris/gcompris.c:176
+#: ../src/gcompris/gcompris.c:178
 msgid ""
 "Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite."
 "db]"
@@ -6175,25 +6152,25 @@ msgstr ""
 "Користи алтернативну базу за профиле [$HOME/.config/gcompris/gcompris_sqlite."
 "db]"
 
-#: ../src/gcompris/gcompris.c:179
+#: ../src/gcompris/gcompris.c:181
 msgid "Create the alternate database for profiles"
 msgstr "Направи алтернативну базу за профиле"
 
-#: ../src/gcompris/gcompris.c:182
+#: ../src/gcompris/gcompris.c:184
 msgid "Re-read XML Menus and store them in the database"
 msgstr "Поново прочитај XML меније и смести их у базу података"
 
-#: ../src/gcompris/gcompris.c:185
+#: ../src/gcompris/gcompris.c:187
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
 msgstr ""
 "Постави профил који се користи. Користите „gcompris -a“ да направите профиле"
 
-#: ../src/gcompris/gcompris.c:188
+#: ../src/gcompris/gcompris.c:190
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
 msgstr ""
 "Листај све доступне профиле. Користите „gcompris -a“ да направите профиле"
 
-#: ../src/gcompris/gcompris.c:191
+#: ../src/gcompris/gcompris.c:193
 msgid ""
 "Config directory location: [$HOME/.config/gcompris]. Alternate is to set "
 "$XDG_CONFIG_HOME."
@@ -6201,27 +6178,27 @@ msgstr ""
 "Подеси локацију директоријума: [$HOME/.config/gcompris]. Или поставите "
 "променљиву $XDG_CONFIG_HOME."
 
-#: ../src/gcompris/gcompris.c:194
+#: ../src/gcompris/gcompris.c:196
 msgid "The location of user directories: [$HOME/My GCompris]"
 msgstr "Локација корисничког директоријума: [$HOME/My GCompris]"
 
-#: ../src/gcompris/gcompris.c:197
+#: ../src/gcompris/gcompris.c:199
 msgid "Run the experimental activities"
 msgstr "Покрени експерименталне вежбе"
 
-#: ../src/gcompris/gcompris.c:200
+#: ../src/gcompris/gcompris.c:202
 msgid "Disable the quit button"
 msgstr "Искључи дугме за излаз"
 
-#: ../src/gcompris/gcompris.c:203
+#: ../src/gcompris/gcompris.c:205
 msgid "Disable the config button"
 msgstr "Искључи дугме за подешавања"
 
-#: ../src/gcompris/gcompris.c:208
+#: ../src/gcompris/gcompris.c:210
 msgid "Display the resources on stdout based on the selected activities"
 msgstr "Прикажи ресурсе на stdout на основу изабраних вежби"
 
-#: ../src/gcompris/gcompris.c:212
+#: ../src/gcompris/gcompris.c:214
 msgid ""
 "GCompris will get images, sounds and activity data from this server if not "
 "found locally."
@@ -6229,7 +6206,7 @@ msgstr ""
 "ГКомприс ће узети слике, звуке и податке за вежбе са овог сервера ако их не "
 "нађе локално."
 
-#: ../src/gcompris/gcompris.c:215
+#: ../src/gcompris/gcompris.c:217
 msgid ""
 "Only when --server is provided, disable check for local resource first. Data "
 "are always taken from the web server."
@@ -6237,29 +6214,29 @@ msgstr ""
 "Само када је параметар --server дат, искључи прво проверу локалних извора. "
 "Подаци ће се увек узимати са веб сервера."
 
-#: ../src/gcompris/gcompris.c:219
+#: ../src/gcompris/gcompris.c:221
 msgid ""
 "In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 "У серверском режиму, наведите директоријум за локално смештање да би се "
 "избегло беспотребно преузимање."
 
-#: ../src/gcompris/gcompris.c:222
+#: ../src/gcompris/gcompris.c:224
 msgid ""
 "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
 msgstr ""
 "Општи режим за превуци-и-пусти: нормалан, 2 клика, оба. Подразумевано је "
 "нормалан."
 
-#: ../src/gcompris/gcompris.c:225
+#: ../src/gcompris/gcompris.c:227
 msgid "Do not display the background images of activities."
 msgstr "Не приказуј слике позадине за вежбе."
 
-#: ../src/gcompris/gcompris.c:228
+#: ../src/gcompris/gcompris.c:230
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Не избегавај извршавање вишеструких инстанци ГКомприса."
 
-#: ../src/gcompris/gcompris.c:859
+#: ../src/gcompris/gcompris.c:849
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6283,20 +6260,18 @@ msgstr ""
 "<http://www.fsf.org/philosophy>"
 
 # bug: plural-forms
-#: ../src/gcompris/gcompris.c:1447
+#: ../src/gcompris/gcompris.c:1433
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
-msgstr ""
-"ГКомприс се неће покренути зато што је датотека закључавања млађа од %d "
-"секунди.\n"
+msgstr "ГКомприс се неће покренути зато што је датотека закључавања млађа од %d секунди.\n"
 
-#: ../src/gcompris/gcompris.c:1449
+#: ../src/gcompris/gcompris.c:1435
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Датотека закључавања: %s\n"
 
-#: ../src/gcompris/gcompris.c:1579
+#: ../src/gcompris/gcompris.c:1563
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6310,26 +6285,26 @@ msgstr ""
 "Више на http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1663
+#: ../src/gcompris/gcompris.c:1647
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Користите -l параметар да директно приступите вежби.\n"
 
-#: ../src/gcompris/gcompris.c:1664
+#: ../src/gcompris/gcompris.c:1648
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Листа доступних вежби је :\n"
 
-#: ../src/gcompris/gcompris.c:1851
+#: ../src/gcompris/gcompris.c:1835
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Листа доступних профила је:\n"
 
-#: ../src/gcompris/gcompris_db.c:266
+#: ../src/gcompris/gcompris_db.c:265
 msgid "Unaffected"
 msgstr "Ван утицаја"
 
-#: ../src/gcompris/gcompris_db.c:267
+#: ../src/gcompris/gcompris_db.c:266
 msgid "Users without a class"
 msgstr "Корисници без разреда"
 
@@ -6379,9 +6354,3 @@ msgstr "Протекло време"
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "Преостало време = %d"
-
-#~ msgid "An empty python activity to use as a starting point"
-#~ msgstr "Празна Питон активност која се користи као почетна тачка"
-
-#~ msgid "Python Template"
-#~ msgstr "Шаблон Питона"

@@ -108,7 +108,6 @@ xml_in_files = \
 	mosaic.xml.in \
 	mouse.xml.in \
 	numeration.xml.in \
-	oscar_and_friends.xml.in \
 	paintings.xml.in \
 	paratrooper.xml.in \
 	planegame.xml.in \
@@ -138,13 +137,7 @@ xml_in_files = \
 	tuxpaint.xml.in \
 	watercycle.xml.in \
 	wordprocessor.xml.in \
-	wordsgame.xml.in \
-	writing_tutor_image_match.xml.in \
-	writing_tutor_missing_match.xml.in \
-	writing_tutor_pattern_admin.xml.in \
-	writing_tutor_template_match.xml.in \
-	writing_tutor.xml.in
-
+	wordsgame.xml.in
 
 xml_DATA = $(xml_in_files:.xml.in=.xml)
 

@@ -600,7 +600,6 @@ src/Makefile
 src/gcompris/Makefile
 src/boards/Makefile
 src/boards/python/Makefile
-src/boards/python/DTW/Makefile
 src/boards/python/gcompris/Makefile
 src/boards/python/gcompris/admin/Makefile
 src/boards/python/gcompris/anim/Makefile

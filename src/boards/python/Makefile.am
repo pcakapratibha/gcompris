@@ -1,4 +1,4 @@
-SUBDIRS=gcompris connect4p admin DTW
+SUBDIRS=gcompris connect4p admin
 
 pythondir = $(PYTHON_PLUGIN_DIR)
 
@@ -21,17 +21,9 @@ dist_python_DATA= \
 	login.py \
 	melody.py \
 	mosaic.py \
-	oscar_and_friends.py \
 	pythontest.py \
 	redraw.py \
 	searace.py \
 	sudoku.py \
 	tuxpaint.py \
-	watercycle.py \
-	writing_tutor_common.py \
-	writing_tutor_image_match.py \
-	writing_tutor_missing_match.py \
-	writing_tutor_pattern_admin.py \
-	writing_tutor_template_match.py
-
-
+	watercycle.py

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 22:12+0200\n"
+"POT-Creation-Date: 2006-08-09 15:42+0300\n"
 "PO-Revision-Date: 2006-08-18 15:59+0300\n"
 "Last-Translator: Meltem Turhan Yondem <mturhan@ceng.metu.edu.tr>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -37,20 +37,19 @@ msgid ""
 "children as individuals; they can learn to type in and recognize their own "
 "usernames (login is configurable)."
 msgstr ""
-"Pano bölümünde etkinlik listesini değiştirebilirsiniz. Okuma dilini de "
-"değiştirebilirsiniz.  Örneğin renklerin isimlerini.\n"
+"Pano bölümünde etkinlik listesini değiştirebilirsiniz. Okuma dilini de değiştirebilirsiniz. "
+" Örneğin renklerin isimlerini.\n"
 "Birden fazla ayarlama yapıp bunlar arasında kolayca geçiş yapabilirsiniz. "
-"Profil bölümünde profil ekleyebilir, panel bölümünde kutudan profil "
-"seçebilirsiniz, daha sonra hangi panelleri etkin kılacağınıza karar "
-"verebilirsiniz.Seçilmemesi durumunda etkin olacak profili belirlemek için "
-"profil seçip 'Default' tuşuna basarsınız. Satırdan konut girerek de profil "
-"belirleyebilirsiniz.\n"
-"Her sınıf için kullanıcılar ekleyebilir, her sınıf için grup "
-"yaratabilirsiniz. Ayrıca virgül ile ayrılmış kütükten de kullanıcı "
-"eklenebilir.Profile bir veya daha çok grup atayın, bundan sonra Gcompris "
-"çalıştırıldığında yeni kullanıcılar aktif olur. Tekil çocuk belirlemek ayrı "
-"rapor alabilmeyi sağlar. Böylece çocuklar kendi kullanıcı isimleriyle giriş "
-"yapmayı öğrenirler."
+"Profil bölümünde "
+"profil ekleyebilir, panel bölümünde kutudan profil seçebilirsiniz, "
+"daha sonra hangi panelleri etkin kılacağınıza karar verebilirsiniz."
+"Seçilmemesi durumunda etkin olacak profili belirlemek için profil seçip 'Default' "
+"tuşuna basarsınız. Satırdan konut girerek de profil belirleyebilirsiniz.\n"
+"Her sınıf için kullanıcılar ekleyebilir, her sınıf için grup yaratabilirsiniz. Ayrıca virgül "
+"ile ayrılmış kütükten de kullanıcı eklenebilir.Profile bir veya daha çok grup atayın, "
+"bundan sonra Gcompris çalıştırıldığında yeni kullanıcılar aktif olur. "
+"Tekil çocuk belirlemek ayrı rapor alabilmeyi sağlar. Böylece çocuklar kendi kullanıcı isimleriyle "
+"giriş yapmayı öğrenirler."
 
 #: ../boards/administration.xml.in.h:4
 #, fuzzy
@@ -63,10 +62,7 @@ msgid ""
 "administration module here. The ultimate goal is to provide child-specific "
 "reporting for parents and teacher who want to monitor the progress, "
 "strengths and needs of their children."
-msgstr ""
-"Eğer Gcompris programında ince ayar yapmak istiyorsan yönetim menüsünü "
-"kullanabilirsin. Asıl amaç çocuğa özel raporlama yaparak kişisel ilerleme, "
-"zayıflık ve ihtiyaçları izleyebilmektir."
+msgstr "Eğer Gcompris programında ince ayar yapmak istiyorsan yönetim menüsünü kullanabilirsin. Asıl amaç çocuğa özel raporlama yaparak kişisel ilerleme, zayıflık ve ihtiyaçları izleyebilmektir."
 
 #: ../boards/administration.xml.in.h:6
 msgid "Left-Click with the mouse to select an activity"
@@ -408,12 +404,13 @@ msgstr "Çarpım işlemi üzerine alıştırma yap"
 msgid "Go to Algebra activities"
 msgstr "Cebir işlemlerine git"
 
-#: ../boards/algebra_group.xml.in.h:2 ../boards/menu.xml.in.h:18
+#: ../boards/algebra_group.xml.in.h:2 ../boards/menu.xml.in.h:17
+#: ../boards/menu2.xml.in.h:17
 msgid "Left-click the mouse on an activity to select it."
 msgstr "Bir işlem seçmek için solu tıklayın"
 
-#: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/erase_double_clic.xml.in.h:1
 #, fuzzy
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
@@ -457,8 +454,7 @@ msgstr "Dört artimetik işlem. Birkaç aritmetik işlemi birleştiriniz"
 msgid ""
 "Work out the right combination of numbers and operations to match the given "
 "value"
-msgstr ""
-"Rakam ve işlemlerin doğru kombinasyonunu verilen değer için bulmaya çalış"
+msgstr "Rakam ve işlemlerin doğru kombinasyonunu verilen değer için bulmaya çalış"
 
 #: ../boards/algebra_minus.xml.in.h:1
 #, fuzzy
@@ -562,8 +558,7 @@ msgid ""
 msgstr ""
 "Bu oyunda, çocuklar serbest çizim yapabilirler. Buradaki amaç çocuğun basit "
 "şekillerle nasıl güzel resimler çizileceğini öğrenmesidir. (dörtgenler, "
-"elipsler ve çizgiler) Çocuğa daha geniş bir seçim şansı tanımak için ayrıca "
-"bir grup görüntü de kullanılabilir."
+"elipsler ve çizgiler) Çocuğa daha geniş bir seçim şansı tanımak için ayrıca bir grup görüntü de kullanılabilir."
 
 #: ../boards/anim.xml.in.h:4 ../boards/draw.xml.in.h:4
 msgid "Needs to be capable of moving and clicking the mouse easily"
@@ -583,16 +578,7 @@ msgid ""
 "image in your animation, by using the image selector in the bottom-left "
 "corner of the screen. You can also save and reload your animations with the "
 "'floppy disk' and 'folder' buttons."
-msgstr ""
-"Çizim aletini sol taraftan, rengi alt taraftan seçtikten sonra yeni şekli "
-"beyaz bölgeye taşıyın. Çizimi bitirdiğinizde görüntüsünü camera tuşuna "
-"basarak alabilirsiniz. Bu aynı içerikli yeni bir kopya yaratır. Bu kopya "
-"üzerinde küçük ekleme veya çıkarmalar yapıp film tuşuna basabilir ve sürekli "
-"film görüntüsünü izleyebilirsiniz. Görüntü hızını değiştirebilirsiniz. "
-"Görüntü modunda drawing tuşuna basarak tekrar çizim moduna  dönebilirsiniz. "
-"Animasyonunuzdaki her imajı ekranın sol alt köşesinde bulunan imaj seçme "
-"tuşuna basarak edit edebilirsiniz. Animasyonunuzu disket resmine basarak "
-"kayıt edebilir veya klasör tuşuna basarak geri yükleyebilirsiniz."
+msgstr "Çizim aletini sol taraftan, rengi alt taraftan seçtikten sonra yeni şekli beyaz bölgeye taşıyın. Çizimi bitirdiğinizde görüntüsünü camera tuşuna basarak alabilirsiniz. Bu aynı içerikli yeni bir kopya yaratır. Bu kopya üzerinde küçük ekleme veya çıkarmalar yapıp film tuşuna basabilir ve sürekli film görüntüsünü izleyebilirsiniz. Görüntü hızını değiştirebilirsiniz. Görüntü modunda drawing tuşuna basarak tekrar çizim moduna  dönebilirsiniz. Animasyonunuzdaki her imajı ekranın sol alt köşesinde bulunan imaj seçme tuşuna basarak edit edebilirsiniz. Animasyonunuzu disket resmine basarak kayıt edebilir veya klasör tuşuna basarak geri yükleyebilirsiniz."
 
 #: ../boards/awele.xml.in.h:1
 msgid ""
@@ -618,19 +604,7 @@ msgid ""
 "seeds. If no such move is possible, the current player captures all seeds in "
 "his/her own territory, ending the game. (Source Wikipedia &lt;http://en."
 "wikipedia.org/wiki/Oware&gt;)"
-msgstr ""
-"Mankala her iki yanda altışar oyun ve birer de kale adı verilen sayı "
-"çukuruyla oynanır. Oyunun başında 12 oyun çukuruna dörder tane taş (yada "
-"tohum yada top vb.) bırakılır. İlk oyuncu kendi tarafındaki 6 çukurdan "
-"birini seçer ve içindeki taşları, saatin tersi yününde, sıradaki çukurlara "
-"birer birer bırakarak ilerler. Rakip kaleye taş bırakılmaz ve kendi kalenize "
-"bıraktığınız her taşı kazanırsınız. Son taşınızı kendi kalenize bırakırsanız "
-"bir kere daha oynarsınız. Eğer son taş kendi tarafınızdaki boş oyuın "
-"çukurlarından birine gelirse bu boş çukurun karşısındaki rakip çukurdaki tüm "
-"taşları kazanırsınız ve son bıraktığınız taşla birlikte kendi kalenize "
-"geçirirsiniz. Bir taraftaki tüm çukurlar boşaldığında oyun biter ve rakip "
-"taraf kalan tüm taşlarını kazanmış sayılır. En çok taşı toplayan oyunu "
-"kazanır. (Source tr.wikipedia)"
+msgstr "Mankala her iki yanda altışar oyun ve birer de kale adı verilen sayı çukuruyla oynanır. Oyunun başında 12 oyun çukuruna dörder tane taş (yada tohum yada top vb.) bırakılır. İlk oyuncu kendi tarafındaki 6 çukurdan birini seçer ve içindeki taşları, saatin tersi yününde, sıradaki çukurlara birer birer bırakarak ilerler. Rakip kaleye taş bırakılmaz ve kendi kalenize bıraktığınız her taşı kazanırsınız. Son taşınızı kendi kalenize bırakırsanız bir kere daha oynarsınız. Eğer son taş kendi tarafınızdaki boş oyuın çukurlarından birine gelirse bu boş çukurun karşısındaki rakip çukurdaki tüm taşları kazanırsınız ve son bıraktığınız taşla birlikte kendi kalenize geçirirsiniz. Bir taraftaki tüm çukurlar boşaldığında oyun biter ve rakip taraf kalan tüm taşlarını kazanmış sayılır. En çok taşı toplayan oyunu kazanır. (Source tr.wikipedia)"
 
 #: ../boards/awele.xml.in.h:2
 msgid "Oware"
@@ -649,11 +623,7 @@ msgid ""
 "player has captured 25 or more stones, or both players have taken 24 stones "
 "each (draw). If both players agree that the game has been reduced to an "
 "endless cycle, each player captures the stones on their side of the board."
-msgstr ""
-"Oyunun amacı rakipten daha hazla taş (çekirdek) toplamaktır. Oyunda toplam "
-"48 taş olduğundan 25 tanesini almak yeterlidir. Çift sayıda taş "
-"bulunduğundan her iki oyuncunun da 24 taş toplayarak eşit durumda kalması "
-"mümkündür."
+msgstr "Oyunun amacı rakipten daha hazla taş (çekirdek) toplamaktır. Oyunda toplam 48 taş olduğundan 25 tanesini almak yeterlidir. Çift sayıda taş bulunduğundan her iki oyuncunun da 24 taş toplayarak eşit durumda kalması mümkündür."
 
 #: ../boards/babymatch.xml.in.h:1 ../boards/babymatch/board1_0.xml.in.h:1
 #: ../boards/babymatch/board2_0.xml.in.h:1
@@ -702,9 +672,7 @@ msgstr "Yap Bozı bitirin"
 msgid ""
 "Complete the puzzle by dragging each piece from the set of pieces on the "
 "left, to the matching space in the puzzle."
-msgstr ""
-"yap bozu tamamlamak için sol taraftaki herbir parçayı alıp yap bozda "
-"karşılık geldiği yere koyun."
+msgstr "yap bozu tamamlamak için sol taraftaki herbir parçayı alıp yap bozda karşılık geldiği yere koyun."
 
 #: ../boards/babyshapes.xml.in.h:3
 msgid "Drag and Drop the shapes on their respective targets"
@@ -757,9 +725,7 @@ msgstr "Mantık geliştirme aktivitesi"
 msgid ""
 "Place balls in the holes. You win if the computer has to place the last "
 "ball. If you want Tux to begin, just click on him."
-msgstr ""
-"Topları deliklere yerleştirin. Son deliğe yerleştiren kaybeder. Eğer Tux "
-"başlasın istiyorsanız onun üzerine tıklayın."
+msgstr "Topları deliklere yerleştirin. Son deliğe yerleştiren kaybeder. Eğer Tux başlasın istiyorsanız onun üzerine tıklayın."
 
 #: ../boards/bargame.xml.in.h:5
 msgid "bar game"
@@ -775,11 +741,11 @@ msgstr "Topa vurarak kaleye sokun"
 
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
-#: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
-#: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
-#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
-#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
+#: ../boards/clickgame.xml.in.h:16 ../boards/connect4.xml.in.h:7
+#: ../boards/erase.xml.in.h:3 ../boards/erase_clic.xml.in.h:6
+#: ../boards/erase_double_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
+#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
+#: ../boards/tangram.xml.in.h:8
 #, fuzzy
 msgid "Mouse-manipulation"
 msgstr "Fare işlemleri"
@@ -788,9 +754,7 @@ msgstr "Fare işlemleri"
 msgid ""
 "Point the mouse and click on the ball, to set the speed and direction of the "
 "ball. The closer you click to the centre, the slower the ball moves."
-msgstr ""
-"Topun hızını ve yönünü ayarlamak için fareyle topa tıklayın. Merkeze ne "
-"kadar yakın tıklarsanız topunuz o kadar yavaş gidecektir."
+msgstr "Topun hızını ve yönünü ayarlamak için fareyle topa tıklayın. Merkeze ne kadar yakın tıklarsanız topunuz o kadar yavaş gidecektir."
 
 #: ../boards/billard.xml.in.h:5
 msgid "The football game"
@@ -815,23 +779,6 @@ msgid ""
 msgstr ""
 "Kanal kilitleri şu an sizin yönetiminizde. Kapalı geçitleri düzgün sırayla "
 "açmanız gerekiyor. Sonra Tux'u bu iki yoldan götürmelisiniz."
-
-#: ../boards/chat.xml.in.h:1
-msgid "Chat with your friends"
-msgstr ""
-
-#: ../boards/chat.xml.in.h:2
-msgid "This chat activity only works on the local network"
-msgstr ""
-
-#: ../boards/chat.xml.in.h:3
-msgid ""
-"This chat activity will only work with other GCompris users on your local "
-"network, not on the Internet. To use it, just type in your message and hit "
-"Enter. Your message is then broadcast on the local network, and any GCompris "
-"program running the chat activity on that local network will receive and "
-"display your message."
-msgstr ""
 
 #: ../boards/chess.xml.in.h:1 ../boards/chess_computer.xml.in.h:3
 msgid "Play chess against the computer in a learning mode"
@@ -891,15 +838,15 @@ msgstr "Kısa hikaye anlatın"
 msgid "Moonwalker"
 msgstr "Ay yürüyücüsü"
 
-#: ../boards/chronos/board1_1.xml.in.h:1 ../src/boards/wordprocessor.c:118
+#: ../boards/chronos/board1_1.xml.in.h:1
 msgid "Autumn"
 msgstr "Ağustos"
 
-#: ../boards/chronos/board1_1.xml.in.h:2 ../src/boards/wordprocessor.c:116
+#: ../boards/chronos/board1_1.xml.in.h:2
 msgid "Spring"
 msgstr "Bahar"
 
-#: ../boards/chronos/board1_1.xml.in.h:3 ../src/boards/wordprocessor.c:117
+#: ../boards/chronos/board1_1.xml.in.h:3
 msgid "Summer"
 msgstr "Yaz"
 
@@ -907,7 +854,7 @@ msgstr "Yaz"
 msgid "The 4 Seasons"
 msgstr "Dört mevsim"
 
-#: ../boards/chronos/board1_1.xml.in.h:5 ../src/boards/wordprocessor.c:119
+#: ../boards/chronos/board1_1.xml.in.h:5
 msgid "Winter"
 msgstr "Sonbahar"
 
@@ -934,12 +881,11 @@ msgstr ""
 "Buharlı lokomotif"
 
 #: ../boards/chronos/board3_0.xml.in.h:4
-#, fuzzy
 msgid ""
 "Place each image in the order and\n"
 "on the date it was invented.\n"
 "If not sure, research online at wikipedia:\n"
-"http://www.wikipedia.org"
+"&lt;http://www.wikipedia.org&gt;"
 msgstr ""
 ":Herbir imajı icat edildiği zamana göre sıraya koyun\n"
 "eğer emin değilseniz wikipedia'dan araştırabilirsiniz:\n"
@@ -947,7 +893,7 @@ msgstr ""
 
 #: ../boards/chronos/board3_0.xml.in.h:8 ../boards/chronos/board3_1.xml.in.h:6
 #: ../boards/chronos/board3_2.xml.in.h:5 ../boards/chronos/board3_3.xml.in.h:7
-#: ../boards/chronos/board3_4.xml.in.h:5
+#: ../boards/chronos/board3_4.xml.in.h:4
 msgid "Transportation"
 msgstr "Taşıma"
 
@@ -960,7 +906,7 @@ msgstr ""
 "sıcak hava balonu"
 
 #: ../boards/chronos/board3_1.xml.in.h:3 ../boards/chronos/board3_2.xml.in.h:4
-#: ../boards/chronos/board3_4.xml.in.h:4 ../boards/chronos/board4_0.xml.in.h:1
+#: ../boards/chronos/board3_4.xml.in.h:3 ../boards/chronos/board4_0.xml.in.h:1
 msgid "1880 Clement Ader's Eole"
 msgstr "1880 Clement Ader'in "
 
@@ -1049,21 +995,6 @@ msgstr "1955 Citroën 19"
 msgid "Cars"
 msgstr "Arabalar"
 
-#: ../boards/clickanddraw.xml.in.h:1
-#, fuzzy
-msgid "Click and draw"
-msgstr "Üzerime Tıkla"
-
-#: ../boards/clickanddraw.xml.in.h:2
-#, fuzzy
-msgid "Draw the picture by clicking on each blue point in sequence."
-msgstr "Mavi bölgelere basarak çileği bulun"
-
-#: ../boards/clickanddraw.xml.in.h:3
-#, fuzzy
-msgid "Draw the picture by clicking on the blue points."
-msgstr "Mavi bölgelere basarak çileği bulun"
-
 #: ../boards/click_on_letter.xml.in.h:1
 #, fuzzy
 msgid ""
@@ -1094,33 +1025,54 @@ msgid "Click On Me"
 msgstr "Üzerime Tıkla"
 
 #: ../boards/clickgame.xml.in.h:2
+#, fuzzy
 msgid ""
-"Fish are taken from the Unix utility xfishtank. All image credits belong to "
-"Guillaume Rousse."
+"Fish are taken from the Unix utility xfishtank.\n"
+"Images are taken from the National Undersea Research Program (NURP) "
+"Collection\n"
+"at &lt;http://www.photolib.noaa.gov&gt;\n"
+"All image credits belong to the OAR/National Undersea Research Program "
+"(NURP),\n"
+"except for the first image, which is property of the University of North "
+"Carolina at Wilmington.\n"
+"The images used in each level are:\n"
+"Location: Tropical Atlantic Ocean, Florida Keys (image nur00523) "
+"Photographer: D. Kesling\n"
+"Location: Florida Keys (image nur03006)\n"
+"Location: Unknown (image nur03505)\n"
+"Location: Unknown (image nur03010)\n"
+"Location: Unknown (image nur03011)\n"
+"Location: Unknown (image nur03013)"
 msgstr ""
+"Balıklar bir Unix aracı olan xfishtank'tan alınmıştır. Resimler http://www."
+"photolib.noaa.gov adresindeki Doğa Denizaltı Araştırma Programından (NURP) "
+"alınmıştır. Tüm resim hakları OAR/Doğa Denizaltı Araştırma Programına (NURP) "
+"aittir. Sadece başlangıçtaki resim Wilmington 'daki Kuzey Karolina "
+"Üniversitesine aittir. Gcompris bölümlerindeki resimler sırasıyla: Konum: "
+"Tropikal Atlantik Okyanusu, Florida Keys (resim nur00523) Fotoğrafçı: D. "
+"Kesling Konum: Florida Keys (resim nur03006) Konum: Bilinmiyor (resim "
+"nur03505) Konum Bilinmiyor (resim nur03010) Konum: Blinmiyor (resim "
+"nur03011) Konum: Bilinmiyor (resim nur03013)"
 
-#: ../boards/clickgame.xml.in.h:3
+#: ../boards/clickgame.xml.in.h:14
 msgid ""
 "Left-Click with the mouse on all the swimming fish before they leave the "
 "fishtank"
 msgstr "Balıklar akvaryumu terketmeden önce hepsinin üzerlerine sol tıklayın"
 
-#: ../boards/clickgame.xml.in.h:4
+#: ../boards/clickgame.xml.in.h:15
 msgid "Motor coordination: moving and clicking the mouse."
 msgstr "Motor koordinasyonu. fareyi hareket ettirme ve tıklama."
 
-#: ../boards/clickgame.xml.in.h:6
+#: ../boards/clickgame.xml.in.h:17
 msgid "Use the left mouse button to click on the moving fish."
-msgstr ""
-"Hareket eden balık üzerinde tıklamak için farenin sol butonunu kullanın."
+msgstr "Hareket eden balık üzerinde tıklamak için farenin sol butonunu kullanın."
 
 #: ../boards/clockgame.xml.in.h:1
 msgid ""
 "Distinguish between time-units (hour, minute and second). Set and display "
 "time on a clock."
-msgstr ""
-"Saat, dakika ve saniye arasında farklı ayırt edin. Saate bir zaman yazın ve "
-"görün."
+msgstr "Saat, dakika ve saniye arasında farklı ayırt edin. Saate bir zaman yazın ve görün."
 
 #: ../boards/clockgame.xml.in.h:2
 msgid "Learn how to tell the time"
@@ -1135,10 +1087,7 @@ msgid ""
 "Set the clock to the time given, in the time-units shown (hours:minutes or "
 "hours:minutes:seconds). Click on the different arrows, and move the mouse, "
 "to make the numbers go up or down."
-msgstr ""
-"Saati istenilen şekilde ayarlayın (saat:dakika veya saat:dakika:saniye) "
-"olarak. Değişik okların üzerine tıklayıp fareyi hareket ettirerek sayıları "
-"arttırıp azaltabilirsin."
+msgstr "Saati istenilen şekilde ayarlayın (saat:dakika veya saat:dakika:saniye) olarak. Değişik okların üzerine tıklayıp fareyi hareket ettirerek sayıları arttırıp azaltabilirsin."
 
 #: ../boards/clockgame.xml.in.h:5
 msgid "The concept of time. Reading the time."
@@ -1164,9 +1113,7 @@ msgstr "Rengi dinleyin ve karşılık gelen ördeğin üzerine tıklayın"
 msgid ""
 "This board teaches you to recognize different colors. When you hear the name "
 "of the color, click on the duck wearing it."
-msgstr ""
-"Burada değişik renkleri öğrenirsin. Rengin ismini duyduğunda o rengi giyen "
-"ördeğe tıkla."
+msgstr "Burada değişik renkleri öğrenirsin. Rengin ismini duyduğunda o rengi giyen ördeğe tıkla."
 
 #: ../boards/colors_group.xml.in.h:1
 msgid "Colors based activities."
@@ -1184,61 +1131,30 @@ msgstr "Bilgisayarı Keşfet"
 msgid "Play with computer peripherals."
 msgstr "Bilgisayarın teçhizatlarıyla oynayın."
 
-#: ../boards/connect4.xml.in.h:1 ../boards/connect4-2players.xml.in.h:1
+#: ../boards/connect4.xml.in.h:1
 msgid "Arrange four coins in a row"
 msgstr "Dört pulu bitişik dizin"
 
-#: ../boards/connect4.xml.in.h:2 ../boards/connect4-2players.xml.in.h:2
-msgid ""
-"Click the position in the line where you want to drop a piece. You can also "
-"use the arrow keys to move the piece left or right, and the down or space "
-"key to drop a piece."
-msgstr ""
+#: ../boards/connect4.xml.in.h:2
+msgid "Click anywhere in the line where you want to drop a piece"
+msgstr "Satırda parçayı bırakmak istediğin yere tıkla"
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
 msgstr "4'lü sıralama"
 
 #: ../boards/connect4.xml.in.h:4
-#, fuzzy
 msgid ""
-"Create a line of 4 pieces either horizontally (lying down), vertically "
-"(standing up) or diagonally."
+"Create a line of 4 pieces either horizontally (lying down)\n"
+"or vertically (standing up)"
 msgstr "4 pulunu yatay veya dikey olarak yanyana getirin"
 
-#: ../boards/connect4.xml.in.h:5
+#: ../boards/connect4.xml.in.h:6
 msgid ""
 "Laurent Lacheny. Images and Artificial Intelligence taken from project "
 "4stattack by Jeroen Vloothuis. The original project can be found on &lt;"
 "http://forcedattack.sourceforge.net&gt;"
-msgstr ""
-"Laurent Lacheny. görüntüleri ve yapay zeka Jeroen Vloothuis'nın projesinden "
-"alınmıştır. Orjinal projeyi http://forcedattack.sourceforge.net&gt "
-"sitesinden bulabilirsiniz;"
-
-#: ../boards/connect4-2players.xml.in.h:3
-#, fuzzy
-msgid "Connect 4 (2 Players)"
-msgstr "Tekne yarışı (2 oyuncu)"
-
-#: ../boards/connect4-2players.xml.in.h:4
-#, fuzzy
-msgid ""
-"Create a line of 4 pieces either horizontally (lying down) or vertically "
-"(standing up) or diagonally."
-msgstr "4 pulunu yatay veya dikey olarak yanyana getirin"
-
-#: ../boards/connect4-2players.xml.in.h:6
-#, fuzzy
-msgid ""
-"The original code was written in 2005 by Laurent Lacheny. In 2006, Miguel de "
-"Izarra made the two players game. Images and Artificial Intelligence taken "
-"from project 4stattack by Jeroen Vloothuis. The original project can be "
-"found on &lt;http://forcedattack.sourceforge.net&gt;"
-msgstr ""
-"Laurent Lacheny. görüntüleri ve yapay zeka Jeroen Vloothuis'nın projesinden "
-"alınmıştır. Orjinal projeyi http://forcedattack.sourceforge.net&gt "
-"sitesinden bulabilirsiniz;"
+msgstr "Laurent Lacheny. görüntüleri ve yapay zeka Jeroen Vloothuis'nın projesinden alınmıştır. Orjinal projeyi http://forcedattack.sourceforge.net&gt sitesinden bulabilirsiniz;"
 
 #: ../boards/crane.xml.in.h:1
 msgid "Build the same model"
@@ -1249,7 +1165,7 @@ msgid "Drive the crane and copy the model"
 msgstr "Vinçi kullanarak aynı modeli oluştur"
 
 #: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_clic.xml.in.h:5 ../boards/erase_double_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Motor koordinasyonu"
 
@@ -1262,10 +1178,7 @@ msgid ""
 "Move the items in the bottom left frame to copy their position in the top "
 "right model. Below the crane itself, you will find four arrows that let you "
 "move items. To select the item to move, just click on it."
-msgstr ""
-"Sol alt tarafta bulunan nesneleri sağ üstte görülen örnekle aynı hale "
-"getirmek için oynatın. Vinçin altında nesneleri hareket ettirmek için dört "
-"ok bulunmakta. Hangi nesneyi oynatmak istiyorsanız üzerine tıklayın."
+msgstr "Sol alt tarafta bulunan nesneleri sağ üstte görülen örnekle aynı hale getirmek için oynatın. Vinçin altında nesneleri hareket ettirmek için dört ok bulunmakta. Hangi nesneyi oynatmak istiyorsanız üzerine tıklayın."
 
 #: ../boards/discovery.xml.in.h:1
 msgid "Colors, sounds, memory..."
@@ -1332,23 +1245,6 @@ msgstr ""
 "çizin. Daha hızlı olması için nesne silerken farenin orta tuşunu "
 "kullanabilirsiniz. "
 
-#: ../boards/drawnumber.xml.in.h:1
-msgid "Can count from 1 to 50."
-msgstr ""
-
-#: ../boards/drawnumber.xml.in.h:2
-#, fuzzy
-msgid "Draw Number"
-msgstr "Sayı"
-
-#: ../boards/drawnumber.xml.in.h:3
-msgid "Draw the picture by clicking on each numbers in the right order."
-msgstr ""
-
-#: ../boards/drawnumber.xml.in.h:4
-msgid "Draw the picture by following numbers"
-msgstr ""
-
 #: ../boards/electric.xml.in.h:1
 msgid "Create and simulate an electric schema"
 msgstr "elektrik şemayı oluştur ve canlandır"
@@ -1364,11 +1260,7 @@ msgid ""
 "value by dragging its wiper. In order to simulate what happens when a bulb "
 "is blown, you can blown it by right-clicking on it. The simulation is "
 "updated in real time by any user action."
-msgstr ""
-"Elektrik bileşenini seçip çalışma alanıla taşıyın. Telleme yapmak  için "
-"bağlantı noktasına tıklayıp fareyi diğer bağlantıya kadar taşıyın. "
-"Bileşenleri tutarak kaydırabilirsiniz. Teli üzerine tıklayarak "
-"silebilirsiniz."
+msgstr "Elektrik bileşenini seçip çalışma alanıla taşıyın. Telleme yapmak  için bağlantı noktasına tıklayıp fareyi diğer bağlantıya kadar taşıyın. Bileşenleri tutarak kaydırabilirsiniz. Teli üzerine tıklayarak silebilirsiniz."
 
 #: ../boards/electric.xml.in.h:3
 msgid "Electricity"
@@ -1383,9 +1275,8 @@ msgid ""
 "GCompris uses the Gnucap electric simulator as a backend. You can get more "
 "information on gnucap at &lt;http://geda.seul.org/tools/gnucap/&gt;."
 msgstr ""
-"GCompris elektrik devre canlandırmaları için Gnucap electrik simülatörünü "
-"kullanmaktadır. Daha fazla bilgi için &lt;http://geda.seul.org/tools/gnucap/"
-"&gt;."
+"GCompris elektrik devre canlandırmaları için Gnucap electrik simülatörünü kullanmaktadır. Daha fazla bilgi için "
+"&lt;http://geda.seul.org/tools/gnucap/&gt;."
 
 #: ../boards/electric.xml.in.h:6
 msgid "Requires some basic understanding of the concept of electricity."
@@ -1404,17 +1295,14 @@ msgid ""
 "First, properly organize the items so that you can count them. Then, select "
 "the item you want to answer in the bottom right area. Enter the answer with "
 "the keyboard and press the OK button or the 'Enter' key."
-msgstr ""
-"Önce nesneleri sayabilmek için gruplayın. Daha sonra hangi nesneyi "
-"cevaplayacaksanız onu seçerek cevabı girin OK tuşuna basın ya da Enter'a "
-"basın."
+msgstr "Önce nesneleri sayabilmek için gruplayın. Daha sonra hangi nesneyi cevaplayacaksanız onu seçerek cevabı girin OK tuşuna basın ya da Enter'a basın."
 
 #: ../boards/enumerate.xml.in.h:4 ../boards/planegame.xml.in.h:5
-#: ../src/boards/enumerate.c:89
+#: ../src/boards/enumerate.c:92
 msgid "Numeration training"
 msgstr "Sayma alıştırması"
 
-#: ../boards/enumerate.xml.in.h:5 ../src/boards/enumerate.c:90
+#: ../boards/enumerate.xml.in.h:5 ../src/boards/enumerate.c:93
 msgid "Place the items in the best way to count them"
 msgstr "Nesneleri saymak için en uygun şekilde yerleştiriniz"
 
@@ -1425,16 +1313,16 @@ msgid ""
 "gave GCompris the authorization to include their pictures. Thanks a lot, "
 "both of you."
 msgstr ""
-"Havyanların fotoğrafları, Ralf Schmode'un Hayvan Fotoğraflarından (&lt;"
-"http://schmode.net/&gt;) alınmıştır. Ralf, gcompris'e fotoğraflarını içerme "
-"iznini vermiştir. Ralf'a çok teşekkürler."
+"Havyanların fotoğrafları, Ralf Schmode'un Hayvan Fotoğraflarından (&lt;http://"
+"schmode.net/&gt;) alınmıştır. Ralf, gcompris'e fotoğraflarını içerme iznini "
+"vermiştir. Ralf'a çok teşekkürler."
 
-#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:118
-#: ../src/boards/machpuzzle.c:88
+#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:113
+#: ../src/boards/machpuzzle.c:92
 msgid "Move the mouse"
 msgstr "Fareyi oynatın"
 
-#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:119
+#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:114
 msgid "Move the mouse to erase the area and discover the background"
 msgstr "Alanı silmek için fareyi oynatın ve arkaplanda ne olduğunu keşfedin"
 
@@ -1442,23 +1330,6 @@ msgstr "Alanı silmek için fareyi oynatın ve arkaplanda ne olduğunu keşfedin
 #, fuzzy
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Tüm bloklar kayboluncaya kadar fareyi oynatın"
-
-#: ../boards/erase_doubleclick.xml.in.h:2
-#, fuzzy
-msgid "Double click the mouse"
-msgstr "Fareyi çift tıklayın"
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-#, fuzzy
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr ""
-"Tüm bloklar kayboluncaya kadar fareyi dikdörtgenler üzerinde çift tıklayın"
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-#, fuzzy
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr ""
-"Alanı silmek için fareyi çift tıklayın ve arkaplanda ne olduğunu keşfedin"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -1471,6 +1342,18 @@ msgstr "Tüm bloklar kayboluncaya kadar fareyi dikdörtgenler üzerinde tıklay�
 #: ../boards/erase_clic.xml.in.h:4
 msgid "Click the mouse to erase the area and discover the background"
 msgstr "Alanı silmek için fareyi tıklayın ve arkaplanda ne olduğunu keşfedin"
+
+#: ../boards/erase_double_clic.xml.in.h:2
+msgid "Double-Click the mouse to erase the area and discover the background"
+msgstr "Alanı silmek için fareyi çift tıklayın ve arkaplanda ne olduğunu keşfedin"
+
+#: ../boards/erase_double_clic.xml.in.h:3
+msgid "Double-click the mouse"
+msgstr "Fareyi çift tıklayın"
+
+#: ../boards/erase_double_clic.xml.in.h:4
+msgid "Double-click the mouse on rectangles until all the blocks disappear."
+msgstr "Tüm bloklar kayboluncaya kadar fareyi dikdörtgenler üzerinde çift tıklayın"
 
 #: ../boards/experience.xml.in.h:1
 msgid "Go to experiential activities"
@@ -1492,13 +1375,10 @@ msgstr "Bu menüyü görmek için deneysel gcomprisi çalıştırın."
 msgid ""
 "Click on any item that has a free block beside it, and it will be swapped "
 "with the empty block."
-msgstr ""
-"Arkasında boş blok olan herhangi bir nesneyi tıklayın; o nesne boş blokla "
-"yer değiştirecektir."
+msgstr "Arkasında boş blok olan herhangi bir nesneyi tıklayın; o nesne boş blokla yer değiştirecektir."
 
 #: ../boards/fifteen.xml.in.h:3
-msgid ""
-"Move each item to make an increasing series: from the smallest to the largest"
+msgid "Move each item to make an increasing series: from the smallest to the largest"
 msgstr "Tüm nesneleri küçükten büyüğe artan bir seri haline getirin"
 
 #: ../boards/fifteen.xml.in.h:4
@@ -1506,8 +1386,37 @@ msgid "Original code taken from the libgnomecanvas demo"
 msgstr "Orjinal yazılım libgnomecanvas demosundan alınmıştır"
 
 #: ../boards/fifteen.xml.in.h:5
+msgid "Samuel Loyd"
+msgstr "Samuel Loyd"
+
+#: ../boards/fifteen.xml.in.h:6
 msgid "The fifteen game"
 msgstr "Onbeş oyunu"
+
+#: ../boards/fifteen.xml.in.h:7
+msgid "anticipate"
+msgstr "önce davranmak"
+
+#: ../boards/fifteen.xml.in.h:8
+msgid "logical"
+msgstr "mantıksal"
+
+#: ../boards/fifteen.xml.in.h:9
+msgid "move"
+msgstr "hareket ettir"
+
+#: ../boards/fifteen.xml.in.h:10
+msgid "puzzle"
+msgstr "yap boz"
+
+#: ../boards/fifteen.xml.in.h:11
+msgid "slide"
+msgstr "kaydırma"
+
+#: ../boards/fifteen.xml.in.h:12
+#, fuzzy
+msgid "taquin"
+msgstr "mavimsi yeşil"
 
 #: ../boards/followline.xml.in.h:1
 msgid "Control the hose-pipe"
@@ -1522,10 +1431,7 @@ msgid ""
 "Move the mouse over the red part of the hose-pipe. This will move it, "
 "bringing it, part by part, up to the flowers. Be careful, if you move off "
 "the hose, the red part will go back down."
-msgstr ""
-"Fareyi borunun kırmızı kısmında hareket ettirerek çiçklere kadar suyu "
-"ulaştırın. Hareketlerin borunun şeklinin dışına taşması durumunda başa "
-"dönülür."
+msgstr "Fareyi borunun kırmızı kısmında hareket ettirerek çiçklere kadar suyu ulaştırın. Hareketlerin borunun şeklinin dışına taşması durumunda başa dönülür."
 
 #: ../boards/followline.xml.in.h:4
 msgid "Tux needs to water the flowers, but the hose is blocked."
@@ -1555,10 +1461,6 @@ msgstr "svg çizim"
 msgid "svg mozilla animation"
 msgstr "svg mozilla animasyonu"
 
-#: ../boards/gcompris/mimetypes/mime_type.xml.in.h:5
-msgid "wordprocessor text"
-msgstr ""
-
 #: ../boards/geography.xml.in.h:1
 #, fuzzy
 msgid "Drag and Drop the items to redraw the whole map"
@@ -1568,9 +1470,16 @@ msgstr "Tüm haritayı yeniden çizmek için nesneleri sürükleyip bırakınız
 msgid "Locate the countries"
 msgstr "Ülkeleri yerleştirin"
 
-#: ../boards/geography.xml.in.h:3 ../boards/geography_country.xml.in.h:3
+#: ../boards/geography.xml.in.h:3
 msgid "Mouse manipulation: movement, drag and drop"
 msgstr "Fare işlemleri: taşıma, sürükle ve bırak"
+
+#: ../boards/geography.xml.in.h:4
+msgid ""
+"The map of Germany comes from Wikipedia and is released under the GNU Free "
+"Documentation License. Olaf Ronneberger and his children Lina and Julia "
+"Ronneberger created the German level."
+msgstr "Almanya haritası Olaf Ronneberger ve çocukları Lina and Julia tarafından GNU'nun özgür yazılım lisansına açılmış ve wikipedia'dan alınmıştır."
 
 #: ../boards/geography/board1_0.xml.in.h:1
 #: ../boards/geography/board4_2.xml.in.h:1
@@ -1802,7 +1711,7 @@ msgstr "Hırvatistan"
 msgid "Cyprus"
 msgstr "Kıbrıs"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:69
 msgid "Czech Republic"
 msgstr "Çek Cumhuriyeti"
 
@@ -1886,153 +1795,153 @@ msgid "Burkina Faso"
 msgstr "Burkina Faso"
 
 #: ../boards/geography/board4_0.xml.in.h:4
-#: ../boards/geography/board4_2.xml.in.h:7
+#: ../boards/geography/board4_2.xml.in.h:8
 msgid "Cameroon"
 msgstr "Kamerun"
 
 #: ../boards/geography/board4_0.xml.in.h:5
-#: ../boards/geography/board4_2.xml.in.h:8
+#: ../boards/geography/board4_2.xml.in.h:9
 msgid "Central African Republic"
 msgstr "Orta Afrika Cumhuriyeti"
 
 #: ../boards/geography/board4_0.xml.in.h:6
-#: ../boards/geography/board4_2.xml.in.h:9
+#: ../boards/geography/board4_2.xml.in.h:10
 msgid "Chad"
 msgstr "Çad"
 
 #: ../boards/geography/board4_0.xml.in.h:7
+#: ../boards/geography/board4_2.xml.in.h:12
 msgid "Djibouti"
 msgstr "Cibuti"
 
 #: ../boards/geography/board4_0.xml.in.h:8
-#: ../boards/geography/board4_2.xml.in.h:11
+#: ../boards/geography/board4_2.xml.in.h:13
 msgid "Egypt"
 msgstr "Mısır"
 
 #: ../boards/geography/board4_0.xml.in.h:9
 #: ../boards/geography/board4_1.xml.in.h:5
+#: ../boards/geography/board4_2.xml.in.h:14
 msgid "Equatorial Guinea"
 msgstr "Ekvator Ginesi"
 
 #: ../boards/geography/board4_0.xml.in.h:10
-#: ../boards/geography/board4_2.xml.in.h:12
-msgid "Eritrea"
-msgstr "Eritre"
-
-#: ../boards/geography/board4_0.xml.in.h:11
-#: ../boards/geography/board4_2.xml.in.h:13
+#: ../boards/geography/board4_2.xml.in.h:16
 msgid "Ethiopia"
 msgstr "etyopya"
 
-#: ../boards/geography/board4_0.xml.in.h:12
+#: ../boards/geography/board4_0.xml.in.h:11
 #: ../boards/geography/board4_1.xml.in.h:6
-#: ../boards/geography/board4_2.xml.in.h:14
+#: ../boards/geography/board4_2.xml.in.h:17
 msgid "Gabon"
 msgstr "Gabon"
 
-#: ../boards/geography/board4_0.xml.in.h:13
+#: ../boards/geography/board4_0.xml.in.h:12
+#: ../boards/geography/board4_2.xml.in.h:18
 msgid "Gambia"
 msgstr "Gambiya"
 
-#: ../boards/geography/board4_0.xml.in.h:14
-#: ../boards/geography/board4_2.xml.in.h:15
+#: ../boards/geography/board4_0.xml.in.h:13
+#: ../boards/geography/board4_2.xml.in.h:19
 msgid "Ghana"
 msgstr "Gana"
 
-#: ../boards/geography/board4_0.xml.in.h:15
-#: ../boards/geography/board4_2.xml.in.h:16
+#: ../boards/geography/board4_0.xml.in.h:14
+#: ../boards/geography/board4_2.xml.in.h:20
 msgid "Guinea"
 msgstr "Guine"
 
-#: ../boards/geography/board4_0.xml.in.h:16
+#: ../boards/geography/board4_0.xml.in.h:15
+#: ../boards/geography/board4_2.xml.in.h:21
 msgid "Guinea Bissau"
 msgstr "Guine Bissau"
 
-#: ../boards/geography/board4_0.xml.in.h:17
-#: ../boards/geography/board4_2.xml.in.h:17
+#: ../boards/geography/board4_0.xml.in.h:16
+#: ../boards/geography/board4_2.xml.in.h:22
 msgid "Ivory Coast"
 msgstr "Fildişi Sahilleri"
 
-#: ../boards/geography/board4_0.xml.in.h:18
-#: ../boards/geography/board4_2.xml.in.h:19
+#: ../boards/geography/board4_0.xml.in.h:17
+#: ../boards/geography/board4_2.xml.in.h:25
 msgid "Liberia"
 msgstr "Liberya"
 
-#: ../boards/geography/board4_0.xml.in.h:19
-#: ../boards/geography/board4_2.xml.in.h:20
+#: ../boards/geography/board4_0.xml.in.h:18
+#: ../boards/geography/board4_2.xml.in.h:26
 msgid "Libya"
 msgstr "Libya"
 
-#: ../boards/geography/board4_0.xml.in.h:20
-#: ../boards/geography/board4_2.xml.in.h:23
+#: ../boards/geography/board4_0.xml.in.h:19
+#: ../boards/geography/board4_2.xml.in.h:29
 msgid "Mali"
 msgstr "Mali"
 
-#: ../boards/geography/board4_0.xml.in.h:21
-#: ../boards/geography/board4_2.xml.in.h:24
+#: ../boards/geography/board4_0.xml.in.h:20
+#: ../boards/geography/board4_2.xml.in.h:30
 msgid "Mauritania"
 msgstr "Moritanya"
 
-#: ../boards/geography/board4_0.xml.in.h:22
-#: ../boards/geography/board4_2.xml.in.h:25
+#: ../boards/geography/board4_0.xml.in.h:21
+#: ../boards/geography/board4_2.xml.in.h:31
 msgid "Morocco"
 msgstr "Moroko"
 
-#: ../boards/geography/board4_0.xml.in.h:23
-#: ../boards/geography/board4_2.xml.in.h:28
+#: ../boards/geography/board4_0.xml.in.h:22
+#: ../boards/geography/board4_2.xml.in.h:34
 msgid "Niger"
 msgstr "Nijer"
 
-#: ../boards/geography/board4_0.xml.in.h:24
-#: ../boards/geography/board4_2.xml.in.h:29
+#: ../boards/geography/board4_0.xml.in.h:23
+#: ../boards/geography/board4_2.xml.in.h:35
 msgid "Nigeria"
 msgstr "Nijerya"
 
-#: ../boards/geography/board4_0.xml.in.h:25
+#: ../boards/geography/board4_0.xml.in.h:24
 msgid "Northern Africa"
 msgstr "Kuzey Afrika"
 
-#: ../boards/geography/board4_0.xml.in.h:26
+#: ../boards/geography/board4_0.xml.in.h:25
 #: ../boards/geography/board4_1.xml.in.h:14
+#: ../boards/geography/board4_2.xml.in.h:36
 msgid "Rwanda"
 msgstr "Rivanda"
 
-#: ../boards/geography/board4_0.xml.in.h:27
-#: ../boards/geography/board4_2.xml.in.h:30
+#: ../boards/geography/board4_0.xml.in.h:26
+#: ../boards/geography/board4_2.xml.in.h:37
 msgid "Senegal"
 msgstr "Senegal"
 
-#: ../boards/geography/board4_0.xml.in.h:28
+#: ../boards/geography/board4_0.xml.in.h:27
+#: ../boards/geography/board4_2.xml.in.h:38
 msgid "Sierra Leone"
 msgstr "Siera Leone"
 
-#: ../boards/geography/board4_0.xml.in.h:29
-#: ../boards/geography/board4_2.xml.in.h:31
+#: ../boards/geography/board4_0.xml.in.h:28
+#: ../boards/geography/board4_2.xml.in.h:39
 msgid "Somalia"
 msgstr "Somoli"
 
-#: ../boards/geography/board4_0.xml.in.h:30
-#: ../boards/geography/board4_2.xml.in.h:33
+#: ../boards/geography/board4_0.xml.in.h:29
 msgid "Sudan"
 msgstr "Sudan"
 
-#: ../boards/geography/board4_0.xml.in.h:31
-#: ../boards/geography/board4_2.xml.in.h:35
+#: ../boards/geography/board4_0.xml.in.h:30
+#: ../boards/geography/board4_2.xml.in.h:43
 msgid "Togo"
 msgstr "Togo"
 
-#: ../boards/geography/board4_0.xml.in.h:32
-#: ../boards/geography/board4_2.xml.in.h:36
+#: ../boards/geography/board4_0.xml.in.h:31
+#: ../boards/geography/board4_2.xml.in.h:44
 msgid "Tunisia"
 msgstr "Tunus"
 
-#: ../boards/geography/board4_0.xml.in.h:33
+#: ../boards/geography/board4_0.xml.in.h:32
 #: ../boards/geography/board4_1.xml.in.h:19
-#: ../boards/geography/board4_2.xml.in.h:37
+#: ../boards/geography/board4_2.xml.in.h:45
 msgid "Uganda"
 msgstr "Uganda"
 
-#: ../boards/geography/board4_0.xml.in.h:34
+#: ../boards/geography/board4_0.xml.in.h:33
 msgid "Western Sahara"
 msgstr "Batı Sahra"
 
@@ -2047,40 +1956,42 @@ msgid "Botswana"
 msgstr "Bostvana"
 
 #: ../boards/geography/board4_1.xml.in.h:3
+#: ../boards/geography/board4_2.xml.in.h:7
 msgid "Burundi"
 msgstr "Burundi"
 
 #: ../boards/geography/board4_1.xml.in.h:4
-#: ../boards/geography/board4_2.xml.in.h:10
+#: ../boards/geography/board4_2.xml.in.h:11
 msgid "Democratic Republic of Congo"
 msgstr "Kongo Dominik Cumhuriyeti"
 
 #: ../boards/geography/board4_1.xml.in.h:7
-#: ../boards/geography/board4_2.xml.in.h:18
+#: ../boards/geography/board4_2.xml.in.h:23
 msgid "Kenya"
 msgstr "Kenya"
 
 #: ../boards/geography/board4_1.xml.in.h:8
+#: ../boards/geography/board4_2.xml.in.h:24
 msgid "Lesotho"
 msgstr "Lesoto"
 
 #: ../boards/geography/board4_1.xml.in.h:9
-#: ../boards/geography/board4_2.xml.in.h:21
+#: ../boards/geography/board4_2.xml.in.h:27
 msgid "Madagascar"
 msgstr "Madagaskar"
 
 #: ../boards/geography/board4_1.xml.in.h:10
-#: ../boards/geography/board4_2.xml.in.h:22
+#: ../boards/geography/board4_2.xml.in.h:28
 msgid "Malawi"
 msgstr "Malavi"
 
 #: ../boards/geography/board4_1.xml.in.h:11
-#: ../boards/geography/board4_2.xml.in.h:26
+#: ../boards/geography/board4_2.xml.in.h:32
 msgid "Mozambique"
 msgstr "Mozambik"
 
 #: ../boards/geography/board4_1.xml.in.h:12
-#: ../boards/geography/board4_2.xml.in.h:27
+#: ../boards/geography/board4_2.xml.in.h:33
 msgid "Namibia"
 msgstr "Nambiya"
 
@@ -2089,7 +2000,7 @@ msgid "Republic of Congo"
 msgstr "Kongo Cumhuriyeti"
 
 #: ../boards/geography/board4_1.xml.in.h:15
-#: ../boards/geography/board4_2.xml.in.h:32
+#: ../boards/geography/board4_2.xml.in.h:40
 msgid "South Africa"
 msgstr "Güney Afrika"
 
@@ -2098,72 +2009,36 @@ msgid "Southern Africa"
 msgstr "Güney Afrika"
 
 #: ../boards/geography/board4_1.xml.in.h:17
+#: ../boards/geography/board4_2.xml.in.h:41
 msgid "Swaziland"
 msgstr "Svazilend"
 
 #: ../boards/geography/board4_1.xml.in.h:18
-#: ../boards/geography/board4_2.xml.in.h:34
+#: ../boards/geography/board4_2.xml.in.h:42
 msgid "Tanzania"
 msgstr "Tanzanya"
 
 #: ../boards/geography/board4_1.xml.in.h:20
-#: ../boards/geography/board4_2.xml.in.h:38
+#: ../boards/geography/board4_2.xml.in.h:46
 msgid "Zambia"
 msgstr "Zambiya"
 
 #: ../boards/geography/board4_1.xml.in.h:21
-#: ../boards/geography/board4_2.xml.in.h:39
+#: ../boards/geography/board4_2.xml.in.h:47
 msgid "Zimbabwe"
 msgstr "Zimbave"
 
-#: ../boards/geography_country.xml.in.h:1
-#, fuzzy
-msgid "Drag and Drop the regions to redraw the whole country"
-msgstr "Tüm haritayı yeniden çizmek için nesneleri sürükleyip bırakınız"
+#: ../boards/geography/board4_2.xml.in.h:15
+msgid "Eritrea"
+msgstr "Eritre"
 
-#: ../boards/geography_country.xml.in.h:2
-#, fuzzy
-msgid "Locate the region"
-msgstr "Ülkeleri yerleştirin"
-
-#: ../boards/geography_country.xml.in.h:4
-msgid ""
-"The map of Germany comes from Wikipedia and is released under the GNU Free "
-"Documentation License. Olaf Ronneberger and his children Lina and Julia "
-"Ronneberger created the German level."
-msgstr ""
-"Almanya haritası Olaf Ronneberger ve çocukları Lina and Julia tarafından "
-"GNU'nun özgür yazılım lisansına açılmış ve wikipedia'dan alınmıştır."
-
-#: ../boards/geography_country/board1_0.xml.in.h:1
+#: ../boards/geography/board5_0.xml.in.h:1
 msgid "Regions of France"
 msgstr "Fransa'nın Bölümleri"
 
-#: ../boards/geography_country/board2_0.xml.in.h:1
+#: ../boards/geography/board6_0.xml.in.h:1
 msgid "Deutschland Bundesländer"
 msgstr "Almanya'nın Bölümleri"
-
-#: ../boards/geography_country/board3_0.xml.in.h:1
-#, fuzzy
-msgid "Provincias Argentinas"
-msgstr "Arjantin"
-
-#: ../boards/geography_country/board4_0.xml.in.h:1
-msgid "Polish Voivodship"
-msgstr ""
-
-#: ../boards/geography_country/board5_0.xml.in.h:1
-#: ../boards/geography_country/board5_2.xml.in.h:1
-msgid "Districts of Turkey"
-msgstr ""
-
-#: ../boards/geography_country/board5_1.xml.in.h:1
-msgid "Eastern Districts of Turkey"
-msgstr ""
-
-#: ../boards/geography_country/board6_0.xml.in.h:1
-msgid "Counties of Norway"
-msgstr ""
 
 #: ../boards/geometry.xml.in.h:1
 msgid "Geometry"
@@ -2181,11 +2056,11 @@ msgstr "Klavye kullanımı"
 msgid "Letter association between the screen and the keyboard"
 msgstr "Ekran ve klavyedeki  harflerin eşleştirilmesi"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:135
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "Basit Harfler"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:136
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "Düşen harfleri yere değmeden önce yazın"
 
@@ -2207,8 +2082,7 @@ msgstr "Toplama, çarpma, bölme ve çıkarma  işlemleri üzerine alıştırma 
 msgid ""
 "Use the arrow keys to navigate around the board and to avoid the Troggles. "
 "Press the spacebar to eat a number."
-msgstr ""
-"Ok tuşları ile istediğiniz yere gelin. Sayı yemek için boşluk tuşuna basın."
+msgstr "Ok tuşları ile istediğiniz yere gelin. Sayı yemek için boşluk tuşuna basın."
 
 #: ../boards/gnumch-factors.xml.in.h:1
 msgid "Factor Number Munchers"
@@ -2234,17 +2108,13 @@ msgid ""
 "families. So 1, 2, 3 and 6 all fit into the 6 family, but 4 belongs to "
 "another family. Use the arrow keys to navigate around the board and to avoid "
 "the Troggles. Press the spacebar to eat a number."
-msgstr ""
-"Bölenler bir sayıyı tam olarak bölen sayılardır. Örneğin, 6'nın bölenleri 1, "
-"2, 3 ve 6'dır. 4 bölen değildir. Katları ise bunun tersidir."
+msgstr "Bölenler bir sayıyı tam olarak bölen sayılardır. Örneğin, 6'nın bölenleri 1, 2, 3 ve 6'dır. 4 bölen değildir. Katları ise bunun tersidir."
 
 #: ../boards/gnumch-inequality.xml.in.h:1
 msgid ""
 "Guide the Number Muncher to the all the expressions that do not equal the "
 "number at the top of the screen."
-msgstr ""
-"Canavarı ekranın üst kısmındaki sayıyı oluşturan eşitliklerin olduğu "
-"kutulara yönlendirin."
+msgstr "Canavarı ekranın üst kısmındaki sayıyı oluşturan eşitliklerin olduğu kutulara yönlendirin."
 
 #: ../boards/gnumch-inequality.xml.in.h:2
 msgid "Inequality Number Munchers"
@@ -2258,9 +2128,7 @@ msgstr "Toplama, çıkarma, çarpma ve bölme işlemi üzerine alıştırma yap�
 msgid ""
 "Guide the Number Muncher to all the multiples of the number at the top of "
 "the screen."
-msgstr ""
-"Canavarı ekranın üst kısmında yazan sayının katları olan kutulara "
-"yönlendirin."
+msgstr "Canavarı ekranın üst kısmında yazan sayının katları olan kutulara yönlendirin."
 
 #: ../boards/gnumch-multiples.xml.in.h:2
 msgid "Learn about multiples and factors."
@@ -2285,16 +2153,7 @@ msgid ""
 "over. So '8 isn't a multiple of 5, nor is 23. Only 5, 10, 15, 20, 25 ... are "
 "multiples (or families or steps) of 5. Use the arrow keys to navigate around "
 "the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr ""
-"Sayının katları o sayı ile herhangi bir sayı çarpıldığında oluşan "
-"sayılardır. Örneğin 24, 36, 48 ve 60 sayıları 12'nin katlarıdır. 25 sayısı "
-"12'nin katı değildir, çünkü 12 ile çarpıldığında 25 olacak herhangi bir sayı "
-"yoktur. Katları aileler ve bölenleri o aileye ait insanlar olarak "
-"düşünebilirsiniz. Bölen 5, aile 10'a ve büyükbaba 15'e,büyük büyükbaba 20'ye "
-"sahiptir. Fakat 5 sayısı 8 veya 23 sayısı ile ilgili değildir. 8 sayısı 5'in "
-"vaya 23'ün katı değildir. Sadece 10, 15, 20, 25 sayıları 5'in katlarıdır. Ok "
-"tuşlarıyla kutular arasında gidin ve canavarın yemesi için boşluk tuşuna "
-"basın."
+msgstr "Sayının katları o sayı ile herhangi bir sayı çarpıldığında oluşan sayılardır. Örneğin 24, 36, 48 ve 60 sayıları 12'nin katlarıdır. 25 sayısı 12'nin katı değildir, çünkü 12 ile çarpıldığında 25 olacak herhangi bir sayı yoktur. Katları aileler ve bölenleri o aileye ait insanlar olarak düşünebilirsiniz. Bölen 5, aile 10'a ve büyükbaba 15'e,büyük büyükbaba 20'ye sahiptir. Fakat 5 sayısı 8 veya 23 sayısı ile ilgili değildir. 8 sayısı 5'in vaya 23'ün katı değildir. Sadece 10, 15, 20, 25 sayıları 5'in katlarıdır. Ok tuşlarıyla kutular arasında gidin ve canavarın yemesi için boşluk tuşuna basın."
 
 #: ../boards/gnumch-primes.xml.in.h:1
 msgid "Guide the Number Muncher to all the prime numbers."
@@ -2318,14 +2177,7 @@ msgid ""
 "5), but you can see that 6 has 2 and 3 in its family as well (6 × 1 = 6, 2 × "
 "3 = 6). So 6 is not a prime number. Use the arrow keys to navigate around "
 "the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr ""
-"Asal sayılar, kendi veya 1 sayısı dışında sayıya bölünemeyen sayılardır. "
-"Örneğin, 3 sayısı asal sayıdır; fakat 4 asal değildir (çünkü 4, 2'ye "
-"bölünür). Asal sayıları çok küçük bir aile olarak düşünebilirsiniz. Ailede "
-"sadece kendileri ve 1 sayısı bulunmaktadır. Örneğin 5 sayısı sadece 5 ve 1 "
-"sayılarına sahiptir. Oysaki 6, 2 ve 3'ten oluşur (6x1=6, 2x3=6). Bu nedenle "
-"6 asal sayı değildir. Ok tuşlarıyla kutuların üzerinde hareket edin ve asal "
-"sayıları yemek için boşluk tuşuna basın."
+msgstr "Asal sayılar, kendi veya 1 sayısı dışında sayıya bölünemeyen sayılardır. Örneğin, 3 sayısı asal sayıdır; fakat 4 asal değildir (çünkü 4, 2'ye bölünür). Asal sayıları çok küçük bir aile olarak düşünebilirsiniz. Ailede sadece kendileri ve 1 sayısı bulunmaktadır. Örneğin 5 sayısı sadece 5 ve 1 sayılarına sahiptir. Oysaki 6, 2 ve 3'ten oluşur (6x1=6, 2x3=6). Bu nedenle 6 asal sayı değildir. Ok tuşlarıyla kutuların üzerinde hareket edin ve asal sayıları yemek için boşluk tuşuna basın."
 
 #: ../boards/gnumchmenu.xml.in.h:1
 msgid "Go to Number Munchers activities"
@@ -2355,13 +2207,7 @@ msgid ""
 "escape area on the right represents how far you are from the correct number. "
 "If Tux is over or under the escape area, it means your number is over or "
 "under the correct number."
-msgstr ""
-"Size sayı aralığını verecek açıklamaları okuyun. Yukarıdaki mavi kutuya "
-"tahmin ettiğiniz sayıyı yazın. Tux size gerçek sayının sizin tahmin "
-"ettiğinizden büyük veya küçük olduğunu söyleyecek. Sonra başka bir sayı "
-"girin. Kaçış noktası ile Tux arasındaki uzaklık sizin doğru sayıdan ne kadar "
-"uzak olduğunuzu gösterir. Tux'un kaçış alanının üzerinde olması sizin tahmin "
-"sayınızın doğru sayıdfan büyük, altında olması ise küçük olduğunu gösterir."
+msgstr "Size sayı aralığını verecek açıklamaları okuyun. Yukarıdaki mavi kutuya tahmin ettiğiniz sayıyı yazın. Tux size gerçek sayının sizin tahmin ettiğinizden büyük veya küçük olduğunu söyleyecek. Sonra başka bir sayı girin. Kaçış noktası ile Tux arasındaki uzaklık sizin doğru sayıdan ne kadar uzak olduğunuzu gösterir. Tux'un kaçış alanının üzerinde olması sizin tahmin sayınızın doğru sayıdfan büyük, altında olması ise küçük olduğunu gösterir."
 
 #: ../boards/hanoi.xml.in.h:1
 msgid "Concept taken from EPI games."
@@ -2371,11 +2217,9 @@ msgstr "Kavram EPI oyunundan alınmıştır."
 msgid ""
 "Drag and Drop one top piece at a time, from one peg to another, to reproduce "
 "the tower on the right in the empty space on the left."
-msgstr ""
-"Tutup kaydırarak teker teker en üst elemanı alın, diğer tahtaya koyun. "
-"Soldaki boş köprüye sağdakinin aynısını oluşturun."
+msgstr "Tutup kaydırarak teker teker en üst elemanı alın, diğer tahtaya koyun. Soldaki boş köprüye sağdakinin aynısını oluşturun."
 
-#: ../boards/hanoi.xml.in.h:4 ../src/boards/hanoi.c:97
+#: ../boards/hanoi.xml.in.h:4 ../src/boards/hanoi.c:101
 msgid "Reproduce the given tower"
 msgstr "Verilen köprüyü tekrar oluşturun"
 
@@ -2383,7 +2227,7 @@ msgstr "Verilen köprüyü tekrar oluşturun"
 msgid "Reproduce the tower on the right in the empty space on the left"
 msgstr "Sol taraftaki boş köprüye sağ taraftaki köprünün aynısını yapın"
 
-#: ../boards/hanoi.xml.in.h:6 ../src/boards/hanoi.c:96
+#: ../boards/hanoi.xml.in.h:6 ../src/boards/hanoi.c:100
 msgid "Simplified Tower of Hanoi"
 msgstr "Basitleştirilmiş Hanoi köprüsü"
 
@@ -2391,9 +2235,7 @@ msgstr "Basitleştirilmiş Hanoi köprüsü"
 msgid ""
 "Drag and Drop the top pieces only from one peg to another, to reproduce the "
 "tower on the right in the empty space on the left."
-msgstr ""
-"Tutup kaydırarak teker teker en üst elemanı alın, diğer tahtaya koyun. "
-"Soldaki boş köprüye sağdakinin aynısını oluşturun."
+msgstr "Tutup kaydırarak teker teker en üst elemanı alın, diğer tahtaya koyun. Soldaki boş köprüye sağdakinin aynısını oluşturun."
 
 #: ../boards/hanoi_real.xml.in.h:3
 msgid "Reproduce the tower on the right side"
@@ -2404,18 +2246,13 @@ msgid "The Tower of Hanoi"
 msgstr "Hanoi Köprüsü"
 
 #: ../boards/hanoi_real.xml.in.h:5
-#, fuzzy
 msgid ""
 "The object of the game is to move the entire stack to another peg, obeying "
-"the following rules:\n"
-"* only one disc may be moved at a time\n"
-"* no disc may be placed atop a smaller disc"
-msgstr ""
-"Oyunun amacı yığıntın tümünü başka tahtaya taşımaktır, bunu yaparken kural "
-"her seferinde sadece bir parçanın taşınmasıdır ve hiçbir parça kendisinden "
-"daha küçük parçanın üstüne konulamaz."
+"the following rules: * only one disc may be moved at a time * no disc may be "
+"placed atop a smaller disc"
+msgstr "Oyunun amacı yığıntın tümünü başka tahtaya taşımaktır, bunu yaparken kural her seferinde sadece bir parçanın taşınmasıdır ve hiçbir parça kendisinden daha küçük parçanın üstüne konulamaz."
 
-#: ../boards/hanoi_real.xml.in.h:8
+#: ../boards/hanoi_real.xml.in.h:6
 msgid ""
 "The puzzle was invented by the French mathematician Edouard Lucas in 1883. "
 "There is a legend about a Hindu temple whose priests were constantly engaged "
@@ -2426,10 +2263,8 @@ msgid ""
 "inspired by it. (source Wikipedia &lt;http://en.wikipedia.org/wiki/"
 "Tower_of_hanoi&gt;)"
 msgstr ""
-"Bu oyun Fransız matematikçi' Edouard Lucas tarafından 1883 yılında "
-"bulunmuştur. Efsaneye göre hintli rahipler Hanoi kurallarına göre 64 diski "
-"gerleştirmek durumundalarmış ve işleri bittiğinde dünyanın sonu gelecekmiş. "
-"(kaynak Wikipedia &lt;http://en.wikipedia.org/wiki/Tower_of_hanoi&gt;)"
+"Bu oyun Fransız matematikçi' Edouard Lucas tarafından 1883 yılında bulunmuştur. Efsaneye göre hintli rahipler Hanoi kurallarına göre 64 diski gerleştirmek durumundalarmış ve işleri bittiğinde dünyanın sonu gelecekmiş. (kaynak Wikipedia &lt;http://en.wikipedia.org/wiki/"
+"Tower_of_hanoi&gt;)"
 
 #: ../boards/hexagon.xml.in.h:1
 msgid "Find the strawberry by clicking on the blue fields"
@@ -2439,9 +2274,7 @@ msgstr "Mavi bölgelere basarak çileği bulun"
 msgid ""
 "Try to find the strawberry under the blue fields. The fields become redder "
 "as you get closer."
-msgstr ""
-"Mavi bölgelere basarak çileği bulmaya çalışın. Yakına geldikçe alan "
-"kırmızılaşır."
+msgstr "Mavi bölgelere basarak çileği bulmaya çalışın. Yakına geldikçe alan kırmızılaşır."
 
 #: ../boards/hexagon.xml.in.h:5
 msgid "hexagon"
@@ -2457,7 +2290,7 @@ msgstr "Bir resimle eşleşen kelimeyi okuyarak alıştırma yapın"
 
 #: ../boards/imageid.xml.in.h:3 ../boards/imagename.xml.in.h:4
 #: ../boards/readingh.xml.in.h:4 ../boards/readingv.xml.in.h:4
-#: ../src/boards/imageid.c:103 ../src/boards/missingletter.c:101
+#: ../src/boards/imageid.c:112 ../src/boards/missingletter.c:104
 msgid "Reading"
 msgstr "Okuma"
 
@@ -2643,7 +2476,7 @@ msgid "sofa"
 msgstr "kanepe"
 
 #: ../boards/imagename/board3_0.xml.in.h:7
-#: ../boards/imagename/board5_0.xml.in.h:4
+#: ../boards/imagename/board5_0.xml.in.h:5
 msgid "star"
 msgstr "yıldız"
 
@@ -2660,13 +2493,16 @@ msgid "grater"
 msgstr "rende"
 
 #: ../boards/imagename/board4_0.xml.in.h:7
-#: ../boards/imagename/board5_0.xml.in.h:5
 msgid "tree"
 msgstr "ağaç"
 
 #: ../boards/imagename/board5_0.xml.in.h:2
 msgid "pencil"
 msgstr "kurşun kalem"
+
+#: ../boards/imagename/board5_0.xml.in.h:4
+msgid "spruce"
+msgstr "ladin ağacı"
 
 #: ../boards/imagename/board5_0.xml.in.h:6
 msgid "truck"
@@ -2730,10 +2566,8 @@ msgstr ""
 "seçiminizi onaylayın."
 
 #: ../boards/login.xml.in.h:1
-msgid ""
-"GCompris identifies each child, so we can provide child-specific reports."
-msgstr ""
-"Gcompris her çocuğu tanımlar, bu nedenle çocuğa özel rapor alabilirsiniz."
+msgid "GCompris identifies each child, so we can provide child-specific reports."
+msgstr "Gcompris her çocuğu tanımlar, bu nedenle çocuğa özel rapor alabilirsiniz."
 
 #: ../boards/login.xml.in.h:2
 msgid "GCompris login screen"
@@ -2756,8 +2590,7 @@ msgstr ""
 "Yönetim kısmına 'gcompris -a' yazarak erişebilirsiniz. \n"
 "Yönetim kısmında farklı profiller yaratabilirsiniz. Herbir profilde, \n"
 "farklı kullanıcılar ve etkinlikler tanımlayabilirsiniz.\n"
-"Gcompris'i özel bir profil için çalıştırmak istediğinizde, 'gcompris -p "
-"profile' yazın."
+"Gcompris'i özel bir profil için çalıştırmak istediğinizde, 'gcompris -p profile' yazın."
 
 #: ../boards/login.xml.in.h:10
 msgid "Select or enter your name to log in to GCompris"
@@ -2768,14 +2601,11 @@ msgid "Addition"
 msgstr "Toplama"
 
 #: ../boards/magic_hat_plus.xml.in.h:2
-#, fuzzy
 msgid ""
 "Click on the hat to open or close it. Under the hat, how many stars can you "
-"see moving around? Count carefully. :) Click in the bottom-right area to "
+"see moving around? Count carefully. :) Click in the bottom- right area to "
 "input your answer."
-msgstr ""
-"Açmak veya kapatmak için şapkaya tıklayın. Şapkanın altında kaç tane dolaşan "
-"yıldız görüyorsunuz? Cevap vermek için sağ alt bölümü tıklayın."
+msgstr "Açmak veya kapatmak için şapkaya tıklayın. Şapkanın altında kaç tane dolaşan yıldız görüyorsunuz? Cevap vermek için sağ alt bölümü tıklayın."
 
 #: ../boards/magic_hat_plus.xml.in.h:3
 msgid "Count how many items are under the magic hat"
@@ -2791,8 +2621,7 @@ msgstr "Sihirbazın Şapkası"
 
 #: ../boards/magic_hat_minus.xml.in.h:1
 msgid "Count how many items are under the magic hat after some have got away"
-msgstr ""
-"Bazıları gittikten sonra sihirli şapkanın altında kaç nesne olduğunu sayın"
+msgstr "Bazıları gittikten sonra sihirli şapkanın altında kaç nesne olduğunu sayın"
 
 #: ../boards/magic_hat_minus.xml.in.h:2
 msgid "Learn subtraction"
@@ -2804,11 +2633,7 @@ msgid ""
 "hat. Then, click on the hat to open it. A few stars escape. Click again on "
 "the hat to close it. You have to count how many are still under the hat. "
 "Click on the bottom right area to answer."
-msgstr ""
-"Sihirbaza bakın, o size sihirli şapkasının altında kaç tane yıldız olduğunu "
-"söyleyecek. Sonra açmak için şapkaya tıklayın. Birkaç yıldız kaçacak. "
-"Kapatmak için tekrar şapkaya tıklayın. Hala kaç yıldız olduğunu "
-"saymalısınız. Cevaplamak için sağ alt bölümü tıklayın."
+msgstr "Sihirbaza bakın, o size sihirli şapkasının altında kaç tane yıldız olduğunu söyleyecek. Sonra açmak için şapkaya tıklayın. Birkaç yıldız kaçacak. Kapatmak için tekrar şapkaya tıklayın. Hala kaç yıldız olduğunu saymalısınız. Cevaplamak için sağ alt bölümü tıklayın."
 
 #: ../boards/magic_hat_minus.xml.in.h:4 ../boards/memory_add_minus.xml.in.h:3
 #: ../boards/memory_add_minus_tux.xml.in.h:3 ../boards/memory_minus.xml.in.h:2
@@ -2829,7 +2654,7 @@ msgstr "Matematik"
 msgid "Can use the keyboard arrow to move an object."
 msgstr "Nesneleri taşımak için klavye tuşlarını kullanabilirsiniz."
 
-#: ../boards/maze.xml.in.h:2 ../src/boards/maze.c:129
+#: ../boards/maze.xml.in.h:2 ../src/boards/maze.c:133
 msgid "Find your way out of the maze"
 msgstr "Labirentten çıkış yolunu bulun"
 
@@ -2839,7 +2664,7 @@ msgid "Help Tux get out of this maze."
 msgstr "Tux'a bu labirentten çıkabilmesi içn yardım edin"
 
 #: ../boards/maze.xml.in.h:4 ../boards/maze2DRelative.xml.in.h:4
-#: ../boards/mazeInvisible.xml.in.h:4 ../src/boards/maze.c:128
+#: ../boards/mazeInvisible.xml.in.h:4 ../src/boards/maze.c:132
 msgid "Maze"
 msgstr "Labirent"
 
@@ -2857,10 +2682,7 @@ msgid ""
 "Use the keyboard arrows to move Tux up to the door. In this maze, the move "
 "is relative (first person). Use the up arrow to go forward. The other arrow "
 "let you turn Tux in another direction."
-msgstr ""
-"Ok tuşlarını Tux'u kapıya götürmek için kullanın.Bu labirentte, hareket "
-"görecelidir. Üst oku ileri gitmek için kullanın. Diğer ok Tux'u diğer yöne "
-"döndürür."
+msgstr "Ok tuşlarını Tux'u kapıya götürmek için kullanın.Bu labirentte, hareket görecelidir. Üst oku ileri gitmek için kullanın. Diğer ok Tux'u diğer yöne döndürür."
 
 #: ../boards/maze3D.xml.in.h:1
 msgid "3D Maze"
@@ -2910,9 +2732,7 @@ msgstr "Kulak eğitim Etkinlikleri"
 msgid ""
 "Listen to the sound sequence played, and repeat it by clicking on the "
 "elements. You can listen again by clicking on the repeat button."
-msgstr ""
-"Çalınan sesleri sırasıyla dinleyin; nesnelerin üzerine tıklayarak aynı "
-"sesleri tekrarlayın. Repeat tuşuna basarak tekrar dinleyebilirsiniz."
+msgstr "Çalınan sesleri sırasıyla dinleyin; nesnelerin üzerine tıklayarak aynı sesleri tekrarlayın. Repeat tuşuna basarak tekrar dinleyebilirsiniz."
 
 #: ../boards/melody.xml.in.h:3
 msgid "Melody"
@@ -2929,11 +2749,7 @@ msgid ""
 "its hidden picture, and try to match the twins. You can only turn over two "
 "cards at once, so you need to remember where a picture is, while you look "
 "for its twin. When you turn over the twins, they both disappear."
-msgstr ""
-"Kapalı halde bir miktar kart bulunmaktadır. Bunların ön yüzlerinde aynı "
-"resimlar olan çiftler bulunmaktadır. Kartın üzerine tıklayarak ön yüzündeki "
-"resmi görebilirsiniz. O resmin eşini bulun.  Her seferinde sadece iki kartı "
-"çevirebilirsiniz. Eşini bulduğunuzda her iki kart da yok olur."
+msgstr "Kapalı halde bir miktar kart bulunmaktadır. Bunların ön yüzlerinde aynı resimlar olan çiftler bulunmaktadır. Kartın üzerine tıklayarak ön yüzündeki resmi görebilirsiniz. O resmin eşini bulun.  Her seferinde sadece iki kartı çevirebilirsiniz. Eşini bulduğunuzda her iki kart da yok olur."
 
 #: ../boards/memory.xml.in.h:2
 #, fuzzy
@@ -2987,21 +2803,18 @@ msgid ""
 "disappear! When you've made them all disappear, found all the sums, you've "
 "won the game! :)"
 msgstr ""
-"Bazı kartları görebilirsiniz, fakat arka karaflarını göremezsiniz. Herbir "
-"kartta toplama işlemi veya toplamanın sonucu saklıdır.\n"
+"Bazı kartları görebilirsiniz, fakat arka karaflarını göremezsiniz. "
+"Herbir kartta toplama işlemi veya toplamanın sonucu saklıdır.\n"
 "Toplama işlemi 2 + 2 = 4 gibidir\n"
-"Eşitliğin bir tarafındaki sayılar, diğer taraftaki ile aynı olmalıdır. Yani "
-"2 ve 2 daha 4 eder. Bunun yaparken parmaklarınızı kullanabilirsiniz. Ne "
-"kadar çok şey yaparsanız hatırlamanız kolay olur. Blokları, kardeşlerinizi "
-"yada okul arkadaşlarınızı sayabilirsiniz. Böylece çok iyi toplama "
-"yapabilirsiniz!\n"
+"Eşitliğin bir tarafındaki sayılar, diğer taraftaki ile aynı olmalıdır. "
+"Yani 2 ve 2 daha 4 eder. Bunun yaparken parmaklarınızı kullanabilirsiniz. "
+"Ne kadar çok şey yaparsanız hatırlamanız kolay olur. Blokları, kardeşlerinizi yada "
+"okul arkadaşlarınızı sayabilirsiniz. Böylece çok iyi toplama yapabilirsiniz!\n"
 "\n"
-"Bu oyunda kartlar arkalarında toplama işlemi gizlerler. Bir karta tıklayarak "
-"arkasında ne olduğunu görün ve aynı sonucu veren başka bir kart bulmaya "
-"çalışın. Bir seferde sadece iki kartı çevirebilirsiniz. Bu nedenle kartların "
-"arkasında ne olduğunu hatırlamaya çalışın ve uyan ikilileri bulun. "
-"Bulduğunuzda kartlar kaybolacak. Tüm kartlar kaybolduğunda, tüm toplamları "
-"bulmuş olacaksınız ve kazanacaksınız! :)"
+"Bu oyunda kartlar arkalarında toplama işlemi gizlerler. "
+"Bir karta tıklayarak arkasında ne olduğunu görün ve aynı sonucu veren başka bir kart "
+"bulmaya çalışın. Bir seferde sadece iki kartı çevirebilirsiniz. Bu nedenle kartların arkasında "
+"ne olduğunu hatırlamaya çalışın ve uyan ikilileri bulun. Bulduğunuzda kartlar kaybolacak. Tüm kartlar kaybolduğunda, tüm toplamları bulmuş olacaksınız ve kazanacaksınız! :)"
 
 #: ../boards/memory_add_minus.xml.in.h:1
 msgid "Addition and subtraction memory game"
@@ -3017,9 +2830,7 @@ msgstr "Tüm kartlar bitene kadar toplama ve çıkarma alıştırmaları yapın.
 msgid ""
 "Turn the cards over to find two numbers which add or subtract the same, "
 "until all the cards are gone."
-msgstr ""
-"Tüm kartlar bitene kadar toplanınca veya çıkarılınca aynı sayıyı veren kart "
-"çiftlerini bulun."
+msgstr "Tüm kartlar bitene kadar toplanınca veya çıkarılınca aynı sayıyı veren kart çiftlerini bulun."
 
 #: ../boards/memory_add_minus.xml.in.h:5
 #: ../boards/memory_add_minus_mult_div.xml.in.h:5
@@ -3043,15 +2854,13 @@ msgid ""
 "proper equality. When you do that, both those cards disappear! When you've "
 "made them all disappear, found all the operations, you've won the game! :)"
 msgstr ""
-"Bazı kartları görebilirsiniz, fakat arka karaflarını göremezsiniz. Herbir "
-"kartta bir işlem veya işlemin sonucu saklıdır.\n"
+"Bazı kartları görebilirsiniz, fakat arka karaflarını göremezsiniz. "
+"Herbir kartta bir işlem veya işlemin sonucu saklıdır.\n"
 "\n"
-"Bu oyunda kartlar arkalarında işlemin iki parçası gizlidir. Bir karta "
-"tıklayarak arkasında ne olduğunu görün ve aynı sonucu veren başka bir kart "
-"bulmaya çalışın. Bir seferde sadece iki kartı çevirebilirsiniz. Bu nedenle "
-"kartların arkasında ne olduğunu hatırlamaya çalışın ve uyan ikilileri bulun. "
-"Bulduğunuzda kartlar kaybolacak. Tüm kartlar kaybolduğunda, tüm sonuçları "
-"bulmuş olacaksınız ve kazanacaksınız! :)"
+"Bu oyunda kartlar arkalarında işlemin iki parçası gizlidir. "
+"Bir karta tıklayarak arkasında ne olduğunu görün ve aynı sonucu veren başka bir kart "
+"bulmaya çalışın. Bir seferde sadece iki kartı çevirebilirsiniz. Bu nedenle kartların arkasında "
+"ne olduğunu hatırlamaya çalışın ve uyan ikilileri bulun. Bulduğunuzda kartlar kaybolacak. Tüm kartlar kaybolduğunda, tüm sonuçları bulmuş olacaksınız ve kazanacaksınız! :)"
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:1
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:1
@@ -3067,8 +2876,7 @@ msgstr "Tüm işlemlerle hafıza oyunu"
 msgid ""
 "Practise addition, subtraction, multiplication, division, until all the "
 "cards are gone."
-msgstr ""
-"Tüm kartlar bitene kadar toplama, çıkarma, çarpma, bölme alıştırmaları yapın."
+msgstr "Tüm kartlar bitene kadar toplama, çıkarma, çarpma, bölme alıştırmaları yapın."
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:4
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:4
@@ -3133,9 +2941,7 @@ msgstr "Çıkartmalı hafıza oyunu"
 msgid ""
 "Turn the cards over to find two numbers which subtract the same, until all "
 "the cards are gone."
-msgstr ""
-"Tüm kartlar bitene kadar aynı çıkarmakartları çevirin. sonucunu veren iki "
-"kartı bulmak için "
+msgstr "Tüm kartlar bitene kadar aynı çıkarmakartları çevirin. sonucunu veren iki kartı bulmak için "
 
 #: ../boards/memory_minus.xml.in.h:5 ../boards/memory_minus_tux.xml.in.h:5
 msgid ""
@@ -3161,21 +2967,19 @@ msgid ""
 "proper sum. When you do that, both those cards disappear! When you've made "
 "them all disappear, found all the subtracts, you've won the game! :)"
 msgstr ""
-"Bazı kartları görebilirsiniz, fakat arka karaflarını göremezsiniz. Herbir "
-"kartta toplama işlemi veya toplamanın sonucu saklıdır.\n"
+"Bazı kartları görebilirsiniz, fakat arka karaflarını göremezsiniz. "
+"Herbir kartta toplama işlemi veya toplamanın sonucu saklıdır.\n"
 "Çıkarma işlemi 3 - 1 = 2 gibidir\n"
-"Eşitliğin bir tarafındaki sayılar, diğer taraftaki ile aynı olmalıdır. Yani "
-"3 eksi 1 2 eder. Bunun yaparken parmaklarınızı kullanabilirsiniz. Ne kadar "
-"çok şey yaparsanız hatırlamanız kolay olur. Blokları, kardeşlerinizi yada "
-"okul arkadaşlarınızı sayabilirsiniz. Böylece çok iyi toplama "
-"yapabilirsiniz!\n"
+"Eşitliğin bir tarafındaki sayılar, diğer taraftaki ile aynı olmalıdır. "
+"Yani 3 eksi 1 2 eder. Bunun yaparken parmaklarınızı kullanabilirsiniz. "
+"Ne kadar çok şey yaparsanız hatırlamanız kolay olur. Blokları, kardeşlerinizi yada "
+"okul arkadaşlarınızı sayabilirsiniz. Böylece çok iyi toplama yapabilirsiniz!\n"
 "\n"
-"Bu oyunda kartlar arkalarında çıkarma işlemi gizlerler. Bir karta tıklayarak "
-"arkasında ne olduğunu görün ve aynı sonucu veren başka bir kart bulmaya "
-"çalışın. Bir seferde sadece iki kartı çevirebilirsiniz. Bu nedenle kartların "
-"arkasında ne olduğunu hatırlamaya çalışın ve uyan ikilileri bulun. "
-"Bulduğunuzda kartlar kaybolacak. Tüm kartlar kaybolduğunda, tüm toplamları "
-"bulmuş olacaksınız ve kazanacaksınız! :)"
+"Bu oyunda kartlar arkalarında çıkarma "
+"işlemi gizlerler. "
+"Bir karta tıklayarak arkasında ne olduğunu görün ve aynı sonucu veren başka bir kart "
+"bulmaya çalışın. Bir seferde sadece iki kartı çevirebilirsiniz. Bu nedenle kartların arkasında "
+"ne olduğunu hatırlamaya çalışın ve uyan ikilileri bulun. Bulduğunuzda kartlar kaybolacak. Tüm kartlar kaybolduğunda, tüm toplamları bulmuş olacaksınız ve kazanacaksınız! :)"
 
 #: ../boards/memory_minus_tux.xml.in.h:3
 msgid "Subtraction memory game against Tux"
@@ -3197,8 +3001,7 @@ msgstr "Tüm kartlar bitene kadar çarpım işlemi üzerine alıştırma yap."
 msgid ""
 "Turn the cards over to find two numbers which multiply the same, until all "
 "the cards are gone."
-msgstr ""
-"Tüm kartlar bitene kadar aynı çarpma sonucunu veren kartları bulmaya çalışın."
+msgstr "Tüm kartlar bitene kadar aynı çarpma sonucunu veren kartları bulmaya çalışın."
 
 #: ../boards/memory_mult_div.xml.in.h:1
 msgid "Multiplication and division memory game"
@@ -3246,11 +3049,7 @@ msgid ""
 "and try to match the twins. You can only activate two Tux at once, so you "
 "need to remember where a sound is, while you listen to its twin. When you "
 "turn over the twins, they both disappear."
-msgstr ""
-"Bazı kemancı Tux'lar görünmektedir. Herbir Tux'un sesi ve her bir sesin aynı "
-"sesi çıkaran eşi bulunmaktadır. Tux'un üzerine tıklayarak gizli sesini "
-"dinleyin ve aynı sesi bulmaya çalışın. Aynısını bulduğunuzda her iki Tux da "
-"yokolacaktır."
+msgstr "Bazı kemancı Tux'lar görünmektedir. Herbir Tux'un sesi ve her bir sesin aynı sesi çıkaran eşi bulunmaktadır. Tux'un üzerine tıklayarak gizli sesini dinleyin ve aynı sesi bulmaya çalışın. Aynısını bulduğunuzda her iki Tux da yokolacaktır."
 
 #: ../boards/memory_sound.xml.in.h:2
 msgid "Audio memory game"
@@ -3294,29 +3093,25 @@ msgid ""
 "You take turns with Tux, and to win the game, you have to find more pairs of "
 "twins than he does."
 msgstr ""
-"Aynı görünen bir çok kart göreceksiniz. Herbirinin arka tarafında bir resim "
-"bulunmakta. Herbir resimin eşi de var. Bir seferde sadece iki kartı "
-"çevirebilirsiniz. Bu nedenle kartlarda ne olduğunu eşini bulana kadar "
-"hatırlamak durumundasınız. Eşini bulduğunuzda kartlar kaybolacak! Tux'la "
-"yarışacaksınız bu nedenle Tux'dan daha fazla çift bulmalısınız."
+"Aynı görünen bir çok kart göreceksiniz. Herbirinin arka tarafında bir resim bulunmakta. "
+"Herbir resimin eşi de var. Bir seferde sadece iki kartı çevirebilirsiniz. Bu nedenle kartlarda ne olduğunu eşini bulana kadar hatırlamak durumundasınız. Eşini bulduğunuzda kartlar kaybolacak! "
+"Tux'la yarışacaksınız bu nedenle Tux'dan daha fazla çift bulmalısınız."
 
 #: ../boards/menu.xml.in.h:1
-#, fuzzy
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of "
 "activities.\n"
-"At the bottom of the screen is the GCompris control bar.\n"
+"At the bottom of the screen is the gcompris control bar.\n"
 "The following icons are displayed from right to left.\n"
 "(note that each icon is displayed only if available in the current "
 "activity)\n"
-"    Home - Exit an activity, go back to menu\n"
+"    Home - Back to previous menu or exit gcompris if at the top\n"
 "    Thumb - OK. Confirm your answer\n"
 "    Dice - Display the current level. Click to select another level\n"
-"    Lips - Repeat the question\n"
+"    Music note - Repeat the question\n"
 "    Question Mark - Help\n"
 "    Tool - The configuration menu\n"
 "    Tux Plane - About GCompris\n"
-"    Night - Quit GCompris\n"
 "The stars show suitable age groups for each game:\n"
 "    1, 2 or 3 simple stars  - from 2 to 6 years old\n"
 "    1, 2 or 3 complex stars - 7 years and up"
@@ -3325,8 +3120,7 @@ msgstr ""
 "tıklayın. Ekranın altında, gcompris kontrol çubuğu bulunmaktadır. Sağdan "
 "sola, simegelerin anlamı gösterilmektedir. Bu simegeler sadece bir işlemde "
 "geçerli olduklarında gösterilir.\n"
-"    Başlangıç - Önceki pencereye döner veya son pencerede ise programdan "
-"çıkar \n"
+"    Başlangıç - Önceki pencereye döner veya son pencerede ise programdan çıkar \n"
 "    Başparmak - Cevabınızı onaylamak\n"
 "    Zar - Oynanan seviyeyi gösteri. Başka seviye için tıklayın\n"
 "    Soru İşareti -  Yardım \n"
@@ -3336,25 +3130,64 @@ msgstr ""
 "1 , 2, veya 3 basit yıldız sadece 2-6 yaş için\n"
 " 1,2 vaya 3 karmaşık yıldız 7 ve daha çok yaş için"
 
-#: ../boards/menu.xml.in.h:16
+#: ../boards/menu.xml.in.h:15 ../boards/menu2.xml.in.h:15
 msgid "GCompris Main Menu"
 msgstr "GCompris Ana Menü"
 
-#: ../boards/menu.xml.in.h:17 ../src/boards/menu2.c:1007
+#: ../boards/menu.xml.in.h:16 ../src/boards/menu2.c:1006
 msgid ""
 "GCompris is a collection of educational games that provides different "
 "activities for children aged 2 and up."
 msgstr ""
-"GCompris 2 yaş ve daha büyük çocuklar için bir grup değişik eğitici oyundan "
-"oluşur."
+"GCompris 2 yaş ve daha büyük çocuklar için bir grup değişik eğitici "
+"oyundan oluşur."
 
-#: ../boards/menu.xml.in.h:19
-#, fuzzy
+#: ../boards/menu.xml.in.h:18 ../boards/menu2.xml.in.h:18
 msgid ""
-"The goal of GCompris is to provide a free alternative to popular proprietary "
+"The goal of gcompris is to provide a free alternative to popular proprietary "
 "edutainment software"
+msgstr "Amaç piyasadaki birçok eğitici yazılıma bedava bir alternatif üretmektir."
+
+#: ../boards/menu2.xml.in.h:1
+msgid ""
+"A simple click on an icon brings you to an activity or a menu of "
+"activities.\n"
+"At the bottom of the screen is the gcompris control bar.\n"
+"The following icons are displayed from right to left.\n"
+"(note that each icon is displayed only if available in the current "
+"activity)\n"
+"    Home - Back to previous menu or exit gcompris if at the top\n"
+"    Thumb - OK. Confirm your answer\n"
+"    Dice - Display the current level. Click to select another level\n"
+"    Music note - Repeat the question\n"
+"    Question Mark - Help\n"
+"    Tool - The configuration menu\n"
+"    Tux Plane - About game\n"
+"The stars, show suitable age groups for each game:\n"
+"    1, 2 or 3 simple stars  - 2 to 6 years old\n"
+"    1, 2 or 3 complex stars - From 7 years old"
 msgstr ""
-"Amaç piyasadaki birçok eğitici yazılıma bedava bir alternatif üretmektir."
+"Kullanmak için sizi bir işleme veya menüye taşıyacak olan simgelere "
+"tıklayın. Ekranın altında, gcompris kontrol çubuğu bulunmaktadır. Sağdan "
+"sola, simegelerin anlamı gösterilmektedir. Bu simegeler sadece bir işlemde "
+"geçerli olduklarında gösterilir.\n"
+"    Başlangıç - Önceki pencereye döner veya son pencerede ise programdan çıkar \n"
+"    Başparmak - Cevabınızı onaylamak\n"
+"    Zar - Oynanan seviyeyi gösteri. Başka seviye için tıklayın\n"
+"    Soru İşareti -  Yardım \n"
+"    Araç kutusu - Ayar menüsü\n"
+"     Tux Uçağı - oyun hakkında\n"
+"Yıldızlar her oyun için oyunar o yaş grubuna uygun olmalıdır.\n"
+"1 , 2, veya 3 basit yıldız sadece 2-6 yaş için\n"
+" 1,2 vaya 3 karmaşık yıldız 7 ve daha çok yaş için"
+
+#: ../boards/menu2.xml.in.h:16
+msgid ""
+"GCompris is a collection of educational games that provides for children "
+"from 2 years old with different activities."
+msgstr ""
+"GCompris 2 yaşından büyük çocuklar için bir grup eğitici "
+"oyundan oluşur."
 
 #: ../boards/miscelaneous.xml.in.h:1
 msgid "Miscellaneous activities"
@@ -3557,9 +3390,7 @@ msgstr "Para kullanımı alıştırması"
 msgid ""
 "You must buy the different items and give the exact price. At higher levels, "
 "several items are displayed, and you must first calculate the total price."
-msgstr ""
-"Değişik ürünler alıp tam para vermelisiniz. İleri seviyelerden birden fazla "
-"ürün almak gerekir ve öderken toplam fiat hesaplanmalıdır."
+msgstr "Değişik ürünler alıp tam para vermelisiniz. İleri seviyelerden birden fazla ürün almak gerekir ve öderken toplam fiat hesaplanmalıdır."
 
 #: ../boards/money_cents.xml.in.h:4
 #, fuzzy
@@ -3587,23 +3418,6 @@ msgstr "sayılar"
 msgid "Numeration activities."
 msgstr "Sayma etkinlikleri."
 
-#: ../boards/oscar_and_friends.xml.in.h:1
-msgid "Improve reading skill and the ability to understand what is read."
-msgstr ""
-
-#: ../boards/oscar_and_friends.xml.in.h:2
-msgid "Read and play with the story"
-msgstr ""
-
-#: ../boards/oscar_and_friends.xml.in.h:3
-msgid "The story of Oscar and friend"
-msgstr ""
-
-#: ../boards/oscar_and_friends.xml.in.h:4
-#, fuzzy
-msgid "reading"
-msgstr "Okuma"
-
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
 msgstr "Yap Bozu yap"
@@ -3616,8 +3430,7 @@ msgstr "Orjinal resmi yeniden yapmak için nesneleri sürükleyip bırakınız"
 msgid ""
 "Drag the image parts from the box on the left to create a painting on the "
 "main board."
-msgstr ""
-"Sol taraftaki kutudan parçaları alıp ana bölüme taşıyarak resmi oluşturun."
+msgstr "Sol taraftaki kutudan parçaları alıp ana bölüme taşıyarak resmi oluşturun."
 
 #: ../boards/paintings.xml.in.h:4
 msgid "Mouse-manipulation: movement, drag and drop"
@@ -3667,9 +3480,7 @@ msgstr "Tux'a paraşütle yere inmesinde yardım edin"
 msgid ""
 "Hit any key or click on the plane to make Tux jump. Hit another key or click "
 "on Tux to open the parachute."
-msgstr ""
-"Tux'un uçaktan atlaması için herhangi bir tuşa basın yada uçağa tıklayın. "
-"Tux'un paraşütü açması için başka bir tuşa basın yada Tux'a tıklayın"
+msgstr "Tux'un uçaktan atlaması için herhangi bir tuşa basın yada uçağa tıklayın. Tux'un paraşütü açması için başka bir tuşa basın yada Tux'a tıklayın"
 
 #: ../boards/paratrooper.xml.in.h:3
 #, fuzzy
@@ -3693,8 +3504,7 @@ msgstr "Bu bölüm oyun içindir. Oynamak için özel yeteneğe gerek yoktur."
 msgid ""
 "Catch the numbers in increasing order, using the up, down, right and left "
 "arrows on the keyboard to move the helicopter."
-msgstr ""
-"Helikopteri ok tuşlarıyla hareket ettirerek sayıları artan sırada yakalayın."
+msgstr "Helikopteri ok tuşlarıyla hareket ettirerek sayıları artan sırada yakalayın."
 
 #: ../boards/planegame.xml.in.h:2
 msgid "Move the helicopter to catch the clouds in the correct order"
@@ -3704,7 +3514,7 @@ msgstr "Bulutları düzgün sırayla yakalamak için helikopteri yönetin"
 msgid "Number"
 msgstr "Sayı"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:75
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:77
 msgid "Numbers in Order"
 msgstr "Numara Sırası"
 
@@ -3717,8 +3527,7 @@ msgid "Various puzzles."
 msgstr "Çeşitli yap bozlar"
 
 #: ../boards/pythontest.xml.in.h:1
-#, fuzzy
-msgid "Add a language-binding to GCompris."
+msgid "Add a language-binding to gcompris."
 msgstr "Gcompris'e yeni bir dil ekleyin."
 
 #: ../boards/pythontest.xml.in.h:2
@@ -3734,10 +3543,8 @@ msgid "Test board for the python plugin"
 msgstr "Python ekleri için tahtanın test edilmesi"
 
 #: ../boards/pythontest.xml.in.h:5
-msgid ""
-"Thanks to Guido van Rossum and the python team for this powerful language!"
-msgstr ""
-"Guido van Rossum'e ve python ekibine bu güçlü dil eçin teşekkürlerimizle!"
+msgid "Thanks to Guido van Rossum and the python team for this powerful language!"
+msgstr "Guido van Rossum'e ve python ekibine bu güçlü dil eçin teşekkürlerimizle!"
 
 #: ../boards/railroad.xml.in.h:1
 msgid "A memory game based on trains"
@@ -3840,9 +3647,7 @@ msgstr "Okuma etkinlikleri."
 msgid ""
 "A word is shown at the top right of the board. A list of words will appear "
 "and disappear on the left. Does the given word belong to the list?"
-msgstr ""
-"Sağ yukarıda gözüken kelime, solda görünüp kaybolan kelime kümesi içinde "
-"bulunuyor mu?"
+msgstr "Sağ yukarıda gözüken kelime, solda görünüp kaybolan kelime kümesi içinde bulunuyor mu?"
 
 #: ../boards/readingh.xml.in.h:2
 msgid "Horizontal reading practice"
@@ -3851,8 +3656,7 @@ msgstr "Yatay okuma alıştırması"
 #: ../boards/readingh.xml.in.h:3
 #, fuzzy
 msgid "Read a list of words and work out if a given word is in it"
-msgstr ""
-"Kelime listesini okuyun ve verilen kelimenin içinde olup olmadığını söyleyin"
+msgstr "Kelime listesini okuyun ve verilen kelimenin içinde olup olmadığını söyleyin"
 
 #: ../boards/readingh.xml.in.h:5
 #, fuzzy
@@ -3885,12 +3689,7 @@ msgid ""
 "create objects. When you are done, click on the OK button. Errors will be "
 "marked with a little red cross. The order of objects (above/under) is not "
 "important but be careful not to end up with unwanted objects under others."
-msgstr ""
-"Önce aletkutusundan ihtiyacınız olan aleti seçin, sonra nesneyi yaratmak "
-"için fareyi kaydırın. Tamamlayınca ok tuşuna basın. Hatalar kırmızıyla "
-"işaretlenecektir. Nesnelerin sırası (üstte vaya altta olması) önemli "
-"değildir. Fakat diğerlerinin altında istenmeyen nesneler bırakmadığınızdan "
-"emin olun."
+msgstr "Önce aletkutusundan ihtiyacınız olan aleti seçin, sonra nesneyi yaratmak için fareyi kaydırın. Tamamlayınca ok tuşuna basın. Hatalar kırmızıyla işaretlenecektir. Nesnelerin sırası (üstte vaya altta olması) önemli değildir. Fakat diğerlerinin altında istenmeyen nesneler bırakmadığınızdan emin olun."
 
 #: ../boards/redraw.xml.in.h:3
 msgid "Redraw the given item"
@@ -3909,12 +3708,7 @@ msgid ""
 "cross will show you where something isn't right yet. The order of objects "
 "(above/under) is not important but be careful not to end up with unwanted "
 "objects under others."
-msgstr ""
-"Önce aletkutusundan ihtiyacınız olan aleti seçin, sonra nesneyi yaratmak "
-"için fareyi kaydırın. Tamamlayınca ok tuşuna basın. Hatalar kırmızıyla "
-"işaretlenecektir. Nesnelerin sırası (üstte vaya altta olması) önemli "
-"değildir. Fakat diğerlerinin altında istenmeyen nesneler bırakmadığınızdan "
-"emin olun."
+msgstr "Önce aletkutusundan ihtiyacınız olan aleti seçin, sonra nesneyi yaratmak için fareyi kaydırın. Tamamlayınca ok tuşuna basın. Hatalar kırmızıyla işaretlenecektir. Nesnelerin sırası (üstte vaya altta olması) önemli değildir. Fakat diğerlerinin altında istenmeyen nesneler bırakmadığınızdan emin olun."
 
 #: ../boards/redraw_symmetrical.xml.in.h:3
 msgid "Mirror the given item"
@@ -3925,8 +3719,8 @@ msgid ""
 "Can move the mouse, can read numbers and subtract numbers up to 10 for the "
 "first level"
 msgstr ""
-"İlk seviyede fareyi oynatabilir, numaraları okuyabilir ve 10'a kadar "
-"sayılarla çıkarma yapabilirsiniz"
+"İlk seviyede fareyi oynatabilir, numaraları okuyabilir ve 10'a kadar sayılarla çıkarma "
+"yapabilirsiniz"
 
 #: ../boards/reversecount.xml.in.h:2
 #, fuzzy
@@ -3952,15 +3746,24 @@ msgstr ""
 "Tux çok aç. Ona balıklara erişmek için gitmesi gereken aralığı söyleyerek "
 "yardımcı olun."
 
-#: ../boards/scalesboard.xml.in.h:1
-#, fuzzy
-msgid "Balance the scales properly"
-msgstr "Terazileri düzgünce dengeleyin"
-
+#: ../boards/scales/board1_0.xml.in.h:1 ../boards/scales/board1_1.xml.in.h:1
+#: ../boards/scales/board1_2.xml.in.h:1 ../boards/scales/board1_3.xml.in.h:1
+#: ../boards/scales/board1_4.xml.in.h:1 ../boards/scales/board1_5.xml.in.h:1
+#: ../boards/scales/board2_0.xml.in.h:1 ../boards/scales/board2_1.xml.in.h:1
+#: ../boards/scales/board2_2.xml.in.h:1 ../boards/scales/board2_3.xml.in.h:1
+#: ../boards/scales/board2_4.xml.in.h:1 ../boards/scales/board2_5.xml.in.h:1
+#: ../boards/scales/board3_0.xml.in.h:1 ../boards/scales/board3_1.xml.in.h:1
+#: ../boards/scales/board3_2.xml.in.h:1 ../boards/scales/board3_3.xml.in.h:1
+#: ../boards/scales/board3_4.xml.in.h:1 ../boards/scales/board3_5.xml.in.h:1
 #: ../boards/scalesboard.xml.in.h:2
 #, fuzzy
 msgid "Drag and Drop masses to balance the scales"
 msgstr "Teraziyi dengelemek için yığınları sürükleyip bırakınız"
+
+#: ../boards/scalesboard.xml.in.h:1
+#, fuzzy
+msgid "Balance the scales properly"
+msgstr "Terazileri düzgünce dengeleyin"
 
 #: ../boards/scalesboard.xml.in.h:3
 #, fuzzy
@@ -3981,8 +3784,8 @@ msgstr ""
 #: ../boards/scalesboard.xml.in.h:5
 #, fuzzy
 msgid ""
-"To balance the scales, move the masses on the left or the right side. The "
-"masses can be arranged in any order."
+"To balance the scales, move the masses on the left side. The masses can be "
+"arranged in any order."
 msgstr ""
 "Teraziyi dengelemek için, yığınları sol kefeye taşıyın. Yığınlar istenilen "
 "sırada koyulabilir."
@@ -3991,50 +3794,41 @@ msgstr ""
 msgid "Direct your boat accurately to win the race."
 msgstr "Yarışı kazanmak için teknenizi düzgünce yönlendirin."
 
-#: ../boards/searace.xml.in.h:2
-#, fuzzy
+#: ../boards/searace.xml.in.h:2 ../boards/searace1player.xml.in.h:2
 msgid ""
-"In the text entry, enter one command per line, to control your boat.\n"
+"In the text entry, enter one command per line, to control your boat. "
 "Commands supported are displayed between the two entry areas. The 'left' and "
 "'right' commands must be followed by an angle in degrees. The angle value is "
 "also called a 'parameter' to the left or right command. By default 45 "
 "degrees is used. The 'forward' command accepts a distance parameter. By "
-"default 1 is used.\n"
-"For example:\n"
-"- left 90: Make a perpendicular left turn\n"
-"- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
-"The goal is to reach the right of the screen (the red line). When done, you "
-"can try to improve your program and start a new race with the same weather "
+"default 1 is used. For example: left 90 => Make a perpendicular left turn "
+"forward 10 => Go forward for 10 units (as displayed on the ruler). The goal "
+"is to reach the right of the screen (the red line). When done, you can try "
+"to improve your program and start a new race with the same weather "
 "conditions by using the retry button. You can click and drag your mouse "
 "anywhere on the map to get a measurement in distance and angle. Going to the "
 "next level will give you more complex weather conditions."
 msgstr ""
-"Geminizi kontrol etmek için, yazı giriş kısmında, her satıra bir komut "
-"girin. Desteklenen komut listesi iki giriş bölgesi arasında "
-"gösterilmektedir. 'left' ve 'right' komutlarının yanına kaç derece döndürmek "
-"istediğinizi yazmalısınız. Bu derecelere parametre denir. Yazılmadığı "
-"takdirde 45 derece olarak kabul edilir. 'forward' (ileri) komutu parametre "
-"olarak uzaklık bekler. girilmez ise önkabul olarak 1 dir. Örneğin left 90 => "
-"gemiyi sola dik duruma getirir. forward 10 => 10 birim ilerlemesini sağlar. "
-"Amaç ekranın sağına (kırmızı çizgiye) ulaşmaktır. Yaptığınızda, aynı hava "
-"koşullarıyla kendinizi iyileştirmeye çalışarak tekrar yarışabilirsiniz, "
-"bunun için retry tuşuna basmalısınız. Haritada istediğiniz yere tıklarsanız, "
-"oraya gitmek için kaç derece dönmeniz gerektiği veya kaç birim ilerlemeniz "
-"gerektiği gösterilir. Daha ileri seviyelerde hava koşulları daha zordur."
+"Geminizi kontrol etmek için, yazı giriş kısmında, her satıra bir komut girin. "
+"Desteklenen komut listesi iki giriş bölgesi arasında gösterilmektedir. "
+"'left' ve 'right' komutlarının yanına kaç derece döndürmek istediğinizi yazmalısınız. "
+"Bu derecelere parametre denir. Yazılmadığı takdirde 45 derece olarak kabul edilir. "
+"'forward' (ileri) komutu parametre olarak uzaklık bekler. girilmez ise önkabul olarak 1 dir. "
+"Örneğin left 90 => gemiyi sola dik duruma getirir. forward 10 => 10 birim ilerlemesini sağlar. "
+"Amaç ekranın sağına (kırmızı çizgiye) ulaşmaktır. Yaptığınızda, aynı hava koşullarıyla kendinizi "
+"iyileştirmeye çalışarak tekrar yarışabilirsiniz, bunun için retry tuşuna basmalısınız. "
+"Haritada istediğiniz yere tıklarsanız, oraya gitmek için kaç derece dönmeniz gerektiği veya "
+"kaç birim ilerlemeniz gerektiği gösterilir. Daha ileri seviyelerde hava koşulları daha zordur."
 
-#: ../boards/searace.xml.in.h:8 ../boards/searace1player.xml.in.h:7
+#: ../boards/searace.xml.in.h:3 ../boards/searace1player.xml.in.h:3
 msgid ""
 "In this activity, you will learn how to enter commands into a computer. Even "
 "if the language is extremely basic, you learn here how to think ahead and "
 "construct a program. This activity can be used to introduce the programming "
 "concept to children."
-msgstr ""
-"Bu etkinlikte bilgisayara komutları nasıl gireceğinizi öğreneceksiniz. "
-"Buradaki dil çok basit de olsa, nasıl program oluşturulabileceği hakkında "
-"fikir sahibi olacaksınız. Bu etkinlik çocukları bilgisayar programlama "
-"kavramı ile tanıştırmak için kullanılabilir."
+msgstr "Bu etkinlikte bilgisayara komutları nasıl gireceğinizi öğreneceksiniz. Buradaki dil çok basit de olsa, nasıl program oluşturulabileceği hakkında fikir sahibi olacaksınız. Bu etkinlik çocukları bilgisayar programlama kavramı ile tanıştırmak için kullanılabilir."
 
-#: ../boards/searace.xml.in.h:9
+#: ../boards/searace.xml.in.h:4
 msgid "Sea race (2 Players)"
 msgstr "Tekne yarışı (2 oyuncu)"
 
@@ -4042,38 +3836,7 @@ msgstr "Tekne yarışı (2 oyuncu)"
 msgid "Give good instructions to your ship in order to be first in the race."
 msgstr "Yarışta birinci olmak için geminize iyi komutlar vermelisiniz."
 
-#: ../boards/searace1player.xml.in.h:2
-#, fuzzy
-msgid ""
-"In the text entry, enter one command per line, to control your boat. "
-"Commands supported are displayed between the two entry areas. The 'left' and "
-"'right' commands must be followed by an angle in degrees. The angle value is "
-"also called a 'parameter' to the left or right command. By default 45 "
-"degrees is used. The 'forward' command accepts a distance parameter. By "
-"default 1 is used.\n"
-"For example:\n"
-"- left 90: Make a perpendicular left turn\n"
-"- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
-"The goal is to reach the right of the screen (the red line). When done, you "
-"can try to improve your program and start a new race with the same weather "
-"conditions by using the retry button. You can click and drag your mouse "
-"anywhere on the map to get a measurement in distance and angle. Going to the "
-"next level will give you more complex weather conditions."
-msgstr ""
-"Geminizi kontrol etmek için, yazı giriş kısmında, her satıra bir komut "
-"girin. Desteklenen komut listesi iki giriş bölgesi arasında "
-"gösterilmektedir. 'left' ve 'right' komutlarının yanına kaç derece döndürmek "
-"istediğinizi yazmalısınız. Bu derecelere parametre denir. Yazılmadığı "
-"takdirde 45 derece olarak kabul edilir. 'forward' (ileri) komutu parametre "
-"olarak uzaklık bekler. girilmez ise önkabul olarak 1 dir. Örneğin left 90 => "
-"gemiyi sola dik duruma getirir. forward 10 => 10 birim ilerlemesini sağlar. "
-"Amaç ekranın sağına (kırmızı çizgiye) ulaşmaktır. Yaptığınızda, aynı hava "
-"koşullarıyla kendinizi iyileştirmeye çalışarak tekrar yarışabilirsiniz, "
-"bunun için retry tuşuna basmalısınız. Haritada istediğiniz yere tıklarsanız, "
-"oraya gitmek için kaç derece dönmeniz gerektiği veya kaç birim ilerlemeniz "
-"gerektiği gösterilir. Daha ileri seviyelerde hava koşulları daha zordur."
-
-#: ../boards/searace1player.xml.in.h:8
+#: ../boards/searace1player.xml.in.h:4
 msgid "Sea race (Single Player)"
 msgstr "Tekne yarışı (tek oyuncu)"
 
@@ -4122,14 +3885,10 @@ msgid "Strategy games like chess, connect4, ..."
 msgstr "Satranç, dörtlü sıralama gibi strateji oyunları"
 
 #: ../boards/submarine.xml.in.h:1
-#, fuzzy
 msgid ""
 "Click on different active elements : engine, rudders and air tanks, in order "
-"to navigate to the required depth. There is a close gate on the right. Catch "
-"the jewel to open it, then pass through it to reach the next level."
-msgstr ""
-"İstenilen derinliğe ulaşmak için, değişik aktif elemanların üzerine "
-"tıklayın: motor, dümen, hava tankları gibi."
+"to navigate to the required depth."
+msgstr "İstenilen derinliğe ulaşmak için, değişik aktif elemanların üzerine tıklayın: motor, dümen, hava tankları gibi."
 
 #: ../boards/submarine.xml.in.h:2
 msgid "Learn how a submarine works"
@@ -4157,21 +3916,15 @@ msgid ""
 "target position. For the higher levels, click on an empty square to give it "
 "the keyboard focus. Then enter a possible letter or number. GCompris will "
 "not let you enter invalid data."
-msgstr ""
-"İlk seviyede soldaki sembolleri kaydırarak hedef yerlerine taşıyın. İleri "
-"seviyelerde boş karelere tıklayarak klavyeden olası harf veya sayıları "
-"girin. Gcompris yanlış veri girmenize izin vermeyecektir."
+msgstr "İlk seviyede soldaki sembolleri kaydırarak hedef yerlerine taşıyın. İleri seviyelerde boş karelere tıklayarak klavyeden olası harf veya sayıları girin. Gcompris yanlış veri girmenize izin vermeyecektir."
 
 #: ../boards/sudoku.xml.in.h:3
 msgid "Sudoku, place unique symbols in a square."
 msgstr "Sudoku, karelere tek bir sembol yerleştirir."
 
 #: ../boards/sudoku.xml.in.h:4
-msgid ""
-"Symbols must be unique in a row, in a column, and (if defined) each region."
-msgstr ""
-"Semboller bulundukları satırda, sütunda ve (eğer tanımlı ise) bölümde tekrar "
-"edilemezler."
+msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
+msgstr "Semboller bulundukları satırda, sütunda ve (eğer tanımlı ise) bölümde tekrar edilemezler."
 
 #: ../boards/sudoku.xml.in.h:5
 msgid ""
@@ -4196,11 +3949,11 @@ msgstr ""
 "seviyede tux size seçtiğiniz nesnenin doğruluğu hakkında siyah kutuda ipucu "
 "verecektir. Farenin sağ tuşu ile renkleri değiştirebilirsiniz."
 
-#: ../boards/superbrain.xml.in.h:2 ../src/boards/superbrain.c:106
+#: ../boards/superbrain.xml.in.h:2 ../src/boards/superbrain.c:110
 msgid "Super Brain"
 msgstr "Süper Beyin"
 
-#: ../boards/superbrain.xml.in.h:3 ../src/boards/superbrain.c:107
+#: ../boards/superbrain.xml.in.h:3 ../src/boards/superbrain.c:111
 msgid "Tux has hidden several items. Find them again in the correct order"
 msgstr "Tux bazı nesneleri sakladı. Bu cisimleri düzgün sıra ile bulun"
 
@@ -4218,9 +3971,8 @@ msgid ""
 "\t* 1 square (side of 1)\n"
 "\t* 1 parallelogram (sides of 1 and square root of 2)"
 msgstr ""
-"Çin yap bozu. Geçmişinin çok eski olduğu söylense de en eski 1800'lerde "
-"olduğu görülmüştür. tan adı verilen 7 parçadan oluşur. Bu parçalar "
-"birleştiğinde dikdörtgen oluştururlar.\n"
+"Çin yap bozu. Geçmişinin çok eski olduğu söylense de en eski 1800'lerde olduğu görülmüştür. "
+"tan adı verilen 7 parçadan oluşur. Bu parçalar birleştiğinde dikdörtgen oluştururlar.\n"
 "\t* 5 üçgen:\n"
 "\t\to 2 küçük\n"
 "\t\to 1 orta boy\n"
@@ -4237,9 +3989,7 @@ msgid ""
 "the shape will be drawn."
 msgstr ""
 "Tangram oluşturacağınız şekli seçin. Parçaları sürükleyerek hareket ettirin. "
-"Simetrisini oluşturmak için farenin sağına tıklayın. Seçtiğiniz nesneyi "
-"sürükleyerek döndürebilirsiniz. Yardıma ihtiyacınız olursa, şekil tuşuna "
-"basın, şeklin bordürleri çizilecektir."
+"Simetrisini oluşturmak için farenin sağına tıklayın. Seçtiğiniz nesneyi sürükleyerek döndürebilirsiniz. Yardıma ihtiyacınız olursa, şekil tuşuna basın, şeklin bordürleri çizilecektir."
 
 #: ../boards/tangram.xml.in.h:10
 msgid "The objective is to form a given shape with seven pieces"
@@ -4249,17 +3999,14 @@ msgstr "Ama. yedi parçadan istenilen şekli oluşturmaktır"
 msgid ""
 "The original code was written by Philippe Banwarth in 1999. It was ported to "
 "GCompris by Yves Combe in 2005."
-msgstr ""
-"Orjinal yazılım Philippe Banwarth tarafından 1999 yılında yazılmıştır ve "
-"Yves Combetarafından 2005 yılında Gcompris'e aktarılmıştır."
+msgstr "Orjinal yazılım Philippe Banwarth tarafından 1999 yılında yazılmıştır ve Yves Combetarafından 2005 yılında Gcompris'e aktarılmıştır."
 
 #: ../boards/tangram.xml.in.h:12
 msgid "The tangram puzzle game"
 msgstr "Tangram  yap boz oyunu"
 
 #: ../boards/target.xml.in.h:1
-msgid ""
-"Can move the mouse, can read numbers and count up to 15 for the first level"
+msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
 msgstr ""
 "Fareyi oynatabilir, numaraları okuyabilir ve ilk seviye için 15 kez "
 "yapabilirsiniz"
@@ -4295,14 +4042,7 @@ msgid "A sliding-block puzzle game"
 msgstr "Kayan blok puzzle oyunu"
 
 #: ../boards/traffic.xml.in.h:2
-msgid ""
-"Each car can only move either horizontally or vertically. You must make some "
-"room in order to let the red car move through the gate on the right."
-msgstr ""
-
-#: ../boards/traffic.xml.in.h:3
-#, fuzzy
-msgid "Remove the red car from the parking lot through the gate on the right"
+msgid "Remove all the red cars from the parking lot through the gate on the right"
 msgstr "Park alanından sağdaki kapıdaya kadar tüm kırmızı arabaları alın"
 
 #: ../boards/tuxpaint.xml.in.h:1
@@ -4331,10 +4071,7 @@ msgid ""
 "water cleanup station, in order to reactivate the entire water system. When "
 "the system is back up and Tux is in the shower, push the shower button for "
 "him."
-msgstr ""
-"Su tesisini tekrar çalıştırmak için güneş, bulut, su pompa istasyonu gibi "
-"farklı aktif  nesnelere tıklayın. sistem tamamlandığında duş düğmesine "
-"basarak Tux'a duş aldırın."
+msgstr "Su tesisini tekrar çalıştırmak için güneş, bulut, su pompa istasyonu gibi farklı aktif  nesnelere tıklayın. sistem tamamlandığında duş düğmesine basarak Tux'a duş aldırın."
 
 #: ../boards/watercycle.xml.in.h:2
 msgid "Learn about the water cycle"
@@ -4348,11 +4085,9 @@ msgstr "Su dönüşümünü öğrenin"
 msgid ""
 "Tux has come back from a long fishing party on his boat. Bring the water "
 "system back up so he can take a shower."
-msgstr ""
-"Tux teknesindeki uzun balık partisinden döndü. Su sistemini tamamlayın ki "
-"Tux duş alabilsin."
+msgstr "Tux teknesindeki uzun balık partisinden döndü. Su sistemini tamamlayın ki Tux duş alabilsin."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:113
 msgid "Falling Words"
 msgstr "Düşen Kelimeler"
 
@@ -4364,38 +4099,9 @@ msgstr "Klavye alıştırması"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "Düşen kelimelerin tamamını yere değmeden önce yazın"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:112
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:114
 msgid "Type the falling words before they reach the ground"
 msgstr "Düşen kelimeleri yere düşmeden yazın"
-
-#: ../boards/wordprocessor.xml.in.h:1
-msgid "A simple word processor to enter and save any text"
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:2
-msgid ""
-"In this wordprocessor you can type the text you want, save and get it back "
-"later. You can add some style to your text by using the buttons on the left. "
-"The first 4 buttons let you select the style of the line on which your "
-"insert cursor is. The 2 others buttons with multiple choices let you select "
-"from a predefined document and color theme."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:3
-msgid ""
-"Learn how to enter text in a wordprocessor. This wordprocessor is special in "
-"that it enforces the use of styles. This way, the children will understand "
-"their benefit when moving to more feature full wordprocessor like OpenOffice."
-"org."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:4
-msgid "The children can type their own text or copy one given by the teacher."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:5
-msgid "Your word processor"
-msgstr ""
 
 #: ../gcompris-edit.desktop.in.h:1
 msgid "Administration for gcompris"
@@ -4406,48 +4112,38 @@ msgid "Educational game for ages 2 to 10"
 msgstr "2-10 yaş için eğitici oyunlar"
 
 #: ../gcompris.desktop.in.h:2
-#, fuzzy
-msgid "Educational suite GCompris"
+msgid "Educational suite gcompris"
 msgstr "Gcompris  eğitim bölümü"
 
 #: ../gcompris.desktop.in.h:3
-msgid "Multi-activity educational game"
-msgstr ""
+msgid "Multiple activities for kids"
+msgstr "Çocuklar için çeşitli etkinlikler"
 
-#. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:182 ../src/boards/memory.c:846
-msgid "+-×÷"
-msgstr "+-×÷"
-
-#: ../src/boards/awele.c:350 ../src/boards/awele.c:360
+#: ../src/boards/awele.c:352 ../src/boards/awele.c:362
 msgid "NORTH"
 msgstr "KUZEY"
 
-#: ../src/boards/awele.c:372 ../src/boards/awele.c:382
+#: ../src/boards/awele.c:374 ../src/boards/awele.c:384
 msgid "SOUTH"
 msgstr "GÜNEY"
 
-#: ../src/boards/awele.c:551
+#: ../src/boards/awele.c:553
 msgid "Choose a house"
 msgstr "Bİr ev seçin"
 
-#: ../src/boards/awele.c:679
+#: ../src/boards/awele.c:681
 msgid "Your turn to play ..."
 msgstr "Oyunda senin sıran"
 
-#: ../src/boards/awele.c:748
+#: ../src/boards/awele.c:750
 msgid "Not allowed! Try again !"
 msgstr "İzin verilmiyor! Tekrar dene!"
 
-#: ../src/boards/chess.c:179
-msgid "Error: The external program gnuchess died unexpectedly"
-msgstr ""
-
-#: ../src/boards/chess.c:199
+#: ../src/boards/chess.c:189
 #, fuzzy
 msgid ""
-"Error: The external program gnuchess is required\n"
-"to play chess in GCompris.\n"
+"Error: The external program gnuchess is mandatory\n"
+"to play chess in gcompris.\n"
 "Find this program on http://www.rpmfind.net or in your\n"
 "GNU/Linux distribution\n"
 "And check it is located here: "
@@ -4458,12 +4154,13 @@ msgstr ""
 "erişebilirsiniz. \n"
 "Eğer program yüklü ise /usr/bin/gnuchess'de olduğundan emin olun."
 
-#: ../src/boards/chess.c:244
-#, fuzzy
+#: ../src/boards/chess.c:228
 msgid ""
 "Error: The external program gnuchess is mandatory\n"
 "to play chess in gcompris.\n"
-"First install it, and check it is in "
+"Find this program on http://www.rpmfind.net or in your\n"
+"GNU/Linux distribution\n"
+"And check it is in "
 msgstr ""
 "Hata: Gcompris ile satranç. oynamak için harici gnuchess programının \n"
 "bulunması zorunludur\n"
@@ -4471,306 +4168,259 @@ msgstr ""
 "erişebilirsiniz. \n"
 "Eğer program yüklü ise /usr/bin/gnuchess'de olduğundan emin olun."
 
-#: ../src/boards/chess.c:587
+#: ../src/boards/chess.c:572
 #, fuzzy
 msgid "White's Turn"
 msgstr "Beyazın Sırası"
 
-#: ../src/boards/chess.c:587
+#: ../src/boards/chess.c:572
 #, fuzzy
 msgid "Black's Turn"
 msgstr "Siyahın Sırası"
 
-#: ../src/boards/chess.c:731
+#: ../src/boards/chess.c:716
 #, fuzzy
 msgid "White checks"
 msgstr "Beyaz şahı"
 
-#: ../src/boards/chess.c:733
+#: ../src/boards/chess.c:718
 #, fuzzy
 msgid "Black checks"
 msgstr "Siyah şahı"
 
-#: ../src/boards/chess.c:1090
+#: ../src/boards/chess.c:1055
 msgid "Black mates"
 msgstr "Siyah şah-mat yaptı"
 
-#: ../src/boards/chess.c:1095
+#: ../src/boards/chess.c:1060
 msgid "White mates"
 msgstr "Beyaz şah-mat yaptı"
 
-#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:355
-#: ../src/gcompris/bonus.c:364
+#: ../src/boards/chess.c:1065 ../src/gcompris/bonus.c:312
+#: ../src/gcompris/bonus.c:321
 msgid "Drawn game"
 msgstr "Berabere"
-
-#: ../src/boards/chess.c:1128
-msgid "Error: The external program gnuchess died unexpectingly"
-msgstr ""
-
-#: ../src/boards/click_on_letter.c:259 ../src/boards/memory.c:813
-#, fuzzy
-msgid ""
-"Error: this activity cannot be played with the\n"
-"sound effects disabled.\n"
-"Go to the configuration dialog to\n"
-"enable the sound"
-msgstr ""
-"Hata: Bu etkinlik ses kapalı olarak oynanamaz.\n"
-" Ayarlar bölümüne giderek ses kısmını açın "
 
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:233
-#: ../src/boards/memory.c:835
+#: ../src/boards/click_on_letter.c:252 ../src/boards/click_on_letter.c:269
+#: ../src/boards/gletters.c:230 ../src/boards/memory.c:840
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: ../src/boards/click_on_letter.c:286
-#, fuzzy, c-format
+#: ../src/boards/click_on_letter.c:281
+#, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
-"the packages with GCompris voices for the locale '%s' or '%s'"
+"the packages assetml-voices-alphabet-%s or %s"
 msgstr ""
 "Hata: Bu etkinlik önce \n"
 "assetml-voices-alphabet-%s veya %s paketlerinizi yüklemenizi beklemektedir"
 
-#: ../src/boards/click_on_letter.c:294
-#, fuzzy, c-format
+#: ../src/boards/click_on_letter.c:288
+#, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
-"the packages with GCompris voices for the locale '%s' ! Fallback to english, "
-"sorry!"
+"the packages assetml-voices-alphabet-%s ! Fallback to english, sorry!"
 msgstr ""
 "Hata: Bu etkinlik önce \n"
-"assetml-voices-alphabet-%s paketlerini yüklemenizi beklemektedir ! Dil "
-"olarak İngilizce kaldı, özür dileriz."
+"assetml-voices-alphabet-%s paketlerini yüklemenizi beklemektedir ! Dil olarak İngilizce kaldı, özür dileriz."
 
-#. Init configuration window:
-#. all the configuration functions will use it
-#. all the configuration functions returns values for their key in
-#. the dict passed to the apply_callback
-#. the returned value is the main GtkVBox of the window,
-#. we can add what you want in it.
-#: ../src/boards/click_on_letter.c:623 ../src/boards/colors.c:165
-#: ../src/boards/gletters.c:859 ../src/boards/imageid.c:749
-#: ../src/boards/missingletter.c:771
-#: ../src/boards/python/admin/board_list.py:641
-#: ../src/boards/python/admin/board_list.py:659
-#: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
-#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
-#: ../src/boards/reading.c:833 ../src/boards/scale.c:862
-#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:592
-#, c-format, python-format
+#: ../src/boards/click_on_letter.c:296 ../src/boards/python/melody.py:116
 msgid ""
-"<b>%s</b> configuration\n"
-" for profile <b>%s</b>"
-msgstr ""
-"<b>%s</b>ayarlar\n"
-"bu profil için <b>%s</b>"
+"Error: this activity cannot be played with the\n"
+"sound effects disabled.\n"
+"Go to the configuration dialogue to\n"
+"enable the sound"
+msgstr "Hata: Bu etkinlik ses kapalı olarak oynanamaz.\n Ayarlar bölümüne giderek ses kısmını açın "
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:892
-#: ../src/boards/python/login.py:540
+#: ../src/boards/click_on_letter.c:653 ../src/boards/gletters.c:882
+#: ../src/boards/python/login.py:535
 msgid "Uppercase only text"
 msgstr "Sadece büyük harf"
 
-#: ../src/boards/clockgame.c:550 ../src/boards/clockgame.c:560
+#: ../src/boards/clickgame.c:178
+#, fuzzy, c-format
+msgid "Couldn't open dir: %s"
+msgstr "Resim dizini açılamadı: %s"
+
+#: ../src/boards/clockgame.c:544 ../src/boards/clockgame.c:554
 msgid "Set the watch to:"
 msgstr "Saatin değerini değiştir:"
 
-#: ../src/boards/colors.c:56
+#: ../src/boards/colors.c:57
 msgid "Click on the blue duck"
 msgstr "Mavi ördeğe tıklayın"
 
-#: ../src/boards/colors.c:57
+#: ../src/boards/colors.c:58
 msgid "Click on the brown duck"
 msgstr "Kahverengi ördeğe tıklayın"
 
-#: ../src/boards/colors.c:58
+#: ../src/boards/colors.c:59
 msgid "Click on the green duck"
 msgstr "Yeşil ördeğe tıklayın"
 
-#: ../src/boards/colors.c:59
+#: ../src/boards/colors.c:60
 msgid "Click on the grey duck"
 msgstr "Gri ördeğe tıklayın"
 
-#: ../src/boards/colors.c:60
+#: ../src/boards/colors.c:61
 msgid "Click on the orange duck"
 msgstr "Turuncu ördeğe tıklayın"
 
-#: ../src/boards/colors.c:61
+#: ../src/boards/colors.c:62
 msgid "Click on the purple duck"
 msgstr "Mor ördeğe tıklayın"
 
-#: ../src/boards/colors.c:62
+#: ../src/boards/colors.c:63
 msgid "Click on the red duck"
 msgstr "Kırmızı ördeğe tıklayın"
 
-#: ../src/boards/colors.c:63
+#: ../src/boards/colors.c:64
 msgid "Click on the yellow duck"
 msgstr "Sarı ördeğe tıklayın"
 
-#: ../src/boards/colors.c:64
+#: ../src/boards/colors.c:65
 msgid "Click on the black duck"
 msgstr "Siyah ördeğe tıklayın"
 
-#: ../src/boards/colors.c:65
+#: ../src/boards/colors.c:66
 msgid "Click on the white duck"
 msgstr "Beyaz ördeğe tıklayın"
 
-#: ../src/boards/colors.c:177 ../src/boards/python/admin/board_list.py:671
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
-msgid "Select sound locale"
-msgstr "Bir ses alanı seçin"
-
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:229 ../src/boards/memory.c:831
+#: ../src/boards/gletters.c:226 ../src/boards/memory.c:836
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:239 ../src/boards/memory.c:841
+#: ../src/boards/gletters.c:236 ../src/boards/memory.c:846
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:888 ../src/boards/smallnumbers.c:610
-#, fuzzy
-msgid "Enable sounds"
-msgstr "Yerel sesler"
-
-#: ../src/boards/hanoi.c:332 ../src/boards/hanoi.c:343
+#: ../src/boards/hanoi.c:335 ../src/boards/hanoi.c:346
 msgid ""
 "Build the same tower in the empty area as the one you see on the right-hand "
 "side."
 msgstr "Şağ tarafta gördüğünüz kulenin aynısını boş alana oluşturun."
 
-#: ../src/boards/hanoi_real.c:72
+#: ../src/boards/hanoi_real.c:76
 msgid "Tower of Hanoi"
 msgstr "Hanoi Köprüsü"
 
 #: ../src/boards/hanoi_real.c:277 ../src/boards/hanoi_real.c:288
 msgid "Move the entire stack to the right peg, one disc at a time"
-msgstr ""
-"Tüm dizilimi her seferinde birer disk hareket ettirerek sağ tarafa taşıyın"
+msgstr "Tüm dizilimi her seferinde birer disk hareket ettirerek sağ tarafa taşıyın"
 
-#: ../src/boards/imageid.c:104 ../src/boards/missingletter.c:102
+#: ../src/boards/imageid.c:113 ../src/boards/missingletter.c:105
 msgid "Learn how to read"
 msgstr "Okumayı öğren"
 
-#: ../src/boards/leftright.c:277 ../src/boards/leftright.c:287
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:548 ../src/boards/python/searace.py:857
-#: ../src/boards/python/searace.py:890 ../src/boards/python/searace.py:981
+#: ../src/boards/leftright.c:280 ../src/boards/leftright.c:290
+#: ../src/boards/python/searace.py:429 ../src/boards/python/searace.py:454
+#: ../src/boards/python/searace.py:544 ../src/boards/python/searace.py:856
+#: ../src/boards/python/searace.py:889 ../src/boards/python/searace.py:986
 msgid "left"
 msgstr "sol"
 
-#: ../src/boards/leftright.c:297 ../src/boards/leftright.c:307
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:557 ../src/boards/python/searace.py:859
-#: ../src/boards/python/searace.py:892 ../src/boards/python/searace.py:975
+#: ../src/boards/leftright.c:300 ../src/boards/leftright.c:310
+#: ../src/boards/python/searace.py:429 ../src/boards/python/searace.py:454
+#: ../src/boards/python/searace.py:553 ../src/boards/python/searace.py:858
+#: ../src/boards/python/searace.py:891 ../src/boards/python/searace.py:980
 msgid "right"
 msgstr "sağ"
 
-#: ../src/boards/maze.c:492
+#: ../src/boards/maze.c:496
 msgid ""
 "Look at your position, then switch back to invisible mode to continue your "
 "moves"
-msgstr ""
-"Kendi pozisyonunuza bakın; daha sonra hareketlerinize devam etmek için "
-"görünmez moda geri dönün"
+msgstr "Kendi pozisyonunuza bakın; daha sonra hareketlerinize devam etmek için görünmez moda geri dönün"
 
-#: ../src/boards/maze.c:494
-msgid ""
-"Look at your position, then switch back to 3D mode to continue your moves"
-msgstr ""
-"Kendi pozisyonunuza bakın; daha sonra hareketlerinize devam etmek için 3 "
-"boyutlu moda geri dönün"
+#: ../src/boards/maze.c:498
+msgid "Look at your position, then switch back to 3D mode to continue your moves"
+msgstr "Kendi pozisyonunuza bakın; daha sonra hareketlerinize devam etmek için 3 boyutlu moda geri dönün"
 
-#: ../src/boards/memory.c:266
+#: ../src/boards/memory.c:287
 msgid "Memory"
 msgstr "Hafıza"
 
-#: ../src/boards/memory.c:267
+#: ../src/boards/memory.c:288
 msgid "Find the matching pair"
 msgstr "Eşleşen çifti bulun"
 
-#: ../src/boards/menu2.c:133
+#. TRANSLATORS: Put here the mathematical operators "+-�" for  your language.
+#: ../src/boards/memory.c:851
+msgid "+-×÷"
+msgstr "+-×÷"
+
+#: ../src/boards/menu2.c:128
 msgid "Main Menu Second Version"
 msgstr "Ana menü İkinci versiyon"
 
-#: ../src/boards/menu2.c:134
+#: ../src/boards/menu2.c:129
 msgid "Select a Board"
 msgstr "Bir Alan Seçin"
 
 #. Set here the way to display money. Change only the money sign, and it's place, always keep %.2f, it will be replaced by 0,34 if decimal is ',' in your locale
-#: ../src/boards/money.c:488
+#: ../src/boards/money.c:492
 #, c-format
 msgid "$ %.2f"
 msgstr "$ %.2f"
 
-#: ../src/boards/money.c:501
+#: ../src/boards/money.c:505
 #, c-format
 msgid "$ %.0f"
 msgstr "$ %.0f"
 
-#: ../src/boards/paratrooper.c:438
-msgid "Control fall speed with up and down arrow keys."
-msgstr ""
-
-#: ../src/boards/planegame.c:76
+#: ../src/boards/planegame.c:78
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "Bulutları doğru sırada yakalamak için uçağı yönetin"
 
-#: ../src/boards/python.c:63 ../src/boards/python.c:87
+#: ../src/boards/python.c:62
 msgid "Python Board"
 msgstr "Python paneli"
 
-#: ../src/boards/python.c:64
-#, fuzzy
-msgid "Special board that embeds python into GCompris."
-msgstr "Gcompris'e python eklemek için özel panel."
-
-#: ../src/boards/python.c:88
+#: ../src/boards/python.c:63
 msgid "Special board that embeds python into gcompris."
 msgstr "Gcompris'e python eklemek için özel panel."
 
-#: ../src/boards/python/admin/board_list.py:89
+#: ../src/boards/python/admin/board_list.py:90
 msgid "Select a profile:"
 msgstr "Bir profil seçin"
 
-#: ../src/boards/python/admin/board_list.py:145
+#: ../src/boards/python/admin/board_list.py:146
 msgid "Filter"
 msgstr "Filtre"
 
-#: ../src/boards/python/admin/board_list.py:150
+#: ../src/boards/python/admin/board_list.py:151
 msgid "Select all"
 msgstr "Hepsini seç"
 
-#: ../src/boards/python/admin/board_list.py:155
+#: ../src/boards/python/admin/board_list.py:156
 msgid "Unselect all"
 msgstr "Seçili olanların tümünü geri bırakın"
 
-#: ../src/boards/python/admin/board_list.py:160
+#: ../src/boards/python/admin/board_list.py:161
 msgid "Locales"
 msgstr "Yereller"
 
-#: ../src/boards/python/admin/board_list.py:165
+#: ../src/boards/python/admin/board_list.py:166
 msgid "Locales sound"
 msgstr "Yerel sesler"
 
-#: ../src/boards/python/admin/board_list.py:170
+#: ../src/boards/python/admin/board_list.py:171
 msgid "Wordlist"
 msgstr "Kelime listesi"
 
-#: ../src/boards/python/admin/board_list.py:177
-#: ../src/boards/python/admin/group_user_list.py:144
-#: ../src/boards/python/admin/user_list.py:186
+#: ../src/boards/python/admin/board_list.py:178
+#: ../src/boards/python/admin/group_user_list.py:145
+#: ../src/boards/python/admin/user_list.py:187
 msgid "Login"
 msgstr "Giriş"
 
-#: ../src/boards/python/admin/board_list.py:235
+#: ../src/boards/python/admin/board_list.py:236
 msgid "Main menu"
 msgstr "Ana menü"
 
@@ -4779,20 +4429,20 @@ msgstr "Ana menü"
 #. image = gtk.image_new_from_stock(gtk.STOCK_PREFERENCES, gtk.ICON_SIZE_MENU)
 #. image.show()
 #. column_pref.set_widget(image)
-#: ../src/boards/python/admin/board_list.py:302
+#: ../src/boards/python/admin/board_list.py:293
 msgid "Active"
 msgstr "Aktif"
 
-#: ../src/boards/python/admin/board_list.py:303
+#: ../src/boards/python/admin/board_list.py:294
 msgid "Board title"
 msgstr "Panel başlığı"
 
-#: ../src/boards/python/admin/board_list.py:419
+#: ../src/boards/python/admin/board_list.py:410
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
 msgstr "Panelin zorluğunu filtreleme, profil %s için"
 
-#: ../src/boards/python/admin/board_list.py:450
+#: ../src/boards/python/admin/board_list.py:441
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
@@ -4801,296 +4451,261 @@ msgstr ""
 "<span size='x-large'> Zorluk aralığını seçin \n"
 "bu profil için <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:61
+#. Init configuration window:
+#. all the configuration functions will use it
+#. all the configuration functions returns values for their key in
+#. the dict passed to the apply_callback
+#. the returned value is the main GtkVBox of the window,
+#. we can add what you want in it.
+#: ../src/boards/python/admin/board_list.py:632
+#: ../src/boards/python/admin/board_list.py:650
+#: ../src/boards/python/admin/wordlist.py:51 ../src/boards/python/login.py:530
+#: ../src/boards/python/pythontest.py:410 ../src/boards/python/tuxpaint.py:179
+#, python-format
+msgid ""
+"<b>%s</b> configuration\n"
+" for profile <b>%s</b>"
+msgstr ""
+"<b>%s</b>ayarlar\n"
+"bu profil için <b>%s</b>"
+
+#: ../src/boards/python/admin/board_list.py:662
+#: ../src/boards/python/pythontest.py:474
+msgid "Select sound locale"
+msgstr "Bir ses alanı seçin"
+
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "Sınıf edit etmek"
 
-#: ../src/boards/python/admin/class_edit.py:66
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "Sınıf edit etmekl:"
 
-#: ../src/boards/python/admin/class_edit.py:69
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "Yeni sınıf edit etmek"
 
-#: ../src/boards/python/admin/class_edit.py:91
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "Sınıf:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:104
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "Öğretmen:"
 
-#: ../src/boards/python/admin/class_edit.py:114
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "Bu sınıfa ait tüm kullanıcıları atayın"
 
-#: ../src/boards/python/admin/class_edit.py:254
-#: ../src/boards/python/admin/group_edit.py:266
-#: ../src/boards/python/admin/group_user_list.py:154
-#: ../src/boards/python/admin/user_list.py:196
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
+#: ../src/boards/python/admin/group_user_list.py:155
+#: ../src/boards/python/admin/user_list.py:197
 msgid "First Name"
 msgstr "İlk isim"
 
-#: ../src/boards/python/admin/class_edit.py:265
-#: ../src/boards/python/admin/group_edit.py:277
-#: ../src/boards/python/admin/group_user_list.py:164
-#: ../src/boards/python/admin/user_list.py:206
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
+#: ../src/boards/python/admin/group_user_list.py:165
+#: ../src/boards/python/admin/user_list.py:207
 msgid "Last Name"
 msgstr "Soyad"
 
-#: ../src/boards/python/admin/class_edit.py:342
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "Sınıfınız için en azından isim atamalısınız"
 
-#: ../src/boards/python/admin/class_edit.py:388
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "Bu isimde bir sınıf bulunmakta"
 
-#: ../src/boards/python/admin/class_list.py:169
-#: ../src/boards/python/admin/profile_edit.py:270
-#: ../src/boards/python/admin/profile_group_list.py:144
+#: ../src/boards/python/admin/class_list.py:170
+#: ../src/boards/python/admin/profile_edit.py:269
+#: ../src/boards/python/admin/profile_group_list.py:145
 msgid "Class"
 msgstr "Sınıf"
 
-#: ../src/boards/python/admin/class_list.py:179
+#: ../src/boards/python/admin/class_list.py:180
 msgid "Teacher"
 msgstr "Öğretmen"
 
-#: ../src/boards/python/admin/group_edit.py:61
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "Grup edit etmek"
 
-#: ../src/boards/python/admin/group_edit.py:67
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "Grup edit etmek:"
 
-#: ../src/boards/python/admin/group_edit.py:68
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr "sınıf için:"
 
-#: ../src/boards/python/admin/group_edit.py:71
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "Yeni grup edit etmek"
 
-#: ../src/boards/python/admin/group_edit.py:91
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "Grup:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:103
-#: ../src/boards/python/admin/profile_edit.py:99
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "Açıklama:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:114
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "Bu gruba ait tüm kullanıcıları atayın"
 
-#: ../src/boards/python/admin/group_edit.py:360
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "Grubunuz için en azından isim atamalısınız"
 
-#: ../src/boards/python/admin/group_edit.py:374
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "Bu isimde bir grup zaten bulunmakta"
 
-#: ../src/boards/python/admin/group_list.py:86
+#: ../src/boards/python/admin/group_list.py:87
 msgid "Select a class:"
 msgstr "Bir sınıf seçin"
 
-#: ../src/boards/python/admin/group_list.py:214
-#: ../src/boards/python/admin/profile_edit.py:280
-#: ../src/boards/python/admin/profile_group_list.py:154
+#: ../src/boards/python/admin/group_list.py:215
+#: ../src/boards/python/admin/profile_edit.py:279
+#: ../src/boards/python/admin/profile_group_list.py:155
 msgid "Group"
 msgstr "Grup"
 
-#: ../src/boards/python/admin/group_list.py:225
-#: ../src/boards/python/admin/profile_edit.py:290
-#: ../src/boards/python/admin/profile_group_list.py:164
-#: ../src/boards/python/admin/profile_list.py:198
+#: ../src/boards/python/admin/group_list.py:226
+#: ../src/boards/python/admin/profile_edit.py:289
+#: ../src/boards/python/admin/profile_group_list.py:165
+#: ../src/boards/python/admin/profile_list.py:199
 msgid "Description"
 msgstr "Tanım"
 
-#: ../src/boards/python/admin/group_list.py:322
+#: ../src/boards/python/admin/group_list.py:323
 msgid "You must first select a group in the list"
 msgstr "Önce listeden grup seçmelisiniz"
 
-#: ../src/boards/python/admin/group_user_list.py:174
-#: ../src/boards/python/admin/user_list.py:216
+#: ../src/boards/python/admin/group_user_list.py:175
+#: ../src/boards/python/admin/user_list.py:217
 msgid "Birth Date"
 msgstr "Doğum tarihi"
 
-#: ../src/boards/python/admin/log_list.py:91
-#, fuzzy
-msgid "Select a user:"
-msgstr "Bir sınıf seçin"
-
-#. Insert the ALL option (HACK, use the user_id -2 to indicate ALL)
-#: ../src/boards/python/admin/log_list.py:102
-msgid "All users"
-msgstr ""
-
-#: ../src/boards/python/admin/log_list.py:108
-#: ../src/boards/python/admin/log_list.py:287
-#: ../src/boards/python/admin/profile_list.py:121
-#: ../src/gcompris/board_config.c:668 ../src/gcompris/board_config.c:926
-msgid "Default"
-msgstr "İlk değer"
-
-#. Reset buttons
-#: ../src/boards/python/admin/log_list.py:162
-msgid "Reset"
-msgstr ""
-
-#: ../src/boards/python/admin/log_list.py:208
-#, fuzzy
-msgid "Date"
-msgstr "rende"
-
-#: ../src/boards/python/admin/log_list.py:218
-#, fuzzy
-msgid "User"
-msgstr "Kullanıcılar"
-
-#: ../src/boards/python/admin/log_list.py:228
-#, fuzzy
-msgid "Board"
-msgstr "Paneller"
-
-#: ../src/boards/python/admin/log_list.py:238
-#: ../src/boards/python/redraw.py:347 ../src/boards/python/redraw.py:357
-msgid "Level"
-msgstr "Seviye"
-
-#: ../src/boards/python/admin/log_list.py:248
-#, fuzzy
-msgid "Sublevel"
-msgstr "Seviye"
-
-#: ../src/boards/python/admin/log_list.py:258
-#, fuzzy
-msgid "Duration"
-msgstr "sayılar"
-
-#: ../src/boards/python/admin/log_list.py:268
-msgid "Status"
-msgstr ""
-
 #: ../src/boards/python/admin/module_boards.py:42
-#: ../src/boards/python/admin/module_boards.py:67
+#: ../src/boards/python/admin/module_boards.py:62
 msgid "Boards"
 msgstr "Paneller"
 
-#: ../src/boards/python/admin/module_groups.py:40
-#: ../src/boards/python/admin/module_groups.py:66
+#: ../src/boards/python/admin/module_groups.py:41
+#: ../src/boards/python/admin/module_groups.py:67
 msgid "Groups"
 msgstr "Gruplar"
 
-#: ../src/boards/python/admin/module_profiles.py:40
-#: ../src/boards/python/admin/module_profiles.py:65
+#: ../src/boards/python/admin/module_profiles.py:41
+#: ../src/boards/python/admin/module_profiles.py:66
 msgid "Profiles"
 msgstr "Profiller"
 
-#: ../src/boards/python/admin/module_reports.py:41
-#: ../src/boards/python/admin/module_reports.py:67
-msgid "Reports"
-msgstr ""
-
-#: ../src/boards/python/admin/module_reports.py:67
-#: ../src/boards/python/admin/module_users.py:41
-#: ../src/boards/python/admin/module_users.py:67
-msgid "Users"
-msgstr "Kullanıcılar"
-
-#: ../src/boards/python/admin/module_users.py:41
-#: ../src/boards/python/admin/module_users.py:67
+#: ../src/boards/python/admin/module_users.py:42
+#: ../src/boards/python/admin/module_users.py:68
 msgid "Classes"
 msgstr "Sınıflar"
 
-#: ../src/boards/python/admin/profile_edit.py:60
+#: ../src/boards/python/admin/module_users.py:42
+#: ../src/boards/python/admin/module_users.py:68
+msgid "Users"
+msgstr "Kullanıcılar"
+
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "Profil edit etmek"
 
-#: ../src/boards/python/admin/profile_edit.py:65
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "Profil edit etmek:"
 
-#: ../src/boards/python/admin/profile_edit.py:68
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "Yeni profil edit etmek"
 
-#: ../src/boards/python/admin/profile_edit.py:87
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "Profil:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:110
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "Bu profildeki tüm kullanıcıları atayın"
 
-#: ../src/boards/python/admin/profile_edit.py:378
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "Profilinize en azından isim vermelisiniz"
 
-#: ../src/boards/python/admin/profile_edit.py:400
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "Bu isimde bir profil var"
 
-#: ../src/boards/python/admin/profile_list.py:188
+#: ../src/boards/python/admin/profile_list.py:122
+#: ../src/gcompris/board_config.c:587 ../src/gcompris/board_config.c:717
+msgid "Default"
+msgstr "İlk değer"
+
+#: ../src/boards/python/admin/profile_list.py:189
 msgid "Profile"
 msgstr "Profil"
 
-#: ../src/boards/python/admin/profile_list.py:315
+#: ../src/boards/python/admin/profile_list.py:316
 msgid "[Default]"
 msgstr "[İlk değer]"
 
-#: ../src/boards/python/admin/user_edit.py:51
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "Kullanıcı edit etmek"
 
-#: ../src/boards/python/admin/user_edit.py:56
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "Kullanıcı edit etmek:"
 
-#: ../src/boards/python/admin/user_edit.py:62
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "Yeni kullanıcı edit etmek"
 
-#: ../src/boards/python/admin/user_edit.py:79
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "Giriş:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:90
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "İsim:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:99
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "Soyad:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:108
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "Doğum tarihi:"
 
-#: ../src/boards/python/admin/user_edit.py:160
-msgid ""
-"You need to provide at least a login, first name and last name for your users"
+#: ../src/boards/python/admin/user_edit.py:159
+msgid "You need to provide at least a login, first name and last name for your users"
 msgstr "Kullanıcılarınız için kullanıcı adı, isim ve soyad girmelisiniz"
 
-#: ../src/boards/python/admin/user_edit.py:177
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "Bu kullanıcı ismine sahip kullanıcımız zaten var"
 
-#: ../src/boards/python/admin/user_list.py:291
+#: ../src/boards/python/admin/user_list.py:292
 msgid ""
 "To import a user list from a file, first select a class.\n"
 "FILE FORMAT: Your file must be formatted like this:\n"
@@ -5102,7 +4717,7 @@ msgstr ""
 "kullanıcı adı;isim;soyad;dağum tarihi\n"
 "ayraç otomatik algılanacaktır ve ',', ';' veya ':' olabilir."
 
-#: ../src/boards/python/admin/user_list.py:370
+#: ../src/boards/python/admin/user_list.py:371
 #, python-format
 msgid ""
 "One or more logins are not unique !\n"
@@ -5111,45 +4726,30 @@ msgstr ""
 "Bir veya daha fazla kullanıcı tekil değil! \n"
 "Onları değiştirmalisiniz: %s !"
 
-#: ../src/boards/python/anim.py:2225
+#: ../src/boards/python/anim.py:59
+msgid "You need the python xml module. Disabling SVG."
+msgstr "Python xml modülüne ihtiyacınız var. SVG'yi kapatılıyor."
+
+#. gcompris.utils.dialog(_('Python xml module bot found. SVG is disabled. Install the python xml module to enable SVG Save/restore.'), None)
+#: ../src/boards/python/anim.py:417
+msgid ""
+"Python xml module not found. SVG is disabled. Install the python xml module "
+"to enable SVG Save/restore."
+msgstr "Python xml modülü bulunamadı. SVG kapatıldı. SVG saklama/yükleme yapabilmek için python xml modülünü kurun."
+
+#: ../src/boards/python/anim.py:2206
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr "SVG kapatıldı. Açmak için python xml modülünü kurun"
 
-#: ../src/boards/python/anim.py:2381
+#: ../src/boards/python/anim.py:2362
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr "Uyarı: Aşağıdaki görüntülere sisteminiz tarafından erişilemez.\n"
 
-#: ../src/boards/python/anim.py:2383
+#: ../src/boards/python/anim.py:2364
 msgid "The corresponding items have been skipped."
 msgstr "Karşılık gelen nesneler atlanmıştır."
 
-#: ../src/boards/python/chat.py:82
-msgid "All messages will be displayed here.\n"
-msgstr ""
-
-#: ../src/boards/python/chat.py:132
-msgid "Your Friends"
-msgstr ""
-
-#: ../src/boards/python/chat.py:164
-msgid "Your Channel"
-msgstr ""
-
-#: ../src/boards/python/chat.py:190
-msgid ""
-"Type your message here, to send to other GCompris users on your local "
-"network."
-msgstr ""
-
-#: ../src/boards/python/chat.py:325
-msgid "You must set a channel in your channel entry box first.\n"
-msgstr ""
-
-#: ../src/boards/python/chat.py:326
-msgid "Your friends must set the same channel in order to communicate with you"
-msgstr ""
-
-#: ../src/boards/python/electric.py:95
+#: ../src/boards/python/electric.py:94
 msgid ""
 "Cannot find the 'gnucap' electric simulator.\n"
 "You can download and install it from:\n"
@@ -5160,98 +4760,96 @@ msgid ""
 "simulation."
 msgstr ""
 "'gnucap' electrik simülatörü bulunamadı.\n"
-"<http://geda.seul.org/tools/gnucap/> dan\n"
-" indirebilir ve kurabilirsiniz.\n"
+"<http://geda.seul.org/tools/gnucap/> dan\n "
+"indirebilir ve kurabilirsiniz.\n"
 "Bulunabilmesi için \n"
 "/usr/bin/gnucap veya /usr/local/bin/gnucap dizinine kurun.\n"
-"Şemayı çizmek için bu etkinliği bilgisayar simülatörü olmadan da "
-"kullanabilirsiniz."
+"Şemayı çizmek için bu etkinliği bilgisayar simülatörü olmadan da kullanabilirsiniz."
 
-#: ../src/boards/python/gnumch.py:96
+#: ../src/boards/python/gnumch.py:95
 #, python-format
 msgid ", %d"
 msgstr ", %d"
 
-#: ../src/boards/python/gnumch.py:97
+#: ../src/boards/python/gnumch.py:96
 #, python-format
 msgid " and %d"
 msgstr " ve %d"
 
-#: ../src/boards/python/gnumch.py:117
+#: ../src/boards/python/gnumch.py:116
 #, python-format
 msgid "%d is divisible by %s."
 msgstr "%d bölünebilir %s ye."
 
-#: ../src/boards/python/gnumch.py:121
+#: ../src/boards/python/gnumch.py:120
 msgid "1 is not a prime number."
 msgstr "1 asal sayı değildir."
 
-#: ../src/boards/python/gnumch.py:131
+#: ../src/boards/python/gnumch.py:130
 #, python-format
 msgid "Primes less than %d"
 msgstr "%d 'den küçük asal sayılar"
 
-#. Translators: You can swap %(x)y elements in the string.
-#: ../src/boards/python/gnumch.py:153
-#, fuzzy, python-format
+#: ../src/boards/python/gnumch.py:151
+#, python-format
 msgid ""
-"Multiples of %(d1)d include %(s)s,\n"
-"but %(d2)d is not a multiple of %(d3)d."
+"Multiples of %d include %s,\n"
+"but %d is not a multiple of %d."
 msgstr ""
 " %d nin çarpanları %s i içerir,\n"
 "fakat  %d, %d nin çarpanı değildir."
 
-#: ../src/boards/python/gnumch.py:164
+#: ../src/boards/python/gnumch.py:160
 #, python-format
 msgid "Factors of %d"
 msgstr "%d nin faktörleri"
 
-#: ../src/boards/python/gnumch.py:197
+#: ../src/boards/python/gnumch.py:193
 #, python-format
 msgid "%s are the factors of %d."
 msgstr "%s ler %d nin faktörleridir."
 
-#: ../src/boards/python/gnumch.py:209
+#: ../src/boards/python/gnumch.py:205
 #, python-format
 msgid "Multiples of %d"
 msgstr "%d nin katları"
 
-#: ../src/boards/python/gnumch.py:243
+#: ../src/boards/python/gnumch.py:239
 #, python-format
 msgid "%s = %d"
 msgstr "%s = %d"
 
-#: ../src/boards/python/gnumch.py:254
+#: ../src/boards/python/gnumch.py:250
 #, python-format
 msgid "%d + %d"
 msgstr "%d + %d"
 
-#: ../src/boards/python/gnumch.py:259
+#: ../src/boards/python/gnumch.py:255
 #, python-format
 msgid "%d − %d"
 msgstr "%d − %d"
 
-#: ../src/boards/python/gnumch.py:264
+#: ../src/boards/python/gnumch.py:260
 #, python-format
 msgid "%d × %d"
 msgstr "%d × %d"
 
-#: ../src/boards/python/gnumch.py:268
+#: ../src/boards/python/gnumch.py:264
 #, python-format
 msgid "%d ÷ %d"
 msgstr "%d ÷ %d"
 
-#: ../src/boards/python/gnumch.py:276
+#: ../src/boards/python/gnumch.py:272
 #, python-format
 msgid "Equal to %d"
 msgstr " %d ye eşittir"
 
-#: ../src/boards/python/gnumch.py:297
+#: ../src/boards/python/gnumch.py:293
 #, python-format
 msgid "Not equal to %d"
 msgstr " %d ye eşit değildir"
 
-#: ../src/boards/python/gnumch.py:441
+#: ../src/boards/python/gnumch.py:435
 msgid ""
 "You were eaten by a Troggle.\n"
 "Press <Return> to continue."
@@ -5259,11 +4857,11 @@ msgstr ""
 "Troggle tarafından yenildin.\n"
 "Devam etmek için <Return> e basın."
 
-#: ../src/boards/python/gnumch.py:490
+#: ../src/boards/python/gnumch.py:484
 msgid "You ate a wrong number.\n"
 msgstr "Yanlış sayı yedin.\n"
 
-#: ../src/boards/python/gnumch.py:491
+#: ../src/boards/python/gnumch.py:485
 msgid ""
 "\n"
 "Press <Return> to continue."
@@ -5271,7 +4869,7 @@ msgstr ""
 "\n"
 "Devam etmek için  <Return> e basın."
 
-#: ../src/boards/python/gnumch.py:784
+#: ../src/boards/python/gnumch.py:778
 msgid ""
 "T\n"
 "R\n"
@@ -5289,187 +4887,158 @@ msgstr ""
 "L\n"
 "E"
 
-#: ../src/boards/python/guessnumber.py:205
+#: ../src/boards/python/guessnumber.py:222
 #, python-format
 msgid "Guess a number between %d and %d"
 msgstr "%d ve %d arasında bir sayı tahmin edin"
 
-#: ../src/boards/python/guessnumber.py:318
-#: ../src/boards/python/guessnumber.py:319
+#: ../src/boards/python/guessnumber.py:335
+#: ../src/boards/python/guessnumber.py:336
 #, python-format
 msgid "Please enter a number between %d and %d"
 msgstr "Lütfen %d ve %d arasında bir sayı girin"
 
-#: ../src/boards/python/guessnumber.py:324
-#: ../src/boards/python/guessnumber.py:325
+#: ../src/boards/python/guessnumber.py:341
+#: ../src/boards/python/guessnumber.py:342
 msgid "Out of range"
 msgstr "aralık dışında"
 
-#: ../src/boards/python/guessnumber.py:331
-#: ../src/boards/python/guessnumber.py:332
+#: ../src/boards/python/guessnumber.py:348
+#: ../src/boards/python/guessnumber.py:349
 msgid "Too high"
 msgstr "Çok yüksek"
 
-#: ../src/boards/python/guessnumber.py:334
-#: ../src/boards/python/guessnumber.py:335
+#: ../src/boards/python/guessnumber.py:351
+#: ../src/boards/python/guessnumber.py:352
 msgid "Too low"
 msgstr "Çok düşük"
 
-#: ../src/boards/python/login.py:114
+#: ../src/boards/python/login.py:115
 msgid "Profile: "
 msgstr "Profil:"
 
-#: ../src/boards/python/login.py:268 ../src/boards/python/login.py:277
+#: ../src/boards/python/login.py:263 ../src/boards/python/login.py:272
 msgid "Login: "
 msgstr "Kullanıcı:"
 
 #. toggle box
-#: ../src/boards/python/login.py:550
+#: ../src/boards/python/login.py:545
 msgid "Enter login to log in"
 msgstr "Giriş için kullanıcı adı girin"
 
-#: ../src/boards/python/mosaic.py:194
+#: ../src/boards/python/mosaic.py:210
 msgid "Rebuild the same mosaic on the right area"
 msgstr "Sağ bölümdeki mozaiği tekrar inşa edin"
 
-#: ../src/boards/python/melody.py:119
+#: ../src/boards/python/pythontest.py:149
 msgid ""
-"Error: this activity cannot be played with the\n"
-"sound effects disabled.\n"
-"Go to the configuration dialogue to\n"
-"enable the sound"
-msgstr ""
-"Hata: Bu etkinlik ses kapalı olarak oynanamaz.\n"
-" Ayarlar bölümüne giderek ses kısmını açın "
-
-#: ../src/boards/python/oscar_and_friends.py:116
-msgid ""
-"Below the surface, Oscar the octopus and his friends sat on a rock,\n"
-"watching the bad weather above them."
-msgstr ""
-
-#: ../src/boards/python/oscar_and_friends.py:117
-msgid ""
-"They were all happy that the storms never reached all the way down to them."
-msgstr ""
-
-#: ../src/boards/python/oscar_and_friends.py:118
-msgid ""
-"No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr ""
-
-#: ../src/boards/python/oscar_and_friends.py:119
-msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr ""
-
-#: ../src/boards/python/pythontest.py:148
-#, fuzzy
-msgid ""
-"This is the first plugin in GCompris coded in the Python\n"
+"This is the first plugin in gcompris coded in the Python\n"
 "Programming language."
 msgstr "Bu Python programlama dilinde yazılan ilk sürümdür."
 
-#: ../src/boards/python/pythontest.py:157
-#, fuzzy
+#: ../src/boards/python/pythontest.py:158
 msgid ""
-"It is now possible to develop GCompris activities in C or in Python.\n"
+"It is now possible to develop gcompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
-msgstr ""
-"Artık C veya Pyton dili ile Gcompris aktivitesi geliştirmek mümkündür. Bunun "
-"için Olivier Samys'e teşekkür ederiz."
+msgstr "Artık C veya Pyton dili ile Gcompris aktivitesi geliştirmek mümkündür. Bunun için Olivier Samys'e teşekkür ederiz."
 
-#: ../src/boards/python/pythontest.py:166
+#: ../src/boards/python/pythontest.py:167
 msgid "This activity is not playable, just a test"
 msgstr "Bu etkinlik test aşamasında, oynanamaz"
 
 #. toggle box
-#: ../src/boards/python/pythontest.py:414
+#: ../src/boards/python/pythontest.py:415
 msgid "Disable line drawing in circle"
 msgstr "Daire içinde çizgi çizmesi kapat"
 
 #. combo box
-#: ../src/boards/python/pythontest.py:423
+#: ../src/boards/python/pythontest.py:424
 msgid "Color of the line"
 msgstr "Çizginin rengi"
 
 #. spin button for int
-#: ../src/boards/python/pythontest.py:434
+#: ../src/boards/python/pythontest.py:435
 msgid "Distance between circles"
 msgstr "Daireler arasındaki mesafe"
 
 #. radio buttons for circle or rectangle
-#: ../src/boards/python/pythontest.py:445
+#: ../src/boards/python/pythontest.py:446
 msgid "Use circles"
 msgstr "Daire kullan"
 
-#: ../src/boards/python/pythontest.py:446
+#: ../src/boards/python/pythontest.py:447
 msgid "Use rectangles"
 msgstr "Dikdörtgen kullan"
 
-#: ../src/boards/python/pythontest.py:449
+#: ../src/boards/python/pythontest.py:450
 msgid "Choice of pattern"
 msgstr "Örüntü tercihi"
 
-#: ../src/boards/python/redraw.py:909 ../src/boards/python/redraw.py:912
+#: ../src/boards/python/redraw.py:348 ../src/boards/python/redraw.py:358
+msgid "Level"
+msgstr "Seviye"
+
+#: ../src/boards/python/redraw.py:902 ../src/boards/python/redraw.py:905
 #, fuzzy
 msgid "Coordinate"
 msgstr "Hazırlayanlar"
 
-#: ../src/boards/python/searace.py:191
+#: ../src/boards/python/searace.py:201 ../src/boards/python/searace.py:206
+#: ../src/boards/python/searace.py:232
 msgid "The race is already being run"
 msgstr "Yarış zaten başlatıldı"
 
 #. Manage default cases (no params given)
 #. Final move, add an ofset because we loose space in abs()
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:539 ../src/boards/python/searace.py:855
-#: ../src/boards/python/searace.py:884 ../src/boards/python/searace.py:973
-#: ../src/boards/python/searace.py:979 ../src/boards/python/searace.py:987
+#: ../src/boards/python/searace.py:429 ../src/boards/python/searace.py:454
+#: ../src/boards/python/searace.py:535 ../src/boards/python/searace.py:854
+#: ../src/boards/python/searace.py:883 ../src/boards/python/searace.py:978
+#: ../src/boards/python/searace.py:984 ../src/boards/python/searace.py:992
 msgid "forward"
 msgstr "ileri"
 
-#: ../src/boards/python/searace.py:530
+#: ../src/boards/python/searace.py:526
 msgid "COMMANDS ARE"
 msgstr "KOMUTLAR"
 
 #. The two boat arrived in a close time frame (1s), it's a draw
-#: ../src/boards/python/searace.py:756
+#: ../src/boards/python/searace.py:752
 msgid "This is a draw"
 msgstr "Bu bir çizimdir"
 
-#: ../src/boards/python/searace.py:763
+#: ../src/boards/python/searace.py:759
 msgid "The Red boat has won"
 msgstr "Kırmızı tekne kazandı"
 
-#: ../src/boards/python/searace.py:766
+#: ../src/boards/python/searace.py:762
 msgid "The Green boat has won"
 msgstr "Yeşil tekne kazandı"
 
-#: ../src/boards/python/searace.py:784 ../src/boards/python/searace.py:1017
+#: ../src/boards/python/searace.py:780 ../src/boards/python/searace.py:1022
 msgid "Angle:"
 msgstr "Açı:"
 
-#: ../src/boards/python/searace.py:784
+#: ../src/boards/python/searace.py:780
 msgid "Wind:"
 msgstr "Rüzgar:"
 
-#: ../src/boards/python/searace.py:862
+#: ../src/boards/python/searace.py:861
 msgid "Syntax error at line"
 msgstr "Yazım hatası satır"
 
-#: ../src/boards/python/searace.py:880
+#: ../src/boards/python/searace.py:879
 msgid "The command"
 msgstr "Komut"
 
-#: ../src/boards/python/searace.py:899
+#: ../src/boards/python/searace.py:898
 msgid "Unknown command at line"
 msgstr "Bilinmeyen komut, satır"
 
-#: ../src/boards/python/searace.py:1017
+#: ../src/boards/python/searace.py:1022
 msgid "Distance:"
 msgstr "Mesafe:"
 
-#: ../src/boards/python/tuxpaint.py:144
+#: ../src/boards/python/tuxpaint.py:115
 msgid ""
 "Cannot find Tuxpaint.\n"
 "Install it to use this activity !"
@@ -5477,96 +5046,111 @@ msgstr ""
 "TuxÇizim bulunamıyor.\n"
 "Etkinliği kullanabilmek için kurun!"
 
-#: ../src/boards/python/tuxpaint.py:157
+#: ../src/boards/python/tuxpaint.py:128
 msgid "Waiting for Tuxpaint to finish"
 msgstr "TuxÇizimin bitirmesi bekleniyor"
 
-#: ../src/boards/python/tuxpaint.py:210
+#: ../src/boards/python/tuxpaint.py:183
 msgid "Inherit fullscreen setting from GCompris"
 msgstr "Gcompris'ten tamsayfa ayarını miras al"
 
-#: ../src/boards/python/tuxpaint.py:214
+#: ../src/boards/python/tuxpaint.py:187
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
 msgstr "Gcompristen boy ayarlarını alın (800x600, 640x480)"
 
-#: ../src/boards/python/tuxpaint.py:218
+#: ../src/boards/python/tuxpaint.py:191
 msgid "Disable shape rotation"
 msgstr "Şekil dödürme özelliğini kapat"
 
-#: ../src/boards/python/tuxpaint.py:222
+#: ../src/boards/python/tuxpaint.py:195
 msgid "Show Uppercase text only"
 msgstr "Sadece büyük harfleri göster"
 
-#: ../src/boards/python/tuxpaint.py:226
+#: ../src/boards/python/tuxpaint.py:199
 msgid "Disable stamps"
 msgstr "Mühür özelliğini kapat"
 
-#: ../src/boards/railroad.c:91
+#: ../src/boards/railroad.c:95
 msgid "Memory game"
 msgstr "Hafıza oyunu"
 
-#: ../src/boards/railroad.c:92
+#: ../src/boards/railroad.c:96
 msgid "Build a train according to the model"
 msgstr "Modele uygun bir tren yaratın"
 
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:207
-msgid ""
-"Error: We can't find\n"
-"a list of words to play this game.\n"
-msgstr ""
-
-#: ../src/boards/reading.c:381
+#: ../src/boards/reading.c:370
 msgid "Please, check if the word"
 msgstr "Lütfen kelimenin"
 
-#: ../src/boards/reading.c:401
+#: ../src/boards/reading.c:390
 msgid "is being displayed"
 msgstr "görüntülendiğini kontrol edin"
 
-#: ../src/boards/reading.c:575
+#: ../src/boards/reading.c:561
 msgid "I am Ready"
 msgstr "Hazırım"
 
-#: ../src/boards/reading.c:615
+#: ../src/boards/reading.c:601
 msgid "Yes, I saw it"
 msgstr "Evet, onu gördüm"
 
-#: ../src/boards/reading.c:645
+#: ../src/boards/reading.c:631
 msgid "No, it was not there"
 msgstr "Hayır, orada değildi"
 
 #. Report what was wrong in the log
-#: ../src/boards/reading.c:683
+#: ../src/boards/reading.c:669
 #, c-format
 msgid "The word to find was '%s'"
 msgstr "Bulunacak kelime '%s'"
 
-#: ../src/boards/reading.c:686
-#, c-format
+#: ../src/boards/reading.c:672
 msgid "But it was not displayed"
 msgstr "Fakat görüntülenmedi"
 
-#: ../src/boards/reading.c:688
-#, c-format
+#: ../src/boards/reading.c:674
 msgid "And it was displayed"
 msgstr "Ve görüntülendi"
 
-#: ../src/boards/scale.c:265
-#, fuzzy, c-format
-msgid "Weight = %s"
-msgstr "Noktalar = %s"
+#: ../src/boards/reading.c:777 ../src/boards/wordsgame.c:776
+msgid "Cannot open file of words for your locale"
+msgstr "Sizin bölgenizde kelimeler kütüğü açılamıyor"
 
-#: ../src/boards/scale.c:714
-#, fuzzy
-msgid "Take care, you can drop masses on both sides of the scale."
-msgstr "Teraziyi dengelemek için yığınları sürükleyip bırakınız"
+#. Enter Edit Mode
+#: ../src/boards/shapegame.c:433
+msgid ""
+"You have entered Edit mode\n"
+"Move the puzzle items;\n"
+"type 's' to save, and\n"
+"'d' to display all the shapes"
+msgstr ""
+"Edit modundasınız\n"
+"puzzle elemanlarını hareket ettirin;\n"
+"'s' yazarak saklayın, ve\n"
+"'d' yazarak tüm şekilleri görüntüleyin"
 
-#: ../src/boards/target.c:281 ../src/boards/target.c:546
+#: ../src/boards/shapegame.c:441
+msgid ""
+"The data from this activity are saved under\n"
+"/tmp/gcompris-board.xml"
+msgstr ""
+"Bu etkinlikteki veriler\n"
+"/tmp/gcompris-board.xml altında saklandı"
+
+#: ../src/boards/submarine.c:201
+msgid "Submarine"
+msgstr "Denizaltı"
+
+#: ../src/boards/submarine.c:202
+msgid "Control the depth of a submarine"
+msgstr "Denizaltının derinliğini kontrol edin"
+
+#: ../src/boards/target.c:285 ../src/boards/target.c:540
 #, c-format
 msgid "Points = %s"
 msgstr "Noktalar = %s"
 
-#: ../src/boards/target.c:403
+#: ../src/boards/target.c:405
 #, c-format
 msgid ""
 "Wind speed = %d\n"
@@ -5575,54 +5159,15 @@ msgstr ""
 "Rüzgar hızı = %d\n"
 "km/s"
 
-#: ../src/boards/target.c:470
+#: ../src/boards/target.c:467
 #, c-format
 msgid "Distance to target = %d meters"
 msgstr "Hedefe uzaklık = %d metre"
 
-#: ../src/boards/wordprocessor.c:55
-#, fuzzy
-msgid "Research"
-msgstr "karaçam"
-
-#: ../src/boards/wordprocessor.c:66
-#, fuzzy
-msgid "Sentimental"
-msgstr "Senegal"
-
-#: ../src/boards/wordprocessor.c:77
-msgid "Official"
-msgstr ""
-
-#: ../src/boards/wordprocessor.c:88 ../src/boards/wordprocessor.c:436
-msgid "Text"
-msgstr ""
-
-#: ../src/boards/wordprocessor.c:99
-#, fuzzy
-msgid "Flyer"
-msgstr "Filtre"
-
-#: ../src/boards/wordprocessor.c:433
-#, fuzzy
-msgid "Title"
-msgstr "Şili"
-
-#: ../src/boards/wordprocessor.c:434
-#, fuzzy
-msgid "Heading 1"
-msgstr "Okuma"
-
-#: ../src/boards/wordprocessor.c:435
-#, fuzzy
-msgid "Heading 2"
-msgstr "Okuma"
-
-#: ../src/gcompris/about.c:57
-#, fuzzy
+#: ../src/gcompris/about.c:65
 msgid ""
 "Author: Bruno Coudoin\n"
-"Contribution: Pascal Georges, Jose Jorge, Yves Combe\n"
+"Contribution: Pascal Georges, Jose Jorge\n"
 "Graphics: Renaud Blanchard, Franck Doucet\n"
 "Intro Music: Djilali Sebihi\n"
 "Background Music: Rico Da Halvarez\n"
@@ -5634,19 +5179,19 @@ msgstr ""
 "Arka Plan: müziği: Rico Da Halvarez\n"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/gcompris/about.c:65
+#: ../src/gcompris/about.c:73
 msgid "translator_credits"
 msgstr "Çevirmenler"
 
-#: ../src/gcompris/about.c:96 ../src/gcompris/about.c:106
+#: ../src/gcompris/about.c:105 ../src/gcompris/about.c:114
 msgid "About GCompris"
 msgstr "GCompris Hakkında"
 
-#: ../src/gcompris/about.c:117
+#: ../src/gcompris/about.c:124 ../src/gcompris/about.c:133
 msgid "Translators:"
 msgstr "Çevirmenler"
 
-#: ../src/gcompris/about.c:230
+#: ../src/gcompris/about.c:256
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -5654,605 +5199,444 @@ msgstr ""
 "GCompris Ana Sayfası\n"
 "http://gcompris.net"
 
-#: ../src/gcompris/about.c:252
+#: ../src/gcompris/about.c:278
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
-msgstr ""
-"Bu uygulama bir GNU Paketidir ve GNU Genel Kamu Lisansı altıdan dağıtılır"
+msgstr "Bu uygulama bir GNU Paketidir ve GNU Genel Kamu Lisansı altıdan dağıtılır"
 
-#: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
-#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
-#: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
+#: ../src/gcompris/about.c:341 ../src/gcompris/about.c:350
+#: ../src/gcompris/config.c:222 ../src/gcompris/config.c:231
+#: ../src/gcompris/gameutil.c:1174 ../src/gcompris/help.c:382
+#: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:263
 msgid "OK"
 msgstr "Tamam"
 
-#: ../src/gcompris/bar.c:577
+#: ../src/gcompris/bar.c:571
 msgid "GCompris confirmation"
 msgstr "GCompris Teyidi"
 
-#: ../src/gcompris/bar.c:578
-#, fuzzy
-msgid "Are you sure you want to quit?"
+#: ../src/gcompris/bar.c:572
+msgid "Sure you want to quit ?"
 msgstr "Çıkmak istediğinden emin misin?"
 
-#: ../src/gcompris/bar.c:579
-#, fuzzy
-msgid "Yes, I am sure!"
+#: ../src/gcompris/bar.c:573
+msgid "Yes, I am sure !"
 msgstr "Evet, eminim !"
 
-#: ../src/gcompris/bar.c:580
+#: ../src/gcompris/bar.c:574
 msgid "No, I want to keep going"
 msgstr "Hayır, devam etmek istiyorum"
 
-#: ../src/gcompris/board.c:192
-#, fuzzy
-msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
+#: ../src/gcompris/board.c:182
+msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
 msgstr "Dinamik modül yükleme desteklenmiyor. Gcompris yüklenemez.\n"
 
-#: ../src/gcompris/board_config.c:700
+#: ../src/gcompris/board_config.c:617
 msgid ""
 "Select the language\n"
 " to use in the board"
 msgstr "Kullanmak istediğiniz dili seçiniz"
 
-#: ../src/gcompris/board_config.c:763
-msgid "Global GCompris mode"
-msgstr ""
-
-#: ../src/gcompris/board_config.c:764
-#, fuzzy
-msgid "Normal"
-msgstr "mercan"
-
-#: ../src/gcompris/board_config.c:765
-msgid "2 clicks"
-msgstr ""
-
-#: ../src/gcompris/board_config.c:766
-msgid "both modes"
-msgstr ""
-
-#: ../src/gcompris/board_config.c:794
-#, fuzzy
-msgid ""
-"Select the drag and drop mode\n"
-" to use in the board"
-msgstr "Kullanmak istediğiniz dili seçiniz"
-
-#: ../src/gcompris/config.c:59
+#: ../src/gcompris/config.c:63
 msgid "Your system default"
 msgstr "Sisteminizin öntanımı"
 
-#: ../src/gcompris/config.c:60
+#: ../src/gcompris/config.c:64
 msgid "Amharic"
 msgstr "Habeşistanca"
 
-#: ../src/gcompris/config.c:61
+#: ../src/gcompris/config.c:65
 msgid "Arabic"
 msgstr "Arapça"
 
-#: ../src/gcompris/config.c:62
-#, fuzzy
-msgid "Arabic (Tunisia)"
-msgstr "Tunus"
-
-#: ../src/gcompris/config.c:63
+#: ../src/gcompris/config.c:66
 msgid "Turkish (Azerbaijan)"
 msgstr "Azeri Türkçesi"
 
-#: ../src/gcompris/config.c:64
+#: ../src/gcompris/config.c:67
 msgid "Bulgarian"
 msgstr "Bulgarca"
 
-#: ../src/gcompris/config.c:65
-msgid "Breton"
-msgstr ""
-
-#: ../src/gcompris/config.c:66
+#: ../src/gcompris/config.c:68
 msgid "Catalan"
 msgstr "Katalan"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:70
 msgid "Danish"
 msgstr "Danimarkalı"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:71
 msgid "German"
 msgstr "Almanca"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:72
 msgid "Greek"
 msgstr "Yunanca"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:73
 msgid "English (Canada)"
 msgstr "İngilizce (Kanada)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:74
 msgid "English (Great Britain)"
 msgstr "İngilizce"
 
-#: ../src/gcompris/config.c:73
-#, fuzzy
-msgid "English (United States)"
-msgstr "İngilizce (Kanada)"
-
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:75
 msgid "Spanish"
 msgstr "İspanyolca"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:76
 msgid "Basque"
 msgstr "Baskçavazo"
 
-#: ../src/gcompris/config.c:76
-msgid "Dzongkha"
-msgstr ""
-
 #: ../src/gcompris/config.c:77
-#, fuzzy
-msgid "Persian"
-msgstr "Sırpça"
-
-#: ../src/gcompris/config.c:78
 msgid "Finnish"
 msgstr "Fince"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:78
 msgid "French"
 msgstr "Fransızca"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:79
 msgid "Irish (Gaelic)"
 msgstr "İrlandaca (Galce)"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:80
 msgid "Hebrew"
 msgstr "İbranice"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:81
 msgid "Hindi"
 msgstr "Hintçe"
 
-#: ../src/gcompris/config.c:83
-#, fuzzy
-msgid "Indonesian"
-msgstr "Makedonca"
-
-#: ../src/gcompris/config.c:84
-#, fuzzy
-msgid "Japanese"
-msgstr "anason"
-
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:82
 msgid "Gujarati"
 msgstr "Gujarati (hintçe)"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:83
 msgid "Punjabi"
 msgstr "Punjabi (pakistanca)"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:84
 msgid "Hungarian"
 msgstr "Macarca"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:85
 msgid "Croatian"
 msgstr "Hırvatça"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:86
 msgid "Italian"
 msgstr "İtalyanca"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:87
 msgid "Georgian"
 msgstr "Gürcüce"
 
-#: ../src/gcompris/config.c:91
-#, fuzzy
-msgid "Korean"
-msgstr "turuncu"
-
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:88
 msgid "Lithuanian"
 msgstr "Litvanyaca"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:89
 msgid "Macedonian"
 msgstr "Makedonca"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:90
 #, fuzzy
 msgid "Malayalam"
 msgstr "Malezyanca"
 
-#: ../src/gcompris/config.c:95
-#, fuzzy
-msgid "Marathi"
-msgstr "Gujarati (hintçe)"
-
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:91
 msgid "Malay"
 msgstr "Malayca"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:92
 msgid "Nepal"
 msgstr "Nepalce"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:93
 msgid "Dutch"
 msgstr "Hollandaca"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:94
 msgid "Norwegian Bokmal"
 msgstr "Norveççe"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:95
 msgid "Norwegian Nynorsk"
 msgstr "Norveççe"
 
-#: ../src/gcompris/config.c:101
-msgid "Occitan (languedocien)"
-msgstr ""
-
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:96
 msgid "Polish"
 msgstr "Polonyaca"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:97
 msgid "Portuguese"
 msgstr "Portekizce"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:98
 msgid "Portuguese (Brazil)"
 msgstr "Portekizce (Brezilya)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:99
 msgid "Romanian"
 msgstr "Romence"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:100
 msgid "Russian"
 msgstr "Rusça"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:101
 msgid "Kinyarwanda"
 msgstr "Rvandaca"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:102
 msgid "Slovak"
 msgstr "Slovakça"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:103
 msgid "Slovenian"
 msgstr "Slovence"
 
-#: ../src/gcompris/config.c:110
-#, fuzzy
-msgid "Somali"
-msgstr "Somoli"
-
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:104
 msgid "Albanian"
 msgstr "Arnavutça"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:105
 msgid "Serbian (Latin)"
 msgstr "Sırpça (Latin)"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:106
 msgid "Serbian"
 msgstr "Sırpça"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:107
 msgid "Swedish"
 msgstr "İsveççe"
 
-#: ../src/gcompris/config.c:115
-#, fuzzy
-msgid "Tamil"
-msgstr "deve"
-
-#: ../src/gcompris/config.c:116
-msgid "Thai"
-msgstr ""
-
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:108
 msgid "Turkish"
 msgstr "Türkçe"
 
-#: ../src/gcompris/config.c:118
-msgid "Urdu"
-msgstr ""
-
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:109
 msgid "Vietnamese"
 msgstr "Vietnamca"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:110
 msgid "Walloon"
 msgstr "Belçika Fransızcası"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:111
 msgid "Chinese (Simplified)"
 msgstr "Çince (Basitleştirilmiş)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:112
 msgid "Chinese (Traditional)"
 msgstr "Çince (Geleneksel)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:117
 msgid "No time limit"
 msgstr "Zaman kısıtlaması yok"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:118
 msgid "Slow timer"
 msgstr "Zamanı yavaşlat"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:119
 msgid "Normal timer"
 msgstr "Normal zaman"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:120
 msgid "Fast timer"
 msgstr "Zamanı hızlandır"
 
-#: ../src/gcompris/config.c:135
-#, fuzzy
-msgid "800x600 (Default for GCompris)"
+#: ../src/gcompris/config.c:125
+msgid "800x600 (Default for gcompris)"
 msgstr "800x600 (gcompris için öntanımlı)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:130
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
 msgstr "Oyunları düzenlemek için Gcompris yönetim yazılımını kullanın"
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:187 ../src/gcompris/config.c:196
 msgid "GCompris Configuration"
 msgstr "GCompris Yapılandırması"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:314
 msgid "Fullscreen"
 msgstr "Tam Ekran"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:357
 msgid "Music"
 msgstr "Müzik"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:385
 msgid "Effect"
 msgstr "Efektler"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:418
 #, fuzzy, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Resim dizini açılamadı: %s"
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:454 ../src/gcompris/config.c:818
+#: ../src/gcompris/config.c:829
 #, c-format
 msgid "Skin : %s"
 msgstr "Şablo : %s"
 
-#: ../src/gcompris/config.c:421
-msgid "SKINS NOT FOUND"
-msgstr ""
-
-#: ../src/gcompris/config.c:546
-#, fuzzy
-msgid "English (United State)"
-msgstr "İngilizce (Kanada)"
-
-#: ../src/gcompris/file_selector.c:337
+#: ../src/gcompris/file_selector.c:341
 msgid "CANCEL"
 msgstr "İPTAL"
 
-#: ../src/gcompris/file_selector.c:368
+#: ../src/gcompris/file_selector.c:372
 msgid "LOAD"
 msgstr "YÜKLE"
 
-#: ../src/gcompris/file_selector.c:368
+#: ../src/gcompris/file_selector.c:372
 msgid "SAVE"
 msgstr "KAYDET"
 
-#: ../src/gcompris/gameutil.c:102
-#, fuzzy
-msgid "Couldn't find or load the file"
+#: ../src/gcompris/gameutil.c:190
+msgid "Couldn't find file"
 msgstr "dosya bulunamadı"
 
-#: ../src/gcompris/gameutil.c:104
+#: ../src/gcompris/gameutil.c:192
 msgid "This activity is incomplete."
 msgstr "Bu etkinlik eksiktir."
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:193
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
 msgstr "Çıkın ve sorunu yazılımcılara iletin."
 
-#: ../src/gcompris/gcompris.c:137
-#, fuzzy
-msgid "run GCompris in fullscreen mode."
+#: ../src/gcompris/gcompris.c:125
+msgid "run gcompris in fullscreen mode."
 msgstr "gcompris'i tam ekran modunda çalıştır"
 
-#: ../src/gcompris/gcompris.c:140
-#, fuzzy
-msgid "run GCompris in window mode."
+#: ../src/gcompris/gcompris.c:127
+msgid "run gcompris in window mode."
 msgstr "gcompris'i pencere modunda çalıştır"
 
-#: ../src/gcompris/gcompris.c:143
-#, fuzzy
-msgid "run GCompris with sound enabled."
+#: ../src/gcompris/gcompris.c:129
+msgid "run gcompris with sound enabled."
 msgstr "gcompris'i müzikle çalıştır"
 
-#: ../src/gcompris/gcompris.c:146
-#, fuzzy
-msgid "run GCompris without sound."
+#: ../src/gcompris/gcompris.c:131
+msgid "run gcompris without sound."
 msgstr "gcompris'i müziksiz çalıştır"
 
-#: ../src/gcompris/gcompris.c:149
-#, fuzzy
-msgid "run GCompris with the default gnome cursor."
+#: ../src/gcompris/gcompris.c:133
+msgid "run gcompris with the default gnome cursor."
 msgstr "gcompris'i öntanımlı gnome imleciyle çalıştır"
 
-#: ../src/gcompris/gcompris.c:152
+#: ../src/gcompris/gcompris.c:135
 msgid "display only activities with this difficulty level."
 msgstr "Sadece bu zorluktaki etkinlikleri görüntüle."
 
-#: ../src/gcompris/gcompris.c:155
+#: ../src/gcompris/gcompris.c:137
 msgid "display debug informations on the console."
 msgstr "Düzeltme bilgilerini konsolda gösterin."
 
-#: ../src/gcompris/gcompris.c:158
+#: ../src/gcompris/gcompris.c:139
 msgid "Print the version of "
 msgstr "Versiyonunu bastır"
 
-#: ../src/gcompris/gcompris.c:161
+#: ../src/gcompris/gcompris.c:141
 msgid "Use the antialiased canvas (slower)."
 msgstr "Düzleştirilmiş tuval kullan (daha yavaş)"
 
-#: ../src/gcompris/gcompris.c:164
-#, fuzzy
-msgid "Disable XF86VidMode (No screen resolution change)."
+#: ../src/gcompris/gcompris.c:143
+msgid "Disable XRANDR (No screen resolution change)."
 msgstr "XRANDR'ı kapatın (ekran çözünürlük değişikliği yok)."
 
-#: ../src/gcompris/gcompris.c:167
-#, fuzzy
+#: ../src/gcompris/gcompris.c:145
 msgid ""
-"Run GCompris with local menu (e.g -l /reading will let you play only "
-"activities in the reading directory, -l /strategy/connect4 only the connect4 "
+"Run gcompris with local menu (e.g -l /reading will let you play only "
+"activities in the reading directory, -l /boards/connect4 only the connect4 "
 "activity)"
-msgstr ""
-"Gcompris'i lokal menü ile oynayın (örnek  -l /reading sadece reading dizini "
-"altındaki etkinlikleri oynamanıza izin verecek, -l /boards/connect4  sadece "
-"connect4 oynamanıza izin verecektir)"
+msgstr "Gcompris'i lokal menü ile oynayın (örnek  -l /reading sadece reading dizini altındaki etkinlikleri oynamanıza izin verecek, -l /boards/connect4  sadece connect4 oynamanıza izin verecektir)"
 
-#: ../src/gcompris/gcompris.c:170
+#: ../src/gcompris/gcompris.c:147
 msgid "Run GCompris with local activity directory added to menu"
 msgstr "Gcompris'i menüye eklenen lokal etkinlik dizini ile çalıştırın"
 
-#: ../src/gcompris/gcompris.c:173
+#: ../src/gcompris/gcompris.c:149
 msgid "Run GCompris in administration and user-management mode"
 msgstr "Gcompris'i yönetim ve kullanıcı-yönetimi modunda çalıştırın"
 
-#: ../src/gcompris/gcompris.c:176
-#, fuzzy
-msgid ""
-"Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite."
-"db]"
+#: ../src/gcompris/gcompris.c:151
+msgid "Use alternate database for profiles"
 msgstr "Profiller için farklı veritabanı kullanın"
 
-#: ../src/gcompris/gcompris.c:179
+#: ../src/gcompris/gcompris.c:153
+msgid "Use alternate database for logs"
+msgstr "Loglama için farklı veritabanı kullanın"
+
+#: ../src/gcompris/gcompris.c:155
 msgid "Create the alternate database for profiles"
 msgstr "Profiller için farklı veritabanı kullanın"
 
-#: ../src/gcompris/gcompris.c:182
+#: ../src/gcompris/gcompris.c:157
 msgid "Re-read XML Menus and store them in the database"
 msgstr "XML menülerini tekrar okuyun ve veritabanına kaydedin"
 
-#: ../src/gcompris/gcompris.c:185
+#: ../src/gcompris/gcompris.c:159
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
-msgstr ""
-"Kullanacağınız profili belirleyin. Profil yaratmak için 'gcompris -a' yazın"
+msgstr "Kullanacağınız profili belirleyin. Profil yaratmak için 'gcompris -a' yazın"
 
-#: ../src/gcompris/gcompris.c:188
+#: ../src/gcompris/gcompris.c:161
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
 msgstr "Tüm profilleri listeleyin. Profil yaratmak için 'gcompris -a' yazın"
 
-#: ../src/gcompris/gcompris.c:191
+#: ../src/gcompris/gcompris.c:163
 msgid ""
-"Config directory location: [$HOME/.config/gcompris]. Alternate is to set "
-"$XDG_CONFIG_HOME."
+"Shared directory location, for profiles and board-configuration data: "
+"[$HOME/.gcompris/shared]"
 msgstr ""
+"profiller ve panel ayarları için dizin adresi: "
+"[$HOME/.gcompris/shared]"
 
-#: ../src/gcompris/gcompris.c:194
-#, fuzzy
-msgid "The location of user directories: [$HOME/My GCompris]"
+#: ../src/gcompris/gcompris.c:165
+msgid "The location of user directories: [$HOME/.gcompris/users]"
 msgstr "Kullanıcı dizinlerinin yeri:  [$HOME/.gcompris/users]"
 
-#: ../src/gcompris/gcompris.c:197
+#: ../src/gcompris/gcompris.c:167
 msgid "Run the experimental activities"
 msgstr "Deneysel etkinlikleri çalıştır"
 
-#: ../src/gcompris/gcompris.c:200
+#: ../src/gcompris/gcompris.c:169
 msgid "Disable the quit button"
 msgstr "Çıkış tuşunu iptal edin"
 
-#: ../src/gcompris/gcompris.c:203
+#: ../src/gcompris/gcompris.c:171
 msgid "Disable the config button"
 msgstr "ayar tuşunu iptal edin"
 
-#: ../src/gcompris/gcompris.c:208
-msgid "Display the resources on stdout based on the selected activities"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:212
-msgid ""
-"GCompris will get images, sounds and activity data from this server if not "
-"found locally."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:215
-msgid ""
-"Only when --server is provided, disable check for local resource first. Data "
-"are always taken from the web server."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:219
-msgid ""
-"In server mode, specify the cache directory used to avoid useless downloads."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:222
-msgid ""
-"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:225
-msgid "Do not display the background images of activities."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:228
-msgid "Do not avoid the execution of multiple instances of GCompris."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:859
-#, fuzzy, c-format
+#: ../src/gcompris/gcompris.c:788
+#, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
 "support its development, the Windows version provides only %d of the %d "
 "activities. You can get the full version for a small fee at\n"
 "<http://gcompris.net>\n"
-"The GNU/Linux version does not have this restriction. Note that GCompris is "
+"The Linux version does not have this restriction. Note that GCompris is "
 "being developed to free schools from monopolistic software vendors. If you "
 "also believe that we should teach freedom to children, please consider using "
 "GNU/Linux. Get more information at FSF:\n"
 "<http://www.fsf.org/philosophy>"
 msgstr ""
-"Gcompris GPL lisansı altında geliştirilmiş özgür yazılımdır. Gelişimi "
-"desteklemek için Windows versiyonunda sadece %d nin %d etkinlikleri "
-"bulunmaktadır. Tüm halini az bir ücretle \n"
-"<http://gcompris.net>\n"
-" adresinden alabilirsiniz. Linux versiyonunda bu kısıtlama yoktur. Eğer "
-"sizde özgürlüğü çocuklara öğretmemiz gerektiğine inanıyorsanız daha fazla "
-"bilgi için\n"
+"Gcompris GPL lisansı altında geliştirilmiş özgür yazılımdır. Gelişimi desteklemek için Windows "
+"versiyonunda sadece %d nin %d etkinlikleri bulunmaktadır. Tüm halini az bir ücretle \n"
+"<http://gcompris.net>\n adresinden alabilirsiniz. "
+"Linux versiyonunda bu kısıtlama yoktur. Eğer sizde özgürlüğü çocuklara öğretmemiz gerektiğine inanıyorsanız daha fazla bilgi için\n"
 " <http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1447
-#, c-format
-msgid ""
-"GCompris won't start because the lock file is less than %d seconds old.\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1449
-#, c-format
-msgid "The lock file is: %s\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1579
+#: ../src/gcompris/gcompris.c:1172
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6266,217 +5650,51 @@ msgstr ""
 " daha fazla bilgi için http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1663
+#: ../src/gcompris/gcompris.c:1258
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Etkinliğe direk erişmek için -l  kullanın.\n"
 
-#: ../src/gcompris/gcompris.c:1664
+#: ../src/gcompris/gcompris.c:1259
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Varolan etkinlikler listesi:\n"
 
-#: ../src/gcompris/gcompris.c:1851
+#: ../src/gcompris/gcompris.c:1403
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Varolan profiller listesi:\n"
 
-#: ../src/gcompris/gcompris_db.c:266
+#: ../src/gcompris/gcompris_db.c:253
 msgid "Unaffected"
 msgstr "Etkilenmedi"
 
-#: ../src/gcompris/gcompris_db.c:267
+#: ../src/gcompris/gcompris_db.c:254
 msgid "Users without a class"
 msgstr "Sınıfı olmayan kullanıcılar"
 
-#: ../src/gcompris/help.c:197
+#: ../src/gcompris/help.c:200
 msgid "Prerequisite"
 msgstr "Giriş Koşulu"
 
-#: ../src/gcompris/help.c:225
+#: ../src/gcompris/help.c:228
 msgid "Goal"
 msgstr "Amaç"
 
-#: ../src/gcompris/help.c:253
+#: ../src/gcompris/help.c:256
 msgid "Manual"
 msgstr "El Kitabı"
 
-#: ../src/gcompris/help.c:281
+#: ../src/gcompris/help.c:284
 msgid "Credit"
 msgstr "Hazırlayanlar"
 
-#: ../src/gcompris/properties.c:503 ../src/gcompris/properties.c:510
-#, fuzzy
-msgid "readme"
-msgstr "kırmızı"
-
-#: ../src/gcompris/properties.c:505
-msgid ""
-"This directory contains the files you create with the GCompris educational "
-"suite\n"
-msgstr ""
-
-#: ../src/gcompris/properties.c:512
-msgid ""
-"Put any number of images in this directory.\n"
-"You can include these images in your drawings and animations.\n"
-"The image formats supported are jpeg, png and svg.\n"
-msgstr ""
-
-#: ../src/gcompris/timer.c:250
+#: ../src/gcompris/timer.c:235
 msgid "Time Elapsed"
 msgstr "Geçen Süre"
 
-#: ../src/gcompris/timer.c:339
+#: ../src/gcompris/timer.c:321
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "Kalan Süre = %d"
 
-#, fuzzy
-#~ msgid ""
-#~ "Fish are taken from the Unix utility xfishtank.\n"
-#~ "Images are taken from the National Undersea Research Program (NURP) "
-#~ "Collection\n"
-#~ "at &lt;http://www.photolib.noaa.gov&gt;\n"
-#~ "All image credits belong to the OAR/National Undersea Research Program "
-#~ "(NURP),\n"
-#~ "except for the first image, which is property of the University of North "
-#~ "Carolina at Wilmington.\n"
-#~ "The images used in each level are:\n"
-#~ "Location: Tropical Atlantic Ocean, Florida Keys (image nur00523) "
-#~ "Photographer: D. Kesling\n"
-#~ "Location: Florida Keys (image nur03006)\n"
-#~ "Location: Unknown (image nur03505)\n"
-#~ "Location: Unknown (image nur03010)\n"
-#~ "Location: Unknown (image nur03011)\n"
-#~ "Location: Unknown (image nur03013)"
-#~ msgstr ""
-#~ "Balıklar bir Unix aracı olan xfishtank'tan alınmıştır. Resimler http://"
-#~ "www.photolib.noaa.gov adresindeki Doğa Denizaltı Araştırma Programından "
-#~ "(NURP) alınmıştır. Tüm resim hakları OAR/Doğa Denizaltı Araştırma "
-#~ "Programına (NURP) aittir. Sadece başlangıçtaki resim Wilmington 'daki "
-#~ "Kuzey Karolina Üniversitesine aittir. Gcompris bölümlerindeki resimler "
-#~ "sırasıyla: Konum: Tropikal Atlantik Okyanusu, Florida Keys (resim "
-#~ "nur00523) Fotoğrafçı: D. Kesling Konum: Florida Keys (resim nur03006) "
-#~ "Konum: Bilinmiyor (resim nur03505) Konum Bilinmiyor (resim nur03010) "
-#~ "Konum: Blinmiyor (resim nur03011) Konum: Bilinmiyor (resim nur03013)"
-
-#~ msgid "Click anywhere in the line where you want to drop a piece"
-#~ msgstr "Satırda parçayı bırakmak istediğin yere tıkla"
-
-#~ msgid "Samuel Loyd"
-#~ msgstr "Samuel Loyd"
-
-#~ msgid "anticipate"
-#~ msgstr "önce davranmak"
-
-#~ msgid "logical"
-#~ msgstr "mantıksal"
-
-#~ msgid "move"
-#~ msgstr "hareket ettir"
-
-#~ msgid "puzzle"
-#~ msgstr "yap boz"
-
-#~ msgid "slide"
-#~ msgstr "kaydırma"
-
-#, fuzzy
-#~ msgid "taquin"
-#~ msgstr "mavimsi yeşil"
-
-#~ msgid "spruce"
-#~ msgstr "ladin ağacı"
-
-#~ msgid ""
-#~ "A simple click on an icon brings you to an activity or a menu of "
-#~ "activities.\n"
-#~ "At the bottom of the screen is the gcompris control bar.\n"
-#~ "The following icons are displayed from right to left.\n"
-#~ "(note that each icon is displayed only if available in the current "
-#~ "activity)\n"
-#~ "    Home - Back to previous menu or exit gcompris if at the top\n"
-#~ "    Thumb - OK. Confirm your answer\n"
-#~ "    Dice - Display the current level. Click to select another level\n"
-#~ "    Music note - Repeat the question\n"
-#~ "    Question Mark - Help\n"
-#~ "    Tool - The configuration menu\n"
-#~ "    Tux Plane - About game\n"
-#~ "The stars, show suitable age groups for each game:\n"
-#~ "    1, 2 or 3 simple stars  - 2 to 6 years old\n"
-#~ "    1, 2 or 3 complex stars - From 7 years old"
-#~ msgstr ""
-#~ "Kullanmak için sizi bir işleme veya menüye taşıyacak olan simgelere "
-#~ "tıklayın. Ekranın altında, gcompris kontrol çubuğu bulunmaktadır. Sağdan "
-#~ "sola, simegelerin anlamı gösterilmektedir. Bu simegeler sadece bir "
-#~ "işlemde geçerli olduklarında gösterilir.\n"
-#~ "    Başlangıç - Önceki pencereye döner veya son pencerede ise programdan "
-#~ "çıkar \n"
-#~ "    Başparmak - Cevabınızı onaylamak\n"
-#~ "    Zar - Oynanan seviyeyi gösteri. Başka seviye için tıklayın\n"
-#~ "    Soru İşareti -  Yardım \n"
-#~ "    Araç kutusu - Ayar menüsü\n"
-#~ "     Tux Uçağı - oyun hakkında\n"
-#~ "Yıldızlar her oyun için oyunar o yaş grubuna uygun olmalıdır.\n"
-#~ "1 , 2, veya 3 basit yıldız sadece 2-6 yaş için\n"
-#~ " 1,2 vaya 3 karmaşık yıldız 7 ve daha çok yaş için"
-
-#~ msgid ""
-#~ "GCompris is a collection of educational games that provides for children "
-#~ "from 2 years old with different activities."
-#~ msgstr ""
-#~ "GCompris 2 yaşından büyük çocuklar için bir grup eğitici oyundan oluşur."
-
-#~ msgid "Multiple activities for kids"
-#~ msgstr "Çocuklar için çeşitli etkinlikler"
-
-#, fuzzy
-#~ msgid "Couldn't open dir: %s"
-#~ msgstr "Resim dizini açılamadı: %s"
-
-#~ msgid "You need the python xml module. Disabling SVG."
-#~ msgstr "Python xml modülüne ihtiyacınız var. SVG'yi kapatılıyor."
-
-#~ msgid ""
-#~ "Python xml module not found. SVG is disabled. Install the python xml "
-#~ "module to enable SVG Save/restore."
-#~ msgstr ""
-#~ "Python xml modülü bulunamadı. SVG kapatıldı. SVG saklama/yükleme "
-#~ "yapabilmek için python xml modülünü kurun."
-
-#~ msgid "Cannot open file of words for your locale"
-#~ msgstr "Sizin bölgenizde kelimeler kütüğü açılamıyor"
-
-#~ msgid ""
-#~ "You have entered Edit mode\n"
-#~ "Move the puzzle items;\n"
-#~ "type 's' to save, and\n"
-#~ "'d' to display all the shapes"
-#~ msgstr ""
-#~ "Edit modundasınız\n"
-#~ "puzzle elemanlarını hareket ettirin;\n"
-#~ "'s' yazarak saklayın, ve\n"
-#~ "'d' yazarak tüm şekilleri görüntüleyin"
-
-#~ msgid ""
-#~ "The data from this activity are saved under\n"
-#~ "/tmp/gcompris-board.xml"
-#~ msgstr ""
-#~ "Bu etkinlikteki veriler\n"
-#~ "/tmp/gcompris-board.xml altında saklandı"
-
-#~ msgid "Submarine"
-#~ msgstr "Denizaltı"
-
-#~ msgid "Control the depth of a submarine"
-#~ msgstr "Denizaltının derinliğini kontrol edin"
-
-#~ msgid "Use alternate database for logs"
-#~ msgstr "Loglama için farklı veritabanı kullanın"
-
-#~ msgid ""
-#~ "Shared directory location, for profiles and board-configuration data: "
-#~ "[$HOME/.gcompris/shared]"
-#~ msgstr ""
-#~ "profiller ve panel ayarları için dizin adresi: [$HOME/.gcompris/shared]"

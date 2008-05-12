@@ -1,5 +1,21 @@
 	*** RELEASE 8.3.6 ***
 
+2008-05-12  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Removed non functional writing tutor activity to make room.
+	Removed non functional oscar and friends to make room
+
+	* boards/writing_tutor/anim_pen.txt:
+	* boards/writing_tutor_image_match.xml.in:
+	* boards/writing_tutor_missing_match.xml.in:
+	* boards/writing_tutor_pattern_admin.xml.in:
+	* boards/writing_tutor_template_match.xml.in:
+	* src/boards/python/writing_tutor_common.py:
+	* src/boards/python/writing_tutor_image_match.py:
+	* src/boards/python/writing_tutor_missing_match.py:
+	* src/boards/python/writing_tutor_pattern_admin.py:
+	* src/boards/python/writing_tutor_template_match.py:
+
 2008-05-05  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* boards/doubleclick.xml.in: Updated the manual, fixed the English text.

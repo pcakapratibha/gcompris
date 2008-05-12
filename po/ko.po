@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 22:12+0200\n"
+"POT-Creation-Date: 2006-11-10 23:44+0900\n"
 "PO-Revision-Date: 2006-09-14 07:04-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: \n"
@@ -407,12 +407,12 @@ msgstr "곱하기를 연습합니다"
 msgid "Go to Algebra activities"
 msgstr "사칙 연산 게임"
 
-#: ../boards/algebra_group.xml.in.h:2 ../boards/menu.xml.in.h:18
+#: ../boards/algebra_group.xml.in.h:2 ../boards/menu.xml.in.h:17
 msgid "Left-click the mouse on an activity to select it."
 msgstr "마우스 왼쪽 버튼을 이용해 활동들을 고르세요"
 
-#: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/erase_double_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -759,11 +759,11 @@ msgstr "골에 공을 넣으세요"
 
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
-#: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
-#: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
-#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
-#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
+#: ../boards/clickgame.xml.in.h:16 ../boards/connect4.xml.in.h:6
+#: ../boards/erase.xml.in.h:3 ../boards/erase_clic.xml.in.h:6
+#: ../boards/erase_double_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
+#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
+#: ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
 msgstr "마우스 조작"
 
@@ -788,8 +788,8 @@ msgid ""
 "Tux is in trouble, and needs to take his boat through a lock. Help Tux and "
 "find out how a canal lock works."
 msgstr ""
-"Tux에게 문제가 생겼습니다. 그의 보트는 수문을 통해 지나가야 합니다. Tux를 도"
-"와주고 어떻게 수문이 동작하는지 알아내세요."
+"Tux에게 문제가 생겼습니다. 그의 보트는 수문을 통해 지나가야 합니다. Tux를 도와주"
+"고 어떻게 수문이 동작하는지 알아내세요."
 
 #: ../boards/canal_lock.xml.in.h:3
 msgid ""
@@ -798,23 +798,6 @@ msgid ""
 msgstr ""
 "당신은 수문 담당입니다. 수문을 바른 순서대로 열어서 Tux가 여행할수 있게 만드"
 "세요"
-
-#: ../boards/chat.xml.in.h:1
-msgid "Chat with your friends"
-msgstr ""
-
-#: ../boards/chat.xml.in.h:2
-msgid "This chat activity only works on the local network"
-msgstr ""
-
-#: ../boards/chat.xml.in.h:3
-msgid ""
-"This chat activity will only work with other GCompris users on your local "
-"network, not on the Internet. To use it, just type in your message and hit "
-"Enter. Your message is then broadcast on the local network, and any GCompris "
-"program running the chat activity on that local network will receive and "
-"display your message."
-msgstr ""
 
 #: ../boards/chess.xml.in.h:1 ../boards/chess_computer.xml.in.h:3
 msgid "Play chess against the computer in a learning mode"
@@ -877,15 +860,15 @@ msgstr "짧은 이야기를 말해주세요"
 msgid "Moonwalker"
 msgstr "달을 걷는 사람"
 
-#: ../boards/chronos/board1_1.xml.in.h:1 ../src/boards/wordprocessor.c:118
+#: ../boards/chronos/board1_1.xml.in.h:1
 msgid "Autumn"
 msgstr "가을"
 
-#: ../boards/chronos/board1_1.xml.in.h:2 ../src/boards/wordprocessor.c:116
+#: ../boards/chronos/board1_1.xml.in.h:2
 msgid "Spring"
 msgstr "봄"
 
-#: ../boards/chronos/board1_1.xml.in.h:3 ../src/boards/wordprocessor.c:117
+#: ../boards/chronos/board1_1.xml.in.h:3
 msgid "Summer"
 msgstr "여름"
 
@@ -893,7 +876,7 @@ msgstr "여름"
 msgid "The 4 Seasons"
 msgstr "사계절"
 
-#: ../boards/chronos/board1_1.xml.in.h:5 ../src/boards/wordprocessor.c:119
+#: ../boards/chronos/board1_1.xml.in.h:5
 msgid "Winter"
 msgstr "겨울"
 
@@ -920,12 +903,11 @@ msgstr ""
 "증기 기관차"
 
 #: ../boards/chronos/board3_0.xml.in.h:4
-#, fuzzy
 msgid ""
 "Place each image in the order and\n"
 "on the date it was invented.\n"
 "If not sure, research online at wikipedia:\n"
-"http://www.wikipedia.org"
+"&lt;http://www.wikipedia.org&gt;"
 msgstr ""
 "각각의 이미지를 순서에 맞게 놓으세요\n"
 "발명된 순서를 따라서\n"
@@ -934,7 +916,7 @@ msgstr ""
 
 #: ../boards/chronos/board3_0.xml.in.h:8 ../boards/chronos/board3_1.xml.in.h:6
 #: ../boards/chronos/board3_2.xml.in.h:5 ../boards/chronos/board3_3.xml.in.h:7
-#: ../boards/chronos/board3_4.xml.in.h:5
+#: ../boards/chronos/board3_4.xml.in.h:4
 msgid "Transportation"
 msgstr "운송"
 
@@ -947,7 +929,7 @@ msgstr ""
 "열기구"
 
 #: ../boards/chronos/board3_1.xml.in.h:3 ../boards/chronos/board3_2.xml.in.h:4
-#: ../boards/chronos/board3_4.xml.in.h:4 ../boards/chronos/board4_0.xml.in.h:1
+#: ../boards/chronos/board3_4.xml.in.h:3 ../boards/chronos/board4_0.xml.in.h:1
 msgid "1880 Clement Ader's Eole"
 msgstr "1880년 아데르의 에올레 단엽기"
 
@@ -994,7 +976,7 @@ msgstr ""
 #: ../boards/chronos/board4_1.xml.in.h:3
 #, fuzzy
 msgid ""
-"1934 Hélène Boucher's\n"
+"1934 Helene Boucher's\n"
 "speed record of 444km/h"
 msgstr ""
 "1934년 브처의\n"
@@ -1010,7 +992,7 @@ msgstr ""
 
 #: ../boards/chronos/board4_2.xml.in.h:2
 #, fuzzy
-msgid "1878 Léon Bollé's \"La Mancelle\""
+msgid "1878 Leon Bolle's \"La Mancelle\""
 msgstr "1878년 La mancelle"
 
 #: ../boards/chronos/board4_2.xml.in.h:3
@@ -1033,27 +1015,12 @@ msgstr "1923년 란시아의 람다"
 
 #: ../boards/chronos/board4_3.xml.in.h:3
 #, fuzzy
-msgid "1955 Citroën ds 19"
+msgid "1955 Citroen ds 19"
 msgstr "1955 시트로앵의 19"
 
 #: ../boards/chronos/board4_3.xml.in.h:4
 msgid "Cars"
 msgstr "차들"
-
-#: ../boards/clickanddraw.xml.in.h:1
-#, fuzzy
-msgid "Click and draw"
-msgstr "물고기 클릭하기"
-
-#: ../boards/clickanddraw.xml.in.h:2
-#, fuzzy
-msgid "Draw the picture by clicking on each blue point in sequence."
-msgstr "파란 곳을 클릭해서 딸기를 찾으세요."
-
-#: ../boards/clickanddraw.xml.in.h:3
-#, fuzzy
-msgid "Draw the picture by clicking on the blue points."
-msgstr "파란 곳을 클릭해서 딸기를 찾으세요."
 
 #: ../boards/click_on_letter.xml.in.h:1
 msgid ""
@@ -1085,21 +1052,48 @@ msgstr "물고기 클릭하기"
 
 #: ../boards/clickgame.xml.in.h:2
 msgid ""
-"Fish are taken from the Unix utility xfishtank. All image credits belong to "
-"Guillaume Rousse."
+"Fish are taken from the Unix utility xfishtank.\n"
+"Images are taken from the National Undersea Research Program (NURP) "
+"Collection\n"
+"at &lt;http://www.photolib.noaa.gov&gt;\n"
+"All image credits belong to the OAR/National Undersea Research Program "
+"(NURP),\n"
+"except for the first image, which is property of the University of North "
+"Carolina at Wilmington.\n"
+"The images used in each level are:\n"
+"Location: Tropical Atlantic Ocean, Florida Keys (image nur00523) "
+"Photographer: D. Kesling\n"
+"Location: Florida Keys (image nur03006)\n"
+"Location: Unknown (image nur03505)\n"
+"Location: Unknown (image nur03010)\n"
+"Location: Unknown (image nur03011)\n"
+"Location: Unknown (image nur03013)"
 msgstr ""
+"물고기는 유닉스 유틸리티인 xfishtank에서 왔습니다..\n"
+"그림들은 NURP Collection에서 왔습니다.\n"
+"at &lt;http://www.photolib.noaa.gov&gt;\n"
+"모든 이미지는 NURP에 속합니다.\n"
+"the University of North Carolina at Wilmington의 소유의 첫번째 그림은 NURP에 "
+"속하지 않습니다.\n"
+"각 레벨에 사용된 이미지:\n"
+"위치: 열대 대서양 (image nur00523) 사진작가: D. Kesling\n"
+"위치: 플로리다  (image nur03006)\n"
+"위치: 알려지지 않음 (image nur03505)\n"
+"위치: 알려지지 않음 (image nur03010)\n"
+"위치: 알려지지 않음 (image nur03011)\n"
+"위치: 알려지지 않음 (image nur03013)"
 
-#: ../boards/clickgame.xml.in.h:3
+#: ../boards/clickgame.xml.in.h:14
 msgid ""
 "Left-Click with the mouse on all the swimming fish before they leave the "
 "fishtank"
 msgstr "물고기들이 화면을 나가기 전에 왼쪽 버튼을 클릭하세요"
 
-#: ../boards/clickgame.xml.in.h:4
+#: ../boards/clickgame.xml.in.h:15
 msgid "Motor coordination: moving and clicking the mouse."
 msgstr "움직이고 클릭하세요."
 
-#: ../boards/clickgame.xml.in.h:6
+#: ../boards/clickgame.xml.in.h:17
 msgid "Use the left mouse button to click on the moving fish."
 msgstr "움직이는 고기를 잡기위해 왼쪽 마우스 버튼을 이용해서 클릭하세요."
 
@@ -1170,16 +1164,13 @@ msgstr "기본장치를 이용한 간단한 게임"
 msgid "Play with computer peripherals."
 msgstr "키보드와 마우스를 이용한 게임."
 
-#: ../boards/connect4.xml.in.h:1 ../boards/connect4-2players.xml.in.h:1
+#: ../boards/connect4.xml.in.h:1
 msgid "Arrange four coins in a row"
 msgstr "4개의 코인을 행에 배열하세요"
 
-#: ../boards/connect4.xml.in.h:2 ../boards/connect4-2players.xml.in.h:2
-msgid ""
-"Click the position in the line where you want to drop a piece. You can also "
-"use the arrow keys to move the piece left or right, and the down or space "
-"key to drop a piece."
-msgstr ""
+#: ../boards/connect4.xml.in.h:2
+msgid "Click anywhere in the line where you want to drop a piece"
+msgstr "어디든지 당신이 놓고 싶은 곳을 클릭하세요"
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
@@ -1188,8 +1179,8 @@ msgstr "연결 4"
 #: ../boards/connect4.xml.in.h:4
 #, fuzzy
 msgid ""
-"Create a line of 4 pieces either horizontally (lying down), vertically "
-"(standing up) or diagonally."
+"Create a line of 4 pieces either horizontally (lying down) or vertically "
+"(standing up)"
 msgstr ""
 "4개의 조각으로 이뤄진 수평줄을 만드세요\n"
 "아니면 수직줄"
@@ -1203,31 +1194,6 @@ msgstr ""
 "이 컨텐츠는 다음 사이트에서 유래했습니다. &lt;http://forcedattack."
 "sourceforge.net&gt;"
 
-#: ../boards/connect4-2players.xml.in.h:3
-#, fuzzy
-msgid "Connect 4 (2 Players)"
-msgstr "바다 경주 (2명)"
-
-#: ../boards/connect4-2players.xml.in.h:4
-#, fuzzy
-msgid ""
-"Create a line of 4 pieces either horizontally (lying down) or vertically "
-"(standing up) or diagonally."
-msgstr ""
-"4개의 조각으로 이뤄진 수평줄을 만드세요\n"
-"아니면 수직줄"
-
-#: ../boards/connect4-2players.xml.in.h:6
-#, fuzzy
-msgid ""
-"The original code was written in 2005 by Laurent Lacheny. In 2006, Miguel de "
-"Izarra made the two players game. Images and Artificial Intelligence taken "
-"from project 4stattack by Jeroen Vloothuis. The original project can be "
-"found on &lt;http://forcedattack.sourceforge.net&gt;"
-msgstr ""
-"이 컨텐츠는 다음 사이트에서 유래했습니다. &lt;http://forcedattack."
-"sourceforge.net&gt;"
-
 #: ../boards/crane.xml.in.h:1
 msgid "Build the same model"
 msgstr "같은 모양 만들기"
@@ -1237,7 +1203,7 @@ msgid "Drive the crane and copy the model"
 msgstr "크래인을 조종해서 같은 모양을 만드세요"
 
 #: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_clic.xml.in.h:5 ../boards/erase_double_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "모터 코디네이션"
 
@@ -1314,23 +1280,6 @@ msgid ""
 msgstr ""
 "왼쪽의 그리기 도구에서 도구를, 밑에서 색깔을 선택한뒤에 판에 그리세요. 시간 "
 "절약을 위해서 마우스 가운데 버튼을 도형을 지우는데 사용할수 있습니다."
-
-#: ../boards/drawnumber.xml.in.h:1
-msgid "Can count from 1 to 50."
-msgstr ""
-
-#: ../boards/drawnumber.xml.in.h:2
-#, fuzzy
-msgid "Draw Number"
-msgstr "숫자"
-
-#: ../boards/drawnumber.xml.in.h:3
-msgid "Draw the picture by clicking on each numbers in the right order."
-msgstr ""
-
-#: ../boards/drawnumber.xml.in.h:4
-msgid "Draw the picture by following numbers"
-msgstr ""
 
 #: ../boards/electric.xml.in.h:1
 msgid "Create and simulate an electric schema"
@@ -1411,33 +1360,18 @@ msgstr ""
 "동물 사진은 동물 사진가 Ralf Schmode의 웹사이트 (&lt;http://schmode.net/&gt;)"
 "에서 인용했습니다. 감사합니다."
 
-#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:118
+#: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:113
 #: ../src/boards/machpuzzle.c:88
 msgid "Move the mouse"
 msgstr "마우스를 움직이세요"
 
-#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:119
+#: ../boards/erase.xml.in.h:5 ../src/boards/erase.c:114
 msgid "Move the mouse to erase the area and discover the background"
 msgstr "블럭을 지우고 배경을 보기위해 마우스를 움직이세요"
 
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "모든 블럭이 사라질때까지 마우스를 움직이세요."
-
-#: ../boards/erase_doubleclick.xml.in.h:2
-#, fuzzy
-msgid "Double click the mouse"
-msgstr "마우스를 더블 클릭하세요."
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-#, fuzzy
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr "모든 블럭이 없어질때까지 직사각형을 더블 클릭하세요"
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-#, fuzzy
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr "블럭을 지우고 배경을 보기위해 마우스를 더블 클릭하세요."
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -1449,8 +1383,19 @@ msgstr "직사각형을 모든 블록이 없어질때까지 클릭하세요."
 
 #: ../boards/erase_clic.xml.in.h:4
 msgid "Click the mouse to erase the area and discover the background"
-msgstr ""
-"블럭을 지우고 배경을 보기위해 마우스 왼쪽버튼으로 하얀 블럭들을 클릭하세요."
+msgstr "블럭을 지우고 배경을 보기위해 마우스 왼쪽버튼으로 하얀 블럭들을 클릭하세요."
+
+#: ../boards/erase_double_clic.xml.in.h:2
+msgid "Double-Click the mouse to erase the area and discover the background"
+msgstr "블럭을 지우고 배경을 보기위해 마우스를 더블 클릭하세요."
+
+#: ../boards/erase_double_clic.xml.in.h:3
+msgid "Double-click the mouse"
+msgstr "마우스를 더블 클릭하세요."
+
+#: ../boards/erase_double_clic.xml.in.h:4
+msgid "Double-click the mouse on rectangles until all the blocks disappear."
+msgstr "모든 블럭이 없어질때까지 직사각형을 더블 클릭하세요"
 
 #: ../boards/experience.xml.in.h:1
 msgid "Go to experiential activities"
@@ -1532,10 +1477,6 @@ msgstr "svg 그리기"
 msgid "svg mozilla animation"
 msgstr "svg 모질라 애니메이션"
 
-#: ../boards/gcompris/mimetypes/mime_type.xml.in.h:5
-msgid "wordprocessor text"
-msgstr ""
-
 #: ../boards/geography.xml.in.h:1
 msgid "Drag and Drop the items to redraw the whole map"
 msgstr "지형들을 전체 지도를 완성하기 위해 끌어 놓으세요"
@@ -1544,9 +1485,16 @@ msgstr "지형들을 전체 지도를 완성하기 위해 끌어 놓으세요"
 msgid "Locate the countries"
 msgstr "지형 맞추기 게임"
 
-#: ../boards/geography.xml.in.h:3 ../boards/geography_country.xml.in.h:3
+#: ../boards/geography.xml.in.h:3
 msgid "Mouse manipulation: movement, drag and drop"
 msgstr "마우스 조작: 움직임, 끌어 놓기."
+
+#: ../boards/geography.xml.in.h:4
+msgid ""
+"The map of Germany comes from Wikipedia and is released under the GNU Free "
+"Documentation License. Olaf Ronneberger and his children Lina and Julia "
+"Ronneberger created the German level."
+msgstr "독일 지도는 위키피디아에서 왔습니다."
 
 #: ../boards/geography/board1_0.xml.in.h:1
 #: ../boards/geography/board4_2.xml.in.h:1
@@ -1778,7 +1726,7 @@ msgstr "크로아티아"
 msgid "Cyprus"
 msgstr "키프로스"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:65
 msgid "Czech Republic"
 msgstr "체코"
 
@@ -1988,7 +1936,6 @@ msgid "Somalia"
 msgstr "소말리아"
 
 #: ../boards/geography/board4_0.xml.in.h:30
-#: ../boards/geography/board4_2.xml.in.h:33
 msgid "Sudan"
 msgstr "수단"
 
@@ -2065,7 +2012,7 @@ msgid "Republic of Congo"
 msgstr "콩고"
 
 #: ../boards/geography/board4_1.xml.in.h:15
-#: ../boards/geography/board4_2.xml.in.h:32
+#: ../boards/geography/board4_2.xml.in.h:33
 msgid "South Africa"
 msgstr "남 아프리카"
 
@@ -2092,53 +2039,18 @@ msgstr "잠비아"
 msgid "Zimbabwe"
 msgstr "짐배브위"
 
-#: ../boards/geography_country.xml.in.h:1
-#, fuzzy
-msgid "Drag and Drop the regions to redraw the whole country"
-msgstr "지형들을 전체 지도를 완성하기 위해 끌어 놓으세요"
+#: ../boards/geography/board4_2.xml.in.h:32
+msgid "Soudan"
+msgstr "수단"
 
-#: ../boards/geography_country.xml.in.h:2
-#, fuzzy
-msgid "Locate the region"
-msgstr "지형 맞추기 게임"
-
-#: ../boards/geography_country.xml.in.h:4
-msgid ""
-"The map of Germany comes from Wikipedia and is released under the GNU Free "
-"Documentation License. Olaf Ronneberger and his children Lina and Julia "
-"Ronneberger created the German level."
-msgstr "독일 지도는 위키피디아에서 왔습니다."
-
-#: ../boards/geography_country/board1_0.xml.in.h:1
+#: ../boards/geography/board5_0.xml.in.h:1
 msgid "Regions of France"
 msgstr "프랑스령"
 
-#: ../boards/geography_country/board2_0.xml.in.h:1
+#: ../boards/geography/board6_0.xml.in.h:1
 #, fuzzy
-msgid "Deutschland Bundesländer"
+msgid "Deutschland Bundeslander"
 msgstr "도이칠란드"
-
-#: ../boards/geography_country/board3_0.xml.in.h:1
-#, fuzzy
-msgid "Provincias Argentinas"
-msgstr "아르헨티나"
-
-#: ../boards/geography_country/board4_0.xml.in.h:1
-msgid "Polish Voivodship"
-msgstr ""
-
-#: ../boards/geography_country/board5_0.xml.in.h:1
-#: ../boards/geography_country/board5_2.xml.in.h:1
-msgid "Districts of Turkey"
-msgstr ""
-
-#: ../boards/geography_country/board5_1.xml.in.h:1
-msgid "Eastern Districts of Turkey"
-msgstr ""
-
-#: ../boards/geography_country/board6_0.xml.in.h:1
-msgid "Counties of Norway"
-msgstr ""
 
 #: ../boards/geometry.xml.in.h:1
 msgid "Geometry"
@@ -2156,11 +2068,11 @@ msgstr "키보드 조작"
 msgid "Letter association between the screen and the keyboard"
 msgstr "키보드와 모니터 사이의 글씨 조합"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:135
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "떨어지는 알파벳"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:136
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "땅에 닿기 전에 떨어지는 글자들을 치세요"
 
@@ -2606,7 +2518,7 @@ msgid "sofa"
 msgstr "소파"
 
 #: ../boards/imagename/board3_0.xml.in.h:7
-#: ../boards/imagename/board5_0.xml.in.h:4
+#: ../boards/imagename/board5_0.xml.in.h:5
 msgid "star"
 msgstr "별"
 
@@ -2623,13 +2535,16 @@ msgid "grater"
 msgstr "강판"
 
 #: ../boards/imagename/board4_0.xml.in.h:7
-#: ../boards/imagename/board5_0.xml.in.h:5
 msgid "tree"
 msgstr "나무"
 
 #: ../boards/imagename/board5_0.xml.in.h:2
 msgid "pencil"
 msgstr "연필"
+
+#: ../boards/imagename/board5_0.xml.in.h:4
+msgid "spruce"
+msgstr "전나무"
 
 #: ../boards/imagename/board5_0.xml.in.h:6
 msgid "truck"
@@ -2751,7 +2666,8 @@ msgstr "마법의 모자"
 
 #: ../boards/magic_hat_minus.xml.in.h:1
 msgid "Count how many items are under the magic hat after some have got away"
-msgstr "몇개가 없어진 뒤에 얼마나 많은 별이 마법의 모자 밑에 있는지 세세요."
+msgstr ""
+"몇개가 없어진 뒤에 얼마나 많은 별이 마법의 모자 밑에 있는지 세세요."
 
 #: ../boards/magic_hat_minus.xml.in.h:2
 msgid "Learn subtraction"
@@ -3265,22 +3181,20 @@ msgstr ""
 "께 게임을 할 수 있고 게임을 이기려면 Tux보다 많은 짝을 찾으세요."
 
 #: ../boards/menu.xml.in.h:1
-#, fuzzy
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of "
 "activities.\n"
-"At the bottom of the screen is the GCompris control bar.\n"
+"At the bottom of the screen is the gcompris control bar.\n"
 "The following icons are displayed from right to left.\n"
 "(note that each icon is displayed only if available in the current "
 "activity)\n"
-"    Home - Exit an activity, go back to menu\n"
+"    Home - Back to previous menu or exit gcompris if at the top\n"
 "    Thumb - OK. Confirm your answer\n"
 "    Dice - Display the current level. Click to select another level\n"
-"    Lips - Repeat the question\n"
+"    Music note - Repeat the question\n"
 "    Question Mark - Help\n"
 "    Tool - The configuration menu\n"
 "    Tux Plane - About GCompris\n"
-"    Night - Quit GCompris\n"
 "The stars show suitable age groups for each game:\n"
 "    1, 2 or 3 simple stars  - from 2 to 6 years old\n"
 "    1, 2 or 3 complex stars - 7 years and up"
@@ -3300,21 +3214,20 @@ msgstr ""
 "    1, 2, 3 개 단순한 별 - 2~6세\n"
 "    1, 2, 3 개 복잡한 별 - 7세 이상"
 
-#: ../boards/menu.xml.in.h:16
+#: ../boards/menu.xml.in.h:15
 msgid "GCompris Main Menu"
 msgstr "GCompris 메인 매뉴"
 
-#: ../boards/menu.xml.in.h:17 ../src/boards/menu2.c:1007
+#: ../boards/menu.xml.in.h:16 ../src/boards/menu2.c:1009
 msgid ""
 "GCompris is a collection of educational games that provides different "
 "activities for children aged 2 and up."
 msgstr ""
 "GCompris는 2세 이상의 어린이를 위한 활동들을 모아 놓은 교육 게임입니다."
 
-#: ../boards/menu.xml.in.h:19
-#, fuzzy
+#: ../boards/menu.xml.in.h:18
 msgid ""
-"The goal of GCompris is to provide a free alternative to popular proprietary "
+"The goal of gcompris is to provide a free alternative to popular proprietary "
 "edutainment software"
 msgstr ""
 "gcompris의 목적은 대중 교육 소프트웨어 무료 대체물을 제공하는것 입니다."
@@ -3661,7 +3574,7 @@ msgstr "헬리콥터를 움직여서 알맞는 순서의 구름을 잡으세요"
 msgid "Number"
 msgstr "숫자"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:75
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "헬기"
 
@@ -3674,8 +3587,7 @@ msgid "Various puzzles."
 msgstr "여러가지 퍼즐."
 
 #: ../boards/pythontest.xml.in.h:1
-#, fuzzy
-msgid "Add a language-binding to GCompris."
+msgid "Add a language-binding to gcompris."
 msgstr "Add a language-binding to gcompris."
 
 #: ../boards/pythontest.xml.in.h:2
@@ -3820,7 +3732,8 @@ msgstr "수직 읽기 연습"
 
 #: ../boards/redraw.xml.in.h:1
 msgid "Copy a drawing from the box on the right into the box on the left."
-msgstr "오른쪽 상자에서 그림을 복사해서 왼쪽 상자에 넣으세요."
+msgstr ""
+"오른쪽 상자에서 그림을 복사해서 왼쪽 상자에 넣으세요."
 
 #: ../boards/redraw.xml.in.h:2
 msgid ""
@@ -3885,16 +3798,25 @@ msgstr "물고기 먹기"
 #: ../boards/reversecount.xml.in.h:4
 msgid "Tux is hungry. Help him find fish by counting to the correct ice spot."
 msgstr ""
-"Tux는 배가 고파요. 알맞는 주사위의 점의 갯수를 세어서 물고기를 찾아 Tux를 도"
-"와주세요."
+"Tux는 배가 고파요. 알맞는 주사위의 점의 갯수를 세어서 물고기를 찾아 Tux를 도와주세"
+"요."
+
+#: ../boards/scales/board1_0.xml.in.h:1 ../boards/scales/board1_1.xml.in.h:1
+#: ../boards/scales/board1_2.xml.in.h:1 ../boards/scales/board1_3.xml.in.h:1
+#: ../boards/scales/board1_4.xml.in.h:1 ../boards/scales/board1_5.xml.in.h:1
+#: ../boards/scales/board2_0.xml.in.h:1 ../boards/scales/board2_1.xml.in.h:1
+#: ../boards/scales/board2_2.xml.in.h:1 ../boards/scales/board2_3.xml.in.h:1
+#: ../boards/scales/board2_4.xml.in.h:1 ../boards/scales/board2_5.xml.in.h:1
+#: ../boards/scales/board3_0.xml.in.h:1 ../boards/scales/board3_1.xml.in.h:1
+#: ../boards/scales/board3_2.xml.in.h:1 ../boards/scales/board3_3.xml.in.h:1
+#: ../boards/scales/board3_4.xml.in.h:1 ../boards/scales/board3_5.xml.in.h:1
+#: ../boards/scalesboard.xml.in.h:2
+msgid "Drag and Drop masses to balance the scales"
+msgstr "물건들을 끌어 놓아서 저울의 균형을 맞추세요"
 
 #: ../boards/scalesboard.xml.in.h:1
 msgid "Balance the scales properly"
 msgstr "저울의 균형을 맞추세요"
-
-#: ../boards/scalesboard.xml.in.h:2
-msgid "Drag and Drop masses to balance the scales"
-msgstr "물건들을 끌어 놓아서 저울의 균형을 맞추세요"
 
 #: ../boards/scalesboard.xml.in.h:3
 msgid "Mental calculation, arithmetic equality"
@@ -3911,10 +3833,9 @@ msgstr ""
 "간되었습니다"
 
 #: ../boards/scalesboard.xml.in.h:5
-#, fuzzy
 msgid ""
-"To balance the scales, move the masses on the left or the right side. The "
-"masses can be arranged in any order."
+"To balance the scales, move the masses on the left side. The masses can be "
+"arranged in any order."
 msgstr ""
 "저울의 균형을 맞추려면 왼쪽의 물건들을 움직이세요. 물건들의 순서는 상관없습니"
 "다."
@@ -3923,20 +3844,17 @@ msgstr ""
 msgid "Direct your boat accurately to win the race."
 msgstr "보트를 정확하게 향해서 경주를 이기세요."
 
-#: ../boards/searace.xml.in.h:2
-#, fuzzy
+#: ../boards/searace.xml.in.h:2 ../boards/searace1player.xml.in.h:2
 msgid ""
-"In the text entry, enter one command per line, to control your boat.\n"
+"In the text entry, enter one command per line, to control your boat. "
 "Commands supported are displayed between the two entry areas. The 'left' and "
 "'right' commands must be followed by an angle in degrees. The angle value is "
 "also called a 'parameter' to the left or right command. By default 45 "
 "degrees is used. The 'forward' command accepts a distance parameter. By "
-"default 1 is used.\n"
-"For example:\n"
-"- left 90: Make a perpendicular left turn\n"
-"- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
-"The goal is to reach the right of the screen (the red line). When done, you "
-"can try to improve your program and start a new race with the same weather "
+"default 1 is used. For example: left 90 => Make a perpendicular left turn "
+"forward 10 => Go forward for 10 units (as displayed on the ruler). The goal "
+"is to reach the right of the screen (the red line). When done, you can try "
+"to improve your program and start a new race with the same weather "
 "conditions by using the retry button. You can click and drag your mouse "
 "anywhere on the map to get a measurement in distance and angle. Going to the "
 "next level will give you more complex weather conditions."
@@ -3951,7 +3869,7 @@ msgstr ""
 "와 거리를 조절하기 위해서 마우스는 어디서나 클릭하고 드래그 할수있습니다. 다"
 "음 단계로 가면 더 복잡한 환경에서 게임을 하게 됩니다."
 
-#: ../boards/searace.xml.in.h:8 ../boards/searace1player.xml.in.h:7
+#: ../boards/searace.xml.in.h:3 ../boards/searace1player.xml.in.h:3
 msgid ""
 "In this activity, you will learn how to enter commands into a computer. Even "
 "if the language is extremely basic, you learn here how to think ahead and "
@@ -3962,7 +3880,7 @@ msgstr ""
 "도 어떻게 생각하고 프로그램을 만드는지 배우게 됩니다. 이 활동은 아이들에게 프"
 "로그래밍의 개념을 소개하는데 사용 될 수 있습니다."
 
-#: ../boards/searace.xml.in.h:9
+#: ../boards/searace.xml.in.h:4
 msgid "Sea race (2 Players)"
 msgstr "바다 경주 (2명)"
 
@@ -3970,35 +3888,7 @@ msgstr "바다 경주 (2명)"
 msgid "Give good instructions to your ship in order to be first in the race."
 msgstr "경주에 이기려면 자기 배를 잘 조종하세요."
 
-#: ../boards/searace1player.xml.in.h:2
-#, fuzzy
-msgid ""
-"In the text entry, enter one command per line, to control your boat. "
-"Commands supported are displayed between the two entry areas. The 'left' and "
-"'right' commands must be followed by an angle in degrees. The angle value is "
-"also called a 'parameter' to the left or right command. By default 45 "
-"degrees is used. The 'forward' command accepts a distance parameter. By "
-"default 1 is used.\n"
-"For example:\n"
-"- left 90: Make a perpendicular left turn\n"
-"- forward 10: Go forward for 10 units (as displayed on the ruler).\n"
-"The goal is to reach the right of the screen (the red line). When done, you "
-"can try to improve your program and start a new race with the same weather "
-"conditions by using the retry button. You can click and drag your mouse "
-"anywhere on the map to get a measurement in distance and angle. Going to the "
-"next level will give you more complex weather conditions."
-msgstr ""
-"보트를 조종하려면 텍스트 목록에서 한줄에 한개씩 명령어를 입력하세요 실행되는 "
-"명령들은 목록영역 사이에 표시뒵니다. '왼쪽'과 '오른쪽' 명령은 각도에 따라야 "
-"합니다. 각도값은 왼쪽과 오른쪽 명령에 대해 '변수'입니다. 초기값은 45도 입니"
-"다. '앞으로' 명령은 거리 변수를 받습니다. 초기값은 1 입니다. 예: 왼쪽 90 => "
-"수직 왼쪽 회전하기 앞으로 10 => 앞으로 10 유닛(자에 나타난것에 따라) 가기. 목"
-"표는 화면의 오른쪽에 도달하는것 입니다(빨간줄). 도달되면, 프로그램을 향상시킬"
-"수 있고 재시작 버튼을 이용해서 같은 환경에서 게임을 다시 할 수 있습니다. 각도"
-"와 거리를 조절하기 위해서 마우스는 어디서나 클릭하고 드래그 할수있습니다. 다"
-"음 단계로 가면 더 복잡한 환경에서 게임을 하게 됩니다."
-
-#: ../boards/searace1player.xml.in.h:8
+#: ../boards/searace1player.xml.in.h:4
 msgid "Sea race (Single Player)"
 msgstr "바다 경주 (1명)"
 
@@ -4043,11 +3933,9 @@ msgid "Strategy games like chess, connect4, ..."
 msgstr "전술 게임(체스, connect4, ..."
 
 #: ../boards/submarine.xml.in.h:1
-#, fuzzy
 msgid ""
 "Click on different active elements : engine, rudders and air tanks, in order "
-"to navigate to the required depth. There is a close gate on the right. Catch "
-"the jewel to open it, then pass through it to reach the next level."
+"to navigate to the required depth."
 msgstr ""
 "요구되는 깊이까지 가기 위해서 다른 추진 요소를 클릭하세요 : 엔진, 방향키, 공"
 "기탱크."
@@ -4276,7 +4164,7 @@ msgstr ""
 "Tux가 보트에서 긴 낚시를 끝내고 돌아왔습니다. 수도 시스템을 활성화 시켜서 샤"
 "워를 할수 있도록 하세요."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
 msgid "Falling Words"
 msgstr "떨어지는 단어"
 
@@ -4288,38 +4176,9 @@ msgstr "키보드 훈련"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "떨어지는 단어를 땅에 닿기 전에 정확히 입력하세요"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:112
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
 msgid "Type the falling words before they reach the ground"
 msgstr "떨어지는 단어를 땅에 닿기 전에 입력하세요"
-
-#: ../boards/wordprocessor.xml.in.h:1
-msgid "A simple word processor to enter and save any text"
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:2
-msgid ""
-"In this wordprocessor you can type the text you want, save and get it back "
-"later. You can add some style to your text by using the buttons on the left. "
-"The first 4 buttons let you select the style of the line on which your "
-"insert cursor is. The 2 others buttons with multiple choices let you select "
-"from a predefined document and color theme."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:3
-msgid ""
-"Learn how to enter text in a wordprocessor. This wordprocessor is special in "
-"that it enforces the use of styles. This way, the children will understand "
-"their benefit when moving to more feature full wordprocessor like OpenOffice."
-"org."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:4
-msgid "The children can type their own text or copy one given by the teacher."
-msgstr ""
-
-#: ../boards/wordprocessor.xml.in.h:5
-msgid "Your word processor"
-msgstr ""
 
 #: ../gcompris-edit.desktop.in.h:1
 msgid "Administration for gcompris"
@@ -4337,28 +4196,23 @@ msgstr "교육 도우미 GCompris"
 msgid "Multi-activity educational game"
 msgstr "여러가지 교육 활동 게임"
 
-#. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:182 ../src/boards/memory.c:846
-msgid "+-×÷"
-msgstr ""
-
-#: ../src/boards/awele.c:350 ../src/boards/awele.c:360
+#: ../src/boards/awele.c:352 ../src/boards/awele.c:362
 msgid "NORTH"
 msgstr "북쪽"
 
-#: ../src/boards/awele.c:372 ../src/boards/awele.c:382
+#: ../src/boards/awele.c:374 ../src/boards/awele.c:384
 msgid "SOUTH"
 msgstr "남쪽"
 
-#: ../src/boards/awele.c:551
+#: ../src/boards/awele.c:553
 msgid "Choose a house"
 msgstr "집을 선택하세요"
 
-#: ../src/boards/awele.c:679
+#: ../src/boards/awele.c:681
 msgid "Your turn to play ..."
 msgstr "당신이 할 차례 입니다"
 
-#: ../src/boards/awele.c:748
+#: ../src/boards/awele.c:750
 msgid "Not allowed! Try again !"
 msgstr "안됩니다! 다시 해보세요 !"
 
@@ -4366,11 +4220,11 @@ msgstr "안됩니다! 다시 해보세요 !"
 msgid "Error: The external program gnuchess died unexpectedly"
 msgstr ""
 
-#: ../src/boards/chess.c:199
+#: ../src/boards/chess.c:194
 #, fuzzy
 msgid ""
 "Error: The external program gnuchess is required\n"
-"to play chess in GCompris.\n"
+"to play chess in gcompris.\n"
 "Find this program on http://www.rpmfind.net or in your\n"
 "GNU/Linux distribution\n"
 "And check it is located here: "
@@ -4381,7 +4235,7 @@ msgstr ""
 "GNU/Linux 배포\n"
 "그리고 이곳에 있는지 확인해 보세요: "
 
-#: ../src/boards/chess.c:244
+#: ../src/boards/chess.c:236
 #, fuzzy
 msgid ""
 "Error: The external program gnuchess is mandatory\n"
@@ -4394,40 +4248,40 @@ msgstr ""
 "GNU/Linux 배포\n"
 "그리고 이곳에 있는지 확인해 보세요: "
 
-#: ../src/boards/chess.c:587
+#: ../src/boards/chess.c:579
 msgid "White's Turn"
 msgstr "흰색 차례"
 
-#: ../src/boards/chess.c:587
+#: ../src/boards/chess.c:579
 msgid "Black's Turn"
 msgstr "검은색 차례"
 
-#: ../src/boards/chess.c:731
+#: ../src/boards/chess.c:723
 msgid "White checks"
 msgstr "흰색 체크"
 
-#: ../src/boards/chess.c:733
+#: ../src/boards/chess.c:725
 msgid "Black checks"
 msgstr "검은색 체크"
 
-#: ../src/boards/chess.c:1090
+#: ../src/boards/chess.c:1082
 msgid "Black mates"
 msgstr "검은색 체크당함"
 
-#: ../src/boards/chess.c:1095
+#: ../src/boards/chess.c:1087
 msgid "White mates"
 msgstr "흰색 체크당함"
 
-#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:355
-#: ../src/gcompris/bonus.c:364
+#: ../src/boards/chess.c:1092 ../src/gcompris/bonus.c:342
+#: ../src/gcompris/bonus.c:351
 msgid "Drawn game"
 msgstr "그리기 게임"
 
-#: ../src/boards/chess.c:1128
+#: ../src/boards/chess.c:1120
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr ""
 
-#: ../src/boards/click_on_letter.c:259 ../src/boards/memory.c:813
+#: ../src/boards/click_on_letter.c:259 ../src/boards/memory.c:827
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -4442,16 +4296,16 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:233
-#: ../src/boards/memory.c:835
+#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:231
+#: ../src/boards/memory.c:848
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
 #: ../src/boards/click_on_letter.c:286
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Error: this activity requires that you first install\n"
-"the packages with GCompris voices for the locale '%s' or '%s'"
+"the packages with gcompris voices for the locale '%s' or '%s'"
 msgstr ""
 "오류: 이 활동은 처음 설치한것이 필요합니다\n"
 "gcompris 소리 꾸러미의 위치는 '%s' or '%s'입니다."
@@ -4466,98 +4320,65 @@ msgstr ""
 "오류: 이 활동은 처음 설치한 것이 필요합니다\n"
 "gcompris 소리 꾸러미의 위치는 '%s'입니다! 영어로 돌아가세요, 죄송합니다"
 
-#. Init configuration window:
-#. all the configuration functions will use it
-#. all the configuration functions returns values for their key in
-#. the dict passed to the apply_callback
-#. the returned value is the main GtkVBox of the window,
-#. we can add what you want in it.
-#: ../src/boards/click_on_letter.c:623 ../src/boards/colors.c:165
-#: ../src/boards/gletters.c:859 ../src/boards/imageid.c:749
-#: ../src/boards/missingletter.c:771
-#: ../src/boards/python/admin/board_list.py:641
-#: ../src/boards/python/admin/board_list.py:659
-#: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
-#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
-#: ../src/boards/reading.c:833 ../src/boards/scale.c:862
-#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:592
-#, c-format, python-format
-msgid ""
-"<b>%s</b> configuration\n"
-" for profile <b>%s</b>"
-msgstr ""
-"<b>%s</b> 조합\n"
-" for profile <b>%s</b>"
-
 #. toggle box
-#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:892
+#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:898
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "대문자만 있는 글"
 
-#: ../src/boards/clockgame.c:550 ../src/boards/clockgame.c:560
+#: ../src/boards/clockgame.c:552 ../src/boards/clockgame.c:562
 msgid "Set the watch to:"
 msgstr "시계를 맞추세요:"
 
-#: ../src/boards/colors.c:56
+#: ../src/boards/colors.c:54
 msgid "Click on the blue duck"
 msgstr "파란 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:57
+#: ../src/boards/colors.c:55
 msgid "Click on the brown duck"
 msgstr "갈색 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:58
+#: ../src/boards/colors.c:56
 msgid "Click on the green duck"
 msgstr "초록색 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:59
+#: ../src/boards/colors.c:57
 msgid "Click on the grey duck"
 msgstr "회색 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:60
+#: ../src/boards/colors.c:58
 msgid "Click on the orange duck"
 msgstr "오랜지색 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:61
+#: ../src/boards/colors.c:59
 msgid "Click on the purple duck"
 msgstr "보라색 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:62
+#: ../src/boards/colors.c:60
 msgid "Click on the red duck"
 msgstr "빨간 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:63
+#: ../src/boards/colors.c:61
 msgid "Click on the yellow duck"
 msgstr "노란 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:64
+#: ../src/boards/colors.c:62
 msgid "Click on the black duck"
 msgstr "검은 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:65
+#: ../src/boards/colors.c:63
 msgid "Click on the white duck"
 msgstr "흰색 오리를 클릭하세요"
 
-#: ../src/boards/colors.c:177 ../src/boards/python/admin/board_list.py:671
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
-msgid "Select sound locale"
-msgstr "소리의 위치를 선택하세요"
-
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:229 ../src/boards/memory.c:831
+#: ../src/boards/gletters.c:227 ../src/boards/memory.c:844
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:239 ../src/boards/memory.c:841
+#: ../src/boards/gletters.c:237 ../src/boards/memory.c:854
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-#: ../src/boards/gletters.c:888 ../src/boards/smallnumbers.c:610
-#, fuzzy
-msgid "Enable sounds"
-msgstr "현장 소리"
 
 #: ../src/boards/hanoi.c:332 ../src/boards/hanoi.c:343
 msgid ""
@@ -4569,7 +4390,7 @@ msgstr "오른쪽에서 본 것과 같은 탑을 빈 공간에 지으세요."
 msgid "Tower of Hanoi"
 msgstr "하노이 탑"
 
-#: ../src/boards/hanoi_real.c:277 ../src/boards/hanoi_real.c:288
+#: ../src/boards/hanoi_real.c:273 ../src/boards/hanoi_real.c:284
 msgid "Move the entire stack to the right peg, one disc at a time"
 msgstr "쌓은것 모두를 오른쪽 쐐기 디스크에 한번에 옮기세요"
 
@@ -4578,16 +4399,16 @@ msgid "Learn how to read"
 msgstr "읽는법 배우기"
 
 #: ../src/boards/leftright.c:277 ../src/boards/leftright.c:287
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:548 ../src/boards/python/searace.py:857
-#: ../src/boards/python/searace.py:890 ../src/boards/python/searace.py:981
+#: ../src/boards/python/searace.py:428 ../src/boards/python/searace.py:453
+#: ../src/boards/python/searace.py:543 ../src/boards/python/searace.py:855
+#: ../src/boards/python/searace.py:888 ../src/boards/python/searace.py:985
 msgid "left"
 msgstr "왼쪽"
 
 #: ../src/boards/leftright.c:297 ../src/boards/leftright.c:307
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:557 ../src/boards/python/searace.py:859
-#: ../src/boards/python/searace.py:892 ../src/boards/python/searace.py:975
+#: ../src/boards/python/searace.py:428 ../src/boards/python/searace.py:453
+#: ../src/boards/python/searace.py:552 ../src/boards/python/searace.py:857
+#: ../src/boards/python/searace.py:890 ../src/boards/python/searace.py:979
 msgid "right"
 msgstr "오른쪽"
 
@@ -4602,19 +4423,24 @@ msgid ""
 "Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "자기의 위치를 보고 계속 움직이기 위해 3D 상태로 전환하세요"
 
-#: ../src/boards/memory.c:266
+#: ../src/boards/memory.c:287
 msgid "Memory"
 msgstr "기억"
 
-#: ../src/boards/memory.c:267
+#: ../src/boards/memory.c:288
 msgid "Find the matching pair"
 msgstr "알맞는 짝을 찾으세요"
 
-#: ../src/boards/menu2.c:133
+#. TRANSLATORS: Put here the mathematical operators "+-?" for  your language.
+#: ../src/boards/memory.c:859
+msgid "+-×÷"
+msgstr ""
+
+#: ../src/boards/menu2.c:131
 msgid "Main Menu Second Version"
 msgstr "메인 메뉴 두번째 버젼"
 
-#: ../src/boards/menu2.c:134
+#: ../src/boards/menu2.c:132
 msgid "Select a Board"
 msgstr "보드를 선택하세요"
 
@@ -4629,24 +4455,15 @@ msgstr "$ %.2f"
 msgid "$ %.0f"
 msgstr "$ %.0f"
 
-#: ../src/boards/paratrooper.c:438
-msgid "Control fall speed with up and down arrow keys."
-msgstr ""
-
-#: ../src/boards/planegame.c:76
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "알맞는 순서로 구름을 잡기 위해 비행기를 움직이세요"
 
-#: ../src/boards/python.c:63 ../src/boards/python.c:87
+#: ../src/boards/python.c:62 ../src/boards/python.c:86
 msgid "Python Board"
 msgstr "비단뱀 보드"
 
-#: ../src/boards/python.c:64
-#, fuzzy
-msgid "Special board that embeds python into GCompris."
-msgstr "비단뱀 보드를 gcompris에 포함하는 특별한 보드"
-
-#: ../src/boards/python.c:88
+#: ../src/boards/python.c:63 ../src/boards/python.c:87
 msgid "Special board that embeds python into gcompris."
 msgstr "비단뱀 보드를 gcompris에 포함하는 특별한 보드"
 
@@ -4693,20 +4510,20 @@ msgstr "메인 매뉴"
 #. image = gtk.image_new_from_stock(gtk.STOCK_PREFERENCES, gtk.ICON_SIZE_MENU)
 #. image.show()
 #. column_pref.set_widget(image)
-#: ../src/boards/python/admin/board_list.py:302
+#: ../src/boards/python/admin/board_list.py:292
 msgid "Active"
 msgstr "활동적"
 
-#: ../src/boards/python/admin/board_list.py:303
+#: ../src/boards/python/admin/board_list.py:293
 msgid "Board title"
 msgstr "보드 제목"
 
-#: ../src/boards/python/admin/board_list.py:419
+#: ../src/boards/python/admin/board_list.py:409
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
 msgstr "윤곽에서 필터보드의 난이도 %s"
 
-#: ../src/boards/python/admin/board_list.py:450
+#: ../src/boards/python/admin/board_list.py:440
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
@@ -4715,56 +4532,79 @@ msgstr ""
 "<span size='x-large'> 난이도 범위를 선택하세요 \n"
 "윤곽 에서 <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:61
+#. Init configuration window:
+#. all the configuration functions will use it
+#. all the configuration functions returns values for their key in
+#. the dict passed to the apply_callback
+#. the returned value is the main GtkVBox of the window,
+#. we can add what you want in it.
+#: ../src/boards/python/admin/board_list.py:631
+#: ../src/boards/python/admin/board_list.py:649
+#: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
+#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:183
+#, python-format
+msgid ""
+"<b>%s</b> configuration\n"
+" for profile <b>%s</b>"
+msgstr ""
+"<b>%s</b> 조합\n"
+" for profile <b>%s</b>"
+
+#: ../src/boards/python/admin/board_list.py:661
+#: ../src/boards/python/pythontest.py:473
+msgid "Select sound locale"
+msgstr "소리의 위치를 선택하세요"
+
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "반 편집"
 
-#: ../src/boards/python/admin/class_edit.py:66
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "반 편집: "
 
-#: ../src/boards/python/admin/class_edit.py:69
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "새 반 편집하기"
 
-#: ../src/boards/python/admin/class_edit.py:91
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "반:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:104
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "선생님:"
 
-#: ../src/boards/python/admin/class_edit.py:114
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "모든 사용자들을 이 반에 속하도록 지정하세요"
 
-#: ../src/boards/python/admin/class_edit.py:254
-#: ../src/boards/python/admin/group_edit.py:266
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:154
 #: ../src/boards/python/admin/user_list.py:196
 msgid "First Name"
 msgstr "이름"
 
-#: ../src/boards/python/admin/class_edit.py:265
-#: ../src/boards/python/admin/group_edit.py:277
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:164
 #: ../src/boards/python/admin/user_list.py:206
 msgid "Last Name"
 msgstr "성"
 
-#: ../src/boards/python/admin/class_edit.py:342
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "반에 이름을 알려 주어야 합니다"
 
-#: ../src/boards/python/admin/class_edit.py:388
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "같은 이름의 반이  있습니다"
 
 #: ../src/boards/python/admin/class_list.py:169
-#: ../src/boards/python/admin/profile_edit.py:270
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:144
 msgid "Class"
 msgstr "반"
@@ -4773,43 +4613,43 @@ msgstr "반"
 msgid "Teacher"
 msgstr "선생님"
 
-#: ../src/boards/python/admin/group_edit.py:61
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "그룹 편집하기"
 
-#: ../src/boards/python/admin/group_edit.py:67
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "그룹 편집: "
 
-#: ../src/boards/python/admin/group_edit.py:68
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr " 반: "
 
-#: ../src/boards/python/admin/group_edit.py:71
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "새 그룹 편집하기"
 
-#: ../src/boards/python/admin/group_edit.py:91
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "그룹:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:103
-#: ../src/boards/python/admin/profile_edit.py:99
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "설명:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:114
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "모든 사용자들을 이 그룹에 속하도록 지정하세요"
 
-#: ../src/boards/python/admin/group_edit.py:360
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "그룹에 이름 하나를 알려 주어야 합니다"
 
-#: ../src/boards/python/admin/group_edit.py:374
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "같은 이름의 그룹이 이미 있습니다"
 
@@ -4818,13 +4658,13 @@ msgid "Select a class:"
 msgstr "반을 선택하세요:"
 
 #: ../src/boards/python/admin/group_list.py:214
-#: ../src/boards/python/admin/profile_edit.py:280
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:154
 msgid "Group"
 msgstr "그룹"
 
 #: ../src/boards/python/admin/group_list.py:225
-#: ../src/boards/python/admin/profile_edit.py:290
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:164
 #: ../src/boards/python/admin/profile_list.py:198
 msgid "Description"
@@ -4839,64 +4679,8 @@ msgstr "먼저 목록에 있는 그룹을 선택해야 합니다"
 msgid "Birth Date"
 msgstr "생일"
 
-#: ../src/boards/python/admin/log_list.py:91
-#, fuzzy
-msgid "Select a user:"
-msgstr "반을 선택하세요:"
-
-#. Insert the ALL option (HACK, use the user_id -2 to indicate ALL)
-#: ../src/boards/python/admin/log_list.py:102
-msgid "All users"
-msgstr ""
-
-#: ../src/boards/python/admin/log_list.py:108
-#: ../src/boards/python/admin/log_list.py:287
-#: ../src/boards/python/admin/profile_list.py:121
-#: ../src/gcompris/board_config.c:668 ../src/gcompris/board_config.c:926
-msgid "Default"
-msgstr "초기값"
-
-#. Reset buttons
-#: ../src/boards/python/admin/log_list.py:162
-msgid "Reset"
-msgstr ""
-
-#: ../src/boards/python/admin/log_list.py:208
-#, fuzzy
-msgid "Date"
-msgstr "강판"
-
-#: ../src/boards/python/admin/log_list.py:218
-#, fuzzy
-msgid "User"
-msgstr "사용자"
-
-#: ../src/boards/python/admin/log_list.py:228
-#, fuzzy
-msgid "Board"
-msgstr "보드"
-
-#: ../src/boards/python/admin/log_list.py:238
-#: ../src/boards/python/redraw.py:347 ../src/boards/python/redraw.py:357
-msgid "Level"
-msgstr "레벨"
-
-#: ../src/boards/python/admin/log_list.py:248
-#, fuzzy
-msgid "Sublevel"
-msgstr "레벨"
-
-#: ../src/boards/python/admin/log_list.py:258
-#, fuzzy
-msgid "Duration"
-msgstr "숫자세기"
-
-#: ../src/boards/python/admin/log_list.py:268
-msgid "Status"
-msgstr ""
-
 #: ../src/boards/python/admin/module_boards.py:42
-#: ../src/boards/python/admin/module_boards.py:67
+#: ../src/boards/python/admin/module_boards.py:62
 msgid "Boards"
 msgstr "보드"
 
@@ -4910,50 +4694,49 @@ msgstr "그룹"
 msgid "Profiles"
 msgstr "프로필"
 
-#: ../src/boards/python/admin/module_reports.py:41
-#: ../src/boards/python/admin/module_reports.py:67
-msgid "Reports"
-msgstr ""
-
-#: ../src/boards/python/admin/module_reports.py:67
-#: ../src/boards/python/admin/module_users.py:41
-#: ../src/boards/python/admin/module_users.py:67
-msgid "Users"
-msgstr "사용자"
-
 #: ../src/boards/python/admin/module_users.py:41
 #: ../src/boards/python/admin/module_users.py:67
 msgid "Classes"
 msgstr "반"
 
-#: ../src/boards/python/admin/profile_edit.py:60
+#: ../src/boards/python/admin/module_users.py:41
+#: ../src/boards/python/admin/module_users.py:67
+msgid "Users"
+msgstr "사용자"
+
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "프로필 편집하기"
 
-#: ../src/boards/python/admin/profile_edit.py:65
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "프로필 편집: "
 
-#: ../src/boards/python/admin/profile_edit.py:68
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "새 프로필 편집하기"
 
-#: ../src/boards/python/admin/profile_edit.py:87
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "프로필:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:110
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "모든 그룹을 이 프로필에 속하도록 지정하세요"
 
-#: ../src/boards/python/admin/profile_edit.py:378
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "프로필에 하나의 이름은 제공 해야 합니다"
 
-#: ../src/boards/python/admin/profile_edit.py:400
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "같은 이름의 프로필이 이미 있습니다."
+
+#: ../src/boards/python/admin/profile_list.py:121
+#: ../src/gcompris/board_config.c:668 ../src/gcompris/board_config.c:832
+msgid "Default"
+msgstr "초기값"
 
 #: ../src/boards/python/admin/profile_list.py:188
 msgid "Profile"
@@ -4963,44 +4746,44 @@ msgstr "프로필"
 msgid "[Default]"
 msgstr "[초기값]"
 
-#: ../src/boards/python/admin/user_edit.py:51
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "사용자 편집하기"
 
-#: ../src/boards/python/admin/user_edit.py:56
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "사용자 편집하기 "
 
-#: ../src/boards/python/admin/user_edit.py:62
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "새 사용자 편집하기"
 
-#: ../src/boards/python/admin/user_edit.py:79
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "로그인:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:90
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "이름:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:99
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "성:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:108
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "생일:"
 
-#: ../src/boards/python/admin/user_edit.py:160
+#: ../src/boards/python/admin/user_edit.py:159
 msgid ""
 "You need to provide at least a login, first name and last name for your users"
 msgstr "당신의 유저를 위해서 한번의 로그인과 성과 이름을 제공해야 합니다."
 
-#: ../src/boards/python/admin/user_edit.py:177
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "같은 로그인을 한 유저가 이미 있습니다"
 
@@ -5025,45 +4808,19 @@ msgstr ""
 "하나 또는 그이상의 로그인이 특정하지 않습니다 !\n"
 "그것들을 바꾸어 주어야 합니다: %s !"
 
-#: ../src/boards/python/anim.py:2225
+#: ../src/boards/python/anim.py:2208
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr "SVG가 손상되었습니다. python xml 모듈을 설치해서 복구하세요"
 
-#: ../src/boards/python/anim.py:2381
+#: ../src/boards/python/anim.py:2364
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr "경고: 다음 이미지들은 이 시스템에서 접근 될 수 없습니다.\n"
 
-#: ../src/boards/python/anim.py:2383
+#: ../src/boards/python/anim.py:2366
 msgid "The corresponding items have been skipped."
 msgstr "다음 아이템들을 건너뛰었습니다."
 
-#: ../src/boards/python/chat.py:82
-msgid "All messages will be displayed here.\n"
-msgstr ""
-
-#: ../src/boards/python/chat.py:132
-msgid "Your Friends"
-msgstr ""
-
-#: ../src/boards/python/chat.py:164
-msgid "Your Channel"
-msgstr ""
-
-#: ../src/boards/python/chat.py:190
-msgid ""
-"Type your message here, to send to other GCompris users on your local "
-"network."
-msgstr ""
-
-#: ../src/boards/python/chat.py:325
-msgid "You must set a channel in your channel entry box first.\n"
-msgstr ""
-
-#: ../src/boards/python/chat.py:326
-msgid "Your friends must set the same channel in order to communicate with you"
-msgstr ""
-
-#: ../src/boards/python/electric.py:95
+#: ../src/boards/python/electric.py:94
 msgid ""
 "Cannot find the 'gnucap' electric simulator.\n"
 "You can download and install it from:\n"
@@ -5080,91 +4837,90 @@ msgstr ""
 "/usr/bin/gnucap 또는 /usr/local/bin/gnucap.\n"
 "이 작업을 이용해서 컴퓨터 시뮬레이션 없이 개요를 그릴 수 있습니다."
 
-#: ../src/boards/python/gnumch.py:96
+#: ../src/boards/python/gnumch.py:94
 #, python-format
 msgid ", %d"
 msgstr ", %d"
 
-#: ../src/boards/python/gnumch.py:97
+#: ../src/boards/python/gnumch.py:95
 #, python-format
 msgid " and %d"
 msgstr " 그리고 %d"
 
-#: ../src/boards/python/gnumch.py:117
+#: ../src/boards/python/gnumch.py:115
 #, python-format
 msgid "%d is divisible by %s."
 msgstr "%d 는 %s로 나누어 집니다."
 
-#: ../src/boards/python/gnumch.py:121
+#: ../src/boards/python/gnumch.py:119
 msgid "1 is not a prime number."
 msgstr "1은 소수가 아닙니다."
 
-#: ../src/boards/python/gnumch.py:131
+#: ../src/boards/python/gnumch.py:129
 #, python-format
 msgid "Primes less than %d"
 msgstr "%d보다 작은 소수"
 
-#. Translators: You can swap %(x)y elements in the string.
-#: ../src/boards/python/gnumch.py:153
-#, fuzzy, python-format
+#: ../src/boards/python/gnumch.py:150
+#, python-format
 msgid ""
-"Multiples of %(d1)d include %(s)s,\n"
-"but %(d2)d is not a multiple of %(d3)d."
+"Multiples of %d include %s,\n"
+"but %d is not a multiple of %d."
 msgstr ""
 "%d의 곱은 %s를 포함합니다,\n"
 "그러나 %d는 %d의 곱이 아닙니다."
 
-#: ../src/boards/python/gnumch.py:164
+#: ../src/boards/python/gnumch.py:159
 #, python-format
 msgid "Factors of %d"
 msgstr "%d의 인수"
 
-#: ../src/boards/python/gnumch.py:197
+#: ../src/boards/python/gnumch.py:192
 #, python-format
 msgid "%s are the factors of %d."
 msgstr "%s는 %d의 인수가 아닙니다."
 
-#: ../src/boards/python/gnumch.py:209
+#: ../src/boards/python/gnumch.py:204
 #, python-format
 msgid "Multiples of %d"
 msgstr "%d의 배수"
 
-#: ../src/boards/python/gnumch.py:243
+#: ../src/boards/python/gnumch.py:238
 #, python-format
 msgid "%s = %d"
 msgstr "%s = %d"
 
-#: ../src/boards/python/gnumch.py:254
+#: ../src/boards/python/gnumch.py:249
 #, python-format
 msgid "%d + %d"
 msgstr "%d + %d"
 
-#: ../src/boards/python/gnumch.py:259
+#: ../src/boards/python/gnumch.py:254
 #, fuzzy, python-format
-msgid "%d − %d"
+msgid "%d ? %d"
 msgstr "%d + %d"
 
-#: ../src/boards/python/gnumch.py:264
+#: ../src/boards/python/gnumch.py:259
 #, fuzzy, python-format
 msgid "%d × %d"
 msgstr "%d + %d"
 
-#: ../src/boards/python/gnumch.py:268
+#: ../src/boards/python/gnumch.py:263
 #, fuzzy, python-format
 msgid "%d ÷ %d"
 msgstr "%d + %d"
 
-#: ../src/boards/python/gnumch.py:276
+#: ../src/boards/python/gnumch.py:271
 #, python-format
 msgid "Equal to %d"
 msgstr "%d와 같습니다"
 
-#: ../src/boards/python/gnumch.py:297
+#: ../src/boards/python/gnumch.py:292
 #, python-format
 msgid "Not equal to %d"
 msgstr "%d와 같지 않습니다"
 
-#: ../src/boards/python/gnumch.py:441
+#: ../src/boards/python/gnumch.py:434
 msgid ""
 "You were eaten by a Troggle.\n"
 "Press <Return> to continue."
@@ -5172,11 +4928,11 @@ msgstr ""
 "Troggle에 의해 당신이 먹히고 있습니다.\n"
 "계속 하기위해 <Return>을 누르세요."
 
-#: ../src/boards/python/gnumch.py:490
+#: ../src/boards/python/gnumch.py:483
 msgid "You ate a wrong number.\n"
 msgstr "잘못된 숫자를 먹었습니다.\n"
 
-#: ../src/boards/python/gnumch.py:491
+#: ../src/boards/python/gnumch.py:484
 msgid ""
 "\n"
 "Press <Return> to continue."
@@ -5184,7 +4940,7 @@ msgstr ""
 "\n"
 "계속하려면 <Return>을 누르세요."
 
-#: ../src/boards/python/gnumch.py:784
+#: ../src/boards/python/gnumch.py:777
 msgid ""
 "T\n"
 "R\n"
@@ -5241,11 +4997,11 @@ msgstr "로그인: "
 msgid "Enter login to log in"
 msgstr "로그인 하려면 login을 입력하세요"
 
-#: ../src/boards/python/mosaic.py:194
+#: ../src/boards/python/mosaic.py:193
 msgid "Rebuild the same mosaic on the right area"
 msgstr "오른쪽에 있는것과 똑같은 모자이크를 다시 만드세요"
 
-#: ../src/boards/python/melody.py:119
+#: ../src/boards/python/melody.py:115
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -5282,18 +5038,16 @@ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
 msgstr "오스카의 절친한 친구는 찰리라는 게와 샌디라는 불가사리 입니다."
 
 #: ../src/boards/python/pythontest.py:148
-#, fuzzy
 msgid ""
-"This is the first plugin in GCompris coded in the Python\n"
+"This is the first plugin in gcompris coded in the Python\n"
 "Programming language."
 msgstr ""
 "이것이 python으로 코딩된 첫번째 gcompris 플러그인 입니다\n"
 "프로그래밍 언어."
 
 #: ../src/boards/python/pythontest.py:157
-#, fuzzy
 msgid ""
-"It is now possible to develop GCompris activities in C or in Python.\n"
+"It is now possible to develop gcompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
 msgstr ""
 "이제 C나 Python으로 gcompris 활동을 향상시키는 것이 가능합니다.\n"
@@ -5331,65 +5085,70 @@ msgstr "네모들을 이용하세요"
 msgid "Choice of pattern"
 msgstr "무늬 선택"
 
-#: ../src/boards/python/redraw.py:909 ../src/boards/python/redraw.py:912
+#: ../src/boards/python/redraw.py:347 ../src/boards/python/redraw.py:357
+msgid "Level"
+msgstr "레벨"
+
+#: ../src/boards/python/redraw.py:901 ../src/boards/python/redraw.py:904
 msgid "Coordinate"
 msgstr "좌표"
 
-#: ../src/boards/python/searace.py:191
+#: ../src/boards/python/searace.py:200 ../src/boards/python/searace.py:205
+#: ../src/boards/python/searace.py:231
 msgid "The race is already being run"
 msgstr "경주가 이미 진행중입니다"
 
 #. Manage default cases (no params given)
 #. Final move, add an ofset because we loose space in abs()
-#: ../src/boards/python/searace.py:433 ../src/boards/python/searace.py:458
-#: ../src/boards/python/searace.py:539 ../src/boards/python/searace.py:855
-#: ../src/boards/python/searace.py:884 ../src/boards/python/searace.py:973
-#: ../src/boards/python/searace.py:979 ../src/boards/python/searace.py:987
+#: ../src/boards/python/searace.py:428 ../src/boards/python/searace.py:453
+#: ../src/boards/python/searace.py:534 ../src/boards/python/searace.py:853
+#: ../src/boards/python/searace.py:882 ../src/boards/python/searace.py:977
+#: ../src/boards/python/searace.py:983 ../src/boards/python/searace.py:991
 msgid "forward"
 msgstr "앞으로"
 
-#: ../src/boards/python/searace.py:530
+#: ../src/boards/python/searace.py:525
 msgid "COMMANDS ARE"
 msgstr "COMMANDS ARE"
 
 #. The two boat arrived in a close time frame (1s), it's a draw
-#: ../src/boards/python/searace.py:756
+#: ../src/boards/python/searace.py:751
 msgid "This is a draw"
 msgstr "비겼습니다"
 
-#: ../src/boards/python/searace.py:763
+#: ../src/boards/python/searace.py:758
 msgid "The Red boat has won"
 msgstr "빨간 보트가 이겼습니다"
 
-#: ../src/boards/python/searace.py:766
+#: ../src/boards/python/searace.py:761
 msgid "The Green boat has won"
 msgstr "초록색 보트가 이겼습니다"
 
-#: ../src/boards/python/searace.py:784 ../src/boards/python/searace.py:1017
+#: ../src/boards/python/searace.py:779 ../src/boards/python/searace.py:1021
 msgid "Angle:"
 msgstr "각도:"
 
-#: ../src/boards/python/searace.py:784
+#: ../src/boards/python/searace.py:779
 msgid "Wind:"
 msgstr "바람:"
 
-#: ../src/boards/python/searace.py:862
+#: ../src/boards/python/searace.py:860
 msgid "Syntax error at line"
 msgstr "줄에 문법 오류가 있습니다"
 
-#: ../src/boards/python/searace.py:880
+#: ../src/boards/python/searace.py:878
 msgid "The command"
 msgstr "명령"
 
-#: ../src/boards/python/searace.py:899
+#: ../src/boards/python/searace.py:897
 msgid "Unknown command at line"
 msgstr "알려지지 않은 명령어가 줄에 있습니다"
 
-#: ../src/boards/python/searace.py:1017
+#: ../src/boards/python/searace.py:1021
 msgid "Distance:"
 msgstr "거리:"
 
-#: ../src/boards/python/tuxpaint.py:144
+#: ../src/boards/python/tuxpaint.py:119
 msgid ""
 "Cannot find Tuxpaint.\n"
 "Install it to use this activity !"
@@ -5397,27 +5156,27 @@ msgstr ""
 "Tuxpaint를 찾을 수 없습니다.\n"
 "이 활동을 하려면 Tuxpaint를 설치 하세요 !"
 
-#: ../src/boards/python/tuxpaint.py:157
+#: ../src/boards/python/tuxpaint.py:132
 msgid "Waiting for Tuxpaint to finish"
 msgstr "끝내기 위해 Tuxpaint를 기다리는중"
 
-#: ../src/boards/python/tuxpaint.py:210
+#: ../src/boards/python/tuxpaint.py:187
 msgid "Inherit fullscreen setting from GCompris"
 msgstr "GCompris로부터 전체화면 설정을 이어받기"
 
-#: ../src/boards/python/tuxpaint.py:214
+#: ../src/boards/python/tuxpaint.py:191
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
 msgstr "크기 설정을 GCompris로 이어받기 (800x600, 640x480)"
 
-#: ../src/boards/python/tuxpaint.py:218
+#: ../src/boards/python/tuxpaint.py:195
 msgid "Disable shape rotation"
 msgstr "모양 회전 할 수 없음"
 
-#: ../src/boards/python/tuxpaint.py:222
+#: ../src/boards/python/tuxpaint.py:199
 msgid "Show Uppercase text only"
 msgstr "대문자만 있는 글 보이기"
 
-#: ../src/boards/python/tuxpaint.py:226
+#: ../src/boards/python/tuxpaint.py:203
 msgid "Disable stamps"
 msgstr "도장 안됨"
 
@@ -5429,7 +5188,7 @@ msgstr "기억 게임"
 msgid "Build a train according to the model"
 msgstr "모델에 따라서 기차를 만드세요"
 
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:207
+#: ../src/boards/reading.c:225 ../src/boards/wordsgame.c:205
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5437,51 +5196,68 @@ msgstr ""
 "오류: 찾을 수 없습니다\n"
 "이 게임을 하기 위한 목록.\n"
 
-#: ../src/boards/reading.c:381
+#: ../src/boards/reading.c:379
 msgid "Please, check if the word"
 msgstr "체크하세요, 단어"
 
-#: ../src/boards/reading.c:401
+#: ../src/boards/reading.c:399
 msgid "is being displayed"
 msgstr "가 표시 되어 있는지"
 
-#: ../src/boards/reading.c:575
+#: ../src/boards/reading.c:573
 msgid "I am Ready"
 msgstr "나는 준비 되었습니다"
 
-#: ../src/boards/reading.c:615
+#: ../src/boards/reading.c:613
 msgid "Yes, I saw it"
 msgstr "네, 보았습니다"
 
-#: ../src/boards/reading.c:645
+#: ../src/boards/reading.c:643
 msgid "No, it was not there"
 msgstr "아니오, 그것은 그곳에 있지 않습니다"
 
 #. Report what was wrong in the log
-#: ../src/boards/reading.c:683
+#: ../src/boards/reading.c:681
 #, c-format
 msgid "The word to find was '%s'"
 msgstr "찾아야 할 단어는 '%s'"
 
-#: ../src/boards/reading.c:686
-#, c-format
+#: ../src/boards/reading.c:684
 msgid "But it was not displayed"
 msgstr "그러나 그것은 나타나 있지 않습니다"
 
-#: ../src/boards/reading.c:688
-#, c-format
+#: ../src/boards/reading.c:686
 msgid "And it was displayed"
 msgstr "그리고 그것은 표기 되어 있습니다"
 
-#: ../src/boards/scale.c:265
-#, fuzzy, c-format
-msgid "Weight = %s"
-msgstr "포인트 = %s"
+#. Enter Edit Mode
+#: ../src/boards/shapegame.c:434
+msgid ""
+"You have entered Edit mode\n"
+"Move the puzzle items;\n"
+"type 's' to save, and\n"
+"'d' to display all the shapes"
+msgstr ""
+"편집 모드로 들어왔습니다\n"
+"퍼즐을 움직이세요;\n"
+"저장하려면 's'를 입력하세요 그리고\n"
+"모든 모양을 보이기 위해서는 'd'를 입력하세요"
 
-#: ../src/boards/scale.c:714
-#, fuzzy
-msgid "Take care, you can drop masses on both sides of the scale."
-msgstr "물건들을 끌어 놓아서 저울의 균형을 맞추세요"
+#: ../src/boards/shapegame.c:442
+msgid ""
+"The data from this activity are saved under\n"
+"/tmp/gcompris-board.xml"
+msgstr ""
+"이 활동에서의 기록은 이곳에 저장됩니다\n"
+"/tmp/gcompris-board.xml"
+
+#: ../src/boards/submarine.c:198
+msgid "Submarine"
+msgstr "잠수함"
+
+#: ../src/boards/submarine.c:199
+msgid "Control the depth of a submarine"
+msgstr "잠수함의 깊이를 조정하세요"
 
 #: ../src/boards/target.c:281 ../src/boards/target.c:546
 #, c-format
@@ -5502,48 +5278,10 @@ msgstr ""
 msgid "Distance to target = %d meters"
 msgstr "목표물 까지 거리 = %d 미터"
 
-#: ../src/boards/wordprocessor.c:55
-#, fuzzy
-msgid "Research"
-msgstr "라치"
-
-#: ../src/boards/wordprocessor.c:66
-#, fuzzy
-msgid "Sentimental"
-msgstr "세네갈"
-
-#: ../src/boards/wordprocessor.c:77
-msgid "Official"
-msgstr ""
-
-#: ../src/boards/wordprocessor.c:88 ../src/boards/wordprocessor.c:436
-msgid "Text"
-msgstr ""
-
-#: ../src/boards/wordprocessor.c:99
-#, fuzzy
-msgid "Flyer"
-msgstr "필터"
-
-#: ../src/boards/wordprocessor.c:433
-msgid "Title"
-msgstr "제목"
-
-#: ../src/boards/wordprocessor.c:434
-#, fuzzy
-msgid "Heading 1"
-msgstr "읽기"
-
-#: ../src/boards/wordprocessor.c:435
-#, fuzzy
-msgid "Heading 2"
-msgstr "읽기"
-
 #: ../src/gcompris/about.c:57
-#, fuzzy
 msgid ""
 "Author: Bruno Coudoin\n"
-"Contribution: Pascal Georges, Jose Jorge, Yves Combe\n"
+"Contribution: Pascal Georges, Jose Jorge\n"
 "Graphics: Renaud Blanchard, Franck Doucet\n"
 "Intro Music: Djilali Sebihi\n"
 "Background Music: Rico Da Halvarez\n"
@@ -5566,11 +5304,11 @@ msgstr ""
 msgid "About GCompris"
 msgstr "GCompris 정보"
 
-#: ../src/gcompris/about.c:117
+#: ../src/gcompris/about.c:117 ../src/gcompris/about.c:126
 msgid "Translators:"
 msgstr "번역자:"
 
-#: ../src/gcompris/about.c:230
+#: ../src/gcompris/about.c:249
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -5578,7 +5316,7 @@ msgstr ""
 "GCompris 홈페이지\n"
 "http://gcompris.net"
 
-#: ../src/gcompris/about.c:252
+#: ../src/gcompris/about.c:271
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
@@ -5586,63 +5324,36 @@ msgstr ""
 "이 소프트웨어는 GNU 꾸러미 입니다 그리고 GNU General Public License에 의해 발"
 "간 되었습니다"
 
-#: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
-#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
-#: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
+#: ../src/gcompris/about.c:334 ../src/gcompris/about.c:344
+#: ../src/gcompris/config.c:465 ../src/gcompris/config.c:475
+#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:376
+#: ../src/gcompris/help.c:386 ../src/gcompris/images_selector.c:317
 msgid "OK"
 msgstr "OK"
 
-#: ../src/gcompris/bar.c:577
+#: ../src/gcompris/bar.c:568
 msgid "GCompris confirmation"
 msgstr "GCompris 확인"
 
-#: ../src/gcompris/bar.c:578
+#: ../src/gcompris/bar.c:569
 msgid "Are you sure you want to quit?"
 msgstr "정말 나가겠습니까?"
 
-#: ../src/gcompris/bar.c:579
+#: ../src/gcompris/bar.c:570
 msgid "Yes, I am sure!"
 msgstr "예!"
 
-#: ../src/gcompris/bar.c:580
+#: ../src/gcompris/bar.c:571
 msgid "No, I want to keep going"
 msgstr "아니오, 계속하겠습니다"
 
-#: ../src/gcompris/board.c:192
-#, fuzzy
-msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
+#: ../src/gcompris/board.c:181
+msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
 msgstr "동적 모듈 로딩이 지원되지 않습니다. gcompris는 로드할 수 없습니다.\n"
 
 #: ../src/gcompris/board_config.c:700
 msgid ""
 "Select the language\n"
-" to use in the board"
-msgstr ""
-"언어를 선택하세요\n"
-" 보드를 사용하기 위해서"
-
-#: ../src/gcompris/board_config.c:763
-msgid "Global GCompris mode"
-msgstr ""
-
-#: ../src/gcompris/board_config.c:764
-#, fuzzy
-msgid "Normal"
-msgstr "분홍색"
-
-#: ../src/gcompris/board_config.c:765
-msgid "2 clicks"
-msgstr ""
-
-#: ../src/gcompris/board_config.c:766
-msgid "both modes"
-msgstr ""
-
-#: ../src/gcompris/board_config.c:794
-#, fuzzy
-msgid ""
-"Select the drag and drop mode\n"
 " to use in the board"
 msgstr ""
 "언어를 선택하세요\n"
@@ -5661,276 +5372,225 @@ msgid "Arabic"
 msgstr "아랍어"
 
 #: ../src/gcompris/config.c:62
-#, fuzzy
-msgid "Arabic (Tunisia)"
-msgstr "튀니지"
-
-#: ../src/gcompris/config.c:63
 msgid "Turkish (Azerbaijan)"
 msgstr "터키어 (아르제바이잔)"
 
-#: ../src/gcompris/config.c:64
+#: ../src/gcompris/config.c:63
 msgid "Bulgarian"
 msgstr "불가리아어"
 
-#: ../src/gcompris/config.c:65
-msgid "Breton"
-msgstr ""
-
-#: ../src/gcompris/config.c:66
+#: ../src/gcompris/config.c:64
 msgid "Catalan"
 msgstr "카탈로니아어"
 
 #
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:66
 msgid "Danish"
 msgstr "덴마크어"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:67
 msgid "German"
 msgstr "독일어"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:68
 msgid "Greek"
 msgstr "그리스어"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:69
 msgid "English (Canada)"
 msgstr "영어 (캐나다)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:70
 msgid "English (Great Britain)"
 msgstr "영어 (영국)"
 
-#: ../src/gcompris/config.c:73
-#, fuzzy
-msgid "English (United States)"
-msgstr "영어 (미국)"
-
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:71
 msgid "Spanish"
 msgstr "스페인어"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:72
 msgid "Basque"
 msgstr "바스크어"
 
-#: ../src/gcompris/config.c:76
-msgid "Dzongkha"
-msgstr ""
-
-#: ../src/gcompris/config.c:77
-#, fuzzy
-msgid "Persian"
-msgstr "세르비아어"
-
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:73
 msgid "Finnish"
 msgstr "핀란드어"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:74
 msgid "French"
 msgstr "프랑스어"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:75
 msgid "Irish (Gaelic)"
 msgstr "아일랜드어 (게일어)"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:76
 msgid "Hebrew"
 msgstr "히브리어"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:77
 msgid "Hindi"
 msgstr "힌디어"
 
-#: ../src/gcompris/config.c:83
-#, fuzzy
-msgid "Indonesian"
-msgstr "마케도니아어"
-
-#: ../src/gcompris/config.c:84
-#, fuzzy
-msgid "Japanese"
-msgstr "아니스색"
-
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:78
 msgid "Gujarati"
 msgstr "과라니어"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:79
 msgid "Punjabi"
 msgstr "펀자브어"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:80
 msgid "Hungarian"
 msgstr "헝가리어"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:81
 msgid "Croatian"
 msgstr "크로아티아어"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:82
 msgid "Italian"
 msgstr "이탈리아어"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:83
 msgid "Georgian"
 msgstr "그루지야어"
 
-#: ../src/gcompris/config.c:91
-#, fuzzy
-msgid "Korean"
-msgstr "오렌지색"
-
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:84
 msgid "Lithuanian"
 msgstr "리투아니아어"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:85
 msgid "Macedonian"
 msgstr "마케도니아어"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:86
 msgid "Malayalam"
 msgstr "말라얄람어"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:87
 msgid "Marathi"
 msgstr "마라티어"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:88
 msgid "Malay"
 msgstr "말레이어"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:89
 msgid "Nepal"
 msgstr "네팔어"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:90
 msgid "Dutch"
 msgstr "네덜란드어"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:91
 msgid "Norwegian Bokmal"
 msgstr "노르웨이 부크말어"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:92
 msgid "Norwegian Nynorsk"
 msgstr "노르웨이 뉘노르스크어"
 
-#: ../src/gcompris/config.c:101
-msgid "Occitan (languedocien)"
-msgstr ""
-
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:93
 msgid "Polish"
 msgstr "폴란드어"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:94
 msgid "Portuguese"
 msgstr "포르투갈어"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:95
 msgid "Portuguese (Brazil)"
 msgstr "포르투갈어 (브라질)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:96
 msgid "Romanian"
 msgstr "루마니아어"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:97
 msgid "Russian"
 msgstr "러시아어"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:98
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:99
 msgid "Slovak"
 msgstr "슬로바키아어"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:100
 msgid "Slovenian"
 msgstr "슬로베니아어"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:101
 #, fuzzy
 msgid "Somali"
 msgstr "소말리아"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:102
 msgid "Albanian"
 msgstr "알바니아어"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:103
 msgid "Serbian (Latin)"
 msgstr "세르비아어 (라틴)"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:104
 msgid "Serbian"
 msgstr "세르비아어"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:105
 msgid "Swedish"
 msgstr "스웨덴어"
 
-#: ../src/gcompris/config.c:115
-#, fuzzy
-msgid "Tamil"
-msgstr "타이어"
-
-#: ../src/gcompris/config.c:116
+#. "ta_IN.UTF-8",	N_("Tamil"),
+#: ../src/gcompris/config.c:107
 msgid "Thai"
 msgstr "타이어"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:108
 msgid "Turkish"
 msgstr "터키어"
 
-#: ../src/gcompris/config.c:118
-msgid "Urdu"
-msgstr ""
-
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:109
 msgid "Vietnamese"
 msgstr "베트남어"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:110
 msgid "Walloon"
 msgstr "왈론어"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:111
 msgid "Chinese (Simplified)"
 msgstr "중국어 (간체)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:112
 msgid "Chinese (Traditional)"
 msgstr "중국어 (전통)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:117
 msgid "No time limit"
 msgstr "시간 제한 없음"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:118
 msgid "Slow timer"
 msgstr "늦은 타이머"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:119
 msgid "Normal timer"
 msgstr "보통 타이머"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:120
 msgid "Fast timer"
 msgstr "빠른 타이머"
 
-#: ../src/gcompris/config.c:135
-#, fuzzy
-msgid "800x600 (Default for GCompris)"
+#: ../src/gcompris/config.c:125
+msgid "800x600 (Default for gcompris)"
 msgstr "800x600 (초기 gcompris)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:130
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5938,62 +5598,62 @@ msgstr ""
 "<i>Gcompris 관리 모듈을 사용하세요\n"
 "필터 보드를 위해</i>"
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:185 ../src/gcompris/config.c:195
 msgid "GCompris Configuration"
 msgstr "GCompris 설정"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:271
 msgid "Fullscreen"
 msgstr "전체화면"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:314
 msgid "Music"
 msgstr "음악"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:342
 msgid "Effect"
 msgstr "효과"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:378
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "스킨 디렉토리를 열 수없습니다: %s"
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:409 ../src/gcompris/config.c:864
+#: ../src/gcompris/config.c:878
 #, c-format
 msgid "Skin : %s"
 msgstr "스킨 : %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:411
 msgid "SKINS NOT FOUND"
 msgstr "스킨 찾을 수 없음"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:536
 msgid "English (United State)"
 msgstr "영어 (미국)"
 
-#: ../src/gcompris/file_selector.c:337
+#: ../src/gcompris/file_selector.c:334
 msgid "CANCEL"
 msgstr "취소"
 
-#: ../src/gcompris/file_selector.c:368
+#: ../src/gcompris/file_selector.c:365
 msgid "LOAD"
 msgstr "로드"
 
-#: ../src/gcompris/file_selector.c:368
+#: ../src/gcompris/file_selector.c:365
 msgid "SAVE"
 msgstr "저장"
 
-#: ../src/gcompris/gameutil.c:102
+#: ../src/gcompris/gameutil.c:79
 msgid "Couldn't find or load the file"
 msgstr "파일을 찾을 수 없거나 불러 올 수 없습니다"
 
-#: ../src/gcompris/gameutil.c:104
+#: ../src/gcompris/gameutil.c:81
 msgid "This activity is incomplete."
 msgstr "활동이 완전 하지 않습니다."
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:82
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -6001,122 +5661,118 @@ msgstr ""
 "빠져나와서 보고하기\n"
 "문제를 저자에게"
 
-#: ../src/gcompris/gcompris.c:137
-#, fuzzy
-msgid "run GCompris in fullscreen mode."
+#: ../src/gcompris/gcompris.c:123
+msgid "run gcompris in fullscreen mode."
 msgstr "gcompris를 전체화면에서 실행하기."
 
-#: ../src/gcompris/gcompris.c:140
-#, fuzzy
-msgid "run GCompris in window mode."
+#: ../src/gcompris/gcompris.c:126
+msgid "run gcompris in window mode."
 msgstr "gcompris를 윈도우 모드로 실행하기."
 
-#: ../src/gcompris/gcompris.c:143
-#, fuzzy
-msgid "run GCompris with sound enabled."
+#: ../src/gcompris/gcompris.c:129
+msgid "run gcompris with sound enabled."
 msgstr "gcompris를 소리를 켜서 실행하기."
 
-#: ../src/gcompris/gcompris.c:146
-#, fuzzy
-msgid "run GCompris without sound."
+#: ../src/gcompris/gcompris.c:132
+msgid "run gcompris without sound."
 msgstr "gcompris 를 소리 없이 실행하기."
 
-#: ../src/gcompris/gcompris.c:149
-#, fuzzy
-msgid "run GCompris with the default gnome cursor."
+#: ../src/gcompris/gcompris.c:135
+msgid "run gcompris with the default gnome cursor."
 msgstr "gcompris를 초기 gnome 커서를 이용해서 실행하기."
 
-#: ../src/gcompris/gcompris.c:152
+#: ../src/gcompris/gcompris.c:138
 msgid "display only activities with this difficulty level."
 msgstr "이 난이도의 활동만 보여주기."
 
-#: ../src/gcompris/gcompris.c:155
+#: ../src/gcompris/gcompris.c:141
 msgid "display debug informations on the console."
 msgstr "콘솔에 디버그 정보를 보이기."
 
-#: ../src/gcompris/gcompris.c:158
+#: ../src/gcompris/gcompris.c:144
 msgid "Print the version of "
 msgstr "버젼 출력"
 
-#: ../src/gcompris/gcompris.c:161
+#: ../src/gcompris/gcompris.c:147
 msgid "Use the antialiased canvas (slower)."
 msgstr "Use the antialiased canvas (slower)."
 
-#: ../src/gcompris/gcompris.c:164
+#: ../src/gcompris/gcompris.c:150
 msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr "XF86VidMode 끄세요 (스크린 해상도 변화 없음)."
 
-#: ../src/gcompris/gcompris.c:167
-#, fuzzy
+#: ../src/gcompris/gcompris.c:153
 msgid ""
-"Run GCompris with local menu (e.g -l /reading will let you play only "
+"Run gcompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
 "activity)"
 msgstr ""
 "gcompris를 로컬 메뉴로 실행하세요(예 -l /읽기는 읽기 디렉토리에서만 동작하도"
 "록 한다, -l /strategy/connect4 는 connect4 활동만 동작)"
 
-#: ../src/gcompris/gcompris.c:170
+#: ../src/gcompris/gcompris.c:156
 msgid "Run GCompris with local activity directory added to menu"
 msgstr "GCompris를 메뉴에 추가된 로컬 활동 디렉토리로 실행하세요"
 
-#: ../src/gcompris/gcompris.c:173
+#: ../src/gcompris/gcompris.c:159
 msgid "Run GCompris in administration and user-management mode"
 msgstr "GCompris를 관리자, 사용자 관리 모드로 실행하세요"
 
-#: ../src/gcompris/gcompris.c:176
-#, fuzzy
-msgid ""
-"Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite."
-"db]"
+#: ../src/gcompris/gcompris.c:162
+msgid "Use alternate database for profiles"
 msgstr "프로필을 위해 다른 데이터배이스를 쓰세요"
 
-#: ../src/gcompris/gcompris.c:179
+#: ../src/gcompris/gcompris.c:165
+msgid "Use alternate database for logs"
+msgstr "로그를 위해 다른 데이터베이스를 쓰세요"
+
+#: ../src/gcompris/gcompris.c:168
 msgid "Create the alternate database for profiles"
 msgstr "프로필을 위해 다른 데이터 배이스를 생성하세요"
 
-#: ../src/gcompris/gcompris.c:182
+#: ../src/gcompris/gcompris.c:171
 msgid "Re-read XML Menus and store them in the database"
 msgstr "XML 메뉴를 다시 읽어서 데이터 베이스에 저장하세요"
 
-#: ../src/gcompris/gcompris.c:185
+#: ../src/gcompris/gcompris.c:174
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
 msgstr "사용할 프로필을 설정하세요. 프로필을 만들때 'gcompris -a'를 사용하세요"
 
-#: ../src/gcompris/gcompris.c:188
+#: ../src/gcompris/gcompris.c:177
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
 msgstr ""
 "유효한 프로필을 목록으로 만드세요. 프로필을 만들려면 'gcompris -a'를 사용하세"
 "요"
 
-#: ../src/gcompris/gcompris.c:191
+#: ../src/gcompris/gcompris.c:180
 msgid ""
-"Config directory location: [$HOME/.config/gcompris]. Alternate is to set "
-"$XDG_CONFIG_HOME."
+"Shared directory location, for profiles and board-configuration data: "
+"[$HOME/.gcompris/shared]"
 msgstr ""
+"프로필과 보드 설정 데이터를 위한 공유된 디렉토리 위치: [$HOME/.gcompris/"
+"shared]"
 
-#: ../src/gcompris/gcompris.c:194
-#, fuzzy
-msgid "The location of user directories: [$HOME/My GCompris]"
+#: ../src/gcompris/gcompris.c:183
+msgid "The location of user directories: [$HOME/.gcompris/users]"
 msgstr "유저 디렉토리 위치: [$HOME/.gcompris/users]"
 
-#: ../src/gcompris/gcompris.c:197
+#: ../src/gcompris/gcompris.c:186
 msgid "Run the experimental activities"
 msgstr "실험 활동을 실행하세요"
 
-#: ../src/gcompris/gcompris.c:200
+#: ../src/gcompris/gcompris.c:189
 msgid "Disable the quit button"
 msgstr "나가기 버튼을 끄세요"
 
-#: ../src/gcompris/gcompris.c:203
+#: ../src/gcompris/gcompris.c:192
 msgid "Disable the config button"
 msgstr "설정 버튼을 끄세요"
 
-#: ../src/gcompris/gcompris.c:208
+#: ../src/gcompris/gcompris.c:195
 msgid "Display the resources on stdout based on the selected activities"
 msgstr "Display the resources on stdout based on the selected activities"
 
-#: ../src/gcompris/gcompris.c:212
+#: ../src/gcompris/gcompris.c:198
 msgid ""
 "GCompris will get images, sounds and activity data from this server if not "
 "found locally."
@@ -6124,7 +5780,7 @@ msgstr ""
 "만약 개별적으로 발견되지 않으면 GCompris 는 이미지와 소리, 활동 데이터를 서버"
 "로 부터 얻을 것 입니다."
 
-#: ../src/gcompris/gcompris.c:215
+#: ../src/gcompris/gcompris.c:201
 msgid ""
 "Only when --server is provided, disable check for local resource first. Data "
 "are always taken from the web server."
@@ -6132,34 +5788,21 @@ msgstr ""
 "서버가 제공되었을 때만 지역 자원의 기능 억제가 체크됩니다. 데이터는 항상 웹 "
 "서버에서 부터 얻어집니다."
 
-#: ../src/gcompris/gcompris.c:219
+#: ../src/gcompris/gcompris.c:205
 #, fuzzy
 msgid ""
 "In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 "서버 모드에서는 캐쉬 디렉토리가 불필요한 다운로드를 방지하기위해 사용됩니다."
 
-#: ../src/gcompris/gcompris.c:222
-msgid ""
-"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:225
-msgid "Do not display the background images of activities."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:228
-msgid "Do not avoid the execution of multiple instances of GCompris."
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:859
-#, fuzzy, c-format
+#: ../src/gcompris/gcompris.c:838
+#, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
 "support its development, the Windows version provides only %d of the %d "
 "activities. You can get the full version for a small fee at\n"
 "<http://gcompris.net>\n"
-"The GNU/Linux version does not have this restriction. Note that GCompris is "
+"The Linux version does not have this restriction. Note that GCompris is "
 "being developed to free schools from monopolistic software vendors. If you "
 "also believe that we should teach freedom to children, please consider using "
 "GNU/Linux. Get more information at FSF:\n"
@@ -6174,18 +5817,7 @@ msgstr ""
 "해보세요. FSF에서 더 많은 정보를 얻을 수 있습니다.:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1447
-#, c-format
-msgid ""
-"GCompris won't start because the lock file is less than %d seconds old.\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1449
-#, c-format
-msgid "The lock file is: %s\n"
-msgstr ""
-
-#: ../src/gcompris/gcompris.c:1579
+#: ../src/gcompris/gcompris.c:1433
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6199,62 +5831,44 @@ msgstr ""
 "정보 http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1663
+#: ../src/gcompris/gcompris.c:1522
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "-l을 사용하세요, 활동 디렉토리에 접근하기하고 싶다면.\n"
 
-#: ../src/gcompris/gcompris.c:1664
+#: ../src/gcompris/gcompris.c:1523
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "가능한 활동 목록 :\n"
 
-#: ../src/gcompris/gcompris.c:1851
+#: ../src/gcompris/gcompris.c:1701
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "가능한 프로필 목록:\n"
 
-#: ../src/gcompris/gcompris_db.c:266
+#: ../src/gcompris/gcompris_db.c:250
 msgid "Unaffected"
 msgstr "변하지않음"
 
-#: ../src/gcompris/gcompris_db.c:267
+#: ../src/gcompris/gcompris_db.c:251
 msgid "Users without a class"
 msgstr "반이 없는 사용자들"
 
-#: ../src/gcompris/help.c:197
+#: ../src/gcompris/help.c:194
 msgid "Prerequisite"
 msgstr "필수적인것"
 
-#: ../src/gcompris/help.c:225
+#: ../src/gcompris/help.c:222
 msgid "Goal"
 msgstr "목표"
 
-#: ../src/gcompris/help.c:253
+#: ../src/gcompris/help.c:250
 msgid "Manual"
 msgstr "안내서"
 
-#: ../src/gcompris/help.c:281
+#: ../src/gcompris/help.c:278
 msgid "Credit"
 msgstr "학점"
-
-#: ../src/gcompris/properties.c:503 ../src/gcompris/properties.c:510
-#, fuzzy
-msgid "readme"
-msgstr "빨강"
-
-#: ../src/gcompris/properties.c:505
-msgid ""
-"This directory contains the files you create with the GCompris educational "
-"suite\n"
-msgstr ""
-
-#: ../src/gcompris/properties.c:512
-msgid ""
-"Put any number of images in this directory.\n"
-"You can include these images in your drawings and animations.\n"
-"The image formats supported are jpeg, png and svg.\n"
-msgstr ""
 
 #: ../src/gcompris/timer.c:250
 msgid "Time Elapsed"
@@ -6264,85 +5878,6 @@ msgstr "시간이 경과되었음"
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "남은 시간 = %d"
-
-#~ msgid ""
-#~ "Fish are taken from the Unix utility xfishtank.\n"
-#~ "Images are taken from the National Undersea Research Program (NURP) "
-#~ "Collection\n"
-#~ "at &lt;http://www.photolib.noaa.gov&gt;\n"
-#~ "All image credits belong to the OAR/National Undersea Research Program "
-#~ "(NURP),\n"
-#~ "except for the first image, which is property of the University of North "
-#~ "Carolina at Wilmington.\n"
-#~ "The images used in each level are:\n"
-#~ "Location: Tropical Atlantic Ocean, Florida Keys (image nur00523) "
-#~ "Photographer: D. Kesling\n"
-#~ "Location: Florida Keys (image nur03006)\n"
-#~ "Location: Unknown (image nur03505)\n"
-#~ "Location: Unknown (image nur03010)\n"
-#~ "Location: Unknown (image nur03011)\n"
-#~ "Location: Unknown (image nur03013)"
-#~ msgstr ""
-#~ "물고기는 유닉스 유틸리티인 xfishtank에서 왔습니다..\n"
-#~ "그림들은 NURP Collection에서 왔습니다.\n"
-#~ "at &lt;http://www.photolib.noaa.gov&gt;\n"
-#~ "모든 이미지는 NURP에 속합니다.\n"
-#~ "the University of North Carolina at Wilmington의 소유의 첫번째 그림은 NURP"
-#~ "에 속하지 않습니다.\n"
-#~ "각 레벨에 사용된 이미지:\n"
-#~ "위치: 열대 대서양 (image nur00523) 사진작가: D. Kesling\n"
-#~ "위치: 플로리다  (image nur03006)\n"
-#~ "위치: 알려지지 않음 (image nur03505)\n"
-#~ "위치: 알려지지 않음 (image nur03010)\n"
-#~ "위치: 알려지지 않음 (image nur03011)\n"
-#~ "위치: 알려지지 않음 (image nur03013)"
-
-#~ msgid "Click anywhere in the line where you want to drop a piece"
-#~ msgstr "어디든지 당신이 놓고 싶은 곳을 클릭하세요"
-
-#~ msgid "Soudan"
-#~ msgstr "수단"
-
-#~ msgid "spruce"
-#~ msgstr "전나무"
-
-#, fuzzy
-#~ msgid "%d ? %d"
-#~ msgstr "%d + %d"
-
-#~ msgid ""
-#~ "You have entered Edit mode\n"
-#~ "Move the puzzle items;\n"
-#~ "type 's' to save, and\n"
-#~ "'d' to display all the shapes"
-#~ msgstr ""
-#~ "편집 모드로 들어왔습니다\n"
-#~ "퍼즐을 움직이세요;\n"
-#~ "저장하려면 's'를 입력하세요 그리고\n"
-#~ "모든 모양을 보이기 위해서는 'd'를 입력하세요"
-
-#~ msgid ""
-#~ "The data from this activity are saved under\n"
-#~ "/tmp/gcompris-board.xml"
-#~ msgstr ""
-#~ "이 활동에서의 기록은 이곳에 저장됩니다\n"
-#~ "/tmp/gcompris-board.xml"
-
-#~ msgid "Submarine"
-#~ msgstr "잠수함"
-
-#~ msgid "Control the depth of a submarine"
-#~ msgstr "잠수함의 깊이를 조정하세요"
-
-#~ msgid "Use alternate database for logs"
-#~ msgstr "로그를 위해 다른 데이터베이스를 쓰세요"
-
-#~ msgid ""
-#~ "Shared directory location, for profiles and board-configuration data: "
-#~ "[$HOME/.gcompris/shared]"
-#~ msgstr ""
-#~ "프로필과 보드 설정 데이터를 위한 공유된 디렉토리 위치: [$HOME/.gcompris/"
-#~ "shared]"
 
 #~ msgid "Samuel Loyd"
 #~ msgstr "사무엘 로이드"
@@ -6600,6 +6135,9 @@ msgstr "남은 시간 = %d"
 #~ msgid "Directory"
 #~ msgstr "디렉토리"
 
+#~ msgid "Title"
+#~ msgstr "제목"
+
 #~ msgid "Released under GPL"
 #~ msgstr "GPL로 발매 됨"
 
@@ -6615,3 +6153,4 @@ msgstr "남은 시간 = %d"
 
 #~ msgid "Couldn't find pixmap file: %s"
 #~ msgstr "pixmap 파일을 찾을 수 없습니다: %s"
+

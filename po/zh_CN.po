@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-02 22:12+0200\n"
+"POT-Creation-Date: 2007-08-13 03:37+0100\n"
 "PO-Revision-Date: 2007-08-23 03:00+0800\n"
 "Last-Translator: Pengyong Su <supy06@gmail.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -34,19 +34,14 @@ msgid ""
 "GCompris means we can provide individual reports. It also recognizes the "
 "children as individuals; they can learn to type in and recognize their own "
 "usernames (login is configurable)."
-msgstr ""
-"－ 在 “游乐园” 中你可以修改游戏列表，只需在树状视图中选择即可。你可以改变朗读"
-"的语言，例如使用语音读出颜色的名称。\n"
-"－ 你可以保存多个配置，并且可轻松地在它们之间切换。在“配置文件”中添加一个配置"
-"文件，然后在“游乐园”的组合框中选择该配置，然后选择要在该配置中激活的游戏。你"
-"可以添加多个包含不同游戏和不同语言的配置文件。在“配置文件”中设置缺省的配置文"
-"件，首先选择所需的配置文件，然后点击“默认缺省”按钮。你也可以通过命令行方式加"
-"载配置文件。\n"
-"－ 你可以添加用户，班级并且你可以为每个班级创建用户分组。注意，你可以从多个用"
-"逗号分隔的文件中导入用户。安排一个或多个分组到一个配置文件中，重新启动"
-"GCompris后将出现新的登录者。通过在GCompris中辨识每个个体的孩子，意味着我们能"
-"够提供个性化的报告。这也可以使我们通过孩子的不同个性认识他们,同时让孩子能够学"
-"习输入和认识自己的用户名。"
+msgstr "－ 在 “游乐园” 中你可以修改游戏列表，只需在树状视图中选择即可。"
+"你可以改变朗读的语言，例如使用语音读出颜色的名称。\n"
+"－ 你可以保存多个配置，并且可轻松地在它们之间切换。在“配置文件”中添加一个配置文件，然后在“游乐园”的组合框中选择该配置，"
+"然后选择要在该配置中激活的游戏。你可以添加多个包含不同游戏和不同语言的配置文件。在“配置文件”中设置缺省的配置文件，"
+"首先选择所需的配置文件，然后点击“默认缺省”按钮。你也可以通过命令行方式加载配置文件。\n"
+"－ 你可以添加用户，班级并且你可以为每个班级创建用户分组。注意，你可以从多个用逗号分隔的文件中导入用户。"
+"安排一个或多个分组到一个配置文件中，重新启动GCompris后将出现新的登录者。通过在GCompris中辨识每个个体的孩子，"
+"意味着我们能够提供个性化的报告。这也可以使我们通过孩子的不同个性认识他们,同时让孩子能够学习输入和认识自己的用户名。"
 
 #: ../boards/administration.xml.in.h:4
 msgid "GCompris Administration Menu"
@@ -58,9 +53,7 @@ msgid ""
 "administration module here. The ultimate goal is to provide child-specific "
 "reporting for parents and teacher who want to monitor the progress, "
 "strengths and needs of their children."
-msgstr ""
-"你可以使用管理模块让CGompris满足你的要求。我们的终极目标是为想要了解孩子成"
-"长、个性和需求的父母和教师提供儿童特别报告。"
+msgstr "你可以使用管理模块让CGompris满足你的要求。我们的终极目标是为想要了解孩子成长、个性和需求的父母和教师提供儿童特别报告。"
 
 #: ../boards/administration.xml.in.h:6
 msgid "Left-Click with the mouse to select an activity"
@@ -369,15 +362,9 @@ msgid "veronese"
 msgstr "山野绿"
 
 #: ../boards/algebra_by.xml.in.h:1
-#, fuzzy
-msgid ""
-"A multiplication of two numbers is displayed. At the right of the equals "
-"sign, give the answer, the product. Use the left and right arrows to modify "
-"your answer and press the Enter key to check if you've got it right. If not, "
-"just try again."
-msgstr ""
-"在两数相乘的等式右边填入乘积答案。可用左右箭头修改你的答案，按回车键确认答"
-"案。如果答案错误请重新作答。"
+msgid "A multiplication of two numbers is displayed. At the right of the equals sign, give the answer, the product.  Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
+msgstr "在两数相乘的等式右边填入乘积答案。可用左右箭头修改你的答案，按回车键确认答案。"
+"如果答案错误请重新作答。"
 
 #: ../boards/algebra_by.xml.in.h:2 ../boards/algebra_minus.xml.in.h:2
 #: ../boards/algebra_plus.xml.in.h:2
@@ -404,15 +391,14 @@ msgstr "进入代数游戏"
 msgid "Left-click the mouse on an activity to select it."
 msgstr "点击鼠标左键选择游戏。"
 
-#: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
 "pictures. Thanks a lot, Ralf."
 msgstr ""
-"动物图片来自 Ralf Schmode（htt://schmode.net） 动物摄影页。Ralf 友好地允许"
-"GCompris使用他的图片。在此，向 Ralf 致以十二万分的感谢。"
+"动物图片来自 Ralf Schmode（htt://schmode.net） 动物摄影页。Ralf 友好地允许GCompris使用他的图片。"
+"在此，向 Ralf 致以十二万分的感谢。"
 
 #: ../boards/algebra_guesscount.xml.in.h:2
 msgid ""
@@ -420,14 +406,14 @@ msgid ""
 "that give the specified result. You can deselect a number or operator by "
 "clicking on it again."
 msgstr ""
-"根据给出的结果在答题板的上方选择相对应的数字和运算符。如果想要取消选择可再次"
-"点击相应数字或运算符。"
+"根据给出的结果在答题板的上方选择相对应的数字和运算符。如果想要取消选择可再次点击相应数字或运算符。"
 
 #: ../boards/algebra_guesscount.xml.in.h:3
 msgid ""
 "Deploy a strategy to arrange a set of arithmetic operations to match a given "
 "value."
-msgstr "拓展对给定值给出相匹配的运算服的能力。"
+msgstr ""
+"拓展对给定值给出相匹配的运算服的能力。"
 
 #: ../boards/algebra_guesscount.xml.in.h:4
 msgid "Find the series of correct operations that matches the given answer"
@@ -441,18 +427,14 @@ msgstr "四则运算。混合多个运算符。"
 msgid ""
 "Work out the right combination of numbers and operations to match the given "
 "value"
-msgstr "写出与给定值相附的混合运算式"
+msgstr ""
+"写出与给定值相附的混合运算式"
 
 #: ../boards/algebra_minus.xml.in.h:1
-#, fuzzy
 msgid ""
-"A subtraction problem with two numbers is displayed. At the right of the "
-"equals sign, give the answer, the difference. Use the left and right arrows "
-"to modify your answer and press the Enter key to check if you've got it "
-"right. If not, just try again."
-msgstr ""
-"在两数相减的等式右边填入答案。可用左右箭头修改你的答案，按回车键确认答案。如"
-"果答案错误请重新作答。"
+"A subtraction problem with two numbers is displayed. At the right of the equals sign, give the answer, the difference.  Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
+msgstr "在两数相减的等式右边填入答案。可用左右箭头修改你的答案，按回车键确认答案。"
+"如果答案错误请重新作答。"
 
 #: ../boards/algebra_minus.xml.in.h:3
 msgid "In a limited time, find the difference between two numbers"
@@ -467,15 +449,10 @@ msgid "Simple subtraction"
 msgstr "简单减法"
 
 #: ../boards/algebra_plus.xml.in.h:1
-#, fuzzy
 msgid ""
-"An addition problem with two numbers is displayed. At the right of the "
-"equals sign, give the answer, the sum. Use the left and right arrows to "
-"modify your answer and press the Enter key to check if you've got it right. "
-"If not, just try again."
-msgstr ""
-"在两数相加的等式右边填入答案。可用左右箭头修改你的答案，按回车键确认答案。如"
-"果答案错误请重新作答。"
+"An addition problem with two numbers is displayed. At the right of the equals sign, give the answer, the sum.  Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
+msgstr "在两数相加的等式右边填入答案。可用左右箭头修改你的答案，按回车键确认答案。"
+"如果答案错误请重新作答。"
 
 #: ../boards/algebra_plus.xml.in.h:3
 msgid ""
@@ -554,13 +531,11 @@ msgid ""
 "image in your animation, by using the image selector in the bottom-left "
 "corner of the screen. You can also save and reload your animations with the "
 "'floppy disk' and 'folder' buttons."
-msgstr ""
-"在左侧栏中选择绘图工具，在底部选择颜色，然后点击和拖动鼠标在白板中绘制图形。"
-"一旦完成一张画，你可以用‘照相机’拍一张快照，这将新建一个你所画内容相同的图"
-"片。你可以移动、添加或删除画中的物体。当你创建了多张图画后，点击‘影片’按钮，"
-"你将看到全部的图画无限循环连续地滑动。你可以在电影模式下改变观看的速度。在观"
-"看模式下点击‘绘图’按钮返回绘图模式。通过点击屏幕左下角的图片选择器你可以编辑"
-"你的动画中的每张图片。你也可以点击‘软驱’和‘文件夹’按钮保存和载入动画。"
+msgstr "在左侧栏中选择绘图工具，在底部选择颜色，然后点击和拖动鼠标在白板中绘制图形。"
+"一旦完成一张画，你可以用‘照相机’拍一张快照，这将新建一个你所画内容相同的图片。"
+"你可以移动、添加或删除画中的物体。当你创建了多张图画后，点击‘影片’按钮，你将看到全部的图画无限循环连续地滑动。"
+"你可以在电影模式下改变观看的速度。在观看模式下点击‘绘图’按钮返回绘图模式。通过点击屏幕左下角的图片选择器"
+"你可以编辑你的动画中的每张图片。你也可以点击‘软驱’和‘文件夹’按钮保存和载入动画。"
 
 #: ../boards/awele.xml.in.h:1
 msgid ""
@@ -586,21 +561,14 @@ msgid ""
 "seeds. If no such move is possible, the current player captures all seeds in "
 "his/her own territory, ending the game. (Source Wikipedia &lt;http://en."
 "wikipedia.org/wiki/Oware&gt;)"
-msgstr ""
-"在游戏开始时每个房子内放着四个种子，游戏者轮流移动这些种子。在每一轮，每个游"
-"戏者在自己的控制下在六个房子中选择一个，游戏者将该房子中的全部种子移走，同时"
-"分发它们，并按顺时针从原始房子开始点滴一个种子到每个房子，这个过程叫做播种。"
-"种子不要分发到最终成绩的房子中，也不要分配到移出的房子中，初始房子应放空；如"
-"果房子中已有12个种子，该房子将被跳过，并且第十二个种子将被放入下一个房子中。"
-"一轮后，如果最后一个种子被放到对手的房子中并且使该房子中的种子数为2或3，则这"
-"个房子中的所有种子将被俘获并被放入成绩房中（在没有成绩房的游戏中将被截留）。"
-"如果倒数第二个种子也使得对手房子中的种子数达到2或3，这些也将被俘获，以此类"
-"推。然而，如果一次移动就将俘获某个对手的全部种子，这些俘获将被没收放回游戏"
-"中，因此防止了对手重新游戏。这个反对俘获某个对手的全部种子的禁止项和一非常普"
-"通想法有关，就是某个游戏者必须做一个移动以允许对手能够继续游戏。如果某个对手"
-"的房子空了，当前的游戏者必须做一个移动为那个对手分发种子如果没有这样的移动的"
-"可能，当前的游戏者将俘获他领地中的全部种子，并结束游戏。（来源 Wikipedia &lt;"
-"http://en.wikipedia.org/wiki/Oware&gt;）"
+msgstr "在游戏开始时每个房子内放着四个种子，游戏者轮流移动这些种子。在每一轮，每个游戏者在自己的控制下在六个房子中选择一个，"
+"游戏者将该房子中的全部种子移走，同时分发它们，并按顺时针从原始房子开始点滴一个种子到每个房子，这个过程叫做播种。"
+"种子不要分发到最终成绩的房子中，也不要分配到移出的房子中，初始房子应放空；如果房子中已有12个种子，该房子将被跳过，并且第十二个"
+"种子将被放入下一个房子中。一轮后，如果最后一个种子被放到对手的房子中并且使该房子中的种子数为2或3，则这个房子中的所有种子将被俘获"
+"并被放入成绩房中（在没有成绩房的游戏中将被截留）。如果倒数第二个种子也使得对手房子中的种子数达到2或3，这些也将被俘获，以此类推。"
+"然而，如果一次移动就将俘获某个对手的全部种子，这些俘获将被没收放回游戏中，因此防止了对手重新游戏。这个反对俘获某个对手的全部种子的禁止项"
+"和一非常普通想法有关，就是某个游戏者必须做一个移动以允许对手能够继续游戏。如果某个对手的房子空了，当前的游戏者必须做一个移动为那个对手分发种子"
+"如果没有这样的移动的可能，当前的游戏者将俘获他领地中的全部种子，并结束游戏。（来源 Wikipedia &lt;http://en.wikipedia.org/wiki/Oware&gt;）"
 
 #: ../boards/awele.xml.in.h:2
 msgid "Oware"
@@ -619,12 +587,9 @@ msgid ""
 "player has captured 25 or more stones, or both players have taken 24 stones "
 "each (draw). If both players agree that the game has been reduced to an "
 "endless cycle, each player captures the stones on their side of the board."
-msgstr ""
-"这个游戏地目标是比你的对手获得更多的种子。因为该游戏只有48个种子，只需获得25"
-"个就足以成功了。因为种子数目为偶数，所以当每个游戏者都获得24个种子打成平局时"
-"游戏仍有可能结束。当有一个游戏者获得25个及25个以上的石头或者当两个游戏者都有"
-"24个石头时游戏结束。如果两个游戏者都同意减少游戏死循环，每个游戏者将俘获游戏"
-"板边上的石头。"
+msgstr "这个游戏地目标是比你的对手获得更多的种子。因为该游戏只有48个种子，只需获得25个就足以成功了。"
+"因为种子数目为偶数，所以当每个游戏者都获得24个种子打成平局时游戏仍有可能结束。当有一个游戏者获得25个及25个以上的石头"
+"或者当两个游戏者都有24个石头时游戏结束。如果两个游戏者都同意减少游戏死循环，每个游戏者将俘获游戏板边上的石头。"
 
 #: ../boards/babymatch.xml.in.h:1 ../boards/babymatch/board1_0.xml.in.h:1
 #: ../boards/babymatch/board2_0.xml.in.h:1
@@ -644,10 +609,9 @@ msgid ""
 "This game challenges you to find the logical link between these objects. How "
 "do they fit together? Drag each object to the correct red space in the main "
 "area."
-msgstr ""
-"在主游戏板中，摆放着一个物体。在垂直盒(在主游戏板的左边)中，放置有另一个物"
-"体，左边组中的每个物体要和主游戏板中的一个物体精确匹配。这个游戏挑战你发现物"
-"体间逻辑联系的能力。怎样让他们配对呢？拖放每个物体到正确的红点上。"
+msgstr "在主游戏板中，摆放着一个物体。在垂直盒(在主游戏板的左边)中，放置有另一个物体，"
+"左边组中的每个物体要和主游戏板中的一个物体精确匹配。这个游戏挑战你发现物体间逻辑联系的能力。"
+"怎样让他们配对呢？拖放每个物体到正确的红点上。"
 
 #: ../boards/babymatch.xml.in.h:3
 msgid "Matching Items"
@@ -721,9 +685,7 @@ msgstr "逻辑训练游戏"
 msgid ""
 "Place balls in the holes. You win if the computer has to place the last "
 "ball. If you want Tux to begin, just click on him."
-msgstr ""
-"将球放入洞中。如果你使得电脑放置最后一球，你将获胜。如果你想让 Tux 先开始，请"
-"点击它。"
+msgstr "将球放入洞中。如果你使得电脑放置最后一球，你将获胜。如果你想让 Tux 先开始，请点击它。"
 
 #: ../boards/bargame.xml.in.h:5
 msgid "bar game"
@@ -741,9 +703,9 @@ msgstr "踢球进洞"
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/erase_clic.xml.in.h:6
-#: ../boards/fifteen.xml.in.h:2 ../boards/hanoi.xml.in.h:3
-#: ../boards/memory.xml.in.h:4 ../boards/tangram.xml.in.h:8
+#: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
+#: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
+#: ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
 msgstr "鼠标"
 
@@ -765,15 +727,13 @@ msgstr "操纵船闸"
 msgid ""
 "Tux is in trouble, and needs to take his boat through a lock. Help Tux and "
 "find out how a canal lock works."
-msgstr ""
-"Tux 遇到麻烦了，它需要把船开过船闸。请帮助 Tux 同时学习船闸是如何工作的。"
+msgstr "Tux 遇到麻烦了，它需要把船开过船闸。请帮助 Tux 同时学习船闸是如何工作的。"
 
 #: ../boards/canal_lock.xml.in.h:3
 msgid ""
 "You are in charge of the canal lock. Open the gates and the locks in the "
 "right order, so Tux can travel through the gates in both directions."
-msgstr ""
-"你掌管这个船闸。安照正确的顺序打开水闸和船闸，让 Tux 从两边都可以驶过闸门。"
+msgstr "你掌管这个船闸。安照正确的顺序打开水闸和船闸，让 Tux 从两边都可以驶过闸门。"
 
 #: ../boards/chat.xml.in.h:1
 msgid "Chat with your friends"
@@ -790,10 +750,9 @@ msgid ""
 "Enter. Your message is then broadcast on the local network, and any GCompris "
 "program running the chat activity on that local network will receive and "
 "display your message."
-msgstr ""
-"在这个聊天游戏中你只能和同一个局域网中的其他 GCompris 用户聊天，不能在英特网"
-"上使用。你只需输入信息并按回车键，你发的消息就会被广播到局域网中，并且每个同"
-"网中正在运行聊天游戏的 GCompris 程序都将接收并显示你的消息。"
+msgstr "在这个聊天游戏中你只能和同一个局域网中的其他 GCompris 用户聊天，不能在英特网上使用。"
+"你只需输入信息并按回车键，你发的消息就会被广播到局域网中，并且每个同网中正在运行聊天游戏的 GCompris "
+"程序都将接收并显示你的消息。"
 
 #: ../boards/chess.xml.in.h:1 ../boards/chess_computer.xml.in.h:3
 msgid "Play chess against the computer in a learning mode"
@@ -835,10 +794,8 @@ msgid ""
 "Vegastrike which are released under the GPL license. The transportation "
 "images are copyright Franck Doucet. Dates of Transportation are based on "
 "those found in &lt;http://www.wikipedia.org&gt;."
-msgstr ""
-"月亮照片版权归 NASA 所有。太空音效来自 Tuxpaint 和 Vegastrike 并在 GPL "
-"License 许可下发行。交通工具图像版权归 Franck Doucet 所有。交通工具发明日期来"
-"自于 &lt;http://www.wikipedia.org&gt;。"
+msgstr "月亮照片版权归 NASA 所有。太空音效来自 Tuxpaint 和 Vegastrike 并在 GPL License 许可下发行。"
+"交通工具图像版权归 Franck Doucet 所有。交通工具发明日期来自于 &lt;http://www.wikipedia.org&gt;。"
 
 #: ../boards/chronos.xml.in.h:4
 msgid "Pick from the pictures on the left and put them on the red dots"
@@ -902,8 +859,7 @@ msgid ""
 "on the date it was invented.\n"
 "If not sure, research online at wikipedia:\n"
 "http://www.wikipedia.org"
-msgstr ""
-"按发明时间顺序放置图像。 \n"
+msgstr "按发明时间顺序放置图像。 \n"
 "如果你不确定，请在线查看维基： \n"
 "<http://www.wikipedia.org>"
 
@@ -917,8 +873,7 @@ msgstr "交通工具"
 msgid ""
 "1783 Montgolfier brothers'\n"
 "hot air balloon"
-msgstr ""
-"1783 Montgolfier 兄弟\n"
+msgstr "1783 Montgolfier 兄弟\n"
 "热气球"
 
 #: ../boards/chronos/board3_1.xml.in.h:3 ../boards/chronos/board3_2.xml.in.h:4
@@ -930,16 +885,14 @@ msgstr "1880 Clement Ader 'Eole' 飞行器"
 msgid ""
 "1906 Paul Cornu\n"
 "First helicopter flight"
-msgstr ""
-"1906 Paul Cornu\n"
+msgstr "1906 Paul Cornu\n"
 "首架直升机"
 
 #: ../boards/chronos/board3_2.xml.in.h:2 ../boards/chronos/board3_3.xml.in.h:3
 msgid ""
 "1791 Comte de Sivrac's\n"
 "Celerifere"
-msgstr ""
-"1791 Comte de Sivrac\n"
+msgstr "1791 Comte de Sivrac\n"
 "木马车"
 
 #: ../boards/chronos/board4_0.xml.in.h:2
@@ -950,8 +903,7 @@ msgstr "1903 Wright 兄弟 ‘飞行者3号’ "
 msgid ""
 "1909 Louis Bleriot crosses\n"
 "the English Channel"
-msgstr ""
-"1909 Louis Bleriot\n"
+msgstr "1909 Louis Bleriot\n"
 "穿越英吉利海峡"
 
 #: ../boards/chronos/board4_0.xml.in.h:5 ../boards/chronos/board4_1.xml.in.h:7
@@ -962,24 +914,21 @@ msgstr "航空器"
 msgid ""
 "1927 Charles Lindbergh\n"
 "crosses the Atlantic Ocean"
-msgstr ""
-"1927 Charles Lindbergh\n"
+msgstr "1927 Charles Lindbergh\n"
 "穿越大西洋"
 
 #: ../boards/chronos/board4_1.xml.in.h:3
 msgid ""
 "1934 Hélène Boucher's\n"
 "speed record of 444km/h"
-msgstr ""
-"1934 Hélène Boucher\n"
+msgstr "1934 Hélène Boucher\n"
 "创造 444公里／小时 速度记录"
 
 #: ../boards/chronos/board4_1.xml.in.h:5
 msgid ""
 "1947 Chuck Yeager\n"
 "breaks the sound-barrier"
-msgstr ""
-"1947 Chuck Yeager\n"
+msgstr "1947 Chuck Yeager\n"
 "打破音障"
 
 #: ../boards/chronos/board4_2.xml.in.h:2
@@ -1028,9 +977,7 @@ msgstr "点击蓝色的点绘制图画。"
 msgid ""
 "A letter is spoken. Click on the matching letter in the main area. You can "
 "listen to the letter again, by clicking on the mouth icon in the bottom box."
-msgstr ""
-"根据字母读音在游戏板中点击对应字母。在下方方框中点击嘴巴图标可以重听字母读"
-"音。"
+msgstr "根据字母读音在游戏板中点击对应字母。在下方方框中点击嘴巴图标可以重听字母读音。"
 
 #: ../boards/click_on_letter.xml.in.h:2
 msgid "Click on a letter"
@@ -1056,7 +1003,8 @@ msgstr "我点我点我点点点"
 msgid ""
 "Fish are taken from the Unix utility xfishtank. All image credits belong to "
 "Guillaume Rousse."
-msgstr "鱼图片来自 Unix 工具 xfishtank 。全部图像权益属于 Guillaume Rousse。"
+msgstr "鱼图片来自 Unix 工具 xfishtank 。"
+"全部图像权益属于 Guillaume Rousse。"
 
 #: ../boards/clickgame.xml.in.h:3
 msgid ""
@@ -1091,9 +1039,7 @@ msgid ""
 "Set the clock to the time given, in the time-units shown (hours:minutes or "
 "hours:minutes:seconds). Click on the different arrows, and move the mouse, "
 "to make the numbers go up or down."
-msgstr ""
-"按给定时间设置时钟，时间格式（小时：分钟 或 小时：分钟：秒）。点击不同的指针"
-"并移动鼠标调整时间。"
+msgstr "按给定时间设置时钟，时间格式（小时：分钟 或 小时：分钟：秒）。点击不同的指针并移动鼠标调整时间。"
 
 #: ../boards/clockgame.xml.in.h:5
 msgid "The concept of time. Reading the time."
@@ -1119,8 +1065,7 @@ msgstr "听色彩读音并点击相匹配的鸭子。"
 msgid ""
 "This board teaches you to recognize different colors. When you hear the name "
 "of the color, click on the duck wearing it."
-msgstr ""
-"这个游戏教你识别不同的颜色。当你的听到色彩的读音是点击同样穿颜色的鸭子。"
+msgstr "这个游戏教你识别不同的颜色。当你的听到色彩的读音是点击同样穿颜色的鸭子。"
 
 #: ../boards/colors_group.xml.in.h:1
 msgid "Colors based activities."
@@ -1144,30 +1089,25 @@ msgstr "四个硬币成一排"
 
 #: ../boards/connect4.xml.in.h:2 ../boards/connect4-2players.xml.in.h:2
 msgid ""
-"Click the position in the line where you want to drop a piece. You can also "
-"use the arrow keys to move the piece left or right, and the down or space "
-"key to drop a piece."
-msgstr ""
+"Click anywhere in the line where you want to drop a piece"
+msgstr "点击列投币"
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
 msgstr "四连珠"
 
 #: ../boards/connect4.xml.in.h:4
-#, fuzzy
 msgid ""
-"Create a line of 4 pieces either horizontally (lying down), vertically "
-"(standing up) or diagonally."
-msgstr "在水平（平躺），垂直（站立）或斜线其中一个方向上使四个硬币成一排。"
+"Create a line of 4 pieces either horizontally (lying down) or vertically (standing up)"
+msgstr "在水平（平躺）或垂直（站立）其中一个方向上使四个硬币成一排。"
 
 #: ../boards/connect4.xml.in.h:5
 msgid ""
 "Laurent Lacheny. Images and Artificial Intelligence taken from project "
 "4stattack by Jeroen Vloothuis. The original project can be found on &lt;"
 "http://forcedattack.sourceforge.net&gt;"
-msgstr ""
-"Laurent Lacheny。图像和人工智能来自 Jeroen Vloothuis 的 4stattack 项目。该初"
-"始项目可以在 &lt;http://forcedattack.sourceforge.net&gt;找到。"
+msgstr "Laurent Lacheny。图像和人工智能来自 Jeroen Vloothuis 的 4stattack 项目。该初始项目可以"
+"在 &lt;http://forcedattack.sourceforge.net&gt;找到。"
 
 #: ../boards/connect4-2players.xml.in.h:3
 msgid "Connect 4 (2 Players)"
@@ -1185,9 +1125,8 @@ msgid ""
 "Izarra made the two players game. Images and Artificial Intelligence taken "
 "from project 4stattack by Jeroen Vloothuis. The original project can be "
 "found on &lt;http://forcedattack.sourceforge.net&gt;"
-msgstr ""
-"初始代码由 Laurent Lacheny 写于2005年。在2006年，Miguel de Izarra 制作了双人"
-"游戏。图像和人工智能来自 Jeroen Vloothuis 的 4stattack 项目。该初始项目可以"
+msgstr "初始代码由 Laurent Lacheny 写于2005年。在2006年，Miguel de Izarra 制作了双人游戏。"
+"图像和人工智能来自 Jeroen Vloothuis 的 4stattack 项目。该初始项目可以"
 "在 &lt;http://forcedattack.sourceforge.net&gt;找到。"
 
 #: ../boards/crane.xml.in.h:1
@@ -1199,7 +1138,7 @@ msgid "Drive the crane and copy the model"
 msgstr "驾驶吊车并复制模型"
 
 #: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5 ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "促进协调力"
 
@@ -1212,9 +1151,8 @@ msgid ""
 "Move the items in the bottom left frame to copy their position in the top "
 "right model. Below the crane itself, you will find four arrows that let you "
 "move items. To select the item to move, just click on it."
-msgstr ""
-"参照右上方的模型位置在左下方的框架中放置物件。吊车下方有四个箭头可以移动物"
-"件，点击物体选中它"
+msgstr "参照右上方的模型位置在左下方的框架中放置物件。吊车下方有四个箭头可以移动物件，"
+"点击物体选中它"
 
 #: ../boards/discovery.xml.in.h:1
 msgid "Colors, sounds, memory..."
@@ -1263,17 +1201,14 @@ msgid ""
 "In this game, children can draw freely. The goal is to discover how to "
 "create attractive drawings based on basic shapes: rectangles, ellipses and "
 "lines."
-msgstr ""
-"在这个游戏中，孩子可以自由地创作。我们的目的是发现如何使用基本的形状（方形、"
-"椭圆、线条）创作吸引人的图画。"
+msgstr "在这个游戏中，孩子可以自由地创作。我们的目的是发现如何使用基本的形状（方形、椭圆、线条）创作吸引人的图画。"
 
 #: ../boards/draw.xml.in.h:5
 msgid ""
 "Select a drawing tool on the left, and a color down the bottom, then click "
 "and drag in the white area to create a new shape. To save time, you can "
 "click with the middle mouse button to delete an object."
-msgstr ""
-"在左侧栏中选择绘图工具，在底部选择颜色，然后点击和拖动鼠标在白板中绘制图形。"
+msgstr "在左侧栏中选择绘图工具，在底部选择颜色，然后点击和拖动鼠标在白板中绘制图形。"
 "为了节省时间，可以用鼠标中键删除一个对象。"
 
 #: ../boards/drawnumber.xml.in.h:1
@@ -1307,11 +1242,9 @@ msgid ""
 "value by dragging its wiper. In order to simulate what happens when a bulb "
 "is blown, you can blown it by right-clicking on it. The simulation is "
 "updated in real time by any user action."
-msgstr ""
-"将电组件拖放到工作区。点击一个连接点并拖动鼠标到下一连接点可以画出导线。拖动"
-"组件可以移动它们。点击导线可以删除它们。要删除组件可以使用组件栏顶部的删除工"
-"具。点击开关可以打开或闭合它。拖动变阻器触片可以改变其阻值。有右键点击灯泡可"
-"以模拟灯泡烧断，这个模拟将根据你的每一动作实时更新。"
+msgstr "将电组件拖放到工作区。点击一个连接点并拖动鼠标到下一连接点可以画出导线。拖动组件可以移动它们。"
+"点击导线可以删除它们。要删除组件可以使用组件栏顶部的删除工具。点击开关可以打开或闭合它。"
+"拖动变阻器触片可以改变其阻值。有右键点击灯泡可以模拟灯泡烧断，这个模拟将根据你的每一动作实时更新。"
 
 #: ../boards/electric.xml.in.h:3
 msgid "Electricity"
@@ -1325,9 +1258,8 @@ msgstr "自由创建电路图并进行实时的模拟。"
 msgid ""
 "GCompris uses the Gnucap electric simulator as a backend. You can get more "
 "information on gnucap at &lt;http://geda.seul.org/tools/gnucap/&gt;."
-msgstr ""
-"GCompris 使用 Gnucap 电路模拟器做为后台。获得更多关于 gnucap 信息请访问 &lt;"
-"http://geda.seul.org/tools/gnucap/&gt;。"
+msgstr "GCompris 使用 Gnucap 电路模拟器做为后台。"
+"获得更多关于 gnucap 信息请访问 &lt;http://geda.seul.org/tools/gnucap/&gt;。"
 
 #: ../boards/electric.xml.in.h:6
 msgid "Requires some basic understanding of the concept of electricity."
@@ -1346,9 +1278,8 @@ msgid ""
 "First, properly organize the items so that you can count them. Then, select "
 "the item you want to answer in the bottom right area. Enter the answer with "
 "the keyboard and press the OK button or the 'Enter' key."
-msgstr ""
-"首先，适当地组织这些物件使你能够计数。然后，在右下方选择你要回答的物件。用键"
-"盘输入答案并点击‘确定’按钮或按‘回车’键。"
+msgstr "首先，适当地组织这些物件使你能够计数。然后，在右下方选择你要回答的物件。"
+"用键盘输入答案并点击‘确定’按钮或按‘回车’键。"
 
 #: ../boards/enumerate.xml.in.h:4 ../boards/planegame.xml.in.h:5
 #: ../src/boards/enumerate.c:89
@@ -1365,10 +1296,8 @@ msgid ""
 "(&lt;http://schmode.net/&gt;) and from LE BERRE Daniel. These people kindly "
 "gave GCompris the authorization to include their pictures. Thanks a lot, "
 "both of you."
-msgstr ""
-"动物图片来自 Ralf Schmode 的动物摄影页(&lt;http://schmode.net/&gt;) 和 LE "
-"BERRE Daniel他们友善地授权 GCompris 使用他们的图片。在此，对他们致以十二万分"
-"感谢。"
+msgstr "动物图片来自 Ralf Schmode 的动物摄影页(&lt;http://schmode.net/&gt;) 和 LE BERRE Daniel"
+"他们友善地授权 GCompris 使用他们的图片。在此，对他们致以十二万分感谢。"
 
 #: ../boards/erase.xml.in.h:4 ../src/boards/erase.c:118
 #: ../src/boards/machpuzzle.c:88
@@ -1382,21 +1311,6 @@ msgstr "移动鼠标擦除区块并显现背景"
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "移动鼠标直到所有区块消失。"
-
-#: ../boards/erase_doubleclick.xml.in.h:2
-#, fuzzy
-msgid "Double click the mouse"
-msgstr "移动并点击鼠标"
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-#, fuzzy
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr "点击方形直到所有区块消失。"
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-#, fuzzy
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr "点击擦除区块并显现背景"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -1458,9 +1372,8 @@ msgid ""
 "Move the mouse over the red part of the hose-pipe. This will move it, "
 "bringing it, part by part, up to the flowers. Be careful, if you move off "
 "the hose, the red part will go back down."
-msgstr ""
-"把鼠标移动到软管红色部分。沿着软管移动鼠标，软管颜色将跟随鼠标移动而改变。请"
-"小心，如果你将鼠标移出软管，红色部分会返回。"
+msgstr "把鼠标移动到软管红色部分。沿着软管移动鼠标，软管颜色将跟随鼠标移动而改变。"
+"请小心，如果你将鼠标移出软管，红色部分会返回。"
 
 #: ../boards/followline.xml.in.h:4
 msgid "Tux needs to water the flowers, but the hose is blocked."
@@ -1736,7 +1649,7 @@ msgstr "克罗地亚"
 msgid "Cyprus"
 msgstr "塞浦路斯"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:66
 msgid "Czech Republic"
 msgstr "捷克共和国"
 
@@ -2063,9 +1976,8 @@ msgid ""
 "The map of Germany comes from Wikipedia and is released under the GNU Free "
 "Documentation License. Olaf Ronneberger and his children Lina and Julia "
 "Ronneberger created the German level."
-msgstr ""
-"德国地图来自维基并且在 GNU Free Documentation License 许可下发行。Olaf "
-"Ronneberger 和他的孩子  Lina 、 Julia Ronneberger 创建了‘德国’级别。"
+msgstr "德国地图来自维基并且在 GNU Free Documentation License 许可下发行。"
+"Olaf Ronneberger 和他的孩子  Lina 、 Julia Ronneberger 创建了‘德国’级别。"
 
 #: ../boards/geography_country/board1_0.xml.in.h:1
 msgid "Regions of France"
@@ -2112,11 +2024,11 @@ msgstr "键盘操作"
 msgid "Letter association between the screen and the keyboard"
 msgstr "将屏幕上出现的字母和键盘相关联"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:135
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
 msgid "Simple Letters"
 msgstr "简单字母"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:136
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
 msgid "Type the falling letters before they reach the ground"
 msgstr "在字母落地前敲击对应的按键"
 
@@ -2164,12 +2076,9 @@ msgid ""
 "families. So 1, 2, 3 and 6 all fit into the 6 family, but 4 belongs to "
 "another family. Use the arrow keys to navigate around the board and to avoid "
 "the Troggles. Press the spacebar to eat a number."
-msgstr ""
-"某个数的因子是能整除该数的所有数字。例如，6 的因子有 1、2、3 和 6。4 不是 6 "
-"的因子，因为 6 不能被 4 整除。如果某个数可以由两个数相乘得到，则这两个数是所"
-"得乘积的因子。你可以将乘法当作一个家庭，则因子是家庭成员。因此 1、2、3 和 6 "
-"全适合进入 6 的家庭，而 4 属于另一个家庭。用方向键在游戏板上游历并躲避野人。"
-"按空格键吃掉数字。"
+msgstr "某个数的因子是能整除该数的所有数字。例如，6 的因子有 1、2、3 和 6。4 不是 6 的因子，因为 6 不能被 4 整除。"
+"如果某个数可以由两个数相乘得到，则这两个数是所得乘积的因子。你可以将乘法当作一个家庭，则因子是家庭成员。"
+"因此 1、2、3 和 6 全适合进入 6 的家庭，而 4 属于另一个家庭。用方向键在游戏板上游历并躲避野人。按空格键吃掉数字。"
 
 #: ../boards/gnumch-inequality.xml.in.h:1
 msgid ""
@@ -2214,14 +2123,11 @@ msgid ""
 "over. So '8 isn't a multiple of 5, nor is 23. Only 5, 10, 15, 20, 25 ... are "
 "multiples (or families or steps) of 5. Use the arrow keys to navigate around "
 "the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr ""
-"某数的倍数是原数乘上另一个数的乘积。例如，24、36、48 和 60 全是 12 的倍数。"
-"25 不是 12 的倍数，因为没有任何一个数乘上 12 可以得到 25。如果一个数第二个数"
-"的因子，则这第二个数是第一个数的倍数。再则，你可以把倍数当成家庭，并且因子是"
-"个家庭成员。因子 5  有父亲 10、祖父 15、增祖父 20、曾曾祖父25，每递增 5 加一"
-"级曾祖但是 5 不属于 8 或 23 的家庭。你不能加任意个5 得到 8 或 23。因此 8 不"
-"是 5 的倍数，23 也不是。只有 5 、10、15、20、25 ...是 5 的倍数。用方向键在游"
-"戏板上游历并躲避野人。按空格键吃掉数字。"
+msgstr "某数的倍数是原数乘上另一个数的乘积。例如，24、36、48 和 60 全是 12 的倍数。25 不是 12 的倍数，"
+"因为没有任何一个数乘上 12 可以得到 25。如果一个数第二个数的因子，则这第二个数是第一个数的倍数。"
+"再则，你可以把倍数当成家庭，并且因子是个家庭成员。因子 5  有父亲 10、祖父 15、增祖父 20、曾曾祖父25，每递增 5 加一级曾祖"
+"但是 5 不属于 8 或 23 的家庭。你不能加任意个5 得到 8 或 23。因此 8 不是 5 的倍数，23 也不是。只有 5 、10、15、20、25 ...是 5 的倍数。"
+"用方向键在游戏板上游历并躲避野人。按空格键吃掉数字。"
 
 #: ../boards/gnumch-primes.xml.in.h:1
 msgid "Guide the Number Muncher to all the prime numbers."
@@ -2245,12 +2151,9 @@ msgid ""
 "5), but you can see that 6 has 2 and 3 in its family as well (6 × 1 = 6, 2 × "
 "3 = 6). So 6 is not a prime number. Use the arrow keys to navigate around "
 "the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr ""
-"质数是只能被自己和 1 整除的数。例如，3 是质数，但 4 不是（因为 4 能被 2 整"
-"除）。你把质数当作小家庭：他们只有两个成员，自己和 1 。你不能用其他数字将它填"
-"满。5 是一个孤独的数字（只有 5 x1＝5 ）， 但你可以看到 6 有 2 和 3 在它的家庭"
-"中（6x1=6,2x3=6）。因此 6 不是质数。用方向键在游戏板上游历并躲避野人。按空格"
-"键吃掉数字。"
+msgstr "质数是只能被自己和 1 整除的数。例如，3 是质数，但 4 不是（因为 4 能被 2 整除）。你把质数当作小家庭："
+"他们只有两个成员，自己和 1 。你不能用其他数字将它填满。5 是一个孤独的数字（只有 5 x1＝5 ）， "
+"但你可以看到 6 有 2 和 3 在它的家庭中（6x1=6,2x3=6）。因此 6 不是质数。用方向键在游戏板上游历并躲避野人。按空格键吃掉数字。"
 
 #: ../boards/gnumchmenu.xml.in.h:1
 msgid "Go to Number Munchers activities"
@@ -2280,10 +2183,8 @@ msgid ""
 "escape area on the right represents how far you are from the correct number. "
 "If Tux is over or under the escape area, it means your number is over or "
 "under the correct number."
-msgstr ""
-"根据提示在给定的数字的范围内找到正确答案。在右上方蓝色方框中输入一个数字。 "
-"Tux 将告诉你输入的数字太高或太低，然后输入另一个数字。Tux 与洞口距离表示你离"
-"正确答案有多远。如果 Tux 在洞口上方或下方，说明你的数字超过或低于正确数字。"
+msgstr "根据提示在给定的数字的范围内找到正确答案。在右上方蓝色方框中输入一个数字。 Tux 将告诉你输入的数字太高或太低，"
+"然后输入另一个数字。Tux 与洞口距离表示你离正确答案有多远。如果 Tux 在洞口上方或下方，说明你的数字超过或低于正确数字。"
 
 #: ../boards/hanoi.xml.in.h:1
 msgid "Concept taken from EPI games."
@@ -2293,8 +2194,7 @@ msgstr "从EPI游戏获得概念。"
 msgid ""
 "Drag and Drop one top piece at a time, from one peg to another, to reproduce "
 "the tower on the right in the empty space on the left."
-msgstr ""
-"每次拖放顶部的一片圆盘，从一根短桩到另一根，复制塔从左边到最右边的空桩上。"
+msgstr "每次拖放顶部的一片圆盘，从一根短桩到另一根，复制塔从左边到最右边的空桩上。"
 
 #: ../boards/hanoi.xml.in.h:4 ../src/boards/hanoi.c:97
 msgid "Reproduce the given tower"
@@ -2312,8 +2212,7 @@ msgstr "简易的 Hanoi 塔"
 msgid ""
 "Drag and Drop the top pieces only from one peg to another, to reproduce the "
 "tower on the right in the empty space on the left."
-msgstr ""
-"每次拖放顶部的一片圆盘，从一根短桩到另一根，复制塔从左边到最右边的空桩上。"
+msgstr "每次拖放顶部的一片圆盘，从一根短桩到另一根，复制塔从左边到最右边的空桩上。"
 
 #: ../boards/hanoi_real.xml.in.h:3
 msgid "Reproduce the tower on the right side"
@@ -2329,8 +2228,7 @@ msgid ""
 "the following rules:\n"
 "* only one disc may be moved at a time\n"
 "* no disc may be placed atop a smaller disc"
-msgstr ""
-"游戏的目的是移动整个堆栈到另一根短桩，依照以下规则：\n"
+msgstr "游戏的目的是移动整个堆栈到另一根短桩，依照以下规则：\n"
 "＊每次只能移动一个圆盘\n"
 "＊圆盘不能放在比它小的圆盘上"
 
@@ -2344,12 +2242,10 @@ msgid ""
 "Brahma puzzle. It is not clear whether Lucas invented this legend or was "
 "inspired by it. (source Wikipedia &lt;http://en.wikipedia.org/wiki/"
 "Tower_of_hanoi&gt;)"
-msgstr ""
-"这个益智游戏是由法国数学家 Edouard Lucas 在1883年发明的。这是一个关于Hindu 神"
-"庙的传说，那儿的祭司一直被一个依照这个规则移动64个圆盘的Hanoi塔的迷题困扰。根"
-"据这个传说，当祭司完成这个迷题后时是世界末日。这个迷题应此和Brahma塔迷题一样"
-"知名。不清楚是Lucas发明这个传输还受它的启发。（来源 维基 &lt;http://en."
-"wikipedia.org/wiki/Tower_of_hanoi&gt;）"
+msgstr "这个益智游戏是由法国数学家 Edouard Lucas 在1883年发明的。"
+"这是一个关于Hindu 神庙的传说，那儿的祭司一直被一个依照这个规则移动64个圆盘的Hanoi塔的迷题困扰。"
+"根据这个传说，当祭司完成这个迷题后时是世界末日。这个迷题应此和Brahma塔迷题一样知名。"
+"不清楚是Lucas发明这个传输还受它的启发。（来源 维基 &lt;http://en.wikipedia.org/wiki/Tower_of_hanoi&gt;）"
 
 #: ../boards/hexagon.xml.in.h:1
 msgid "Find the strawberry by clicking on the blue fields"
@@ -2661,12 +2557,10 @@ msgid ""
 "To run GCompris for a specific profile, you use 'gcompris -p profile' where "
 "'profile'\n"
 "is the name of a profile as you created it in Administration."
-msgstr ""
-"为了激活登录屏幕，你必须先用GCompris管理工具添加用户。\n"
+msgstr "为了激活登录屏幕，你必须先用GCompris管理工具添加用户。\n"
 "执行‘gcompris -a’访问管理工具。在管理工具中，你可以创建不同的配置文件。\n"
 "在每个配置文件中，你可以有不同的用户和不同的游戏选择。\n"
-"要让GCompris使用特别的配置文件，你可以执行‘gcompris -p profile’这儿"
-"的‘profile’是你在管理工具中创建的配置文件名。"
+"要让GCompris使用特别的配置文件，你可以执行‘gcompris -p profile’这儿的‘profile’是你在管理工具中创建的配置文件名。"
 
 #: ../boards/login.xml.in.h:10
 msgid "Select or enter your name to log in to GCompris"
@@ -2681,9 +2575,7 @@ msgid ""
 "Click on the hat to open or close it. Under the hat, how many stars can you "
 "see moving around? Count carefully. :) Click in the bottom-right area to "
 "input your answer."
-msgstr ""
-"点击让帽子打开或盖上。在帽子下，你可以看见多少星星在打转？数一下，：）点击右"
-"下方输入你的答案。"
+msgstr "点击让帽子打开或盖上。在帽子下，你可以看见多少星星在打转？数一下，：）点击右下方输入你的答案。"
 
 #: ../boards/magic_hat_plus.xml.in.h:3
 msgid "Count how many items are under the magic hat"
@@ -2711,9 +2603,8 @@ msgid ""
 "hat. Then, click on the hat to open it. A few stars escape. Click again on "
 "the hat to close it. You have to count how many are still under the hat. "
 "Click on the bottom right area to answer."
-msgstr ""
-"魔术师将告诉你魔法帽下有几个星星，然后点击帽子掀开它，会有一些星星逃逸。再次"
-"点击盖上帽子，你数一数还有剩下多少星星。点击右下方回答。"
+msgstr "魔术师将告诉你魔法帽下有几个星星，然后点击帽子掀开它，会有一些星星逃逸。再次点击盖上帽子，你数一数还有剩下多少星星。"
+"点击右下方回答。"
 
 #: ../boards/magic_hat_minus.xml.in.h:4 ../boards/memory_add_minus.xml.in.h:3
 #: ../boards/memory_add_minus_tux.xml.in.h:3 ../boards/memory_minus.xml.in.h:2
@@ -2761,9 +2652,7 @@ msgid ""
 "Use the keyboard arrows to move Tux up to the door. In this maze, the move "
 "is relative (first person). Use the up arrow to go forward. The other arrow "
 "let you turn Tux in another direction."
-msgstr ""
-"用方向键让 Tux 走出大门。在这个迷宫中，移动是相对的。向上键向前移动，其他方向"
-"键改变 Tux 的方向。"
+msgstr "用方向键让 Tux 走出大门。在这个迷宫中，移动是相对的。向上键向前移动，其他方向键改变 Tux 的方向。"
 
 #: ../boards/maze3D.xml.in.h:1
 msgid "3D Maze"
@@ -2778,9 +2667,7 @@ msgid ""
 "Use the keyboard arrows to move Tux up to the door. Use the spacebar to "
 "switch between 2D and 3D modes. 2D mode just gives you an indication of your "
 "position, like a map. You cannot move Tux in 2D mode."
-msgstr ""
-"用方向键让 Tux 走出大门。空格键切换2D 和 3D 模式。2D模式只能给你指示位置，就"
-"像一张地图。你不能在2D 模式中移动。"
+msgstr "用方向键让 Tux 走出大门。空格键切换2D 和 3D 模式。2D模式只能给你指示位置，就像一张地图。你不能在2D 模式中移动。"
 
 #: ../boards/mazeInvisible.xml.in.h:2
 msgid "Find your way out of the invisible maze"
@@ -2791,9 +2678,7 @@ msgid ""
 "Use the keyboard arrows to move Tux up to the door. Use the spacebar to "
 "switch between invisible and visible modes. Visible mode just gives you an "
 "indication of your position, like a map. You cannot move Tux in visible mode."
-msgstr ""
-"用方向键让 Tux 走出大门。空格键切换不可见和可见模式。可见模式只能给你指示位"
-"置，就像一张地图。你不能在可见模式中移动。"
+msgstr "用方向键让 Tux 走出大门。空格键切换不可见和可见模式。可见模式只能给你指示位置，就像一张地图。你不能在可见模式中移动。"
 
 #: ../boards/mazeMenu.xml.in.h:1
 msgid "Find your way out of different types of mazes"
@@ -2828,10 +2713,8 @@ msgid ""
 "its hidden picture, and try to match the twins. You can only turn over two "
 "cards at once, so you need to remember where a picture is, while you look "
 "for its twin. When you turn over the twins, they both disappear."
-msgstr ""
-"显示一组空的卡片。每张卡片的反面有都一张图，并且每张图都有另一个和它完全相同"
-"的图。点击卡片看隐藏的图，并且尝试为它配对。每次只能翻两张卡片，因此你需要记"
-"住每对图片的位置，当你翻开一对图片时，这对图片将消失。"
+msgstr "显示一组空的卡片。每张卡片的反面有都一张图，并且每张图都有另一个和它完全相同的图。点击卡片看隐藏的图，"
+"并且尝试为它配对。每次只能翻两张卡片，因此你需要记住每对图片的位置，当你翻开一对图片时，这对图片将消失。"
 
 #: ../boards/memory.xml.in.h:2
 msgid "Flip the cards to find the matching pairs"
@@ -2883,20 +2766,15 @@ msgid ""
 "them together and make a proper sum. When you do that, both those cards "
 "disappear! When you've made them all disappear, found all the sums, you've "
 "won the game! :)"
-msgstr ""
-"你将看到一些卡片，但你不能看到他们的另一面。每张卡片隐藏着一个加法式子，或者"
-"加法式的和。\n"
+msgstr "你将看到一些卡片，但你不能看到他们的另一面。每张卡片隐藏着一个加法式子，或者加法式的和。\n"
 "例如加法式：2＋4＝4\n"
-"‘＝’号两边相等，因此 2 和 2 得出 4。当你在解题时可以大声地数或用手指数，因为"
-"这些方法将有助于你增加记忆。你也可以使用方块或按钮及其他能计数的东西。如果你"
-"有很多兄弟姐妹，你可以数数他们！或者数数你们班级的同学。唱数数歌，数很多东西"
-"来练习你将提高你的加法能力！\n"
-"\n"
-"在这个游戏中，这些卡片分开隐藏了加法式的两个部分。你要同时找出这两个部分。点"
-"击卡片显示被隐藏的数字，然后找到另一张卡片，使他们成为一个完整的加法式子。每"
-"次你只能同时翻开两张卡片，因此你要记住隐藏数字的位置，然后找出和他们相匹配的"
-"另一半。你做的是‘等号’的工作，把加法式和适当的和放到一起。当你做了这些后，两"
-"张卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）"
+"‘＝’号两边相等，因此 2 和 2 得出 4。当你在解题时可以大声地数或用手指数，因为这些方法将有助于你增加记忆。"
+"你也可以使用方块或按钮及其他能计数的东西。如果你有很多兄弟姐妹，你可以数数他们！或者数数你们班级的同学。"
+"唱数数歌，数很多东西来练习你将提高你的加法能力！\n\n"
+"在这个游戏中，这些卡片分开隐藏了加法式的两个部分。你要同时找出这两个部分。点击卡片显示被隐藏的数字，然后"
+"找到另一张卡片，使他们成为一个完整的加法式子。每次你只能同时翻开两张卡片，因此你要记住隐藏数字的位置，"
+"然后找出和他们相匹配的另一半。你做的是‘等号’的工作，把加法式和适当的和放到一起。当你做了这些后，"
+"两张卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）"
 
 #: ../boards/memory_add_minus.xml.in.h:1
 msgid "Addition and subtraction memory game"
@@ -2935,15 +2813,12 @@ msgid ""
 "the equals sign, and the numbers need you to put them together and make a "
 "proper equality. When you do that, both those cards disappear! When you've "
 "made them all disappear, found all the operations, you've won the game! :)"
-msgstr ""
-"你将看到一些卡片，但你不能看到他们的另一面。每张卡片隐藏着一个运算式子，或者"
-"运算式的答案。\n"
+msgstr "你将看到一些卡片，但你不能看到他们的另一面。每张卡片隐藏着一个运算式子，或者运算式的答案。\n"
 "\n"
-"在这个游戏中，这些卡片分开隐藏了算式的两个部分。你要同时找出这两个部分。点击"
-"卡片显示被隐藏的数字，然后找到另一张卡片，使他们成为一个完整的运算式子。每次"
-"你只能同时翻开两张卡片，因此你要记住隐藏数字的位置，然后找出和他们相匹配的另"
-"一半。你做的是‘等号’的工作，把等式和适当的答案放到一起。当你做了这些后，两张"
-"卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）"
+"在这个游戏中，这些卡片分开隐藏了算式的两个部分。你要同时找出这两个部分。点击卡片显示被隐藏的数字，然后"
+"找到另一张卡片，使他们成为一个完整的运算式子。每次你只能同时翻开两张卡片，因此你要记住隐藏数字的位置，"
+"然后找出和他们相匹配的另一半。你做的是‘等号’的工作，把等式和适当的答案放到一起。当你做了这些后，"
+"两张卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）"
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:1
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:1
@@ -3049,20 +2924,15 @@ msgid ""
 "the equals sign, and the numbers need you to put them together and make a "
 "proper sum. When you do that, both those cards disappear! When you've made "
 "them all disappear, found all the subtracts, you've won the game! :)"
-msgstr ""
-"你将看到一些卡片，但你不能看到他们的另一面。每张卡片隐藏着一个减法式子，或者"
-"减法式的差。\n"
+msgstr "你将看到一些卡片，但你不能看到他们的另一面。每张卡片隐藏着一个减法式子，或者减法式的差。\n"
 "例如加法式：3－1＝2\n"
-"‘＝’号两边相等，因此 3减去12 得出2。当你在解题时可以大声地数或用手指数，因为"
-"这些方法将有助于你增加记忆。你也可以使用方块或按钮及其他能计数的东西。如果你"
-"有很多兄弟姐妹，你可以数数他们！或者数数你们班级的同学。唱数数歌，数很多东西"
-"来练习你将提高你的加法能力！\n"
-"\n"
-"在这个游戏中，这些卡片分开隐藏了减法式的两个部分。你要同时找出这两个部分。点"
-"击卡片显示被隐藏的数字，然后找到另一张卡片，使他们成为一个完整的减法式子。每"
-"次你只能同时翻开两张卡片，因此你要记住隐藏数字的位置，然后找出和他们相匹配的"
-"另一半。你做的是‘等号’的工作，把减法式和适当的差放到一起。当你做了这些后，两"
-"张卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）"
+"‘＝’号两边相等，因此 3减去12 得出2。当你在解题时可以大声地数或用手指数，因为这些方法将有助于你增加记忆。"
+"你也可以使用方块或按钮及其他能计数的东西。如果你有很多兄弟姐妹，你可以数数他们！或者数数你们班级的同学。"
+"唱数数歌，数很多东西来练习你将提高你的加法能力！\n\n"
+"在这个游戏中，这些卡片分开隐藏了减法式的两个部分。你要同时找出这两个部分。点击卡片显示被隐藏的数字，然后"
+"找到另一张卡片，使他们成为一个完整的减法式子。每次你只能同时翻开两张卡片，因此你要记住隐藏数字的位置，"
+"然后找出和他们相匹配的另一半。你做的是‘等号’的工作，把减法式和适当的差放到一起。当你做了这些后，"
+"两张卡片都将消失！当你让所有的卡片都消失，找到所有的和后，你将赢得胜利！：）"
 
 #: ../boards/memory_minus_tux.xml.in.h:3
 msgid "Subtraction memory game against Tux"
@@ -3132,10 +3002,8 @@ msgid ""
 "and try to match the twins. You can only activate two Tux at once, so you "
 "need to remember where a sound is, while you listen to its twin. When you "
 "turn over the twins, they both disappear."
-msgstr ""
-"展示一组拉小提琴的 Tux。每个 Tux 有一个和音，并且每个和音是成对的。点击 Tux "
-"去看它隐藏的声音并寻他的孪生音。每次只能激活两个Tux，因此你要记住你听到的每对"
-"音的位置，当你翻开一对孪生音时，他们将消失。"
+msgstr "展示一组拉小提琴的 Tux。每个 Tux 有一个和音，并且每个和音是成对的。点击 Tux 去看它隐藏的声音"
+"并寻他的孪生音。每次只能激活两个Tux，因此你要记住你听到的每对音的位置，当你翻开一对孪生音时，他们将消失。"
 
 #: ../boards/memory_sound.xml.in.h:2
 msgid "Audio memory game"
@@ -3178,10 +3046,8 @@ msgid ""
 "are until you can find the twin. When you turn over twins, they disappear! "
 "You take turns with Tux, and to win the game, you have to find more pairs of "
 "twins than he does."
-msgstr ""
-"展示一组拉小提琴的 Tux。每个 Tux 有一个和音，并且每个和音是成对的。点击 Tux "
-"去看它隐藏的声音并寻他的孪生音。每次只能激活两个Tux，因此你要记住你听到的每对"
-"音的位置，当你翻开一对孪生音时，他们将消失。"
+msgstr "展示一组拉小提琴的 Tux。每个 Tux 有一个和音，并且每个和音是成对的。点击 Tux 去看它隐藏的声音"
+"并寻他的孪生音。每次只能激活两个Tux，因此你要记住你听到的每对音的位置，当你翻开一对孪生音时，他们将消失。"
 
 #: ../boards/menu.xml.in.h:1
 msgid ""
@@ -3202,21 +3068,20 @@ msgid ""
 "The stars show suitable age groups for each game:\n"
 "    1, 2 or 3 simple stars  - from 2 to 6 years old\n"
 "    1, 2 or 3 complex stars - 7 years and up"
-msgstr ""
-"点击图标将带你进入游戏或游戏菜单。\n"
+msgstr "点击图标将带你进入游戏或游戏菜单。\n"
 "屏幕下端是 GCompris 控制栏。\n"
 "以下图标从左到右显示。\n"
 "（注意只有当前有效游戏的图标会被显示）\n"
 "       主页－离开游戏，返回菜单\n"
-"\t拇指－确认。确认你的答案\n"
-"\t嘴唇－重复问题\n"
-"\t问号－帮助\n"
-"\t工具－配置菜单\n"
-"\tTux 飞机－关于 GCompris\n"
-"\t夜晚－退出 GCompris\n"
+"	拇指－确认。确认你的答案\n"
+"	嘴唇－重复问题\n"
+"	问号－帮助\n"
+"	工具－配置菜单\n"
+"	Tux 飞机－关于 GCompris\n"
+"	夜晚－退出 GCompris\n"
 "星星表示每个游戏所适合的年龄组：\n"
-"\t1，2 或 3 简单星星 － 2 到 6 岁\n"
-"\t1，2 或 3 复杂星星 － 7 岁以上。"
+"	1，2 或 3 简单星星 － 2 到 6 岁\n"
+"	1，2 或 3 复杂星星 － 7 岁以上。"
 
 #: ../boards/menu.xml.in.h:16
 msgid "GCompris Main Menu"
@@ -3246,9 +3111,7 @@ msgstr "时间，地理，..."
 msgid ""
 "An object is displayed in the main area, and an incomplete word is printed "
 "under the picture. Select the missing letter to complete the word."
-msgstr ""
-"在主游戏区显示一个对象，同时在图片下显示一个不完整的单词。选择遗漏的字母完成"
-"单词。"
+msgstr "在主游戏区显示一个对象，同时在图片下显示一个不完整的单词。选择遗漏的字母完成单词。"
 
 #: ../boards/missing_letter.xml.in.h:2
 msgid "Fill in the missing letter"
@@ -3432,9 +3295,7 @@ msgstr "练习钱的使用"
 msgid ""
 "You must buy the different items and give the exact price. At higher levels, "
 "several items are displayed, and you must first calculate the total price."
-msgstr ""
-"你必须用准确的价钱购买不同的商品。在更高的级别，将同时显示多个商品，并且你必"
-"须首先计算总价。"
+msgstr "你必须用准确的价钱购买不同的商品。在更高的级别，将同时显示多个商品，并且你必须首先计算总价。"
 
 #: ../boards/money_cents.xml.in.h:4
 msgid "Practice money usage including cents"
@@ -3544,8 +3405,7 @@ msgstr "敲击任意键或点击飞机让 Tux 跳起来。敲击另一个键或�
 msgid ""
 "In this game, Tux the parachutist needs help to land safely on the fishing "
 "boat. He needs to allow for the wind direction and speed."
-msgstr ""
-"在这个游戏中，Tux 需要你的帮助安全地降落到渔船上。他需要一定的风向和风速。"
+msgstr "在这个游戏中，Tux 需要你的帮助安全地降落到渔船上。他需要一定的风向和风速。"
 
 #: ../boards/paratrooper.xml.in.h:4
 msgid "Parachutist"
@@ -3569,7 +3429,7 @@ msgstr "移动直升机按正确顺序接住云朵"
 msgid "Number"
 msgstr "数字"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:75
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
 msgid "Numbers in Order"
 msgstr "数字排序"
 
@@ -3581,13 +3441,26 @@ msgstr "迷题"
 msgid "Various puzzles."
 msgstr "多种迷题"
 
-#: ../boards/pythontest.xml.in.h:1
+#: ../boards/pythontemplate.xml.in.h:1 ../boards/pythontest.xml.in.h:1
 msgid "Add a language-binding to GCompris."
 msgstr "添加一个语言绑定到GCompris。"
 
-#: ../boards/pythontest.xml.in.h:2
+#: ../boards/pythontemplate.xml.in.h:2 ../boards/pythontest.xml.in.h:2
 msgid "Advanced Python Programmer :)"
 msgstr "高级 Python 程序：）"
+
+#: ../boards/pythontemplate.xml.in.h:3
+msgid "An empty python activity to use as a starting point"
+msgstr "一个空的 python 游戏作为使用的起点"
+
+#: ../boards/pythontemplate.xml.in.h:4
+msgid "Python Template"
+msgstr "Python 模板"
+
+#: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
+msgstr "感谢 Guido van Rossum 和 python 团队 提供如此强劲的语言！"
 
 #: ../boards/pythontest.xml.in.h:3
 msgid "Python Test"
@@ -3596,11 +3469,6 @@ msgstr "Python 测试"
 #: ../boards/pythontest.xml.in.h:4
 msgid "Test board for the python plugin"
 msgstr "python 插件测试游戏"
-
-#: ../boards/pythontest.xml.in.h:5
-msgid ""
-"Thanks to Guido van Rossum and the python team for this powerful language!"
-msgstr "感谢 Guido van Rossum 和 python 团队 提供如此强劲的语言！"
 
 #: ../boards/railroad.xml.in.h:1
 msgid "A memory game based on trains"
@@ -3612,9 +3480,8 @@ msgid ""
 "area for a few seconds. Rebuild it at the top of the screen by selecting the "
 "appropriate carriages and locomotive. Deselect an item by clicking on it "
 "again. Check your construction by clicking on the hand at the bottom."
-msgstr ""
-"列车－一个机车头和车厢－被显示坐在主游戏区的顶部几秒钟。在屏幕顶部选择合适的"
-"机车头和车厢重建列车。再次点击物价取消选择。点击底部的‘手’确认你构造的列车。"
+msgstr "列车－一个机车头和车厢－被显示坐在主游戏区的顶部几秒钟。在屏幕顶部选择合适的机车头和车厢重建列车。"
+"再次点击物价取消选择。点击底部的‘手’确认你构造的列车。"
 
 #: ../boards/railroad.xml.in.h:3
 msgid "Memory-training"
@@ -3696,9 +3563,7 @@ msgstr "阅读游戏。"
 msgid ""
 "A word is shown at the top right of the board. A list of words will appear "
 "and disappear on the left. Does the given word belong to the list?"
-msgstr ""
-"游戏板右上角显示一个单词。左边将出现或消失一列单词。回答给定单词是否在列表"
-"中。"
+msgstr "游戏板右上角显示一个单词。左边将出现或消失一列单词。回答给定单词是否在列表中。"
 
 #: ../boards/readingh.xml.in.h:2
 msgid "Horizontal reading practice"
@@ -3734,10 +3599,8 @@ msgid ""
 "create objects. When you are done, click on the OK button. Errors will be "
 "marked with a little red cross. The order of objects (above/under) is not "
 "important but be careful not to end up with unwanted objects under others."
-msgstr ""
-"首先，从工具栏中选择合适的工具。然后拖动鼠标创建对象。当你做了之后，点击‘确定"
-"按钮’。错误将被打红叉。对象的次序不重要但要小心不要在处在其他对象之下的不需要"
-"的对象处结束。"
+msgstr "首先，从工具栏中选择合适的工具。然后拖动鼠标创建对象。当你做了之后，点击‘确定按钮’。"
+"错误将被打红叉。对象的次序不重要但要小心不要在处在其他对象之下的不需要的对象处结束。"
 
 #: ../boards/redraw.xml.in.h:3
 msgid "Redraw the given item"
@@ -3756,10 +3619,8 @@ msgid ""
 "cross will show you where something isn't right yet. The order of objects "
 "(above/under) is not important but be careful not to end up with unwanted "
 "objects under others."
-msgstr ""
-"首先，从工具栏中选择合适的工具。然后拖动鼠标创建对象。当你做了之后，点击‘确定"
-"按钮’。错误将被打红叉。对象的次序不重要但要小心不要在处在其他对象之下的不需要"
-"的对象处结束。"
+msgstr "首先，从工具栏中选择合适的工具。然后拖动鼠标创建对象。当你做了之后，点击‘确定按钮’。"
+"错误将被打红叉。对象的次序不重要但要小心不要在处在其他对象之下的不需要的对象处结束。"
 
 #: ../boards/redraw_symmetrical.xml.in.h:3
 msgid "Mirror the given item"
@@ -3776,9 +3637,8 @@ msgid ""
 "Click on the dice to show how many ice spots there are between Tux and the "
 "fish. Click the dice with the right mouse button to count backwards. When "
 "done, click on the OK button or hit the Enter key."
-msgstr ""
-"点击骰子显示Tux和鱼之间有多少冰点。同时点击骰子和鼠标右键反向计数。当你做了，"
-"点击‘确定’按钮或敲击回车键。"
+msgstr "点击骰子显示Tux和鱼之间有多少冰点。同时点击骰子和鼠标右键反向计数。"
+"当你做了，点击‘确定’按钮或敲击回车键。"
 
 #: ../boards/reversecount.xml.in.h:3
 msgid "Practice subtraction with a fun game"
@@ -3805,9 +3665,8 @@ msgid ""
 "The painting is an original painting created by Virginie MOREAU (virginie."
 "moreau@free.fr) in 2001. Its name is 'Spices Seller in Egypt'. It is "
 "released under the GPL licence."
-msgstr ""
-"这幅绘图的原画由 Virginie MOREAU(virginie.moreau@free.fr)于2001年创作。画名"
-"为‘Spices Seller in Egypt’,在GPL协议下发行。"
+msgstr "这幅绘图的原画由 Virginie MOREAU(virginie.moreau@free.fr)于2001年创作。"
+"画名为‘Spices Seller in Egypt’,在GPL协议下发行。"
 
 #: ../boards/scalesboard.xml.in.h:5
 msgid ""
@@ -3835,11 +3694,9 @@ msgid ""
 "conditions by using the retry button. You can click and drag your mouse "
 "anywhere on the map to get a measurement in distance and angle. Going to the "
 "next level will give you more complex weather conditions."
-msgstr ""
-"在文字入口，一行输入一条命令，控制你的船。\n"
-"被支持的命令将被显示在两个入口之间。‘left’和‘right’命令必须跟随一定度数的角"
-"度。角度值也被称作‘left’‘right’命令的‘参数’。默认度数是45。‘forward’命令接受"
-"一个距离参数。默认距离是 1。"
+msgstr "在文字入口，一行输入一条命令，控制你的船。\n"
+"被支持的命令将被显示在两个入口之间。‘left’和‘right’命令必须跟随一定度数的角度。"
+"角度值也被称作‘left’‘right’命令的‘参数’。默认度数是45。‘forward’命令接受一个距离参数。默认距离是 1。"
 
 #: ../boards/searace.xml.in.h:8 ../boards/searace1player.xml.in.h:7
 msgid ""
@@ -3847,9 +3704,8 @@ msgid ""
 "if the language is extremely basic, you learn here how to think ahead and "
 "construct a program. This activity can be used to introduce the programming "
 "concept to children."
-msgstr ""
-"在这个游戏中，你将学到如何输入命令到电脑。虽然这个语言极端基础，你在这儿将学"
-"习如何去构思和构建一个程序。这个游戏能够被用于向孩子们介绍编程概念。"
+msgstr "在这个游戏中，你将学到如何输入命令到电脑。虽然这个语言极端基础，你在这儿将学习如何去"
+"构思和构建一个程序。这个游戏能够被用于向孩子们介绍编程概念。"
 
 #: ../boards/searace.xml.in.h:9
 msgid "Sea race (2 Players)"
@@ -3875,16 +3731,14 @@ msgid ""
 "conditions by using the retry button. You can click and drag your mouse "
 "anywhere on the map to get a measurement in distance and angle. Going to the "
 "next level will give you more complex weather conditions."
-msgstr ""
-"在文字入口，一行输入一条命令，控制你的船。被支持的命令将被显示在两个入口之"
-"间。‘left’和‘right’命令必须跟随一定度数的角度。角度值也被称作‘left’‘right’命"
-"令的‘参数’。默认度数是45。‘forward’命令接受一个距离参数。默认距离是 1。\n"
+msgstr "在文字入口，一行输入一条命令，控制你的船。"
+"被支持的命令将被显示在两个入口之间。‘left’和‘right’命令必须跟随一定度数的角度。"
+"角度值也被称作‘left’‘right’命令的‘参数’。默认度数是45。‘forward’命令接受一个距离参数。默认距离是 1。\n"
 "例如：\n"
 "－ left 90：垂直左转\n"
 "－ forward 10：向前10个单位。\n"
-"终点是屏幕右边的红线。当你做到后，你可以试着改进你的程序并且点击‘重试’按钮在"
-"相同天气条件下开始新的竞赛。你可以在地图的任意位置点击和拖动鼠标获得距离和角"
-"度的数据。下一级游戏将会有更复杂的天气条件。"
+"终点是屏幕右边的红线。当你做到后，你可以试着改进你的程序并且点击‘重试’按钮在相同天气条件下开始新的竞赛。"
+"你可以在地图的任意位置点击和拖动鼠标获得距离和角度的数据。下一级游戏将会有更复杂的天气条件。"
 
 #: ../boards/searace1player.xml.in.h:8
 msgid "Sea race (Single Player)"
@@ -3935,9 +3789,8 @@ msgid ""
 "Click on different active elements : engine, rudders and air tanks, in order "
 "to navigate to the required depth. There is a close gate on the right. Catch "
 "the jewel to open it, then pass through it to reach the next level."
-msgstr ""
-"点击不同活动元素：引擎、船舵、空气罐，在不同深度航行。在右边有一扇关闭的大"
-"门。得到宝石去开启大门，然后通过它进入下一级。"
+msgstr "点击不同活动元素：引擎、船舵、空气罐，在不同深度航行。在右边有一扇关闭的大门。"
+"得到宝石去开启大门，然后通过它进入下一级。"
 
 #: ../boards/submarine.xml.in.h:2
 msgid "Learn how a submarine works"
@@ -3965,10 +3818,8 @@ msgid ""
 "target position. For the higher levels, click on an empty square to give it "
 "the keyboard focus. Then enter a possible letter or number. GCompris will "
 "not let you enter invalid data."
-msgstr ""
-"在色彩标识的首个级别中，从左边拖动标识到他们的目标位置。在更高级别中，点击一"
-"个空的方块以获得键盘焦点。然后输入可能的字母或数字。GCompris 不会让你输入非法"
-"的数据。"
+msgstr "在色彩标识的首个级别中，从左边拖动标识到他们的目标位置。在更高级别中，点击一个空的方块"
+"以获得键盘焦点。然后输入可能的字母或数字。GCompris 不会让你输入非法的数据。"
 
 #: ../boards/sudoku.xml.in.h:3
 msgid "Sudoku, place unique symbols in a square."
@@ -3987,11 +3838,9 @@ msgid ""
 "cells (the 'givens'). Each row, column and region must contain only one "
 "instance of each symbol or numeral (Source &lt;http://en.wikipedia.org/wiki/"
 "Sudoku&gt;)."
-msgstr ""
-"这个迷题的目标是在矩阵的每格中输入一个标识或从1到9的数字，必须重复使用3x3矩阵"
-"（称为‘区域’）组成一个9x9矩阵，开始时在一些格子中将给定标识或数字。每行、列和"
-"区域必须保证每个标识或数字的唯一（来源 &lt;http://en.wikipedia.org/wiki/"
-"Sudoku&gt;）。"
+msgstr "这个迷题的目标是在矩阵的每格中输入一个标识或从1到9的数字，必须重复使用3x3矩阵（称为‘区域’）"
+"组成一个9x9矩阵，开始时在一些格子中将给定标识或数字。每行、列和区域必须保证每个标识或数字的唯一"
+"（来源 &lt;http://en.wikipedia.org/wiki/Sudoku&gt;）。"
 
 #: ../boards/superbrain.xml.in.h:1
 msgid ""
@@ -4000,10 +3849,8 @@ msgid ""
 "gives you an indication if you found a hiding place by marking the item with "
 "a black box. You can use the right mouse button to flip the colors in the "
 "opposite order."
-msgstr ""
-"点击物件直到你找到你认为正确的答案。然后，在控制栏中点击‘确定’按钮。在低级别"
-"中，当你在黑盒中发现一个被物件标识的隐藏的地方时 Tux 将给你一个提示。你可以使"
-"用鼠标右键以相反顺序翻转色彩。"
+msgstr "点击物件直到你找到你认为正确的答案。然后，在控制栏中点击‘确定’按钮。在低级别中，"
+"当你在黑盒中发现一个被物件标识的隐藏的地方时 Tux 将给你一个提示。你可以使用鼠标右键以相反顺序翻转色彩。"
 
 #: ../boards/superbrain.xml.in.h:2 ../src/boards/superbrain.c:106
 msgid "Super Brain"
@@ -4026,9 +3873,8 @@ msgid ""
 "\t\to 2 large size (legs of 2)\n"
 "\t* 1 square (side of 1)\n"
 "\t* 1 parallelogram (sides of 1 and square root of 2)"
-msgstr ""
-"维基百科，自由的百科全书。‘七巧板’是一个中国迷题。七巧板是个古老的迷题，存在"
-"了至少1800年。它包括七片，可以组成一个方块；组成单元：\n"
+msgstr "维基百科，自由的百科全书。‘七巧板’是一个中国迷题。七巧板是个古老的迷题，存在了至少1800年。"
+"它包括七片，可以组成一个方块；组成单元：\n"
 "\t* 5 片等腰直角三角形\n"
 "\t\t  2 片小的（方块的一条边）\n"
 "\t\t  1 片中的（方块角的两条边）\n"
@@ -4043,10 +3889,8 @@ msgid ""
 "rotation you want. Once you've shown what shape you want, the computer will "
 "create it. If you need help, click on the shape button, and the border of "
 "the shape will be drawn."
-msgstr ""
-"选择七巧板摆图。拖动鼠标可以移动一片板。用右键点击板可以创建对称的物件。选择"
-"一个物件并环绕拖动可以旋转它。一旦你展示你想要的图形，电脑将创建他。如果你需"
-"要帮助，点击图形按钮，同时绘出该图形的边。"
+msgstr "选择七巧板摆图。拖动鼠标可以移动一片板。用右键点击板可以创建对称的物件。选择一个物件并环绕拖动"
+"可以旋转它。一旦你展示你想要的图形，电脑将创建他。如果你需要帮助，点击图形按钮，同时绘出该图形的边。"
 
 #: ../boards/tangram.xml.in.h:10
 msgid "The objective is to form a given shape with seven pieces"
@@ -4056,9 +3900,7 @@ msgstr "目标是用七巧板组合成给定的图形"
 msgid ""
 "The original code was written by Philippe Banwarth in 1999. It was ported to "
 "GCompris by Yves Combe in 2005."
-msgstr ""
-"初始代码由 Philippe Banwarth 于 1999年编写。在 2005年由 Yves Comben 把它作为"
-"接口放入GCompris。"
+msgstr "初始代码由 Philippe Banwarth 于 1999年编写。在 2005年由 Yves Comben 把它作为接口放入GCompris。"
 
 #: ../boards/tangram.xml.in.h:12
 msgid "The tangram puzzle game"
@@ -4075,9 +3917,8 @@ msgid ""
 "dart. When you all your darts are thrown, a window appears asking you to "
 "count your score. Enter the score with the keyboard then press the Enter key "
 "or the OK button."
-msgstr ""
-"确认风速和风向，然后点击目标发射飞镖。当你的抛出全部飞镖，会出现一窗口要求你"
-"计算成绩。用键盘输入成绩然后按回车键或‘确定’按钮。"
+msgstr "确认风速和风向，然后点击目标发射飞镖。当你的抛出全部飞镖，会出现一窗口要求你计算成绩。"
+"用键盘输入成绩然后按回车键或‘确定’按钮。"
 
 #: ../boards/target.xml.in.h:3
 msgid "Hit the target and count your points"
@@ -4099,8 +3940,7 @@ msgstr "滑砖块迷题游戏"
 msgid ""
 "Each car can only move either horizontally or vertically. You must make some "
 "room in order to let the red car move through the gate on the right."
-msgstr ""
-"每辆汽车只能水平或垂直移动。你必须调整出一些空间使红色汽车能通过右边的大门。"
+msgstr "每辆汽车只能水平或垂直移动。你必须调整出一些空间使红色汽车能通过右边的大门。"
 
 #: ../boards/traffic.xml.in.h:3
 msgid "Remove the red car from the parking lot through the gate on the right"
@@ -4132,9 +3972,7 @@ msgid ""
 "water cleanup station, in order to reactivate the entire water system. When "
 "the system is back up and Tux is in the shower, push the shower button for "
 "him."
-msgstr ""
-"点击不同活动元素：太阳、云朵、水泵站和净水站，使整个水系统重新运转。当这恢复"
-"后为站在喷头下的Tux按下喷头按钮。"
+msgstr "点击不同活动元素：太阳、云朵、水泵站和净水站，使整个水系统重新运转。当这恢复后为站在喷头下的Tux按下喷头按钮。"
 
 #: ../boards/watercycle.xml.in.h:2
 msgid "Learn about the water cycle"
@@ -4150,7 +3988,7 @@ msgid ""
 "system back up so he can take a shower."
 msgstr "Tux 从一个冗长的钓鱼聚会上回了。请修复水系统让他洗个淋浴。"
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
 msgid "Falling Words"
 msgstr "单词雨"
 
@@ -4162,7 +4000,7 @@ msgstr "键盘训练"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "在单词落地前输入完整的单词"
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:112
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
 msgid "Type the falling words before they reach the ground"
 msgstr "在单词落地前输入完整的单词"
 
@@ -4177,10 +4015,8 @@ msgid ""
 "The first 4 buttons let you select the style of the line on which your "
 "insert cursor is. The 2 others buttons with multiple choices let you select "
 "from a predefined document and color theme."
-msgstr ""
-"在这个字处理工具中你可以输入你想要的文本，保存并载入它们。你可以用左边的按钮"
-"为你的文本增加修饰样式。前四个按钮用于选择光标插入行的样式。后两个按钮有多种"
-"预定义文档和颜色主题可供选择。"
+msgstr "在这个字处理工具中你可以输入你想要的文本，保存并载入它们。你可以用左边的按钮"
+"为你的文本增加修饰样式。前四个按钮用于选择光标插入行的样式。后两个按钮有多种预定义文档和颜色主题可供选择。"
 
 #: ../boards/wordprocessor.xml.in.h:3
 msgid ""
@@ -4188,9 +4024,8 @@ msgid ""
 "that it enforces the use of styles. This way, the children will understand "
 "their benefit when moving to more feature full wordprocessor like OpenOffice."
 "org."
-msgstr ""
-"学习如何在字处理工具中输入文本。这个字处理工具的特别之处是强制使用样式。这是"
-"为了让孩子明白他们以后使用全特性字处理软件例如‘OpenOffice.org’能获得的好处。"
+msgstr "学习如何在字处理工具中输入文本。这个字处理工具的特别之处是强制使用样式。这是为了"
+"让孩子明白他们以后使用全特性字处理软件例如‘OpenOffice.org’能获得的好处。"
 
 #: ../boards/wordprocessor.xml.in.h:4
 msgid "The children can type their own text or copy one given by the teacher."
@@ -4252,8 +4087,7 @@ msgid ""
 "Find this program on http://www.rpmfind.net or in your\n"
 "GNU/Linux distribution\n"
 "And check it is located here: "
-msgstr ""
-"错误：在GCompris 玩象棋游戏需要GNU象棋扩展程序\n"
+msgstr "错误：在GCompris 玩象棋游戏需要GNU象棋扩展程序\n"
 "获得该程序 http://www.rpmfind.net 或者在你的GNU/Linux 发行版中寻找\n"
 "并确认该程序被定位于："
 
@@ -4262,8 +4096,7 @@ msgid ""
 "Error: The external program gnuchess is mandatory\n"
 "to play chess in gcompris.\n"
 "First install it, and check it is in "
-msgstr ""
-"错误：在GCompris 玩象棋游戏需要GNU象棋扩展程序\n"
+msgstr "错误：在GCompris 玩象棋游戏需要GNU象棋扩展程序\n"
 "必须先安装该程序，并确认它在 "
 
 #: ../src/boards/chess.c:587
@@ -4290,8 +4123,8 @@ msgstr "黑棋同伴"
 msgid "White mates"
 msgstr "白棋同伴"
 
-#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:355
-#: ../src/gcompris/bonus.c:364
+#: ../src/boards/chess.c:1100 ../src/gcompris/bonus.c:364
+#: ../src/gcompris/bonus.c:373
 msgid "Drawn game"
 msgstr "平局"
 
@@ -4305,14 +4138,13 @@ msgid ""
 "sound effects disabled.\n"
 "Go to the configuration dialog to\n"
 "enable the sound"
-msgstr ""
-"错误：音效被关闭，游戏不能进行。\n"
+msgstr "错误：音效被关闭，游戏不能进行。\n"
 "进入配置对话框，开启音效"
 
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:233
+#: ../src/boards/click_on_letter.c:264 ../src/boards/gletters.c:231
 #: ../src/boards/memory.c:835
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
@@ -4330,8 +4162,7 @@ msgid ""
 "Error: this activity requires that you first install\n"
 "the packages with GCompris voices for the locale '%s' ! Fallback to english, "
 "sorry!"
-msgstr ""
-"错误：这个游戏需要首先安装 GCompris 本地语音包 '%s' ！\n"
+msgstr "错误：这个游戏需要首先安装 GCompris 本地语音包 '%s' ！\n"
 "回放到英语，抱歉！"
 
 #. Init configuration window:
@@ -4341,24 +4172,23 @@ msgstr ""
 #. the returned value is the main GtkVBox of the window,
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:623 ../src/boards/colors.c:165
-#: ../src/boards/gletters.c:859 ../src/boards/imageid.c:749
-#: ../src/boards/missingletter.c:771
+#: ../src/boards/gletters.c:857 ../src/boards/imageid.c:749
+#: ../src/boards/missingletter.c:772
 #: ../src/boards/python/admin/board_list.py:641
 #: ../src/boards/python/admin/board_list.py:659
 #: ../src/boards/python/admin/wordlist.py:50 ../src/boards/python/login.py:535
-#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:206
+#: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:208
 #: ../src/boards/reading.c:833 ../src/boards/scale.c:862
-#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:592
+#: ../src/boards/shapegame.c:1863 ../src/boards/smallnumbers.c:590
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
 " for profile <b>%s</b>"
-msgstr ""
-"<b>%s</b> 配置\n"
+msgstr "<b>%s</b> 配置\n"
 "对应配置文件 <b>%s</b>"
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:892
+#: ../src/boards/click_on_letter.c:646 ../src/boards/gletters.c:890
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "全大写字母文本"
@@ -4408,21 +4238,21 @@ msgid "Click on the white duck"
 msgstr "点击白色鸭子"
 
 #: ../src/boards/colors.c:177 ../src/boards/python/admin/board_list.py:671
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:610
 msgid "Select sound locale"
 msgstr "选择本地语音"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:229 ../src/boards/memory.c:831
+#: ../src/boards/gletters.c:227 ../src/boards/memory.c:831
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:239 ../src/boards/memory.c:841
+#: ../src/boards/gletters.c:237 ../src/boards/memory.c:841
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:888 ../src/boards/smallnumbers.c:610
+#: ../src/boards/gletters.c:886 ../src/boards/smallnumbers.c:608
 msgid "Enable sounds"
 msgstr "开启声音"
 
@@ -4496,11 +4326,11 @@ msgstr "$ %.2f"
 msgid "$ %.0f"
 msgstr "$ %.0f"
 
-#: ../src/boards/paratrooper.c:438
+#: ../src/boards/paratrooper.c:437
 msgid "Control fall speed with up and down arrow keys."
 msgstr "用上下方向键控制下落速度。"
 
-#: ../src/boards/planegame.c:76
+#: ../src/boards/planegame.c:75
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "移动飞机按正确顺序捉住云朵"
 
@@ -4577,60 +4407,59 @@ msgstr "过滤游戏难度对应配置文件 %s"
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
 "for profile <b>%s</b></span>"
-msgstr ""
-"<span size='x-large'>  选择难度\n"
+msgstr "<span size='x-large'>  选择难度\n"
 "对应配置文件  <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:61
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "编辑班级"
 
-#: ../src/boards/python/admin/class_edit.py:66
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "编辑班级："
 
-#: ../src/boards/python/admin/class_edit.py:69
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "编辑新班级"
 
-#: ../src/boards/python/admin/class_edit.py:91
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "班级："
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:104
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "教师："
 
-#: ../src/boards/python/admin/class_edit.py:114
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr "分配全部用户到这个班级"
 
-#: ../src/boards/python/admin/class_edit.py:254
-#: ../src/boards/python/admin/group_edit.py:266
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:154
 #: ../src/boards/python/admin/user_list.py:196
 msgid "First Name"
 msgstr "姓"
 
-#: ../src/boards/python/admin/class_edit.py:265
-#: ../src/boards/python/admin/group_edit.py:277
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:164
 #: ../src/boards/python/admin/user_list.py:206
 msgid "Last Name"
 msgstr "名"
 
-#: ../src/boards/python/admin/class_edit.py:342
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr "你至少要提供一个名称给所在的班级"
 
-#: ../src/boards/python/admin/class_edit.py:388
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr "班级名称重复"
 
 #: ../src/boards/python/admin/class_list.py:169
-#: ../src/boards/python/admin/profile_edit.py:270
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:144
 msgid "Class"
 msgstr "班级"
@@ -4639,43 +4468,43 @@ msgstr "班级"
 msgid "Teacher"
 msgstr "教师"
 
-#: ../src/boards/python/admin/group_edit.py:61
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "编辑分组"
 
-#: ../src/boards/python/admin/group_edit.py:67
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "编辑分组"
 
-#: ../src/boards/python/admin/group_edit.py:68
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr "对应班级："
 
-#: ../src/boards/python/admin/group_edit.py:71
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "编辑新分组"
 
-#: ../src/boards/python/admin/group_edit.py:91
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "分组"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:103
-#: ../src/boards/python/admin/profile_edit.py:99
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "描述："
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:114
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr "分配全部用户到这个分组"
 
-#: ../src/boards/python/admin/group_edit.py:360
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr "你至少要提供一个名称给所在的分组"
 
-#: ../src/boards/python/admin/group_edit.py:374
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "分组名称重复"
 
@@ -4684,13 +4513,13 @@ msgid "Select a class:"
 msgstr "选择班级："
 
 #: ../src/boards/python/admin/group_list.py:214
-#: ../src/boards/python/admin/profile_edit.py:280
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:154
 msgid "Group"
 msgstr "分组"
 
 #: ../src/boards/python/admin/group_list.py:225
-#: ../src/boards/python/admin/profile_edit.py:290
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:164
 #: ../src/boards/python/admin/profile_list.py:198
 msgid "Description"
@@ -4786,32 +4615,32 @@ msgstr "用户"
 msgid "Classes"
 msgstr "班级"
 
-#: ../src/boards/python/admin/profile_edit.py:60
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr "编辑一个配置文件"
 
-#: ../src/boards/python/admin/profile_edit.py:65
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr "编辑配置文件"
 
-#: ../src/boards/python/admin/profile_edit.py:68
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr "编辑一个新配置文件"
 
-#: ../src/boards/python/admin/profile_edit.py:87
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr "配置文件:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:110
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr "分配全部分组到这个配置文件"
 
-#: ../src/boards/python/admin/profile_edit.py:378
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr "你至少要提供一个名称给所在的配置文件"
 
-#: ../src/boards/python/admin/profile_edit.py:400
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr "配置文件名称重复"
 
@@ -4823,44 +4652,44 @@ msgstr "配置文件"
 msgid "[Default]"
 msgstr "［默认缺省］"
 
-#: ../src/boards/python/admin/user_edit.py:51
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "编辑用户"
 
-#: ../src/boards/python/admin/user_edit.py:56
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "编辑用户"
 
-#: ../src/boards/python/admin/user_edit.py:62
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "编辑新用户"
 
-#: ../src/boards/python/admin/user_edit.py:79
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "登录名："
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:90
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "姓："
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:99
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "名："
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:108
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "生日："
 
-#: ../src/boards/python/admin/user_edit.py:160
+#: ../src/boards/python/admin/user_edit.py:159
 msgid ""
 "You need to provide at least a login, first name and last name for your users"
 msgstr "你要为每个用户提供登录名、姓名"
 
-#: ../src/boards/python/admin/user_edit.py:177
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "登录名重复"
 
@@ -4870,8 +4699,7 @@ msgid ""
 "FILE FORMAT: Your file must be formatted like this:\n"
 "login;First name;Last name;Date of birth\n"
 "The separator is autodetected and can be one of ',', ';' or ':'"
-msgstr ""
-"从文件导入用户列表，首先选择班级。\n"
+msgstr "从文件导入用户列表，首先选择班级。\n"
 "文件导入：你的文件必须是一下格式：\n"
 "登录名;姓;名;生日\n"
 "分隔符自动探测，可以用 ',' , ';' , ':' "
@@ -4881,8 +4709,7 @@ msgstr ""
 msgid ""
 "One or more logins are not unique !\n"
 "You need to change them: %s !"
-msgstr ""
-"一个或更多的登录名不唯一！\n"
+msgstr "一个或更多的登录名不唯一！\n"
 "你要修改他们： %s ！"
 
 #: ../src/boards/python/anim.py:2225
@@ -4932,8 +4759,7 @@ msgid ""
 "/usr/bin/gnucap or /usr/local/bin/gnucap.\n"
 "You can still use this activity to draw schematics without computer "
 "simulation."
-msgstr ""
-"没有发现‘gnucap’电子模拟器。\n"
+msgstr "没有发现‘gnucap’电子模拟器。\n"
 "你可以从 <http://geda.seul.org/tools/gnucap/> 下载并安装它\n"
 "你必须将它安装到 /usr/bin/gnucap 或 /usr/local/bin/gnucap.\n"
 "你可以一直使用这个游戏绘制电路图而不需电脑模拟。"
@@ -4968,8 +4794,7 @@ msgstr "小于 %d 的质数"
 msgid ""
 "Multiples of %(d1)d include %(s)s,\n"
 "but %(d2)d is not a multiple of %(d3)d."
-msgstr ""
-"%(d1)d 倍数包括 %(s)s ，\n"
+msgstr "%(d1)d 倍数包括 %(s)s ，\n"
 "但  %(d2)d 不是  %(d3)d 的倍数。"
 
 #: ../src/boards/python/gnumch.py:164
@@ -5026,8 +4851,7 @@ msgstr "不等于 %d"
 msgid ""
 "You were eaten by a Troggle.\n"
 "Press <Return> to continue."
-msgstr ""
-"你被野蛮人吃掉了。\n"
+msgstr "你被野蛮人吃掉了。\n"
 "按 回车键 继续。"
 
 #: ../src/boards/python/gnumch.py:490
@@ -5038,8 +4862,7 @@ msgstr "你吃错了。\n"
 msgid ""
 "\n"
 "Press <Return> to continue."
-msgstr ""
-"\n"
+msgstr "\n"
 "按 回车键 继续。"
 
 #: ../src/boards/python/gnumch.py:784
@@ -5103,22 +4926,20 @@ msgstr "输入登录名登录"
 msgid "Rebuild the same mosaic on the right area"
 msgstr "重新构造和右边相同的马赛克"
 
-#: ../src/boards/python/melody.py:119
+#: ../src/boards/python/melody.py:120
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
 "Go to the configuration dialogue to\n"
 "enable the sound"
-msgstr ""
-"错误：这个游戏不能进行，因为音效被关闭。\n"
+msgstr "错误：这个游戏不能进行，因为音效被关闭。\n"
 "进入配置对话框开启音效"
 
 #: ../src/boards/python/oscar_and_friends.py:116
 msgid ""
 "Below the surface, Oscar the octopus and his friends sat on a rock,\n"
 "watching the bad weather above them."
-msgstr ""
-"在平面下，章鱼 Oscar和他的朋友们坐在石头上，\n"
+msgstr "在平面下，章鱼 Oscar和他的朋友们坐在石头上，\n"
 "望着他们头顶的恶劣天气。"
 
 #: ../src/boards/python/oscar_and_friends.py:117
@@ -5145,8 +4966,7 @@ msgstr "这是第一个插入GCompris的Python代码"
 msgid ""
 "It is now possible to develop GCompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
-msgstr ""
-"现在可以用 C 或者 Python 开发 GCompris 游戏。\n"
+msgstr "现在可以用 C 或者 Python 开发 GCompris 游戏。\n"
 "感谢 Olivier Samys 让这成为可能。"
 
 #: ../src/boards/python/pythontest.py:166
@@ -5239,35 +5059,34 @@ msgstr "未知命令，行号 "
 msgid "Distance:"
 msgstr "距离："
 
-#: ../src/boards/python/tuxpaint.py:144
+#: ../src/boards/python/tuxpaint.py:145
 msgid ""
 "Cannot find Tuxpaint.\n"
 "Install it to use this activity !"
-msgstr ""
-"没有发现 Tuxpaint \n"
+msgstr "没有发现 Tuxpaint \n"
 "安装他并使用这个游戏！"
 
-#: ../src/boards/python/tuxpaint.py:157
+#: ../src/boards/python/tuxpaint.py:159
 msgid "Waiting for Tuxpaint to finish"
 msgstr "等待 Tuxpaint 完成"
 
-#: ../src/boards/python/tuxpaint.py:210
+#: ../src/boards/python/tuxpaint.py:212
 msgid "Inherit fullscreen setting from GCompris"
 msgstr "继承GCompris的全屏设置"
 
-#: ../src/boards/python/tuxpaint.py:214
+#: ../src/boards/python/tuxpaint.py:217
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
 msgstr "继承GCompris的分辨率设置（800x600，640x480）"
 
-#: ../src/boards/python/tuxpaint.py:218
+#: ../src/boards/python/tuxpaint.py:222
 msgid "Disable shape rotation"
 msgstr "关闭 图形 旋转"
 
-#: ../src/boards/python/tuxpaint.py:222
+#: ../src/boards/python/tuxpaint.py:227
 msgid "Show Uppercase text only"
 msgstr "只显示大写字母"
 
-#: ../src/boards/python/tuxpaint.py:226
+#: ../src/boards/python/tuxpaint.py:232
 msgid "Disable stamps"
 msgstr "关闭邮戳"
 
@@ -5279,7 +5098,7 @@ msgstr "记忆游戏"
 msgid "Build a train according to the model"
 msgstr "根据模型建造列车"
 
-#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:207
+#: ../src/boards/reading.c:229 ../src/boards/wordsgame.c:206
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5312,12 +5131,10 @@ msgid "The word to find was '%s'"
 msgstr "被发现单词是  '%s' "
 
 #: ../src/boards/reading.c:686
-#, c-format
 msgid "But it was not displayed"
 msgstr " 但是它未被显示"
 
 #: ../src/boards/reading.c:688
-#, c-format
 msgid "And it was displayed"
 msgstr " 并且它被显示"
 
@@ -5340,8 +5157,7 @@ msgstr "点数＝ %s "
 msgid ""
 "Wind speed = %d\n"
 "kilometers/hour"
-msgstr ""
-"风速＝ %d\n"
+msgstr "风速＝ %d\n"
 "千米／小时"
 
 #: ../src/boards/target.c:470
@@ -5388,8 +5204,7 @@ msgid ""
 "Graphics: Renaud Blanchard, Franck Doucet\n"
 "Intro Music: Djilali Sebihi\n"
 "Background Music: Rico Da Halvarez\n"
-msgstr ""
-"作者：Bruno Coudoin\n"
+msgstr "作者：Bruno Coudoin\n"
 "贡献者： Pascal Georges, Jose Jorge, Yves Combe\n"
 "图形： Renaud Blanchard, Franck Doucet\n"
 "介绍音乐： Djilali Sebihi\n"
@@ -5412,8 +5227,7 @@ msgstr "翻译："
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
-msgstr ""
-"GCompris 主页\n"
+msgstr "GCompris 主页\n"
 "http://gcompris.net"
 
 #: ../src/gcompris/about.c:252
@@ -5423,29 +5237,29 @@ msgid ""
 msgstr "这个软件是一个 GNU 包 并在 GNU General Public License 许可下发行"
 
 #: ../src/gcompris/about.c:280 ../src/gcompris/about.c:290
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
-#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:382
+#: ../src/gcompris/config.c:472 ../src/gcompris/config.c:482
+#: ../src/gcompris/dialog.c:103 ../src/gcompris/help.c:382
 #: ../src/gcompris/help.c:392 ../src/gcompris/images_selector.c:317
 msgid "OK"
 msgstr "确定"
 
-#: ../src/gcompris/bar.c:577
+#: ../src/gcompris/bar.c:598
 msgid "GCompris confirmation"
 msgstr "GCompris 确认"
 
-#: ../src/gcompris/bar.c:578
+#: ../src/gcompris/bar.c:599
 msgid "Are you sure you want to quit?"
 msgstr "你确实要退出吗？"
 
-#: ../src/gcompris/bar.c:579
+#: ../src/gcompris/bar.c:600
 msgid "Yes, I am sure!"
 msgstr "是的，我确定！"
 
-#: ../src/gcompris/bar.c:580
+#: ../src/gcompris/bar.c:601
 msgid "No, I want to keep going"
 msgstr "不，我想继续游戏"
 
-#: ../src/gcompris/board.c:192
+#: ../src/gcompris/board.c:184
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr "不支持动态模块载入。GCompris 不能载入。\n"
 
@@ -5502,255 +5316,242 @@ msgid "Bulgarian"
 msgstr "Bulgarian"
 
 #: ../src/gcompris/config.c:65
-msgid "Breton"
-msgstr ""
-
-#: ../src/gcompris/config.c:66
 msgid "Catalan"
 msgstr "Catalan"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:67
 msgid "Danish"
 msgstr "Danish"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:68
 msgid "German"
 msgstr "German"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:69
 msgid "Greek"
 msgstr "Greek"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:70
 msgid "English (Canada)"
 msgstr "English (Canada)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:71
 msgid "English (Great Britain)"
 msgstr "English (Great Britain)"
 
-#: ../src/gcompris/config.c:73
+#: ../src/gcompris/config.c:72
 msgid "English (United States)"
 msgstr "English (United States)"
 
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:73
 msgid "Spanish"
 msgstr "Spanish"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:74
 msgid "Basque"
 msgstr "Basque"
 
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:75
 msgid "Dzongkha"
 msgstr "Dzongkha"
 
-#: ../src/gcompris/config.c:77
-#, fuzzy
-msgid "Persian"
-msgstr "Serbian"
-
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:76
 msgid "Finnish"
 msgstr "Finnish"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:77
 msgid "French"
 msgstr "French"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:78
 msgid "Irish (Gaelic)"
 msgstr "Irish (Gaelic)"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:79
 msgid "Hebrew"
 msgstr "Hebrew"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:80
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:81
 msgid "Indonesian"
 msgstr "Indonesian"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:82
 msgid "Japanese"
 msgstr "Japanese"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:83
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:84
 msgid "Punjabi"
 msgstr "Punjabi"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:85
 msgid "Hungarian"
 msgstr "Hungarian"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:86
 msgid "Croatian"
 msgstr "Croatian"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:87
 msgid "Italian"
 msgstr "Italian"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:88
 msgid "Georgian"
 msgstr "Georgian"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:89
 msgid "Korean"
 msgstr "Korean"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:90
 msgid "Lithuanian"
 msgstr "Lithuanian"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:91
 msgid "Macedonian"
 msgstr "Macedonian"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:92
 msgid "Malayalam"
 msgstr "Malayalam"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:93
 msgid "Marathi"
 msgstr "Marathi"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:94
 msgid "Malay"
 msgstr "Malay"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:95
 msgid "Nepal"
 msgstr "Nepal"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:96
 msgid "Dutch"
 msgstr "Dutch"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:97
 msgid "Norwegian Bokmal"
 msgstr "Norwegian Bokmal"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:98
 msgid "Norwegian Nynorsk"
 msgstr "Norwegian Nynorsk"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:99
 msgid "Occitan (languedocien)"
 msgstr "Occitan (languedocien)"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:100
 msgid "Polish"
 msgstr "Polish"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:101
 msgid "Portuguese"
 msgstr "Portuguese"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:102
 msgid "Portuguese (Brazil)"
 msgstr "Portuguese (Brazil)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:103
 msgid "Romanian"
 msgstr "Romanian"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:104
 msgid "Russian"
 msgstr "Russian"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:105
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:106
 msgid "Slovak"
 msgstr "Slovak"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:107
 msgid "Slovenian"
 msgstr "Slovenian"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:108
 msgid "Somali"
 msgstr "Somali"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:109
 msgid "Albanian"
 msgstr "Albanian"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:110
 msgid "Serbian (Latin)"
 msgstr "Serbian (Latin)"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:111
 msgid "Serbian"
 msgstr "Serbian"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:112
 msgid "Swedish"
 msgstr "Swedish"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:113
 msgid "Tamil"
 msgstr "Tamil"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:114
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:115
 msgid "Turkish"
 msgstr "Turkish"
 
-#: ../src/gcompris/config.c:118
-msgid "Urdu"
-msgstr ""
-
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:116
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:117
 msgid "Walloon"
 msgstr "Walloon"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:118
 msgid "Chinese (Simplified)"
 msgstr "中文（简体）"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:119
 msgid "Chinese (Traditional)"
 msgstr "中文（繁体0"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:124
 msgid "No time limit"
 msgstr "无时间限制"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:125
 msgid "Slow timer"
 msgstr "慢速"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:126
 msgid "Normal timer"
 msgstr "正常"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:127
 msgid "Fast timer"
 msgstr "快速"
 
-#: ../src/gcompris/config.c:135
+#: ../src/gcompris/config.c:132
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (GCompris 默认)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:137
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5758,38 +5559,38 @@ msgstr ""
 "<i>使用GCompris 管理模块\n"
 "过滤游戏</i>"
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:192 ../src/gcompris/config.c:202
 msgid "GCompris Configuration"
 msgstr "GCompris 配置"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:278
 msgid "Fullscreen"
 msgstr "全屏"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:321
 msgid "Music"
 msgstr "音乐"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:349
 msgid "Effect"
 msgstr "效果"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:385
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "不能打开皮肤目录： %s"
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:416 ../src/gcompris/config.c:866
+#: ../src/gcompris/config.c:880
 #, c-format
 msgid "Skin : %s"
 msgstr "皮肤： %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:418
 msgid "SKINS NOT FOUND"
 msgstr "皮肤没找到"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:543
 msgid "English (United State)"
 msgstr "English (United State)"
 
@@ -5805,20 +5606,19 @@ msgstr "载入"
 msgid "SAVE"
 msgstr "保存"
 
-#: ../src/gcompris/gameutil.c:102
+#: ../src/gcompris/gameutil.c:104
 msgid "Couldn't find or load the file"
 msgstr "不能找到或载入文件"
 
-#: ../src/gcompris/gameutil.c:104
+#: ../src/gcompris/gameutil.c:106
 msgid "This activity is incomplete."
 msgstr "这个游戏不完整。"
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:107
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
-msgstr ""
-"离开并报告\n"
+msgstr "离开并报告\n"
 "问题给作者。"
 
 #: ../src/gcompris/gcompris.c:137
@@ -5862,105 +5662,103 @@ msgid "Disable XF86VidMode (No screen resolution change)."
 msgstr "关闭 XF86VidMode"
 
 #: ../src/gcompris/gcompris.c:167
-#, fuzzy
 msgid ""
 "Run GCompris with local menu (e.g -l /reading will let you play only "
 "activities in the reading directory, -l /strategy/connect4 only the connect4 "
-"activity)"
-msgstr ""
-"运行GCompris 使用本地菜单（例如  -l /reading 将使你只能玩阅读目录中的游戏， -"
-"l /strategy/connect4 只能玩‘4连珠’游戏）。使用‘-l list’列出有效的游戏和它们的"
-"描述。"
+"activity). Use '-l list' to list all the availaible activities and their "
+"descriptions."
+msgstr "运行GCompris 使用本地菜单（例如  -l /reading 将使你只能玩阅读目录中的游戏，"
+" -l /strategy/connect4 只能玩‘4连珠’游戏）。使用‘-l list’列出有效的游戏和它们的描述。"
 
-#: ../src/gcompris/gcompris.c:170
+#: ../src/gcompris/gcompris.c:172
 msgid "Run GCompris with local activity directory added to menu"
 msgstr "运行 GCompris 使用已添加本地游戏目录的菜单"
 
-#: ../src/gcompris/gcompris.c:173
+#: ../src/gcompris/gcompris.c:175
 msgid "Run GCompris in administration and user-management mode"
 msgstr "在管理模式和用户管理模式下运行GCompris"
 
-#: ../src/gcompris/gcompris.c:176
+#: ../src/gcompris/gcompris.c:178
 msgid ""
 "Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite."
 "db]"
-msgstr ""
-"使用定制数据库对应配置文件  [$HOME/.config/gcompris/gcompris_sqlite.db]"
+msgstr "使用定制数据库对应配置文件  [$HOME/.config/gcompris/gcompris_sqlite."
+"db]"
 
-#: ../src/gcompris/gcompris.c:179
+#: ../src/gcompris/gcompris.c:181
 msgid "Create the alternate database for profiles"
 msgstr "创建定制数据库对应配置文件 "
 
-#: ../src/gcompris/gcompris.c:182
+#: ../src/gcompris/gcompris.c:184
 msgid "Re-read XML Menus and store them in the database"
 msgstr "重读 XML 菜单 并存储它们到数据库中"
 
-#: ../src/gcompris/gcompris.c:185
+#: ../src/gcompris/gcompris.c:187
 msgid "Set the profile to use. Use 'gcompris -a' to create profiles"
 msgstr "设置要使用的配置文件。执行 ‘gcompris -a’创建配置文件"
 
-#: ../src/gcompris/gcompris.c:188
+#: ../src/gcompris/gcompris.c:190
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
 msgstr "列出全部有效配置文件。执行 ‘gcompris -a’创建配置文件"
 
-#: ../src/gcompris/gcompris.c:191
+#: ../src/gcompris/gcompris.c:193
 msgid ""
 "Config directory location: [$HOME/.config/gcompris]. Alternate is to set "
 "$XDG_CONFIG_HOME."
-msgstr "配置本地目录： [$HOME/.config/gcompris]. 定制设置 $XDG_CONFIG_HOME."
+msgstr "配置本地目录： [$HOME/.config/gcompris]. 定制设置 "
+"$XDG_CONFIG_HOME."
 
-#: ../src/gcompris/gcompris.c:194
+#: ../src/gcompris/gcompris.c:196
 msgid "The location of user directories: [$HOME/My GCompris]"
 msgstr "本地用户目录： [$HOME/My GCompris]"
 
-#: ../src/gcompris/gcompris.c:197
+#: ../src/gcompris/gcompris.c:199
 msgid "Run the experimental activities"
 msgstr "运行实验游戏"
 
-#: ../src/gcompris/gcompris.c:200
+#: ../src/gcompris/gcompris.c:202
 msgid "Disable the quit button"
 msgstr "关闭退出按钮"
 
-#: ../src/gcompris/gcompris.c:203
+#: ../src/gcompris/gcompris.c:205
 msgid "Disable the config button"
 msgstr "关闭配置按钮"
 
-#: ../src/gcompris/gcompris.c:208
+#: ../src/gcompris/gcompris.c:210
 msgid "Display the resources on stdout based on the selected activities"
 msgstr "在标准输出显示基于已选择游戏的资源"
 
-#: ../src/gcompris/gcompris.c:212
+#: ../src/gcompris/gcompris.c:214
 msgid ""
 "GCompris will get images, sounds and activity data from this server if not "
 "found locally."
 msgstr "如果图像、声音和游戏数据在本地为找到GCompris将从服务器上获得。"
 
-#: ../src/gcompris/gcompris.c:215
+#: ../src/gcompris/gcompris.c:217
 msgid ""
 "Only when --server is provided, disable check for local resource first. Data "
 "are always taken from the web server."
-msgstr ""
-"只有当 --server 被提供，首先关闭‘确认本地资源’。数据将始终来自web 服务器。"
+msgstr "只有当 --server 被提供，首先关闭‘确认本地资源’。数据将始终来自web 服务器。"
 
-#: ../src/gcompris/gcompris.c:219
+#: ../src/gcompris/gcompris.c:221
 msgid ""
 "In server mode, specify the cache directory used to avoid useless downloads."
 msgstr "在服务器模式中，特别的缓冲目录将被使用以避免无用的下载。"
 
-#: ../src/gcompris/gcompris.c:222
+#: ../src/gcompris/gcompris.c:224
 msgid ""
 "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
 msgstr "全球拖动模式：正常，双击，两者都是。默认模式是‘正常’。"
 
-#: ../src/gcompris/gcompris.c:225
+#: ../src/gcompris/gcompris.c:227
 msgid "Do not display the background images of activities."
 msgstr "不显示游戏的背景图像。"
 
-#: ../src/gcompris/gcompris.c:228
+#: ../src/gcompris/gcompris.c:230
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "不避免执行多个GCompris 实例。"
 
-#: ../src/gcompris/gcompris.c:859
+#: ../src/gcompris/gcompris.c:849
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -5972,27 +5770,25 @@ msgid ""
 "also believe that we should teach freedom to children, please consider using "
 "GNU/Linux. Get more information at FSF:\n"
 "<http://www.fsf.org/philosophy>"
-msgstr ""
-"GCompris是在GPL License 许可下发行的自由软件。为了支持它的发展，Windows 版本"
-"将只提供 %d 属于  %d 的游戏。只需一点费用你就可以获得完全版\n"
+msgstr "GCompris是在GPL License 许可下发行的自由软件。为了支持它的发展，Windows 版本将只提供"
+" %d 属于  %d 的游戏。只需一点费用你就可以获得完全版\n"
 "<http://gcompris.net>\n"
-"GNU/Linux 版没有这个限制。注意GCompris是为了将学校从垄断软件供应商下解放出来"
-"而开发的。如果你也相信我们将教授自由给孩子，请考虑使用GNU/Linux。获得更多信"
-"息 FSF:\n"
+"GNU/Linux 版没有这个限制。注意GCompris是为了将学校从垄断软件供应商下解放出来而开发的。"
+"如果你也相信我们将教授自由给孩子，请考虑使用GNU/Linux。获得更多信息 FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1447
+#: ../src/gcompris/gcompris.c:1433
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr "GCompris 不能开始，因为锁文件至少要 %d 秒。\n"
 
-#: ../src/gcompris/gcompris.c:1449
+#: ../src/gcompris/gcompris.c:1435
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "锁文件是： %s\n"
 
-#: ../src/gcompris/gcompris.c:1579
+#: ../src/gcompris/gcompris.c:1563
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6006,26 +5802,26 @@ msgstr ""
 "更多信息  http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1663
+#: ../src/gcompris/gcompris.c:1647
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "使用  -l 去直接访问游戏。\n"
 
-#: ../src/gcompris/gcompris.c:1664
+#: ../src/gcompris/gcompris.c:1648
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "有效游戏列表是：\n"
 
-#: ../src/gcompris/gcompris.c:1851
+#: ../src/gcompris/gcompris.c:1835
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "有效配置文件列表是：\n"
 
-#: ../src/gcompris/gcompris_db.c:266
+#: ../src/gcompris/gcompris_db.c:265
 msgid "Unaffected"
 msgstr "无影响"
 
-#: ../src/gcompris/gcompris_db.c:267
+#: ../src/gcompris/gcompris_db.c:266
 msgid "Users without a class"
 msgstr "用户没有班级"
 
@@ -6060,8 +5856,7 @@ msgid ""
 "Put any number of images in this directory.\n"
 "You can include these images in your drawings and animations.\n"
 "The image formats supported are jpeg, png and svg.\n"
-msgstr ""
-"这个目录中放入任意图像的号码。\n"
+msgstr "这个目录中放入任意图像的号码。\n"
 "你可以包含这些图像到你的绘画和动画中。\n"
 "图像格式：jpeg、png 和 svg 。\n"
 
@@ -6073,17 +5868,3 @@ msgstr "已用时间 "
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "剩余时间＝ %d"
-
-#~ msgid "Click anywhere in the line where you want to drop a piece"
-#~ msgstr "点击列投币"
-
-#~ msgid ""
-#~ "Create a line of 4 pieces either horizontally (lying down) or vertically "
-#~ "(standing up)"
-#~ msgstr "在水平（平躺）或垂直（站立）其中一个方向上使四个硬币成一排。"
-
-#~ msgid "An empty python activity to use as a starting point"
-#~ msgstr "一个空的 python 游戏作为使用的起点"
-
-#~ msgid "Python Template"
-#~ msgstr "Python 模板"
