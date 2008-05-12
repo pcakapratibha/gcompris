@@ -2,6 +2,11 @@
 
 2008-05-12  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- Compressed all png images with optipng to save space (5MB saved)
+	- Added Afrikaans
+
+2008-05-12  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	Removed non functional writing tutor activity to make room.
 	Removed non functional oscar and friends to make room
 
