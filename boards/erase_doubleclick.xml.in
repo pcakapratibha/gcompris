@@ -4,7 +4,7 @@
 	 name="erase_doubleclick"
 	 type="erase"
 	 section="/computer/mouse"
-	 icon="boardicons/erase_double_clic.svg"
+	 icon="boardicons/erase_double_clic.png"
 	 difficulty="2"
 	 mode="doubleclic"
 	 author="Bruno Coudoin (bruno.coudoin@free.fr)"
