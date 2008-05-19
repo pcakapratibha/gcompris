@@ -987,7 +987,7 @@ static gint tux_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 
 static gint target_event(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 {	if (event->type!=GDK_BUTTON_PRESS) return FALSE;
- threeDdisplay(position[ind][0],position[ind][1]);
+ threeDdisplay();
  return FALSE;
 }
 
