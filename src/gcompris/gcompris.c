@@ -1129,7 +1129,7 @@ static void load_properties ()
 #else
   exec_prefix = gbr_find_exe_dir(NULL);
 #endif
-  g_warning("exec_prefix %s\n", (exec_prefix==NULL ? "NONE" : exec_prefix);
+  g_warning("exec_prefix %s\n", (exec_prefix==NULL ? "NONE" : exec_prefix));
 
   prefix_dir = gbr_find_prefix(NULL);
 
