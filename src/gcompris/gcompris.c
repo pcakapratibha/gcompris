@@ -1127,9 +1127,9 @@ static void load_properties ()
 #ifdef NSBUNDLE
   exec_prefix = gcompris_nsbundle_resource ();
 #else
-  exec_prefix = gbr_find_exe_dir("");
+  exec_prefix = gbr_find_exe_dir(NULL);
 #endif
-  g_warning("exec_prefix %s\n", exec_prefix);
+  g_warning("exec_prefix %s\n", (exec_prefix==NULL ? "NONE" : exec_prefix);
 
   prefix_dir = gbr_find_prefix(NULL);
 

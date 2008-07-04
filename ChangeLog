@@ -1,7 +1,17 @@
+2008-07-04  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/gcompris/gcompris.c: (load_properties): There is a major issue on platform
+	that does not use binreloc. In that case Compris exec_prefix gets set to "";
+	instead of NULL in gcompris.c, causes the latest gcompris to not start at all under Fedora
+	and Mandriva (and probably others).
+	replaced:  exec_prefix = gbr_find_exe_dir("");
+        by:        exec_prefix = gbr_find_exe_dir(NULL);
+
+
 2008-05-20  Bruno coudoin  <bruno.coudoin@free.fr>
 
-	* src/boards/maze.c: (target_event): minor, compilation issue (commit 3445)
-	* src/gcompris/gcompris_im.h: minor, compilation issue (commit 3446)
+	* src/boards/maze.c: (target_event): minor, compilation issue (commit 3446)
+	* src/gcompris/gcompris_im.h: minor, compilation issue (commit 3447)
 
 	*** RELEASE 8.4.5 ***
 
