@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-10 18:49+0200\n"
-"PO-Revision-Date: 2008-05-10 18:49+0100\n"
+"POT-Creation-Date: 2008-07-20 19:27+0200\n"
+"PO-Revision-Date: 2008-07-20 19:29+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -2027,7 +2027,7 @@ msgstr "Taget från konceptet i EPI-spelen."
 
 #: ../boards/hanoi.xml.in.h:2
 msgid "Drag and Drop one top piece at a time, from one peg to another, to reproduce the tower on the right in the empty space on the left."
-msgstr "Dra och släpp toppbitarna endast ifrån en plint till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
+msgstr "Dra och släpp toppbitarna endast ifrån en pinne till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
 
 #: ../boards/hanoi.xml.in.h:4
 #: ../src/boards/hanoi.c:96
@@ -2045,7 +2045,7 @@ msgstr "Förenklat Tornet i Hanoi"
 
 #: ../boards/hanoi_real.xml.in.h:1
 msgid "Drag and Drop the top pieces only from one peg to another, to reproduce the tower on the right in the empty space on the left."
-msgstr "Dra och släpp toppbitarna endast ifrån en plint till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
+msgstr "Dra och släpp toppbitarna endast ifrån en pinne till en annan, för att återskapa tornet till höger på den tomma ytan till vänster."
 
 #: ../boards/hanoi_real.xml.in.h:3
 msgid "Reproduce the tower on the right side"
@@ -2061,16 +2061,16 @@ msgid ""
 "* only one disc may be moved at a time\n"
 "* no disc may be placed atop a smaller disc"
 msgstr ""
-"Målet med spelet är att flytta alla skivor till en annan plint samt följa dessa regler:\n"
-"* endast en skiva får flyttas åt gången\n"
-"* ingen skiva får placeras ovanpå en mindre ring"
+"Målet med spelet är att flytta alla ringar till en annan pinne samt följa dessa regler:\n"
+"* endast en ring får flyttas åt gången\n"
+"* ingen ring får placeras ovanpå en mindre ring"
 
 #: ../boards/hanoi_real.xml.in.h:8
 msgid "The puzzle was invented by the French mathematician Edouard Lucas in 1883. There is a legend about a Hindu temple whose priests were constantly engaged in moving a set of 64 discs according to the rules of the Tower of Hanoi puzzle. According to the legend, the world would end when the priests finished their work. The puzzle is therefore also known as the Tower of Brahma puzzle. It is not clear whether Lucas invented this legend or was inspired by it. (source Wikipedia &lt;http://en.wikipedia.org/wiki/Tower_of_hanoi&gt;)"
 msgstr ""
 "Tornet i Hanoi är ett matematiskt problem som också finns i skepnad som spel eller patiens.\n"
 "\n"
-"Problemet/spelet består av tre vertikala pinnar fästa på en platta. På den vänstra pinnen sitter n stycken platta cirkulära skivor med hål i. Dessa skivor är olika stora. De är sorterade i storleksordning med den största underst. Det går ut på att flytta över hela stapeln till högra pinnen likadant sorterad. Mellanpinnen är bara hjälppinne. Varje drag består i att flytta en skiva till en annan pinne med den restriktionen att man får inte lägga en större skiva på en mindre. På en tom pinne får man lägga vilken skiva som helst. Problemet är lösbart oavsett värdet på n (positivt heltal).\n"
+"Problemet/spelet består av tre vertikala pinnar fästa på en platta. På den vänstra pinnen sitter n stycken platta cirkulära skivor med hål i. Dessa skivor är olika stora. De är sorterade i storleksordning med den största underst. Det går ut på att flytta över hela stapeln till högra pinnen likadant sorterad. Mellanpinnen är bara hjälppinne. Varje drag består i att flytta en ring till en annan pinne med den restriktionen att man får inte lägga en större skiva på en mindre. På en tom pinne får man lägga vilken skiva som helst. Problemet är lösbart oavsett värdet på n (positivt heltal).\n"
 "\n"
 "Den optimala lösningen (dvs minsta möjliga antalet drag) med n stycken skivor är 2n - 1 drag. Denna formel kan härledas med hjälp av rekursion. Det finns ingen känd formel för minsta möjliga antalet drag om man generaliserar spelet till att innefatta godtyckligt antal (≥3) pinnar.\n"
 "(källa Wikipedia &lt;http://sv.wikipedia.org/wiki/Tornen_i_Hanoi&gt;)"
@@ -3072,22 +3072,6 @@ msgstr "Numrering"
 msgid "Numeration activities."
 msgstr "Numreringsaktiviteter."
 
-#: ../boards/oscar_and_friends.xml.in.h:1
-msgid "Improve reading skill and the ability to understand what is read."
-msgstr "Förbättra läsningskunskaperna och möjligheten att förstå vad som läses."
-
-#: ../boards/oscar_and_friends.xml.in.h:2
-msgid "Read and play with the story"
-msgstr "Läs och spela med i berättelsen"
-
-#: ../boards/oscar_and_friends.xml.in.h:3
-msgid "The story of Oscar and friend"
-msgstr "Berättelsen om Oskar och hans vänner"
-
-#: ../boards/oscar_and_friends.xml.in.h:4
-msgid "reading"
-msgstr "läsning"
-
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
 msgstr "Lägg pusslet"
@@ -3932,7 +3916,7 @@ msgstr "Tornet i Hanoi"
 #: ../src/boards/hanoi_real.c:276
 #: ../src/boards/hanoi_real.c:287
 msgid "Move the entire stack to the right peg, one disc at a time"
-msgstr "Flytta alla ringar till den högra plinten, en skiva åt gången"
+msgstr "Flytta alla ringar till den högra pinnen, en ring åt gången"
 
 #: ../src/boards/imageid.c:103
 #: ../src/boards/missingletter.c:101
@@ -4622,26 +4606,6 @@ msgstr ""
 "ljudeffekterna inaktiverade.\n"
 "Gå in i konfigurationsdialogen\n"
 "för att aktivera ljudet"
-
-#: ../src/boards/python/oscar_and_friends.py:116
-msgid ""
-"Below the surface, Oscar the octopus and his friends sat on a rock,\n"
-"watching the bad weather above them."
-msgstr ""
-"Under ytan satt bläckfisken Oskar och hans vänner på en sten\n"
-"och tittade på det dåliga vädret som var ovanför dem."
-
-#: ../src/boards/python/oscar_and_friends.py:117
-msgid "They were all happy that the storms never reached all the way down to them."
-msgstr "De var alla glada att stormarna aldrig nådde hela vägen ner till dem."
-
-#: ../src/boards/python/oscar_and_friends.py:118
-msgid "No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr "Oavsett hur dåligt väder det var där uppe så var det lugnt och skönt på botten."
-
-#: ../src/boards/python/oscar_and_friends.py:119
-msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr "Oskars bästa vänner var krabban Kalle och sjöstjärnan Sandra."
 
 #: ../src/boards/python/pythontest.py:148
 msgid ""
@@ -5585,6 +5549,33 @@ msgstr "Speltid"
 msgid "Remaining Time = %d"
 msgstr "Återstående tid = %d"
 
+#~ msgid "Improve reading skill and the ability to understand what is read."
+#~ msgstr ""
+#~ "Förbättra läsningskunskaperna och möjligheten att förstå vad som läses."
+#~ msgid "Read and play with the story"
+#~ msgstr "Läs och spela med i berättelsen"
+#~ msgid "The story of Oscar and friend"
+#~ msgstr "Berättelsen om Oskar och hans vänner"
+#~ msgid "reading"
+#~ msgstr "läsning"
+#~ msgid ""
+#~ "Below the surface, Oscar the octopus and his friends sat on a rock,\n"
+#~ "watching the bad weather above them."
+#~ msgstr ""
+#~ "Under ytan satt bläckfisken Oskar och hans vänner på en sten\n"
+#~ "och tittade på det dåliga vädret som var ovanför dem."
+#~ msgid ""
+#~ "They were all happy that the storms never reached all the way down to "
+#~ "them."
+#~ msgstr ""
+#~ "De var alla glada att stormarna aldrig nådde hela vägen ner till dem."
+#~ msgid ""
+#~ "No matter how bad it was up there, the bottom was always calm and quiet."
+#~ msgstr ""
+#~ "Oavsett hur dåligt väder det var där uppe så var det lugnt och skönt på "
+#~ "botten."
+#~ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
+#~ msgstr "Oskars bästa vänner var krabban Kalle och sjöstjärnan Sandra."
 #~ msgid ""
 #~ "Error: The external program gnuchess is required\n"
 #~ "to play chess in GCompris.\n"
