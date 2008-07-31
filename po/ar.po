@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-06 11:29+0100\n"
+"POT-Creation-Date: 2008-07-31 11:06+0100\n"
 "PO-Revision-Date: 2008-05-06 14:52+0300\n"
 "Last-Translator: Khaled Hosny <khaledhonsy@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -450,7 +451,8 @@ msgstr "العمليات الحسابية الأربع. ادمج عدة عملي
 msgid ""
 "Work out the right combination of numbers and operations to match the given "
 "value"
-msgstr "استنبط التركيبة الصحيحة من الأعداد والعمليات للحصول على النتيجة المبينة"
+msgstr ""
+"استنبط التركيبة الصحيحة من الأعداد والعمليات للحصول على النتيجة المبينة"
 
 #: ../boards/algebra_minus.xml.in.h:1
 msgid ""
@@ -490,7 +492,8 @@ msgstr ""
 msgid ""
 "In a limited time, find the sum of of two numbers. Introduction to simple in-"
 "line addition."
-msgstr "أعط نتيجة عملية جمع عددين في وقت محدود. مقدمة إلى عمليات الجمع البسيطة."
+msgstr ""
+"أعط نتيجة عملية جمع عددين في وقت محدود. مقدمة إلى عمليات الجمع البسيطة."
 
 #: ../boards/algebra_plus.xml.in.h:4
 msgid "Practice the addition operation"
@@ -1270,7 +1273,10 @@ msgid ""
 "Double click the mouse on the ball to kick it. You can double click the left "
 "right or middle mouse button. If you lose, Tux catches the ball. You must "
 "click on it to bring it back to its former position"
-msgstr "انقر بالفأرة مرتين على الكرة لضربها. يمكنك النقر مرتين بالزر الأيمن أو الأوسط أو الأيسر. إذا خسرت فسيلتقط تكس الكرة. يجب أن تنقر عليها لتعيدها إلى مكانها الأول."
+msgstr ""
+"انقر بالفأرة مرتين على الكرة لضربها. يمكنك النقر مرتين بالزر الأيمن أو "
+"الأوسط أو الأيسر. إذا خسرت فسيلتقط تكس الكرة. يجب أن تنقر عليها لتعيدها إلى "
+"مكانها الأول."
 
 #: ../boards/doubleclick.xml.in.h:2
 msgid "Double click the mouse on the ball to score a goal."
@@ -1490,7 +1496,8 @@ msgid ""
 msgstr "انقر على أي عنصر وراءه كتلة فارغة، سيُبادل بالكتلة الفارغة"
 
 #: ../boards/fifteen.xml.in.h:3
-msgid "Move each item to make an increasing series: from the smallest to the largest"
+msgid ""
+"Move each item to make an increasing series: from the smallest to the largest"
 msgstr "انقل كل عنصر لصنع سلسلة تصاعدية: من الأصغر إلى الأكبر"
 
 #: ../boards/fifteen.xml.in.h:4
@@ -2238,7 +2245,8 @@ msgstr ""
 msgid ""
 "Guide the Number Muncher to the all the expressions that do not equal the "
 "number at the top of the screen."
-msgstr "أرشد آكل الأعداد إلى جميع المعادلات التي لا تساوي العدد في أعلى الشاشة."
+msgstr ""
+"أرشد آكل الأعداد إلى جميع المعادلات التي لا تساوي العدد في أعلى الشاشة."
 
 #: ../boards/gnumch-inequality.xml.in.h:2
 msgid "Inequality Number Munchers"
@@ -2719,7 +2727,8 @@ msgstr ""
 "يسرى، أو الأخضر على اليمين إن كانت يمنى."
 
 #: ../boards/login.xml.in.h:1
-msgid "GCompris identifies each child, so we can provide child-specific reports."
+msgid ""
+"GCompris identifies each child, so we can provide child-specific reports."
 msgstr "يميز «فهمت» الأطفال عن بعضهم، لذا يمكن الحصول على تقرير خاص بكل ولد."
 
 #: ../boards/login.xml.in.h:2
@@ -3323,8 +3332,8 @@ msgid ""
 "GCompris is a collection of educational games that provides different "
 "activities for children aged 2 and up."
 msgstr ""
-"«فهمت» (GCompris) لعبة تربوية تحتوي على مجموعة من الأنشطة مناسبة لأطفال "
-"عمرهم سنتان فما فوق "
+"«فهمت» (GCompris) لعبة تربوية تحتوي على مجموعة من الأنشطة مناسبة لأطفال عمرهم "
+"سنتان فما فوق "
 
 #: ../boards/menu.xml.in.h:19
 msgid ""
@@ -3561,22 +3570,6 @@ msgstr "الإحصاء"
 msgid "Numeration activities."
 msgstr "أنشطة الإحصاء"
 
-#: ../boards/oscar_and_friends.xml.in.h:1
-msgid "Improve reading skill and the ability to understand what is read."
-msgstr "تحسين مهارات القراءة والقدرة على فهم ما يُقرأ"
-
-#: ../boards/oscar_and_friends.xml.in.h:2
-msgid "Read and play with the story"
-msgstr "اقرأ والعب مع القصة "
-
-#: ../boards/oscar_and_friends.xml.in.h:3
-msgid "The story of Oscar and friend"
-msgstr "قصة أوسكار وصديقه"
-
-#: ../boards/oscar_and_friends.xml.in.h:4
-msgid "reading"
-msgstr "القراءة"
-
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
 msgstr "تجميع أجزاء الصورة"
@@ -3704,7 +3697,8 @@ msgid "Python Template"
 msgstr "قالب بايثون"
 
 #: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
-msgid "Thanks to Guido van Rossum and the python team for this powerful language!"
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
 msgstr "شكراً لـ غيدو فان روسوم وفريق بايثون على هذه اللغة القوية والجميلة!"
 
 #: ../boards/pythontest.xml.in.h:3
@@ -3885,7 +3879,8 @@ msgstr "اعكس الشكل "
 msgid ""
 "Can move the mouse, can read numbers and subtract numbers up to 10 for the "
 "first level"
-msgstr "تحريك الفأرة، قراءة الأعداد، وطرح حتى الرقم 10 من الأعداد للمرحلة الأولى"
+msgstr ""
+"تحريك الفأرة، قراءة الأعداد، وطرح حتى الرقم 10 من الأعداد للمرحلة الأولى"
 
 #: ../boards/reversecount.xml.in.h:2
 msgid ""
@@ -4039,7 +4034,8 @@ msgstr "أرقام مع النرد"
 
 #: ../boards/smallnumbers.xml.in.h:5 ../boards/smallnumbers2.xml.in.h:5
 msgid "With the keyboard, type the number of dots you see on the falling dice."
-msgstr "أدخل العدد الصحيح للنقط الموجودة على المكعب الساقط باستخدام لوحة المفاتيح."
+msgstr ""
+"أدخل العدد الصحيح للنقط الموجودة على المكعب الساقط باستخدام لوحة المفاتيح."
 
 #: ../boards/smallnumbers2.xml.in.h:4
 msgid "Numbers with pairs of dice"
@@ -4107,7 +4103,8 @@ msgid "Sudoku, place unique symbols in a square."
 msgstr "سودوكو، ضع رموزاً فريدة في مربع."
 
 #: ../boards/sudoku.xml.in.h:4
-msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
+msgid ""
+"Symbols must be unique in a row, in a column, and (if defined) each region."
 msgstr "الرموز يجب أن تكون فريدة في كل عمود، في كل صف، وفي (إن حُدد) كل منطقة."
 
 #: ../boards/sudoku.xml.in.h:5
@@ -4200,7 +4197,8 @@ msgid "The tangram puzzle game"
 msgstr "لغز التانغرام"
 
 #: ../boards/target.xml.in.h:1
-msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
+msgid ""
+"Can move the mouse, can read numbers and count up to 15 for the first level"
 msgstr "تحريك الفأرة، قراءة الأعداد والعد حتى 15 للمرحلة الأولى"
 
 #: ../boards/target.xml.in.h:2
@@ -4344,6 +4342,11 @@ msgstr "معالج نصوصك"
 #: ../gcompris-edit.desktop.in.h:1
 msgid "Administration for gcompris"
 msgstr "قسم إدارة «فهمت»"
+
+#: ../gcompris-edit.desktop.in.h:2
+#, fuzzy
+msgid "GCompris Administration"
+msgstr "قائمة الإختيارات الرئيسية لـ «فهمت» "
 
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
@@ -4597,7 +4600,8 @@ msgid ""
 msgstr "انظر إلى موقعك، ثم حول إلى النمط غير المرئي لمتابعة تحركك"
 
 #: ../src/boards/maze.c:493
-msgid "Look at your position, then switch back to 3D mode to continue your moves"
+msgid ""
+"Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "انظر إلى موقعك، ثم حول إلى النمط الثلاثي الأبعاد لمتابعة تحركك"
 
 #: ../src/boards/memory.c:263
@@ -4983,7 +4987,8 @@ msgid "Birth date:"
 msgstr "تاريخ الولادة:"
 
 #: ../src/boards/python/admin/user_edit.py:159
-msgid "You need to provide at least a login, first name and last name for your users"
+msgid ""
+"You need to provide at least a login, first name and last name for your users"
 msgstr "عليك أن تعطي على الأقل اسم ولوج، اسم وكنية كل مستخدم"
 
 #: ../src/boards/python/admin/user_edit.py:176
@@ -5245,26 +5250,6 @@ msgid ""
 msgstr ""
 "خطأ: لا يمكن اللعب بهذا النشاط بينما التأثيرات الصوتية معطلة.\n"
 "توجه إلى جدول الإعدادات وقم بتفعيل الصوت"
-
-#: ../src/boards/python/oscar_and_friends.py:116
-msgid ""
-"Below the surface, Oscar the octopus and his friends sat on a rock,\n"
-"watching the bad weather above them."
-msgstr ""
-"تحت السطح، يجلس الأخطبوط أوسكار ورفاقه على صخرة،\n"
-"ويشاهدون الطقس السيء فوقهم."
-
-#: ../src/boards/python/oscar_and_friends.py:117
-msgid "They were all happy that the storms never reached all the way down to them."
-msgstr "سيكونون سعداء عندما لا تستطيع العاصفة بلوغ الطريق المؤدي إليهم."
-
-#: ../src/boards/python/oscar_and_friends.py:118
-msgid "No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr "لا يهم كم الطقس رديء في الأعلى، المكان في الأسفل هادئ وساكن."
-
-#: ../src/boards/python/oscar_and_friends.py:119
-msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr "أصدقاء أوسكار المفضلين هم السرطان البحري شارلي ونجمة البحر ساندي."
 
 #: ../src/boards/python/pythontest.py:148
 msgid ""
@@ -6049,7 +6034,8 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:189
 msgid "List all available profiles. Use 'gcompris -a' to create profiles"
-msgstr "اسرد كل الملفات الشخصية المتاحة. استخدم 'gcompris -a' لإنشاء الملفات الشخصية"
+msgstr ""
+"اسرد كل الملفات الشخصية المتاحة. استخدم 'gcompris -a' لإنشاء الملفات الشخصية"
 
 #: ../src/gcompris/gcompris.c:192
 msgid ""
@@ -6096,12 +6082,16 @@ msgstr ""
 "البيانات دائماً من خادم الوِب."
 
 #: ../src/gcompris/gcompris.c:220
-msgid "In server mode, specify the cache directory used to avoid useless downloads."
-msgstr "في نمط الخادم، حدد مجلد الذاكرة المخبأة المستخدم لتلافي التحميل المكرر."
+msgid ""
+"In server mode, specify the cache directory used to avoid useless downloads."
+msgstr ""
+"في نمط الخادم، حدد مجلد الذاكرة المخبأة المستخدم لتلافي التحميل المكرر."
 
 #: ../src/gcompris/gcompris.c:223
-msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
-msgstr "نمط السحب والإفلات العام: عادي، نقرتان، كلاهما. النمط الافتراضي هو عادي."
+msgid ""
+"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
+msgstr ""
+"نمط السحب والإفلات العام: عادي، نقرتان، كلاهما. النمط الافتراضي هو عادي."
 
 #: ../src/gcompris/gcompris.c:226
 msgid "Do not display the background images of activities."
@@ -6135,7 +6125,8 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:1476
 #, c-format
-msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
+msgid ""
+"GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr "لن يبدأ «فهمت» لأن ملف القفل أحدث من %d ثوانِ.\n"
 
 #: ../src/gcompris/gcompris.c:1478
@@ -6225,3 +6216,33 @@ msgstr "انتهى الوقت"
 msgid "Remaining Time = %d"
 msgstr "الوقت المتبقي = %d"
 
+#~ msgid "Improve reading skill and the ability to understand what is read."
+#~ msgstr "تحسين مهارات القراءة والقدرة على فهم ما يُقرأ"
+
+#~ msgid "Read and play with the story"
+#~ msgstr "اقرأ والعب مع القصة "
+
+#~ msgid "The story of Oscar and friend"
+#~ msgstr "قصة أوسكار وصديقه"
+
+#~ msgid "reading"
+#~ msgstr "القراءة"
+
+#~ msgid ""
+#~ "Below the surface, Oscar the octopus and his friends sat on a rock,\n"
+#~ "watching the bad weather above them."
+#~ msgstr ""
+#~ "تحت السطح، يجلس الأخطبوط أوسكار ورفاقه على صخرة،\n"
+#~ "ويشاهدون الطقس السيء فوقهم."
+
+#~ msgid ""
+#~ "They were all happy that the storms never reached all the way down to "
+#~ "them."
+#~ msgstr "سيكونون سعداء عندما لا تستطيع العاصفة بلوغ الطريق المؤدي إليهم."
+
+#~ msgid ""
+#~ "No matter how bad it was up there, the bottom was always calm and quiet."
+#~ msgstr "لا يهم كم الطقس رديء في الأعلى، المكان في الأسفل هادئ وساكن."
+
+#~ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
+#~ msgstr "أصدقاء أوسكار المفضلين هم السرطان البحري شارلي ونجمة البحر ساندي."
