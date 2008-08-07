@@ -1896,9 +1896,9 @@ main (int argc, char *argv[])
   if(!popt_root_menu)
     {
       if (properties->music)
-	gc_sound_play_ogg("music/intro.ogg", "sounds/$LOCALE/misc/welcome.ogg", NULL);
+	gc_sound_play_ogg("music/intro.ogg", "voices/$LOCALE/misc/welcome.ogg", NULL);
       else
-	gc_sound_play_ogg("sounds/$LOCALE/misc/welcome.ogg", NULL);
+	gc_sound_play_ogg("voices/$LOCALE/misc/welcome.ogg", NULL);
     }
 
   gtk_main ();

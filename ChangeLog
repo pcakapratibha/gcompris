@@ -1,3 +1,24 @@
+	*** RELEASE 8.3.7 ***
+
+2008-08-07  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Now use the directory boards/voices instead of boards/sounds
+	for the translated sounds to match trunk
+
+	* Makefile.am:
+	* src/boards/algebra.c: (algebra_create_item):
+	* src/boards/click_on_letter.c: (repeat), (sounds_are_fine),
+	(click_on_letter_next_level), (config_start):
+	* src/boards/colors.c: (colors_config_start), (repeat):
+	* src/boards/gletters.c: (gletters_create_item):
+	* src/boards/smallnumbers.c: (smallnumbers_create_item),
+	(smallnumber_config_start):
+	* src/gcompris/bar.c: (bar_play_sound), (item_event_bar):
+	* src/gcompris/board_config.c:
+	* src/gcompris/bonus.c:
+	* src/gcompris/gameutil.c: (gc_activity_intro_play):
+	* src/gcompris/gcompris.c: (main):
+
 2008-05-20  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/maze.c: (target_event): minor, compilation issue (commit 3446)

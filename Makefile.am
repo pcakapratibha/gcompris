@@ -88,8 +88,6 @@ update-voices:
 	  mkdir $(PACKAGE_DATA_DIR)/voices; \
 	  svn co http://svn.gnome.org/svn/gcompris/voices $(PACKAGE_DATA_DIR)/voices; \
 	fi
-	mv $(PACKAGE_DATA_DIR)/voices/* $(PACKAGE_DATA_DIR)/sounds
-	rm -rf $(PACKAGE_DATA_DIR)/voices
 
 # Creates separates distribution files for the sounds by locale
 dist-sounds:
