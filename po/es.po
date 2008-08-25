@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-06 17:57+0000\n"
-"PO-Revision-Date: 2008-05-09 08:06+0200\n"
+"POT-Creation-Date: 2008-08-18 22:23+0000\n"
+"PO-Revision-Date: 2008-08-25 09:16+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -3727,24 +3727,6 @@ msgstr "Numeración"
 msgid "Numeration activities."
 msgstr "Actividades de numeración."
 
-#: ../boards/oscar_and_friends.xml.in.h:1
-msgid "Improve reading skill and the ability to understand what is read."
-msgstr ""
-"Mejorar la capacidad de lectura y la habilidad de comprensión de lo que se "
-"lee."
-
-#: ../boards/oscar_and_friends.xml.in.h:2
-msgid "Read and play with the story"
-msgstr "Lee y juega con la historia"
-
-#: ../boards/oscar_and_friends.xml.in.h:3
-msgid "The story of Oscar and friend"
-msgstr "La historia de Oscar y su amigo"
-
-#: ../boards/oscar_and_friends.xml.in.h:4
-msgid "reading"
-msgstr "lectura"
-
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
 msgstr "Monta el puzle"
@@ -5497,32 +5479,6 @@ msgstr ""
 "Ve al diálogo de configuración para\n"
 "activar el sonido"
 
-#: ../src/boards/python/oscar_and_friends.py:116
-msgid ""
-"Below the surface, Oscar the octopus and his friends sat on a rock,\n"
-"watching the bad weather above them."
-msgstr ""
-"Bajo la superficie, Oscar el pulpo y sus amigos se sentaron sobre una roca\n"
-"observando el mal tiempo que hacía sobre ellos."
-
-#: ../src/boards/python/oscar_and_friends.py:117
-msgid ""
-"They were all happy that the storms never reached all the way down to them."
-msgstr "Estaban todos contentos de que las tormentas nunca les alcanzasen."
-
-#: ../src/boards/python/oscar_and_friends.py:118
-msgid ""
-"No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr ""
-"No importa lo mal que estuvo ahí arriba, abajo siempre estuvo tranquilo y "
-"silencioso."
-
-#: ../src/boards/python/oscar_and_friends.py:119
-msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr ""
-"Los mejores amigos de Oscar eran Carlos el cangrejo y Sandra la estrella de "
-"mar."
-
 #: ../src/boards/python/pythontest.py:148
 msgid ""
 "This is the first plugin in GCompris coded in the Python\n"
@@ -5822,7 +5778,7 @@ msgstr ""
 "Licencia Pública General GNU "
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
+#: ../src/gcompris/config.c:476 ../src/gcompris/config.c:486
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -6122,42 +6078,46 @@ msgid "Urdu"
 msgstr "Urdu"
 
 #: ../src/gcompris/config.c:119
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+#: ../src/gcompris/config.c:120
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Walloon"
 msgstr "Valón"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Simplified)"
 msgstr "Chino (Simplificado)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Traditional)"
 msgstr "Chino (tradicional)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "No time limit"
 msgstr "Sin límite de tiempo"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Slow timer"
 msgstr "Temporizador lento"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Normal timer"
 msgstr "Temporizador normal"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:131
 msgid "Fast timer"
 msgstr "Temporizador rápido"
 
-#: ../src/gcompris/config.c:135
+#: ../src/gcompris/config.c:136
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (predeterminado para GCompris)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:141
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6165,38 +6125,38 @@ msgstr ""
 "<i>Usa el módulo de administración de GCompris\n"
 "para filtrar tableros</i>"
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:196 ../src/gcompris/config.c:206
 msgid "GCompris Configuration"
 msgstr "Configuración de GCompris"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:282
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:325
 msgid "Music"
 msgstr "Música"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:353
 msgid "Effect"
 msgstr "Efecto"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:389
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "No se puede abrir el directorio de apariencias: %s"
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:869
-#: ../src/gcompris/config.c:883
+#: ../src/gcompris/config.c:420 ../src/gcompris/config.c:870
+#: ../src/gcompris/config.c:884
 #, c-format
 msgid "Skin : %s"
 msgstr "Apariencia : %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:422
 msgid "SKINS NOT FOUND"
 msgstr "APARIENCIAS NO ENCONTRADAS"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:547
 msgid "English (United State)"
 msgstr "Inglés (Estados Unidos)"
 
@@ -6502,3 +6462,41 @@ msgstr "Tiempo transcurrido"
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "Tiempo restante = %d"
+
+#~ msgid "Improve reading skill and the ability to understand what is read."
+#~ msgstr ""
+#~ "Mejorar la capacidad de lectura y la habilidad de comprensión de lo que "
+#~ "se lee."
+
+#~ msgid "Read and play with the story"
+#~ msgstr "Lee y juega con la historia"
+
+#~ msgid "The story of Oscar and friend"
+#~ msgstr "La historia de Oscar y su amigo"
+
+#~ msgid "reading"
+#~ msgstr "lectura"
+
+#~ msgid ""
+#~ "Below the surface, Oscar the octopus and his friends sat on a rock,\n"
+#~ "watching the bad weather above them."
+#~ msgstr ""
+#~ "Bajo la superficie, Oscar el pulpo y sus amigos se sentaron sobre una "
+#~ "roca\n"
+#~ "observando el mal tiempo que hacía sobre ellos."
+
+#~ msgid ""
+#~ "They were all happy that the storms never reached all the way down to "
+#~ "them."
+#~ msgstr "Estaban todos contentos de que las tormentas nunca les alcanzasen."
+
+#~ msgid ""
+#~ "No matter how bad it was up there, the bottom was always calm and quiet."
+#~ msgstr ""
+#~ "No importa lo mal que estuvo ahí arriba, abajo siempre estuvo tranquilo y "
+#~ "silencioso."
+
+#~ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
+#~ msgstr ""
+#~ "Los mejores amigos de Oscar eran Carlos el cangrejo y Sandra la estrella "
+#~ "de mar."
