@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-10 01:23+0200\n"
-"PO-Revision-Date: 2007-12-09 20:38+0300\n"
+"POT-Creation-Date: 2008-08-24 20:21-0400\n"
+"PO-Revision-Date: 2008-08-24 20:21-0400\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -418,7 +418,8 @@ msgstr "Matematikos pamokėlės"
 msgid "Left-click the mouse on an activity to select it."
 msgstr "Išsirink pamokėlę, spragteldamas kairiuoju pelės mygtuku"
 
-#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1
+#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -773,7 +774,8 @@ msgstr "Įspirk kamuolį į vartus"
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
 #: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
-#: ../boards/connect4-2players.xml.in.h:5 ../boards/erase.xml.in.h:3
+#: ../boards/connect4-2players.xml.in.h:5 ../boards/doubleclick.xml.in.h:4
+#: ../boards/erase.xml.in.h:3 ../boards/erase_doubleclick.xml.in.h:6
 #: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
 #: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
 #: ../boards/tangram.xml.in.h:8
@@ -1252,7 +1254,8 @@ msgstr "Sudėliok tokį patį modelį"
 msgid "Drive the crane and copy the model"
 msgstr "Nukopijuok modelį kranu"
 
-#: ../boards/crane.xml.in.h:3 ../boards/erase.xml.in.h:2
+#: ../boards/crane.xml.in.h:3 ../boards/doubleclick.xml.in.h:3
+#: ../boards/erase.xml.in.h:2 ../boards/erase_doubleclick.xml.in.h:5
 #: ../boards/erase_clic.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Judesių koordinavimas"
@@ -1278,6 +1281,21 @@ msgstr "Spalvos, garsai, atmintis..."
 #: ../boards/discovery.xml.in.h:2
 msgid "Go to discovery activities"
 msgstr "Žinių bei pojūčių lavinimo pamokėlės"
+
+#: ../boards/doubleclick.xml.in.h:1
+msgid ""
+"Double click the mouse on the ball to kick it. You can double click the left "
+"right or middle mouse button. If you lose, Tux catches the ball. You must "
+"click on it to bring it back to its former position"
+msgstr ""
+
+#: ../boards/doubleclick.xml.in.h:2
+msgid "Double click the mouse on the ball to score a goal."
+msgstr ""
+
+#: ../boards/doubleclick.xml.in.h:5
+msgid "Penalty kick"
+msgstr ""
 
 #: ../boards/doubleentry.xml.in.h:1
 msgid "Basic counting skills"
@@ -1449,6 +1467,18 @@ msgstr "Judindamas pelę nuvalysi plotą ir pamatysi foną"
 #: ../boards/erase.xml.in.h:6
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Judink pelę kol dings visi kvadratėliai "
+
+#: ../boards/erase_doubleclick.xml.in.h:2
+msgid "Double click the mouse"
+msgstr "Dukart spragtelėti pelę"
+
+#: ../boards/erase_doubleclick.xml.in.h:3
+msgid "Double click the mouse on rectangles until all the blocks disappear."
+msgstr "Dukart spragtelk ant visų stačiakampių, kol dings visi blokai."
+
+#: ../boards/erase_doubleclick.xml.in.h:4
+msgid "Double click the mouse to erase the area and discover the background"
+msgstr "Dukart spragtelk pelę plotui išvalyti ir pamatyk foną"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -2819,7 +2849,7 @@ msgstr ""
 "Stebėki burtininką, jis pasakys kiek žvaigždžių yra po jo kepure. Tada "
 "spustelk ant skrybėlės, kad ji atsidengtų. Kelios žvaigždės dings. Spustelk "
 "ant skrybėlės dar kartą kad ji užsiverstų. Dabar tau reiks suskaičiuoti, "
-"kiek žvaigždžių liko po skrybėle. Spausk ekrano apačopje dešinėje, kur "
+"kiek žvaigždžių liko po skrybėle. Spausk ekrano apačioje dešinėje, kur "
 "reikia įvesti atsakymą."
 
 #: ../boards/magic_hat_minus.xml.in.h:4 ../boards/memory_add_minus.xml.in.h:3
@@ -2830,7 +2860,7 @@ msgstr "Atimtis"
 
 #: ../boards/math.xml.in.h:1
 msgid "Mathematical activities."
-msgstr "Matematikos pamokėlės"
+msgstr "Matematikos pamokėlės."
 
 #: ../boards/math.xml.in.h:2
 msgid "Mathematics"
@@ -3617,22 +3647,6 @@ msgstr "Skaičiavimas iš eilės"
 msgid "Numeration activities."
 msgstr "Skaičiavimo iš eilės pamokėlės."
 
-#: ../boards/oscar_and_friends.xml.in.h:1
-msgid "Improve reading skill and the ability to understand what is read."
-msgstr "Patobulink skaitymo įgūdžius ir teksto supratimą."
-
-#: ../boards/oscar_and_friends.xml.in.h:2
-msgid "Read and play with the story"
-msgstr "Skaityk ir žaisk su šia istorija"
-
-#: ../boards/oscar_and_friends.xml.in.h:3
-msgid "The story of Oscar and friend"
-msgstr "Istorija apie Oskarą ir jo draugą"
-
-#: ../boards/oscar_and_friends.xml.in.h:4
-msgid "reading"
-msgstr "skaitymas"
-
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
 msgstr "Surink dėlionę"
@@ -4387,7 +4401,7 @@ msgstr ""
 "Paspausdami ant vandens judėjimą gamtoje lemiančių elementų,\n"
 "padėkite Tuksui, su laivus grįžtančiam iš ilgos žūklės, išsimaudyti duše. "
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:110
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:108
 msgid "Falling Words"
 msgstr "Krintantys žodžiai"
 
@@ -4399,7 +4413,7 @@ msgstr "Treniruotis dirbti klaviatūra"
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "Surink klaviatūroje krintančius žodžius, kol jie nenukrito."
 
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:111
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:109
 msgid "Type the falling words before they reach the ground"
 msgstr "Parašyk pilnus krintančius žodžius, kol jie nenukrito. "
 
@@ -4443,6 +4457,10 @@ msgstr "Tavo tekstų rengyklė"
 msgid "Administration for gcompris"
 msgstr "GCompris administravimas"
 
+#: ../gcompris-edit.desktop.in.h:2
+msgid "GCompris Administration"
+msgstr "GCompris administravimas"
+
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
 msgstr "Mokomasis žaidimas vaikams nuo 2 iki 12 metų amžiaus"
@@ -4480,25 +4498,11 @@ msgstr "Tavo eilė žaisti..."
 msgid "Not allowed! Try again !"
 msgstr "Taip negalima! Bandyk dar kartą!"
 
-#: ../src/boards/chess.c:178
+#: ../src/boards/chess.c:201
 msgid "Error: The external program gnuchess died unexpectedly"
 msgstr "Klaida: išorinė programa gnuchess netikėtai baigė darbą"
 
-#: ../src/boards/chess.c:198
-msgid ""
-"Error: The external program gnuchess is required\n"
-"to play chess in GCompris.\n"
-"Find this program on http://www.rpmfind.net or in your\n"
-"GNU/Linux distribution\n"
-"And check it is located here: "
-msgstr ""
-"Klaida: šachmatų žaidimui reikia gnuchess programos.\n"
-"Įdiekite šią programą į savo kompiuterį. Gnuchess galite rasti jūsų \n"
-"naudojamoje GNU/Linux distribucijoje arba \n"
-" http://www.rpmfind.net\n"
-"Įdiegę patikrinkite, ar gnuchess programa yra čia: "
-
-#: ../src/boards/chess.c:243
+#: ../src/boards/chess.c:236 ../src/boards/chess.c:281
 msgid ""
 "Error: The external program gnuchess is mandatory\n"
 "to play chess in gcompris.\n"
@@ -4509,36 +4513,36 @@ msgstr ""
 "naudojamoje GNU/Linux distribucijoje\n"
 "Įdiegę patikrinkite, ar gnuchess programa yra čia: "
 
-#: ../src/boards/chess.c:586
+#: ../src/boards/chess.c:626
 msgid "White's Turn"
 msgstr "Baltųjų ėjimas"
 
-#: ../src/boards/chess.c:586
+#: ../src/boards/chess.c:626
 msgid "Black's Turn"
 msgstr "Juodųjų ėjimas"
 
-#: ../src/boards/chess.c:730
+#: ../src/boards/chess.c:770
 msgid "White checks"
 msgstr "Baltieji skelbia šachą"
 
-#: ../src/boards/chess.c:732
+#: ../src/boards/chess.c:772
 msgid "Black checks"
 msgstr "Juodieji skelbia šachą"
 
-#: ../src/boards/chess.c:1089
+#: ../src/boards/chess.c:1129
 msgid "Black mates"
 msgstr "Matas baltiesiems"
 
-#: ../src/boards/chess.c:1094
+#: ../src/boards/chess.c:1134
 msgid "White mates"
 msgstr "Matas juodiesiems"
 
-#: ../src/boards/chess.c:1099 ../src/gcompris/bonus.c:362
-#: ../src/gcompris/bonus.c:371
+#: ../src/boards/chess.c:1139 ../src/gcompris/bonus.c:354
+#: ../src/gcompris/bonus.c:363
 msgid "Drawn game"
 msgstr "Lygiosios"
 
-#: ../src/boards/chess.c:1127
+#: ../src/boards/chess.c:1167
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Klaida: išorinė programa gnuchess netikėtai baigė darbą"
 
@@ -4595,7 +4599,7 @@ msgstr ""
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1847 ../src/boards/smallnumbers.c:591
+#: ../src/boards/shapegame.c:1848 ../src/boards/smallnumbers.c:591
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4758,12 +4762,10 @@ msgid "Move the plane to catch the clouds in the correct order"
 msgstr "Sugauk debesėlius lėktuvėliu teisinga tvarka"
 
 #: ../src/boards/python.c:62 ../src/boards/python.c:86
-#, fuzzy
 msgid "Python Board"
-msgstr "Python testas"
+msgstr "Python lenta"
 
 #: ../src/boards/python.c:63 ../src/boards/python.c:87
-#, fuzzy
 msgid "Special board that embeds python into GCompris."
 msgstr "Speciali lenta, kuri integruoja Python į GCompris."
 
@@ -4832,56 +4834,56 @@ msgstr ""
 "<span size='x-large'> Pasirinkite sunkumo lygį \n"
 "profiliui <b>%s</b></span>"
 
-#: ../src/boards/python/admin/class_edit.py:59
+#: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
 msgstr "Klasės tvarkymas"
 
-#: ../src/boards/python/admin/class_edit.py:64
+#: ../src/boards/python/admin/class_edit.py:65
 msgid "Editing class: "
 msgstr "Tvarkoma klasė: "
 
-#: ../src/boards/python/admin/class_edit.py:67
+#: ../src/boards/python/admin/class_edit.py:68
 msgid "Editing a new class"
 msgstr "Tvarkoma nauja klasė"
 
-#: ../src/boards/python/admin/class_edit.py:89
+#: ../src/boards/python/admin/class_edit.py:90
 msgid "Class:"
 msgstr "Klasė:"
 
 #. FIXME: How to remove the default selection
 #. Label and Entry for the teacher name
-#: ../src/boards/python/admin/class_edit.py:102
+#: ../src/boards/python/admin/class_edit.py:103
 msgid "Teacher:"
 msgstr "Mokytojas:"
 
-#: ../src/boards/python/admin/class_edit.py:112
+#: ../src/boards/python/admin/class_edit.py:113
 msgid "Assign all the users belonging to this class"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:252
-#: ../src/boards/python/admin/group_edit.py:264
+#: ../src/boards/python/admin/class_edit.py:253
+#: ../src/boards/python/admin/group_edit.py:265
 #: ../src/boards/python/admin/group_user_list.py:153
 #: ../src/boards/python/admin/user_list.py:195
 msgid "First Name"
 msgstr "Vardas"
 
-#: ../src/boards/python/admin/class_edit.py:263
-#: ../src/boards/python/admin/group_edit.py:275
+#: ../src/boards/python/admin/class_edit.py:264
+#: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:163
 #: ../src/boards/python/admin/user_list.py:205
 msgid "Last Name"
 msgstr "Pavardė"
 
-#: ../src/boards/python/admin/class_edit.py:340
+#: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
 msgstr ""
 
-#: ../src/boards/python/admin/class_edit.py:386
+#: ../src/boards/python/admin/class_edit.py:387
 msgid "There is already a class with this name"
 msgstr ""
 
 #: ../src/boards/python/admin/class_list.py:168
-#: ../src/boards/python/admin/profile_edit.py:268
+#: ../src/boards/python/admin/profile_edit.py:269
 #: ../src/boards/python/admin/profile_group_list.py:143
 msgid "Class"
 msgstr "Klasė"
@@ -4890,43 +4892,43 @@ msgstr "Klasė"
 msgid "Teacher"
 msgstr "Mokytojas"
 
-#: ../src/boards/python/admin/group_edit.py:59
+#: ../src/boards/python/admin/group_edit.py:60
 msgid "Editing a Group"
 msgstr "Grupės tvarkymas"
 
-#: ../src/boards/python/admin/group_edit.py:65
+#: ../src/boards/python/admin/group_edit.py:66
 msgid "Editing group: "
 msgstr "Tvarkoma grupė: "
 
-#: ../src/boards/python/admin/group_edit.py:66
+#: ../src/boards/python/admin/group_edit.py:67
 msgid " for class: "
 msgstr " klasei: "
 
-#: ../src/boards/python/admin/group_edit.py:69
+#: ../src/boards/python/admin/group_edit.py:70
 msgid "Editing a new group"
 msgstr "Tvarkoma nauja grupė"
 
-#: ../src/boards/python/admin/group_edit.py:89
+#: ../src/boards/python/admin/group_edit.py:90
 msgid "Group:"
 msgstr "Grupė:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/group_edit.py:101
-#: ../src/boards/python/admin/profile_edit.py:97
+#: ../src/boards/python/admin/group_edit.py:102
+#: ../src/boards/python/admin/profile_edit.py:98
 msgid "Description:"
 msgstr "Aprašymas:"
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/group_edit.py:112
+#: ../src/boards/python/admin/group_edit.py:113
 msgid "Assign all the users belonging to this group"
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:358
+#: ../src/boards/python/admin/group_edit.py:359
 msgid "You need to provide at least a name for your group"
 msgstr ""
 
-#: ../src/boards/python/admin/group_edit.py:372
+#: ../src/boards/python/admin/group_edit.py:373
 msgid "There is already a group with this name"
 msgstr "Grupė tokiu vardu jau egzistuoja"
 
@@ -4935,13 +4937,13 @@ msgid "Select a class:"
 msgstr "Pasirinkite klasę:"
 
 #: ../src/boards/python/admin/group_list.py:213
-#: ../src/boards/python/admin/profile_edit.py:278
+#: ../src/boards/python/admin/profile_edit.py:279
 #: ../src/boards/python/admin/profile_group_list.py:153
 msgid "Group"
 msgstr "Grupė"
 
 #: ../src/boards/python/admin/group_list.py:224
-#: ../src/boards/python/admin/profile_edit.py:288
+#: ../src/boards/python/admin/profile_edit.py:289
 #: ../src/boards/python/admin/profile_group_list.py:163
 #: ../src/boards/python/admin/profile_list.py:197
 msgid "Description"
@@ -4995,9 +4997,8 @@ msgid "Level"
 msgstr "Lygis"
 
 #: ../src/boards/python/admin/log_list.py:247
-#, fuzzy
 msgid "Sublevel"
-msgstr "Lygis"
+msgstr "Dalis"
 
 #: ../src/boards/python/admin/log_list.py:257
 msgid "Duration"
@@ -5038,32 +5039,32 @@ msgstr "Naudotojai"
 msgid "Classes"
 msgstr "Klasės"
 
-#: ../src/boards/python/admin/profile_edit.py:58
+#: ../src/boards/python/admin/profile_edit.py:59
 msgid "Editing a Profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:63
+#: ../src/boards/python/admin/profile_edit.py:64
 msgid "Editing profile: "
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:66
+#: ../src/boards/python/admin/profile_edit.py:67
 msgid "Editing a new profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:85
+#: ../src/boards/python/admin/profile_edit.py:86
 msgid "Profile:"
 msgstr ""
 
 #. Top message gives instructions
-#: ../src/boards/python/admin/profile_edit.py:108
+#: ../src/boards/python/admin/profile_edit.py:109
 msgid "Assign all the groups belonging to this profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:376
+#: ../src/boards/python/admin/profile_edit.py:377
 msgid "You need to provide at least a name for your profile"
 msgstr ""
 
-#: ../src/boards/python/admin/profile_edit.py:398
+#: ../src/boards/python/admin/profile_edit.py:399
 msgid "There is already a profile with this name"
 msgstr ""
 
@@ -5075,44 +5076,44 @@ msgstr ""
 msgid "[Default]"
 msgstr "[Numatytasis]"
 
-#: ../src/boards/python/admin/user_edit.py:49
+#: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
 msgstr "Naudotojo tvarkymas"
 
-#: ../src/boards/python/admin/user_edit.py:54
+#: ../src/boards/python/admin/user_edit.py:55
 msgid "Editing a User "
 msgstr "Tvarkomas naudotojas "
 
-#: ../src/boards/python/admin/user_edit.py:60
+#: ../src/boards/python/admin/user_edit.py:61
 msgid "Editing a new user"
 msgstr "Tvarkomas naujas naudotojas"
 
-#: ../src/boards/python/admin/user_edit.py:77
+#: ../src/boards/python/admin/user_edit.py:78
 msgid "Login:"
 msgstr "Registravimosi vardas:"
 
 #. FIXME: How to remove the selection
 #. Label and Entry for the first name
-#: ../src/boards/python/admin/user_edit.py:88
+#: ../src/boards/python/admin/user_edit.py:89
 msgid "First name:"
 msgstr "Vardas:"
 
 #. Label and Entry for the last name
-#: ../src/boards/python/admin/user_edit.py:97
+#: ../src/boards/python/admin/user_edit.py:98
 msgid "Last name:"
 msgstr "Pavardė:"
 
 #. Label and Entry for the birth date
-#: ../src/boards/python/admin/user_edit.py:106
+#: ../src/boards/python/admin/user_edit.py:107
 msgid "Birth date:"
 msgstr "Gimimo data:"
 
-#: ../src/boards/python/admin/user_edit.py:158
+#: ../src/boards/python/admin/user_edit.py:159
 msgid ""
 "You need to provide at least a login, first name and last name for your users"
 msgstr "Reikia nurodyti bent jau vardą, pavardę ir registravimosi vardą"
 
-#: ../src/boards/python/admin/user_edit.py:175
+#: ../src/boards/python/admin/user_edit.py:176
 msgid "There is already a user with this login"
 msgstr "Jau yra toks registravimosi vardas"
 
@@ -5141,6 +5142,14 @@ msgstr "Pastaba: šie paveiksliukai nepasiekiami jūsų sistemoje.\n"
 
 #: ../src/boards/python/anim.py:2382
 msgid "The corresponding items have been skipped."
+msgstr ""
+
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr ""
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
 msgstr ""
 
 #: ../src/boards/python/chat.py:81
@@ -5354,26 +5363,6 @@ msgstr ""
 "Atverkite nustatymų dialogą\n"
 "ir įjunkite garso efektus."
 
-#: ../src/boards/python/oscar_and_friends.py:116
-msgid ""
-"Below the surface, Oscar the octopus and his friends sat on a rock,\n"
-"watching the bad weather above them."
-msgstr ""
-
-#: ../src/boards/python/oscar_and_friends.py:117
-msgid ""
-"They were all happy that the storms never reached all the way down to them."
-msgstr ""
-
-#: ../src/boards/python/oscar_and_friends.py:118
-msgid ""
-"No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr ""
-
-#: ../src/boards/python/oscar_and_friends.py:119
-msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr ""
-
 #: ../src/boards/python/pythontest.py:148
 msgid ""
 "This is the first plugin in GCompris coded in the Python\n"
@@ -5415,9 +5404,8 @@ msgid "Use rectangles"
 msgstr "Naudoti stačiakampius"
 
 #: ../src/boards/python/pythontest.py:449
-#, fuzzy
 msgid "Choice of pattern"
-msgstr "Spustelk ant raidės"
+msgstr ""
 
 #: ../src/boards/python/redraw.py:908 ../src/boards/python/redraw.py:911
 msgid "Coordinate"
@@ -5517,7 +5505,7 @@ msgstr "Atminties žaidimas"
 msgid "Build a train according to the model"
 msgstr "Padaryk traukinį pagal parodomą modelį"
 
-#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:207
+#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:205
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5588,9 +5576,8 @@ msgid "Distance to target = %d meters"
 msgstr "Atstumas iki taikinio = %d metrų"
 
 #: ../src/boards/wordprocessor.c:54
-#, fuzzy
 msgid "Research"
-msgstr "maumedžio"
+msgstr "Mokslas"
 
 #: ../src/boards/wordprocessor.c:65
 msgid "Sentimental"
@@ -5668,7 +5655,7 @@ msgid ""
 msgstr ""
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:473 ../src/gcompris/config.c:483
+#: ../src/gcompris/config.c:476 ../src/gcompris/config.c:486
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -5690,7 +5677,7 @@ msgstr "Taip, noriu!"
 msgid "No, I want to keep going"
 msgstr "Ne, aš dar pažaisiu"
 
-#: ../src/gcompris/board.c:183
+#: ../src/gcompris/board.c:191
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr ""
 
@@ -5727,23 +5714,20 @@ msgid "Your system default"
 msgstr "Nustatyta operacinėje sistemoje"
 
 #: ../src/gcompris/config.c:59
-#, fuzzy
 msgid "Afrikaans"
-msgstr "Afrika"
+msgstr "Afrikaans"
 
 #: ../src/gcompris/config.c:60
-#, fuzzy
 msgid "Amharic"
-msgstr "Amerika"
+msgstr ""
 
 #: ../src/gcompris/config.c:61
 msgid "Arabic"
 msgstr "Arabų"
 
 #: ../src/gcompris/config.c:62
-#, fuzzy
 msgid "Arabic (Tunisia)"
-msgstr "Tunisas"
+msgstr "Arabų (Tunisas)"
 
 #: ../src/gcompris/config.c:63
 msgid "Turkish (Azerbaijan)"
@@ -5779,10 +5763,9 @@ msgstr ""
 
 #: ../src/gcompris/config.c:72
 msgid "English (Great Britain)"
-msgstr ""
+msgstr "Anglų (Didžioji Britanija)"
 
 #: ../src/gcompris/config.c:73
-#, fuzzy
 msgid "English (United States)"
 msgstr "Anglų (JAV)"
 
@@ -5799,207 +5782,214 @@ msgid "Dzongkha"
 msgstr ""
 
 #: ../src/gcompris/config.c:77
+msgid "Persian"
+msgstr "Persų"
+
+#: ../src/gcompris/config.c:78
 msgid "Finnish"
 msgstr "Suomių"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:79
 msgid "French"
 msgstr "Prancūzų"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:80
 msgid "Irish (Gaelic)"
 msgstr ""
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:81
 msgid "Hebrew"
 msgstr ""
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:82
 msgid "Hindi"
 msgstr "Indų"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:83
 msgid "Indonesian"
 msgstr ""
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:84
 msgid "Japanese"
 msgstr "Japonų"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:85
 msgid "Gujarati"
 msgstr ""
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:86
 msgid "Punjabi"
 msgstr ""
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:87
 msgid "Hungarian"
 msgstr "Vengrų"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:88
 msgid "Croatian"
 msgstr "Kroatų"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:89
 msgid "Italian"
 msgstr "Italų"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:90
 msgid "Georgian"
 msgstr "Gruzinų"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:91
 msgid "Korean"
 msgstr "Korėjiečių"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:92
 msgid "Lithuanian"
 msgstr "Lietuvių"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:93
 msgid "Macedonian"
 msgstr "Makedoniečių"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:94
 msgid "Malayalam"
 msgstr ""
 
-#: ../src/gcompris/config.c:94
-#, fuzzy
-msgid "Marathi"
-msgstr "Malavis"
-
 #: ../src/gcompris/config.c:95
-#, fuzzy
-msgid "Malay"
-msgstr "Malavis"
+msgid "Marathi"
+msgstr ""
 
 #: ../src/gcompris/config.c:96
+msgid "Malay"
+msgstr ""
+
+#: ../src/gcompris/config.c:97
 msgid "Nepal"
 msgstr "Nepaliečių"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:98
 msgid "Dutch"
 msgstr "Olandų"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:99
 msgid "Norwegian Bokmal"
 msgstr ""
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:100
 msgid "Norwegian Nynorsk"
 msgstr ""
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:101
 msgid "Occitan (languedocien)"
 msgstr ""
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:102
 msgid "Polish"
 msgstr "Lenkų"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:103
 msgid "Portuguese"
 msgstr "Portugalų"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:104
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: ../src/gcompris/config.c:104
-#, fuzzy
-msgid "Romanian"
-msgstr "Rumunija"
-
 #: ../src/gcompris/config.c:105
+msgid "Romanian"
+msgstr "Rumunų"
+
+#: ../src/gcompris/config.c:106
 msgid "Russian"
 msgstr "Rusų"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:107
 msgid "Kinyarwanda"
 msgstr ""
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:108
 msgid "Slovak"
 msgstr "Slovakų"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:109
 msgid "Slovenian"
 msgstr "Slovėnų"
 
-#: ../src/gcompris/config.c:109
-#, fuzzy
-msgid "Somali"
-msgstr "Somalis"
-
 #: ../src/gcompris/config.c:110
+msgid "Somali"
+msgstr ""
+
+#: ../src/gcompris/config.c:111
 msgid "Albanian"
 msgstr "Albanų"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:112
 msgid "Serbian (Latin)"
 msgstr "Serbų (Lotynų)"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:113
 msgid "Serbian"
 msgstr "Serbų"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:114
 msgid "Swedish"
 msgstr "Švedų"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:115
 msgid "Tamil"
 msgstr ""
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:116
 msgid "Thai"
 msgstr ""
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:117
 msgid "Turkish"
 msgstr "Turkų"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:118
+msgid "Urdu"
+msgstr ""
+
+#: ../src/gcompris/config.c:119
+msgid "Ukrainian"
+msgstr "Ukrainiečių"
+
+#: ../src/gcompris/config.c:120
 msgid "Vietnamese"
 msgstr "Vietnamiečių"
 
-#: ../src/gcompris/config.c:118
-#, fuzzy
+#: ../src/gcompris/config.c:121
 msgid "Walloon"
-msgstr "migdolo"
+msgstr ""
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Simplified)"
 msgstr ""
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Traditional)"
 msgstr ""
 
-#: ../src/gcompris/config.c:125
+#: ../src/gcompris/config.c:128
 msgid "No time limit"
 msgstr "Nėra laiko limito"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:129
 msgid "Slow timer"
 msgstr "Daugiau laiko"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:130
 msgid "Normal timer"
 msgstr "Normalus tempas"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:131
 msgid "Fast timer"
 msgstr "Mažiau laiko"
 
-#: ../src/gcompris/config.c:133
+#: ../src/gcompris/config.c:136
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Gcompris įprasta)"
 
-#: ../src/gcompris/config.c:138
+#: ../src/gcompris/config.c:141
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6007,38 +5997,38 @@ msgstr ""
 "<i>Pamokėlių paslėpimui naudokite\n"
 "Gcompris administravimo programą</i>"
 
-#: ../src/gcompris/config.c:193 ../src/gcompris/config.c:203
+#: ../src/gcompris/config.c:196 ../src/gcompris/config.c:206
 msgid "GCompris Configuration"
 msgstr "GCompris nustatymai"
 
-#: ../src/gcompris/config.c:279
+#: ../src/gcompris/config.c:282
 msgid "Fullscreen"
 msgstr "Visame ekrane"
 
-#: ../src/gcompris/config.c:322
+#: ../src/gcompris/config.c:325
 msgid "Music"
 msgstr "Muzika"
 
-#: ../src/gcompris/config.c:350
+#: ../src/gcompris/config.c:353
 msgid "Effect"
 msgstr "Efektas"
 
-#: ../src/gcompris/config.c:386
+#: ../src/gcompris/config.c:389
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Negaliu atverti temų katalogo: %s"
 
-#: ../src/gcompris/config.c:417 ../src/gcompris/config.c:867
-#: ../src/gcompris/config.c:881
+#: ../src/gcompris/config.c:420 ../src/gcompris/config.c:870
+#: ../src/gcompris/config.c:884
 #, c-format
 msgid "Skin : %s"
 msgstr "Tema: %s"
 
-#: ../src/gcompris/config.c:419
+#: ../src/gcompris/config.c:422
 msgid "SKINS NOT FOUND"
 msgstr "TEMOS NERASTOS"
 
-#: ../src/gcompris/config.c:544
+#: ../src/gcompris/config.c:547
 msgid "English (United State)"
 msgstr "Anglų (JAV)"
 
@@ -6054,15 +6044,15 @@ msgstr "ĮKRAUTI"
 msgid "SAVE"
 msgstr "ĮRAŠYTI"
 
-#: ../src/gcompris/gameutil.c:103
+#: ../src/gcompris/gameutil.c:101
 msgid "Couldn't find or load the file"
 msgstr ""
 
-#: ../src/gcompris/gameutil.c:105
+#: ../src/gcompris/gameutil.c:103
 msgid "This activity is incomplete."
 msgstr ""
 
-#: ../src/gcompris/gameutil.c:106
+#: ../src/gcompris/gameutil.c:104
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -6202,7 +6192,7 @@ msgstr ""
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:848
+#: ../src/gcompris/gcompris.c:860
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6216,18 +6206,18 @@ msgid ""
 "<http://www.fsf.org/philosophy>"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1445
+#: ../src/gcompris/gcompris.c:1476
 #, c-format
 msgid ""
 "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1447
+#: ../src/gcompris/gcompris.c:1478
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1575
+#: ../src/gcompris/gcompris.c:1597
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6237,17 +6227,17 @@ msgid ""
 msgstr ""
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1659
+#: ../src/gcompris/gcompris.c:1681
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1660
+#: ../src/gcompris/gcompris.c:1682
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr ""
 
-#: ../src/gcompris/gcompris.c:1847
+#: ../src/gcompris/gcompris.c:1869
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr ""
@@ -6302,6 +6292,31 @@ msgstr "Praėjo laiko"
 msgid "Remaining Time = %d"
 msgstr "Liko laiko: %d"
 
+#~ msgid "Improve reading skill and the ability to understand what is read."
+#~ msgstr "Patobulink skaitymo įgūdžius ir teksto supratimą."
+
+#~ msgid "Read and play with the story"
+#~ msgstr "Skaityk ir žaisk su šia istorija"
+
+#~ msgid "The story of Oscar and friend"
+#~ msgstr "Istorija apie Oskarą ir jo draugą"
+
+#~ msgid "reading"
+#~ msgstr "skaitymas"
+
+#~ msgid ""
+#~ "Error: The external program gnuchess is required\n"
+#~ "to play chess in GCompris.\n"
+#~ "Find this program on http://www.rpmfind.net or in your\n"
+#~ "GNU/Linux distribution\n"
+#~ "And check it is located here: "
+#~ msgstr ""
+#~ "Klaida: šachmatų žaidimui reikia gnuchess programos.\n"
+#~ "Įdiekite šią programą į savo kompiuterį. Gnuchess galite rasti jūsų \n"
+#~ "naudojamoje GNU/Linux distribucijoje arba \n"
+#~ " http://www.rpmfind.net\n"
+#~ "Įdiegę patikrinkite, ar gnuchess programa yra čia: "
+
 #~ msgid ""
 #~ "Fish are taken from the Unix utility xfishtank.\n"
 #~ "Images are taken from the National Undersea Research Program (NURP) "
@@ -6338,15 +6353,6 @@ msgstr "Liko laiko: %d"
 
 #~ msgid "Click anywhere in the line where you want to drop a piece"
 #~ msgstr "Spustelk eilutėje, kur norėtum padėti monetą"
-
-#~ msgid "Double-Click the mouse to erase the area and discover the background"
-#~ msgstr "Dukart spustelėk pelę plotui išvalyti ir pamatyk foną"
-
-#~ msgid "Double-click the mouse"
-#~ msgstr "Dukart spragtelėti pelę"
-
-#~ msgid "Double-click the mouse on rectangles until all the blocks disappear."
-#~ msgstr "Dukart spragsėk ant visų stačiakampių, kol dings visi blokai."
 
 #~ msgid "Samuel Loyd"
 #~ msgstr "Samuelis Loydas"
