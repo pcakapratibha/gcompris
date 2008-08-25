@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-20 19:27+0200\n"
-"PO-Revision-Date: 2008-07-20 19:29+0100\n"
+"POT-Creation-Date: 2008-08-25 19:03+0200\n"
+"PO-Revision-Date: 2008-08-25 19:03+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -4915,8 +4915,8 @@ msgstr "Detta program är ett GNU-paket och är släppt under Gnu Public License
 
 #: ../src/gcompris/about.c:279
 #: ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:475
-#: ../src/gcompris/config.c:485
+#: ../src/gcompris/config.c:476
+#: ../src/gcompris/config.c:486
 #: ../src/gcompris/dialog.c:102
 #: ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391
@@ -5217,42 +5217,46 @@ msgid "Urdu"
 msgstr "Urdu"
 
 #: ../src/gcompris/config.c:119
+msgid "Ukrainian"
+msgstr "Ukrainska"
+
+#: ../src/gcompris/config.c:120
 msgid "Vietnamese"
 msgstr "Vietnamesiska"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Walloon"
 msgstr "Vallonska"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Simplified)"
 msgstr "Kinesiska (förenklad)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Traditional)"
 msgstr "Kinesiska (traditionell)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "No time limit"
 msgstr "Ingen tidsbegränsning"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Slow timer"
 msgstr "Långsam tidtagare"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Normal timer"
 msgstr "Normal tidtagare"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:131
 msgid "Fast timer"
 msgstr "Snabb tidtagare"
 
-#: ../src/gcompris/config.c:135
+#: ../src/gcompris/config.c:136
 msgid "800x600 (Default for GCompris)"
 msgstr "800×600 (Standard för GCompris)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:141
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5260,40 +5264,40 @@ msgstr ""
 "<i>Använd Gcompris administrationsmodul\n"
 "för att filtrera bräden</i>"
 
-#: ../src/gcompris/config.c:195
-#: ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:196
+#: ../src/gcompris/config.c:206
 msgid "GCompris Configuration"
 msgstr "Konfiguration av GCompris"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:282
 msgid "Fullscreen"
 msgstr "Helskärmsläge"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:325
 msgid "Music"
 msgstr "Musik"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:353
 msgid "Effect"
 msgstr "Effekt"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:389
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Kunde inte öppna skalkatalogen: %s"
 
-#: ../src/gcompris/config.c:419
-#: ../src/gcompris/config.c:869
-#: ../src/gcompris/config.c:883
+#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:870
+#: ../src/gcompris/config.c:884
 #, c-format
 msgid "Skin : %s"
 msgstr "Skal: %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:422
 msgid "SKINS NOT FOUND"
 msgstr "SKALEN HITTADES INTE"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:547
 msgid "English (United State)"
 msgstr "Engelska (USA)"
 
