@@ -509,7 +509,7 @@ static void clickgame_next_level()
   /* Try the next level */
   moveSpeed=100+(40/(gcomprisBoard->level));
   fallSpeed=5000-gcomprisBoard->level*200;
-  imageZoom = 0.75 + 0.25 * ((gcomprisBoard->maxlevel - gcomprisBoard->level + 1) / gcomprisBoard->maxlevel);
+  imageZoom = 0.75 + 0.25 * (((double)gcomprisBoard->maxlevel - gcomprisBoard->level + 1) / gcomprisBoard->maxlevel);
   gcomprisBoard->sublevel=0;
   gc_score_set(gcomprisBoard->sublevel);
 
