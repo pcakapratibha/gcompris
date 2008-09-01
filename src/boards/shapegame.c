@@ -146,6 +146,7 @@ static void dump_shape(Shape *shape);
 #endif
 static void update_shapelist_item(void);
 static void auto_process(void);
+static void target_point_hide();
 
 static gint drag_mode;
 /* Description of this plugin */
@@ -477,6 +478,7 @@ static void process_ok()
 
   if(done)
     {
+      target_point_hide();
       gamewon = TRUE;
       gc_bonus_display(gamewon, GC_BONUS_FLOWER);
     }
@@ -891,6 +893,7 @@ static Shape * item_to_shape(GnomeCanvasItem *item)
 
 /* switch off all point, and switch on this point
     if shape is NULL, switch off all */
+static
 void target_point_switch_on(Shape *shape_on)
 {
     GList *list;
@@ -904,6 +907,21 @@ void target_point_switch_on(Shape *shape_on)
                     "fill_color_rgba",
                     shape == shape_on ? POINT_COLOR_ON : POINT_COLOR_OFF,
                     NULL);
+    }
+}
+
+/* hide all point to let the user look the real image at the end */
+static
+void target_point_hide()
+{
+    GList *list;
+    Shape *shape;
+
+    for(list = shape_list; list ; list = list ->next)
+    {
+        shape = list -> data;
+        if(shape->type == SHAPE_TARGET && ! shape->targetfile)
+	  gnome_canvas_item_hide(shape->target_point);
     }
 }
 
