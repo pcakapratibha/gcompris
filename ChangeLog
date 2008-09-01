@@ -1,3 +1,25 @@
+2008-09-02  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Added more levels to the babyshape activity. This levels are based
+	on famous paintings, the children must drag missing part of the paintings
+	back to their proper places.
+	This is a contribution of Marc Levivier (malev free fr):
+
+	* boards/babyshapes.xml.in:
+	* boards/babyshapes/Makefile.am:
+	* boards/babyshapes/board8_0.xml.in:
+	* boards/babyshapes/board8_1.xml.in:
+	* boards/babyshapes/board8_2.xml.in:
+	* boards/babyshapes/board8_3.xml.in:
+	* boards/babyshapes/board8_4.xml.in:
+
+2008-09-02  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Now when the level is won the red point are hidden to let the children
+	appreciate the art work. Commit #3524.
+
+	* src/boards/shapegame.c: (process_ok), (target_point_hide):
+
 2008-08-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/clickgame.c: (clickgame_next_level): Fixed the zoom level that was too low at level 2
