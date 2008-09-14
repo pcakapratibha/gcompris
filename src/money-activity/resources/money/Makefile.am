@@ -1,3 +1,4 @@
+SUBDIRS = euro
 imgdir = $(pkgdatadir)/@PACKAGE_DATA_DIR@/money
 img_DATA = \
 	apple.png \

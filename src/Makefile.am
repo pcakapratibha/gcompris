@@ -108,5 +108,4 @@ SUBDIRS = libart_lgpl libgnomecanvas gcompris boards \
 	searace1player-activity \
 	searace-activity \
 	sudoku-activity \
-	tuxpaint-activity \
 	watercycle-activity

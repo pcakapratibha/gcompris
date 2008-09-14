@@ -549,7 +549,6 @@ docs/fr/Makefile
 gcompris-installer.nsi
 macosx/Makefile
 po/Makefile.in
-src/tuxpaint-activity/Makefile
 src/billard-activity/Makefile
 src/billard-activity/resources/Makefile
 src/billard-activity/resources/billard/Makefile
@@ -566,7 +565,7 @@ src/money_cents-activity/Makefile
 src/memory_add_minus_mult_div_tux-activity/Makefile
 src/redraw_symmetrical-activity/Makefile
 src/redraw_symmetrical-activity/resources/Makefile
-src/redraw_symmetrical-activity/resources/redraw/Makefile
+src/redraw_symmetrical-activity/resources/redraw_symmetrical/Makefile
 src/gletters-activity/Makefile
 src/gletters-activity/resources/Makefile
 src/gletters-activity/resources/gletters/Makefile
@@ -643,12 +642,14 @@ src/erase-activity/resources/erase/Makefile
 src/enumerate-activity/Makefile
 src/enumerate-activity/resources/Makefile
 src/enumerate-activity/resources/enumerate/Makefile
+src/enumerate-activity/resources/enumerate/food/Makefile
 src/pythontest-activity/Makefile
 src/gnumch-factors-activity/Makefile
 src/maze2DRelative-activity/Makefile
 src/money-activity/Makefile
 src/money-activity/resources/Makefile
 src/money-activity/resources/money/Makefile
+src/money-activity/resources/money/euro/Makefile
 src/algebra_plus-activity/Makefile
 src/crane-activity/Makefile
 src/crane-activity/resources/Makefile
@@ -701,7 +702,6 @@ src/chronos-activity/resources/Makefile
 src/redraw-activity/Makefile
 src/redraw-activity/resources/Makefile
 src/redraw-activity/resources/redraw/Makefile
-src/redraw-activity/Makefile
 src/maze-activity/Makefile
 src/maze-activity/resources/Makefile
 src/maze-activity/resources/maze/Makefile

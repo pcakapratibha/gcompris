@@ -80,13 +80,6 @@ else
   ERROR "  ERROR: Cannot find $activitysrc/init_path.sh"
 fi
 
-with_clock="--exclude resources/skins/gartoon/timers"
-has_timer=`egrep "gc_timer_display|timers/clock" $plugindir/../*.c`
-if test "$has_timer" != ""; then
-    echo "  Adding timers/clock files"
-    with_clock=""
-fi
-
 # Create the Sugar specific startup scripts
 activity_dir=${activity}.activity
 if [ -d $activity_dir ]
@@ -156,6 +149,16 @@ if [ "$haspyfile" != "" ]; then
   # Add the GCompris binding
   rm -f $activity_dir/gcompris
   ln -s ../boards/python/gcompris -t $activity_dir
+fi
+
+# Add the timers skin if needed (python activity don't use it)
+if [ "$haspyfile" = "" ]; then
+  with_clock="--exclude resources/skins/gartoon/timers"
+  has_timer=`egrep "gc_timer_display|timers/clock" $plugindir/../*.c`
+  if test "$has_timer" != ""; then
+    echo "  Adding timers/clock files"
+    with_clock=""
+  fi
 fi
 
 # Add the runit.sh script

@@ -1,3 +1,4 @@
+SUBDIRS = food
 imgdir = $(pkgdatadir)/@PACKAGE_DATA_DIR@/enumerate
 img_DATA = \
 	enumerate_answer_focus.png \

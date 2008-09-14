@@ -1,5 +1,30 @@
 2008-09-14  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	Added missing makefile that creates missing images.
+	- fixes enumerate, money, redraw
+	- removed tuxpaint activity, it is irrelevant on xo
+
+
+	* configure.in:
+	* src/Makefile.am:
+	* src/bundleit.sh:
+	* src/enumerate-activity/resources/enumerate/Makefile.am:
+	* src/enumerate-activity/resources/enumerate/food/Makefile.am:
+	* src/money-activity/resources/Makefile.am:
+	* src/money-activity/resources/money/Makefile.am:
+	* src/money-activity/resources/money/euro/Makefile.am:
+	* src/redraw-activity/resources/Makefile.am:
+	* src/redraw_symmetrical-activity/resources/Makefile.am:
+	* src/tuxpaint-activity/Makefile.am:
+	* src/tuxpaint-activity/gcompris:
+	* src/tuxpaint-activity/init_path.sh:
+	* src/tuxpaint-activity/resources/skins:
+	* src/tuxpaint-activity/tuxpaint.py:
+	* src/tuxpaint-activity/tuxpaint.svg:
+	* src/tuxpaint-activity/tuxpaint.xml.in:
+
+2008-09-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	Fixed missing icon in the redraw activities.
 	* configure.in:
 	* src/redraw-activity/redraw.py:
