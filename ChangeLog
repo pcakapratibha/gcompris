@@ -1,5 +1,15 @@
 2008-09-14  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	Updated icons as provided by http://dev.laptop.org/ticket/7138
+
+	* src/chess_computer-activity/chess_computer.svg:
+	* src/chess_movelearn-activity/chess_movelearn.svg:
+	* src/chess_partyend-activity/chess_partyend.svg:
+	* src/scalesboard-activity/scalesicon.svg:
+	* src/sudoku-activity/sudoku.svg:
+
+2008-09-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	Added missing makefile that creates missing images.
 	- fixes enumerate, money, redraw
 	- removed tuxpaint activity, it is irrelevant on xo
