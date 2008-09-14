@@ -119,7 +119,8 @@ class Gcompris_redraw:
 
     self.rootitem.add(
       gnomecanvas.CanvasPixbuf,
-      pixbuf = gcompris.utils.load_pixmap(gcompris.skin.image_to_skin(self.gcomprisBoard.icon_name)),
+      pixbuf = gcompris.utils.load_pixmap(self.gcomprisBoard.name + "/" +
+                                          self.gcomprisBoard.icon_name),
       x = gcompris.BOARD_WIDTH - 60,
       y = 5,
       width = 60,

@@ -1,3 +1,13 @@
+2008-09-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed missing icon in the redraw activities.
+	* configure.in:
+	* src/redraw-activity/redraw.py:
+	* src/redraw-activity/resources/redraw/Makefile.am:
+	* src/redraw-activity/resources/redraw/redraw.svg:
+	* src/redraw_symmetrical-activity/resources/redraw_symmetrical/Makefile.am:
+	* src/redraw_symmetrical-activity/resources/redraw_symmetrical/redraw_symmetry.svg:
+
 2008-03-14  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/connect4-2players-activity/init_path.sh: fixed, this activity was not
