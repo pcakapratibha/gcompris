@@ -1,3 +1,12 @@
+2008-09-21  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Zohra Coudoin recorded most activities introduction in French
+	and English.
+	Now when you enter an activity it is explained.
+	* boards/voices/fr/intro/*
+	* boards/voices/en/intro/*
+	* fr/alphabet/'all_letters'.ogg have been remade by Zohra.
+
 2008-09-17  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Rerecoded Somalian costa_rica.ogg by Mohamed I. Mursal
