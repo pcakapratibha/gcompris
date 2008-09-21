@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-26 17:05+0200\n"
-"PO-Revision-Date: 2008-08-26 17:13+0200\n"
+"POT-Creation-Date: 2008-09-21 17:25+0200\n"
+"PO-Revision-Date: 2008-09-21 17:33+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -730,8 +730,34 @@ msgid "Good mouse-control"
 msgstr "Saguaren kontrol ona"
 
 #: ../boards/babyshapes.xml.in.h:5
-msgid "The dog is provided by Andre Connes and released under the GPL"
-msgstr "Txakurra Andre Connes-ek emana da, eta GPLren arabera argitaratu da"
+msgid ""
+"The dog is provided by Andre Connes and released under the GPL.\n"
+"Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://"
+"commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: "
+"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel "
+"Malissin et frédéric Valdes. Licence: Free but requires the site and author. "
+"Source: http://www.galerie.roi-president.com\n"
+"Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. "
+"Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. "
+"Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
+"_the_Elder_04.jpg"
+msgstr ""
+"Zakurra Andre Connes-ek eman du eta GPL lizentziapean kaleratu da.\n"
+"Artista: Gauguin, Paul. Titulua Arearea. Lizentzia: Domeinu Publikoa. Iturburua: http://"
+"commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artista: Bruegel d. Ä. Titulua: Bauernhochzeit. Lizentzia: Domeinu Publikoa. Iturburua: "
+"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Azalpena: Andrea eta adarbakarra (tapiza). Egilea: Pierre-Emmanuel "
+"Malissin eta frédéric Valdes. Lizentzia: librea baina egilea eta gunea eskatzen da. "
+"Iturburua: http://www.galerie.roi-president.com\n"
+"Artista: Vincent van Gogh. Titulua: Logela Arles-en. Lizentzia: Domeinu publikoa"
+"Iturburua: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Artista: Ambrosius Bosschaert. Titulua: Intsusa. Lizentzia: Domeinu publikoa. "
+"Iturburua: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
+"_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -1309,11 +1335,10 @@ msgid ""
 "right or middle mouse button. If you lose, Tux catches the ball. You must "
 "click on it to bring it back to its former position"
 msgstr ""
-"Egin klik bikoitza saguarekin baloian hau jaurtitzeko. "
-"Saguaren ezkerreko edo erdiko botoiarekin egin dezakezu "
-"klik bikoitza. Galtzen baduzu, Tux-ek hartuko du "
-"baloia. Nahikoa duzu baloiaren gainean klik egitea "
-"baloia bere jatorrizko posiziora itzultzeko."
+"Egin klik bikoitza saguarekin baloian hau jaurtitzeko. Saguaren ezkerreko "
+"edo erdiko botoiarekin egin dezakezu klik bikoitza. Galtzen baduzu, Tux-ek "
+"hartuko du baloia. Nahikoa duzu baloiaren gainean klik egitea baloia bere "
+"jatorrizko posiziora itzultzeko."
 
 #: ../boards/doubleclick.xml.in.h:2
 msgid "Double click the mouse on the ball to score a goal."
@@ -1501,7 +1526,9 @@ msgstr "Egin klik bikoitza laukizuzenetan saguarekin bloke guztiak desagertu art
 
 #: ../boards/erase_doubleclick.xml.in.h:4
 msgid "Double click the mouse to erase the area and discover the background"
-msgstr "Egin klik bikoitza saguarekin area garbitzeko eta atzeko planoko irudia ikusteko"
+msgstr ""
+"Egin klik bikoitza saguarekin area garbitzeko eta atzeko planoko irudia "
+"ikusteko"
 
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
@@ -4638,7 +4665,7 @@ msgstr ""
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1848 ../src/boards/smallnumbers.c:591
+#: ../src/boards/shapegame.c:1866 ../src/boards/smallnumbers.c:591
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -5712,8 +5739,8 @@ msgstr ""
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
 #: ../src/gcompris/config.c:476 ../src/gcompris/config.c:486
-#: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
-#: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
+#: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:379
+#: ../src/gcompris/help.c:389 ../src/gcompris/images_selector.c:316
 msgid "OK"
 msgstr "Ados"
 
@@ -6345,19 +6372,19 @@ msgstr "Efekturik gabe"
 msgid "Users without a class"
 msgstr "Klaserik gabeko erabiltzeak"
 
-#: ../src/gcompris/help.c:196
+#: ../src/gcompris/help.c:194
 msgid "Prerequisite"
 msgstr "Aurrebaldintzak"
 
-#: ../src/gcompris/help.c:224
+#: ../src/gcompris/help.c:222
 msgid "Goal"
 msgstr "Helburua"
 
-#: ../src/gcompris/help.c:252
+#: ../src/gcompris/help.c:250
 msgid "Manual"
 msgstr "Jarraibideak"
 
-#: ../src/gcompris/help.c:280
+#: ../src/gcompris/help.c:278
 msgid "Credit"
 msgstr "Kreditua"
 
