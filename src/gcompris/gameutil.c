@@ -668,7 +668,7 @@ gc_activity_intro_play (GcomprisBoard *gcomprisBoard)
 {
   gchar *str;
 
-  str = gc_file_find_absolute("voices/$LOCALE/activity/%s-intro.ogg",
+  str = gc_file_find_absolute("voices/$LOCALE/intro/%s.ogg",
 			      gcomprisBoard->name, NULL);
   gc_sound_play_ogg(str, NULL);
   g_free(str);
