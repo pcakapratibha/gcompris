@@ -1,3 +1,9 @@
+2008-09-23  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Bug http://bugzilla.gnome.org/show_bug.cgi?id=520829
+	* boards/voices/nl/misc/click_on_letter.ogg: rerecorded by
+	  original author Marina Snaaijer
+
 2008-09-21  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Zohra Coudoin recorded most activities introduction in French
