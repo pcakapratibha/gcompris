@@ -46,8 +46,10 @@ else
 fi
 
 if test "$activitysrc" = "administration-activity" || \
+   test "$activitysrc" = "chat-activity" || \
    test "$activitysrc" = "tuxpaint-activity" || \
    test "$activitysrc" = "melody-activity" || \
+   test "$activitysrc" = "login-activity" || \
    test "$activitysrc" = "gcompris-activity" || \
    test "$activitysrc" = "old-gcompris-activity" ; then
   echo "  Skipping it, not relevant for xo or not ready for it."
@@ -80,6 +82,11 @@ else
   ERROR "  ERROR: Cannot find $activitysrc/init_path.sh"
 fi
 
+# Bundle names must be formated without underscores
+# This translate chess_computer in chessComputer
+bundle_id=`echo $activity | sed 's/_\([a-z]\)/\U\1/g'`
+echo $bundle_id
+
 # Create the Sugar specific startup scripts
 activity_dir=${activity}.activity
 if [ -d $activity_dir ]
@@ -93,7 +100,7 @@ mkdir -p $activity_dir/activity
 mkdir -p $activity_dir/bin
 mv $activity_dir/*.svg $activity_dir/activity/activity-gcompris.svg
 cp activity.info $activity_dir/activity
-sed -i s/@ACTIVITY_NAME@/$activity/g $activity_dir/activity/activity.info
+sed -i s/@ACTIVITY_NAME@/$bundle_id/g $activity_dir/activity/activity.info
 cp old-gcompris-instance $activity_dir/
 cp old-gcompris-factory $activity_dir/
 cp old-gcompris-activity $activity_dir/
@@ -152,8 +159,8 @@ if [ "$haspyfile" != "" ]; then
 fi
 
 # Add the timers skin if needed (python activity don't use it)
+with_clock="--exclude resources/skins/gartoon/timers"
 if [ "$haspyfile" = "" ]; then
-  with_clock="--exclude resources/skins/gartoon/timers"
   has_timer=`egrep "gc_timer_display|timers/clock" $plugindir/../*.c`
   if test "$has_timer" != ""; then
     echo "  Adding timers/clock files"
