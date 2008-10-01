@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gcompris.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-18 14:11+0200\n"
-"PO-Revision-Date: 2008-09-28 14:38+0200\n"
+"PO-Revision-Date: 2008-09-30 17:14+0200\n"
 "Last-Translator: jorge Mariano\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -58,9 +58,8 @@ msgid "Click on the correct colored box."
 msgstr "לחץ על התיבה בצבע הנכון."
 
 #: ../boards/advanced_colors.xml.in.h:5
-#, fuzzy
 msgid "Learn to recognize unusual colors."
-msgstr "למד לזהות אותיות"
+msgstr "למד לזהות צבות"
 
 #: ../boards/advanced_colors/board1.xml.in.h:1
 msgid "almond"
@@ -585,11 +584,11 @@ msgstr "לוק עם צורות צבעוניות."
 
 #: ../boards/ballcatch.xml.in.h:1
 msgid "Make the ball go to Tux"
-msgstr ""
+msgstr "לשלח לכדור לTux "
 
 #: ../boards/ballcatch.xml.in.h:2
 msgid "Press the two shift keys at the same time, to make the ball go in a straight line."
-msgstr ""
+msgstr "להכביד על שנים מקשים Shift ,לשלח את הכדור בקו ישר"
 
 #: ../boards/bargame.xml.in.h:1
 #, fuzzy
@@ -800,7 +799,7 @@ msgstr ""
 #: ../boards/chronos/board3_3.xml.in.h:7
 #: ../boards/chronos/board3_4.xml.in.h:4
 msgid "Transportation"
-msgstr ""
+msgstr "חובלה"
 
 #: ../boards/chronos/board3_1.xml.in.h:1
 #: ../boards/chronos/board3_3.xml.in.h:1
@@ -842,7 +841,7 @@ msgstr ""
 #: ../boards/chronos/board4_0.xml.in.h:5
 #: ../boards/chronos/board4_1.xml.in.h:7
 msgid "Aviation"
-msgstr ""
+msgstr "תעופה"
 
 #: ../boards/chronos/board4_1.xml.in.h:1
 msgid ""
@@ -1011,7 +1010,7 @@ msgstr ""
 
 #: ../boards/connect4.xml.in.h:3
 msgid "Connect 4"
-msgstr ""
+msgstr "לחבר 4"
 
 #: ../boards/connect4.xml.in.h:4
 msgid "Create a line of 4 pieces either horizontally (lying down), vertically (standing up) or diagonally."
@@ -1023,7 +1022,7 @@ msgstr ""
 
 #: ../boards/connect4-2players.xml.in.h:3
 msgid "Connect 4 (2 Players)"
-msgstr ""
+msgstr "לחבר 4 (2 שחקנית)"
 
 #: ../boards/connect4-2players.xml.in.h:4
 msgid "Create a line of 4 pieces either horizontally (lying down) or vertically (standing up) or diagonally."
@@ -1125,7 +1124,7 @@ msgstr ""
 
 #: ../boards/electric.xml.in.h:3
 msgid "Electricity"
-msgstr ""
+msgstr "חשמל"
 
 #: ../boards/electric.xml.in.h:4
 msgid "Freely create an electric schema with a real time simulation of it."
@@ -1141,7 +1140,7 @@ msgstr ""
 
 #: ../boards/enumerate.xml.in.h:1
 msgid "Basic enumeration"
-msgstr ""
+msgstr "רשימה בסיס"
 
 #: ../boards/enumerate.xml.in.h:2
 msgid "Count the items"
@@ -1199,19 +1198,16 @@ msgid "Click the mouse to erase the area and discover the background"
 msgstr "הזז את העכבר כדי למחוק את האזור ולגלות את הרקע"
 
 #: ../boards/erase_double_clic.xml.in.h:2
-#, fuzzy
 msgid "Double-Click the mouse to erase the area and discover the background"
-msgstr "הזז את העכבר כדי למחוק את האזור ולגלות את הרקע"
+msgstr "יש להזיז את קליק ימני כפול בעכבר כדי למחוק את האזור ולגלות את הרקע"
 
 #: ../boards/erase_double_clic.xml.in.h:3
-#, fuzzy
 msgid "Double-click the mouse"
-msgstr "יש להזיז את העכבר"
+msgstr "יש להזיז את קליק ימני כפול בעכבר"
 
 #: ../boards/erase_double_clic.xml.in.h:4
-#, fuzzy
 msgid "Double-click the mouse on rectangles until all the blocks disappear."
-msgstr "הזז את העכבר עד שכל הבלוקים נעלמים"
+msgstr "בעכבר קליק ימני כפול עד שכל הבלוקים נעלמים"
 
 #: ../boards/experience.xml.in.h:1
 #, fuzzy
@@ -1295,7 +1291,7 @@ msgstr ""
 
 #: ../boards/gcompris/mimetypes/mime_type.xml.in.h:5
 msgid "wordprocessor text"
-msgstr ""
+msgstr "מעבד תמלילים מלל"
 
 #: ../boards/geography.xml.in.h:1
 #, fuzzy
@@ -1624,7 +1620,7 @@ msgstr "אוקראיניה"
 msgid "Algeria"
 msgstr "אלג'יריה"
 
-# הרפובליקה של בנין 
+# הרפובליקה של בנין
 #: ../boards/geography/board4_0.xml.in.h:2
 #: ../boards/geography/board4_2.xml.in.h:4
 msgid "Benin"
@@ -1651,7 +1647,7 @@ msgstr "הרפובליקה המרכז-אפריקאית"
 msgid "Chad"
 msgstr "צ'אד"
 
-# רפובליקת ג'יבוטי 
+# רפובליקת ג'יבוטי
 #: ../boards/geography/board4_0.xml.in.h:7
 msgid "Djibouti"
 msgstr "ג'יבוטי"
@@ -1886,12 +1882,11 @@ msgstr "מדינות גרמניה"
 
 #: ../boards/geometry.xml.in.h:1
 msgid "Geometry"
-msgstr ""
+msgstr "גאומטריה"
 
 #: ../boards/geometry.xml.in.h:2
-#, fuzzy
 msgid "Geometry activities."
-msgstr "עבור לפעילויות צבע"
+msgstr "עבור לפעילויות גאומטריה"
 
 #: ../boards/gletters.xml.in.h:1
 #: ../boards/wordsgame.xml.in.h:2
@@ -2003,7 +1998,7 @@ msgstr ""
 
 #: ../boards/guessnumber.xml.in.h:1
 msgid "Guess a number"
-msgstr ""
+msgstr "לנחש את המספר "
 
 #: ../boards/guessnumber.xml.in.h:2
 msgid "Help Tux escape the cave. Tux hides a number for you to find."
@@ -2410,7 +2405,7 @@ msgstr "ללמוד חיבור"
 #: ../boards/magic_hat_plus.xml.in.h:5
 #: ../boards/magic_hat_minus.xml.in.h:5
 msgid "The magician hat"
-msgstr ""
+msgstr "הכובע של הקוסם"
 
 #: ../boards/magic_hat_minus.xml.in.h:1
 msgid "Count how many items are under the magic hat after some have got away"
@@ -2578,7 +2573,7 @@ msgstr ""
 #: ../boards/memory_add_minus.xml.in.h:2
 #: ../boards/memory_add_minus_tux.xml.in.h:2
 msgid "Practise addition, subtraction, until all the cards are gone."
-msgstr ""
+msgstr "לתרגל חיבור, חיסור עד אין כרטיסים"
 
 #: ../boards/memory_add_minus.xml.in.h:4
 #: ../boards/memory_add_minus_tux.xml.in.h:4
@@ -2604,7 +2599,7 @@ msgstr ""
 #: ../boards/memory_add_minus_mult_div.xml.in.h:1
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:1
 msgid "Addition, subtraction, multiplication, division"
-msgstr ""
+msgstr "חיבור, חיסור, כפל, לחלק"
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:2
 msgid "All operations memory game"
@@ -2613,7 +2608,7 @@ msgstr ""
 #: ../boards/memory_add_minus_mult_div.xml.in.h:3
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:3
 msgid "Practise addition, subtraction, multiplication, division, until all the cards are gone."
-msgstr ""
+msgstr "לתרגל חיבור, חיסור, כפל, לחלק עד אין כרטיסים"
 
 #: ../boards/memory_add_minus_mult_div.xml.in.h:4
 #: ../boards/memory_add_minus_mult_div_tux.xml.in.h:4
@@ -2655,7 +2650,7 @@ msgstr "משחק זיכרון חלוק"
 #: ../boards/memory_div.xml.in.h:3
 #: ../boards/memory_div_tux.xml.in.h:3
 msgid "Practise division, until all the cards are gone."
-msgstr ""
+msgstr "לתרגל לחלק עד אין כרטיסים"
 
 #: ../boards/memory_div_tux.xml.in.h:2
 msgid "Division memory game against Tux"
@@ -2728,7 +2723,7 @@ msgstr "לוח הכפל וחלוק"
 #: ../boards/memory_mult_div.xml.in.h:3
 #: ../boards/memory_mult_div_tux.xml.in.h:3
 msgid "Practise multiplication, division, until all the cards are gone."
-msgstr ""
+msgstr "לתרגל  כפל, לחלק עד אין כרטיסים"
 
 #: ../boards/memory_mult_div_tux.xml.in.h:1
 msgid "Multiplication and division memory game against Tux"
@@ -2842,7 +2837,7 @@ msgstr "עבור לפעילויות שונות"
 
 #: ../boards/miscelaneous.xml.in.h:2
 msgid "Time, Geography, ..."
-msgstr ""
+msgstr "זמן, גאוגרפיה ..."
 
 #: ../boards/missing_letter.xml.in.h:1
 #, fuzzy
@@ -3639,9 +3634,8 @@ msgid "Use Tuxpaint to draw. When Tuxpaint is finished this board will end."
 msgstr ""
 
 #: ../boards/tuxpaint.xml.in.h:5
-#, fuzzy
 msgid "mouse and keyboard manipulation"
-msgstr "שימוש במקלדת"
+msgstr "שימוש במקלדת ובעכבר"
 
 #: ../boards/watercycle.xml.in.h:1
 #, fuzzy
@@ -3836,43 +3830,43 @@ msgstr "שנה את השעה ל:"
 
 #: ../src/boards/colors.c:56
 msgid "Click on the blue duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע כחול"
 
 #: ../src/boards/colors.c:57
 msgid "Click on the brown duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע חום"
 
 #: ../src/boards/colors.c:58
 msgid "Click on the green duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע ירוק"
 
 #: ../src/boards/colors.c:59
 msgid "Click on the grey duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע אפור"
 
 #: ../src/boards/colors.c:60
 msgid "Click on the orange duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע כתום"
 
 #: ../src/boards/colors.c:61
 msgid "Click on the purple duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע סגול"
 
 #: ../src/boards/colors.c:62
 msgid "Click on the red duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע אדום"
 
 #: ../src/boards/colors.c:63
 msgid "Click on the yellow duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע צהוב"
 
 #: ../src/boards/colors.c:64
 msgid "Click on the black duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע שחור"
 
 #: ../src/boards/colors.c:65
 msgid "Click on the white duck"
-msgstr "לחץ על  הברוז שבצבע %s"
+msgstr "לחץ על  הברוז שבצבע לבן"
 
 #. TRANSLATORS: Put here the numbers in your language
 #: ../src/boards/gletters.c:227
@@ -4115,9 +4109,8 @@ msgstr "שם פרטי"
 #: ../src/boards/python/admin/group_edit.py:276
 #: ../src/boards/python/admin/group_user_list.py:164
 #: ../src/boards/python/admin/user_list.py:206
-#, fuzzy
 msgid "Last Name"
-msgstr "שם התמונה"
+msgstr "שם משפרה"
 
 #: ../src/boards/python/admin/class_edit.py:341
 msgid "You need to provide at least a name for your class"
@@ -4262,7 +4255,7 @@ msgstr ""
 #: ../src/gcompris/board_config.c:667
 #: ../src/gcompris/board_config.c:925
 msgid "Default"
-msgstr ""
+msgstr "מחדל"
 
 #: ../src/boards/python/admin/profile_list.py:188
 msgid "Profile"
@@ -4270,7 +4263,7 @@ msgstr "פרופיל"
 
 #: ../src/boards/python/admin/profile_list.py:315
 msgid "[Default]"
-msgstr ""
+msgstr "[מחדל]"
 
 #: ../src/boards/python/admin/user_edit.py:50
 msgid "Editing a User"
@@ -4406,7 +4399,7 @@ msgstr ""
 #: ../src/boards/python/gnumch.py:209
 #, python-format
 msgid "Multiples of %d"
-msgstr ""
+msgstr "רב של %d"
 
 #: ../src/boards/python/gnumch.py:243
 #, python-format
@@ -4436,12 +4429,12 @@ msgstr "%d ÷ %d"
 #: ../src/boards/python/gnumch.py:276
 #, python-format
 msgid "Equal to %d"
-msgstr ""
+msgstr "משתווה ל %d "
 
 #: ../src/boards/python/gnumch.py:297
 #, python-format
 msgid "Not equal to %d"
-msgstr ""
+msgstr "אין לו מתחרה %d"
 
 #: ../src/boards/python/gnumch.py:441
 msgid ""
@@ -4469,6 +4462,13 @@ msgid ""
 "L\n"
 "E"
 msgstr ""
+"T\n"
+"R\n"
+"O\n"
+"G\n"
+"G\n"
+"L\n"
+"E"
 
 #: ../src/boards/python/guessnumber.py:205
 #, python-format
@@ -4489,12 +4489,12 @@ msgstr " "
 #: ../src/boards/python/guessnumber.py:331
 #: ../src/boards/python/guessnumber.py:332
 msgid "Too high"
-msgstr ""
+msgstr "יותר גבוה מדי"
 
 #: ../src/boards/python/guessnumber.py:334
 #: ../src/boards/python/guessnumber.py:335
 msgid "Too low"
-msgstr ""
+msgstr "יותר נמוך מדי"
 
 #: ../src/boards/python/login.py:114
 msgid "Profile: "
@@ -4711,7 +4711,7 @@ msgstr "בבקשה בדוק אם המילה"
 
 #: ../src/boards/reading.c:401
 msgid "is being displayed"
-msgstr "מופיעה"
+msgstr "מוצגת"
 
 #: ../src/boards/reading.c:575
 msgid "I am Ready"
@@ -4724,7 +4724,7 @@ msgstr "כן, ראיתי את זה"
 
 #: ../src/boards/reading.c:645
 msgid "No, it was not there"
-msgstr "לא, זה לא היה שם"
+msgstr "לא ראיתי את זה"
 
 #. Report what was wrong in the log
 #: ../src/boards/reading.c:683
@@ -4733,9 +4733,8 @@ msgid "The word to find was '%s'"
 msgstr "המילה שצריך למצוא היא '%s'"
 
 #: ../src/boards/reading.c:686
-#, fuzzy
 msgid "But it was not displayed"
-msgstr "מופיעה"
+msgstr "אבל זה לא היה מוצגת"
 
 #: ../src/boards/reading.c:688
 #, fuzzy
@@ -4894,7 +4893,7 @@ msgstr "תקין"
 
 #: ../src/gcompris/board_config.c:764
 msgid "2 clicks"
-msgstr ""
+msgstr "יש להזיז את קליק  כפול בעכבר"
 
 #: ../src/gcompris/board_config.c:765
 msgid "both modes"
