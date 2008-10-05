@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gcompris.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-18 14:11+0200\n"
-"PO-Revision-Date: 2008-10-02 19:31+0200\n"
+"PO-Revision-Date: 2008-10-05 00:31+0200\n"
 "Last-Translator: jorge Mariano\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,6 @@ msgstr ""
 "אתה יכול להוסיף משתמשים, ועבור כל השיעורים בכיתה, אתה יכול ליצור קבוצות של משתמשים.שים לב שאתה יכול לייבא משתמשים מתוך קובץ מופרדים בפסיקים.הקצה אחד או יותר קבוצות של פרופיל, לאחר כניסה חדשים אלו אשר תופיע לאחר הפעלה מחדש GCompris. היכולת לזהות בודדת ילדים GCompris אמצעים אנו יכולים לספק דו\"ח ות נפרדים.גם זה הכיר את הילדים כיחידים, הם יכולים ללמוד להקליד ואת מזהה שמות משתמש משלהם (הכניסה היא ניתנת להגדרה)."
 
 #: ../boards/administration.xml.in.h:4
-#, fuzzy
 msgid "GCompris Administration Menu"
 msgstr "המסך הראשי של Gcompris"
 
@@ -51,12 +50,10 @@ msgid "Can read"
 msgstr "יכולת לקרוא"
 
 #: ../boards/advanced_colors.xml.in.h:3
-#, fuzzy
 msgid "Click on the correct color"
 msgstr "לחץ על הצבע הנכון"
 
 #: ../boards/advanced_colors.xml.in.h:4
-#, fuzzy
 msgid "Click on the correct colored box."
 msgstr "לחץ על התיבה בצבע הנכון."
 
@@ -347,19 +344,16 @@ msgid "veronese"
 msgstr "ירקרק (ורונס)"
 
 #: ../boards/algebra_by.xml.in.h:1
-#, fuzzy
 msgid "A multiplication of two numbers is displayed. At the right of the equals sign, give the answer, the product. Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
 msgstr "מוצגת מכפלה של שני מספרים. עליך לרשום את התשובה מימין לסימן השוויון. יש להשתמש במקשי החיצים הימני והשמאלי בכדי לשנות את תשובתך. כדי לבדוק את התשובה עליך ללחוץ על מקש שורה חדשה."
 
 #: ../boards/algebra_by.xml.in.h:2
 #: ../boards/algebra_minus.xml.in.h:2
 #: ../boards/algebra_plus.xml.in.h:2
-#, fuzzy
 msgid "Answer some algebra questions"
 msgstr "אני אשאל אותך כמה שאלות בחשבון"
 
 #: ../boards/algebra_by.xml.in.h:3
-#, fuzzy
 msgid "In a limited time, give the product of two numbers"
 msgstr " רשום את התוצאה של חיבור 2 המספרים. לרשותך זמן מוגבל"
 
@@ -383,27 +377,22 @@ msgstr "יש ללחוץ על מקש העכבר השמאלי מעל פעילות 
 #: ../boards/algebra_guesscount.xml.in.h:1
 #: ../boards/erase_clic.xml.in.h:1
 #: ../boards/erase_double_clic.xml.in.h:1
-#, fuzzy
 msgid "Animal pictures come from the Animal Photography Page of Ralf Schmode (http://schmode.net/). Ralf has kindly permitted Gcompris to include his pictures. Thanks a lot, Ralf."
 msgstr "תמונות החיות לקוחות מעמוד צילומי החיות של ראלף שמודה (http://schmode.net/). ראלף נתן את הסכמתו לכלול את התמונות. תודה רבה ראלף."
 
 #: ../boards/algebra_guesscount.xml.in.h:2
-#, fuzzy
 msgid "At the top of the board area, choose the numbers and arithmetic operators that give the specified result. You can deselect a number or operator by clicking on it again."
 msgstr "בחר את המספרים והפעולה החשבונית במעלה הלוח על מנת ליצור את הביטוי הרצוי. אתה יכול לבטל את הבחירה של המספרים והפעולה על ידי לחיצה חוזרת עליהם."
 
 #: ../boards/algebra_guesscount.xml.in.h:3
-#, fuzzy
 msgid "Deploy a strategy to arrange a set of arithmetic operations to match a given value."
 msgstr "יש לסדר את אוסף הפעולות החשבונאיות על מנת להגיע לערך נתון"
 
 #: ../boards/algebra_guesscount.xml.in.h:4
-#, fuzzy
 msgid "Find the series of correct operations that matches the given answer"
 msgstr "יש למצוא את הפעולות המתאימות בכדי לקבל את התשובה."
 
 #: ../boards/algebra_guesscount.xml.in.h:5
-#, fuzzy
 msgid "The four arithmetic operations. Combine several arithmetic operations."
 msgstr "ארבעת פעולות החשבון. יש לאחד מספר פעולות חשבוניות"
 
@@ -412,27 +401,22 @@ msgid "Work out the right combination of numbers and operations to match the giv
 msgstr "הזכות לעבוד שילוב של מספרים ומבצעים כדי להתאים את הערך נתון"
 
 #: ../boards/algebra_minus.xml.in.h:1
-#, fuzzy
 msgid "A subtraction problem with two numbers is displayed. At the right of the equals sign, give the answer, the difference. Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
 msgstr "תרגיל חיסור של שני מספרים מוצג. רשום את התשובה בצד ימין של סימן השיוויון. העזר בחיצים על מנת לשנות את תשובתך, ובמקש אנטר לבחירה סופית."
 
 #: ../boards/algebra_minus.xml.in.h:3
-#, fuzzy
 msgid "In a limited time, find the difference between two numbers"
 msgstr " רשום את התוצאה של חיבור 2 המספרים. לרשותך זמן מוגבל"
 
 #: ../boards/algebra_minus.xml.in.h:4
-#, fuzzy
 msgid "Practice the subtraction operation"
 msgstr "תרגול פעולת החיסור"
 
 #: ../boards/algebra_minus.xml.in.h:5
-#, fuzzy
 msgid "Simple subtraction"
 msgstr "חיסור פשוט"
 
 #: ../boards/algebra_plus.xml.in.h:1
-#, fuzzy
 msgid "An addition problem with two numbers is displayed. At the right of the equals sign, give the answer, the sum. Use the left and right arrows to modify your answer and press the Enter key to check if you've got it right. If not, just try again."
 msgstr "תרגיל חיבור של שני מספרים מוצג. רשום את התשובה בצד ימין של סימן השיוויון. העזר בחיצים על מנת לשנות את תשובתך, ובמקש אנטר לבחירה סופית."
 
@@ -449,7 +433,6 @@ msgid "Simple addition. Can recognize written numbers"
 msgstr "חיבור פשוט האם להכיר כתוב מספרים"
 
 #: ../boards/algebramenu.xml.in.h:1
-#, fuzzy
 msgid "Go to calculation activities"
 msgstr "עבור לפעילויות צבע"
 
@@ -466,14 +449,12 @@ msgid "Find the next symbol in a list."
 msgstr "מצא את הסמל הבא ברשימה"
 
 #: ../boards/algorithm.xml.in.h:3
-#, fuzzy
 msgid "Logic training activity"
 msgstr "פעילויות לאימון השמיעה"
 
 #: ../boards/algorithm.xml.in.h:4
 #: ../boards/hexagon.xml.in.h:3
 #: ../boards/melody.xml.in.h:4
-#, fuzzy
 msgid "Move and click the mouse"
 msgstr "יש להזיז את העכבר"
 
@@ -490,7 +471,6 @@ msgid "Free drawing and animation tool."
 msgstr "ציור חינם וכלי אנימציה"
 
 #: ../boards/anim.xml.in.h:3
-#, fuzzy
 msgid "In this game, children can draw freely. The goal is to discover how to create attractive drawings based on basic shapes: rectangles, ellipses and lines. To give children a wider range of choices, a set of images can also be used."
 msgstr "במשחק זה, הילדים יוכלו לצייר באופן חופשי. המטרה היא להראות לילד שאפשר לצייר ציורים יפים בעזרת צורות בסיסיות מלבנים, אליפסות, וקווים "
 
@@ -505,7 +485,7 @@ msgstr "בחר כלי ציור בצד שמאל, וכן צבע מטה לתחתי�
 
 #: ../boards/awele.xml.in.h:1
 msgid "At the beginning of the game four seeds are placed in each house. Players take turns moving the seeds. In each turn, a player chooses one of the six houses under his or her control. The player removes all seeds from this house, and distributes them, dropping one in each house counter-clockwise from the original house, in a process called sowing. Seeds are not distributed into the end scoring houses, nor into the house drawn from. That is, the starting house is left empty; if it contained 12 seeds, it is skipped, and the twelfth seed is placed in the next house. After a turn, if the last seed was placed into an opponent's house and brought its total to two or three, all the seeds in that house are captured and placed in the player's scoring house (or set aside if the board has no scoring houses). If the previous-to-last seed also brought the total seeds in an opponent's house to two or three, these are captured as well, and so on. However, if a move would capture all an opponent's seeds, the capture is forfeited, and the seeds are instead left on the board, since this would prevent the opponent from continuing the game. The proscription against capturing all an opponent's seeds is related to a more general idea, that one ought to make a move that allows the opponent to continue playing. If an opponent's houses are all empty, the current player must make a move that gives the opponent seeds. If no such move is possible, the current player captures all seeds in his/her own territory, ending the game. (Source Wikipedia &lt;http://en.wikipedia.org/wiki/Oware&gt;)"
-msgstr ""
+msgstr "בתחילת המשחק מונחות ארבע זרעים בכל הבית.שחקנים בסבב להעביר את הזרעים.בכל תור, שחקן בוחר באחת שישה בתים שלו תחת שליטה.השחקן מסירה את כל הזרעים מתוך הבית הזה, ואת מפיצה אותם, הפלה אחת על כל בית נגד כיוון השעון מן הבית המקורי, בתוך תהליך שנקרא הזרעה.הזרעים אינם מופצים בסופו של דבר מניה לתוך הבתים, ולא לתוך הבית שאוב מ.כלומר, החל את הבית נותר ריק; אם הוא מכיל 12 זרעים, היא מדלגת על שנים עשר ואת זרעי ממוקם באזור ליד הבית.לאחר התור, אם את הזרעים הוצב האחרון של היריב לתוך הבית והביאו הכוללת שלה עד שתיים או שלוש, כל הזרעים בתוך הבית כי הם שבויים וכן להציב את שחקן הבית של מניה (או לדחות את לוח אם אין ניקוד בתים) .אם קודם-to-הזרעים האחרון גם הביא את סך זרעים של היריב לבית שניים או שלושה, הם אלה שנתפסו גם הם, וכן הלאה.עם זאת, אם היה מהלך ללכוד את כל הזרעים של היריב, כיבוש הוא forfeited, ואת הזרעים נמצאים במקום שמאלה על הלוח, שכן הדבר עלול למנוע את היריב מהמשך המשחק.את אסור נגד כל לכידה של היריב הזרעים קשורה יותר הרעיון הכללי, כי אחד צריך לעשות את זה מאפשר להעביר את היריב להמשיך לשחק.אם היריב כל הבתים ריקים הנוכחי השחקן חייב לבצע מהלך אשר מעניקה את הזרעים היריב. אם אין כזה ניתן להעביר את הנוכחי בנגן לוכדת את כל הזרעים שלו / שלה בשטח, סיום המשחק"
 
 #: ../boards/awele.xml.in.h:2
 msgid "Oware"
@@ -517,7 +497,7 @@ msgstr "לשחק את המשחק אסטרטגיה Oware נגד Tux"
 
 #: ../boards/awele.xml.in.h:4
 msgid "The object of the game is to capture more seeds than one's opponent. Since the game has only 48 seeds, capturing 25 is sufficient to accomplish this. Since there are an even number of seeds, it is possible for the game to end in a draw, where each player has captured 24. The game is over when one player has captured 25 or more stones, or both players have taken 24 stones each (draw). If both players agree that the game has been reduced to an endless cycle, each player captures the stones on their side of the board."
-msgstr ""
+msgstr "	 	מטרת המשחק היא לתפוס את הזרעים יותר מאשר אחד של היריב.מאז המשחק יש רק 48 סידרים, 25 היא לכידת מספקת לצורך כך.מאחר שקיימות מספר שווה של זרעים, הדבר אפשרי עבור המשחק כדי לסיים במקום לצייר, בו כל שחקן יש 24 שבויים.המשחק נגמר כאשר שחקן אחד יש 25 שנכבשו אבנים או יותר, או שניהם לקחו המהמרים כל 24 אבנים (תיקו).אם שני השחקנים מסכימים כי המשחק פחת עד אין סוף של מחזור, כל שחקן לוכדת את האבנים שלהם על הצד של ההנהלה."
 
 #: ../boards/babymatch.xml.in.h:1
 #: ../boards/babymatch/board1_0.xml.in.h:1
@@ -531,7 +511,6 @@ msgid "Drag and Drop the items to make them match"
 msgstr "יש לגרור ולהפיל את הפריטים בכדי להתאים ביניהם"
 
 #: ../boards/babymatch.xml.in.h:2
-#, fuzzy
 msgid "In the main board area, a set of objects is displayed. In the vertical box (at the left of the main board) another set of objects is shown, each object in the group on the left matching exactly one object in the main board area. This game challenges you to find the logical link between these objects. How do they fit together? Drag each object to the correct red space in the main area."
 msgstr " באזור הלוח הראשי נמצאת קבוצת חפצים. במסגרת האנכית, מצד שמאל של הלוח הראשי, נמצאת קבוצת חפצים נוספת. לכל חפץ מתאים בדיוק חפץ אחד מאזור הלוח הראשי. חייבים למצוא את הקשר הלוגי בין חלקים אלו. הדבר נעשה באמצעות גרירה של חלק לשטח האדום הימני שבאזור הראשי"
 
@@ -540,17 +519,14 @@ msgid "Matching Items"
 msgstr "פריטים תואמים"
 
 #: ../boards/babymatch.xml.in.h:4
-#, fuzzy
 msgid "Motor coordination. Conceptual matching."
 msgstr "קורדינציה מוטורית. התאמת רעיונית."
 
 #: ../boards/babymatch.xml.in.h:5
-#, fuzzy
 msgid "Mouse manipulation: movement, drag and drop. Cultural references."
 msgstr "הפעלת העכבר: הזזה,  גרירה ושחרור."
 
 #: ../boards/babyshapes.xml.in.h:1
-#, fuzzy
 msgid "Complete the puzzle"
 msgstr "הרכב את הפאזל"
 
@@ -559,12 +535,10 @@ msgid "Complete the puzzle by dragging each piece from the set of pieces on the 
 msgstr "השלם את חידה על ידי גרירת כל פיסת מהמערך של חתיכות מצד שמאל, על שטח של התאמת חידה."
 
 #: ../boards/babyshapes.xml.in.h:3
-#, fuzzy
 msgid "Drag and Drop the shapes on their respective targets"
 msgstr "גרור ושחרר את הצורות  במקום המתאים"
 
 #: ../boards/babyshapes.xml.in.h:4
-#, fuzzy
 msgid "Good mouse-control"
 msgstr "שליטה טובה בעכבר"
 
@@ -577,7 +551,6 @@ msgid "Hello ! My name is Lock."
 msgstr "שלום ! שמי  לוק."
 
 #: ../boards/babyshapes/board6_0.xml.in.h:1
-#, fuzzy
 msgid "Lock on the grass."
 msgstr "לוק על העשב."
 
@@ -594,7 +567,6 @@ msgid "Press the two shift keys at the same time, to make the ball go in a strai
 msgstr "להכביד על שנים מקשים Shift ,לשלח את הכדור בקו ישר"
 
 #: ../boards/bargame.xml.in.h:1
-#, fuzzy
 msgid "Brain"
 msgstr "מוח על"
 
@@ -604,7 +576,6 @@ msgstr "אל תשתמש בכדור האחרון"
 
 #: ../boards/bargame.xml.in.h:3
 #: ../boards/hexagon.xml.in.h:2
-#, fuzzy
 msgid "Logic-training activity"
 msgstr "פעילויות לאימון השמיעה"
 
@@ -613,7 +584,6 @@ msgid "Place balls in the holes. You win if the computer has to place the last b
 msgstr "מניחים את הביצים על החורים. אם ניצחת את המחשב יש למקם את הכדור האחרון. אם אותך Tux רוצה להתחיל, פשוט לחץ עליו."
 
 #: ../boards/bargame.xml.in.h:5
-#, fuzzy
 msgid "bar game"
 msgstr "משחק הביליארד"
 
@@ -622,7 +592,6 @@ msgid "Kick the ball into the black hole on the right"
 msgstr "לבעוט את הכדור לתוך החור השחור מצד ימין"
 
 #: ../boards/billard.xml.in.h:2
-#, fuzzy
 msgid "Kick the ball into the goal"
 msgstr "הכנס את הכדור לחור"
 
@@ -640,17 +609,14 @@ msgstr "הכנס את הכדור לחור"
 #: ../boards/hanoi.xml.in.h:3
 #: ../boards/memory.xml.in.h:4
 #: ../boards/tangram.xml.in.h:8
-#, fuzzy
 msgid "Mouse-manipulation"
 msgstr "הפעלת העכבר"
 
 #: ../boards/billard.xml.in.h:4
-#, fuzzy
 msgid "Point the mouse and click on the ball, to set the speed and direction of the ball. The closer you click to the centre, the slower the ball moves."
 msgstr "נקודת הלחיצה על הכדור תקבע את מהירות וכיוון הכדור. ככל שתלחץ קרוב יותר למרכז, הכדור יהיה איטי יותר"
 
 #: ../boards/billard.xml.in.h:5
-#, fuzzy
 msgid "The football game"
 msgstr "משחק הביליארד"
 
@@ -659,12 +625,10 @@ msgid "Operate a canal lock"
 msgstr "הפעלת מחסום התעלה"
 
 #: ../boards/canal_lock.xml.in.h:2
-#, fuzzy
 msgid "Tux is in trouble, and needs to take his boat through a lock. Help Tux and find out how a canal lock works."
 msgstr "טוקס בבעיה עם הספינה שלו, הוא צריך לעבור את המחסום. עזור לטוקס להבין אין מחסום תעלה פועל."
 
 #: ../boards/canal_lock.xml.in.h:3
-#, fuzzy
 msgid "You are in charge of the canal lock. Open the gates and the locks in the right order, so Tux can travel through the gates in both directions."
 msgstr " אתה אחראי על מחסום התעלה. עליך לפתוח את השערים ואת מחסומי השערים בסדר הנכון. תן לטוקס לעבור דרך השערים בשתי הדרכים."
 
@@ -698,7 +662,6 @@ msgstr "לימוד שחמט"
 #: ../boards/chess_computer.xml.in.h:4
 #: ../boards/chess_movelearn.xml.in.h:4
 #: ../boards/chess_partyend.xml.in.h:4
-#, fuzzy
 msgid "The chess engine is from gnuchess."
 msgstr "מנוע השחמט הוא gnuchess."
 
@@ -707,17 +670,14 @@ msgid "Chess training. Catch the computer's pawns."
 msgstr "אימון שחמט. תפוס את החיילים של המחשב."
 
 #: ../boards/chess_partyend.xml.in.h:3
-#, fuzzy
 msgid "Play the end of the chess game against the computer"
 msgstr "שחק סיום של משחק שחמט נגד המחשב"
 
 #: ../boards/chronos.xml.in.h:1
-#, fuzzy
 msgid "Chronos"
-msgstr "צבעים"
+msgstr "Chronos"
 
 #: ../boards/chronos.xml.in.h:2
-#, fuzzy
 msgid "Drag and Drop the items to organize the story"
 msgstr "יש לגרור ולהפיל את הפריטים בכדי להתאים ביניהם"
 
@@ -917,7 +877,6 @@ msgid "Cars"
 msgstr "מכוניות"
 
 #: ../boards/click_on_letter.xml.in.h:1
-#, fuzzy
 msgid "A letter is spoken. Click on the matching letter in the main area. You can listen to the letter again, by clicking on the mouth icon in the bottom box."
 msgstr " כרגע אות מאוייתת. לחץ על האות המתאימה באזור הראשי. אתה יכול לשמוע שוב את האות על ידי לחיצה על סמל הפה במסגרת האופקית התחתית"
 
@@ -926,12 +885,10 @@ msgid "Click on a letter"
 msgstr "יש ללחוץ על אות"
 
 #: ../boards/click_on_letter.xml.in.h:3
-#, fuzzy
 msgid "Letter-name recognition"
 msgstr "זיהוי אות"
 
 #: ../boards/click_on_letter.xml.in.h:4
-#, fuzzy
 msgid "Listen to a letter and click on the right one"
 msgstr "הקשב לאות ולחץ על האות הנכונה."
 
@@ -948,12 +905,10 @@ msgid "Fish are taken from the Unix utility xfishtank. All image credits belong 
 msgstr "דגים הם לקחו את כלי השירות xfishtank Unix.כל תמונה אשראי שייכים Guillaume Rousse."
 
 #: ../boards/clickgame.xml.in.h:3
-#, fuzzy
 msgid "Left-Click with the mouse on all the swimming fish before they leave the fishtank"
 msgstr "לחץ על כל הדגים השוחים בעזרת הכפתור השמאלי בעכבר לפני שהם עוזבים את המיכל"
 
 #: ../boards/clickgame.xml.in.h:4
-#, fuzzy
 msgid "Motor coordination: moving and clicking the mouse."
 msgstr "קורדינציה מוטורית. התאמת רעיונית."
 
@@ -962,12 +917,10 @@ msgid "Use the left mouse button to click on the moving fish."
 msgstr "השתמש את לחצן העכבר השמאלי ללחוץ על העברת דגים."
 
 #: ../boards/clockgame.xml.in.h:1
-#, fuzzy
 msgid "Distinguish between time-units (hour, minute and second). Set and display time on a clock."
 msgstr "הבחנה בהבדל בין שעות, דקות ושניות.  הצגת הזמן בשעון"
 
 #: ../boards/clockgame.xml.in.h:2
-#, fuzzy
 msgid "Learn how to tell the time"
 msgstr "למד איך לקרוא את השעה"
 
@@ -980,7 +933,6 @@ msgid "Set the clock to the time given, in the time-units shown (hours:minutes o
 msgstr "קבע את השעון על זמן נתון, בתוך זמן יחידות מוצגת (שעות: דקות או שעות: דקות: שניות).לחץ על החצים שונים, וכן להזיז את העכבר, כדי להפוך את המספרים לעלות למעלה או למטה."
 
 #: ../boards/clockgame.xml.in.h:5
-#, fuzzy
 msgid "The concept of time. Reading the time."
 msgstr "מושג השעה. קריאת השעה"
 
@@ -997,7 +949,6 @@ msgid "Colors"
 msgstr "צבעים"
 
 #: ../boards/colors.xml.in.h:4
-#, fuzzy
 msgid "Listen to the color and click on the matching duck."
 msgstr "הקשב לצבע ולחץ על הצורה."
 
@@ -1006,12 +957,10 @@ msgid "This board teaches you to recognize different colors. When you hear the n
 msgstr "לוח מודעות זה מלמד אותך להכיר בצבעים שונים.כאשר אתה שומע את השם של צבע, לחץ על ברווז לובשת את זה."
 
 #: ../boards/colors_group.xml.in.h:1
-#, fuzzy
 msgid "Colors based activities."
 msgstr "פעילויות מבוססות-לוח"
 
 #: ../boards/colors_group.xml.in.h:2
-#, fuzzy
 msgid "Go to Color activities"
 msgstr "עבור לפעילויות צבע"
 
@@ -1069,7 +1018,6 @@ msgstr "סע עגור ולהעתיק את המודל"
 #: ../boards/erase.xml.in.h:2
 #: ../boards/erase_clic.xml.in.h:5
 #: ../boards/erase_double_clic.xml.in.h:5
-#, fuzzy
 msgid "Motor-coordination"
 msgstr "קורדינציה מוטורית"
 
@@ -1087,7 +1035,6 @@ msgid "Colors, sounds, memory..."
 msgstr "צבעים, צלילים, זיכרון ..."
 
 #: ../boards/discovery.xml.in.h:2
-#, fuzzy
 msgid "Go to discovery activities"
 msgstr "עבור לפעילויות צבע"
 
@@ -1096,22 +1043,18 @@ msgid "Basic counting skills"
 msgstr "יכולות ספירה בסיסיות"
 
 #: ../boards/doubleentry.xml.in.h:2
-#, fuzzy
 msgid "Double-entry table"
 msgstr "טבלת רישום כפול"
 
 #: ../boards/doubleentry.xml.in.h:3
-#, fuzzy
 msgid "Drag and Drop each proposed item on its destination"
 msgstr "גרור ושחרר את הפריט במקומו המתאים"
 
 #: ../boards/doubleentry.xml.in.h:4
-#, fuzzy
 msgid "Drag and Drop the items in the double-entry table"
 msgstr "גרור ושחרר את הפריט בטבלת הרישום הכפול"
 
 #: ../boards/doubleentry.xml.in.h:5
-#, fuzzy
 msgid "Move the items on the left to their proper position in the double-entry table."
 msgstr "הילדים צריכים להזיז את החפצים שמשמאל למקום המתאים בטבלת הרישום הכפול"
 
@@ -1120,22 +1063,18 @@ msgid "Click on an item and listen to its target position"
 msgstr "לחץ על פריט ולהקשיב כדי לכוון את המיקום"
 
 #: ../boards/draw.xml.in.h:1
-#, fuzzy
 msgid "A creative board where you can draw freely"
 msgstr "לוח יצירתי בו אפשר לצייר באופן חופשי"
 
 #: ../boards/draw.xml.in.h:2
-#, fuzzy
 msgid "A simple vector-drawing tool"
 msgstr "כלי פשוט לרישום נתיבים"
 
 #: ../boards/draw.xml.in.h:3
-#, fuzzy
 msgid "In this game, children can draw freely. The goal is to discover how to create attractive drawings based on basic shapes: rectangles, ellipses and lines."
 msgstr "במשחק זה, הילדים יוכלו לצייר באופן חופשי. המטרה היא להראות לילד שאפשר לצייר ציורים יפים בעזרת צורות בסיסיות מלבנים, אליפסות, וקווים "
 
 #: ../boards/draw.xml.in.h:5
-#, fuzzy
 msgid "Select a drawing tool on the left, and a color down the bottom, then click and drag in the white area to create a new shape. To save time, you can click with the middle mouse button to delete an object."
 msgstr "בחר כלי לציור בצד שמאל. בחר צבע למטה וכעת לחץ על האזור הלבן וגרור כדי ליצור צורה חדשה. אפשר ללחוץ על הכפתור האמצעי על מנת למחוק חלק."
 
@@ -1187,7 +1126,6 @@ msgid "Place the items in the best way to count them"
 msgstr "מקם את הפריטים בצורה הטובה ביותר כדי לספור אותם"
 
 #: ../boards/erase.xml.in.h:1
-#, fuzzy
 msgid "Animal pictures are taken from the Animal Photography Page of Ralf Schmode (&lt;http://schmode.net/&gt;) and from LE BERRE Daniel. These people kindly gave GCompris the authorization to include their pictures. Thanks a lot, both of you."
 msgstr "תמונות החיות לקוחות מעמוד צילומי החיות של ראלף שמודה (http://schmode.net/). ראלף נתן את הסכמתו לכלול את התמונות. תודה רבה ראלף."
 
@@ -1203,22 +1141,18 @@ msgid "Move the mouse to erase the area and discover the background"
 msgstr "הזז את העכבר כדי למחוק את האזור ולגלות את הרקע"
 
 #: ../boards/erase.xml.in.h:6
-#, fuzzy
 msgid "Move the mouse until all the blocks disappear."
 msgstr "הזז את העכבר עד שכל הבלוקים נעלמים"
 
 #: ../boards/erase_clic.xml.in.h:2
-#, fuzzy
 msgid "Click the mouse"
 msgstr "יש להזיז את העכבר"
 
 #: ../boards/erase_clic.xml.in.h:3
-#, fuzzy
 msgid "Click the mouse on rectangles until all the blocks disappear."
 msgstr "הזז את העכבר עד שכל הבלוקים נעלמים"
 
 #: ../boards/erase_clic.xml.in.h:4
-#, fuzzy
 msgid "Click the mouse to erase the area and discover the background"
 msgstr "הזז את העכבר כדי למחוק את האזור ולגלות את הרקע"
 
@@ -1235,7 +1169,6 @@ msgid "Double-click the mouse on rectangles until all the blocks disappear."
 msgstr "בעכבר קליק ימני כפול עד שכל הבלוקים נעלמים"
 
 #: ../boards/experience.xml.in.h:1
-#, fuzzy
 msgid "Go to experiential activities"
 msgstr "עבור לפעילויות חוויה"
 
@@ -1244,7 +1177,6 @@ msgid "Various activities based on physical movement."
 msgstr "פעילויות שונות המבוססות על תנועה פיזית."
 
 #: ../boards/experimental.xml.in.h:1
-#, fuzzy
 msgid "Go to Experimental activities"
 msgstr "עבור לפעילויות חוויה"
 
@@ -1253,7 +1185,6 @@ msgid "Run gcompris --experimental to see this menu."
 msgstr "לרוץ gcompris --experimental  כדי לראות את התפריט."
 
 #: ../boards/fifteen.xml.in.h:1
-#, fuzzy
 msgid "Click on any item that has a free block beside it, and it will be swapped with the empty block."
 msgstr "לחץ על כל פריט שיש בלוק פנוי לידו. הוא יתחלף עם הבלוק הפנוי"
 
@@ -1270,12 +1201,10 @@ msgid "The fifteen game"
 msgstr "המשחק החמש עשרה"
 
 #: ../boards/followline.xml.in.h:1
-#, fuzzy
 msgid "Control the hose-pipe"
 msgstr "שלוט בעומק של הצוללת"
 
 #: ../boards/followline.xml.in.h:2
-#, fuzzy
 msgid "Fine motor coordination"
 msgstr "קורדינציה מוטורית"
 
@@ -1292,17 +1221,14 @@ msgid "Go to Amusement activities"
 msgstr "עבור לפעילוית שעשוע"
 
 #: ../boards/fun.xml.in.h:2
-#, fuzzy
 msgid "Various fun activities."
 msgstr "עבור לפעילוית שעשוע"
 
 #: ../boards/gcompris/mimetypes/mime_type.xml.in.h:1
-#, fuzzy
 msgid "gcompris animation"
 msgstr "תצורת gcompris"
 
 #: ../boards/gcompris/mimetypes/mime_type.xml.in.h:2
-#, fuzzy
 msgid "gcompris drawing"
 msgstr "עורך gcompris"
 
@@ -1319,7 +1245,6 @@ msgid "wordprocessor text"
 msgstr "מעבד תמלילים מלל"
 
 #: ../boards/geography.xml.in.h:1
-#, fuzzy
 msgid "Drag and Drop the items to redraw the whole map"
 msgstr " גרור ושחרר את  הפריטים כדי לצייר מחדש את המפה השלמה"
 
@@ -1540,7 +1465,6 @@ msgid "United Kingdom"
 msgstr "אנגליה"
 
 #: ../boards/geography/board3_0.xml.in.h:18
-#, fuzzy
 msgid "Western Europe"
 msgstr "מערב אירופה"
 
@@ -1575,7 +1499,6 @@ msgid "Czech Republic"
 msgstr "צ'כיה"
 
 #: ../boards/geography/board3_1.xml.in.h:8
-#, fuzzy
 msgid "Eastern Europe"
 msgstr "מזרח אירופה"
 
@@ -1919,7 +1842,6 @@ msgid "Keyboard manipulation"
 msgstr "שימוש במקלדת"
 
 #: ../boards/gletters.xml.in.h:2
-#, fuzzy
 msgid "Letter association between the screen and the keyboard"
 msgstr "זיהוי אותיות בין המסך למקלדת"
 
@@ -1942,7 +1864,6 @@ msgid "Guide the Number Muncher to the expressions that equal the number at the 
 msgstr "כדי לעזור Muncher זה שווה את ביטויים מספר בחלק העליון של המסך."
 
 #: ../boards/gnumch-equality.xml.in.h:3
-#, fuzzy
 msgid "Practice addition, multiplication, division and subtraction."
 msgstr "תרגול בפעולת הכפל"
 
@@ -1976,7 +1897,6 @@ msgid "Inequality Number Munchers"
 msgstr "אי שוויון Munchers"
 
 #: ../boards/gnumch-inequality.xml.in.h:3
-#, fuzzy
 msgid "Practice addition, subtraction, multiplication and division."
 msgstr "תרגול בפעולת הכפל"
 
@@ -1998,7 +1918,7 @@ msgstr ""
 
 #: ../boards/gnumch-primes.xml.in.h:1
 msgid "Guide the Number Muncher to all the prime numbers."
-msgstr ""
+msgstr "כדי לעזור Muncher    למצוא את כל מספרי ראש"
 
 #: ../boards/gnumch-primes.xml.in.h:2
 msgid "Learn about prime numbers"
@@ -2013,7 +1933,6 @@ msgid "Prime numbers are numbers that are only divisible by themselves and 1. Fo
 msgstr "ראש המספרים מספרים כי הם רק פריד בעצמו ו 1.לדוגמה, 3 הוא מספר ראשוני, אבל 4 הוא לא  (כי 4 הוא מתחלק ב2).השתמש במקשי החיצים כדי לנווט סביב בלוח וכדי למנוע את Troggles. הקש את הרווח לאכול מספר."
 
 #: ../boards/gnumchmenu.xml.in.h:1
-#, fuzzy
 msgid "Go to Number Munchers activities"
 msgstr "עבור לפעילויות חוויה"
 
@@ -2038,7 +1957,6 @@ msgid "Read the instructions that give you the range of the number to find. Ente
 msgstr "קרא את ההוראות המעניקות לך את טווח כדי למצוא את המספר.הזן את המספר השמאלי העליון כחול תיבת הכניסה. תגרום Tux לספר לך אם את מספר גבוה או נמוך יותר.לאחר מכן, הזן מספר אחר.המרחק בין Tux ואת האזור להימלט מייצגת מצד ימין עד היכן אתם מתוך המספר הנכון.Tux אם הוא מעל או מתחת לאזור לברוח, זה אומר את המספר שלך הוא מעל או מתחת לתקן מספר."
 
 #: ../boards/hanoi.xml.in.h:1
-#, fuzzy
 msgid "Concept taken from EPI games."
 msgstr "הרעיון נלקח ממשחקי EPI"
 
@@ -2065,12 +1983,10 @@ msgid "Drag and Drop the top pieces only from one peg to another, to reproduce t
 msgstr "גרור ושחרר את חתיכות למעלה מ רק פקק אחד למשנהו, כדי לשחזר את המגדל מצד ימין של שטח ריק בצד שמאל."
 
 #: ../boards/hanoi_real.xml.in.h:3
-#, fuzzy
 msgid "Reproduce the tower on the right side"
 msgstr "העתק את המגדל הנתון"
 
 #: ../boards/hanoi_real.xml.in.h:4
-#, fuzzy
 msgid "The Tower of Hanoi"
 msgstr "המגדל של האנוי "
 
@@ -2119,7 +2035,6 @@ msgid "Reading"
 msgstr "קריאה"
 
 #: ../boards/imageid.xml.in.h:4
-#, fuzzy
 msgid "Reading practice"
 msgstr "תרגול קריאה"
 
@@ -2227,7 +2142,6 @@ msgstr "ילקוט"
 #: ../boards/imagename/board4_0.xml.in.h:1
 #: ../boards/imagename/board5_0.xml.in.h:1
 #: ../boards/imagename/board6_0.xml.in.h:1
-#, fuzzy
 msgid "Drag and Drop each item onto its name"
 msgstr "גרור ושחרר את הפריטים מעל לשם שלהם"
 
@@ -2356,12 +2270,10 @@ msgid "racket"
 msgstr "מחבט"
 
 #: ../boards/keyboard.xml.in.h:1
-#, fuzzy
 msgid "Discover the keyboard."
 msgstr "גלה את המחשב"
 
 #: ../boards/keyboard.xml.in.h:2
-#, fuzzy
 msgid "Keyboard-manipulation boards"
 msgstr "שימוש במקלדת"
 
@@ -2370,7 +2282,6 @@ msgid "Determine if a hand is a right or a left hand"
 msgstr "לקבוע אם היא יד ימין או שמאל"
 
 #: ../boards/leftright.xml.in.h:2
-#, fuzzy
 msgid "Distinguish right and left hands from different points of view. Spatial representation"
 msgstr "הבחנה בין יד ימין לשמאל מזויות שונות. תפיסה מרחבית"
 
@@ -2384,7 +2295,6 @@ msgid "None"
 msgstr "ללא"
 
 #: ../boards/leftright.xml.in.h:5
-#, fuzzy
 msgid "You can see a hand: is it a left hand or a right hand? Click on the red button on the left, or the green button on the right."
 msgstr "מצוירת יד. עליך לזהות אם זוהי יד ימין או יד שמאל. לחץ על הכפתור האדום - בצד שמאל, או על הכפתור הירוק - בצד ימין."
 
@@ -2393,7 +2303,6 @@ msgid "GCompris identifies each child, so we can provide child-specific reports.
 msgstr "GCompris מזהה לכל ילד, כדי שנוכל לספק דוחות הילד הספציפ"
 
 #: ../boards/login.xml.in.h:2
-#, fuzzy
 msgid "GCompris login screen"
 msgstr "המסך הראשי של Gcompris"
 
@@ -2420,7 +2329,6 @@ msgstr "בחר או הזן את שמך כדי להיכנס GCompris"
 
 #: ../boards/magic_hat_plus.xml.in.h:1
 #: ../boards/memory_add.xml.in.h:1
-#, fuzzy
 msgid "Addition"
 msgstr "חיבור פשוט"
 
@@ -2458,7 +2366,6 @@ msgstr "תסתכל על קוסם, הוא אומר את מספר הכוכבים �
 #: ../boards/memory_add_minus_tux.xml.in.h:3
 #: ../boards/memory_minus.xml.in.h:2
 #: ../boards/memory_minus_tux.xml.in.h:2
-#, fuzzy
 msgid "Subtraction"
 msgstr "חיסור פשוט"
 
@@ -2501,7 +2408,6 @@ msgid "Use the keyboard arrows to move Tux up to the door."
 msgstr "השתמש בחיצי המקלדת כדי להזיז את טוקס לדלת"
 
 #: ../boards/maze2DRelative.xml.in.h:2
-#, fuzzy
 msgid "Find your way out of the maze (Move is relative)"
 msgstr "מצא את הדרך החוצה מהמבוך"
 
@@ -2518,22 +2424,18 @@ msgid "Find your way out of the 3D maze"
 msgstr "מצא את הדרך החוצה מהמבוך התלת מימדי"
 
 #: ../boards/maze3D.xml.in.h:5
-#, fuzzy
 msgid "Use the keyboard arrows to move Tux up to the door. Use the spacebar to switch between 2D and 3D modes. 2D mode just gives you an indication of your position, like a map. You cannot move Tux in 2D mode."
 msgstr "השתמש בחיצים במקלדת כדי להזיז את טוקס לדלת. השתמש במקש הרווח כדי להחליף בין מצב דו מימדי לתלת מימדי. המצב הדו מימדי עוזר לך לראות את מקומך. אינך יכול לזוז במצב דו מימדי"
 
 #: ../boards/mazeInvisible.xml.in.h:2
-#, fuzzy
 msgid "Find your way out of the invisible maze"
 msgstr "מצא את הדרך החוצה מהמבוך"
 
 #: ../boards/mazeInvisible.xml.in.h:5
-#, fuzzy
 msgid "Use the keyboard arrows to move Tux up to the door. Use the spacebar to switch between invisible and visible modes. Visible mode just gives you an indication of your position, like a map. You cannot move Tux in visible mode."
 msgstr "השתמש בחיצים במקלדת כדי להזיז את טוקס לדלת. השתמש במקש הרווח כדי להחליף בין מצב דו מימדי לתלת מימדי. המצב הדו מימדי עוזר לך לראות את מקומך. אינך יכול לזוז במצב דו מימדי"
 
 #: ../boards/mazeMenu.xml.in.h:1
-#, fuzzy
 msgid "Find your way out of different types of mazes"
 msgstr "מצא את הדרך החוצה מהמבוך"
 
@@ -2542,7 +2444,6 @@ msgid "Go to Maze activities"
 msgstr "עבור לפעילויות מבוך"
 
 #: ../boards/melody.xml.in.h:1
-#, fuzzy
 msgid "Ear-training activity"
 msgstr "פעילויות לאימון השמיעה"
 
@@ -2563,7 +2464,6 @@ msgid "A set of blank cards is shown. Each card has a picture on the other side,
 msgstr "אוסף של כרטיסי מסך ריק מוצג.כל כרטיס יש תמונה בצד השני, ובכל תמונה יש כרטיס התאומה בדיוק אותו דבר.לחץ על כרטיס כדי לראות את התמונה מוסתר, ונסה להתאים את תאומים.אתה יכול להסתובב רק שני כרטיסים בבת אחת, כך שאתה צריך לזכור איפה התמונה, תוך כדי לחפש את התאומה. כאשר אתה להתהפך התאומים, שניהם נעלמים."
 
 #: ../boards/memory.xml.in.h:2
-#, fuzzy
 msgid "Flip the cards to find the matching pairs"
 msgstr "גלה את הקלפים ומצא זוג מתאים"
 
@@ -2703,7 +2603,6 @@ msgstr "זיכרון פעילויות שונות (תמונות, מכתבים, נ
 
 #: ../boards/memory_minus.xml.in.h:1
 #: ../boards/memory_minus_tux.xml.in.h:1
-#, fuzzy
 msgid "Practise subtraction, until all the cards are gone."
 msgstr "תרגל חיסור בעזרת משחק  משעשע"
 
@@ -2731,7 +2630,6 @@ msgid "Subtraction memory game against Tux"
 msgstr " המשחק זיכרון חסור נגד Tux"
 
 #: ../boards/memory_mult.xml.in.h:1
-#, fuzzy
 msgid "Multiplication"
 msgstr "לוח הכפל"
 
@@ -2740,7 +2638,6 @@ msgid "Multiplication memory game"
 msgstr "לוח הכפל זיכרון"
 
 #: ../boards/memory_mult.xml.in.h:3
-#, fuzzy
 msgid "Practise multiplication, until all the cards are gone."
 msgstr "תרגול בפעולת הכפל"
 
@@ -2771,7 +2668,6 @@ msgid "Multiplication memory game against Tux"
 msgstr "משחק הזיכרון הכפל נגד Tux"
 
 #: ../boards/memory_mult_tux.xml.in.h:3
-#, fuzzy
 msgid "Practise multiplication until all the cards are gone."
 msgstr "תרגול בפעולת הכפל"
 
@@ -2804,13 +2700,11 @@ msgstr "הקלק על כנר על Tux ולהקשיב כדי למצוא את הה
 #: ../boards/memory_sound.xml.in.h:4
 #: ../boards/memory_sound_tux.xml.in.h:3
 #: ../boards/memory_tux.xml.in.h:3
-#, fuzzy
 msgid "Mouse manipulation, Brain."
 msgstr "הפעלת העכבר"
 
 #: ../boards/memory_sound.xml.in.h:5
 #: ../boards/memory_sound_tux.xml.in.h:5
-#, fuzzy
 msgid "Train your audio memory and remove all the violonists Tux."
 msgstr "אמן את הזיכרון והסר את התמונות"
 
@@ -2819,7 +2713,6 @@ msgid "Audio memory game against Tux"
 msgstr "משחק זיכרון המבוסס על שמע"
 
 #: ../boards/memory_sound_tux.xml.in.h:4
-#, fuzzy
 msgid "Play the audio memory game against Tux"
 msgstr "שחק סיום של משחק שחמט נגד המחשב"
 
@@ -2833,10 +2726,9 @@ msgstr "משחק זיכרון עם תמונות נגד Tux"
 
 #: ../boards/memory_tux.xml.in.h:5
 msgid "You can see a set of cards that all look the same. Each card has a picture on the other side, and each picture has a twin somewhere in the set. You can only turn over two cards at once, so you need to remember where the pictures are until you can find the twin. When you turn over twins, they disappear! You take turns with Tux, and to win the game, you have to find more pairs of twins than he does."
-msgstr ""
+msgstr "	אתה יכול לראות קבוצה של כרטיסים כי נראים אותו דבר.כל כרטיס יש תמונה בצד השני, ובכל תמונה יש תאומה אי שם קבע.אתה יכול להסתובב רק שני כרטיסים בבת אחת, כך שאתה צריך לזכור היכן הן התמונות עד שתוכל למצוא את התאומות.כאשר אתה להתהפך תאומים, הם ייעלמו!אתה בסבב עם Tux, ועל מנת לנצח את המשחק, אתה צריך למצוא זוגות של תאומים יותר ממה שהוא עוש"
 
 #: ../boards/menu.xml.in.h:1
-#, fuzzy
 msgid ""
 "A simple click on an icon brings you to an activity or a menu of activities.\n"
 "At the bottom of the screen is the gcompris control bar.\n"
@@ -2860,7 +2752,6 @@ msgstr "המסך הראשי של Gcompris"
 
 #: ../boards/menu.xml.in.h:16
 #: ../src/boards/menu2.c:1008
-#, fuzzy
 msgid "GCompris is a collection of educational games that provides different activities for children aged 2 and up."
 msgstr "Gcompris הוא משחק חינוכי המציג מגוון פעילויות לילדים בגילאי שלוש עד שמונה"
 
@@ -2877,12 +2768,10 @@ msgid "Time, Geography, ..."
 msgstr "זמן, גאוגרפיה ..."
 
 #: ../boards/missing_letter.xml.in.h:1
-#, fuzzy
 msgid "An object is displayed in the main area, and an incomplete word is printed under the picture. Select the missing letter to complete the word."
 msgstr "פריט מוצג במסך הראשי. מתחת לתמונה מופיעה מילה חסרה. בחר באות החסרה על מנת להשלים את המילה"
 
 #: ../boards/missing_letter.xml.in.h:2
-#, fuzzy
 msgid "Fill in the missing letter"
 msgstr "השלם את האות החסרה"
 
@@ -2891,7 +2780,6 @@ msgid "Missing Letter"
 msgstr "אות חסרה"
 
 #: ../boards/missing_letter.xml.in.h:4
-#, fuzzy
 msgid "Training reading skills"
 msgstr "לימוד מיומנות קריאה"
 
@@ -3050,7 +2938,6 @@ msgstr "יכולת לספור"
 
 #: ../boards/money.xml.in.h:2
 #: ../boards/money_cents.xml.in.h:2
-#, fuzzy
 msgid "Click on the coins or paper money at the bottom of the screen to pay. If you want to remove a coin or note, click on it on the upper screen area."
 msgstr "לחץ על המטבעות או השטרות בתחתית המסך כדי לשלם. אם ברצונך להוריד מטבע או שטר, לחץ עליו בחלק המסך העליון"
 
@@ -3060,18 +2947,15 @@ msgid "Money"
 msgstr "כסף"
 
 #: ../boards/money.xml.in.h:4
-#, fuzzy
 msgid "Practice money usage"
 msgstr "תרגל שימוש בכסף"
 
 #: ../boards/money.xml.in.h:5
 #: ../boards/money_cents.xml.in.h:5
-#, fuzzy
 msgid "You must buy the different items and give the exact price. At higher levels, several items are displayed, and you must first calculate the total price."
 msgstr "אתה חייב לקנות את הפריטים השונים ולשלם את המחיר המדויק. בשלב גבוה יותר,מספר פריטים מופיעים, ולכן אתה חייב קודם כל לחשב את המחיר הכולל."
 
 #: ../boards/money_cents.xml.in.h:4
-#, fuzzy
 msgid "Practice money usage including cents"
 msgstr "תרגל שימוש בכסף, כולל אגורות"
 
@@ -3080,7 +2964,6 @@ msgid "Rebuild the mosaic"
 msgstr "לבנות מחדש את פסיפס"
 
 #: ../boards/mouse.xml.in.h:1
-#, fuzzy
 msgid "Mouse-manipulation activities."
 msgstr "הפעלת העכבר"
 
@@ -3105,7 +2988,6 @@ msgid "Painting application"
 msgstr "תורנה ציור"
 
 #: ../boards/mypaint.xml.in.h:5
-#, fuzzy
 msgid "mouse manipulation"
 msgstr "הפעלת העכבר"
 
@@ -3114,7 +2996,6 @@ msgid "Numeration"
 msgstr "מספור"
 
 #: ../boards/numeration.xml.in.h:2
-#, fuzzy
 msgid "Numeration activities."
 msgstr "תרגול ספירה"
 
@@ -3131,12 +3012,10 @@ msgid "The story of Oscar and friend"
 msgstr "הסיפור של אוסקר וחברו"
 
 #: ../boards/oscar_and_friends.xml.in.h:4
-#, fuzzy
 msgid "reading"
 msgstr "קריאה"
 
 #: ../boards/paintings.xml.in.h:1
-#, fuzzy
 msgid "Assemble the puzzle"
 msgstr "הרכב את הפאזל"
 
@@ -3149,7 +3028,6 @@ msgid "Drag the image parts from the box on the left to create a painting on the
 msgstr "גרור את התמונה חלקים מן התיבה מצד שמאל כדי ליצור ציור על הסיפון הראשי."
 
 #: ../boards/paintings.xml.in.h:4
-#, fuzzy
 msgid "Mouse-manipulation: movement, drag and drop"
 msgstr "הפעלת העכבר: הזזה,  גרירה ושחרור."
 
@@ -3158,7 +3036,6 @@ msgid "Spatial representation"
 msgstr "ייצוג מרחבי"
 
 #: ../boards/paintings/board1_0.xml.in.h:1
-#, fuzzy
 msgid "Edgar Degas, The Dancing Class - 1873-75"
 msgstr "אדגר דגה, שיעור הריקוד- 1873"
 
@@ -3183,7 +3060,6 @@ msgid "Bazille, The Ramparts at Aigues-Mortes - 1867"
 msgstr "בזיל, המגן של איגנוס מורטס - 1867"
 
 #: ../boards/paintings/board5_0.xml.in.h:1
-#, fuzzy
 msgid "Cassatt, Mary - Summertime - 1894"
 msgstr "קסט, עונת הקיץ- 1895"
 
@@ -3200,7 +3076,6 @@ msgid "Hit any key or click on the plane to make Tux jump. Hit another key or cl
 msgstr "מכה או לחץ על מקש כלשהו על המטוס לבצע Tux לקפוץ. מכה נוספת או לחץ על המקש Tux לפתוח את מצנח."
 
 #: ../boards/paratrooper.xml.in.h:3
-#, fuzzy
 msgid "In this game, Tux the parachutist needs help to land safely on the fishing boat. He needs to allow for the wind direction and speed."
 msgstr "במשחק זה, הילד ינסה להנחית את טוקס הצנחן בשלום על סירת הדייג. הילד צריך לקחת בחשבון את כיוון הרוח ומהירותה"
 
@@ -3209,7 +3084,6 @@ msgid "Parachutist"
 msgstr "צניחה חופשית"
 
 #: ../boards/paratrooper.xml.in.h:5
-#, fuzzy
 msgid "This board is game-oriented. No specific skills are needed to play."
 msgstr "לוח זה מוכוון משחק. לא נדרשות מיומנויות מיוחדות כדי לשחק בו."
 
@@ -3263,12 +3137,10 @@ msgid "A memory game based on trains"
 msgstr "משחק זיכרון המבוסס על רכבות"
 
 #: ../boards/railroad.xml.in.h:2
-#, fuzzy
 msgid "A train - a locomotive and carriage(s) - is displayed at the top of the main area for a few seconds. Rebuild it at the top of the screen by selecting the appropriate carriages and locomotive. Deselect an item by clicking on it again. Check your construction by clicking on the hand at the bottom."
 msgstr "רכבת- קטר וקרון אחד או יותר-  מופיעה במעלה האזור הראשי. לאחר מספר שניות הרכבת תעלם. עליך לבנות מחדש את הרכבת במעלה המסך על ידי בחירת בקטר ובקרונות המתאימים. באפשרותך תמיד לבטל בחירה בפריט על ידי לחיצה חוזרת עליו. אשר את הבנייה על ידי היד בתחתית המסך."
 
 #: ../boards/railroad.xml.in.h:3
-#, fuzzy
 msgid "Memory-training"
 msgstr "אימון זיכרון"
 
@@ -3277,22 +3149,18 @@ msgid "Railway"
 msgstr "מסילת רכבת"
 
 #: ../boards/read_colors.xml.in.h:2
-#, fuzzy
 msgid "Click on the correct colored object."
 msgstr "לחץ על החלק בצבע הנכון"
 
 #: ../boards/read_colors.xml.in.h:3
-#, fuzzy
 msgid "Click on the matching color"
 msgstr "לחץ על הצבע הנכון"
 
 #: ../boards/read_colors.xml.in.h:4
-#, fuzzy
 msgid "Read the names of colors"
 msgstr "קרא צבעים"
 
 #: ../boards/read_colors.xml.in.h:5
-#, fuzzy
 msgid "This board teaches basic colors."
 msgstr "הלוח מיועד לקריאה של צבעים בסיסיים"
 
@@ -3345,7 +3213,6 @@ msgid "Go to the Reading activities"
 msgstr "עבור לפעילויות קריאה"
 
 #: ../boards/reading.xml.in.h:2
-#, fuzzy
 msgid "Reading activities."
 msgstr "עבור לפעילויות קריאה"
 
@@ -3359,17 +3226,14 @@ msgid "Horizontal reading practice"
 msgstr "תרגול בקריאה אופקית"
 
 #: ../boards/readingh.xml.in.h:3
-#, fuzzy
 msgid "Read a list of words and work out if a given word is in it"
 msgstr "קרא רשימת מילים ואמור האם המילה הנתונה מופיעה בה."
 
 #: ../boards/readingh.xml.in.h:5
-#, fuzzy
 msgid "Reading training in a limited time"
 msgstr "לימוד קריאה בזמן מוגבל"
 
 #: ../boards/readingv.xml.in.h:2
-#, fuzzy
 msgid "Read a vertical list of words and work out if a given word is in it"
 msgstr "קרא רשימה אנכית של מילים ואמור האם המילה הנתונה מופיעה בה"
 
@@ -3378,7 +3242,6 @@ msgid "Read training in a limited time"
 msgstr "לימוד קריאה בזמן מוגבל"
 
 #: ../boards/readingv.xml.in.h:5
-#, fuzzy
 msgid "Vertical-reading practice"
 msgstr "לימוד קריאה אנכית"
 
@@ -3387,7 +3250,6 @@ msgid "Copy a drawing from the box on the right into the box on the left."
 msgstr "העתק של הציור מתיבת מצד ימין בתיבה בצד שמאל."
 
 #: ../boards/redraw.xml.in.h:2
-#, fuzzy
 msgid "First, select the proper tool from the toolbar. Then drag the mouse to create objects. When you are done, click on the OK button. Errors will be marked with a little red cross. The order of objects (above/under) is not important but be careful not to end up with unwanted objects under others."
 msgstr "ראשית עליך לבחור בכלי המתאים בסרגל הכלים. אחר כך עליך לגרור את העכבר כדי ליצור את החלק. כשתסיים, לחץ על כפתור האישור, במקום בו ישנן טעויות יופיעו צלבים אדומים. סדר החלקים כלומר איזה חלק מופיע מעל ואיזה מתחת לא משנה, אבל שים לב שאין חלקים לא רצויים מתחת לאחרים."
 
@@ -3400,47 +3262,38 @@ msgid "Copy the mirror image of an object from the box on the right into the box
 msgstr "העתק של תמונת מראה של אובייקט מתיבת מצד ימין בתיבה בצד שמאל."
 
 #: ../boards/redraw_symmetrical.xml.in.h:2
-#, fuzzy
 msgid "First, select the proper tool from the toolbar. Then drag the mouse to create objects. When you are done, click on the OK button. A little red cross will show you where something isn't right yet. The order of objects (above/under) is not important but be careful not to end up with unwanted objects under others."
 msgstr "ראשית עליך לבחור בכלי המתאים בסרגל הכלים. אחר כך עליך לגרור את העכבר כדי ליצור את החלק. כשתסיים, לחץ על כפתור האישור, במקום בו ישנן טעויות יופיעו צלבים אדומים. סדר החלקים כלומר איזה חלק מופיע מעל ואיזה מתחת לא משנה, אבל שים לב שאין חלקים לא רצויים מתחת לאחרים."
 
 #: ../boards/redraw_symmetrical.xml.in.h:3
-#, fuzzy
 msgid "Mirror the given item"
 msgstr "צייר מחדש את הפריט הנתון"
 
 #: ../boards/reversecount.xml.in.h:1
-#, fuzzy
 msgid "Can move the mouse, can read numbers and subtract numbers up to 10 for the first level"
 msgstr "יכול להזיז את העכבר, יכול לקרוא ולחסר מספרים עד 10 בשלב הראשון"
 
 #: ../boards/reversecount.xml.in.h:2
-#, fuzzy
 msgid "Click on the dice to show how many ice spots there are between Tux and the fish. Click the dice with the right mouse button to count backwards. When done, click on the OK button or hit the Enter key."
 msgstr "ספור כמה כתמי קרח נמצאים בין טוקס לדגים. לחץ על הקוביה כדי לבחור במספר המתאים. באפשרותך ללחוץ על הכפתור הימני בעכבר כדי לספור לאחור. כשתסיים, לחץ על כפתור האישור או הקש על מקש האנטר"
 
 #: ../boards/reversecount.xml.in.h:3
-#, fuzzy
 msgid "Practice subtraction with a fun game"
 msgstr "תרגל חיסור בעזרת משחק  משעשע"
 
 #: ../boards/reversecount.xml.in.h:4
-#, fuzzy
 msgid "Tux is hungry. Help him find fish by counting to the correct ice spot."
 msgstr "טוקס רעב. עזור לו למצוא דגים בעזרת ספירה של כתמי הקרח הנדרשים להגיע אליהם"
 
 #: ../boards/scalesboard.xml.in.h:1
-#, fuzzy
 msgid "Balance the scales properly"
 msgstr "איזון נכון של המאזניים"
 
 #: ../boards/scalesboard.xml.in.h:2
-#, fuzzy
 msgid "Drag and Drop masses to balance the scales"
 msgstr "גרור ושחרר משקל כדי לאזן  את המאזניים"
 
 #: ../boards/scalesboard.xml.in.h:3
-#, fuzzy
 msgid "Mental calculation, arithmetic equality"
 msgstr "מחשבון מנטלי,שוויון חשבוני"
 
@@ -3449,7 +3302,6 @@ msgid "The painting is an original painting created by Virginie MOREAU (virginie
 msgstr ""
 
 #: ../boards/scalesboard.xml.in.h:5
-#, fuzzy
 msgid "To balance the scales, move the masses on the left side. The masses can be arranged in any order."
 msgstr "כדי לאזן את המאזניים, הזז את המשקלות בצד שמאל. ניתן לסדר את המשקולות בכל סדר."
 
@@ -3481,45 +3333,37 @@ msgstr "מרוץ הים (שחקן)"
 
 #: ../boards/smallnumbers.xml.in.h:1
 #: ../boards/smallnumbers2.xml.in.h:1
-#, fuzzy
 msgid "Count the number of dots on dice before they reach the ground"
 msgstr "הקלד בשלמותם את המילים הנופלות לפני שהן פוגעות בקרקע"
 
 #: ../boards/smallnumbers.xml.in.h:2
 #: ../boards/smallnumbers2.xml.in.h:2
-#, fuzzy
 msgid "Counting skills"
 msgstr "יכולת ספירה"
 
 #: ../boards/smallnumbers.xml.in.h:3
 #: ../boards/smallnumbers2.xml.in.h:3
-#, fuzzy
 msgid "In a limited time, count the number of dots"
 msgstr "ספור את מספר הנקודות. לרשותך זמן מוגבל."
 
 #: ../boards/smallnumbers.xml.in.h:4
-#, fuzzy
 msgid "Numbers With Dice"
 msgstr "מספרים עם קוביות"
 
 #: ../boards/smallnumbers.xml.in.h:5
 #: ../boards/smallnumbers2.xml.in.h:5
-#, fuzzy
 msgid "With the keyboard, type the number of dots you see on the falling dice."
 msgstr "בעזרת המקלדת, הקש על המספר המתאים למספר הנקודות שעל הקובייה הנופלת"
 
 #: ../boards/smallnumbers2.xml.in.h:4
-#, fuzzy
 msgid "Numbers with pairs of dice"
 msgstr "מספרים עם קוביות"
 
 #: ../boards/sound_group.xml.in.h:1
-#, fuzzy
 msgid "Go to Sound activities"
 msgstr "עבור לפעילויות צבע"
 
 #: ../boards/sound_group.xml.in.h:2
-#, fuzzy
 msgid "Sound based activities."
 msgstr "פעילויות מבוססות-לוח"
 
@@ -3532,7 +3376,6 @@ msgid "Strategy games like chess, connect4, ..."
 msgstr "משחקי אסטרטגיה כמו שחמט, connect4, ..."
 
 #: ../boards/submarine.xml.in.h:1
-#, fuzzy
 msgid "Click on different active elements : engine, rudders and air tanks, in order to navigate to the required depth. There is a gate on the right. Pass through it to reach the next level."
 msgstr "לחץ על הפריטים הפעילים השונים: מנוע, הגה ומיכלי אויר על מנת לנווט בעומק הדרוש."
 
@@ -3573,7 +3416,6 @@ msgid "The aim of the puzzle is to enter a symbol or numeral from 1 through 9 in
 msgstr "סוּדוֹקוּ  הוא חידה שבה יש למקם ספרות על לוח משובץ שגודלו (לרוב) 9×9, המורכב מ-9 תיבות של 3×3. מטרת המשחק - למקם את 9 הסמלים (לרוב הספרות 1 עד 9) על גבי לוח המשחק כך שבכל טור, בכל שורה, ובכל תיבה, יופיע כל סמל בדיוק פעם אחת.בלוח המשחק נתונים כמה סמלים, ויש להתייחס אליהם בעת מיקום הסמלים במהלך המשחק.(Source &lt;http://en.wikipedia.org/wiki/Sudoku&gt;)."
 
 #: ../boards/superbrain.xml.in.h:1
-#, fuzzy
 msgid "Click on the items until you find what you think is the correct answer. Then, click on the OK button in the control bar. In the lower levels, Tux gives you an indication if you found a hiding place by marking the item with a black box. You can use the right mouse button to flip the colors in the opposite order."
 msgstr "לחץ על הפריטים עד שתמצא את התשובה הנכונה לדעתך. לחץ על כפתור האישור שבסרגל השליטה.  ברמה הנמוכה ביותר, טוקס יתן לך רמז אם אתה בכיוון על ידי סימון הפריט בקופסה שחורה. באפשרותך להשתמש בכפתור הימני בעכבר כדי לשנות את הצבעים בכיוון הפוך."
 
@@ -3584,7 +3426,6 @@ msgstr "מוח על"
 
 #: ../boards/superbrain.xml.in.h:3
 #: ../src/boards/superbrain.c:107
-#, fuzzy
 msgid "Tux has hidden several items. Find them again in the correct order"
 msgstr "טוקס החביא מספר פריטים, מצא אותם בסדר הנכון"
 
@@ -3620,27 +3461,22 @@ msgid "Can move the mouse, can read numbers and count up to 15 for the first lev
 msgstr "יכולת להזיז את העכבר, יכולת לקרוא מספרים ולספור עד 15 לשלב הראשון"
 
 #: ../boards/target.xml.in.h:2
-#, fuzzy
 msgid "Check the wind speed and direction, and then click on the target to launch a dart. When you all your darts are thrown, a window appears asking you to count your score. Enter the score with the keyboard then press the Enter key or the OK button."
 msgstr "ראשית בדוק את עוצמת הרוח וכיוונה. לחץ על המטרה כדי לשלוח חץ, לאחר ששלחת את כל החיצים, חלון יופיע ובו תצטרך לרשום את התוצאה שלך. הכנס את התוצאה במקלדת ולחץ על מקש האנטר או כפתור האישור"
 
 #: ../boards/target.xml.in.h:3
-#, fuzzy
 msgid "Hit the target and count your points"
 msgstr " קלע למטרה וספור את הניקוד שלך."
 
 #: ../boards/target.xml.in.h:4
-#, fuzzy
 msgid "Practice addition with a target game"
 msgstr "תרגל חיבור בעזרת משחק קליעה למטרה"
 
 #: ../boards/target.xml.in.h:5
-#, fuzzy
 msgid "Throw darts at a target and count your score."
 msgstr "קלע חיצים למטרה וספור את התוצאה"
 
 #: ../boards/traffic.xml.in.h:1
-#, fuzzy
 msgid "A sliding-block puzzle game"
 msgstr "משחק הזזת קוביות"
 
@@ -3649,12 +3485,10 @@ msgid "Each car can only move either horizontally or vertically. You must make s
 msgstr "כל מכונית יכולה רק להזיז או אופקית או אנכית. אתה חייב לבצע כמה החדר על מנת לאפשר את המכונית האדומה להעביר דרך השער מצד ימין."
 
 #: ../boards/traffic.xml.in.h:3
-#, fuzzy
 msgid "Remove the red car from the parking lot through the gate on the right"
 msgstr "מטרת המשחק היא להוציא את כל המכוניות האדומות מחוץ  לרשת דרך הפתח מימין"
 
 #: ../boards/tuxpaint.xml.in.h:1
-#, fuzzy
 msgid "Drawing activity (pixmap)"
 msgstr "פעילויות לאימון השמיעה"
 
@@ -3675,12 +3509,10 @@ msgid "mouse and keyboard manipulation"
 msgstr "שימוש במקלדת ובעכבר"
 
 #: ../boards/watercycle.xml.in.h:1
-#, fuzzy
 msgid "Click on different active elements : sun, cloud, water pump station, and water cleanup station, in order to reactivate the entire water system. When the system is back up and Tux is in the shower, push the shower button for him."
 msgstr "לחץ על המרכיבים השונים: שמש, ענן, תחנה לשאיבת מים ותחנה לניקוי מים כדי להפעיל את מערכת אספקת המים. לאחר שסיימת וטוקס יהיה במקלחת, לחץ על כפתור המים למענו"
 
 #: ../boards/watercycle.xml.in.h:2
-#, fuzzy
 msgid "Learn about the water cycle"
 msgstr "למד על מחזור המים"
 
@@ -3689,7 +3521,6 @@ msgid "Learn the water cycle"
 msgstr "למד על מחזור המים"
 
 #: ../boards/watercycle.xml.in.h:4
-#, fuzzy
 msgid "Tux has come back from a long fishing party on his boat. Bring the water system back up so he can take a shower."
 msgstr "עליך להפעיל את מערכת אספקת המים. טוקס חזר ממסיבת דייג ארוכה בסירה שלו. עזור לו להתקלח."
 
@@ -3703,13 +3534,11 @@ msgid "Keyboard training"
 msgstr "אימון מקלדת"
 
 #: ../boards/wordsgame.xml.in.h:4
-#, fuzzy
 msgid "Type the complete word as it falls, before it reachs the ground"
 msgstr "הקלד את האותיות הנופלות לפני שהן מגיעות לקרקע"
 
 #: ../boards/wordsgame.xml.in.h:5
 #: ../src/boards/wordsgame.c:111
-#, fuzzy
 msgid "Type the falling words before they reach the ground"
 msgstr "הקלד בשלמותם את המילים הנופלות לפני שהן פוגעות בקרקע"
 
@@ -3722,7 +3551,6 @@ msgid "Your word processor"
 msgstr "את מעבד תמלילים"
 
 #: ../gcompris-edit.desktop.in.h:1
-#, fuzzy
 msgid "Administration for gcompris"
 msgstr "עורך ל gcompris"
 
@@ -3781,22 +3609,18 @@ msgid ""
 msgstr ""
 
 #: ../src/boards/chess.c:579
-#, fuzzy
 msgid "White's Turn"
 msgstr "תור הלבן"
 
 #: ../src/boards/chess.c:579
-#, fuzzy
 msgid "Black's Turn"
 msgstr "תור השחור"
 
 #: ../src/boards/chess.c:723
-#, fuzzy
 msgid "White checks"
 msgstr "לבן מכריז שח"
 
 #: ../src/boards/chess.c:725
-#, fuzzy
 msgid "Black checks"
 msgstr "שחור מכריז שח"
 
@@ -3820,7 +3644,6 @@ msgstr ""
 
 #: ../src/boards/click_on_letter.c:259
 #: ../src/boards/memory.c:832
-#, fuzzy
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -3919,12 +3742,10 @@ msgstr "אבגדהוזחטיכלמנסעפצקרשת"
 
 #: ../src/boards/hanoi.c:332
 #: ../src/boards/hanoi.c:343
-#, fuzzy
 msgid "Build the same tower in the empty area as the one you see on the right-hand side."
 msgstr "העתק למקום הריק את המגדל שנמצא מימין"
 
 #: ../src/boards/hanoi_real.c:72
-#, fuzzy
 msgid "Tower of Hanoi"
 msgstr "המגדל של האנוי "
 
@@ -3961,12 +3782,10 @@ msgid "right"
 msgstr "ימין"
 
 #: ../src/boards/maze.c:492
-#, fuzzy
 msgid "Look at your position, then switch back to invisible mode to continue your moves"
 msgstr "הבט במצב שלך וחזור למצב תלת מימדי כדי לזוז"
 
 #: ../src/boards/maze.c:494
-#, fuzzy
 msgid "Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "הבט במצב שלך וחזור למצב תלת מימדי כדי לזוז"
 
@@ -4017,12 +3836,10 @@ msgstr "לוח פיתון"
 
 #: ../src/boards/python.c:63
 #: ../src/boards/python.c:87
-#, fuzzy
 msgid "Special board that embeds python into gcompris."
 msgstr "לוח מיוחד שמשבץ פיתון לתוך gcompris"
 
 #: ../src/boards/python/admin/board_list.py:89
-#, fuzzy
 msgid "Select a profile:"
 msgstr "בחר לוח"
 
@@ -4057,7 +3874,6 @@ msgid "Login"
 msgstr "לחבר"
 
 #: ../src/boards/python/admin/board_list.py:235
-#, fuzzy
 msgid "Main menu"
 msgstr "תפריט ראשי"
 
@@ -4191,7 +4007,6 @@ msgstr "חבורה :"
 #. Label and Entry for the first name
 #: ../src/boards/python/admin/group_edit.py:102
 #: ../src/boards/python/admin/profile_edit.py:98
-#, fuzzy
 msgid "Description:"
 msgstr "תיאור"
 
@@ -4562,7 +4377,6 @@ msgid "Rebuild the same mosaic on the right area"
 msgstr "לבנות מחדש את אותו פסיפס מצד ימין עירוני"
 
 #: ../src/boards/python/melody.py:118
-#, fuzzy
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -4633,7 +4447,6 @@ msgid "Use rectangles"
 msgstr "השתמש מלבנים"
 
 #: ../src/boards/python/pythontest.py:446
-#, fuzzy
 msgid "Choice of pattern"
 msgstr "יש ללחוץ על אות"
 
@@ -4743,7 +4556,6 @@ msgid "Memory game"
 msgstr "משחק זיכרון"
 
 #: ../src/boards/railroad.c:92
-#, fuzzy
 msgid "Build a train according to the model"
 msgstr "בנה רכבת המתאימה למודל"
 
@@ -4767,7 +4579,6 @@ msgid "I am Ready"
 msgstr "אני מוכן"
 
 #: ../src/boards/reading.c:615
-#, fuzzy
 msgid "Yes, I saw it"
 msgstr "כן, ראיתי את זה"
 
@@ -4786,7 +4597,6 @@ msgid "But it was not displayed"
 msgstr "אבל זה לא היה מוצגת"
 
 #: ../src/boards/reading.c:688
-#, fuzzy
 msgid "And it was displayed"
 msgstr "מופיעה"
 
@@ -4850,7 +4660,6 @@ msgid "Heading 2"
 msgstr "כותרת 2"
 
 #: ../src/gcompris/about.c:57
-#, fuzzy
 msgid ""
 "Author: Bruno Coudoin\n"
 "Contribution: Pascal Georges, Jose Jorge, Yves Combe\n"
@@ -5254,7 +5063,6 @@ msgid "SAVE"
 msgstr "שמור"
 
 #: ../src/gcompris/gameutil.c:80
-#, fuzzy
 msgid "Couldn't find or load the file"
 msgstr "קובץ לא נמצא %s"
 
@@ -5353,7 +5161,6 @@ msgid "The location of user directories: [$HOME/My GCompris]"
 msgstr "המיקום של המשתמש ספריות:[$HOME/My GCompris]"
 
 #: ../src/gcompris/gcompris.c:189
-#, fuzzy
 msgid "Run the experimental activities"
 msgstr "עבור לפעילויות חוויה"
 
