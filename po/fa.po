@@ -3862,12 +3862,12 @@ msgstr "یک صفحه را انتخاب کن"
 #: ../src/boards/money.c:487
 #, c-format
 msgid "$ %.2f"
-msgstr "2f.$ %"
+msgstr "%.2f$"
 
 #: ../src/boards/money.c:500
 #, c-format
 msgid "$ %.0f"
-msgstr "0f.$ %"
+msgstr "%.0f$"
 
 #: ../src/boards/paratrooper.c:436
 msgid "Control fall speed with up and down arrow keys."

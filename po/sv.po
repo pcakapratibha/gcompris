@@ -10,13 +10,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-20 19:27+0200\n"
-"PO-Revision-Date: 2008-07-20 19:29+0100\n"
+"POT-Creation-Date: 2008-09-05 00:30+0200\n"
+"PO-Revision-Date: 2008-09-05 00:41+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../boards/babyshapes/board8_0.xml.in.h:1
+msgid "Gauguin, Arearea - 1892"
+msgstr "Gauguin, Arearea - 1892"
+
+#: ../boards/babyshapes/board8_1.xml.in.h:1
+msgid "Pieter Bruegel, Bauernhochzeit - 1568"
+msgstr "Pieter Bruegel, Bondebröllop - 1568"
+
+#: ../boards/babyshapes/board8_2.xml.in.h:1
+msgid "The Lady and the Unicorn - XVe century"
+msgstr "Damen med enhörningen - 1400-talet"
+
+#: ../boards/babyshapes/board8_3.xml.in.h:1
+msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+msgstr "Vincent van Gogh, Sängkammare i Arles - 1888"
+
+#: ../boards/babyshapes/board8_4.xml.in.h:1
+msgid "Ambrosius Bosschaert, The Elder - 1614"
+msgstr "Ambrosius Bosschaert, Den äldre - 1614"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -544,8 +564,20 @@ msgid "Good mouse-control"
 msgstr "Bra muskontroll"
 
 #: ../boards/babyshapes.xml.in.h:5
-msgid "The dog is provided by Andre Connes and released under the GPL"
-msgstr "Hunden har tillhandahållits av Andre Connes och är släppt under GPL"
+msgid ""
+"The dog is provided by Andre Connes and released under the GPL.\n"
+"Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel Malissin et frédéric Valdes. Licence: Free but requires the site and author. Source: http://www.galerie.roi-president.com\n"
+"Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
+msgstr ""
+"Hunden tillhandahålls av Andre Connes och är utgiven under GPL-licensen.\n"
+"Konstnär: Gauguin, Paul. Titel: Arearea. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Konstnär: Bruegel d. Ä. Titel: Bondebröllop. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Beskrivning: Damen med enhörningen (draperier). Upphovsman: Pierre-Emmanuel Malissin et frédéric Valdes. Licens: Gratis men kräver tillstånd från webbplatsen och upphovsmannen. Källa: http://www.galerie.roi-president.com\n"
+"Konstnär: Vincent van Gogh. Title: Sängkammare i Arles. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Konstnär: Ambrosius Bosschaert. Titel: Den äldre. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -3818,7 +3850,7 @@ msgstr ""
 #: ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832
 #: ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1848
+#: ../src/boards/shapegame.c:1866
 #: ../src/boards/smallnumbers.c:591
 #, c-format, python-format
 msgid ""
@@ -4915,8 +4947,8 @@ msgstr "Detta program är ett GNU-paket och är släppt under Gnu Public License
 
 #: ../src/gcompris/about.c:279
 #: ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:475
-#: ../src/gcompris/config.c:485
+#: ../src/gcompris/config.c:476
+#: ../src/gcompris/config.c:486
 #: ../src/gcompris/dialog.c:102
 #: ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391
@@ -5217,42 +5249,46 @@ msgid "Urdu"
 msgstr "Urdu"
 
 #: ../src/gcompris/config.c:119
+msgid "Ukrainian"
+msgstr "Ukrainska"
+
+#: ../src/gcompris/config.c:120
 msgid "Vietnamese"
 msgstr "Vietnamesiska"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Walloon"
 msgstr "Vallonska"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Simplified)"
 msgstr "Kinesiska (förenklad)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Traditional)"
 msgstr "Kinesiska (traditionell)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "No time limit"
 msgstr "Ingen tidsbegränsning"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Slow timer"
 msgstr "Långsam tidtagare"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Normal timer"
 msgstr "Normal tidtagare"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:131
 msgid "Fast timer"
 msgstr "Snabb tidtagare"
 
-#: ../src/gcompris/config.c:135
+#: ../src/gcompris/config.c:136
 msgid "800x600 (Default for GCompris)"
 msgstr "800×600 (Standard för GCompris)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:141
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5260,40 +5296,40 @@ msgstr ""
 "<i>Använd Gcompris administrationsmodul\n"
 "för att filtrera bräden</i>"
 
-#: ../src/gcompris/config.c:195
-#: ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:196
+#: ../src/gcompris/config.c:206
 msgid "GCompris Configuration"
 msgstr "Konfiguration av GCompris"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:282
 msgid "Fullscreen"
 msgstr "Helskärmsläge"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:325
 msgid "Music"
 msgstr "Musik"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:353
 msgid "Effect"
 msgstr "Effekt"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:389
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Kunde inte öppna skalkatalogen: %s"
 
-#: ../src/gcompris/config.c:419
-#: ../src/gcompris/config.c:869
-#: ../src/gcompris/config.c:883
+#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:870
+#: ../src/gcompris/config.c:884
 #, c-format
 msgid "Skin : %s"
 msgstr "Skal: %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:422
 msgid "SKINS NOT FOUND"
 msgstr "SKALEN HITTADES INTE"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:547
 msgid "English (United State)"
 msgstr "Engelska (USA)"
 
@@ -5549,6 +5585,8 @@ msgstr "Speltid"
 msgid "Remaining Time = %d"
 msgstr "Återstående tid = %d"
 
+#~ msgid "The dog is provided by Andre Connes and released under the GPL"
+#~ msgstr "Hunden har tillhandahållits av Andre Connes och är släppt under GPL"
 #~ msgid "Improve reading skill and the ability to understand what is read."
 #~ msgstr ""
 #~ "Förbättra läsningskunskaperna och möjligheten att förstå vad som läses."

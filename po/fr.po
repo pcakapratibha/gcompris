@@ -5461,7 +5461,7 @@ msgstr "Désactivation de XF86VidMode (Pas de modification de la résolution de 
 
 #: ../src/gcompris/gcompris.c:166
 msgid "Run GCompris with local menu (e.g -l /reading will let you play only activities in the reading directory, -l /strategy/connect4 only the connect4 activity). Use '-l list' to list all the availaible activities and their descriptions."
-msgstr "Lance GCompris avec un menu local (ex : -l /reading pour jouer uniquement avec les activités du menu lecture, -l /strategy/connect4 pour accéder uniquement à l'activité Puissance 4). Utilisez -l pour lister toutes les activités disponibles ainsi que leurs descriptions."
+msgstr "Lance GCompris avec un menu local (ex : -l /reading pour jouer uniquement avec les activités du menu lecture, -l /strategy/connect4 pour accéder uniquement à l'activité Puissance 4). Utilisez '-l list' pour lister toutes les activités disponibles ainsi que leurs descriptions."
 
 #: ../src/gcompris/gcompris.c:171
 msgid "Run GCompris with local activity directory added to menu"
