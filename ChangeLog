@@ -1,3 +1,15 @@
+	*** RELEASE 8.3.8 ***
+
+2008-10-08  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Updated translation from trunk.
+	Added support for spoken introductions.
+	* boards/wordsgame/default-he.xml:
+	* configure.in:
+	* src/gcompris/board.c: (gc_board_play):
+	* src/gcompris/gameutil.c: (gc_pixmap_load),
+	(gc_activity_intro_play):
+
 2008-08-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/clickgame.c: (clickgame_next_level): Fixed the zoom level that was too low at level 2
