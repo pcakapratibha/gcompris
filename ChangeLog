@@ -1,5 +1,17 @@
 	*** RELEASE 8.3.8 ***
 
+2008-10-11  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- synced with trunk 8.4.7
+
+	* boards/babyshapes.xml.in:
+	* boards/babyshapes/Makefile.am:
+	* boards/babyshapes/board8_0.xml.in:
+	* boards/babyshapes/board8_1.xml.in:
+	* boards/babyshapes/board8_2.xml.in:
+	* boards/babyshapes/board8_3.xml.in:
+	* boards/babyshapes/board8_4.xml.in:
+
 2008-10-08  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Updated translation from trunk.

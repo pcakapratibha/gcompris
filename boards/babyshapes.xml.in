@@ -11,7 +11,12 @@
 	 <_title>Complete the puzzle</_title>
 	 <_description>Drag and Drop the shapes on their respective targets</_description>
 	 <_prerequisite>Good mouse-control</_prerequisite>
-	<_credit>The dog is provided by Andre Connes and released under the GPL</_credit>
+	<_credit xml:space="preserve">The dog is provided by Andre Connes and released under the GPL.
+Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg
+Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg
+Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel Malissin et frédéric Valdes. Licence: Free but requires the site and author. Source: http://www.galerie.roi-president.com
+Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg
+Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg</_credit>
 	<_manual>Complete the puzzle by dragging each piece from the set of pieces on the left, to the matching space in the puzzle.</_manual>
   </Board>
 </GCompris>
