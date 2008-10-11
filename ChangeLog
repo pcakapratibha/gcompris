@@ -1,3 +1,9 @@
+2008-10-11  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Added missing babyshapes/board8_*.xml
+
+	* po/POTFILES.in:
+
 	*** RELEASE 8.4.7 ***
 
 2008-10-05  Bruno coudoin  <bruno.coudoin@free.fr>
