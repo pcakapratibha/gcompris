@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-01 23:27+0000\n"
-"PO-Revision-Date: 2008-09-10 22:44+0200\n"
+"POT-Creation-Date: 2008-10-11 21:47+0000\n"
+"PO-Revision-Date: 2008-10-12 16:34+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -783,6 +783,26 @@ msgstr "Cerrojo sobre la hierba."
 #: ../boards/babyshapes/board7_0.xml.in.h:1
 msgid "Lock with colored shapes."
 msgstr "Cerrojo con formas coloreadas."
+
+#: ../boards/babyshapes/board8_0.xml.in.h:1
+msgid "Gauguin, Arearea - 1892"
+msgstr "Gauguin, Arearea - 1892"
+
+#: ../boards/babyshapes/board8_1.xml.in.h:1
+msgid "Pieter Bruegel, Bauernhochzeit - 1568"
+msgstr "Pieter Bruegel, Bauernhochzeit - 1568"
+
+#: ../boards/babyshapes/board8_2.xml.in.h:1
+msgid "The Lady and the Unicorn - XVe century"
+msgstr "La dama y el unicornio - Siglo XV"
+
+#: ../boards/babyshapes/board8_3.xml.in.h:1
+msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+msgstr "Vincent van Gogh, Habitación en Arlés - 1888"
+
+#: ../boards/babyshapes/board8_4.xml.in.h:1
+msgid "Ambrosius Bosschaert, The Elder - 1614"
+msgstr "Ambrosius Bosschaert, El Viejo - 1614"
 
 #: ../boards/ballcatch.xml.in.h:1
 msgid "Make the ball go to Tux"
@@ -5806,8 +5826,8 @@ msgstr ""
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
 #: ../src/gcompris/config.c:476 ../src/gcompris/config.c:486
-#: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
-#: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
+#: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:379
+#: ../src/gcompris/help.c:389 ../src/gcompris/images_selector.c:316
 msgid "OK"
 msgstr "Aceptar"
 
@@ -6443,19 +6463,19 @@ msgstr "No afectado"
 msgid "Users without a class"
 msgstr "Usuarios sin una clase"
 
-#: ../src/gcompris/help.c:196
+#: ../src/gcompris/help.c:194
 msgid "Prerequisite"
 msgstr "Prerequisito"
 
-#: ../src/gcompris/help.c:224
+#: ../src/gcompris/help.c:222
 msgid "Goal"
 msgstr "Objetivo"
 
-#: ../src/gcompris/help.c:252
+#: ../src/gcompris/help.c:250
 msgid "Manual"
 msgstr "Manual"
 
-#: ../src/gcompris/help.c:280
+#: ../src/gcompris/help.c:278
 msgid "Credit"
 msgstr "Crédito"
 
