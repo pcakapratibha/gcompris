@@ -31,7 +31,7 @@ use Data::Dumper;
 # -----------------------------------------------------------------------------------------
 # USAGE:
 # This tool requires the spip xml database as the first parameter.
-# The new base will on stdout
+# The new base will go on stdout
 #------------------------------------------------------------------------------------------
 
 
