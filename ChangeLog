@@ -1,3 +1,12 @@
+2008-10-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Added missing manual entry.
+
+	* boards/chess_computer.xml.in:
+	* boards/chess_movelearn.xml.in:
+	* boards/chess_partyend.xml.in:
+	* boards/mosaic.xml.in:
+
 2008-10-13  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Added missing local like Hebrew.
