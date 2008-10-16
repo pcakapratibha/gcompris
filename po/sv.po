@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-05 00:30+0200\n"
-"PO-Revision-Date: 2008-09-05 00:41+0100\n"
+"POT-Creation-Date: 2008-10-16 23:24+0200\n"
+"PO-Revision-Date: 2008-10-16 23:29+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -629,9 +629,9 @@ msgid "Kick the ball into the goal"
 msgstr "Sparka bollen i målet"
 
 #: ../boards/billard.xml.in.h:3
-#: ../boards/chess_computer.xml.in.h:2
-#: ../boards/chess_movelearn.xml.in.h:3
-#: ../boards/chess_partyend.xml.in.h:2
+#: ../boards/chess_computer.xml.in.h:3
+#: ../boards/chess_movelearn.xml.in.h:4
+#: ../boards/chess_partyend.xml.in.h:3
 #: ../boards/clickgame.xml.in.h:5
 #: ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5
@@ -679,7 +679,7 @@ msgid "This chat activity will only work with other GCompris users on your local
 msgstr "Den här chattaktiviteten fungerar endast med andra GCompris-användare på ditt lokala nätverk och inte på Internet. För att använda det är det bara att skriva in ditt meddelande och trycka på Enter. Ditt meddelande kommer då att sändas ut på det lokala nätverket och andra GCompris-program som kör chattaktiviteten kommer att ta bort och visa upp ditt meddelande."
 
 #: ../boards/chess.xml.in.h:1
-#: ../boards/chess_computer.xml.in.h:3
+#: ../boards/chess_computer.xml.in.h:4
 msgid "Play chess against the computer in a learning mode"
 msgstr "Spela schack mot datorn i inlärningsläge"
 
@@ -688,22 +688,28 @@ msgid "Practice chess"
 msgstr "Träna på schack"
 
 #: ../boards/chess_computer.xml.in.h:1
-#: ../boards/chess_movelearn.xml.in.h:2
+#: ../boards/chess_movelearn.xml.in.h:1
 #: ../boards/chess_partyend.xml.in.h:1
+msgid "At the start, each player (one controlling the white pieces, the other controlling the black pieces) controls sixteen pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. The object of the game is to checkmate the opponent's king, whereby the king is under immediate attack (in \"check\") and there is no way to remove it from attack on the next move."
+msgstr "När omgången börjar så styr varje spelare (en styr de vita pjäserna och den andra styr de svarta pjäserna) sexton pjäser: en kund, en drottning, två löpare, två torn, två hästar och åtta bönder. Målet med spelet är att få schack matt för motståndarens kung, varmed kungen är under direkt attack (i \"schack\") och det inte finns något sätt att ta bort den från attacken med nästa drag."
+
+#: ../boards/chess_computer.xml.in.h:2
+#: ../boards/chess_movelearn.xml.in.h:3
+#: ../boards/chess_partyend.xml.in.h:2
 msgid "Learning chess"
 msgstr "Lär dig schack"
 
-#: ../boards/chess_computer.xml.in.h:4
-#: ../boards/chess_movelearn.xml.in.h:4
-#: ../boards/chess_partyend.xml.in.h:4
+#: ../boards/chess_computer.xml.in.h:5
+#: ../boards/chess_movelearn.xml.in.h:5
+#: ../boards/chess_partyend.xml.in.h:5
 msgid "The chess engine is from gnuchess."
 msgstr "Schackmotorn är gnuchess."
 
-#: ../boards/chess_movelearn.xml.in.h:1
+#: ../boards/chess_movelearn.xml.in.h:2
 msgid "Chess training. Catch the computer's pawns."
 msgstr "Schackträning. Fånga datorns bönder."
 
-#: ../boards/chess_partyend.xml.in.h:3
+#: ../boards/chess_partyend.xml.in.h:4
 msgid "Play the end of the chess game against the computer"
 msgstr "Spela schackpartiets slutspel mot datorn"
 
@@ -3085,6 +3091,10 @@ msgid "Practice money usage including cents"
 msgstr "Träna att använda pengar inklusive eurocent"
 
 #: ../boards/mosaic.xml.in.h:1
+msgid "Rebuild the left mosaic on the right area. Then, select a color in the bottom area and click on grey boxes to paint them."
+msgstr "Bygg upp den vänstra mosaiken på högra sidan. Välj sedan en färg i nedre delen och klicka på de gråa rutorna för att måla dem."
+
+#: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
 msgstr "Bygg om mosaiken"
 
@@ -4950,8 +4960,8 @@ msgstr "Detta program är ett GNU-paket och är släppt under Gnu Public License
 #: ../src/gcompris/config.c:476
 #: ../src/gcompris/config.c:486
 #: ../src/gcompris/dialog.c:102
-#: ../src/gcompris/help.c:381
-#: ../src/gcompris/help.c:391
+#: ../src/gcompris/help.c:379
+#: ../src/gcompris/help.c:389
 #: ../src/gcompris/images_selector.c:316
 msgid "OK"
 msgstr "OK"
@@ -5541,19 +5551,19 @@ msgstr "Påverkas inte"
 msgid "Users without a class"
 msgstr "Användare utan en klass"
 
-#: ../src/gcompris/help.c:196
+#: ../src/gcompris/help.c:194
 msgid "Prerequisite"
 msgstr "Förkunskap"
 
-#: ../src/gcompris/help.c:224
+#: ../src/gcompris/help.c:222
 msgid "Goal"
 msgstr "Mål"
 
-#: ../src/gcompris/help.c:252
+#: ../src/gcompris/help.c:250
 msgid "Manual"
 msgstr "Hjälp"
 
-#: ../src/gcompris/help.c:280
+#: ../src/gcompris/help.c:278
 msgid "Credit"
 msgstr "Tack"
 
