@@ -1,3 +1,11 @@
+2008-10-25  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* boards/skins/babytoy/skin.xml: selected a better text color in
+	  clockgame text
+	* src/boards/smallnumbers.c: (key_press), (player_win):fixed a major crash case
+	  The crash happend when there are 2 or more dice at the sublevel 9. The first
+	  die complete the game and the next die is processed but already deleted.
+
 2008-10-16  Bruno coudoin  <bruno.coudoin@free.fr>
 
         - Created Ukrainian word list by Slava Dubrovskiy
