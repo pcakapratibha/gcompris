@@ -249,6 +249,24 @@ static gint key_press(guint keyval, gchar *commit_str, gchar *preedit_str)
 		 (GFunc) smallnumbers_gotkey_item,
 		 GINT_TO_POINTER(keyval));
 
+  if(gcomprisBoard->sublevel>gcomprisBoard->number_of_sublevel)
+    {
+      /* Try the next level */
+      gcomprisBoard->level++;
+      if(gcomprisBoard->level>gcomprisBoard->maxlevel) { // the current board is finished : bail out
+	gc_score_end();
+	gc_bonus_end_display(GC_BOARD_FINISHED_RANDOM);
+	return TRUE;
+      }
+      gamewon = TRUE;
+      smallnumbers_destroy_all_items();
+      gc_bonus_display(gamewon, GC_BONUS_SMILEY);
+    }
+  else
+    {
+      gc_score_set(gcomprisBoard->sublevel);
+    }
+
   return TRUE;
 }
 
@@ -482,23 +500,6 @@ static void player_win(GnomeCanvasItem *item)
   gcomprisBoard->sublevel++;
   gc_score_set(gcomprisBoard->sublevel);
 
-  if(gcomprisBoard->sublevel>gcomprisBoard->number_of_sublevel)
-    {
-      /* Try the next level */
-      gcomprisBoard->level++;
-      if(gcomprisBoard->level>gcomprisBoard->maxlevel) { // the current board is finished : bail out
-	gc_score_end();
-	gc_bonus_end_display(GC_BOARD_FINISHED_RANDOM);
-	return;
-      }
-      gamewon = TRUE;
-      smallnumbers_destroy_all_items();
-      gc_bonus_display(gamewon, GC_BONUS_SMILEY);
-    }
-  else
-    {
-      gc_score_set(gcomprisBoard->sublevel);
-    }
 }
 
 static void player_loose()
