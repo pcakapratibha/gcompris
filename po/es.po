@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-01 23:27+0000\n"
-"PO-Revision-Date: 2008-09-10 22:44+0200\n"
+"POT-Creation-Date: 2008-10-14 21:25+0000\n"
+"PO-Revision-Date: 2008-10-16 23:21+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -784,6 +784,26 @@ msgstr "Cerrojo sobre la hierba."
 msgid "Lock with colored shapes."
 msgstr "Cerrojo con formas coloreadas."
 
+#: ../boards/babyshapes/board8_0.xml.in.h:1
+msgid "Gauguin, Arearea - 1892"
+msgstr "Gauguin, Arearea - 1892"
+
+#: ../boards/babyshapes/board8_1.xml.in.h:1
+msgid "Pieter Bruegel, Bauernhochzeit - 1568"
+msgstr "Pieter Bruegel, Bauernhochzeit - 1568"
+
+#: ../boards/babyshapes/board8_2.xml.in.h:1
+msgid "The Lady and the Unicorn - XVe century"
+msgstr "La dama y el unicornio - Siglo XV"
+
+#: ../boards/babyshapes/board8_3.xml.in.h:1
+msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+msgstr "Vincent van Gogh, Habitación en Arlés - 1888"
+
+#: ../boards/babyshapes/board8_4.xml.in.h:1
+msgid "Ambrosius Bosschaert, The Elder - 1614"
+msgstr "Ambrosius Bosschaert, El Viejo - 1614"
+
 #: ../boards/ballcatch.xml.in.h:1
 msgid "Make the ball go to Tux"
 msgstr "Haz que la bola vaya a Tux"
@@ -828,8 +848,8 @@ msgstr "Empuja la bola dentro del agujero negro de la derecha"
 msgid "Kick the ball into the goal"
 msgstr "Mete la bola en la meta"
 
-#: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:2
-#: ../boards/chess_movelearn.xml.in.h:3 ../boards/chess_partyend.xml.in.h:2
+#: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:3
+#: ../boards/chess_movelearn.xml.in.h:4 ../boards/chess_partyend.xml.in.h:3
 #: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5 ../boards/doubleclick.xml.in.h:4
 #: ../boards/erase.xml.in.h:3 ../boards/erase_doubleclick.xml.in.h:6
@@ -893,7 +913,7 @@ msgstr ""
 "GCompris que esté ejecutando la actividad de chat recibirá y mostrará tu "
 "mensaje."
 
-#: ../boards/chess.xml.in.h:1 ../boards/chess_computer.xml.in.h:3
+#: ../boards/chess.xml.in.h:1 ../boards/chess_computer.xml.in.h:4
 msgid "Play chess against the computer in a learning mode"
 msgstr "Juega al ajedrez contra la computadora en una forma didáctica"
 
@@ -901,21 +921,38 @@ msgstr "Juega al ajedrez contra la computadora en una forma didáctica"
 msgid "Practice chess"
 msgstr "Practica ajedrez"
 
-#: ../boards/chess_computer.xml.in.h:1 ../boards/chess_movelearn.xml.in.h:2
+#: ../boards/chess_computer.xml.in.h:1 ../boards/chess_movelearn.xml.in.h:1
 #: ../boards/chess_partyend.xml.in.h:1
+msgid ""
+"At the start, each player (one controlling the white pieces, the other "
+"controlling the black pieces) controls sixteen pieces: one king, one queen, "
+"two rooks, two knights, two bishops, and eight pawns. The object of the game "
+"is to checkmate the opponent's king, whereby the king is under immediate "
+"attack (in \"check\") and there is no way to remove it from attack on the "
+"next move."
+msgstr ""
+"Al inicio cada jugador (uno controlando las piezas blancas, el otro "
+"controlando las piezas negras) controla dieciséis piezas: un rey, una reina, "
+"dos torres, dos caballos, dos alfiles y ocho peones. El objetivo del juego "
+"es hacer jaque mate al rey del oponente, donde el rey esté bajo ataque "
+"directo (en «jaque») y no hay manera de evitar el ataque en la siguiente "
+"jugada."
+
+#: ../boards/chess_computer.xml.in.h:2 ../boards/chess_movelearn.xml.in.h:3
+#: ../boards/chess_partyend.xml.in.h:2
 msgid "Learning chess"
 msgstr "Aprender el ajedrez"
 
-#: ../boards/chess_computer.xml.in.h:4 ../boards/chess_movelearn.xml.in.h:4
-#: ../boards/chess_partyend.xml.in.h:4
+#: ../boards/chess_computer.xml.in.h:5 ../boards/chess_movelearn.xml.in.h:5
+#: ../boards/chess_partyend.xml.in.h:5
 msgid "The chess engine is from gnuchess."
 msgstr "El motor de ajedrez es el de gnuchess."
 
-#: ../boards/chess_movelearn.xml.in.h:1
+#: ../boards/chess_movelearn.xml.in.h:2
 msgid "Chess training. Catch the computer's pawns."
 msgstr "Entrenamiento de ajedrez. Atrapa al peón de la computadora."
 
-#: ../boards/chess_partyend.xml.in.h:3
+#: ../boards/chess_partyend.xml.in.h:4
 msgid "Play the end of the chess game against the computer"
 msgstr "Juega el último movimiento del juego de ajedrez contra la computadora"
 
@@ -3735,6 +3772,15 @@ msgid "Practice money usage including cents"
 msgstr "Practica de uso del dinero, incluyendo céntimos"
 
 #: ../boards/mosaic.xml.in.h:1
+msgid ""
+"Rebuild the left mosaic on the right area. Then, select a color in the "
+"bottom area and click on grey boxes to paint them."
+msgstr ""
+"Reconstruye el mosaico de la izquierda en el área de la derecha. Después "
+"selecciona un color en el área inferior y pulsa en las casillas grises para "
+"pintarlas."
+
+#: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
 msgstr "Reconstruye el mosaico"
 
@@ -5806,8 +5852,8 @@ msgstr ""
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
 #: ../src/gcompris/config.c:476 ../src/gcompris/config.c:486
-#: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
-#: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
+#: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:379
+#: ../src/gcompris/help.c:389 ../src/gcompris/images_selector.c:316
 msgid "OK"
 msgstr "Aceptar"
 
@@ -6443,19 +6489,19 @@ msgstr "No afectado"
 msgid "Users without a class"
 msgstr "Usuarios sin una clase"
 
-#: ../src/gcompris/help.c:196
+#: ../src/gcompris/help.c:194
 msgid "Prerequisite"
 msgstr "Prerequisito"
 
-#: ../src/gcompris/help.c:224
+#: ../src/gcompris/help.c:222
 msgid "Goal"
 msgstr "Objetivo"
 
-#: ../src/gcompris/help.c:252
+#: ../src/gcompris/help.c:250
 msgid "Manual"
 msgstr "Manual"
 
-#: ../src/gcompris/help.c:280
+#: ../src/gcompris/help.c:278
 msgid "Credit"
 msgstr "Crédito"
 

@@ -38,6 +38,11 @@ boards/babyshapes/board4_0.xml.in
 boards/babyshapes/board5_0.xml.in
 boards/babyshapes/board6_0.xml.in
 boards/babyshapes/board7_0.xml.in
+boards/babyshapes/board8_0.xml.in
+boards/babyshapes/board8_1.xml.in
+boards/babyshapes/board8_2.xml.in
+boards/babyshapes/board8_3.xml.in
+boards/babyshapes/board8_4.xml.in
 boards/ballcatch.xml.in
 boards/bargame.xml.in
 boards/billard.xml.in
@@ -108,6 +113,7 @@ boards/geography_country/board5_0.xml.in
 boards/geography_country/board5_1.xml.in
 boards/geography_country/board5_2.xml.in
 boards/geography_country/board6_0.xml.in
+boards/geography_country/board7_0.xml.in
 boards/geometry.xml.in
 boards/gletters.xml.in
 boards/gnumch-equality.xml.in
@@ -182,6 +188,7 @@ boards/paintings/board6_0.xml.in
 boards/paratrooper.xml.in
 boards/planegame.xml.in
 boards/puzzle.xml.in
+boards/pythontemplate.xml.in
 boards/pythontest.xml.in
 boards/railroad.xml.in
 boards/read_colors.xml.in

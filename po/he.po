@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gcompris.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-18 14:11+0200\n"
-"PO-Revision-Date: 2008-10-05 00:31+0200\n"
+"PO-Revision-Date: 2008-10-10 09:52+0200\n"
 "Last-Translator: jorge Mariano\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,11 +30,11 @@ msgstr ""
 
 #: ../boards/administration.xml.in.h:4
 msgid "GCompris Administration Menu"
-msgstr "המסך הראשי של Gcompris"
+msgstr "המסך הראשי של ג’יקומפרי"
 
 #: ../boards/administration.xml.in.h:5
 msgid "If you want to fine tune GCompris to your needs, you can use the administration module here. The ultimate goal is to provide child-specific reporting for parents and teacher who want to monitor the progress, strengths and needs of their children."
-msgstr "אם אתה רוצה לכוון GCompris בסדר לצרכים שלך, אתה יכול להשתמש בכלי ניהול מודול כאן. את המטרה היא לספק לילדים דיווח ספציפית עבור ההורים מורה שרוצים לעקוב אחר התקדמות כוחות וצרכים של ילדיהם."
+msgstr "אם אתה רוצה לכוון ג’יקומפרי בסדר לצרכים שלך, אתה יכול להשתמש בכלי ניהול מודול כאן. את המטרה היא לספק לילדים דיווח ספציפית עבור ההורים מורה שרוצים לעקוב אחר התקדמות כוחות וצרכים של ילדיהם."
 
 #: ../boards/administration.xml.in.h:6
 msgid "Left-Click with the mouse to select an activity"
@@ -378,7 +378,7 @@ msgstr "יש ללחוץ על מקש העכבר השמאלי מעל פעילות 
 #: ../boards/erase_clic.xml.in.h:1
 #: ../boards/erase_double_clic.xml.in.h:1
 msgid "Animal pictures come from the Animal Photography Page of Ralf Schmode (http://schmode.net/). Ralf has kindly permitted Gcompris to include his pictures. Thanks a lot, Ralf."
-msgstr "תמונות החיות לקוחות מעמוד צילומי החיות של ראלף שמודה (http://schmode.net/). ראלף נתן את הסכמתו לכלול את התמונות. תודה רבה ראלף."
+msgstr "תמונות החיות לקוחות מעמוד צילומי החיות של Ralf Schmode (http://schmode.net/). Ralf נתן את הסכמתו לכלול את התמונות. תודה רבה Ralf."
 
 #: ../boards/algebra_guesscount.xml.in.h:2
 msgid "At the top of the board area, choose the numbers and arithmetic operators that give the specified result. You can deselect a number or operator by clicking on it again."
@@ -638,11 +638,11 @@ msgstr "בדוק עם חבריך"
 
 #: ../boards/chat.xml.in.h:2
 msgid "This chat activity only works on the local network"
-msgstr "	צ 'ט פעילותם זה עובד רק ברשת המקומית"
+msgstr "צ 'ט פעילותם זה עובד רק ברשת המקומית"
 
 #: ../boards/chat.xml.in.h:3
 msgid "This chat activity will only work with other GCompris users on your local network, not on the Internet. To use it, just type in your message and hit Enter. Your message is then broadcast on the local network, and any GCompris program running the chat activity on that local network will receive and display your message."
-msgstr "זה יהיה צ 'ט פעילותם לעבוד רק עם משתמשים אחרים GCompris על הרשת המקומית שלך, לא באינטרנט. כדי להשתמש בו, פשוט להקליד את ההודעה ולחץ על Enter. את ההודעה לאחר מכן שידור ברשת המקומית, וכל תוכנית GCompris מפעיל את הצ 'אט על פעילות הרשת המקומית יקבלו ולהציג את ההודעה."
+msgstr "זה יהיה צ 'ט פעילותם לעבוד רק עם משתמשים אחרים ג’יקומפרי על הרשת המקומית שלך, לא באינטרנט. כדי להשתמש בו, פשוט להקליד את ההודעה ולחץ על Enter. את ההודעה לאחר מכן שידור ברשת המקומית, וכל תוכנית ג’יקומפרי מפעיל את הצ 'אט על פעילות הרשת המקומית יקבלו ולהציג את ההודעה."
 
 #: ../boards/chess.xml.in.h:1
 #: ../boards/chess_computer.xml.in.h:3
@@ -1096,7 +1096,7 @@ msgstr "חופשי ליצור חשמלית עם סכימה בזמן אמת הד�
 
 #: ../boards/electric.xml.in.h:5
 msgid "GCompris uses the Gnucap electric simulator as a backend. You can get more information on gnucap at &lt;http://geda.seul.org/tools/gnucap/&gt;."
-msgstr " הGCompris משתמש בGnucap חשמלי מדמה בתור backend. אתה יכול לקבל עוד מידע על gnucap ב &lt;http://geda.seul.org/tools/gnucap/&gt;."
+msgstr " הג’יקומפרי משתמש בGnucap חשמלי מדמה בתור backend. אתה יכול לקבל עוד מידע על gnucap ב &lt;http://geda.seul.org/tools/gnucap/&gt;."
 
 #: ../boards/electric.xml.in.h:6
 msgid "Requires some basic understanding of the concept of electricity."
@@ -1214,7 +1214,7 @@ msgstr "העבר את העכבר מעל חלק בהפסד של זרנוק.פעו
 
 #: ../boards/followline.xml.in.h:4
 msgid "Tux needs to water the flowers, but the hose is blocked."
-msgstr "הTux צריך להשקות את הפרחים, אבל קולח חסומה"
+msgstr "טוקס צריך להשקות את הפרחים, אבל קולח חסומה"
 
 #: ../boards/fun.xml.in.h:1
 msgid "Go to Amusement activities"
@@ -1226,11 +1226,11 @@ msgstr "עבור לפעילוית שעשוע"
 
 #: ../boards/gcompris/mimetypes/mime_type.xml.in.h:1
 msgid "gcompris animation"
-msgstr "תצורת gcompris"
+msgstr "תצורת ג’יקומפרי"
 
 #: ../boards/gcompris/mimetypes/mime_type.xml.in.h:2
 msgid "gcompris drawing"
-msgstr "עורך gcompris"
+msgstr "עורך ג’יקומפרי"
 
 #: ../boards/gcompris/mimetypes/mime_type.xml.in.h:3
 msgid "svg drawing"
@@ -2300,11 +2300,11 @@ msgstr "מצוירת יד. עליך לזהות אם זוהי יד ימין או 
 
 #: ../boards/login.xml.in.h:1
 msgid "GCompris identifies each child, so we can provide child-specific reports."
-msgstr "GCompris מזהה לכל ילד, כדי שנוכל לספק דוחות הילד הספציפ"
+msgstr "ג’יקומפרי מזהה לכל ילד, כדי שנוכל לספק דוחות הילד הספציפ"
 
 #: ../boards/login.xml.in.h:2
 msgid "GCompris login screen"
-msgstr "המסך הראשי של Gcompris"
+msgstr "המסך הראשי של ג’יקומפרי"
 
 #: ../boards/login.xml.in.h:3
 msgid ""
@@ -2317,15 +2317,15 @@ msgid ""
 "is the name of a profile as you created it in Administration."
 msgstr ""
 "כדי להפעיל את מסך הכניסה, \n"
-"תחילה עליך להוסיף את ניהול המשתמשים של חלק GCompris.\n"
+"תחילה עליך להוסיף את ניהול המשתמשים של חלק ג’יקומפרי.\n"
 "אתה מפעיל על ידי מינהל גישה 'gcompris -a'.\n"
 ".ב ניהול, אתה יכול ליצור פרופילים שונים. בכל פרופיל,\n"
 " אתה יכול לקבל קבוצה שונה של משתמשים לבחור אילו פעילויות הם העומדים לרשותם.\n"
-"כדי להפעיל GCompris פרופיל מסוים, אתה משתמש ב 'gcompris-p פרופיל' בו 'פרופיל' הוא שם פרופיל כפי יצרת אותו המינהל."
+"כדי להפעיל ג’יקומפרי פרופיל מסוים, אתה משתמש ב 'gcompris -p פרופיל' בו 'פרופיל' הוא שם פרופיל כפי יצרת אותו המינהל."
 
 #: ../boards/login.xml.in.h:10
 msgid "Select or enter your name to log in to GCompris"
-msgstr "בחר או הזן את שמך כדי להיכנס GCompris"
+msgstr "בחר או הזן את שמך כדי להיכנס ג’יקומפרי"
 
 #: ../boards/magic_hat_plus.xml.in.h:1
 #: ../boards/memory_add.xml.in.h:1
@@ -2748,16 +2748,16 @@ msgstr "על מנת להשתמש בזה, לחיצה פשוטה על האייקו
 
 #: ../boards/menu.xml.in.h:15
 msgid "GCompris Main Menu"
-msgstr "המסך הראשי של Gcompris"
+msgstr "המסך הראשי של ג’יקומפרי"
 
 #: ../boards/menu.xml.in.h:16
 #: ../src/boards/menu2.c:1008
 msgid "GCompris is a collection of educational games that provides different activities for children aged 2 and up."
-msgstr "Gcompris הוא משחק חינוכי המציג מגוון פעילויות לילדים בגילאי שלוש עד שמונה"
+msgstr "ג’יקומפרי הוא משחק חינוכי המציג מגוון פעילויות לילדים בגילאי שלוש עד שמונה"
 
 #: ../boards/menu.xml.in.h:18
 msgid "The goal of gcompris is to provide a free alternative to popular proprietary edutainment software"
-msgstr "מטרת gcompris היא לספק אלטרנטיבה חופשית לתוכנות קנייניות פופולריות המשלבות חינוך והנאה"
+msgstr "מטרת ג’יקומפרי היא לספק אלטרנטיבה חופשית לתוכנות קנייניות פופולריות המשלבות חינוך והנאה"
 
 #: ../boards/miscelaneous.xml.in.h:1
 msgid "Miscellaneous activities"
@@ -3401,7 +3401,7 @@ msgstr "סיום חידה דורש סבלנות ואת היכולת הגיוני
 
 #: ../boards/sudoku.xml.in.h:2
 msgid "For the first level with colored symbols, drag symbols on the left to their target position. For the higher levels, click on an empty square to give it the keyboard focus. Then enter a possible letter or number. GCompris will not let you enter invalid data."
-msgstr "עבור הרמה הראשונה עם סמלים צבעוניים, לגרור סמלים מצד שמאל כדי לכוון את המיקום.עבור רמות גבוהות של לחץ על ריבוע ריק כדי לתת לו את המקלדת להתמקד.לאחר מכן הזן מספר או אות האפשר.GCompris לא יאפשר לך להזין נתונים לא חוקיים."
+msgstr "עבור הרמה הראשונה עם סמלים צבעוניים, לגרור סמלים מצד שמאל כדי לכוון את המיקום.עבור רמות גבוהות של לחץ על ריבוע ריק כדי לתת לו את המקלדת להתמקד.לאחר מכן הזן מספר או אות האפשר.ג’יקומפרי לא יאפשר לך להזין נתונים לא חוקיים."
 
 #: ../boards/sudoku.xml.in.h:3
 msgid "Sudoku, place unique symbols in a square."
@@ -3450,7 +3450,7 @@ msgstr "המטרה היא לעצב טופס מסוים עם שבעה חתיכו�
 
 #: ../boards/tangram.xml.in.h:11
 msgid "The original code was written by Philippe Banwarth in 1999. It was ported to GCompris by Yves Combe in 2005."
-msgstr "את הקוד המקורי נכתב בשנת 1999 על ידי  Philippe Banwarth. זה היה GCompris ומתאימה להתקנה על ידי Yves Combe בשנת 2005."
+msgstr "את הקוד המקורי נכתב בשנת 1999 על ידי  Philippe Banwarth. זה היה ג’יקומפרי ומתאימה להתקנה על ידי Yves Combe בשנת 2005."
 
 #: ../boards/tangram.xml.in.h:12
 msgid "The tangram puzzle game"
@@ -3552,7 +3552,7 @@ msgstr "את מעבד תמלילים"
 
 #: ../gcompris-edit.desktop.in.h:1
 msgid "Administration for gcompris"
-msgstr "עורך ל gcompris"
+msgstr "עורך לג’יקומפרי"
 
 #: ../gcompris.desktop.in.h:1
 msgid "Educational game for ages 2 to 10"
@@ -3560,7 +3560,7 @@ msgstr "משחק חינוכי החל מגילאי 2 ל 10"
 
 #: ../gcompris.desktop.in.h:2
 msgid "Educational suite GCompris"
-msgstr "חבילת חינוכיים GCompris"
+msgstr "חבילת חינוכיים ג’יקומפרי"
 
 #: ../gcompris.desktop.in.h:3
 msgid "Multi-activity educational game"
@@ -3651,7 +3651,7 @@ msgid ""
 "enable the sound"
 msgstr ""
 "שגיאה: אי אפשר להפעיל את הפעילות ללא קול. \n"
-"עבור למסך התצורה והפעל את הקול."
+" עבור למסך התצורה והפעל את הקול."
 
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
@@ -4200,7 +4200,7 @@ msgstr "חברים שלך"
 
 #: ../src/boards/python/chat.py:157
 msgid "Type your message here, to send to other GCompris users on your local network."
-msgstr "הקלד את הודעתך כאן, כדי לשלוח GCompris משתמשים אחרים על הרשת המקומית שלך."
+msgstr "הקלד את הודעתך כאן, כדי לשלוח ג’יקומפרי משתמשים אחרים על הרשת המקומית שלך."
 
 #: ../src/boards/python/electric.py:94
 msgid ""
@@ -4416,7 +4416,7 @@ msgstr "זהו plugin הראשון ב gcompris מקודד את שפת התכנו
 msgid ""
 "It is now possible to develop gcompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
-msgstr "כיום ניתן לפתח פעילויות gcompris ב-C או פייתון.הודות Olivier Samys מי עושה את זה אפשרי."
+msgstr "כיום ניתן לפתח פעילויות ג’יקומפרי ב-C או פייתון.הודות Olivier Samys מי עושה את זה אפשרי."
 
 #: ../src/boards/python/pythontest.py:163
 msgid "This activity is not playable, just a test"
@@ -4533,11 +4533,11 @@ msgstr "מחכים לסיים Tuxpaint"
 
 #: ../src/boards/python/tuxpaint.py:210
 msgid "Inherit fullscreen setting from GCompris"
-msgstr "הגדרה לרשת מלא מאת GCompris"
+msgstr "הגדרה לרשת מלא מאת ג’יקומפרי"
 
 #: ../src/boards/python/tuxpaint.py:214
 msgid "Inherit size setting from GCompris (800x600, 640x480)"
-msgstr "הגדרת גודל לרשת מ GCompris (800x600, 640x480)"
+msgstr "הגדרת גודל לרשת מ ג’יקומפרי (800x600, 640x480)"
 
 #: ../src/boards/python/tuxpaint.py:218
 msgid "Disable shape rotation"
@@ -4687,7 +4687,7 @@ msgstr ""
 #: ../src/gcompris/about.c:96
 #: ../src/gcompris/about.c:106
 msgid "About GCompris"
-msgstr "על GCompris"
+msgstr "על ג’יקומפרי"
 
 #: ../src/gcompris/about.c:117
 msgid "Translators:"
@@ -4698,7 +4698,7 @@ msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
 msgstr ""
-"עמוד הבית של GCompris\n"
+"עמוד הבית של ג’יקומפרי\n"
 "http://gcompris.net"
 
 #: ../src/gcompris/about.c:215
@@ -4718,7 +4718,7 @@ msgstr "אישור"
 
 #: ../src/gcompris/bar.c:579
 msgid "GCompris confirmation"
-msgstr "תצורת GCompris"
+msgstr "תצורת ג’יקומפרי"
 
 #: ../src/gcompris/bar.c:580
 msgid "Are you sure you want to quit?"
@@ -4744,7 +4744,7 @@ msgstr "	בחר את השפה כדי להשתמש בכל הפרסים"
 
 #: ../src/gcompris/board_config.c:762
 msgid "Global GCompris mode"
-msgstr "GCompris למצב גלובליים"
+msgstr "ג’יקומפרי למצב גלובליים"
 
 #: ../src/gcompris/board_config.c:763
 msgid "Normal"
@@ -5011,12 +5011,12 @@ msgstr "800X600 (מצב ברירת המחדל)"
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
-msgstr "<i>	Gcompris להשתמש כדי לסנן במודול ניהול לוחות</i>"
+msgstr "<i>	ג’יקומפרי להשתמש כדי לסנן במודול ניהול לוחות</i>"
 
 #: ../src/gcompris/config.c:188
 #: ../src/gcompris/config.c:198
 msgid "GCompris Configuration"
-msgstr "תצורת GCompris"
+msgstr "תצורת ג’יקומפרי"
 
 #: ../src/gcompris/config.c:274
 msgid "Fullscreen"
@@ -5094,7 +5094,7 @@ msgstr "הפעל את התכנה ללא קול"
 
 #: ../src/gcompris/gcompris.c:138
 msgid "run gcompris with the default gnome cursor."
-msgstr "הרצה של GCompris עם סמן ברירת המחדל של גנום"
+msgstr "הרצה של ג’יקומפרי עם סמן ברירת המחדל של גנום"
 
 #: ../src/gcompris/gcompris.c:141
 msgid "display only activities with this difficulty level."
@@ -5118,15 +5118,15 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:156
 msgid "Run gcompris with local menu (e.g -l /reading will let you play only activities in the reading directory, -l /strategy/connect4 only the connect4 activity)"
-msgstr "לרוץ עם gcompris המקומי התפריט (e.g -l /reading יאפשר לך לשחק רק פעולות קריאה בספרייה, -l /strategy/connect4 רק את פעילות connect4)"
+msgstr "לרוץ עם ג’יקומפרי המקומי התפריט (e.g -l /reading יאפשר לך לשחק רק פעולות קריאה בספרייה, -l /strategy/connect4 רק את פעילות לחבר 4)"
 
 #: ../src/gcompris/gcompris.c:159
 msgid "Run GCompris with local activity directory added to menu"
-msgstr "הפעלה GCompris עם פעילות ספריה מקומיות תפריט נוסף"
+msgstr "הפעלה ג’יקומפרי עם פעילות ספריה מקומיות תפריט נוסף"
 
 #: ../src/gcompris/gcompris.c:162
 msgid "Run GCompris in administration and user-management mode"
-msgstr "הפעלה  GCompris ב מצב ניהול וניהול משתמשים "
+msgstr "הפעלה  ג’יקומפרי ב מצב ניהול וניהול משתמשים "
 
 #: ../src/gcompris/gcompris.c:165
 msgid "Use alternate database for profiles [$HOME/.config/gcompris/gcompris_sqlite.db]"
@@ -5178,7 +5178,7 @@ msgstr "הצג את המשאבים על stdout מבוסס על פעילות הנ
 
 #: ../src/gcompris/gcompris.c:201
 msgid "GCompris will get images, sounds and activity data from this server if not found locally."
-msgstr "GCompris תקבלו תמונות, צלילים ואת נתוני פעילות זו אם לא נמצא שרת מקומי."
+msgstr "ג’יקומפרי תקבלו תמונות, צלילים ואת נתוני פעילות זו אם לא נמצא שרת מקומי."
 
 #: ../src/gcompris/gcompris.c:204
 msgid "Only when --server is provided, disable check for local resource first. Data are always taken from the web server."
@@ -5209,7 +5209,7 @@ msgid ""
 "Licence: GPL\n"
 "More info at http://gcompris.net\n"
 msgstr ""
-"GCompris\n"
+"ג’יקומפרי\n"
 "גרסה : %s\n"
 "רישיון: GPL\n"
 "יותר אינפורמציה ב : http://gcompris.net\n"
@@ -5261,7 +5261,7 @@ msgstr "קריאה לי"
 
 #: ../src/gcompris/properties.c:486
 msgid "This directory contains the files you create with the GCompris educational suite\n"
-msgstr "תיקייה זו מכילה את הקבצים שיצרת עם Gcompris\n"
+msgstr "תיקייה זו מכילה את הקבצים שיצרת עם ג’יקומפרי\n"
 
 #: ../src/gcompris/properties.c:493
 msgid ""
