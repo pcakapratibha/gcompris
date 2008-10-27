@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-08 13:45+0200\n"
-"PO-Revision-Date: 2008-05-08 13:52+0100\n"
+"POT-Creation-Date: 2008-10-27 11:25+0100\n"
+"PO-Revision-Date: 2008-10-27 11:58+0100\n"
 "Last-Translator: Bruno Coudoin <bruno.coudoin@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -554,8 +554,20 @@ msgid "Good mouse-control"
 msgstr "Bien savoir manipuler la souris"
 
 #: ../boards/babyshapes.xml.in.h:5
-msgid "The dog is provided by Andre Connes and released under the GPL"
-msgstr "Le chien est fourni par André Connes et est placé sous licence GPL."
+msgid ""
+"The dog is provided by Andre Connes and released under the GPL.\n"
+"Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel Malissin et frédéric Valdes. Licence: Free but requires the site and author. Source: http://www.galerie.roi-president.com\n"
+"Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
+msgstr ""
+"Le chien est fourni sous licence GPL par Andre Connes.\n"
+"Artiste : Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artiste : Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel Malissin et frédéric Valdes. Licence: Free but requires the site and author. Source: http://www.galerie.roi-president.com\n"
+"Artiste : Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Artiste : Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -568,6 +580,26 @@ msgstr "Lock sur l'herbe."
 #: ../boards/babyshapes/board7_0.xml.in.h:1
 msgid "Lock with colored shapes."
 msgstr "Lock avec des formes colorées."
+
+#: ../boards/babyshapes/board8_0.xml.in.h:1
+msgid "Gauguin, Arearea - 1892"
+msgstr "Gauguin,  Joyeusetés - 1892"
+
+#: ../boards/babyshapes/board8_1.xml.in.h:1
+msgid "Pieter Bruegel, Bauernhochzeit - 1568"
+msgstr "Pieter Bruegel, Le Repas de noce - 1568"
+
+#: ../boards/babyshapes/board8_2.xml.in.h:1
+msgid "The Lady and the Unicorn - XVe century"
+msgstr "La Dame à la licorne - XVe siècle"
+
+#: ../boards/babyshapes/board8_3.xml.in.h:1
+msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+msgstr "Vincent Van Gogh, Chambre à Coucher à Arles - 1888"
+
+#: ../boards/babyshapes/board8_4.xml.in.h:1
+msgid "Ambrosius Bosschaert, The Elder - 1614"
+msgstr "Ambrosius Bosschaert, The Elder - 1614"
 
 #: ../boards/ballcatch.xml.in.h:1
 msgid "Make the ball go to Tux"
@@ -609,9 +641,9 @@ msgid "Kick the ball into the goal"
 msgstr "Envoie le ballon dans les buts."
 
 #: ../boards/billard.xml.in.h:3
-#: ../boards/chess_computer.xml.in.h:2
-#: ../boards/chess_movelearn.xml.in.h:3
-#: ../boards/chess_partyend.xml.in.h:2
+#: ../boards/chess_computer.xml.in.h:3
+#: ../boards/chess_movelearn.xml.in.h:4
+#: ../boards/chess_partyend.xml.in.h:3
 #: ../boards/clickgame.xml.in.h:5
 #: ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5
@@ -661,7 +693,7 @@ msgid "This chat activity will only work with other GCompris users on your local
 msgstr "Cette activité de discussion ne fonctionne qu'avec d'autres utilisateurs de GCompris sur le réseau local, mais pas sur Internet. Pour l'utiliser, il suffit de saisir un message et d'appuyer sur la touche « Entrée ». Ton message est ensuite diffusé sur tout le réseau local, et si un autre utilisateur de ton réseau utilise au même moment l'activité de discussion de GCompris, il recevra ton message."
 
 #: ../boards/chess.xml.in.h:1
-#: ../boards/chess_computer.xml.in.h:3
+#: ../boards/chess_computer.xml.in.h:4
 msgid "Play chess against the computer in a learning mode"
 msgstr "Joue aux échecs contre l'ordinateur en mode apprentissage."
 
@@ -670,22 +702,28 @@ msgid "Practice chess"
 msgstr "Pratique des échecs"
 
 #: ../boards/chess_computer.xml.in.h:1
-#: ../boards/chess_movelearn.xml.in.h:2
+#: ../boards/chess_movelearn.xml.in.h:1
 #: ../boards/chess_partyend.xml.in.h:1
+msgid "At the start, each player (one controlling the white pieces, the other controlling the black pieces) controls sixteen pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. The object of the game is to checkmate the opponent's king, whereby the king is under immediate attack (in \"check\") and there is no way to remove it from attack on the next move."
+msgstr "Au départ, chaque joueur (l'un contrôle les pièces blanches, l'autre les pièces noires) contrôle seize pièces : un roi, une reine, deux tours, deux cavaliers, deux fous, et huit pions. L'objectif du jeu est de mettre échec et mat le roi opposant, c'est à dire que le roi subit une attaque immédiate (en échec) et qu'il n'y a pas de possibilité de le protéger au coup suivant."
+
+#: ../boards/chess_computer.xml.in.h:2
+#: ../boards/chess_movelearn.xml.in.h:3
+#: ../boards/chess_partyend.xml.in.h:2
 msgid "Learning chess"
 msgstr "Apprentissage des échecs"
 
-#: ../boards/chess_computer.xml.in.h:4
-#: ../boards/chess_movelearn.xml.in.h:4
-#: ../boards/chess_partyend.xml.in.h:4
+#: ../boards/chess_computer.xml.in.h:5
+#: ../boards/chess_movelearn.xml.in.h:5
+#: ../boards/chess_partyend.xml.in.h:5
 msgid "The chess engine is from gnuchess."
 msgstr "Le moteur du jeu d'échecs est GnuChess."
 
-#: ../boards/chess_movelearn.xml.in.h:1
+#: ../boards/chess_movelearn.xml.in.h:2
 msgid "Chess training. Catch the computer's pawns."
 msgstr "Entraînement aux échecs. Joue des fins de partie contre l'ordinateur (le roi et un pion)."
 
-#: ../boards/chess_partyend.xml.in.h:3
+#: ../boards/chess_partyend.xml.in.h:4
 msgid "Play the end of the chess game against the computer"
 msgstr "Joue des fins de partie d'échec contre l'ordinateur (roi seul)."
 
@@ -3076,6 +3114,10 @@ msgid "Practice money usage including cents"
 msgstr "Apprends à manipuler de la monnaie avec les centimes."
 
 #: ../boards/mosaic.xml.in.h:1
+msgid "Rebuild the left mosaic on the right area. Then, select a color in the bottom area and click on grey boxes to paint them."
+msgstr "Reconstruis la mosaïque sur la droite. Sélectionne une couleur dans la zone du bas et clique sur les carrés gris pour les peindre."
+
+#: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
 msgstr "Reconstruire la mosaïque"
 
@@ -3094,22 +3136,6 @@ msgstr "Numération"
 #: ../boards/numeration.xml.in.h:2
 msgid "Numeration activities."
 msgstr "Activités de numération."
-
-#: ../boards/oscar_and_friends.xml.in.h:1
-msgid "Improve reading skill and the ability to understand what is read."
-msgstr "Améliore les capacités de lecture et la compréhension."
-
-#: ../boards/oscar_and_friends.xml.in.h:2
-msgid "Read and play with the story"
-msgstr "Lis et joue avec l'histoire"
-
-#: ../boards/oscar_and_friends.xml.in.h:3
-msgid "The story of Oscar and friend"
-msgstr "L'histoire d'Oscar et de ses amis"
-
-#: ../boards/oscar_and_friends.xml.in.h:4
-msgid "reading"
-msgstr "lecture"
 
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
@@ -3901,8 +3927,8 @@ msgstr ""
 #: ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832
 #: ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1848
-#: ../src/boards/smallnumbers.c:591
+#: ../src/boards/shapegame.c:1866
+#: ../src/boards/smallnumbers.c:592
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -3966,7 +3992,7 @@ msgstr "Clique sur le canard blanc"
 #: ../src/boards/colors.c:176
 #: ../src/boards/python/admin/board_list.py:670
 #: ../src/boards/python/pythontest.py:473
-#: ../src/boards/smallnumbers.c:611
+#: ../src/boards/smallnumbers.c:612
 msgid "Select sound locale"
 msgstr "Sélectionne la langue des sons"
 
@@ -3983,7 +4009,7 @@ msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 #: ../src/boards/gletters.c:887
-#: ../src/boards/smallnumbers.c:609
+#: ../src/boards/smallnumbers.c:610
 msgid "Enable sounds"
 msgstr "Activer les sons"
 
@@ -4688,24 +4714,6 @@ msgstr ""
 "Retourne dans la boîte de dialogue de\n"
 "configuration pour activer le son."
 
-#: ../src/boards/python/oscar_and_friends.py:116
-msgid ""
-"Below the surface, Oscar the octopus and his friends sat on a rock,\n"
-"watching the bad weather above them."
-msgstr "Sous la surface, Oscar le poulpe et ses amis s'assirent sur un rocher, en regardant à quel point le temps était mauvais au-dessus d'eux."
-
-#: ../src/boards/python/oscar_and_friends.py:117
-msgid "They were all happy that the storms never reached all the way down to them."
-msgstr "Ils étaient tous heureux que les tempêtes ne les aient jamais atteints."
-
-#: ../src/boards/python/oscar_and_friends.py:118
-msgid "No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr "Quelle que soit la situation là-haut, le fond était toujours calme et paisible."
-
-#: ../src/boards/python/oscar_and_friends.py:119
-msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr "Les meilleurs amis d'Oscar étaient Charlie le crabe et Sandy l'étoile de mer."
-
 #: ../src/boards/python/pythontest.py:148
 msgid ""
 "This is the first plugin in GCompris coded in the Python\n"
@@ -5009,11 +5017,11 @@ msgstr "Ce logiciel est un paquet GNU et est soumis à la Licence Publique Gén�
 
 #: ../src/gcompris/about.c:279
 #: ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:475
-#: ../src/gcompris/config.c:485
+#: ../src/gcompris/config.c:476
+#: ../src/gcompris/config.c:486
 #: ../src/gcompris/dialog.c:102
-#: ../src/gcompris/help.c:381
-#: ../src/gcompris/help.c:391
+#: ../src/gcompris/help.c:379
+#: ../src/gcompris/help.c:389
 #: ../src/gcompris/images_selector.c:316
 msgid "OK"
 msgstr "Valider"
@@ -5311,42 +5319,46 @@ msgid "Urdu"
 msgstr "Ourdou"
 
 #: ../src/gcompris/config.c:119
+msgid "Ukrainian"
+msgstr "Ukrainien"
+
+#: ../src/gcompris/config.c:120
 msgid "Vietnamese"
 msgstr "Vietnamien"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Walloon"
 msgstr "Wallon"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Simplified)"
 msgstr "Chinois (simplifié)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Traditional)"
 msgstr "Chinois (traditionnel)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "No time limit"
 msgstr "Sans limite de temps"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Slow timer"
 msgstr "Compteur lent"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Normal timer"
 msgstr "Compteur normal"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:131
 msgid "Fast timer"
 msgstr "Compteur rapide"
 
-#: ../src/gcompris/config.c:135
+#: ../src/gcompris/config.c:136
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (par défaut pour GCompris)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:141
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5354,40 +5366,40 @@ msgstr ""
 "<i>Filtrez les activités avec\n"
 "le module d'administration</i>"
 
-#: ../src/gcompris/config.c:195
-#: ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:196
+#: ../src/gcompris/config.c:206
 msgid "GCompris Configuration"
 msgstr "Configuration de GCompris"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:282
 msgid "Fullscreen"
 msgstr "Plein écran"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:325
 msgid "Music"
 msgstr "Musique"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:353
 msgid "Effect"
 msgstr "Effet"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:389
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Impossible d'ouvrir le répertoire de thèmes : %s"
 
-#: ../src/gcompris/config.c:419
-#: ../src/gcompris/config.c:869
-#: ../src/gcompris/config.c:883
+#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:870
+#: ../src/gcompris/config.c:884
 #, c-format
 msgid "Skin : %s"
 msgstr "Thème : %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:422
 msgid "SKINS NOT FOUND"
 msgstr "THÈMES INTROUVABLES"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:547
 msgid "English (United State)"
 msgstr "Anglais (États-Unis)"
 
@@ -5598,19 +5610,19 @@ msgstr "Non affecté"
 msgid "Users without a class"
 msgstr "Utilisateurs sans classe"
 
-#: ../src/gcompris/help.c:196
+#: ../src/gcompris/help.c:194
 msgid "Prerequisite"
 msgstr "Prérequis"
 
-#: ../src/gcompris/help.c:224
+#: ../src/gcompris/help.c:222
 msgid "Goal"
 msgstr "Objectif"
 
-#: ../src/gcompris/help.c:252
+#: ../src/gcompris/help.c:250
 msgid "Manual"
 msgstr "Manuel"
 
-#: ../src/gcompris/help.c:280
+#: ../src/gcompris/help.c:278
 msgid "Credit"
 msgstr "Remerciements"
 
@@ -5642,6 +5654,36 @@ msgstr "Temps écoulé"
 msgid "Remaining Time = %d"
 msgstr "Temps restant = %d"
 
+#~ msgid "The dog is provided by Andre Connes and released under the GPL"
+#~ msgstr "Le chien est fourni par André Connes et est placé sous licence GPL."
+#~ msgid "Improve reading skill and the ability to understand what is read."
+#~ msgstr "Améliore les capacités de lecture et la compréhension."
+#~ msgid "Read and play with the story"
+#~ msgstr "Lis et joue avec l'histoire"
+#~ msgid "The story of Oscar and friend"
+#~ msgstr "L'histoire d'Oscar et de ses amis"
+#~ msgid "reading"
+#~ msgstr "lecture"
+#~ msgid ""
+#~ "Below the surface, Oscar the octopus and his friends sat on a rock,\n"
+#~ "watching the bad weather above them."
+#~ msgstr ""
+#~ "Sous la surface, Oscar le poulpe et ses amis s'assirent sur un rocher, en "
+#~ "regardant à quel point le temps était mauvais au-dessus d'eux."
+#~ msgid ""
+#~ "They were all happy that the storms never reached all the way down to "
+#~ "them."
+#~ msgstr ""
+#~ "Ils étaient tous heureux que les tempêtes ne les aient jamais atteints."
+#~ msgid ""
+#~ "No matter how bad it was up there, the bottom was always calm and quiet."
+#~ msgstr ""
+#~ "Quelle que soit la situation là-haut, le fond était toujours calme et "
+#~ "paisible."
+#~ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
+#~ msgstr ""
+#~ "Les meilleurs amis d'Oscar étaient Charlie le crabe et Sandy l'étoile de "
+#~ "mer."
 #~ msgid ""
 #~ "Error: The external program gnuchess is required\n"
 #~ "to play chess in GCompris.\n"
