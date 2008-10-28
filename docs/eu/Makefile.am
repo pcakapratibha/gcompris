@@ -15,11 +15,11 @@ all: $(doc)
 # FIXME: Is it possible to have I18N info files installed ?
 #info_TEXINFOS = gcompris.texi
 
-install-data-local:
-	$(mkinstalldirs) $(DESTDIR)$(gcompris_helpdir)
-	$(INSTALL_DATA)  gcompris.html $(DESTDIR)$(gcompris_helpdir)
-	$(INSTALL_DATA)  $(srcdir)/overview.jpg $(DESTDIR)$(gcompris_helpdir)
-	$(INSTALL_DATA)  $(srcdir)/topic.dat $(DESTDIR)$(gcompris_helpdir)
+# install-data-local:
+#      $(mkinstalldirs) $(DESTDIR)$(gcompris_helpdir)
+#      $(INSTALL_DATA)  gcompris.html $(DESTDIR)$(gcompris_helpdir)
+#      $(INSTALL_DATA)  $(srcdir)/overview.jpg $(DESTDIR)$(gcompris_helpdir)
+#      $(INSTALL_DATA)  $(srcdir)/topic.dat $(DESTDIR)$(gcompris_helpdir)
 
 gcompris.html: gcompris.texi
 	texi2html -monolithic $<

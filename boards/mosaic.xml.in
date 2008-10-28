@@ -12,7 +12,7 @@
         <_description >Rebuild the mosaic</_description>
         <_prerequisite></_prerequisite>
         <_goal></_goal>
-        <_manual>Rebuild the left mosaic on the right area. Then, select a color in the bottom area and click on grey boxes to paint them.</_manual>
+        <_manual>Rebuild the left mosaic on the right area. Select a color in the bottom area and click on grey boxes to paint them.</_manual>
         <_credit></_credit>
   </Board>
   <Data directory=""/>
