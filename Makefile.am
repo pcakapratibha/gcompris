@@ -58,15 +58,17 @@ EXTRA_DIST = \
 	config.h.mingw.in Makefile.mingw.in global_win32.mak gcompris.ico gc_admin.ico gcompris-uninstal.ico \
 	gcompris-installer.nsi.in gcompris-installer.nsi
 
-
 distcore = $(PACKAGE)-core-$(VERSION)
 
 install-data-local:
 	@$(NORMAL_INSTALL)
 	if test -d $(srcdir)/$(PACKAGE_DATA_DIR); then \
 	  $(mkinstalldirs) $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR); \
-	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "*.in" --exclude "*~" --exclude "Makefile" --exclude "Makefile.am" --exclude .svn --exclude .xvpics --exclude "1[1-9].ogg"  --exclude "2?.ogg" * | ( cd $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) ; tar xf -) ; cd .. ; \
+	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "*.in" --exclude "*~" --exclude "Makefile" --exclude "Makefile.am" --exclude .svn --mode 644 * | ( cd $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) ; tar xf - ; find -type d -exec chmod 755 '{}' \;) ; cd .. ; \
 	fi
+
+uninstall-local:
+	-find $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) -name '*' -delete
 
 dist-hook:
 	if test -d $(PACKAGE_DATA_DIR); then \
@@ -75,7 +77,8 @@ dist-hook:
 	fi
 
 
-CLEANFILES = core-translation-report gcompris.desktop gcompris-edit.desktop gcompris.spec config.h.mingw
+CONFIG_CLEAN_FILES = gcompris.desktop gcompris-edit.desktop config.h.mingw \
+			gcompris-installer.nsi Makefile.mingw
 
 clean-local:
 	rm -f intltool-extract intltool-merge intltool-update

@@ -86,7 +86,6 @@ lib_LTLIBRARIES = \
 libdir = $(plugindir)
 INCLUDES = \
 	-I$(top_srcdir)/src \
-	-I$(top_srcdir)/intl \
 	$(GCOMPRIS_CFLAGS) \
 	$(XML_CFLAGS) \
 	$(PYTHON_CFLAGS) \

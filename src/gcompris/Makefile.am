@@ -46,8 +46,8 @@ endif
 bin_PROGRAMS = gcompris
 
 INCLUDES = \
-	-I$(top_srcdir)/intl \
 	-DDATADIR=\""$(datadir)"\" \
+	-I$(top_srcdir)/src \
 	$(GCOMPRIS_CFLAGS) \
 	$(GNOME_INCLUDEDIR) \
 	$(XML_CFLAGS) \
@@ -128,7 +128,7 @@ gcompris_LDADD = \
 	$(GCOMPRIS_LIBS) $(sqlite_ldadd) $(XML_LIBS) $(GNET_LIBS) $(SDL_LIBS) \
         $(INTLLIBS) $(NSBUNDLE_LDFLAGS)
 
-#	$(LIBICONV) 
+#	$(LIBICONV)
 
 
 EXTRA_DIST = \

@@ -1,3 +1,28 @@
+2008-10-28  Yavor Doganov  <yavor@gnu.org>  (tiny change)
+
+	Merged from trunk #3586
+        * configure.in: Remove the macro AM_ICONV.
+        * Makefile.am (install-data-local): Pass --mode 644 to tar and
+        make the directories in the destination readable in order to
+        support installation from a read-only media.
+        (uninstall-local): New target.
+        (CONFIG_CLEAN_FILES): Add gcompris-installer.nsi and
+        Makefile.mingw.
+        * boards/paintings/Makefile.am (CLEANFILES):
+        * boards/babymatch/Makefile.am (CLEANFILES):
+        * boards/imagename/Makefile.am (CLEANFILES):
+        * boards/babyshapes/Makefile.am (CLEANFILES):
+        * boards/doubleentry/Makefile.am (CLEANFILES):
+        * boards/geography_country/Makefile.am (CLEANFILES):
+        * boards/chronos/Makefile.am (CLEANFILES):
+        * boards/geography/Makefile.am (CLEANFILES): New variables.
+        * docs/eu/Makefile.am (install-data-local):
+        * docs/fr/Makefile.am (install-data-local): Comment out the
+        * whole rule as is done for the English manual.
+        * src/boards/Makefile.am (INCLUDES):
+        * src/gcompris/Makefile.am (INCLUDES): Use $(top_scrdir) to
+        support out-of-tree builds.
+
 	*** RELEASE 8.3.9 ***
 
 2008-10-25  Bruno coudoin  <bruno.coudoin@free.fr>
