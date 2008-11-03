@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gcompris.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-18 14:11+0200\n"
-"PO-Revision-Date: 2008-10-10 09:52+0200\n"
+"PO-Revision-Date: 2008-10-14 17:24+0200\n"
 "Last-Translator: jorge Mariano\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "ב 'לוחות' סעיף אתה יכול לשנות את רשימת הפעילויות.פשוט לא לעבור אותם מתאר את הנוף.אתה יכול לשנות את השפה המשמשת לקריאה, למשל, אז השפה המשמשת אומר את שמות הצבעים.\n"
 "אתה יכול לשמור מספר תצורות, וכן להחליף ביניהן בקלות.ב 'פרופיל' סעיף להוסיף פרופיל, אז את 'לוח מודעות' קטע לבחור את הפרופיל של תיבת משולבות, ולאחר מכן בחר את לוחות אתה רוצה להיות פעיל.אתה יכול להוסיף מספר פרופילים, עם רשימות שונות של הלוחות, וכן שפות שונות.אתה מגדיר את פרופיל ברירת המחדל של 'פרופיל' חלק, על ידי בחירת הפרופיל הרצוי, ולאחר מכן לחיצה על כפתור 'ברירת מחדל'.אתה יכול גם לבחור פרופיל משורת הפקודה.\n"
-"אתה יכול להוסיף משתמשים, ועבור כל השיעורים בכיתה, אתה יכול ליצור קבוצות של משתמשים.שים לב שאתה יכול לייבא משתמשים מתוך קובץ מופרדים בפסיקים.הקצה אחד או יותר קבוצות של פרופיל, לאחר כניסה חדשים אלו אשר תופיע לאחר הפעלה מחדש GCompris. היכולת לזהות בודדת ילדים GCompris אמצעים אנו יכולים לספק דו\"ח ות נפרדים.גם זה הכיר את הילדים כיחידים, הם יכולים ללמוד להקליד ואת מזהה שמות משתמש משלהם (הכניסה היא ניתנת להגדרה)."
+"אתה יכול להוסיף משתמשים, ועבור כל השיעורים בכיתה, אתה יכול ליצור קבוצות של משתמשים.שים לב שאתה יכול לייבא משתמשים מתוך קובץ מופרדים בפסיקים.הקצה אחד או יותר קבוצות של פרופיל, לאחר כניסה חדשים אלו אשר תופיע לאחר הפעלה מחדש ג’יקומפרי. היכולת לזהות בודדת ילדים ג’יקומפרי אמצעים אנו יכולים לספק דו\"ח ות נפרדים.גם זה הכיר את הילדים כיחידים, הם יכולים ללמוד להקליד ואת מזהה שמות משתמש משלהם (הכניסה היא ניתנת להגדרה)."
 
 #: ../boards/administration.xml.in.h:4
 msgid "GCompris Administration Menu"
@@ -485,7 +485,7 @@ msgstr "בחר כלי ציור בצד שמאל, וכן צבע מטה לתחתי�
 
 #: ../boards/awele.xml.in.h:1
 msgid "At the beginning of the game four seeds are placed in each house. Players take turns moving the seeds. In each turn, a player chooses one of the six houses under his or her control. The player removes all seeds from this house, and distributes them, dropping one in each house counter-clockwise from the original house, in a process called sowing. Seeds are not distributed into the end scoring houses, nor into the house drawn from. That is, the starting house is left empty; if it contained 12 seeds, it is skipped, and the twelfth seed is placed in the next house. After a turn, if the last seed was placed into an opponent's house and brought its total to two or three, all the seeds in that house are captured and placed in the player's scoring house (or set aside if the board has no scoring houses). If the previous-to-last seed also brought the total seeds in an opponent's house to two or three, these are captured as well, and so on. However, if a move would capture all an opponent's seeds, the capture is forfeited, and the seeds are instead left on the board, since this would prevent the opponent from continuing the game. The proscription against capturing all an opponent's seeds is related to a more general idea, that one ought to make a move that allows the opponent to continue playing. If an opponent's houses are all empty, the current player must make a move that gives the opponent seeds. If no such move is possible, the current player captures all seeds in his/her own territory, ending the game. (Source Wikipedia &lt;http://en.wikipedia.org/wiki/Oware&gt;)"
-msgstr "בתחילת המשחק מונחות ארבע זרעים בכל הבית.שחקנים בסבב להעביר את הזרעים.בכל תור, שחקן בוחר באחת שישה בתים שלו תחת שליטה.השחקן מסירה את כל הזרעים מתוך הבית הזה, ואת מפיצה אותם, הפלה אחת על כל בית נגד כיוון השעון מן הבית המקורי, בתוך תהליך שנקרא הזרעה.הזרעים אינם מופצים בסופו של דבר מניה לתוך הבתים, ולא לתוך הבית שאוב מ.כלומר, החל את הבית נותר ריק; אם הוא מכיל 12 זרעים, היא מדלגת על שנים עשר ואת זרעי ממוקם באזור ליד הבית.לאחר התור, אם את הזרעים הוצב האחרון של היריב לתוך הבית והביאו הכוללת שלה עד שתיים או שלוש, כל הזרעים בתוך הבית כי הם שבויים וכן להציב את שחקן הבית של מניה (או לדחות את לוח אם אין ניקוד בתים) .אם קודם-to-הזרעים האחרון גם הביא את סך זרעים של היריב לבית שניים או שלושה, הם אלה שנתפסו גם הם, וכן הלאה.עם זאת, אם היה מהלך ללכוד את כל הזרעים של היריב, כיבוש הוא forfeited, ואת הזרעים נמצאים במקום שמאלה על הלוח, שכן הדבר עלול למנוע את היריב מהמשך המשחק.את אסור נגד כל לכידה של היריב הזרעים קשורה יותר הרעיון הכללי, כי אחד צריך לעשות את זה מאפשר להעביר את היריב להמשיך לשחק.אם היריב כל הבתים ריקים הנוכחי השחקן חייב לבצע מהלך אשר מעניקה את הזרעים היריב. אם אין כזה ניתן להעביר את הנוכחי בנגן לוכדת את כל הזרעים שלו / שלה בשטח, סיום המשחק"
+msgstr "בתחילת המשחק מונחות ארבע זרעים בכל הבית.שחקנים בסבב להעביר את הזרעים.בכל תור, שחקן בוחר באחת שישה בתים שלו תחת שליטה.השחקן מסירה את כל הזרעים מתוך הבית הזה, ואת מפיצה אותם, הפלה אחת על כל בית נגד כיוון השעון מן הבית המקורי, בתוך תהליך שנקרא הזרעה.הזרעים אינם מופצים בסופו של דבר מניה לתוך הבתים, ולא לתוך הבית שאוב מ.כלומר, החל את הבית נותר ריק; אם הוא מכיל 12 זרעים, היא מדלגת על שנים עשר ואת זרעי ממוקם באזור ליד הבית.לאחר התור, אם את הזרעים הוצב האחרון של היריב לתוך הבית והביאו הכוללת שלה עד שתיים או שלוש, כל הזרעים בתוך הבית כי הם שבויים וכן להציב את שחקן הבית של מניה (או לדחות את לוח אם אין ניקוד בתים) .אם קודם-to-הזרעים האחרון גם הביא את סך זרעים של היריב לבית שניים או שלושה, הם אלה שנתפסו גם הם, וכן הלאה.עם זאת, אם היה מהלך ללכוד את כל הזרעים של היריב, כיבוש הוא הפסיד, ואת הזרעים נמצאים במקום שמאלה על הלוח, שכן הדבר עלול למנוע את היריב מהמשך המשחק.את אסור נגד כל לכידה של היריב הזרעים קשורה יותר הרעיון הכללי, כי אחד צריך לעשות את זה מאפשר להעביר את היריב להמשיך לשחק.אם היריב כל הבתים ריקים הנוכחי השחקן חייב לבצע מהלך אשר מעניקה את הזרעים היריב. אם אין כזה ניתן להעביר את הנוכחי בנגן לוכדת את כל הזרעים שלו / שלה בשטח, סיום המשחק"
 
 #: ../boards/awele.xml.in.h:2
 msgid "Oware"
@@ -683,7 +683,7 @@ msgstr "יש לגרור ולהפיל את הפריטים בכדי להתאים �
 
 #: ../boards/chronos.xml.in.h:3
 msgid "Moon photo is copyright NASA. The space sounds come from Tuxpaint and Vegastrike which are released under the GPL license. The transportation images are copyright Franck Doucet. Dates of Transportation are based on those found in &lt;http://www.wikipedia.org&gt;."
-msgstr "הירח הוא Copyright תמונה NASA. בוא נשמע את שטח מ Tuxpaint ו Vegastrike אשר פורסמו תחת רישיון GPL. תחבורה את זכויות היוצרים בתמונות הן Doucet פרנק. תאריכי תחבורה מבוססים על אלה נמצא &lt;http://www.wikipedia.org&gt;."
+msgstr "תמונה הירח הוא קוֹפִּירַיְט  NASA. בוא נשמע את שטח מ Tuxpaint ו Vegastrike אשר פורסמו תחת רישיון GPL. תחבורה את זכויות היוצרים בתמונות הן  Franck Doucet. תאריכי תחבורה מבוססים על אלה נמצא &lt;http://www.wikipedia.org&gt;."
 
 #: ../boards/chronos.xml.in.h:4
 msgid "Pick from the pictures on the left and put them on the red dots"
@@ -992,7 +992,7 @@ msgstr "צור את קו 4 חתיכות או אופקית (בשכיבה), במא
 
 #: ../boards/connect4.xml.in.h:5
 msgid "Laurent Lacheny. Images and Artificial Intelligence taken from project 4stattack by Jeroen Vloothuis. The original project can be found on &lt;http://forcedattack.sourceforge.net&gt;"
-msgstr ""
+msgstr "Laurent Lacheny. תמונות ו בינה מלאכותית נלקח מתוך הפרויקט 4stattack על ידי Jeroen Vloothuis. הפרויקט המקורי ניתן למצוא באתר &lt;http://forcedattack.sourceforge.net&gt;"
 
 #: ../boards/connect4-2players.xml.in.h:3
 msgid "Connect 4 (2 Players)"
@@ -1004,7 +1004,7 @@ msgstr "צור את קו 4 חתיכות או אופקית (בשכיבה), במא
 
 #: ../boards/connect4-2players.xml.in.h:6
 msgid "The original code was written in 2005 by Laurent Lacheny. In 2006, Miguel de Izarra made the two players game. Images and Artificial Intelligence taken from project 4stattack by Jeroen Vloothuis. The original project can be found on &lt;http://forcedattack.sourceforge.net&gt;"
-msgstr ""
+msgstr "את הקוד המקורי נכתב בשנת 2005 על ידי Laurent Lacheny.בשנת 2006,  Miguel de Izarra עשו את המשחק שני השחקנים . תמונות ו בינה מלאכותית נלקח מתוך הפרויקט 4stattack על ידי Jeroen Vloothuis.הפרויקט המקורי ניתן למצוא באתר &lt;http://forcedattack.sourceforge.net&gt;"
 
 #: ../boards/crane.xml.in.h:1
 msgid "Build the same model"
@@ -1127,7 +1127,7 @@ msgstr "מקם את הפריטים בצורה הטובה ביותר כדי לס�
 
 #: ../boards/erase.xml.in.h:1
 msgid "Animal pictures are taken from the Animal Photography Page of Ralf Schmode (&lt;http://schmode.net/&gt;) and from LE BERRE Daniel. These people kindly gave GCompris the authorization to include their pictures. Thanks a lot, both of you."
-msgstr "תמונות החיות לקוחות מעמוד צילומי החיות של ראלף שמודה (http://schmode.net/). ראלף נתן את הסכמתו לכלול את התמונות. תודה רבה ראלף."
+msgstr "תמונות של בעלי חיים נלקחים מן החיות צילום של דף Ralf Schmode (&lt;http://schmode.net/&gt;) ומתוך  LE BERRE Daniel.אלה אנשים אדיב ג’יקומפרי נתן את אישורו לכלול תמונות שלהם.תודה רבה, שניכם."
 
 #: ../boards/erase.xml.in.h:4
 #: ../src/boards/erase.c:118
@@ -1258,7 +1258,7 @@ msgstr "הפעלת העכבר: הזזה,  גרירה ושחרור."
 
 #: ../boards/geography.xml.in.h:4
 msgid "The map of Germany comes from Wikipedia and is released under the GNU Free Documentation License. Olaf Ronneberger and his children Lina and Julia Ronneberger created the German level."
-msgstr ""
+msgstr "המפה של גרמניה באה מתוך ויקיפדיה, והיא פרסמה under the GNU Free Documentation License. Olaf Ronneberger ואת הילדים שלו וLina and Julia Ronneberger  יצר את הרמה גרמנית ."
 
 #: ../boards/geography/board1_0.xml.in.h:1
 #: ../boards/geography/board4_2.xml.in.h:1
@@ -1882,11 +1882,11 @@ msgstr "כדי לעזור Muncher על כל הגורמים של מספר בחל�
 
 #: ../boards/gnumch-factors.xml.in.h:3
 msgid "Learn about factors and multiples."
-msgstr ""
+msgstr "למד על הגורמים ואת הכפולות"
 
 #: ../boards/gnumch-factors.xml.in.h:4
 msgid "The factors of a number are all the numbers that divide that number evenly. For example, the factors of 6 are 1, 2, 3 and 6. 4 is not a factor of 6 because 6 cannot be divided into 4 equal pieces. If one number is a multiple of a second number, then the second number is a factor of the first number. You can think of multiples as families, and factors are the people in those families. So 1, 2, 3 and 6 all fit into the 6 family, but 4 belongs to another family. Use the arrow keys to navigate around the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr ""
+msgstr "הגורמים של מספר כל המספרים כי יש לחלק את המספר באופן שווה. לדוגמה, הגורמים של 6 הם 1, 2, 3 ו -6. 4 אינו גורם 6 מתוך 6 כי לא יכול להיות מחולק ל 4 חתיכות שוות. אם מספר אחד הוא מספר רב של המספר השני, אז את המספר השני הוא גורם של המספר הראשון. אתה יכול לחשוב על כפולה כמו משפחות, וגורמים האנשים באותם משפחות. אז 1, 2, 3 ו -6 שיתאים לכל המשפחה לתוך 6, אולם 4 המשפחה שייכות לגורם אחר. השתמש במקשי החיצים כדי לנווט ברחבי לוח וכדי למנוע את Troggles. הקש את הרווח לאכול מספר .."
 
 #: ../boards/gnumch-inequality.xml.in.h:1
 msgid "Guide the Number Muncher to the all the expressions that do not equal the number at the top of the screen."
@@ -1902,19 +1902,19 @@ msgstr "תרגול בפעולת הכפל"
 
 #: ../boards/gnumch-multiples.xml.in.h:1
 msgid "Guide the Number Muncher to all the multiples of the number at the top of the screen."
-msgstr ""
+msgstr "להנחות את מס Muncher לכל כפולה של מספר בחלק העליון של המסך."
 
 #: ../boards/gnumch-multiples.xml.in.h:2
 msgid "Learn about multiples and factors."
-msgstr ""
+msgstr "למד על כפולה וגורמים."
 
 #: ../boards/gnumch-multiples.xml.in.h:3
 msgid "Multiple Number Munchers"
-msgstr ""
+msgstr "את כפולה מספר Munchers"
 
 #: ../boards/gnumch-multiples.xml.in.h:4
 msgid "The multiples of a number are all the numbers that are equal to the original number times another number. For example, 24, 36, 48 and 60 are all multiples of 12. 25 is not a multiple of 12 because there isn't any number that can be multiplied by 12 to get 25. If one number is a factor of a second number, then the second number is a multiple of the first number. Again, you can think of multiples as families, and factors are the people who belong to those families. The factor 5, has parents 10, grandparents 15, great-grandparents 20, great-great-grandparents 25, and every extra step of 5 is another great- in front! But the number 5 does not belong in the 8 or 23 families. You can't fit any number of 5s into 8 or 23 with nothing left over. So '8 isn't a multiple of 5, nor is 23. Only 5, 10, 15, 20, 25 ... are multiples (or families or steps) of 5. Use the arrow keys to navigate around the board and to avoid the Troggles. Press the spacebar to eat a number."
-msgstr ""
+msgstr "את כפולה של מספר כי כל המספרים שווים למקור מספר אחר מספר פעמים. לדוגמה, 24, 36, 48 ו 60 כל כפולה של 12. 25 אינו מספר 12 כי אין כל מספר זה יכול להיות כפול 12 כדי לקבל 25. אם מספר אחד הוא גורם של המספר השני, אז את המספר השני הוא מספר את הראשון של המספר. שוב, אתה יכול לחשוב על כפולה כמו משפחות, וגורמים האנשים אשר שייכים למשפחות אלו. את גורם 5, יש 10 הורים, סבים 15, סבא וסבתא 20-נהדר, נהדר, נהדר, סבא וסבתא 25, וכל צעד נוסף של עוד 5-נהדר מול! אבל את מספר 5 אינו שייך של 8 או 23 משפחות. אתה יכול לא בכושר כל מספר של 5s לתוך 8 או 23 עם עודף כלום. אז'8 אינו מספר 5, ולא הוא 23. רק 5, 10, 15, 20, 25 ... הם כפולה (או משפחות או מדרגות) של 5. השתמש במקשי החיצים כדי לנווט ברחבי לוח וכדי למנוע את Troggles. הקש את הרווח לאכול מספר."
 
 #: ../boards/gnumch-primes.xml.in.h:1
 msgid "Guide the Number Muncher to all the prime numbers."
@@ -2499,6 +2499,11 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of an adding-up sum (also called an addition sum). You need to find the two parts of the sum, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole sum. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper sum. When you do that, both those cards disappear! When you've made them all disappear, found all the sums, you've won the game! :)"
 msgstr ""
+"אתה יכול לראות כמה קלפים, אבל אתה לא יכול לראות מה שמעבר להם. כל כרטיס הוא מסתיר על הוספת למעלה לסיכום, או את התשובהאת הסכום.\n"
+"הוספת לסכם את המצב נראה כך: 2 + 2 = 4\n"
+"המספרים בצד אחד של הסימן שווה (=) חייב להיות זהה למספר בצד השני. אז 2 (1, 2) ו -2 יותר (3, 4) עושה 4. לספור בקול רם כאשר אתה עובד את זה, ואת לסמוך על האצבעות שלך, כי אתה יותר דרכים לעשות משהו, אתה זוכר את זה טוב יותר. אתה יכול גם להשתמש בלוקים, או כפתורים, או כל דבר שאתה יכול לסמוך. אם יש לך הרבה אחים ואחיות, אתה יכול לספור אותם! או את ילדי הכיתה בבית הספר שלך. לשיר שירים לספור. ספירה הרבה דברים, עבור בפועל, ואתה תקבל טוב בשעה הוספת up!\n"
+"\n"
+"במשחק הזה, את הכרטיסים האלה מתחבאים שני חלקים של הוספת סכום מלא (המכונה גם תוספת סכום). אתה צריך למצוא את שני חלקי בסכום, ולהביא אותם שוב ביחד. לחץ על כרטיס כדי לראות מה הוא מסתיר מספר, ולאחר מכן מנסה למצוא את דרכה אחר כרטיס עם זאת, כדי להפוך את כל סכום. אתה יכול רק להתהפך שני הכרטיסים אחד ללכת, אז אתה צריך לזכור היכן הסתרת את המספרים, אז אתה יכול להתאים אותם כאשר אתה מוצא את החצי השני. אתה עושה את העבודה של סימן השוויון, וכן את המספרים שאתה צריך לשים אותם יחד ולעשות סכום ראוי. כאשר אתה עושה את זה, הן נעלמות כרטיסים! לאחר שביצעת את כולם נעלמים, נמצא את כל הסכומים, זכית את המשחק! :)"
 
 #: ../boards/memory_add_minus.xml.in.h:1
 msgid "Addition and subtraction memory game"
@@ -2624,6 +2629,11 @@ msgid ""
 "\n"
 "In this game, these cards are hiding the two parts of a subtraction. You need to find the two parts of the subraction, and bring them together again. Click on a card to see what number it's hiding, then try to find the other card that goes with it, to make a whole sum. You can only turn over two cards in one go, so you need to remember where the numbers are hiding, then you can match them when you find their other half. You're doing the job of the equals sign, and the numbers need you to put them together and make a proper sum. When you do that, both those cards disappear! When you've made them all disappear, found all the subtracts, you've won the game! :)"
 msgstr ""
+"אתה יכול לראות כמה קלפים, אבל אתה לא יכול לראות מה שמעבר להם. כל כרטיס הוא הסתרת חסור, או את התשובה לה.\n"
+"את חסור נראה כך: 3 - 1 = 2\n"
+"המספרים בצד אחד של הסימן שווה (=) חייב להיות זהה למספר בצד השני. אז 3 (1, 2, 3) פחות 1 (1) עושה 2. לספור בקול רם כאשר אתה עובד את זה, ואת לסמוך על האצבעות שלך, כי אתה יותר דרכים לעשות משהו, אתה זוכר את זה טוב יותר. אתה יכול גם להשתמש בלוקים, או כפתורים, או כל דבר שאתה יכול לסמוך. אם יש לך הרבה אחים ואחיות, אתה יכול לספור אותם! או את ילדי הכיתה בבית הספר שלך. לשיר שירים לספור. ספירה הרבה דברים, עבור בפועל, ואתה תקבל טוב בשעה הוספת up!\n"
+"\n"
+"במשחק הזה, את הכרטיסים האלה מתחבאים שני חלקים של חסור. אתה צריך למצוא את שני החלקים של חסור, ולהביא אותם שוב ביחד. לחץ על כרטיס כדי לראות מה הוא מסתיר מספר, ולאחר מכן מנסה למצוא את דרכה אחר כרטיס עם זאת, כדי להפוך את כל סכום. אתה יכול רק להתהפך שני הכרטיסים אחד ללכת, אז אתה צריך לזכור היכן הסתרת את המספרים, אז אתה יכול להתאים אותם כאשר אתה מוצא את החצי השני. אתה עושה את העבודה של סימן השוויון, וכן את המספרים שאתה צריך לשים אותם יחד ולעשות סכום ראוי. כאשר אתה עושה את זה, הן נעלמות כרטיסים! לאחר שביצעת את כולם נעלמים, נמצא את כל החסיר, זכית את המשחק! :)"
 
 #: ../boards/memory_minus_tux.xml.in.h:3
 msgid "Subtraction memory game against Tux"
@@ -2687,7 +2697,7 @@ msgstr "עבור אל הזיכרון הפעילות  מתמטיקה נגד tux"
 #: ../boards/memory_sound.xml.in.h:1
 #: ../boards/memory_sound_tux.xml.in.h:1
 msgid "A set of violinist Tux is shown. Each Tux has an associated sound, and each sound has a twin exactly the same. Click on a Tux to see its hidden sound, and try to match the twins. You can only activate two Tux at once, so you need to remember where a sound is, while you listen to its twin. When you turn over the twins, they both disappear."
-msgstr ""
+msgstr "אוסף של כנר טוקס מוצג. כל טוקס המקושרת יש צליל, וכל קול יש תאום זהה. לחץ על מנת לראות את טוקס מוסתר קול, ונסה להתאים את תאומים. אתה יכול להפעיל רק שני טוקס בבת אחת, כך שאתה צריך לזכור היכן הוא צליל, בזמן שאתה מקשיב התאומה שלו. כאשר אתה להתהפך התאומים, שניהם נעלמים."
 
 #: ../boards/memory_sound.xml.in.h:2
 msgid "Audio memory game"
@@ -3114,7 +3124,7 @@ msgstr "אוד פזלים"
 
 #: ../boards/pythontest.xml.in.h:1
 msgid "Add a language-binding to gcompris."
-msgstr "להוסיף שפה התחייבות ל gcompris."
+msgstr "להוסיף שפה התחייבות ל ג’יקומפרי."
 
 #: ../boards/pythontest.xml.in.h:2
 msgid "Advanced Python Programmer :)"
@@ -3299,7 +3309,7 @@ msgstr "מחשבון מנטלי,שוויון חשבוני"
 
 #: ../boards/scalesboard.xml.in.h:4
 msgid "The painting is an original painting created by Virginie MOREAU (virginie.moreau@free.fr) in 2001. Its name is 'Spices Seller in Egypt'. It is released under the GPL licence."
-msgstr ""
+msgstr "הציור הוא הציור המקורי שנוצר על ידי מורו Virginie MOREAU (virginie.moreau@free.fr) בשנת 2001. שמו הוא 'תבלינים מוכר במצרים'. זה שפורסמו תחת רישיון GPL."
 
 #: ../boards/scalesboard.xml.in.h:5
 msgid "To balance the scales, move the masses on the left side. The masses can be arranged in any order."
@@ -3312,7 +3322,7 @@ msgstr "ישיר במדויק את הסירה כדי לנצח את המירוץ"
 #: ../boards/searace.xml.in.h:2
 #: ../boards/searace1player.xml.in.h:2
 msgid "In the text entry, enter one command per line, to control your boat. Commands supported are displayed between the two entry areas. The 'left' and 'right' commands must be followed by an angle in degrees. The angle value is also called a 'parameter' to the left or right command. By default 45 degrees is used. The 'forward' command accepts a distance parameter. By default 1 is used. For example: left 90 => Make a perpendicular left turn forward 10 => Go forward for 10 units (as displayed on the ruler). The goal is to reach the right of the screen (the red line). When done, you can try to improve your program and start a new race with the same weather conditions by using the retry button. You can click and drag your mouse anywhere on the map to get a measurement in distance and angle. Going to the next level will give you more complex weather conditions."
-msgstr ""
+msgstr "בטקסט כניסה, הזן פקודה אחת בכל שורה, כדי לשלוט את הסירה. נתמכות הפקודות מוצגים בין שני האזורים ערך. ה 'שמאל' ו 'ימין' פקודות יש ואחריה של זווית במעלות. את הזווית הערך הוא נקרא גם 'פרמטר' בצד שמאל או ימין הפקודה. כברירת מחדל משמש 45 מעלות. את 'קדימה' מקבלת פקודה מרחק פרמטר. כברירת מחדל משמש 1. לדוגמה: שמאל = 90> בצע נצב פונים שמאלה קדימה = 10> המשך קדימה עבור 10 יחידות (כפי המוצג על כנה). המטרה היא להגיע הימני של המסך (הקו האדום). בסיום, אתה יכול לנסות לשפר את התוכנית ולהתחיל גזע חדש עם אותם תנאי מזג האוויר שוב באמצעות לחצן. אתה יכול ללחוץ ולגרור את העכבר בכל מקום במפה כדי לקבל מושג על מדידת המרחק הזווית. יוצאים לשלב הבא ייתן לך יותר מורכב תנאי מזג האוויר."
 
 #: ../boards/searace.xml.in.h:3
 #: ../boards/searace1player.xml.in.h:3
@@ -3373,7 +3383,7 @@ msgstr "משחקי אסטרטגיה"
 
 #: ../boards/strategy.xml.in.h:2
 msgid "Strategy games like chess, connect4, ..."
-msgstr "משחקי אסטרטגיה כמו שחמט, connect4, ..."
+msgstr "משחקי אסטרטגיה כמו שחמט, חיבור 4, ..."
 
 #: ../boards/submarine.xml.in.h:1
 msgid "Click on different active elements : engine, rudders and air tanks, in order to navigate to the required depth. There is a gate on the right. Pass through it to reach the next level."
@@ -3590,7 +3600,7 @@ msgstr "לא מורשה! נסה שוב!"
 
 #: ../src/boards/chess.c:179
 msgid "Error: The external program gnuchess died unexpectedly"
-msgstr ""
+msgstr "	שגיאה: החיצונית תוכנית gnuchess מת באופן בלתי צפוי"
 
 #: ../src/boards/chess.c:194
 msgid ""
@@ -3600,6 +3610,10 @@ msgid ""
 "GNU/Linux distribution\n"
 "And check it is located here: "
 msgstr ""
+"שגיאה: החיצונית נדרשת תוכנית gnuchess\n"
+"לשחק שחמט ב ג’יקומפרי.\n"
+"מצא את התוכנית או על http://www.rpmfind.net שלךגנו/לינוקס הפצה\n"
+" ולבדוק את זה נמצא כאן:"
 
 #: ../src/boards/chess.c:236
 msgid ""
@@ -3607,6 +3621,9 @@ msgid ""
 "to play chess in gcompris.\n"
 "First install it, and check it is in "
 msgstr ""
+"שגיאה: החיצונית היא תוכנית חובה gnuchess \n"
+"לשחק שחמט ב ג’יקומפרי. \n"
+"ראשית להתקין אותו, ולבדוק את זה"
 
 #: ../src/boards/chess.c:579
 msgid "White's Turn"
@@ -3638,9 +3655,10 @@ msgstr "שחמט ללבן"
 msgid "Drawn game"
 msgstr "המשחק הסתיים בתיקו"
 
+# unexpectedly
 #: ../src/boards/chess.c:1120
 msgid "Error: The external program gnuchess died unexpectingly"
-msgstr ""
+msgstr "שגיאה: החיצונית תוכנית gnuchess מת באופן בלתי צפוי"
 
 #: ../src/boards/click_on_letter.c:259
 #: ../src/boards/memory.c:832
@@ -3668,6 +3686,8 @@ msgid ""
 "Error: this activity requires that you first install\n"
 "the packages with gcompris voices for the locale '%s' or '%s'"
 msgstr ""
+"שגיאה: פעילות זו דורשת ממך להתקין הראשון \n"
+"את חבילות עם ג’יקומפרי קולות עבור המיקום '%s' או '%s'"
 
 #: ../src/boards/click_on_letter.c:294
 #, c-format
@@ -3675,6 +3695,8 @@ msgid ""
 "Error: this activity requires that you first install\n"
 "the packages with GCompris voices for the locale '%s' ! Fallback to english, sorry!"
 msgstr ""
+"שגיאה: פעילות זו דורשת ממך להתקין הראשון \n"
+"את הקולות ג’יקומפרי עם חבילות עבור המיקום '%s'! נסיגה לאנגלית, סליחה!"
 
 #. toggle box
 #: ../src/boards/click_on_letter.c:646
@@ -3800,7 +3822,7 @@ msgstr "מצא את הזוג המתאים"
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
 #: ../src/boards/memory.c:864
 msgid "+-×÷"
-msgstr "+-×÷"
+msgstr "+-×:"
 
 #: ../src/boards/menu2.c:133
 msgid "Main Menu Second Version"
@@ -3837,7 +3859,7 @@ msgstr "לוח פיתון"
 #: ../src/boards/python.c:63
 #: ../src/boards/python.c:87
 msgid "Special board that embeds python into gcompris."
-msgstr "לוח מיוחד שמשבץ פיתון לתוך gcompris"
+msgstr "לוח מיוחד שמשבץ פיתון לתוך ג’יקומפרי"
 
 #: ../src/boards/python/admin/board_list.py:89
 msgid "Select a profile:"
@@ -3901,6 +3923,8 @@ msgid ""
 "<span size='x-large'> Select the difficulty range \n"
 "for profile <b>%s</b></span>"
 msgstr ""
+"<span size='x-large'> בחר את הקושי טווח \n"
+" עבור פרופיל <b>%s</b></span>"
 
 #. Init configuration window:
 #. all the configuration functions will use it
@@ -3919,6 +3943,8 @@ msgid ""
 "<b>%s</b> configuration\n"
 " for profile <b>%s</b>"
 msgstr ""
+"<b>%s</b> התצורה\n"
+" עבור פרופיל <b>%s</b>"
 
 #: ../src/boards/python/admin/board_list.py:661
 #: ../src/boards/python/pythontest.py:470
@@ -4211,6 +4237,12 @@ msgid ""
 "/usr/bin/gnucap or /usr/local/bin/gnucap.\n"
 "You can still use this activity to draw schematics without computer simulation."
 msgstr ""
+"לא ניתן למצוא את 'gnucap' חשמלי סימולטור. \n"
+"אתה יכול להוריד ולהתקין אותה: \n"
+"<http://geda.seul.org/tools/gnucap/> \n"
+"כדי להיות מזוהים, הוא חייב להיות מותקן \n"
+"/usr/bin/gnucap  או  /usr/local/bin/gnucap. \n"
+"אתה עדיין יכול להשתמש פעילות לצייר סכמתי ללא הדמיית מחשב."
 
 #: ../src/boards/python/gnumch.py:96
 #, python-format
@@ -4243,6 +4275,8 @@ msgid ""
 "Multiples of %(d1)d include %(s)s,\n"
 "but %(d2)d is not a multiple of %(d3)d."
 msgstr ""
+"כפולה של %(d1)d כוללים %(s)s,\n"
+"אבל %(d2)d  אינו מרובות של %(d3)d."
 
 #: ../src/boards/python/gnumch.py:164
 #, python-format
@@ -4282,7 +4316,7 @@ msgstr "%d × %d"
 #: ../src/boards/python/gnumch.py:268
 #, python-format
 msgid "%d ÷ %d"
-msgstr "%d ÷ %d"
+msgstr "%d : %d"
 
 #: ../src/boards/python/gnumch.py:276
 #, python-format
@@ -4300,7 +4334,7 @@ msgid ""
 "Press <Return> to continue."
 msgstr ""
 "היית אכול על ידי Troggle \n"
-"הקש <Return> להמשיך"
+"הקש <ENTER> להמשיך"
 
 #: ../src/boards/python/gnumch.py:490
 msgid "You ate a wrong number.\n"
@@ -4312,7 +4346,7 @@ msgid ""
 "Press <Return> to continue."
 msgstr ""
 "\n"
-"הקש <Return> להמשיך"
+"הקש <ENTER> להמשיך"
 
 #: ../src/boards/python/gnumch.py:784
 msgid ""
@@ -4410,13 +4444,13 @@ msgstr "אוסקר של צ 'ארלי היו החברים הכי טובים של 
 msgid ""
 "This is the first plugin in gcompris coded in the Python\n"
 "Programming language."
-msgstr "זהו plugin הראשון ב gcompris מקודד את שפת התכנות Python."
+msgstr "זהו plugin הראשון ב ג’יקומפרי מקודד את שפת התכנות פיתון."
 
 #: ../src/boards/python/pythontest.py:154
 msgid ""
 "It is now possible to develop gcompris activities in C or in Python.\n"
 "Thanks to Olivier Samys who makes this possible."
-msgstr "כיום ניתן לפתח פעילויות ג’יקומפרי ב-C או פייתון.הודות Olivier Samys מי עושה את זה אפשרי."
+msgstr "כיום ניתן לפתח פעילויות ג’יקומפרי ב-C או פיתון.הודות Olivier Samys מי עושה את זה אפשרי."
 
 #: ../src/boards/python/pythontest.py:163
 msgid "This activity is not playable, just a test"
@@ -4669,8 +4703,8 @@ msgid ""
 msgstr ""
 "קרדיטים: \n"
 "כותב: Bruno Coudoin\n"
-"תרומה:Pascal Georges\n"
-"גרפיקה Renaud Blanchard\n"
+"תרומה:Pascal Georges, Jose Jorge, Yves Combe\n"
+"גרפיקה Renaud Blanchard, Franck Doucet\n"
 "מוזיקת פתיחה: Djilali Sebihi\n"
 "מוזיקת רקע:Rico Da Halvarez\n"
 
@@ -4734,13 +4768,13 @@ msgstr "לא, תחזיר אותי!"
 
 #: ../src/gcompris/board.c:181
 msgid "Dynamic module loading is not supported. gcompris cannot load.\n"
-msgstr "מודול טעינה דינמית אינה נתמכת. gcompris לא יכול לטעון\n"
+msgstr "מודול טעינה דינמית אינה נתמכת. ג’יקומפרי  לא יכול לטעון\n"
 
 #: ../src/gcompris/board_config.c:699
 msgid ""
 "Select the language\n"
 " to use in the board"
-msgstr "	בחר את השפה כדי להשתמש בכל הפרסים"
+msgstr "בחר את השפה כדי להשתמש בכל הפרסים"
 
 #: ../src/gcompris/board_config.c:762
 msgid "Global GCompris mode"
@@ -4981,11 +5015,11 @@ msgstr "ולוניה"
 
 #: ../src/gcompris/config.c:114
 msgid "Chinese (Simplified)"
-msgstr ""
+msgstr "סינית (פשוטה)"
 
 #: ../src/gcompris/config.c:115
 msgid "Chinese (Traditional)"
-msgstr ""
+msgstr "סינית (מסורתית)"
 
 #: ../src/gcompris/config.c:120
 msgid "No time limit"
@@ -5110,15 +5144,15 @@ msgstr "הדפס את הגרסה של"
 
 #: ../src/gcompris/gcompris.c:150
 msgid "Use the antialiased canvas (slower)."
-msgstr ""
+msgstr "השתמש החלקת עקומות בד (איטית יותר)."
 
 #: ../src/gcompris/gcompris.c:153
 msgid "Disable XF86VidMode (No screen resolution change)."
-msgstr ""
+msgstr "השבת XF86VidMode (אין שינוי רזולוציית המסך)."
 
 #: ../src/gcompris/gcompris.c:156
 msgid "Run gcompris with local menu (e.g -l /reading will let you play only activities in the reading directory, -l /strategy/connect4 only the connect4 activity)"
-msgstr "לרוץ עם ג’יקומפרי המקומי התפריט (e.g -l /reading יאפשר לך לשחק רק פעולות קריאה בספרייה, -l /strategy/connect4 רק את פעילות לחבר 4)"
+msgstr "לרוץ עם ג’יקומפרי המקומי התפריט (e.g -l /reading יאפשר לך לשחק רק פעולות קריאה בספרייה, -l /strategy/connect4 רק את פעילות חיבור 4)"
 
 #: ../src/gcompris/gcompris.c:159
 msgid "Run GCompris with local activity directory added to menu"
@@ -5190,7 +5224,7 @@ msgstr "ב-Server mode, ציין את המטמון השתמשו במדריך כ�
 
 #: ../src/gcompris/gcompris.c:211
 msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
-msgstr "גלובל גרור ושחרר מצב: רגיל, 2clicks, שתיהן. ברירת המחדל היא מצב נורמלי."
+msgstr "גלובל גרור ושחרר מצב: רגיל, 	2 קליקים, שתיהן. ברירת המחדל היא מצב נורמלי."
 
 #: ../src/gcompris/gcompris.c:817
 #, c-format
@@ -5200,6 +5234,10 @@ msgid ""
 "The Linux version does not have this restriction. Note that GCompris is being developed to free schools from monopolistic software vendors. If you also believe that we should teach freedom to children, please consider using GNU/Linux. Get more information at FSF:\n"
 "<http://www.fsf.org/philosophy>"
 msgstr ""
+"ג’יקומפרי היא תוכנה חופשית שפורסמו תחת רישיון GPL. על מנת לתמוך בפיתוח שלה, גירסה של Windows מספקת רק %d מתוך %d את פעילותה. אתה יכול להשיג את הגירסה המלאה בתשלום קטן ב \n"
+"<http://gcompris.net> \n"
+"לינוקס גרסה זו אינה קיימת מגבלה. שים לב ג’יקומפרי הוא פותח על מנת להיות Free בתי ספר מאת מונופוליסטי ספקי תוכנה. גם אם אתה מאמין כי אנו צריכים ללמד את הילדים בחופש, אנא שקול להשתמש בגנו/לינוקס. לקבל מידע נוסף בכתובת FSF: \n"
+"<http://www.fsf.org/philosophy>"
 
 #: ../src/gcompris/gcompris.c:1423
 #, c-format
