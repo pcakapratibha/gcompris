@@ -1,3 +1,11 @@
+2008-11-07  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixes to compile on Ubuntu 8.10
+
+	* src/boards/colors.c: (repeat):
+	* src/gcompris/config.c:
+	* src/gcompris/gcompris_db.c: (gc_db_get_board_from_id):
+
 	*** RELEASE 8.4.8 ***
 
 2008-10-28  Yavor Doganov  <yavor@gnu.org>  (tiny change)
