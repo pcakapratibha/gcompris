@@ -1,3 +1,4 @@
+# translation of gcompris.HEAD.po to
 # Brazilian Portuguese translation of GCompris
 # This file is distributed under the same license as the gcompris packages.
 #
@@ -9,12 +10,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GCompris\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-08 17:16-0300\n"
-"PO-Revision-Date: 2008-02-27 23:34-0300\n"
-"Last-Translator: Frederico Goncalves Guimaraes <frederico@teia.bio.br>\n"
-"Language-Team: Brazilian Portuguese\n"
+"Project-Id-Version: gcompris.HEAD\n"
+"POT-Creation-Date: 2008-09-01 23:27+0000\n"
+"PO-Revision-Date: 2008-10-03 21:55-0300\n"
+"Last-Translator: \n"
+"Language-Team:  <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -735,8 +735,35 @@ msgid "Good mouse-control"
 msgstr "Bom controle do mouse"
 
 #: ../boards/babyshapes.xml.in.h:5
-msgid "The dog is provided by Andre Connes and released under the GPL"
-msgstr "O cachorro foi fornecido por Andre Connes e está liberado sob a GPL"
+msgid ""
+"The dog is provided by Andre Connes and released under the GPL.\n"
+"Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://"
+"commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: "
+"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel "
+"Malissin et frédéric Valdes. Licence: Free but requires the site and author. "
+"Source: http://www.galerie.roi-president.com\n"
+"Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. "
+"Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. "
+"Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
+"_the_Elder_04.jpg"
+msgstr ""
+"O cachorro foi fornecido por Andre Connes e liberado sob a GPL.\n"
+"Artista: Gauguin, Paul. Title Arearea. Licença: Domínio Público. Fonte: "
+"http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artista: Bruegel d. Ä. Título: Bauernhochzeit. Licença: Domínio Público. "
+"Fonte: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Descrição: A Dama e o Unicórnio (tapeçaria). Autor: Pierre-Emmanuel Malissin "
+"e Frédéric Valdes. Licença: Gratuito, mas requer o sítio e o autor. Fonte: "
+"http://www.galerie.roi-president.com\n"
+"Artista: Vincent van Gogh. Title: Dormitório em Arles. Licença: Domínio "
+"Público. Fonte: http://commons.wikimedia.org/wiki/Image:"
+"Vincent_Van_Gogh_0011.jpg\n"
+"Artista: Ambrosius Bosschaert. Título: O Ancião. Licença: Domínio Público. "
+"Fonte: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
+"_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -3708,22 +3735,6 @@ msgstr "Numeração"
 msgid "Numeration activities."
 msgstr "Atividades de numeração."
 
-#: ../boards/oscar_and_friends.xml.in.h:1
-msgid "Improve reading skill and the ability to understand what is read."
-msgstr "Trabalhar as habilidades de leitura e de compreensão do texto."
-
-#: ../boards/oscar_and_friends.xml.in.h:2
-msgid "Read and play with the story"
-msgstr "Leia e brinque com a estória"
-
-#: ../boards/oscar_and_friends.xml.in.h:3
-msgid "The story of Oscar and friend"
-msgstr "A estória de Oscar e seu amigo"
-
-#: ../boards/oscar_and_friends.xml.in.h:4
-msgid "reading"
-msgstr "Leitura"
-
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
 msgstr "Monte o quebra-cabeça"
@@ -4686,7 +4697,7 @@ msgstr ""
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1848 ../src/boards/smallnumbers.c:591
+#: ../src/boards/shapegame.c:1866 ../src/boards/smallnumbers.c:591
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -5473,34 +5484,6 @@ msgstr ""
 "Vá para a janela de configuração para\n"
 "habilitar o som"
 
-#: ../src/boards/python/oscar_and_friends.py:116
-msgid ""
-"Below the surface, Oscar the octopus and his friends sat on a rock,\n"
-"watching the bad weather above them."
-msgstr ""
-"Abaixo da superfície, Oscar, o polvo, e seus amigos sentam-se em uma pedra,\n"
-"para observar o tempo ruim sobre eles."
-
-#: ../src/boards/python/oscar_and_friends.py:117
-msgid ""
-"They were all happy that the storms never reached all the way down to them."
-msgstr ""
-"Eles estavam felizes em saber que as tempestades nunca os alcançaria lá "
-"embaixo."
-
-#: ../src/boards/python/oscar_and_friends.py:118
-msgid ""
-"No matter how bad it was up there, the bottom was always calm and quiet."
-msgstr ""
-"Independente do quão ruim estava lá em cima, no fundo era sempre calmo e "
-"quieto."
-
-#: ../src/boards/python/oscar_and_friends.py:119
-msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
-msgstr ""
-"Os melhores amigos de Oscar são Charlie, o caranguejo, e Sandy, a estrela do "
-"mar."
-
 #: ../src/boards/python/pythontest.py:148
 msgid ""
 "This is the first plugin in GCompris coded in the Python\n"
@@ -5800,7 +5783,7 @@ msgstr ""
 "Este software é um Pacote GNU e é liberado sob a GNU General Public License"
 
 #: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:475 ../src/gcompris/config.c:485
+#: ../src/gcompris/config.c:476 ../src/gcompris/config.c:486
 #: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:381
 #: ../src/gcompris/help.c:391 ../src/gcompris/images_selector.c:316
 msgid "OK"
@@ -6101,42 +6084,46 @@ msgid "Urdu"
 msgstr "Urdu"
 
 #: ../src/gcompris/config.c:119
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+#: ../src/gcompris/config.c:120
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Walloon"
 msgstr "Valão"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Chinese (Simplified)"
 msgstr "Chinês (simplificado)"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Traditional)"
 msgstr "Chinês (tradicional)"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:128
 msgid "No time limit"
 msgstr "Sem limite de tempo"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "Slow timer"
 msgstr "Tempo mais lento"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Normal timer"
 msgstr "Tempo normal"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:131
 msgid "Fast timer"
 msgstr "Tempo mais rápido"
 
-#: ../src/gcompris/config.c:135
+#: ../src/gcompris/config.c:136
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Padrão para o GCompris)"
 
-#: ../src/gcompris/config.c:140
+#: ../src/gcompris/config.c:141
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6144,38 +6131,38 @@ msgstr ""
 "<i>Use o módulo de administração do GCompris\n"
 "para filtrar as atividades</i>"
 
-#: ../src/gcompris/config.c:195 ../src/gcompris/config.c:205
+#: ../src/gcompris/config.c:196 ../src/gcompris/config.c:206
 msgid "GCompris Configuration"
 msgstr "Configuração do GCompris"
 
-#: ../src/gcompris/config.c:281
+#: ../src/gcompris/config.c:282
 msgid "Fullscreen"
 msgstr "Tela inteira"
 
-#: ../src/gcompris/config.c:324
+#: ../src/gcompris/config.c:325
 msgid "Music"
 msgstr "Música"
 
-#: ../src/gcompris/config.c:352
+#: ../src/gcompris/config.c:353
 msgid "Effect"
 msgstr "Efeito"
 
-#: ../src/gcompris/config.c:388
+#: ../src/gcompris/config.c:389
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Não foi possível abrir o diretório de temas: %s"
 
-#: ../src/gcompris/config.c:419 ../src/gcompris/config.c:869
-#: ../src/gcompris/config.c:883
+#: ../src/gcompris/config.c:420 ../src/gcompris/config.c:870
+#: ../src/gcompris/config.c:884
 #, c-format
 msgid "Skin : %s"
 msgstr "Tema: %s"
 
-#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:422
 msgid "SKINS NOT FOUND"
 msgstr "OS TEMAS NÃO FORAM ENCONTRADOS"
 
-#: ../src/gcompris/config.c:546
+#: ../src/gcompris/config.c:547
 msgid "English (United State)"
 msgstr "Inglês (Estados Unidos)"
 
