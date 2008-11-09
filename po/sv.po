@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-16 23:24+0200\n"
-"PO-Revision-Date: 2008-10-16 23:29+0100\n"
+"POT-Creation-Date: 2008-11-09 12:35+0100\n"
+"PO-Revision-Date: 2008-11-09 12:36+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -3091,7 +3091,7 @@ msgid "Practice money usage including cents"
 msgstr "Träna att använda pengar inklusive eurocent"
 
 #: ../boards/mosaic.xml.in.h:1
-msgid "Rebuild the left mosaic on the right area. Then, select a color in the bottom area and click on grey boxes to paint them."
+msgid "Rebuild the left mosaic on the right area. Select a color in the bottom area and click on grey boxes to paint them."
 msgstr "Bygg upp den vänstra mosaiken på högra sidan. Välj sedan en färg i nedre delen och klicka på de gråa rutorna för att måla dem."
 
 #: ../boards/mosaic.xml.in.h:2
@@ -3861,7 +3861,7 @@ msgstr ""
 #: ../src/boards/reading.c:832
 #: ../src/boards/scale.c:861
 #: ../src/boards/shapegame.c:1866
-#: ../src/boards/smallnumbers.c:591
+#: ../src/boards/smallnumbers.c:592
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -3925,7 +3925,7 @@ msgstr "Klicka på den vita ankan"
 #: ../src/boards/colors.c:176
 #: ../src/boards/python/admin/board_list.py:670
 #: ../src/boards/python/pythontest.py:473
-#: ../src/boards/smallnumbers.c:611
+#: ../src/boards/smallnumbers.c:612
 msgid "Select sound locale"
 msgstr "Välj ljudlokalen"
 
@@ -3942,7 +3942,7 @@ msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVXYZÅÄÖ"
 
 #: ../src/boards/gletters.c:887
-#: ../src/boards/smallnumbers.c:609
+#: ../src/boards/smallnumbers.c:610
 msgid "Enable sounds"
 msgstr "Aktivera ljud"
 
@@ -4957,8 +4957,8 @@ msgstr "Detta program är ett GNU-paket och är släppt under Gnu Public License
 
 #: ../src/gcompris/about.c:279
 #: ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:476
-#: ../src/gcompris/config.c:486
+#: ../src/gcompris/config.c:477
+#: ../src/gcompris/config.c:487
 #: ../src/gcompris/dialog.c:102
 #: ../src/gcompris/help.c:379
 #: ../src/gcompris/help.c:389
@@ -5127,6 +5127,7 @@ msgid "Gujarati"
 msgstr "Gujarati"
 
 #: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:104
 msgid "Punjabi"
 msgstr "Punjabi"
 
@@ -5198,107 +5199,107 @@ msgstr "Polska"
 msgid "Portuguese"
 msgstr "Portugisiska"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:105
 msgid "Portuguese (Brazil)"
 msgstr "Portugisiska (brasiliansk)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:106
 msgid "Romanian"
 msgstr "Rumänska"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:107
 msgid "Russian"
 msgstr "Ryska"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:108
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:109
 msgid "Slovak"
 msgstr "Slovakiska"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:110
 msgid "Slovenian"
 msgstr "Slovenska"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:111
 msgid "Somali"
 msgstr "Somaliska"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:112
 msgid "Albanian"
 msgstr "Albaniska"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:113
 msgid "Serbian (Latin)"
 msgstr "Serbiska (Latinsk)"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:114
 msgid "Serbian"
 msgstr "Serbiska"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:115
 msgid "Swedish"
 msgstr "Svenska"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:116
 msgid "Tamil"
 msgstr "Tamilska"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:117
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:118
 msgid "Turkish"
 msgstr "Turkiska"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Urdu"
 msgstr "Urdu"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Ukrainian"
 msgstr "Ukrainska"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Vietnamese"
 msgstr "Vietnamesiska"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Walloon"
 msgstr "Vallonska"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Simplified)"
 msgstr "Kinesiska (förenklad)"
 
-#: ../src/gcompris/config.c:123
+#: ../src/gcompris/config.c:124
 msgid "Chinese (Traditional)"
 msgstr "Kinesiska (traditionell)"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "No time limit"
 msgstr "Ingen tidsbegränsning"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Slow timer"
 msgstr "Långsam tidtagare"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:131
 msgid "Normal timer"
 msgstr "Normal tidtagare"
 
-#: ../src/gcompris/config.c:131
+#: ../src/gcompris/config.c:132
 msgid "Fast timer"
 msgstr "Snabb tidtagare"
 
-#: ../src/gcompris/config.c:136
+#: ../src/gcompris/config.c:137
 msgid "800x600 (Default for GCompris)"
 msgstr "800×600 (Standard för GCompris)"
 
-#: ../src/gcompris/config.c:141
+#: ../src/gcompris/config.c:142
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5306,40 +5307,40 @@ msgstr ""
 "<i>Använd Gcompris administrationsmodul\n"
 "för att filtrera bräden</i>"
 
-#: ../src/gcompris/config.c:196
-#: ../src/gcompris/config.c:206
+#: ../src/gcompris/config.c:197
+#: ../src/gcompris/config.c:207
 msgid "GCompris Configuration"
 msgstr "Konfiguration av GCompris"
 
-#: ../src/gcompris/config.c:282
+#: ../src/gcompris/config.c:283
 msgid "Fullscreen"
 msgstr "Helskärmsläge"
 
-#: ../src/gcompris/config.c:325
+#: ../src/gcompris/config.c:326
 msgid "Music"
 msgstr "Musik"
 
-#: ../src/gcompris/config.c:353
+#: ../src/gcompris/config.c:354
 msgid "Effect"
 msgstr "Effekt"
 
-#: ../src/gcompris/config.c:389
+#: ../src/gcompris/config.c:390
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Kunde inte öppna skalkatalogen: %s"
 
-#: ../src/gcompris/config.c:420
-#: ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:871
+#: ../src/gcompris/config.c:885
 #, c-format
 msgid "Skin : %s"
 msgstr "Skal: %s"
 
-#: ../src/gcompris/config.c:422
+#: ../src/gcompris/config.c:423
 msgid "SKINS NOT FOUND"
 msgstr "SKALEN HITTADES INTE"
 
-#: ../src/gcompris/config.c:547
+#: ../src/gcompris/config.c:548
 msgid "English (United State)"
 msgstr "Engelska (USA)"
 
