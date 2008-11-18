@@ -29,8 +29,7 @@ It is best to choose somebody that speaks and articulate well your language.
 
 - In the directory where WAV files are run do:
         oggenc -q0 --downmix -a "(name of author) -d "date of recording" \
-               -c "copyright=Copyright 2002 (name of author). This file is distributed under the terms of the GNU General Public License, either version 2 or ( at your option) any later version. See the file COPYING for details." \
-               *.wav
+               -c "copyright=GPL V3+" *.wav
 
 	ogginfo should display the comment.
 
