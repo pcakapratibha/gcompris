@@ -2,32 +2,32 @@
 <ShapeGame><!-- Created with GComprisShapegame gimp script -->
 <title justification="GTK_JUSTIFY_CENTER" x="600" y="495">
 <name>Regions of Canada</name></title>
-<shape name="Prince Edward Island" pixmapfile="geography_country/canada_region/prince_edward_island.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Prince_Edward_Island.ogg" x="682.0" y="388.5">
+<shape name="Prince Edward Island" pixmapfile="geography_country/canada_region/prince_edward_island.png" position="0" sound="voices/$LOCALE/geography/canada_region/Prince_Edward_Island.ogg" x="682.0" y="388.5">
 <tooltip>Prince Edward Island</tooltip></shape>
-<shape name="Nova Scotia" pixmapfile="geography_country/canada_region/nova_scotia.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Nova_Scotia.ogg" x="693.0" y="401.0">
+<shape name="Nova Scotia" pixmapfile="geography_country/canada_region/nova_scotia.png" position="0" sound="voices/$LOCALE/geography/canada_region/Nova_Scotia.ogg" x="693.0" y="401.0">
 <tooltip>Nova Scotia</tooltip></shape>
-<shape name="New Brunswick" pixmapfile="geography_country/canada_region/new_brunswick.png" position="0" sound="sounds/$LOCALE/geography/canada_region/New_Brunswick.ogg" x="650.5" y="399.5">
+<shape name="New Brunswick" pixmapfile="geography_country/canada_region/new_brunswick.png" position="0" sound="voices/$LOCALE/geography/canada_region/New_Brunswick.ogg" x="650.5" y="399.5">
 <tooltip>New Brunswick</tooltip></shape>
-<shape name="Newfoundland and Labrador" pixmapfile="geography_country/canada_region/newfoundland_and_labrador.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Newfoundland_and_Labrador.ogg" x="676.5" y="311.5">
+<shape name="Newfoundland and Labrador" pixmapfile="geography_country/canada_region/newfoundland_and_labrador.png" position="0" sound="voices/$LOCALE/geography/canada_region/Newfoundland_and_Labrador.ogg" x="676.5" y="311.5">
 <tooltip>Newfoundland and Labrador</tooltip></shape>
-<shape name="Quebec" pixmapfile="geography_country/canada_region/quebec.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Quebec.ogg" x="585.0" y="346.5">
+<shape name="Quebec" pixmapfile="geography_country/canada_region/quebec.png" position="0" sound="voices/$LOCALE/geography/canada_region/Quebec.ogg" x="585.0" y="346.5">
 <tooltip>Quebec</tooltip></shape>
-<shape name="Ontario" pixmapfile="geography_country/canada_region/ontario.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Ontario.ogg" x="470.5" y="412.5">
+<shape name="Ontario" pixmapfile="geography_country/canada_region/ontario.png" position="0" sound="voices/$LOCALE/geography/canada_region/Ontario.ogg" x="470.5" y="412.5">
 <tooltip>Ontario</tooltip></shape>
-<shape name="Manitoba" pixmapfile="geography_country/canada_region/manitoba.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Manitoba.ogg" x="353.0" y="359.0">
+<shape name="Manitoba" pixmapfile="geography_country/canada_region/manitoba.png" position="0" sound="voices/$LOCALE/geography/canada_region/Manitoba.ogg" x="353.0" y="359.0">
 <tooltip>Manitoba</tooltip></shape>
-<shape name="Saskatchewan" pixmapfile="geography_country/canada_region/saskatchewan.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Saskatchewan.ogg" x="263.0" y="354.0">
+<shape name="Saskatchewan" pixmapfile="geography_country/canada_region/saskatchewan.png" position="0" sound="voices/$LOCALE/geography/canada_region/Saskatchewan.ogg" x="263.0" y="354.0">
 <tooltip>Saskatchewan</tooltip></shape>
-<shape name="Alberta" pixmapfile="geography_country/canada_region/alberta.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Alberta.ogg" x="200.5" y="340.5">
+<shape name="Alberta" pixmapfile="geography_country/canada_region/alberta.png" position="0" sound="voices/$LOCALE/geography/canada_region/Alberta.ogg" x="200.5" y="340.5">
 <tooltip>Alberta</tooltip></shape>
-<shape name="Nunavut" pixmapfile="geography_country/canada_region/nunavut.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Nunavut.ogg" x="390.0" y="163.0">
+<shape name="Nunavut" pixmapfile="geography_country/canada_region/nunavut.png" position="0" sound="voices/$LOCALE/geography/canada_region/Nunavut.ogg" x="390.0" y="163.0">
 <tooltip>Nunavut</tooltip></shape>
-<shape name="Northwest Territories" pixmapfile="geography_country/canada_region/northwest_territories.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Northwest_Territories.ogg" x="228.5" y="192.5">
+<shape name="Northwest Territories" pixmapfile="geography_country/canada_region/northwest_territories.png" position="0" sound="voices/$LOCALE/geography/canada_region/Northwest_Territories.ogg" x="228.5" y="192.5">
 <tooltip>Northwest Territories</tooltip></shape>
-<shape name="British Columbia" pixmapfile="geography_country/canada_region/british_columbia.png" position="0" sound="sounds/$LOCALE/geography/canada_region/British_Columbia.ogg" x="114.5" y="308.5">
+<shape name="British Columbia" pixmapfile="geography_country/canada_region/british_columbia.png" position="0" sound="voices/$LOCALE/geography/canada_region/British_Columbia.ogg" x="114.5" y="308.5">
 <tooltip>British Columbia</tooltip></shape>
-<shape name="Yukon" pixmapfile="geography_country/canada_region/yukon.png" position="0" sound="sounds/$LOCALE/geography/canada_region/Yukon.ogg" x="107.5" y="196.0">
+<shape name="Yukon" pixmapfile="geography_country/canada_region/yukon.png" position="0" sound="voices/$LOCALE/geography/canada_region/Yukon.ogg" x="107.5" y="196.0">
 <tooltip>Yukon</tooltip></shape>
-<shape name="background" pixmapfile="geography_country/canada_region/background.png" position="0" sound="sounds/$LOCALE/geography/canada_region/background.ogg" type="SHAPE_BACKGROUND" x="412" y="260.0">
+<shape name="background" pixmapfile="geography_country/canada_region/background.png" position="0" sound="voices/$LOCALE/geography/canada_region/background.ogg" type="SHAPE_BACKGROUND" x="412" y="260.0">
 <tooltip>background</tooltip></shape>
 </ShapeGame>

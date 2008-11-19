@@ -1,3 +1,37 @@
+	*** RELEASE 8.3.10 ***
+
+2008-11-19  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* Updated translations from trunk
+
+	- po/pt_BR.po
+	- po/es.po
+	- po/sv.po
+	- po/ka.po
+	- po/he.po
+	- po/pa.po
+
+
+	* boards/voices/pa/*: Voices created by Ankit Sahai : ankitsahai85 in g mail
+
+	- Fixed missing geography voices.
+
+	* boards/doubleentry/board3_0.xml.in:
+	* boards/geography.xml.in:
+	* boards/geography/board1_0.xml.in:
+	* boards/geography/board2_0.xml.in:
+	* boards/geography/board2_1.xml.in:
+	* boards/geography/board3_0.xml.in:
+	* boards/geography/board3_1.xml.in:
+	* boards/geography/board4_0.xml.in:
+	* boards/geography/board4_1.xml.in:
+	* boards/geography/board4_2.xml.in:
+	* boards/geography_country/board1_0.xml.in:
+	* boards/geography_country/board7_0.xml.in:
+	* boards/geography_country/board8_0.xml.in:
+	* boards/geography_country/board9_0.xml.in:
+	* src/boards/submarine.c: (submarine_explosion): double crash protection
+
 2008-11-07  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Fixes to compile on Ubuntu 8.10
@@ -5,8 +39,6 @@
 	* src/boards/colors.c: (repeat):
 	* src/gcompris/config.c:
 	* src/gcompris/gcompris_db.c: (gc_db_get_board_from_id):
-
-	*** RELEASE 8.4.8 ***
 
 2008-10-28  Yavor Doganov  <yavor@gnu.org>  (tiny change)
 

@@ -1642,6 +1642,9 @@ static void open_door()
 static void submarine_explosion() {
   GdkPixbuf *pixmap = NULL;
 
+  if (submarine_destroyed)
+    return;
+
   submarine_destroyed = TRUE;
   gamewon = FALSE;
   gc_sound_play_ogg("sounds/crash.wav", NULL);

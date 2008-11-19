@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 21:25+0000\n"
-"PO-Revision-Date: 2008-10-16 23:21+0200\n"
+"POT-Creation-Date: 2008-10-28 23:07+0000\n"
+"PO-Revision-Date: 2008-11-04 22:15+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -3773,12 +3773,11 @@ msgstr "Practica de uso del dinero, incluyendo céntimos"
 
 #: ../boards/mosaic.xml.in.h:1
 msgid ""
-"Rebuild the left mosaic on the right area. Then, select a color in the "
-"bottom area and click on grey boxes to paint them."
+"Rebuild the left mosaic on the right area. Select a color in the bottom area "
+"and click on grey boxes to paint them."
 msgstr ""
-"Reconstruye el mosaico de la izquierda en el área de la derecha. Después "
-"selecciona un color en el área inferior y pulsa en las casillas grises para "
-"pintarlas."
+"Reconstruye el mosaico de la izquierda. Selecciona un color en la parte "
+"inferior y pulsa en las casillas grises para pintarlas."
 
 #: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
@@ -4767,7 +4766,7 @@ msgstr ""
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1866 ../src/boards/smallnumbers.c:591
+#: ../src/boards/shapegame.c:1866 ../src/boards/smallnumbers.c:592
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4827,7 +4826,7 @@ msgid "Click on the white duck"
 msgstr "Pulsa en el pato blanco"
 
 #: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:670
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:611
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
 msgid "Select sound locale"
 msgstr "Selecciona el idioma del sonido"
 
@@ -4841,7 +4840,7 @@ msgstr "0123456789"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:887 ../src/boards/smallnumbers.c:609
+#: ../src/boards/gletters.c:887 ../src/boards/smallnumbers.c:610
 msgid "Enable sounds"
 msgstr "Activar sonidos"
 
