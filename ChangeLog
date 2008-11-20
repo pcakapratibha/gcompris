@@ -11,6 +11,8 @@
 	- po/he.po
 	- po/pa.po
 
+	* src/boards/python/admin/board_list.py : The select sound locale was broken
+	  replaced sounds by voices/
 
 	* boards/voices/pa/*: Voices created by Ankit Sahai : ankitsahai85 in g mail
 
