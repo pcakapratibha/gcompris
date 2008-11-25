@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GCompris>
   <Board
-        name="goal"
+        name="doubleclick"
         type="python:doubleclick"
         section="/computer/mouse"
         icon="boardicons/doubleclick.svg"

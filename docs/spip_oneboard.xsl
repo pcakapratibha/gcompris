@@ -82,18 +82,21 @@
             <texte>
               <HTML>
                 <DIV>
-                  <IMG border="0" alt="" align="left">
+                  <IMG border="0" alt="">
+		    <xsl:attribute name="align"><xsl:value-of select="$left"/></xsl:attribute>
                     <xsl:attribute name="src">
                       <xsl:value-of select="concat('screenshots/',@name)"/>.jpg</xsl:attribute>
                     </IMG>
 
                     <DIV class="flottante">
-                      <IMG border="0" alt="" align="right">
+                      <IMG border="0" alt="">
+			<xsl:attribute name="align"><xsl:value-of select="$right"/></xsl:attribute>
                         <xsl:attribute name="src"><xsl:value-of select="@icon"/></xsl:attribute>
                       </IMG>
 
                       <xsl:if test="@difficulty">
-                        <IMG border="0" alt="" align="right">
+                        <IMG border="0" alt="">
+			  <xsl:attribute name="align"><xsl:value-of select="$right"/></xsl:attribute>
                           <xsl:attribute name="src">
                             <xsl:value-of select="concat('boardicons/difficulty_star',@difficulty,'.png')"/>
                           </xsl:attribute>
@@ -101,7 +104,8 @@
                       </xsl:if>
 
                       <xsl:if test="(starts-with(@type,'python:')=false)">
-                        <IMG border="0" alt=""  align="right" src="boardicons/win.png">
+                        <IMG border="0" alt="" src="boardicons/win.png">
+			  <xsl:attribute name="align"><xsl:value-of select="$right"/></xsl:attribute>
                         </IMG>
                       </xsl:if>
 

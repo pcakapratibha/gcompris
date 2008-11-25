@@ -100,7 +100,7 @@ my %sections = (
     "ro", 0,
     "ru", 160,
     "rw", 0,
-    "sk", 0,
+    "sk", 396,
     "sl", 0,
     "so", 172,
     "sq", 0,
@@ -170,7 +170,7 @@ my %rubriques = (
     "ro", 0,
     "ru", 162,
     "rw", 0,
-    "sk", 0,
+    "sk", 397,
     "sl", 0,
     "so", 173,
     "sq", 0,
@@ -241,7 +241,7 @@ my %rubriques_all = (
     "ro", 0,
     "ru", 163,
     "rw", 0,
-    "sk", 0,
+    "sk", 398,
     "sl", 0,
     "so", 174,
     "sq", 0,
@@ -258,6 +258,7 @@ my %rubriques_all = (
     "zh_CN", 0,
     "zh_TW", 0,
     );
+
 #-------------------------------------------------------------------------------
 sub spip_cleanup {
     my $output = shift;
@@ -299,7 +300,7 @@ $ALL_LINGUAS_STR      =~ s/\"//g;
 my @ALL_LINGUAS       = split(' ', $ALL_LINGUAS_STR);
 push @ALL_LINGUAS, "en";	# Add english, it's not in the po list
 # Debug
-#@ALL_LINGUAS = qw/fr en/;
+#@ALL_LINGUAS = qw/fr en ar/;
 
 # Check we have all we need for each defined lang
 my $error = 0;
@@ -482,6 +483,17 @@ foreach my $board (@files) {
 
 	$article_id++;
 
+	# Manage Left to Right / Right to Left languages
+	my $left="left";
+	my $right="right";
+
+	if ($lang =~ /^ar/
+	    || $lang =~ /^he/
+	    || $lang =~ /^fa/)
+	{
+	    $left = "right";
+	    $right = "left";
+	}
 	print "$lang ";
 
 	# Remove @ from some language to avoid non URL char
@@ -492,7 +504,7 @@ foreach my $board (@files) {
 	# Hide the article
 #    $rubriques{$lang} = 0;
 
-	my $output = `xsltproc --stringparam language $lang --stringparam langstrip $langstrip --stringparam date "${date}" --stringparam article_id ${article_id} --stringparam rubrique_id $rubriques_all{$lang} --stringparam section_id $sections{$lang} --stringparam traduction_id ${traduction_id} $xslfile $file`;
+	my $output = `xsltproc --stringparam language $lang --stringparam left $left --stringparam right $right --stringparam langstrip $langstrip --stringparam date "${date}" --stringparam article_id ${article_id} --stringparam rubrique_id $rubriques_all{$lang} --stringparam section_id $sections{$lang} --stringparam traduction_id ${traduction_id} $xslfile $file`;
 
 	if ($?>>8) {
 	    print "#\n";
