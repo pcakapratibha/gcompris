@@ -1,5 +1,11 @@
 	*** RELEASE 8.3.10 ***
 
+2008-11-24  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/shapegame.c: (item_event_drag): Fixed a crash in case of multiple sound list.
+	  This was especially the case in the level 3 of the double entry activity.
+          Merged from trunk Commit r3628
+
 2008-11-19  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* Updated translations from trunk
