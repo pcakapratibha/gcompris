@@ -949,16 +949,20 @@ static gint item_event_drag(GnomeCanvasItem *item, GdkEvent *event, gpointer dat
                          * of sound rather than a single one */
                         char *p = NULL;
                         char *soundfile = g_strdup(shape->soundfile);
+			char *soundfiles = soundfile;
 
-                        while ((p = strstr (soundfile, " ")))
+                        while ((p = strstr (soundfiles, " ")))
                         {
                             *p='\0';
-                            gc_sound_play_ogg(soundfile, NULL);
-                            soundfile=p+1;
-                            g_warning("soundfile = %s\n", soundfile);
+                            gc_sound_play_ogg(soundfiles, NULL);
+                            soundfiles= p + 1;
+                            g_warning("soundfile = %s\n", soundfiles);
                         }
 
-                        gc_sound_play_ogg(soundfile, NULL);
+			if (soundfiles != soundfile)
+			  gc_sound_play_ogg(soundfiles, NULL);
+			else
+			  gc_sound_play_ogg(soundfile, NULL);
 			g_free(soundfile);
                     }
 		    else
