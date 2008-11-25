@@ -1,3 +1,9 @@
+2008-11-24  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	* src/boards/shapegame.c: (item_event_drag): Fixed a crash in case of multiple sound list.
+	  This was especially the case in the level 3 of the double entry activity.
+          Commit r3628
+
 2008-11-18  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* boards/voices/pa/*: Voices created by Ankit Sahai : ankitsahai85 in g mail
