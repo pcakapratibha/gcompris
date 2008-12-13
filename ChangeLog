@@ -1,3 +1,10 @@
+2008-12-13  Bruno Coudoin  <bruno.coudoin@free.fr>
+
+	Removed deprecated menu description in lib/menu/gcompris
+
+	* Makefile.am:
+	* gcompris:
+
 2008-11-26  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Updated the web site generators
