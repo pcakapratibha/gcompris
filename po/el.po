@@ -19,9 +19,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 21:25+0000\n"
-"PO-Revision-Date: 2008-10-21 15:19+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gcompris&amp;component=general\n"
+"POT-Creation-Date: 2008-12-13 08:43+0000\n"
+"PO-Revision-Date: 2008-12-13 13:59+0200\n"
 "Last-Translator: Yannis Kaskamanidis <ttnfy17@yahoo.gr>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -3104,7 +3104,7 @@ msgid "Practice money usage including cents"
 msgstr "Εξάσκηση στη χρήση ευρώ και λεπτών"
 
 #: ../boards/mosaic.xml.in.h:1
-msgid "Rebuild the left mosaic on the right area. Then, select a color in the bottom area and click on grey boxes to paint them."
+msgid "Rebuild the left mosaic on the right area. Select a color in the bottom area and click on grey boxes to paint them."
 msgstr "Ξαναφτιάξε το αριστερό μωσαϊκό στη δεξιά περιοχή. Κατόπιν, επέλεξε ένα χρώμα από την περιοχή κάτω και κάνε κλικ στα γκρίζα κουτιά για να τα χρωματίσεις."
 
 #: ../boards/mosaic.xml.in.h:2
@@ -3885,8 +3885,8 @@ msgstr ""
 #: ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:832
 #: ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1866
-#: ../src/boards/smallnumbers.c:591
+#: ../src/boards/shapegame.c:1870
+#: ../src/boards/smallnumbers.c:592
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -3950,7 +3950,7 @@ msgstr "Πάτησε στην άσπρη πάπια"
 #: ../src/boards/colors.c:176
 #: ../src/boards/python/admin/board_list.py:670
 #: ../src/boards/python/pythontest.py:473
-#: ../src/boards/smallnumbers.c:611
+#: ../src/boards/smallnumbers.c:612
 msgid "Select sound locale"
 msgstr "Διάλεξε τοπικοποιημένο σύνολο ήχων"
 
@@ -3967,7 +3967,7 @@ msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"
 
 #: ../src/boards/gletters.c:887
-#: ../src/boards/smallnumbers.c:609
+#: ../src/boards/smallnumbers.c:610
 msgid "Enable sounds"
 msgstr "Ενεργοποίηση ήχων"
 
@@ -4981,8 +4981,8 @@ msgstr "Το GCompris είναι ένα πακέτο GNU και διέπεται
 
 #: ../src/gcompris/about.c:279
 #: ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:476
-#: ../src/gcompris/config.c:486
+#: ../src/gcompris/config.c:477
+#: ../src/gcompris/config.c:487
 #: ../src/gcompris/dialog.c:102
 #: ../src/gcompris/help.c:379
 #: ../src/gcompris/help.c:389
@@ -5151,6 +5151,7 @@ msgid "Gujarati"
 msgstr "Γκουτζαράτι"
 
 #: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:104
 msgid "Punjabi"
 msgstr "Πουντζάμπι"
 
@@ -5222,107 +5223,107 @@ msgstr "Polish"
 msgid "Portuguese"
 msgstr "Πορτογαλικό"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:105
 msgid "Portuguese (Brazil)"
 msgstr "Πορτογαλικά (Βραζιλίας)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:106
 msgid "Romanian"
 msgstr "Ρουμάνικα"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:107
 msgid "Russian"
 msgstr "Ρωσικά"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:108
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:109
 msgid "Slovak"
 msgstr "Σλοβακική"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:110
 msgid "Slovenian"
 msgstr "Σλοβενικό"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:111
 msgid "Somali"
 msgstr "Σομαλικά"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:112
 msgid "Albanian"
 msgstr "Αλβανικά"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:113
 msgid "Serbian (Latin)"
 msgstr "Σερβικά/Λατινικά"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:114
 msgid "Serbian"
 msgstr "Σερβική"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:115
 msgid "Swedish"
 msgstr "Σουηδικά"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:116
 msgid "Tamil"
 msgstr "Ταμίλ"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:117
 msgid "Thai"
 msgstr "Τάι"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:118
 msgid "Turkish"
 msgstr "Τουρκικά"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:119
 msgid "Urdu"
 msgstr "Ούρντου"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:120
 msgid "Ukrainian"
 msgstr "Ουκρανικά"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:121
 msgid "Vietnamese"
 msgstr "Βιετναμέζικα"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:122
 msgid "Walloon"
 msgstr "Walloon"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:123
 msgid "Chinese (Simplified)"
 msgstr "Κινέζικα (απλουστευμένα)"
 
-#: ../src/gcompris/config.c:123
+#: ../src/gcompris/config.c:124
 msgid "Chinese (Traditional)"
 msgstr "Κινέζικα (Παραδοσιακά)"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:129
 msgid "No time limit"
 msgstr "Χωρίς όριο χρόνου"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:130
 msgid "Slow timer"
 msgstr "Αργό χρονόμετρο"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:131
 msgid "Normal timer"
 msgstr "Κανονικό χρονόμετρο"
 
-#: ../src/gcompris/config.c:131
+#: ../src/gcompris/config.c:132
 msgid "Fast timer"
 msgstr "Γρήγορο χρονόμετρο"
 
-#: ../src/gcompris/config.c:136
+#: ../src/gcompris/config.c:137
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Προεπιλεγμένο για gcompris)"
 
-#: ../src/gcompris/config.c:141
+#: ../src/gcompris/config.c:142
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5331,40 +5332,40 @@ msgstr ""
 "GCompris για να καθορίσετε το\n"
 "επίπεδο δυσκολίας για κάθε προφίλ</i>"
 
-#: ../src/gcompris/config.c:196
-#: ../src/gcompris/config.c:206
+#: ../src/gcompris/config.c:197
+#: ../src/gcompris/config.c:207
 msgid "GCompris Configuration"
 msgstr "Ρύθμιση GCompris"
 
-#: ../src/gcompris/config.c:282
+#: ../src/gcompris/config.c:283
 msgid "Fullscreen"
 msgstr "Πλήρης οθόνη"
 
-#: ../src/gcompris/config.c:325
+#: ../src/gcompris/config.c:326
 msgid "Music"
 msgstr "Μουσική"
 
-#: ../src/gcompris/config.c:353
+#: ../src/gcompris/config.c:354
 msgid "Effect"
 msgstr "Εφέ"
 
-#: ../src/gcompris/config.c:389
+#: ../src/gcompris/config.c:390
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Αδυναμία ανοίγματος καταλόγου skin: %s"
 
-#: ../src/gcompris/config.c:420
-#: ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:421
+#: ../src/gcompris/config.c:871
+#: ../src/gcompris/config.c:885
 #, c-format
 msgid "Skin : %s"
 msgstr "Θέμα: %s"
 
-#: ../src/gcompris/config.c:422
+#: ../src/gcompris/config.c:423
 msgid "SKINS NOT FOUND"
 msgstr "ΔΕΝ ΒΡΕΘΗΚΑΝ ΤΑ ΘΕΜΑΤΑ"
 
-#: ../src/gcompris/config.c:547
+#: ../src/gcompris/config.c:548
 msgid "English (United State)"
 msgstr "Αγγλικά (Ηνωμένων Πολιτειών)"
 
