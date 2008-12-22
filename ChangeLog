@@ -1,3 +1,11 @@
+2008-12-22  Bruno coudoin  <bruno.coudoin@free.fr>
+
+
+
+	* boards/geography_country.xml.in: putted back the france icon
+	* src/boards/reading.c: (ask_ready), (ask_yes_no): fixed a potential crash case,
+	  was using a dereferenced pixbuf.
+
 2008-12-13  Bruno Coudoin  <bruno.coudoin@free.fr>
 
 	Removed deprecated menu description in lib/menu/gcompris

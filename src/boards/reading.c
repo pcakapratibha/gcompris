@@ -564,7 +564,6 @@ static void ask_ready(gboolean status)
 				"y", y_offset,
 				NULL);
 
-  gdk_pixbuf_unref(button_pixmap);
   gtk_signal_connect(GTK_OBJECT(item1), "event",
 		     (GtkSignalFunc) item_event_valid,
 		     "R");
@@ -580,6 +579,7 @@ static void ask_ready(gboolean status)
 				"fill_color", "white",
 				NULL);
 
+  gdk_pixbuf_unref(button_pixmap);
   gtk_signal_connect(GTK_OBJECT(item2), "event",
 		     (GtkSignalFunc) item_event_valid,
 		     "R");
@@ -604,7 +604,6 @@ static void ask_yes_no()
 				"y", y_offset,
 				NULL);
 
-  gdk_pixbuf_unref(button_pixmap);
   gtk_signal_connect(GTK_OBJECT(item), "event",
 		     (GtkSignalFunc) item_event_valid,
 		     "Y");
@@ -626,7 +625,6 @@ static void ask_yes_no()
 
   /*----- NO -----*/
   y_offset += 100;
-  button_pixmap = gc_skin_pixmap_load("button_large2.png");
   item = gnome_canvas_item_new (boardRootItem,
 				gnome_canvas_pixbuf_get_type (),
 				"pixbuf",  button_pixmap,
@@ -634,7 +632,6 @@ static void ask_yes_no()
 				"y", y_offset,
 				NULL);
 
-  gdk_pixbuf_unref(button_pixmap);
   gtk_signal_connect(GTK_OBJECT(item), "event",
 		     (GtkSignalFunc) item_event_valid,
 		     "N");
@@ -650,6 +647,7 @@ static void ask_yes_no()
 				"fill_color", "white",
 				NULL);
 
+  gdk_pixbuf_unref(button_pixmap);
   gtk_signal_connect(GTK_OBJECT(item), "event",
 		     (GtkSignalFunc) item_event_valid,
 		     "N");
