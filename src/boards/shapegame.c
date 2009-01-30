@@ -1871,7 +1871,8 @@ config_start(GcomprisBoard *agcomprisBoard,
 				  agcomprisBoard->name,
 				  aProfile? aProfile->name : "");
 
-  gc_board_config_window_display( label,
+  GcomprisBoardConf *bconf;
+  bconf = gc_board_config_window_display( label,
 				 (GcomprisConfCallback )conf_ok);
 
   g_free(label);
@@ -1882,7 +1883,7 @@ config_start(GcomprisBoard *agcomprisBoard,
   if (strcmp(agcomprisBoard->name, "imagename")==0){
     gchar *locale = g_hash_table_lookup( config, "locale");
 
-    gc_board_config_combo_locales( locale);
+    gc_board_config_combo_locales( bconf, locale);
   }
 
   gchar *drag_mode_str = g_hash_table_lookup( config, "drag_mode");
@@ -1893,7 +1894,7 @@ config_start(GcomprisBoard *agcomprisBoard,
   else
     drag_previous = 0;
 
-  gc_board_config_combo_drag( drag_mode);
+  gc_board_config_combo_drag(bconf, drag_mode);
 
 }
 
