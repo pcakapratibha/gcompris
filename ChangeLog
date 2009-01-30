@@ -1,6 +1,13 @@
 2009-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Vitali Perchonok is com gmail from vitali.pe
+	Fixed refresh issue of tux.
+
+	* src/boards/python/bargame.py:
+
+2009-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Vitali Perchonok is com gmail from vitali.pe
 	Allow only left button on HOME.
 	Using left button only should prevent the menu from freezing
         when pressing two or more buttons at the same time

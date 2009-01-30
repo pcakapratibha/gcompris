@@ -517,9 +517,13 @@ class Gcompris_bargame:
       self.prof_item.connect("event",self.event_play)
       # This item is clickeable and it must be seen
       self.prof_item.connect("event", gcompris.utils.item_event_focus)
+      self.prof_item.connect("event",
+                             lambda tux, event: self.set_prof(self.prof_image) \
+                               if event.type == gtk.gdk.LEAVE_NOTIFY else None  )
 
     def set_prof(self, prof_image):
       self.prof_item.set(pixbuf = gcompris.utils.load_pixmap(prof_image))
+      self.prof_image = prof_image
 
     def event_play(self, item, event):
       if ((event.type != gtk.gdk.BUTTON_PRESS) or
