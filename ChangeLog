@@ -1,6 +1,13 @@
 2009-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Vitali Perchonok is com gmail from vitali.pe
+	Fixed small bug (2 player mode) -> show happy flower even if player 2 wins
+
+	* src/boards/python/connect4.py:
+
+2009-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Vitali Perchonok is com gmail from vitali.pe
 	Fixed refresh issue of tux.
 
 	* src/boards/python/bargame.py:
