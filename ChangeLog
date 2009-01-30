@@ -1,6 +1,13 @@
 2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Vitali Perchonok is com gmail from vitali.pe
+	Fixed for RTL.
+
+	* src/boards/wordsgame.c: (wordsgame_create_item):
+
+2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Vitali Perchonok is com gmail from vitali.pe
 	Fixed crash bug when board finished.
 
 	* src/boards/python/redraw.py:

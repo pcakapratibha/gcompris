@@ -653,9 +653,14 @@ static GnomeCanvasItem *wordsgame_create_item(GnomeCanvasGroup *parent)
                                    &y2);
 
   if(direction_anchor == GTK_ANCHOR_NW)
-    gnome_canvas_item_move (item->rootitem,(double) (g_random_int()%(gcomprisBoard->width-(gint)(x2))),(double) 0);
+      gnome_canvas_item_move (item->rootitem,(double) (g_random_int()%(gcomprisBoard->width-(gint)(x2))),(double) 0);
   else
-    gnome_canvas_item_move (item->rootitem,(double) (g_random_int()%(gcomprisBoard->width+(gint)(x2))),(double) 0);
+   {
+      double new_x = (double)( g_random_int()%gcomprisBoard->width); 
+      if ( new_x < -x1 )      
+		new_x -=  x1;
+      gnome_canvas_item_move (item->rootitem, new_x ,(double) 0);
+   }
 
   g_static_rw_lock_writer_lock (&items_lock);
   g_ptr_array_add(items, item);
