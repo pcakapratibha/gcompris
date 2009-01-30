@@ -1,6 +1,14 @@
 2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Vitali Perchonok is com gmail from vitali.pe
+	Added RTL support.
+
+	* src/boards/reading.c: (start_board), (reading_next_level),
+	(reading_create_item):
+
+2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Vitali Perchonok is com gmail from vitali.pe
 	Prevent an evil crash bug when the kids press 2 buttons at the same time
 
 	* src/boards/menu2.c: (item_event):
