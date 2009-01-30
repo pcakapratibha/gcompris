@@ -1,5 +1,14 @@
 2009-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	Vitali Perchonok is com gmail from vitali.pe
+	Allow only left button on HOME.
+	Using left button only should prevent the menu from freezing
+        when pressing two or more buttons at the same time
+
+	* src/gcompris/bar.c: (item_event_bar):
+
+2009-01-30  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	Miguel DE IZARRA implemented the wordlist selector.
 	We need some improvement to save data in the ~/My GCompris
 	instead of the system datadir directory.
