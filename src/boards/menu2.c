@@ -661,10 +661,13 @@ item_event(GnomeCanvasItem *item, GdkEvent *event,  MenuItems *menuitems)
 
 	}
       else
-	{
+	// This should prevent an evil crash bug
+	// when the kids press 2 buttons at the same time
+	if (event->button.button == 1)
+	 {
 	  gc_sound_play_ogg ("sounds/level.wav", NULL);
 	  gc_board_run_next (board);
-	}
+	 }
 
       break;
 
