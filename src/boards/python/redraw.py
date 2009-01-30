@@ -198,9 +198,14 @@ class Gcompris_redraw:
       self.erase_drawing_area()
       if (self.increment_level() == 1):
         self.gamewon = 1
-        gcompris.bonus.display(gcompris.bonus.WIN, gcompris.bonus.FLOWER)
-        self.display_current_level()
-        self.root_targetitem.hide()
+        # (Quick fix) Trying to avoid a crash when board is finished
+        if self.display_current_level() == 0:  # the current board is finished...
+            gcompris.bonus.board_finished(gcompris.bonus.FINISHED_RANDOM)
+            self.end()
+        else:   # Level up
+            self.root_targetitem.hide()
+            gcompris.bonus.display(gcompris.bonus.WIN, gcompris.bonus.FLOWER)
+
 
     else:
       # Delete previous mark if any
@@ -286,10 +291,8 @@ class Gcompris_redraw:
     i = (self.gcomprisBoard.level-1)*self.gcomprisBoard.number_of_sublevel+ \
         (self.gcomprisBoard.sublevel-1)
 
-    if(i>=len(self.drawlist)):
-       # the current board is finished : bail out
-       gcompris.bonus.board_finished(gcompris.bonus.FINISHED_RANDOM)
-       return
+    if(i>=len(self.drawlist)): # if board is finished Only return 
+        return 0
 
     self.draw_image_target(self.drawlist[i])
 
@@ -331,6 +334,8 @@ class Gcompris_redraw:
       # Try the next level
       self.gcomprisBoard.sublevel=1
       self.gcomprisBoard.level += 1
+    
+      
       if(self.gcomprisBoard.level>self.gcomprisBoard.maxlevel) or self.gcomprisBoard.level*self.gcomprisBoard.sublevel>=len(self.drawlist):
         # the current board is finished : bail out
         gcompris.bonus.board_finished(gcompris.bonus.FINISHED_RANDOM)
