@@ -1,6 +1,13 @@
 2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Vitali Perchonok is com gmail from vitali.pe
+	Fixed crash bug when changing level while dragging an item  (2 click drag mode)
+
+	* src/boards/shapegame.c: (shapegame_next_level):
+
+2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Vitali Perchonok is com gmail from vitali.pe
 	Added RTL support.
 
 	* src/boards/reading.c: (start_board), (reading_next_level),
