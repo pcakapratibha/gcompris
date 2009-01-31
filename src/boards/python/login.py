@@ -89,6 +89,7 @@ class Gcompris_login:
 
     self.users = self.check_unique_id(users)
 
+    self.entry = None
     if eval(self.config_dict['entry_text']):
       self.entry_text()
     else:
@@ -186,10 +187,11 @@ class Gcompris_login:
     print("Gcompris_login pause. %i" % pause)
     # There is a problem with GTK widgets, they are not covered by the help
     # We hide/show them here
-    if(pause):
-      self.entry.hide()
-    else:
-      self.entryt.show()
+    if self.entry:
+      if(pause):
+        self.entry.hide()
+      else:
+        self.entry.show()
 
 
   def set_level(self, level):

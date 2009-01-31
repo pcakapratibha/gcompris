@@ -1,3 +1,11 @@
+2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed python execution issue at line 190, in pause
+	self.entry.hide() was called even in the button mode where
+	there is no GTK entry selector.
+
+	* src/boards/python/login.py:
+
 	*** RELEASE 8.3.10 ***
 
 2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
