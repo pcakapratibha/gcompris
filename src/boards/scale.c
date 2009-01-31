@@ -862,8 +862,8 @@ config_start(GcomprisBoard *agcomprisBoard,
   gchar * label = g_strdup_printf(_("<b>%s</b> configuration\n for profile <b>%s</b>"),
 				  agcomprisBoard->name,
 				  aProfile? aProfile->name : "");
-
-  gc_board_config_window_display( label,
+  GcomprisBoardConf *bconf;
+  bconf = gc_board_config_window_display( label,
 				 (GcomprisConfCallback )conf_ok);
 
   g_free(label);
@@ -879,7 +879,7 @@ config_start(GcomprisBoard *agcomprisBoard,
   else
     drag_previous = 0;
 
-  gc_board_config_combo_drag( drag_mode);
+  gc_board_config_combo_drag(bconf, drag_mode);
 
 }
 

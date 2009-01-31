@@ -544,7 +544,11 @@ item_event_bar(GnomeCanvasItem *item, GdkEvent *event, gchar *data)
 		}
 	    }
 	}
-      else if(!strcmp((char *)data, "back"))
+      /*
+	 using left button only should prevent the menu from freezing
+	 when pressing two or more buttons at the same time
+      */
+      else if( !strcmp((char *)data, "back") && event->button.button == 1 )
 	{
 	  gc_bar_hide (TRUE);
 	  gc_board_stop();

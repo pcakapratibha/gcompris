@@ -1,89 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0"?>
 <GCompris>
-<Wordlist name="default-fr" description="Default French" locale="fr">
-<level value="1">
-moto
-auto
-marmelade
-mare
-natte
-tape
-lape
-tache
-passe
-tasse
-marie
-pot
-mot
-porte
-mur
-sur
-</level>
-<level value="2">
-navire
-arrive
-sort
-port
-piano
-violon
-os
-chatte
-mer
-loto
-amie
-copine
-tortue
-sorti
-sourire
-auto
-</level>
-<level value="3">
-samedi
-vendredi
-jeudi
-mercredi
-mardi
-lundi
-dimanche
-sale
-café
-rit
-chocolat
-lape
-pale
-nuit
-fuit
-lit
-suit
-raté
-mal
-six
-patte
-</level>
-<level value="4">
-pic
-roc
-sac
-choc
-canne
-carte
-cape
-colle
-café
-canard
-carpe
-cachalot
-canari
-pie
-carré
-cassé
-écorché
-cache
-cuit
-calé
-copie
-canot
-colorie
-</level>
-</Wordlist>
+  <Wordlist name="default-fr" description="Default French" locale="fr">
+    <level value="4">pic roc sac choc canne carte cape colle caf&#xE9; canard carpe cachalot canari pie carr&#xE9; cass&#xE9; &#xE9;corch&#xE9; cache cuit cal&#xE9; copie canot colorie </level>
+    <level value="2">coucou popo pupu </level>
+    <level value="3">gfgfd gf gfd gdf g </level>
+    <level value="1">clara cl&#xE9;ment bruno &#xE2;ne </level>
+  </Wordlist>
 </GCompris>

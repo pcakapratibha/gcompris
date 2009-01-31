@@ -47,7 +47,8 @@ static GnomeCanvasGroup *boardRootItem = NULL;
 typedef enum
 {
   MODE_HORIZONTAL		= 0,
-  MODE_VERTICAL			= 1
+  MODE_VERTICAL			= 1,
+  MODE_HORIZONTAL_RTL		= 2
 } Mode;
 static Mode currentMode = MODE_VERTICAL;
 
@@ -211,10 +212,9 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 
       g_warning ("Font to display words have size %d  ascent : %d, descent : %d.\n Set inerline to %d", font_size, ascent, descent, interline);
 
-      /* Default mode */
-      currentMode=MODE_VERTICAL;
-      if(gcomprisBoard->mode && g_strcasecmp(gcomprisBoard->mode, "horizontal")==0)
-	currentMode=MODE_HORIZONTAL;
+
+
+      
 
       gc_wordlist = gc_wordlist_get_from_file("wordsgame/default-$LOCALE.xml");
 
@@ -231,7 +231,17 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 	    }
 	}
 
-      reading_next_level();
+      
+      currentMode=MODE_VERTICAL; // Default mode 
+      if(gcomprisBoard->mode && g_strcasecmp(gcomprisBoard->mode, "horizontal")==0)
+        {
+          if (pango_unichar_direction(g_utf8_get_char(gc_wordlist_random_word_get(gc_wordlist, gcomprisBoard->level))) == PANGO_DIRECTION_RTL)	
+              currentMode=MODE_HORIZONTAL_RTL;
+          else
+               currentMode=MODE_HORIZONTAL;
+        }
+   
+       reading_next_level();
     }
 }
 
@@ -315,7 +325,7 @@ static gint reading_next_level()
     }
   else
     {
-      current_x = BASE_X1;
+      current_x = BASE_X2;
       numberOfLine=2+gcomprisBoard->level;
     }
 
@@ -462,6 +472,8 @@ static gboolean reading_create_item(GnomeCanvasGroup *parent)
 
   if(currentMode==MODE_HORIZONTAL)
     anchor=GTK_ANCHOR_WEST;
+  else if (currentMode==MODE_HORIZONTAL_RTL)
+    anchor=GTK_ANCHOR_EAST;
 
   previousFocus.item = \
     gnome_canvas_item_new (GNOME_CANVAS_GROUP(previousFocus.rootItem),
@@ -498,6 +510,24 @@ static gboolean reading_create_item(GnomeCanvasGroup *parent)
       current_y += interline;
       numberOfLine--;
     }
+  else if (currentMode==MODE_HORIZONTAL_RTL)
+    {
+      double x1, y1, x2, y2;
+
+      gnome_canvas_item_get_bounds(GNOME_CANVAS_ITEM(previousFocus.rootItem), &x1, &y1, &x2, &y2);
+
+      // Are we out of bound
+      if(x1<BASE_X1)
+	{
+	  // Do the line Wrapping
+	  gnome_canvas_item_move(GNOME_CANVAS_ITEM(previousFocus.rootItem), BASE_X2-x2, interline);
+	  current_y += interline;
+	  current_x = BASE_X2;
+	  numberOfLine--;
+	}
+      current_x -= x2-x1 + font_size;
+     }
+
   else
     {
       double x1, y1, x2, y2;
@@ -822,6 +852,7 @@ static void
 reading_config_start(GcomprisBoard *agcomprisBoard,
 		    GcomprisProfile *aProfile)
 {
+  GcomprisBoardConf *conf;
   board_conf = agcomprisBoard;
   profile_conf = aProfile;
 
@@ -832,7 +863,7 @@ reading_config_start(GcomprisBoard *agcomprisBoard,
 				 agcomprisBoard->name,
 				 aProfile? aProfile->name: "");
 
-  gc_board_config_window_display( label,
+  conf = gc_board_config_window_display( label,
 				 (GcomprisConfCallback )conf_ok);
 
   g_free(label);
@@ -842,8 +873,8 @@ reading_config_start(GcomprisBoard *agcomprisBoard,
 
   gchar *locale = g_hash_table_lookup( config, "locale");
 
-  gc_board_config_combo_locales( locale);
-
+  gc_board_config_combo_locales(conf, locale);
+  gc_board_config_wordlist(conf, "wordsgame/default-$LOCALE.xml");
 }
 
 

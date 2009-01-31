@@ -53,7 +53,6 @@ typedef struct {
 } Board;
 
 /* XML */
-static gboolean		 read_xml_file(char *fname);
 static void		 init_xml(void);
 static void		 add_xml_data(xmlDocPtr doc,xmlNodePtr xmlnode, GNode * child);
 static void		 parse_doc(xmlDocPtr doc);
@@ -555,8 +554,8 @@ static void add_xml_data(xmlDocPtr doc, xmlNodePtr xmlnode, GNode * child)
 {
   gchar *pixmapfile = NULL;
   gchar *text1 = NULL, *text2 = NULL, *text3 = NULL;
+  xmlChar* tmp;
   Board * board = g_new(Board,1);
-  gboolean found_text1 = FALSE, found_text2 = FALSE, found_text3 = FALSE;
 
   xmlnode = xmlnode->xmlChildrenNode;
 
@@ -567,30 +566,33 @@ static void add_xml_data(xmlDocPtr doc, xmlNodePtr xmlnode, GNode * child)
     if (!strcmp((char *)xmlnode->name, "pixmapfile"))
       pixmapfile = (gchar *)xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1);
 
-    if (!found_text1 && !strcmp((char *)xmlnode->name, "text1"))
+    if (!strcmp((char *)xmlnode->name, "text1"))
       {
 	if(text1==NULL)
 	  {
-	    text1 = \
-	      g_strdup(gettext((gchar *)xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1)));
+	    tmp = xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1);
+	    text1 = g_strdup(gettext((gchar*)tmp));
+	    g_free(tmp);
 	  }
       }
 
-    if (!found_text2 && !strcmp((char *)xmlnode->name, "text2"))
+    if (!strcmp((char *)xmlnode->name, "text2"))
       {
 	if(text2==NULL)
 	  {
-	    text2 = \
-	      g_strdup(gettext((gchar *)xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1)));
+	    tmp = xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1);
+	    text2 = g_strdup(gettext((gchar*)tmp));
+	    g_free(tmp);
 	  }
       }
 
-    if (!found_text3 && !strcmp((char *)xmlnode->name, "text3"))
+    if (!strcmp((char *)xmlnode->name, "text3"))
       {
 	if(text3==NULL)
 	  {
-	    text3 = \
-	      g_strdup(gettext((gchar *)xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1)));
+	    tmp = xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1);
+	    text3 = g_strdup(gettext((gchar *)tmp));
+	    g_free(tmp);
 	  }
       }
 
@@ -749,8 +751,8 @@ config_start(GcomprisBoard *agcomprisBoard,
   gchar *label = g_strdup_printf(_("<b>%s</b> configuration\n for profile <b>%s</b>"),
 				 agcomprisBoard->name,
 				 aProfile ? aProfile->name : "");
-
-  gc_board_config_window_display( label,
+  GcomprisBoardConf *bconf;
+  bconf = gc_board_config_window_display( label,
 				 (GcomprisConfCallback )conf_ok);
 
   g_free(label);
@@ -760,7 +762,7 @@ config_start(GcomprisBoard *agcomprisBoard,
 
   gchar *locale = g_hash_table_lookup( config, "locale");
 
-  gc_board_config_combo_locales( locale);
+  gc_board_config_combo_locales(bconf, locale);
 
 }
 

@@ -1,7 +1,5 @@
 #  gcompris - connect4
 #
-# Time-stamp:
-#
 # Copyright (C) 2005 Laurent Lacheny
 #
 #   This program is free software; you can redistribute it and/or modify
@@ -352,7 +350,7 @@ class Gcompris_connect4:
             width_pixels = 8
             )
         self.redLine.set_property("cap-style", gtk.gdk.CAP_ROUND)
-        if player == 1:
+        if player == 1 or self.mode == 2:
             gcompris.bonus.display(gcompris.bonus.WIN, gcompris.bonus.FLOWER)
         elif player == 2:
             gcompris.bonus.display(gcompris.bonus.LOOSE, gcompris.bonus.FLOWER)

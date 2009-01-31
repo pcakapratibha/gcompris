@@ -1077,7 +1077,7 @@ py_gc_board_config_boolean_box(PyObject* self, PyObject* args)
 
   /* Call the corresponding C function */
   return (PyObject *)pygobject_new((GObject*) \
-				    gc_board_config_boolean_box((const gchar *)label, key, PyObject_IsTrue(py_bool)));
+				    gc_board_config_boolean_box(NULL,(const gchar *)label, key, PyObject_IsTrue(py_bool)));
 
 }
 
@@ -1112,7 +1112,7 @@ py_gc_board_config_combo_box(PyObject* self, PyObject* args)
 
   /* Call the corresponding C function */
   return (PyObject *)pygobject_new((GObject*) \
-				    gc_board_config_combo_box((const gchar *)label,
+				    gc_board_config_combo_box(NULL, (const gchar *)label,
 						       list,
 						       key,
 						       init));
@@ -1197,7 +1197,7 @@ py_gc_board_config_radio_buttons(PyObject* self, PyObject* args)
 			  g_strdup(PyString_AsString(pyvalue)));
   }
 
-  result = gc_board_config_radio_buttons(label,
+  result = gc_board_config_radio_buttons(NULL,label,
 				  key,
 				  buttons_label,
 				  init);
@@ -1219,7 +1219,7 @@ py_gc_board_config_spin_int(PyObject* self, PyObject* args)
     return NULL;
 
   return (PyObject *)pygobject_new((GObject*) \
-				   gc_board_config_spin_int((const gchar *)label,
+				   gc_board_config_spin_int(NULL, (const gchar *)label,
 						     key,
 						     min,
 						     max,
@@ -1238,7 +1238,7 @@ py_gc_board_conf_separator(PyObject* self, PyObject* args)
     return NULL;
 
   /* Create and return the result */
-  return (PyObject *)pygobject_new((GObject*) gc_board_conf_separator());
+  return (PyObject *)pygobject_new((GObject*) gc_board_conf_separator(NULL));
 
 }
 
@@ -1253,7 +1253,7 @@ py_gc_board_config_combo_locales(PyObject* self, PyObject* args)
     return NULL;
 
   return (PyObject *)pygobject_new((GObject*) \
-				   gc_board_config_combo_locales( init));
+				   gc_board_config_combo_locales(NULL, init));
 }
 
 
@@ -1296,7 +1296,7 @@ py_gc_board_config_combo_locales_asset(PyObject* self, PyObject* args)
     return NULL;
 
   return (PyObject *)pygobject_new((GObject*) \
-				   gc_board_config_combo_locales_asset( label, init, file ));
+				   gc_board_config_combo_locales_asset(NULL, label, init, file ));
 }
 
 
@@ -1447,7 +1447,7 @@ py_gc_board_config_textview(PyObject* self, PyObject* args){
 
   return (PyObject *) \
              pygobject_new((GObject*) \
-			   gc_board_config_textview( label,
+			   gc_board_config_textview(NULL, label,
 					      key,
 					      desc,
 					      init_text,

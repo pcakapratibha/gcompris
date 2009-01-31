@@ -435,6 +435,7 @@ static void shapegame_next_level()
   char *filename;
 
   gamewon = FALSE;
+  gc_drag_stop(gnome_canvas_root(gcomprisBoard->canvas));
 
   shapegame_destroy_all_items();
   next_shapelist_item = previous_shapelist_item = NULL;
@@ -457,6 +458,8 @@ static void shapegame_next_level()
 
   read_xml_file(filename);
 
+
+  gc_drag_start(gnome_canvas_root(gcomprisBoard->canvas), (gc_Drag_Func) item_event_drag, drag_mode);
   g_free(filename);
 }
 
@@ -1868,7 +1871,8 @@ config_start(GcomprisBoard *agcomprisBoard,
 				  agcomprisBoard->name,
 				  aProfile? aProfile->name : "");
 
-  gc_board_config_window_display( label,
+  GcomprisBoardConf *bconf;
+  bconf = gc_board_config_window_display( label,
 				 (GcomprisConfCallback )conf_ok);
 
   g_free(label);
@@ -1879,7 +1883,7 @@ config_start(GcomprisBoard *agcomprisBoard,
   if (strcmp(agcomprisBoard->name, "imagename")==0){
     gchar *locale = g_hash_table_lookup( config, "locale");
 
-    gc_board_config_combo_locales( locale);
+    gc_board_config_combo_locales( bconf, locale);
   }
 
   gchar *drag_mode_str = g_hash_table_lookup( config, "drag_mode");
@@ -1890,7 +1894,7 @@ config_start(GcomprisBoard *agcomprisBoard,
   else
     drag_previous = 0;
 
-  gc_board_config_combo_drag( drag_mode);
+  gc_board_config_combo_drag(bconf, drag_mode);
 
 }
 
