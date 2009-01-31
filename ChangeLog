@@ -1,5 +1,17 @@
 2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	reviewed by: <delete if not using a buddy>
+
+	* src/boards/reversecount.c: (reversecount_next_level),
+	(reversecount_create_item), (item_event), (create_clock),
+	(update_clock):
+	* src/boards/target.c: (display_windspeed), (target_create_item),
+	(request_score):
+	* src/gcompris/timer.c: (gc_timer_display), (start_animation):
+	* src/gcompris/timer.h:
+
+2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	Vitali Perchonok is com gmail from vitali.pe
 	Fixed for RTL.
 

@@ -88,41 +88,17 @@ static gchar *imageList[] =
   "opt/epaulard.png",
   "opt/narval.png",
 };
-#define NUMBER_OF_IMAGES 10
+#define NUM_IMAGELIST G_N_ELEMENTS(imageList)
 
 // List of fish to use in the game
 static gchar *fishList[] =
 {
-  "fishes/blueking2_0.png",
-  "fishes/butfish_0.png",
-  "fishes/cichlid1_0.png",
-  "fishes/cichlid4_0.png",
-  "fishes/collaris_0.png",
-  "fishes/discus2_0.png",
-  "fishes/discus3_0.png",
-  "fishes/eel_0.png",
-  "fishes/f00_0.png",
-  "fishes/f01_0.png",
-  "fishes/f02_0.png",
-  "fishes/f03_0.png",
-  "fishes/f04_0.png",
-  "fishes/f05_0.png",
-  "fishes/f06_0.png",
-  "fishes/f07_0.png",
-  "fishes/f08_0.png",
-  "fishes/f09_0.png",
-  "fishes/f10_0.png",
-  "fishes/f11_0.png",
-  "fishes/f12_0.png",
-  "fishes/f13_0.png",
-  "fishes/manta_0.png",
-  "fishes/newf1_0.png",
-  "fishes/QueenAngel_0.png",
-  "fishes/shark1_0.png",
-  "fishes/six_barred_0.png",
-  "fishes/teeth_0.png"
+  "images/fish00.png",
+  "images/fish01.png",
+  "images/fish02.png",
+  "images/fish03.png",
 };
-#define NUMBER_OF_FISHES 27
+#define NUMBER_OF_FISHES G_N_ELEMENTS(fishList)
 
 /* Description of this plugin */
 static BoardPlugin menu_bp =
@@ -330,6 +306,7 @@ static void process_ok()
 /* set initial values for the next level */
 static void reversecount_next_level()
 {
+  g_assert(NUM_IMAGELIST > gcomprisBoard->level-1);
 
   gc_set_background(gnome_canvas_root(gcomprisBoard->canvas),
 			  imageList[gcomprisBoard->level-1]);
@@ -529,7 +506,7 @@ static GnomeCanvasItem *reversecount_create_item(GnomeCanvasGroup *parent)
 
   //----------------------------------------
   // Create the dices
-  pixmap = gc_pixmap_load("gcompris/dice/gnome-dice1.png");
+  pixmap = gc_pixmap_load("gcompris/dice/small_dice_1.png");
 
   for(d=0; d<number_of_dices; d++)
     {
@@ -710,7 +687,7 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, gint *dice_index)
 	  break;
 	}
 
-      str = g_strdup_printf("gcompris/dice/gnome-dice%d.png", dicevalue_array[i]);
+      str = g_strdup_printf("gcompris/dice/small_dice_%d.png", dicevalue_array[i]);
 
       pixmap = gc_pixmap_load(str);
 
@@ -742,7 +719,7 @@ static void create_clock(double x, double y, int value)
   if(value<0)
     return;
 
-  str = g_strdup_printf("%s%d.png", "gcompris/timers/clock",value);
+  str = g_strdup_printf("%s%d.png", "gcompris/timers/tux",value);
 
   pixmap = gc_pixmap_load(str);
 
@@ -765,7 +742,7 @@ static void update_clock(int value)
   if(value<0)
     return;
 
-  str = g_strdup_printf("%s%d.png", "gcompris/timers/clock",value);
+  str = g_strdup_printf("%s%d.png", "gcompris/timers/tux",value);
 
   pixmap = gc_pixmap_load(str);
 

@@ -46,6 +46,8 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
   GdkFont *gdk_font;
   GdkPixbuf *pixmap = NULL;
   GcomprisProperties *properties = gc_prop_get();
+  char *image_prefix;
+
 
   /* Timer is not requested */
   if(properties->timer==0)
@@ -76,18 +78,28 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
     {
     case GCOMPRIS_TIMER_SAND:
     case GCOMPRIS_TIMER_CLOCK:
+    case GCOMPRIS_TIMER_TUX:
       {
 	gchar		*filefull = NULL;
 	gchar		*filename = NULL;
 	gint		fileid;
 
-	fileid = (gint)timer;
-	if(type==GCOMPRIS_TIMER_SAND)
-	  filename = g_strdup_printf("gcompris/timers/sablier%d.png", fileid);
-	else
-	  filename = g_strdup_printf("gcompris/timers/clock%d.png", fileid);
+	switch(type)
+	  {
+	  case GCOMPRIS_TIMER_SAND:
+	    image_prefix = "gcompris/timers/sablier%d.png";
+	  case GCOMPRIS_TIMER_CLOCK:
+	    image_prefix = "gcompris/timers/clock%d.png";
+	  case GCOMPRIS_TIMER_TUX:
+	    image_prefix = "gcompris/timers/tux%d.png";
+	  default:
+	    break;
+	  }
 
+	fileid = (gint)timer;
+	filename = g_strdup_printf(image_prefix, fileid);
 	filefull = g_strdup_printf("%s/%s", properties->package_data_dir, filename);
+
 	if (g_file_test ((filefull), G_FILE_TEST_EXISTS))
 	  {
 	    pixmap = gc_pixmap_load(filename);
@@ -221,6 +233,7 @@ start_animation()
     {
     case GCOMPRIS_TIMER_SAND:
     case GCOMPRIS_TIMER_CLOCK:
+    case GCOMPRIS_TIMER_TUX:
       /* No subanimation */
       break;
     case GCOMPRIS_TIMER_TEXT:

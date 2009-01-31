@@ -32,6 +32,7 @@ typedef enum
   GCOMPRIS_TIMER_SAND,
   GCOMPRIS_TIMER_BALLOON,
   GCOMPRIS_TIMER_CLOCK,
+  GCOMPRIS_TIMER_TUX,
 } TimerList;
 
 /* Callback when the timer is completed */

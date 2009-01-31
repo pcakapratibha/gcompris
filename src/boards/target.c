@@ -376,7 +376,7 @@ static void display_windspeed()
   gnome_canvas_item_new (speedRootItem,
 			 gnome_canvas_line_get_type (),
 			 "points", canvasPoints,
-			 "fill_color_rgba", 0x6df438FF,
+			 "fill_color", "red",
 			 "width_units", (double)1,
 			 "width_pixels", (guint) 4,
 			 "last_arrowhead", TRUE,
@@ -394,7 +394,7 @@ static void display_windspeed()
 			 "y1", (double)SPEED_CENTER_Y-5,
 			 "x2", (double)SPEED_CENTER_X+5,
 			 "y2", (double)SPEED_CENTER_Y+5,
-			 "fill_color_rgba", 0x6df438FF,
+			 "fill_color", "red",
 			 "outline_color", "red",
 			 "width_units", (double)1,
 			 NULL);
@@ -475,7 +475,7 @@ static GnomeCanvasItem *target_create_item(GnomeCanvasGroup *parent)
 			 "x", (double) 0,
 			 "y", (double) BOARDHEIGHT-TARGET_CENTER_Y -45,
 			 "anchor", GTK_ANCHOR_CENTER,
-			 "fill_color", "white",
+			 "fill_color", "black",
 			 NULL);
   g_free(tmpstr);
 
@@ -550,7 +550,7 @@ static void request_score()
 				       "x", (double) x_offset + gdk_pixbuf_get_width(button_pixmap)/2,
 				       "y", (double) y_offset + gdk_pixbuf_get_height(button_pixmap)/2,
 				       "anchor", GTK_ANCHOR_CENTER,
-				       "fill_color", "white",
+				       "fill_color", "black",
 				       NULL);
   g_free(tmpstr);
 
