@@ -1,6 +1,9 @@
 2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
-	reviewed by: <delete if not using a buddy>
+        Vitali Perchonok is com gmail from vitali.pe
+	Graphical improvements. Images taken from openclipart.
+
+	Matieu Ignacio: New original background for the target activity.
 
 	* src/boards/reversecount.c: (reversecount_next_level),
 	(reversecount_create_item), (item_event), (create_clock),
