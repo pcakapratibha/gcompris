@@ -1,3 +1,11 @@
+2009-02-01  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	From trunk 3718
+	Recoded the fix 3706 to not use a coding style not supported
+	by python 2.4
+
+	* src/boards/python/bargame.py:
+
 2009-01-31  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	Fixed python execution issue at line 190, in pause
