@@ -76,7 +76,6 @@ gcompris_SOURCES = \
 	board_config.h board_config.c \
 	bonus.c \
 	bonus.h \
-	cache.c \
 	config.c \
 	dialog.c \
 	drag.c \

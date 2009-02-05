@@ -676,7 +676,7 @@ static void setup_window ()
   if(!icon_file)
       g_warning ("Couldn't find file %s !", icon_file);
 
-  icon_pixbuf = gc_net_load_pixmap(icon_file);
+  icon_pixbuf = gdk_pixbuf_new_from_file(icon_file,NULL);
   if (!icon_pixbuf)
     {
       g_warning ("Failed to load pixbuf file: %s\n",
@@ -1071,6 +1071,8 @@ static void cleanup()
   xf86_vidmode_set_fullscreen(FALSE);
 #endif
   gc_menu_destroy();
+  gc_net_destroy();
+  gc_cache_destroy();
   gc_prop_destroy(gc_prop_get());
 }
 
@@ -1891,6 +1893,10 @@ main (int argc, char *argv[])
 
   single_instance_check();
 
+  /* networking init */
+  gc_net_init();
+  gc_cache_init();
+
   gc_skin_load(properties->skin);
 
   if(properties->music || properties->fx)
@@ -1898,12 +1904,6 @@ main (int argc, char *argv[])
 
   /* Gdk-Pixbuf */
   gdk_rgb_init();
-
-  /* Cache init */
-  gc_cache_init(-1);
-
-  /* networking init */
-  gc_net_init();
 
   setup_window ();
 
