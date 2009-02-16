@@ -171,6 +171,11 @@ gc_net_get_url_from_file(const gchar *format, ...)
         g_file_set_contents(cache, buf, buflen, NULL);
 	g_free(buf);
       }
+      else
+      { /* file is in content.txt but not in server */
+      	g_free(cache);
+      	cache = NULL;
+      }
     }
   }
   g_free(file);
@@ -255,6 +260,44 @@ void gc_cache_add(gchar *filename)
 
 	filename = gc_cache_get_relative(filename);
 	g_hash_table_insert(cache_content, g_strdup(filename), g_strdup("0"));
+}
+
+gchar* gc_cache_import_pixmap(gchar *filename, gchar *boarddir, gint width, gint height)
+{
+	GdkPixbuf *pixmap;
+	gchar *basename, *file, *ext, *name, *abs;
+
+	if(!g_path_is_absolute(filename))
+		return g_strdup(filename);
+	basename = g_path_get_basename(filename);
+	name = g_build_filename(boarddir, basename,NULL);
+	abs = gc_file_find_absolute(name);
+	if(abs && strcmp(abs,filename)==0)
+	{
+		g_free(basename);
+		g_free(abs);
+		return name;
+	}
+	pixmap = gdk_pixbuf_new_from_file_at_size(filename, width, height,NULL);
+	if(!pixmap)
+	{
+		g_free(abs);
+		g_free(basename);
+		g_free(name);
+		return NULL;
+	}
+
+	file = gc_file_find_absolute_writeable(name);
+	ext = strchr(basename, '.')+1;
+	if(strcmp(ext, "jpg")==0)
+		ext ="jpeg";
+
+	gdk_pixbuf_save(pixmap, file, ext, NULL,NULL);
+
+	g_free(abs);
+	g_free(basename);
+	g_free(file);
+	return name;
 }
 
 void gc_cache_remove(gchar *filename)

@@ -26,7 +26,7 @@
 
 #define SOUNDLISTFILE PACKAGE
 
-static GcomprisBoard *gcomprisBoard = NULL;
+GcomprisBoard *gcomprisBoard_missing = NULL;
 static gboolean board_paused = TRUE;
 
 static void		 start_board (GcomprisBoard *agcomprisBoard);
@@ -42,6 +42,9 @@ static void		 config_start(GcomprisBoard *agcomprisBoard,
 					     GcomprisProfile *aProfile);
 static void		 config_stop(void);
 
+/* from missingletter_config.c */
+void config_missing_letter(GcomprisBoardConf *config);
+
 typedef struct _Board Board;
 struct _Board {
   char  *pixmapfile;
@@ -55,12 +58,10 @@ struct _Board {
 static Board * board;
 
 /* XML */
-static gboolean		 read_xml_file(char *fname);
 static void		 init_xml(void);
-static void		 add_xml_data(xmlDocPtr, xmlNodePtr, GNode *);
-static void		 parse_doc(xmlDocPtr doc);
-static gboolean		 read_xml_file(char *fname);
-static void		 destroy_board_list();
+static void		 add_xml_data(xmlDocPtr, xmlNodePtr, GList**);
+gboolean		 missing_read_xml_file(char *fname, GList**);
+void			 missing_destroy_board_list(GList *);
 static void		 destroy_board(Board * board);
 
 /* This is the list of boards */
@@ -69,12 +70,7 @@ static GList *board_list = NULL;
 #define VERTICAL_SEPARATION 30
 #define HORIZONTAL_SEPARATION 30
 
-//NUMBER_OF_SUBLEVELS*NUMBER_OF_LEVELS must equal the number of boards in XML file
-#define NUMBER_OF_SUBLEVELS 9
-#define NUMBER_OF_LEVELS 4
-
 /* ================================================================ */
-static int board_number; // between 0 and board_list.length-1
 static int right_word; // between 1 and 3, indicates which choice is the right one (the player clicks on it
 
 static GnomeCanvasGroup *boardRootItem = NULL;
@@ -131,7 +127,7 @@ GET_BPLUGIN_INFO(missingletter)
  */
 static void pause_board (gboolean pause)
 {
-  if(gcomprisBoard==NULL)
+  if(gcomprisBoard_missing==NULL)
     return;
 
   gc_bar_hide(FALSE);
@@ -149,6 +145,7 @@ static void pause_board (gboolean pause)
 static void start_board (GcomprisBoard *agcomprisBoard)
 {
   GHashTable *config = gc_db_get_board_conf();
+  gchar * filename;
 
   gc_locale_set(g_hash_table_lookup( config, "locale"));
 
@@ -156,19 +153,23 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 
   if(agcomprisBoard!=NULL)
     {
-      gcomprisBoard=agcomprisBoard;
-      gc_set_background(gnome_canvas_root(gcomprisBoard->canvas),
+      gcomprisBoard_missing=agcomprisBoard;
+      gc_set_background(gnome_canvas_root(gcomprisBoard_missing->canvas),
 			"opt/missingletter-bg.jpg");
-      gcomprisBoard->level=1;
-      gcomprisBoard->maxlevel=NUMBER_OF_LEVELS;
-      gcomprisBoard->sublevel=1;
-      gcomprisBoard->number_of_sublevel=NUMBER_OF_SUBLEVELS; /* Go to next level after this number of 'play' */
+      gcomprisBoard_missing->level=1;
+
+      /* Calculate the maxlevel based on the available data file for this board */
+      gcomprisBoard_missing->maxlevel = 1;
+      while((filename = gc_file_find_absolute("%s/board%d.xml",
+      	gcomprisBoard_missing->boarddir, ++gcomprisBoard_missing->maxlevel)))
+	  g_free(filename);
+
+      gcomprisBoard_missing->maxlevel--;
+
+      gcomprisBoard_missing->sublevel=1;
+      gcomprisBoard_missing->number_of_sublevel=G_MAXINT;
+
       init_xml();
-      g_assert(NUMBER_OF_LEVELS*NUMBER_OF_SUBLEVELS == g_list_length(board_list));
-      gc_score_start(SCORESTYLE_NOTE,
-			   50,
-			   gcomprisBoard->height - 50,
-			   gcomprisBoard->number_of_sublevel);
       gc_bar_set(GC_BAR_CONFIG | GC_BAR_LEVEL);
 
       missing_letter_next_level();
@@ -181,27 +182,29 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 static void end_board ()
 {
 
-  if(gcomprisBoard!=NULL)
+  if(gcomprisBoard_missing!=NULL)
     {
       pause_board(TRUE);
       gc_score_end();
       missing_letter_destroy_all_items();
-      destroy_board_list();
+      missing_destroy_board_list(board_list);
+      board_list = NULL;
     }
 
   gc_locale_reset();
 
-  gcomprisBoard = NULL;
+  gcomprisBoard_missing = NULL;
 }
 
 static void
 set_level (guint level)
 {
 
-  if(gcomprisBoard!=NULL)
+  if(gcomprisBoard_missing!=NULL)
     {
-      gcomprisBoard->level=level;
-      gcomprisBoard->sublevel=1;
+      gcomprisBoard_missing->level=level;
+      gcomprisBoard_missing->sublevel=1;
+      init_xml();
       missing_letter_next_level();
     }
 }
@@ -227,16 +230,16 @@ is_our_board (GcomprisBoard *gcomprisBoard)
 /* set initial values for the next level */
 static void missing_letter_next_level()
 {
-  gc_bar_set_level(gcomprisBoard);
+  gc_bar_set_level(gcomprisBoard_missing);
 
   missing_letter_destroy_all_items();
   selected_button = NULL;
   gamewon = FALSE;
 
-  gc_score_set(gcomprisBoard->sublevel);
+  gc_score_set(gcomprisBoard_missing->sublevel);
 
   /* Try the next level */
-  missing_letter_create_item(gnome_canvas_root(gcomprisBoard->canvas));
+  missing_letter_create_item(gnome_canvas_root(gcomprisBoard_missing->canvas));
 
 }
 /* ==================================== */
@@ -267,27 +270,24 @@ static GnomeCanvasItem *missing_letter_create_item(GnomeCanvasGroup *parent)
   gint txt_area_x = 515;
   gint txt_area_y = 435;
 
-  board_number = (gcomprisBoard->level-1) * NUMBER_OF_SUBLEVELS + gcomprisBoard->sublevel-1;
-
-  g_assert(board_number >= 0  && board_number < g_list_length(board_list));
   place = g_random_int_range( 0, 3);
   g_assert(place >= 0  && place < 3);
 
   right_word = place+1;
 
   boardRootItem = GNOME_CANVAS_GROUP(
-				     gnome_canvas_item_new (gnome_canvas_root(gcomprisBoard->canvas),
+				     gnome_canvas_item_new (gnome_canvas_root(gcomprisBoard_missing->canvas),
 							    gnome_canvas_group_get_type (),
 							    "x", (double) 0,
 							    "y", (double) 0,
 							    NULL));
   button_pixmap = gc_skin_pixmap_load("button.png");
   /* display the image */
-  board = g_list_nth_data(board_list, board_number);
+  board = g_list_nth_data(board_list, gcomprisBoard_missing->sublevel-1);
   g_assert(board != NULL);
   pixmap = gc_pixmap_load(board->pixmapfile);
 
-  yOffset = (gcomprisBoard->height - gdk_pixbuf_get_height(button_pixmap) - gdk_pixbuf_get_height(pixmap) - 2*VERTICAL_SEPARATION)/2;
+  yOffset = (gcomprisBoard_missing->height - gdk_pixbuf_get_height(button_pixmap) - gdk_pixbuf_get_height(pixmap) - 2*VERTICAL_SEPARATION)/2;
 
   text_s = gnome_canvas_item_new (boardRootItem,
 				gnome_canvas_text_get_type (),
@@ -344,7 +344,7 @@ static GnomeCanvasItem *missing_letter_create_item(GnomeCanvasGroup *parent)
     break;
   }
 
-  yOffset = ( gcomprisBoard->height - 3*gdk_pixbuf_get_height(button_pixmap) - 2*VERTICAL_SEPARATION) / 2;
+  yOffset = ( gcomprisBoard_missing->height - 3*gdk_pixbuf_get_height(button_pixmap) - 2*VERTICAL_SEPARATION) / 2;
   xOffset = (img_area_x-gdk_pixbuf_get_width(button_pixmap))/2;
   button1 = gnome_canvas_item_new (boardRootItem,
 				   gnome_canvas_pixbuf_get_type (),
@@ -437,13 +437,15 @@ static GnomeCanvasItem *missing_letter_create_item(GnomeCanvasGroup *parent)
 }
 /* ==================================== */
 static void game_won() {
-  gcomprisBoard->sublevel++;
+  gcomprisBoard_missing->sublevel++;
 
-  if(gcomprisBoard->sublevel>gcomprisBoard->number_of_sublevel) {
+  if(gcomprisBoard_missing->sublevel>gcomprisBoard_missing->number_of_sublevel) {
     /* Try the next level */
-    gcomprisBoard->sublevel=1;
-    gcomprisBoard->level++;
-    if(gcomprisBoard->level>gcomprisBoard->maxlevel) {
+    gcomprisBoard_missing->sublevel=1;
+    gcomprisBoard_missing->level++;
+    init_xml();
+
+    if(gcomprisBoard_missing->level>gcomprisBoard_missing->maxlevel) {
 	gc_bonus_end_display(GC_BOARD_FINISHED_TUXPLANE);
 	return;
     }
@@ -562,16 +564,27 @@ static void init_xml()
 {
   char *filename;
 
-  filename = gc_file_find_absolute("%s/board1.xml",
-				   gcomprisBoard->boarddir);
-
-  g_assert(read_xml_file(filename)== TRUE);
-
+  if(board_list)
+  {
+    missing_destroy_board_list(board_list);
+    board_list = NULL;
+  }
+  filename = gc_file_find_absolute("%s/board%d.xml",
+				   gcomprisBoard_missing->boarddir,
+				   gcomprisBoard_missing->level);
+  missing_read_xml_file(filename, &board_list);
+  gcomprisBoard_missing->number_of_sublevel = g_list_length(board_list);
   g_free(filename);
+
+  gc_score_end();
+  gc_score_start(SCORESTYLE_NOTE,
+		  50,
+		  gcomprisBoard_missing->height - 50,
+		  gcomprisBoard_missing->number_of_sublevel);
 }
 
 /* ==================================== */
-static void add_xml_data(xmlDocPtr doc, xmlNodePtr xmlnode, GNode * child)
+static void add_xml_data(xmlDocPtr doc, xmlNodePtr xmlnode, GList **list)
 {
   gchar *pixmapfile = NULL;
   gchar *question = NULL, *answer = NULL;
@@ -593,22 +606,17 @@ static void add_xml_data(xmlDocPtr doc, xmlNodePtr xmlnode, GNode * child)
       {
 	if(data==NULL)
 	  {
-	    data = gettext((gchar *)xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1));
+	    gchar *tmp;
+	    tmp = (gchar *)xmlNodeListGetString(doc, xmlnode->xmlChildrenNode, 1);
+	    data = g_strdup(gettext(tmp));
+	    g_free(tmp);
 	  }
       }
     xmlnode = xmlnode->next;
   }
 
-  // I really don't know why this test, but otherwise, the list is doubled
-  // with 1 line on 2 filled with NULL elements
-  if ( pixmapfile == NULL || data == NULL)
-    return;
-
-/*  if ((i=sscanf(data, "%s / %s / %s / %s / %s", answer, question, l1, l2, l3)) != 5)
-		printf("Error sscanf result != 5 = %i\n",i);
-*/
   gchar **all_answer = g_strsplit(data, "/", 5);
-  /* Dont free data, it's a gettext static message */
+  g_free(data);
 
   answer = all_answer[0];
   question = all_answer[1];
@@ -627,28 +635,18 @@ static void add_xml_data(xmlDocPtr doc, xmlNodePtr xmlnode, GNode * child)
 
   g_strfreev(all_answer);
 
-  board_list = g_list_append (board_list, board);
+  *list = g_list_append (*list, board);
 }
 
-/* ==================================== */
-static void parse_doc(xmlDocPtr doc)
-{
-  xmlNodePtr node;
-
-  for(node = doc->children->children; node != NULL; node = node->next) {
-    if ( g_strcasecmp((gchar *)node->name, "Board") == 0 )
-      add_xml_data(doc, node,NULL);
-  }
-
-}
 
 /* ==================================== */
 /* read an xml file into our memory structures and update our view,
    dump any old data we have in memory if we can load a new set */
-static gboolean read_xml_file(char *fname)
+gboolean missing_read_xml_file(char *fname, GList **list)
 {
   /* pointer to the new doc */
   xmlDocPtr doc;
+  xmlNodePtr node;
 
   g_return_val_if_fail(fname!=NULL,FALSE);
 
@@ -669,17 +667,21 @@ static gboolean read_xml_file(char *fname)
     return FALSE;
   }
 
-  parse_doc(doc);
+  for(node = doc->children->children; node != NULL; node = node->next) {
+    if ( g_strcasecmp((gchar *)node->name, "Board") == 0 )
+      add_xml_data(doc, node, list);
+  }
   xmlFreeDoc(doc);
   return TRUE;
 }
+
 /* ======================================= */
-static void destroy_board_list() {
+void missing_destroy_board_list(GList *list) {
   Board *board;
-  while(g_list_length(board_list)>0)
+  while(g_list_length(list)>0)
     {
-      board = g_list_nth_data(board_list, 0);
-      board_list = g_list_remove (board_list, board);
+      board = g_list_nth_data(list, 0);
+      list = g_list_remove (list, board);
       destroy_board(board);
     }
 }
@@ -721,14 +723,14 @@ static void save_table (gpointer key,
 static GcomprisConfCallback conf_ok(GHashTable *table)
 {
   if (!table){
-    if (gcomprisBoard)
+    if (gcomprisBoard_missing)
       pause_board(FALSE);
     return NULL;
   }
 
   g_hash_table_foreach(table, (GHFunc) save_table, NULL);
 
-  if (gcomprisBoard){
+  if (gcomprisBoard_missing){
     gc_locale_reset();
 
     GHashTable *config;
@@ -743,8 +745,6 @@ static GcomprisConfCallback conf_ok(GHashTable *table)
     if (profile_conf)
       g_hash_table_destroy(config);
 
-    destroy_board_list();
-
     init_xml();
 
     missing_letter_next_level();
@@ -753,6 +753,7 @@ static GcomprisConfCallback conf_ok(GHashTable *table)
 
     board_conf = NULL;
   profile_conf = NULL;
+  pause_board(FALSE);
 
   return NULL;
 }
@@ -764,7 +765,7 @@ config_start(GcomprisBoard *agcomprisBoard,
   board_conf = agcomprisBoard;
   profile_conf = aProfile;
 
-  if (gcomprisBoard)
+  if (gcomprisBoard_missing)
     pause_board(TRUE);
 
   gchar *label = g_strdup_printf(_("<b>%s</b> configuration\n for profile <b>%s</b>"),
@@ -782,7 +783,7 @@ config_start(GcomprisBoard *agcomprisBoard,
   gchar *locale = g_hash_table_lookup( config, "locale");
 
   gc_board_config_combo_locales(bconf, locale);
-
+  config_missing_letter(bconf);
 }
 
 

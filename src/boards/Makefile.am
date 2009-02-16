@@ -161,7 +161,7 @@ libimageid_la_SOURCES = imageid.c
 
 libmissingletter_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS)
 libmissingletter_la_LIBADD =
-libmissingletter_la_SOURCES = missingletter.c
+libmissingletter_la_SOURCES = missingletter.c missingletter_config.c
 
 
 libclick_on_letter_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs)
