@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missing_letter>
+  <Board>
+  	<pixmapfile>imageid/maison.png</pixmapfile>
+	<_data>house/h_use/o/f/u</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/pomme.png</pixmapfile>
+	<_data>apple/appl_/e/h/a</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/bed.png</pixmapfile>
+	<_data>bed/b_d/e/a/i</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/bottle.png</pixmapfile>
+	<_data>bottle/b_ttle/o/u/d</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/cake.png</pixmapfile>
+	<_data>cake/c_ke/a/o/e</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/ballon.png</pixmapfile>
+	<_data>ball/b_ll/a/u/o</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/avion.png</pixmapfile>
+	<_data>plane/pl_ne/a/o/s</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/chien.png</pixmapfile>
+	<_data>dog/do_/g/p/q</_data>
+  </Board>
+  <Board>
+  	<pixmapfile>imageid/fish.png</pixmapfile>
+	<_data>fish/fis_/h/o/i</_data>
+  </Board>
+</missing_letter>
+

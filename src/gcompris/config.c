@@ -630,7 +630,7 @@ set_locale_flag(gchar *locale)
 
   if(filename)
     {
-      pixmap = gc_net_load_pixmap(filename);
+      pixmap = gdk_pixbuf_new_from_file(filename,NULL);
 
       gnome_canvas_item_set (item_locale_flag,
 			     "pixbuf", pixmap,

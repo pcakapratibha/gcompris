@@ -167,13 +167,6 @@ class Board_list:
       self.button_locales_sound.show()
       box3.pack_end(self.button_locales_sound, False, False, 0)
 
-      self.button_wordlist = gtk.Button(_('Wordlist'))
-      self.button_wordlist.connect("clicked", self.wordlist)
-      self.button_wordlist.show()
-      box3.pack_end(self.button_wordlist, False, False, 0)
-      #not ready yet
-      self.button_wordlist.set_sensitive(False)
-
       self.button_login = gtk.Button(_('Login'))
       self.button_login.connect("clicked", self.login_configure)
       self.button_login.show()

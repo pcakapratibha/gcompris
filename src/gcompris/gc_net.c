@@ -21,10 +21,11 @@
 
 #include "gc_net.h"
 #include "gc_core.h"
-
+#include <string.h>
 #ifdef USE_GNET
 #include <gnet.h>
 #endif
+#include <glib/gstdio.h>
 
 /* FIXME: Should not be needed, a bug in gnet header ? */
 gboolean         gnet_http_get                     (const gchar      *url,
@@ -32,17 +33,33 @@ gboolean         gnet_http_get                     (const gchar      *url,
                                                     gsize            *length,
                                                     guint            *response);
 
-#include <string.h>
-
 #ifdef USE_GNET
-static GSList *server_content_list = NULL;
+static GHashTable *server_content = NULL;
 #define	SUPPORT_OR_RETURN(rv)	{if(!gc_prop_get()->server) return rv;}
 #else
 #define	SUPPORT_OR_RETURN(rv)	{ return rv; }
 #endif
 
+static void load_md5file(GHashTable *ht, gchar *content)
+{
+	gchar **lines, **keyval;
+	int i;
 
-static inline int my_strcmp(gchar *a, gchar *b) { return strcmp( a, b); }
+	lines = g_strsplit(content, "\n", 0);
+	if(lines && lines[0])
+	{
+		for(i=0; lines[i]; i++)
+		{
+			keyval = g_strsplit(lines[i], "  ", 2);
+			if(keyval && keyval[0])
+			{
+				g_hash_table_insert(ht, g_strdup(keyval[1]), g_strdup(keyval[0]));
+			}
+			g_strfreev(keyval);
+		}
+	}
+	g_strfreev(lines);
+}
 
 /** Init the network library, must be called once before using it
  *
@@ -70,15 +87,8 @@ void gc_net_init()
 
   if(gnet_http_get(url, &buf, &buflen, &response) && response == 200)
     {
-      char line[200];
-      int i = 0;
-      /* Parse each line of the buffer and save it in 'server_content_list' */
-      while( i < buflen)
-	{
-	  sscanf(buf+i, "%s", (char *)&line);
-	  server_content_list = g_slist_prepend(server_content_list, g_strdup(line));
-	  i+=strlen(line)+1;
-	}
+      server_content = g_hash_table_new(g_str_hash, g_str_equal);
+	  load_md5file(server_content, buf);
     }
   else
     {
@@ -93,81 +103,11 @@ void gc_net_init()
 #endif
 }
 
-/** Load a pixmap localy or from the network
- *
- * \param pixmapfile : a full URL to the file to load as an image
- *                     in case a local file is given, it will be loaded.
- * \return a GdkPixbuf or NULL
- */
-GdkPixbuf *gc_net_load_pixmap(const char *url)
+void gc_net_destroy(void)
 {
-  if(!gc_net_is_url(url))
-    return(gdk_pixbuf_new_from_file (url, NULL));
-
-  SUPPORT_OR_RETURN(NULL);
-
-#ifdef USE_GNET
-  gchar *buf = NULL;
-  gsize  buflen;
-  guint  response;
-
-  g_warning("Loading image from url '%s'", url);
-
-  if(gnet_http_get(url, &buf, &buflen, &response) && response == 200)
-    {
-      GdkPixbuf *pixmap=NULL;
-      GdkPixbufLoader* loader;
-      loader = gdk_pixbuf_loader_new();
-      gdk_pixbuf_loader_write(loader, (guchar *)buf, buflen, NULL);
-      g_free(buf);
-      gdk_pixbuf_loader_close(loader, NULL);
-      pixmap = gdk_pixbuf_loader_get_pixbuf(loader);
-      if(!pixmap)
-	g_warning("Loading image from url '%s' returned a null pointer", url);
-
-      return(pixmap);
-    }
-
-  g_free(buf);
-  return(NULL);
-
-#endif
-}
-
-/** Load an xml file from the network
- *
- * \param xmlfile : a full URL to the xml file to load as an xmlDocPtr
- *                     in case a local file is given, it will be loaded.
- * \return a xmlDocPtr or NULL
- */
-xmlDocPtr gc_net_load_xml(const char *url)
-{
-  if(!gc_net_is_url(url))
-    return(xmlParseFile(url));
-
-  SUPPORT_OR_RETURN(NULL);
-
-#ifdef USE_GNET
-  gchar *buf = NULL;
-  gsize  buflen;
-  guint  response;
-
-  g_warning("Loading xml file from url '%s'", url);
-
-  if(gnet_http_get(url, &buf, &buflen, &response) && response == 200)
-    {
-      xmlDocPtr	doc = xmlParseMemory((const char *)buf, buflen);
-      g_free(buf);
-      if(!buf)
-	g_warning("Loading xml file from url '%s' returned a null pointer", url);
-
-      return(doc);
-    }
-
-  g_free(buf);
-  return(NULL);
-
-#endif
+  if(server_content)
+    g_hash_table_destroy(server_content);
+  server_content = NULL;
 }
 
 /** return an absolute URL if the given file is part of the file available on our server
@@ -182,51 +122,70 @@ gc_net_get_url_from_file(const gchar *format, ...)
 
 #ifdef USE_GNET
   GcomprisProperties *properties = gc_prop_get();
-  gchar *file, *url;
+  gchar *file, *cache=NULL, *value;
   va_list args;
+  gboolean cache_ok=FALSE;
 
   va_start (args, format);
   file = g_strdup_vprintf (format, args);
   va_end (args);
 
-  /* FIXME: In case the file does not starts with boards/, preprend it */
-  {
-    if(strncmp(file, "boards/", 7))
-      {
-	gchar *file2 = g_strconcat("boards/", file, NULL);
-	g_free(file);
-	file = file2;
-      }
-  }
-
   g_warning("gc_net_get_url_from_file '%s'", file);
-  if(!g_slist_find_custom(server_content_list,(gconstpointer) file, (GCompareFunc) my_strcmp))
+  
+  value = g_hash_table_lookup(server_content, (gpointer) file);
+  if(value)
+  {
+    cache = g_strconcat(properties->cache_dir, "/", file, NULL);
+    if(g_file_test(cache, G_FILE_TEST_IS_REGULAR))
     {
-      g_free(file);
-      return NULL;
+      gchar * content;
+      gsize length;
+      GMD5 *md5cache, *md5serv;
+
+      /* calc md5 of cache file */
+      g_file_get_contents(cache, &content, &length, NULL);
+      md5cache = gnet_md5_new(content, length);
+      g_free(content);
+
+      md5serv = gnet_md5_new_string(value);
+
+      cache_ok = gnet_md5_equal(md5serv, md5cache);
+
+      gnet_md5_delete(md5serv);
+      gnet_md5_delete(md5cache);
     }
-  url = g_strconcat(properties->server, "/", file, NULL);
+    if(cache_ok==0)
+    {
+      gchar *url;
+      gchar *buf = NULL;
+      gsize  buflen;
+      guint  response;
+      
+      url = g_strconcat(properties->server, "/", file, NULL);
+      if(gnet_http_get(url, &buf, &buflen, &response) && response == 200)
+      {
+        gchar *dirname;
+
+	dirname = g_path_get_dirname(cache);
+	g_mkdir_with_parents(dirname, 0755);
+	g_free(dirname);
+        g_file_set_contents(cache, buf, buflen, NULL);
+	g_free(buf);
+      }
+      else
+      { /* file is in content.txt but not in server */
+      	g_free(cache);
+      	cache = NULL;
+      }
+    }
+  }
   g_free(file);
 
-  g_warning("gc_net_get_url_from_file returns url '%s'", url);
-  return url;
+  return cache;
 #endif
 }
 
-/** return TRUE if the url starts with http://
- *
- * \param url: an url to check
- * \return TRUE is the url starts with 'http://'
- */
-gboolean
-gc_net_is_url(const gchar *url)
-{
-  if( !url || strncmp(url, "http://", 7) )
-    return FALSE;
-
-  return TRUE;
-}
-
+#if 0
 /** return a glist with the content of the files in the given directory
  *
  * \param dir: the directory to scan
@@ -256,3 +215,157 @@ GSList *gc_net_dir_read_name(const gchar* dir, const gchar *ext)
   return(filelist);
 #endif
 }
+#endif
+
+
+#define CONTENT_FILENAME "content.txt"
+
+static GHashTable *cache_content=NULL;
+
+void gc_cache_init(void)
+{
+	gchar *filename;
+	gchar *buf;
+	gsize buflen;
+
+	cache_content = g_hash_table_new(g_str_hash, g_str_equal);
+	filename = gc_file_find_absolute_writeable(CONTENT_FILENAME);
+
+	if(g_file_get_contents(filename, &buf, &buflen,NULL))
+	{
+		load_md5file(cache_content, buf);
+		g_free(buf);
+	}
+	g_free(filename);
+}
+
+static gchar *gc_cache_get_relative(gchar *filename)
+{
+	gchar *filename_content, *dirname;
+
+	filename_content = gc_file_find_absolute_writeable(CONTENT_FILENAME);
+	dirname = g_path_get_dirname(filename_content);
+	if(g_str_has_prefix(filename, dirname))
+		filename = filename + strlen(dirname) + 1;
+	g_free(filename_content);
+	g_free(dirname);
+	return filename;
+}
+
+void gc_cache_add(gchar *filename)
+{
+	if(cache_content==NULL)
+		return;
+	if(g_str_has_suffix(filename, CONTENT_FILENAME))
+		return;
+
+	filename = gc_cache_get_relative(filename);
+	g_hash_table_insert(cache_content, g_strdup(filename), g_strdup("0"));
+}
+
+gchar* gc_cache_import_pixmap(gchar *filename, gchar *boarddir, gint width, gint height)
+{
+	GdkPixbuf *pixmap;
+	gchar *basename, *file, *ext, *name, *abs;
+
+	if(!g_path_is_absolute(filename))
+		return g_strdup(filename);
+	basename = g_path_get_basename(filename);
+	name = g_build_filename(boarddir, basename,NULL);
+	abs = gc_file_find_absolute(name);
+	if(abs && strcmp(abs,filename)==0)
+	{
+		g_free(basename);
+		g_free(abs);
+		return name;
+	}
+	pixmap = gdk_pixbuf_new_from_file_at_size(filename, width, height,NULL);
+	if(!pixmap)
+	{
+		g_free(abs);
+		g_free(basename);
+		g_free(name);
+		return NULL;
+	}
+
+	file = gc_file_find_absolute_writeable(name);
+	ext = strchr(basename, '.')+1;
+	if(strcmp(ext, "jpg")==0)
+		ext ="jpeg";
+
+	gdk_pixbuf_save(pixmap, file, ext, NULL,NULL);
+
+	g_free(abs);
+	g_free(basename);
+	g_free(file);
+	return name;
+}
+
+void gc_cache_remove(gchar *filename)
+{
+	g_remove(filename);
+	filename = gc_cache_get_relative(filename);
+	g_hash_table_remove(cache_content, filename);
+}
+
+struct _table_data
+{
+FILE *pf;
+gchar *path;
+};
+
+static void _table_foreach(gpointer key, gpointer value, gpointer user_data)
+{
+	struct _table_data *data = (struct _table_data*)user_data;
+	gchar * content, *filename;
+	gsize length;
+	GMD5 *md5;
+
+	if(strcmp(value, "0")==0)
+	{
+		filename = g_build_filename(data->path, (gchar*)key, NULL);
+		if(g_file_get_contents(filename, &content, &length, NULL))
+		{
+			md5 = gnet_md5_new(content, length);
+			value = gnet_md5_get_string(md5);
+			gnet_md5_delete(md5);
+			g_free(content);
+		}
+		g_free(filename);
+	}
+	if(strcmp(value, "0"))
+	{
+		fprintf(data->pf, "%s  %s\n", (gchar*)value, (gchar*)key);
+	}
+}
+
+void gc_cache_save(void)
+{
+	struct _table_data data;
+	FILE *pf;
+	gchar *filename;
+
+	filename = gc_file_find_absolute_writeable(CONTENT_FILENAME);
+	pf = fopen(filename, "w");
+	if(!pf)
+	{
+		g_warning("Couldn't save %s\n", filename);
+		return;
+	}
+	
+	data.pf = pf;
+	data.path = g_path_get_dirname(filename);
+	g_hash_table_foreach(cache_content, _table_foreach, &data);
+
+	g_free(filename);
+	g_free(data.path);
+	fclose(pf);
+}
+
+void gc_cache_destroy(void)
+{
+	gc_cache_save();
+	g_hash_table_destroy(cache_content);
+	cache_content = NULL;
+}
+

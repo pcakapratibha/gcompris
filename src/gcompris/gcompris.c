@@ -675,7 +675,7 @@ static void setup_window ()
   if(!icon_file)
       g_warning ("Couldn't find file %s !", icon_file);
 
-  icon_pixbuf = gc_net_load_pixmap(icon_file);
+  icon_pixbuf = gdk_pixbuf_new_from_file(icon_file,NULL);
   if (!icon_pixbuf)
     {
       g_warning ("Failed to load pixbuf file: %s\n",
@@ -1057,6 +1057,8 @@ static void cleanup()
   xf86_vidmode_set_fullscreen(FALSE);
 #endif
   gc_menu_destroy();
+  gc_net_destroy();
+  gc_cache_destroy();
   gc_prop_destroy(gc_prop_get());
 }
 
@@ -1692,8 +1694,7 @@ main (int argc, char *argv[])
 	  }
 	}
       }
-      /* FIXME: Need to translate */
-      printf("Number of activities: %d\n", board_count);
+      printf(_("Number of activities: %d\n"), board_count);
 
       exit(0);
     }
@@ -1729,7 +1730,7 @@ main (int argc, char *argv[])
 	{
 	  if (g_access(properties->database, R_OK)==-1)
 	    {
-	      printf("%s exists but is not readable or writable", properties->database);
+	      printf(_("%s exists but is not readable or writable"), properties->database);
 	      exit(0);
 	    }
 	}
@@ -1788,8 +1789,10 @@ main (int argc, char *argv[])
   if (popt_server){
 #ifdef USE_GNET
       properties->server = g_strdup(popt_server);
+      printf("   Server '%s'\n", properties->server);
 #else
-      printf("The --server option cannot be used because GCompris has been compiled without network support!");
+      printf(_("The --server option cannot be used because"
+	       "GCompris has been compiled without network support!"));
       exit(1);
 #endif
   }
@@ -1803,7 +1806,11 @@ main (int argc, char *argv[])
   }
 
   if (popt_server){
+    if(popt_cache_dir)
       properties->cache_dir = g_strdup(popt_cache_dir);
+    else
+      properties->cache_dir = g_build_filename(g_get_user_cache_dir(), "gcompris", NULL);
+    printf("   Cache dir '%s'\n",properties->cache_dir);
   }
 
   if (popt_drag_mode){
@@ -1835,7 +1842,8 @@ main (int argc, char *argv[])
 
     if(properties->profile == NULL)
       {
-	printf("ERROR: Profile '%s' is not found. Run 'gcompris --profile-list' to list available ones\n",
+	printf(_("ERROR: Profile '%s' is not found."
+		 " Run 'gcompris --profile-list' to list available ones\n"),
 	       popt_profile);
 	exit(1);
       }
@@ -1871,6 +1879,10 @@ main (int argc, char *argv[])
 
   /*------------------------------------------------------------*/
 
+  /* networking init */
+  gc_net_init();
+  gc_cache_init();
+
   gc_skin_load(properties->skin);
 
   if(properties->music || properties->fx)
@@ -1878,12 +1890,6 @@ main (int argc, char *argv[])
 
   /* Gdk-Pixbuf */
   gdk_rgb_init();
-
-  /* Cache init */
-  gc_cache_init(-1);
-
-  /* networking init */
-  gc_net_init();
 
   setup_window ();
 

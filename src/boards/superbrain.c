@@ -618,6 +618,10 @@ static void mark_pieces()
 
   current_y_position -= Y_STEP;
 
+  GList *l;
+  for(l=listPieces; l; l= l->next)
+  	g_free(l->data);
+
   g_list_free(listPieces);
 
   superbrain_create_item(boardRootItem);
