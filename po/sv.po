@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-18 10:27+0100\n"
-"PO-Revision-Date: 2009-02-18 10:40+0100\n"
+"POT-Creation-Date: 2009-02-20 00:29+0100\n"
+"PO-Revision-Date: 2009-02-20 00:31+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -395,8 +395,8 @@ msgid "Left-click the mouse on an activity to select it."
 msgstr "Vänsterklicka med musen för att välja en aktivitet."
 
 #: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1
 #: ../boards/erase_clic.xml.in.h:1
+#: ../boards/erase_doubleclick.xml.in.h:1
 msgid "Animal pictures come from the Animal Photography Page of Ralf Schmode (http://schmode.net/). Ralf has kindly permitted Gcompris to include his pictures. Thanks a lot, Ralf."
 msgstr "Djurbilderna har tagits från Ralf Schmodes djurfotografisida (http://schmode.net/). Ralf har gett GCompris tillstånd att inkludera hans bilder. Tack så mycket Ralf."
 
@@ -632,12 +632,12 @@ msgstr "Sparka bollen i målet"
 #: ../boards/chess_movelearn.xml.in.h:4
 #: ../boards/chess_partyend.xml.in.h:3
 #: ../boards/clickgame.xml.in.h:5
-#: ../boards/connect4.xml.in.h:6
 #: ../boards/connect4-2players.xml.in.h:5
+#: ../boards/connect4.xml.in.h:6
 #: ../boards/doubleclick.xml.in.h:4
 #: ../boards/erase.xml.in.h:3
-#: ../boards/erase_doubleclick.xml.in.h:6
 #: ../boards/erase_clic.xml.in.h:6
+#: ../boards/erase_doubleclick.xml.in.h:6
 #: ../boards/fifteen.xml.in.h:2
 #: ../boards/hanoi.xml.in.h:3
 #: ../boards/memory.xml.in.h:4
@@ -915,18 +915,6 @@ msgstr "1955 Citroën ds 19"
 msgid "Cars"
 msgstr "Bilar"
 
-#: ../boards/clickanddraw.xml.in.h:1
-msgid "Click and draw"
-msgstr "Klicka och rita"
-
-#: ../boards/clickanddraw.xml.in.h:2
-msgid "Draw the picture by clicking on each blue point in sequence."
-msgstr "Rita bilden genom att klicka på varje blå punkt i ordning."
-
-#: ../boards/clickanddraw.xml.in.h:3
-msgid "Draw the picture by clicking on the blue points."
-msgstr "Rita bilden genom att klicka på de blåa punkterna."
-
 #: ../boards/click_on_letter.xml.in.h:1
 msgid "A letter is spoken. Click on the matching letter in the main area. You can listen to the letter again, by clicking on the mouth icon in the bottom box."
 msgstr "En bokstav uttalas. Klicka på motsvarande bokstav i huvudområdet. Du kan höra bokstaven igen genom att klicka på munikonen i den nedre rutan."
@@ -946,6 +934,18 @@ msgstr "Lyssna och klicka på rätt bokstav"
 #: ../boards/click_on_letter.xml.in.h:5
 msgid "Visual letter-recognition. Can move the mouse."
 msgstr "Visuell bokstavsidentifiering. Kan flytta musen."
+
+#: ../boards/clickanddraw.xml.in.h:1
+msgid "Click and draw"
+msgstr "Klicka och rita"
+
+#: ../boards/clickanddraw.xml.in.h:2
+msgid "Draw the picture by clicking on each blue point in sequence."
+msgstr "Rita bilden genom att klicka på varje blå punkt i ordning."
+
+#: ../boards/clickanddraw.xml.in.h:3
+msgid "Draw the picture by clicking on the blue points."
+msgstr "Rita bilden genom att klicka på de blåa punkterna."
 
 #: ../boards/clickgame.xml.in.h:1
 msgid "Click On Me"
@@ -1023,27 +1023,15 @@ msgstr "Upptäck datorn"
 msgid "Play with computer peripherals."
 msgstr "Lek med datorns kringutrustning."
 
-#: ../boards/connect4.xml.in.h:1
 #: ../boards/connect4-2players.xml.in.h:1
+#: ../boards/connect4.xml.in.h:1
 msgid "Arrange four coins in a row"
 msgstr "Lägg de fyra mynten i en rad"
 
-#: ../boards/connect4.xml.in.h:2
 #: ../boards/connect4-2players.xml.in.h:2
+#: ../boards/connect4.xml.in.h:2
 msgid "Click the position in the line where you want to drop a piece. You can also use the arrow keys to move the piece left or right, and the down or space key to drop a piece."
 msgstr "Klicka på positionen i raden där du vill släppa ner en bit. Du kan även använda piltangenterna för att flytta biten vänster eller höger, och nedåtpil eller blankstegstangenten för att släppa biten."
-
-#: ../boards/connect4.xml.in.h:3
-msgid "Connect 4"
-msgstr "Fyra-i-rad"
-
-#: ../boards/connect4.xml.in.h:4
-msgid "Create a line of 4 pieces either horizontally (lying down), vertically (standing up) or diagonally."
-msgstr "Skapa en horisontell (liggande), vertikal (stående) eller diagonal rad med 4 bitar."
-
-#: ../boards/connect4.xml.in.h:5
-msgid "Laurent Lacheny. Images and Artificial Intelligence taken from project 4stattack by Jeroen Vloothuis. The original project can be found on &lt;http://forcedattack.sourceforge.net&gt;"
-msgstr "Laurent Lacheny. Bilder och artificiell intelligens tagen från projektet 4stattack av Jeroen Vloothuis. Originalprojektet kan hittas på &lt;http://forcedattack.sourceforge.net&gt;"
 
 #: ../boards/connect4-2players.xml.in.h:3
 msgid "Connect 4 (2 Players)"
@@ -1057,6 +1045,18 @@ msgstr "Skapa en horisontell (liggande), vertikal (stående) eller diagonal rad 
 msgid "The original code was written in 2005 by Laurent Lacheny. In 2006, Miguel de Izarra made the two players game. Images and Artificial Intelligence taken from project 4stattack by Jeroen Vloothuis. The original project can be found on &lt;http://forcedattack.sourceforge.net&gt;"
 msgstr "Ursprunglig kod skrevs av Laurent Lacheny 2005. Miguel de Izarra skapade tvåspelarspelet 2006. Bilder och artificiell intelligens togs ifrån projektet 4stattack av Jeroen Vloothuis. Originalprojektet kan hittas på &lt;http://forcedattack.sourceforge.net&gt;"
 
+#: ../boards/connect4.xml.in.h:3
+msgid "Connect 4"
+msgstr "Fyra-i-rad"
+
+#: ../boards/connect4.xml.in.h:4
+msgid "Create a line of 4 pieces either horizontally (lying down), vertically (standing up) or diagonally."
+msgstr "Skapa en horisontell (liggande), vertikal (stående) eller diagonal rad med 4 bitar."
+
+#: ../boards/connect4.xml.in.h:5
+msgid "Laurent Lacheny. Images and Artificial Intelligence taken from project 4stattack by Jeroen Vloothuis. The original project can be found on &lt;http://forcedattack.sourceforge.net&gt;"
+msgstr "Laurent Lacheny. Bilder och artificiell intelligens tagen från projektet 4stattack av Jeroen Vloothuis. Originalprojektet kan hittas på &lt;http://forcedattack.sourceforge.net&gt;"
+
 #: ../boards/crane.xml.in.h:1
 msgid "Build the same model"
 msgstr "Bygg samma modell"
@@ -1068,8 +1068,8 @@ msgstr "Kör kranen och kopiera modellen"
 #: ../boards/crane.xml.in.h:3
 #: ../boards/doubleclick.xml.in.h:3
 #: ../boards/erase.xml.in.h:2
-#: ../boards/erase_doubleclick.xml.in.h:5
 #: ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_doubleclick.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "Motorik"
 
@@ -1227,18 +1227,6 @@ msgstr "Flytta musen för att radera området och upptäck bakgrunden"
 msgid "Move the mouse until all the blocks disappear."
 msgstr "Flytta musen till alla block försvinner."
 
-#: ../boards/erase_doubleclick.xml.in.h:2
-msgid "Double click the mouse"
-msgstr "Dubbelklicka med musen"
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr "Dubbelklicka med musen på rektanglarna tills alla block har försvunnit."
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr "Dubbelklicka med musen för att radera området och upptäck bakgrunden"
-
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
 msgstr "Klicka med musen"
@@ -1250,6 +1238,18 @@ msgstr "Klicka med musen på rektanglarna tills alla block har försvunnit."
 #: ../boards/erase_clic.xml.in.h:4
 msgid "Click the mouse to erase the area and discover the background"
 msgstr "Klicka med musen för att radera området och upptäck bakgrunden"
+
+#: ../boards/erase_doubleclick.xml.in.h:2
+msgid "Double click the mouse"
+msgstr "Dubbelklicka med musen"
+
+#: ../boards/erase_doubleclick.xml.in.h:3
+msgid "Double click the mouse on rectangles until all the blocks disappear."
+msgstr "Dubbelklicka med musen på rektanglarna tills alla block har försvunnit."
+
+#: ../boards/erase_doubleclick.xml.in.h:4
+msgid "Double click the mouse to erase the area and discover the background"
+msgstr "Dubbelklicka med musen för att radera området och upptäck bakgrunden"
 
 #: ../boards/experience.xml.in.h:1
 msgid "Go to experiential activities"
@@ -2432,28 +2432,6 @@ msgstr ""
 msgid "Select or enter your name to log in to GCompris"
 msgstr "Välj eller ange ditt namn för att logga in i GCompris"
 
-#: ../boards/magic_hat_plus.xml.in.h:1
-#: ../boards/memory_add.xml.in.h:1
-msgid "Addition"
-msgstr "Addition"
-
-#: ../boards/magic_hat_plus.xml.in.h:2
-msgid "Click on the hat to open or close it. Under the hat, how many stars can you see moving around? Count carefully. :) Click in the bottom-right area to input your answer."
-msgstr "Klicka på hatten för att öppna eller stänga den. Hur många stjärnor kan du se under hatten? Räkna noggrant. :) Klicka i nedre högra området för att ange ditt svar."
-
-#: ../boards/magic_hat_plus.xml.in.h:3
-msgid "Count how many items are under the magic hat"
-msgstr "Räkna hur många objekt som finns under den magiska hatten"
-
-#: ../boards/magic_hat_plus.xml.in.h:4
-msgid "Learn addition"
-msgstr "Lär dig addition"
-
-#: ../boards/magic_hat_plus.xml.in.h:5
-#: ../boards/magic_hat_minus.xml.in.h:5
-msgid "The magician hat"
-msgstr "Den magiska hatten"
-
 #: ../boards/magic_hat_minus.xml.in.h:1
 msgid "Count how many items are under the magic hat after some have got away"
 msgstr "Räkna hur många objekt som finns under den magiska hatten efter några har försvunnit"
@@ -2473,6 +2451,28 @@ msgstr "Titta på magikern. Han berättar antalet stjärnor som finns under hans
 #: ../boards/memory_minus_tux.xml.in.h:2
 msgid "Subtraction"
 msgstr "Subtraktion"
+
+#: ../boards/magic_hat_minus.xml.in.h:5
+#: ../boards/magic_hat_plus.xml.in.h:5
+msgid "The magician hat"
+msgstr "Den magiska hatten"
+
+#: ../boards/magic_hat_plus.xml.in.h:1
+#: ../boards/memory_add.xml.in.h:1
+msgid "Addition"
+msgstr "Addition"
+
+#: ../boards/magic_hat_plus.xml.in.h:2
+msgid "Click on the hat to open or close it. Under the hat, how many stars can you see moving around? Count carefully. :) Click in the bottom-right area to input your answer."
+msgstr "Klicka på hatten för att öppna eller stänga den. Hur många stjärnor kan du se under hatten? Räkna noggrant. :) Klicka i nedre högra området för att ange ditt svar."
+
+#: ../boards/magic_hat_plus.xml.in.h:3
+msgid "Count how many items are under the magic hat"
+msgstr "Räkna hur många objekt som finns under den magiska hatten"
+
+#: ../boards/magic_hat_plus.xml.in.h:4
+msgid "Learn addition"
+msgstr "Lär dig addition"
 
 #: ../boards/math.xml.in.h:1
 msgid "Mathematical activities."
@@ -2952,6 +2952,114 @@ msgstr "flygplan/flyg_lan/p/g/d"
 #: ../boards/missing_letter/board1.xml.in.h:9
 msgid "satchel/s_tchel/a/o/i"
 msgstr "skolväska/sk_lväska/o/a/i"
+
+#: ../boards/missing_letter/board2.xml.in.h:1
+msgid "ball/_all/b/p/d"
+msgstr "boll/_oll/b/p/d"
+
+#: ../boards/missing_letter/board2.xml.in.h:2
+msgid "banana/_anana/b/p/d"
+msgstr "banan/_anan/b/p/d"
+
+#: ../boards/missing_letter/board2.xml.in.h:3
+msgid "bottle/_ottle/b/t/p"
+msgstr "flaska/_laska/f/t/k"
+
+#: ../boards/missing_letter/board2.xml.in.h:4
+msgid "cake/_ake/c/p/d"
+msgstr "tårta/_årta/t/p/d"
+
+#: ../boards/missing_letter/board2.xml.in.h:5
+msgid "car/_ar/c/k/b"
+msgstr "bil/_il/b/v/c"
+
+#: ../boards/missing_letter/board2.xml.in.h:6
+msgid "dog/d_g/o/g/a"
+msgstr "hund/h_nd/u/g/o"
+
+#: ../boards/missing_letter/board2.xml.in.h:7
+msgid "fish/_ish/f/h/l"
+msgstr "fisk/_isk/f/h/l"
+
+#: ../boards/missing_letter/board2.xml.in.h:8
+msgid "plane/p_ane/l/j/i"
+msgstr "flygplan/flygp_an/l/j/i"
+
+#: ../boards/missing_letter/board2.xml.in.h:9
+msgid "satchel/_atchel/s/c/l"
+msgstr "skolväska/_kolväska/s/t/l"
+
+#: ../boards/missing_letter/board3.xml.in.h:1
+msgid "apple/appl_/e/h/a"
+msgstr "äpple/äppl_/e/h/a"
+
+#: ../boards/missing_letter/board3.xml.in.h:2
+msgid "ball/b_ll/a/u/o"
+msgstr "boll/b_ll/o/u/a"
+
+#: ../boards/missing_letter/board3.xml.in.h:3
+msgid "bed/b_d/e/a/i"
+msgstr "säng/s_ng/ä/e/i"
+
+#: ../boards/missing_letter/board3.xml.in.h:4
+msgid "bottle/b_ttle/o/u/d"
+msgstr "flaska/fl_ska/a/u/d"
+
+#: ../boards/missing_letter/board3.xml.in.h:5
+msgid "cake/c_ke/a/o/e"
+msgstr "tårta/t_rta/å/ö/e"
+
+#: ../boards/missing_letter/board3.xml.in.h:6
+msgid "dog/do_/g/p/q"
+msgstr "hund/hun_/d/l/p"
+
+#: ../boards/missing_letter/board3.xml.in.h:7
+msgid "fish/fis_/h/o/i"
+msgstr "fisk/fis_/k/o/i"
+
+#: ../boards/missing_letter/board3.xml.in.h:8
+msgid "house/h_use/o/f/u"
+msgstr "hus/h_s/u/ä/i"
+
+#: ../boards/missing_letter/board3.xml.in.h:9
+msgid "plane/pl_ne/a/o/s"
+msgstr "flygplan/flygpl_n/a/o/s"
+
+#: ../boards/missing_letter/board4.xml.in.h:1
+msgid "apple/app_e/l/h/n"
+msgstr "äpple/äpp_e/l/h/n"
+
+#: ../boards/missing_letter/board4.xml.in.h:2
+msgid "ball/bal_/l/h/s"
+msgstr "boll/bol_/l/h/s"
+
+#: ../boards/missing_letter/board4.xml.in.h:3
+msgid "banana/ba_ana/n/m/b"
+msgstr "banan/ba_an/n/m/b"
+
+#: ../boards/missing_letter/board4.xml.in.h:4
+msgid "bed/be_/d/p/b"
+msgstr "säng/sän_/g/p/b"
+
+#: ../boards/missing_letter/board4.xml.in.h:5
+msgid "bottle/bott_e/l/y/r"
+msgstr "flaska/flas_a/k/y/r"
+
+#: ../boards/missing_letter/board4.xml.in.h:6
+msgid "cake/ca_e/k/q/c"
+msgstr "tårta/tå_ta/r/q/t"
+
+#: ../boards/missing_letter/board4.xml.in.h:7
+msgid "car/ca_/r/w/k"
+msgstr "bil/bi_/l/r/k"
+
+#: ../boards/missing_letter/board4.xml.in.h:8
+msgid "house/_ouse/h/e/j"
+msgstr "hus/_us/h/e/j"
+
+#: ../boards/missing_letter/board4.xml.in.h:9
+msgid "satchel/sa_chel/t/p/c"
+msgstr "skolväska/sko_väska/l/p/t"
 
 #: ../boards/money.xml.in.h:1
 #: ../boards/money_cents.xml.in.h:1
@@ -3557,24 +3665,6 @@ msgstr "Lär vattnets kretslopp"
 msgid "Tux has come back from a long fishing party on his boat. Bring the water system back up so he can take a shower."
 msgstr "Tux kommer från en lång fisketur med båten. Du måste få igång vattensystemet igen så att han kan duscha"
 
-#: ../boards/wordsgame.xml.in.h:1
-#: ../src/boards/wordsgame.c:112
-msgid "Falling Words"
-msgstr "Fallande ord"
-
-#: ../boards/wordsgame.xml.in.h:3
-msgid "Keyboard training"
-msgstr "Tangentbordsträning"
-
-#: ../boards/wordsgame.xml.in.h:4
-msgid "Type the complete word as it falls, before it reachs the ground"
-msgstr "Skriv hela ordet innan det når marken"
-
-#: ../boards/wordsgame.xml.in.h:5
-#: ../src/boards/wordsgame.c:113
-msgid "Type the falling words before they reach the ground"
-msgstr "Skriv in hela de fallande orden innan de når marken"
-
 #: ../boards/wordprocessor.xml.in.h:1
 msgid "A simple word processor to enter and save any text"
 msgstr "En enkel ordbehandlare att mata in och spara text med"
@@ -3594,6 +3684,24 @@ msgstr "Barnen kan skriva in sin egna text eller kopiera en som läraren har del
 #: ../boards/wordprocessor.xml.in.h:5
 msgid "Your word processor"
 msgstr "Din ordbehandlare"
+
+#: ../boards/wordsgame.xml.in.h:1
+#: ../src/boards/wordsgame.c:112
+msgid "Falling Words"
+msgstr "Fallande ord"
+
+#: ../boards/wordsgame.xml.in.h:3
+msgid "Keyboard training"
+msgstr "Tangentbordsträning"
+
+#: ../boards/wordsgame.xml.in.h:4
+msgid "Type the complete word as it falls, before it reachs the ground"
+msgstr "Skriv hela ordet innan det når marken"
+
+#: ../boards/wordsgame.xml.in.h:5
+#: ../src/boards/wordsgame.c:113
+msgid "Type the falling words before they reach the ground"
+msgstr "Skriv in hela de fallande orden innan de når marken"
 
 #: ../gcompris-edit.desktop.in.h:1
 msgid "Administration for gcompris"
@@ -3903,6 +4011,45 @@ msgstr "Huvudmeny andra versionen"
 msgid "Select a Board"
 msgstr "Välj ett bräde"
 
+#. pixmap
+#: ../src/boards/missingletter_config.c:390
+#: ../src/boards/missingletter_config.c:540
+msgid "Picture"
+msgstr "Bild"
+
+#. answer
+#: ../src/boards/missingletter_config.c:396
+#: ../src/boards/missingletter_config.c:531
+msgid "Answer"
+msgstr "Svar"
+
+#. question
+#: ../src/boards/missingletter_config.c:402
+#: ../src/boards/missingletter_config.c:554
+msgid "Question"
+msgstr "Fråga"
+
+#. choice
+#: ../src/boards/missingletter_config.c:408
+#: ../src/boards/missingletter_config.c:563
+msgid "Choice"
+msgstr "Val"
+
+#. combo level
+#: ../src/boards/missingletter_config.c:446
+#: ../src/gcompris/board_config_wordlist.c:221
+msgid "Choice of the level"
+msgstr "Val av nivå"
+
+#: ../src/boards/missingletter_config.c:454
+#, c-format
+msgid "Level %d"
+msgstr "Nivå %d"
+
+#: ../src/boards/missingletter_config.c:544
+msgid "Choice of the filename"
+msgstr "Val av filnamn"
+
 #. Set here the way to display money. Change only the money sign, and it's place, always keep %.2f, it will be replaced by 0,34 if decimal is ',' in your locale
 #: ../src/boards/money.c:487
 #, c-format
@@ -4129,6 +4276,8 @@ msgstr "Alla användare"
 #: ../src/boards/python/admin/log_list.py:107
 #: ../src/boards/python/admin/log_list.py:286
 #: ../src/boards/python/admin/profile_list.py:120
+#: ../src/gcompris/board_config_combo.c:125
+#: ../src/gcompris/board_config_combo.c:398
 msgid "Default"
 msgstr "Standard"
 
@@ -4309,14 +4458,6 @@ msgstr "Varning: följande bilder kan inte läsas på ditt system.\n"
 msgid "The corresponding items have been skipped."
 msgstr "Motsvarande objekt har hoppats över."
 
-#: ../src/boards/python/doubleclick.py:284
-msgid "Click on the balloon to place it again."
-msgstr "Klicka på ballongen för att placera den igen."
-
-#: ../src/boards/python/doubleclick.py:286
-msgid "Click twice on the balloon to shoot it."
-msgstr "Klicka två gånger på ballongen för att skjuta den."
-
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
 msgstr "Alla meddelanden kommer att visas här.\n"
@@ -4340,6 +4481,14 @@ msgstr "Du måste först ställa in en kanal i din kanalväljare.\n"
 #: ../src/boards/python/chat.py:325
 msgid "Your friends must set the same channel in order to communicate with you"
 msgstr "Dina vänner måste ställa in samma kanal för att kunna kommunicera med dig"
+
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr "Klicka på ballongen för att placera den igen."
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
+msgstr "Klicka två gånger på ballongen för att skjuta den."
 
 #: ../src/boards/python/electric.py:94
 msgid ""
@@ -4519,10 +4668,6 @@ msgstr "Inloggningsnamn: "
 msgid "Enter login to log in"
 msgstr "Ange inloggningsnamn för att logga in"
 
-#: ../src/boards/python/mosaic.py:193
-msgid "Rebuild the same mosaic on the right area"
-msgstr "Bygg liknande mosaik på det högra sidan"
-
 #: ../src/boards/python/melody.py:119
 msgid ""
 "Error: this activity cannot be played with the\n"
@@ -4534,6 +4679,10 @@ msgstr ""
 "ljudeffekterna inaktiverade.\n"
 "Gå in i konfigurationsdialogen\n"
 "för att aktivera ljudet"
+
+#: ../src/boards/python/mosaic.py:193
+msgid "Rebuild the same mosaic on the right area"
+msgstr "Bygg liknande mosaik på det högra sidan"
 
 #: ../src/boards/python/pythontest.py:148
 msgid ""
@@ -4705,8 +4854,8 @@ msgid "is being displayed"
 msgstr "visas"
 
 #: ../src/boards/reading.c:462
-msgid "Skip this level. Not enough word in the list !"
-msgstr "Hoppa över denna nivå. Det finns inte tillräckligt många ord i listan!"
+msgid "We skip this level because there are not enough words in the list !"
+msgstr "Vi hoppar över denna nivå därför att det inte finns tillräckligt många ord i listan!"
 
 #: ../src/boards/reading.c:611
 msgid "I am Ready"
@@ -4875,6 +5024,57 @@ msgstr "Nej, jag vill fortsätta"
 #: ../src/gcompris/board.c:191
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr "Dynamisk inläsning av moduler stöds inte. GCompris kan inte läsa in.\n"
+
+#: ../src/gcompris/board_config_combo.c:157
+msgid ""
+"Select the language\n"
+" to use in the board"
+msgstr ""
+"Välj språket att\n"
+" använda i brädet"
+
+#: ../src/gcompris/board_config_combo.c:227
+msgid "Global GCompris mode"
+msgstr "Allmänt GCompris-läge"
+
+#: ../src/gcompris/board_config_combo.c:228
+msgid "Normal"
+msgstr "Normalt"
+
+#: ../src/gcompris/board_config_combo.c:229
+msgid "2 clicks"
+msgstr "2 klick"
+
+#: ../src/gcompris/board_config_combo.c:230
+msgid "both modes"
+msgstr "båda lägena"
+
+#: ../src/gcompris/board_config_combo.c:258
+msgid ""
+"Select the drag and drop mode\n"
+" to use in the board"
+msgstr ""
+"Välj dra och släpp-läget\n"
+" för att använda brädet"
+
+#. add a new level
+#: ../src/gcompris/board_config_wordlist.c:106
+#, c-format
+msgid "%d (New level)"
+msgstr "%d (Ny nivå)"
+
+#. frame
+#: ../src/gcompris/board_config_wordlist.c:180
+msgid "Configure the list of words"
+msgstr "Konfigurera ordlistan"
+
+#: ../src/gcompris/board_config_wordlist.c:209
+msgid "Choice of the language"
+msgstr "Val av språk"
+
+#: ../src/gcompris/board_config_wordlist.c:246
+msgid "Back to default"
+msgstr "Tillbaka till standard"
 
 #: ../src/gcompris/config.c:58
 msgid "Your system default"
@@ -5409,7 +5609,7 @@ msgstr "%s finns men är inte läs- eller skrivbar"
 
 #: ../src/gcompris/gcompris.c:1812
 #, c-format
-msgid "The --server option cannot be used becauseGCompris has been compiled without network support!"
+msgid "The --server option cannot be used because GCompris has been compiled without network support!"
 msgstr "Flaggan --server kan inte användas därför att GCompris har byggts utan nätverksstöd!"
 
 #: ../src/gcompris/gcompris.c:1863
@@ -5474,82 +5674,8 @@ msgstr "Speltid"
 msgid "Remaining Time = %d"
 msgstr "Återstående tid = %d"
 
-#~ msgid "apple/app_e/l/h/n"
-#~ msgstr "äpple/äpp_e/l/h/n"
-#~ msgid "apple/appl_/e/h/a"
-#~ msgstr "äpple/äppl_/e/h/a"
-#~ msgid "ball/_all/b/p/d"
-#~ msgstr "boll/_oll/b/p/d"
-#~ msgid "ball/b_ll/a/u/o"
-#~ msgstr "boll/b_ll/o/u/a"
-#~ msgid "ball/bal_/l/h/s"
-#~ msgstr "boll/bol_/l/h/s"
-#~ msgid "banana/_anana/b/p/d"
-#~ msgstr "banan/_anan/b/p/d"
-#~ msgid "banana/ba_ana/n/m/b"
-#~ msgstr "banan/ba_an/n/m/b"
-#~ msgid "bed/b_d/e/a/i"
-#~ msgstr "säng/s_ng/ä/e/i"
-#~ msgid "bed/be_/d/p/b"
-#~ msgstr "säng/sän_/g/p/b"
-#~ msgid "bottle/_ottle/b/t/p"
-#~ msgstr "flaska/_laska/f/t/k"
-#~ msgid "bottle/b_ttle/o/u/d"
-#~ msgstr "flaska/fl_ska/a/u/d"
-#~ msgid "bottle/bott_e/l/y/r"
-#~ msgstr "flaska/flas_a/k/y/r"
-#~ msgid "cake/_ake/c/p/d"
-#~ msgstr "tårta/_årta/t/p/d"
-#~ msgid "cake/c_ke/a/o/e"
-#~ msgstr "tårta/t_rta/å/ö/e"
-#~ msgid "cake/ca_e/k/q/c"
-#~ msgstr "tårta/tå_ta/r/q/t"
-#~ msgid "car/_ar/c/k/b"
-#~ msgstr "bil/_il/b/v/c"
-#~ msgid "car/ca_/r/w/k"
-#~ msgstr "bil/bi_/l/r/k"
-#~ msgid "dog/d_g/o/g/a"
-#~ msgstr "hund/h_nd/u/g/o"
-#~ msgid "dog/do_/g/p/q"
-#~ msgstr "hund/hun_/d/l/p"
-#~ msgid "fish/_ish/f/h/l"
-#~ msgstr "fisk/_isk/f/h/l"
-#~ msgid "fish/fis_/h/o/i"
-#~ msgstr "fisk/fis_/k/o/i"
-#~ msgid "house/_ouse/h/e/j"
-#~ msgstr "hus/_us/h/e/j"
-#~ msgid "house/h_use/o/f/u"
-#~ msgstr "hus/h_s/u/ä/i"
-#~ msgid "plane/p_ane/l/j/i"
-#~ msgstr "flygplan/flygp_an/l/j/i"
-#~ msgid "plane/pl_ne/a/o/s"
-#~ msgstr "flygplan/flygpl_n/a/o/s"
-#~ msgid "satchel/_atchel/s/c/l"
-#~ msgstr "skolväska/_kolväska/s/t/l"
-#~ msgid "satchel/sa_chel/t/p/c"
-#~ msgstr "skolväska/sko_väska/l/p/t"
 #~ msgid "Wordlist"
 #~ msgstr "Ordlista"
-#~ msgid ""
-#~ "Select the language\n"
-#~ " to use in the board"
-#~ msgstr ""
-#~ "Välj språket att\n"
-#~ " använda i brädet"
-#~ msgid "Global GCompris mode"
-#~ msgstr "Allmänt GCompris-läge"
-#~ msgid "Normal"
-#~ msgstr "Normalt"
-#~ msgid "2 clicks"
-#~ msgstr "2 klick"
-#~ msgid "both modes"
-#~ msgstr "båda lägena"
-#~ msgid ""
-#~ "Select the drag and drop mode\n"
-#~ " to use in the board"
-#~ msgstr ""
-#~ "Välj dra och släpp-läget\n"
-#~ " för att använda brädet"
 #~ msgid "The dog is provided by Andre Connes and released under the GPL"
 #~ msgstr "Hunden har tillhandahållits av Andre Connes och är släppt under GPL"
 #~ msgid "Improve reading skill and the ability to understand what is read."
