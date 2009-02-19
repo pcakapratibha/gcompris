@@ -1,7 +1,24 @@
+2009-02-20  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Merged 3727 from trunk
+	- Should fix the empty date field in the log on Windows
+
+	* src/gcompris/log.c: (gc_log_end):
+
+2009-02-19  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Merged 3725 from trunk
+	- Minor updates regarding translations
+
+	* po/POTFILES.in:
+	* po/fr.po:
+	* src/boards/missingletter_config.c: (configure_colummns):
+	* src/boards/reading.c: (reading_create_item):
+	* src/gcompris/gcompris.c: (main):
 
 2009-02-17  Bruno coudoin  <bruno.coudoin@free.fr>
 
-	- Merged 3722 fromm trunk
+	- Merged 3722 from trunk
 	- Miquel DE IZARRA Added support for editing the content
 	  of the missing letter activity.
 

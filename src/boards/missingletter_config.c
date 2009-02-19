@@ -387,7 +387,7 @@ static void configure_colummns(GtkTreeView *treeview)
 
   /* pixbuf column */
   renderer = gtk_cell_renderer_pixbuf_new();
-  column = gtk_tree_view_column_new_with_attributes(_("Pixbuf"),
+  column = gtk_tree_view_column_new_with_attributes(_("Picture"),
                                                     renderer, "pixbuf", PIXBUF_COLUMN, NULL);
   gtk_tree_view_append_column(treeview, column);
 
@@ -409,9 +409,9 @@ static void configure_colummns(GtkTreeView *treeview)
                                                     renderer, "text", CHOICE_COLUMN, NULL);
   gtk_tree_view_append_column(treeview, column);
 #if 0
-  /* pixmap column */
+  /* pixmap column (debug only)*/
   renderer = gtk_cell_renderer_text_new();
-  column = gtk_tree_view_column_new_with_attributes(_("Pixmap"),
+  column = gtk_tree_view_column_new_with_attributes("File"),
                                                     renderer, "text", PIXMAP_COLUMN, NULL);
   gtk_tree_view_append_column(treeview, column);
 #endif
