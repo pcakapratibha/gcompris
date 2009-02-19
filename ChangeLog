@@ -1,3 +1,13 @@
+2009-02-19  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Minor updates regarding translations
+
+	* po/POTFILES.in:
+	* po/fr.po:
+	* src/boards/missingletter_config.c: (configure_colummns):
+	* src/boards/reading.c: (reading_create_item):
+	* src/gcompris/gcompris.c: (main):
+
 2009-02-17  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Miquel DE IZARRA Added support for editing the content

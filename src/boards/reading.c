@@ -213,7 +213,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 
 
 
-      
+
 
       gc_wordlist = gc_wordlist_get_from_file("wordsgame/default-$LOCALE.xml");
 
@@ -230,16 +230,16 @@ static void start_board (GcomprisBoard *agcomprisBoard)
 	    }
 	}
 
-      
-      currentMode=MODE_VERTICAL; // Default mode 
+
+      currentMode=MODE_VERTICAL; // Default mode
       if(gcomprisBoard->mode && g_strcasecmp(gcomprisBoard->mode, "horizontal")==0)
         {
-          if (pango_unichar_direction(g_utf8_get_char(gc_wordlist_random_word_get(gc_wordlist, gcomprisBoard->level))) == PANGO_DIRECTION_RTL)	
+          if (pango_unichar_direction(g_utf8_get_char(gc_wordlist_random_word_get(gc_wordlist, gcomprisBoard->level))) == PANGO_DIRECTION_RTL)
               currentMode=MODE_HORIZONTAL_RTL;
           else
                currentMode=MODE_HORIZONTAL;
         }
-   
+
        reading_next_level();
     }
 }
@@ -459,7 +459,7 @@ static gboolean reading_create_item(GnomeCanvasGroup *parent)
 
   if(word==NULL)
   {
-  	gc_dialog(_("Skip this level. Not enough word in the list !"),
+  	gc_dialog(_("We skip this level because there are not enough words in the list !"),
 		(DialogBoxCallBack)reading_next_level);
 	gcomprisBoard->level++;
 	if(gcomprisBoard->level>gcomprisBoard->maxlevel) // the current board is finished : bail out
