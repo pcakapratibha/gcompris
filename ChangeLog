@@ -1,5 +1,12 @@
 2009-02-20  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- Merged 3731 from trunk
+	- Added missing Paul before Gauguin
+
+	* boards/babyshapes/board8_0.xml.in:
+
+2009-02-20  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- Merged 3727 from trunk
 	- Should fix the empty date field in the log on Windows
 
