@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-20 00:29+0100\n"
-"PO-Revision-Date: 2009-02-20 00:31+0100\n"
+"POT-Creation-Date: 2009-02-22 20:33+0100\n"
+"PO-Revision-Date: 2009-02-22 20:34+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../boards/babyshapes/board8_0.xml.in.h:1
-msgid "Gauguin, Arearea - 1892"
-msgstr "Gauguin, Arearea - 1892"
+msgid "Paul Gauguin, Arearea - 1892"
+msgstr "Paul Gauguin, Arearea - 1892"
 
 #: ../boards/babyshapes/board8_1.xml.in.h:1
 msgid "Pieter Bruegel, Bauernhochzeit - 1568"
