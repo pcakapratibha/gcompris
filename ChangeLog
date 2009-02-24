@@ -1,5 +1,15 @@
 2009-02-25  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- Now properly points use images in ~My GCompris/Images
+	  In the animation activity, the image selector will display
+	  all images from this directory.
+	  (FIXME: There is a readme file in it that we failed to load as
+	          an image).
+
+	* boards/dataset/user_pictures.xml:
+
+2009-02-25  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- Fixed strings:
 	* boards/babyshapes.xml.in:
 	* boards/babyshapes/board8_1.xml.in:
