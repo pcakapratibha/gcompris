@@ -206,7 +206,7 @@ GtkWidget *gc_board_config_wordlist(GcomprisBoardConf *config, const gchar *file
 
 	gtk_widget_show(combo_lang);
 	hbox = gtk_hbox_new(FALSE, 8);
-	label = gtk_label_new(_("Choice of the language"));
+	label = gtk_label_new(_("Language:"));
 	gtk_widget_show(label);
 	gtk_widget_show(hbox);
 	gtk_box_pack_start(GTK_BOX(hbox), label, FALSE, FALSE, 8);
@@ -218,7 +218,7 @@ GtkWidget *gc_board_config_wordlist(GcomprisBoardConf *config, const gchar *file
 
 	gtk_widget_show(combo_level);
 	hbox = gtk_hbox_new(FALSE, 8);
-	label = gtk_label_new(_("Choice of the level"));
+	label = gtk_label_new(_("Level:"));
 	gtk_widget_show(label);
 	gtk_widget_show(hbox);
 	gtk_box_pack_start(GTK_BOX(hbox), label, FALSE, FALSE, 8);

@@ -382,6 +382,8 @@ class Board_list:
     print 'preference', board.title
 
   def row_selected(self, treeview,  model):
+    if treeview.get_selection().count_selected_rows() != 1:
+      return
     path = model.get_path(treeview.get_selection().get_selected()[1])
     print "Row selected:", model[path][3]
 
