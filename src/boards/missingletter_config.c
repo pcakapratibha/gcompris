@@ -443,7 +443,7 @@ static void configure_colummns(GtkTreeView *treeview)
     gtk_box_pack_start(GTK_BOX(vbox), hbox, FALSE, FALSE, 8);
 
     /* combo level */
-    label = gtk_label_new(_("Choice of the level"));
+    label = gtk_label_new(_("Level:"));
     gtk_widget_show(label);
     gtk_box_pack_start(GTK_BOX(hbox), label, FALSE, FALSE, 8);
 
@@ -541,7 +541,7 @@ static void configure_colummns(GtkTreeView *treeview)
     gtk_widget_show(label);
     gtk_table_attach_defaults(GTK_TABLE(table), label, 2, 3, 0, 1);
 
-    pixmap = gtk_file_chooser_button_new(_("Choice of the filename"),
+    pixmap = gtk_file_chooser_button_new(_("Filename:"),
                                          GTK_FILE_CHOOSER_ACTION_OPEN);
 
     file_filter = gtk_file_filter_new();

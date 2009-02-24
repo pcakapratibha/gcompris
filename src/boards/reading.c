@@ -460,7 +460,7 @@ static gboolean reading_create_item(GnomeCanvasGroup *parent)
 
   if(word==NULL)
   {
-  	gc_dialog(_("We skip this level because there are not enough words in the list !"),
+  	gc_dialog(_("We skip this level because there are not enough words in the list!"),
 		(DialogBoxCallBack)reading_next_level);
 	gcomprisBoard->level++;
 	if(gcomprisBoard->level>gcomprisBoard->maxlevel) // the current board is finished : bail out

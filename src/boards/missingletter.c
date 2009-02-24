@@ -141,12 +141,31 @@ static void pause_board (gboolean pause)
   board_paused = pause;
 }
 
+static void _init(GcomprisBoard *agcomprisBoard)
+{
+  gchar * filename;
+  gcomprisBoard_missing->level=1;
+
+  /* Calculate the maxlevel based on the available data file for this board */
+  gcomprisBoard_missing->maxlevel = 1;
+  while((filename = gc_file_find_absolute("%s/board%d.xml",
+					  gcomprisBoard_missing->boarddir,
+					  ++gcomprisBoard_missing->maxlevel)))
+    g_free(filename);
+
+  gcomprisBoard_missing->maxlevel--;
+
+  gcomprisBoard_missing->sublevel=1;
+  gcomprisBoard_missing->number_of_sublevel=G_MAXINT;
+
+  init_xml();
+}
+
 /*
  */
 static void start_board (GcomprisBoard *agcomprisBoard)
 {
   GHashTable *config = gc_db_get_board_conf();
-  gchar * filename;
 
   gc_locale_set(g_hash_table_lookup( config, "locale"));
 
@@ -157,20 +176,7 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       gcomprisBoard_missing=agcomprisBoard;
       gc_set_background(gnome_canvas_root(gcomprisBoard_missing->canvas),
 			"opt/missingletter-bg.jpg");
-      gcomprisBoard_missing->level=1;
-
-      /* Calculate the maxlevel based on the available data file for this board */
-      gcomprisBoard_missing->maxlevel = 1;
-      while((filename = gc_file_find_absolute("%s/board%d.xml",
-      	gcomprisBoard_missing->boarddir, ++gcomprisBoard_missing->maxlevel)))
-	  g_free(filename);
-
-      gcomprisBoard_missing->maxlevel--;
-
-      gcomprisBoard_missing->sublevel=1;
-      gcomprisBoard_missing->number_of_sublevel=G_MAXINT;
-
-      init_xml();
+      _init(agcomprisBoard);
       gc_bar_set(GC_BAR_CONFIG | GC_BAR_LEVEL);
 
       missing_letter_next_level();
@@ -761,13 +767,18 @@ static GcomprisConfCallback conf_ok(GHashTable *table)
 
 static void
 config_start(GcomprisBoard *agcomprisBoard,
-		    GcomprisProfile *aProfile)
+	     GcomprisProfile *aProfile)
 {
   board_conf = agcomprisBoard;
   profile_conf = aProfile;
 
   if (gcomprisBoard_missing)
     pause_board(TRUE);
+  else
+    {
+      gcomprisBoard_missing=agcomprisBoard;
+      _init(agcomprisBoard);
+    }
 
   gchar *label = g_strdup_printf(_("<b>%s</b> configuration\n for profile <b>%s</b>"),
 				 agcomprisBoard->name,

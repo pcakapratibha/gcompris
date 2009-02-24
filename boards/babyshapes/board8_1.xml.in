@@ -2,7 +2,7 @@
 <ShapeGame><!-- Created with GComprisShapegame gimp script -->
 <!-- Source http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._%C3%84._011.jpg -->
 <title justification="GTK_JUSTIFY_CENTER" x="600" y="495">
-<_name>Pieter Bruegel, Bauernhochzeit - 1568</_name></title>
+<_name>Pieter Bruegel the Elder, The peasants wedding - 1568</_name></title>
 <shape name="service" pixmapfile="babyshapes/Pieter_Bruegel/service.png" position="0" x="533.0" y="324.0">
 </shape>
 <shape name="Mur" pixmapfile="babyshapes/Pieter_Bruegel/mur.png" position="0" x="664.5" y="81.5">
