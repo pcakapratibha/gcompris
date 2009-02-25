@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-22 20:33+0100\n"
-"PO-Revision-Date: 2009-02-22 20:34+0100\n"
+"POT-Creation-Date: 2009-02-25 18:52+0100\n"
+"PO-Revision-Date: 2009-02-25 19:10+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -22,8 +22,8 @@ msgid "Paul Gauguin, Arearea - 1892"
 msgstr "Paul Gauguin, Arearea - 1892"
 
 #: ../boards/babyshapes/board8_1.xml.in.h:1
-msgid "Pieter Bruegel, Bauernhochzeit - 1568"
-msgstr "Pieter Bruegel, Bondebröllop - 1568"
+msgid "Pieter Bruegel the Elder, The peasants wedding - 1568"
+msgstr "Pieter Bruegel den äldre, Bondebröllop - 1568"
 
 #: ../boards/babyshapes/board8_2.xml.in.h:1
 msgid "The Lady and the Unicorn - XVe century"
@@ -34,8 +34,8 @@ msgid "Vincent van Gogh, Bedroom in Arles - 1888"
 msgstr "Vincent van Gogh, Sängkammare i Arles - 1888"
 
 #: ../boards/babyshapes/board8_4.xml.in.h:1
-msgid "Ambrosius Bosschaert, The Elder - 1614"
-msgstr "Ambrosius Bosschaert, Den äldre - 1614"
+msgid "Ambrosius Bosschaert the Elder, Flower Still Life - 1614"
+msgstr "Ambrosius Bosschaert den äldre, Flower Still Life - 1614"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -566,17 +566,17 @@ msgstr "Bra muskontroll"
 msgid ""
 "The dog is provided by Andre Connes and released under the GPL.\n"
 "Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
-"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel Malissin et frédéric Valdes. Licence: Free but requires the site and author. Source: http://www.galerie.roi-president.com\n"
+"Artist: Pieter Bruegel the Elder. Title: The peasants wedding. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel Malissin and Frédéric Valdes. Licence: Free but requires the site and author. Source: http://www.galerie.roi-president.com\n"
 "Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
+"Artist: Ambrosius Bosschaert the Elder. Title: Flower Still Life. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
 msgstr ""
 "Hunden tillhandahålls av Andre Connes och är utgiven under GPL-licensen.\n"
 "Konstnär: Gauguin, Paul. Titel: Arearea. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"Konstnär: Bruegel d. Ä. Titel: Bondebröllop. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Konstnär: Pieter Bruegel den äldre. Titel: Bondebröllop. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
 "Beskrivning: Damen med enhörningen (draperier). Upphovsman: Pierre-Emmanuel Malissin et frédéric Valdes. Licens: Gratis men kräver tillstånd från webbplatsen och upphovsmannen. Källa: http://www.galerie.roi-president.com\n"
 "Konstnär: Vincent van Gogh. Title: Sängkammare i Arles. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"Konstnär: Ambrosius Bosschaert. Titel: Den äldre. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
+"Konstnär: Ambrosius Bosschaert, den äldre Titel: Flower Still Life. Licens: Public Domain. Källa: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -3850,9 +3850,9 @@ msgstr ""
 #: ../src/boards/colors.c:164
 #: ../src/boards/gletters.c:858
 #: ../src/boards/imageid.c:750
-#: ../src/boards/missingletter.c:771
-#: ../src/boards/python/admin/board_list.py:633
-#: ../src/boards/python/admin/board_list.py:651
+#: ../src/boards/missingletter.c:782
+#: ../src/boards/python/admin/board_list.py:635
+#: ../src/boards/python/admin/board_list.py:653
 #: ../src/boards/python/admin/wordlist.py:49
 #: ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409
@@ -3923,7 +3923,7 @@ msgid "Click on the white duck"
 msgstr "Klicka på den vita ankan"
 
 #: ../src/boards/colors.c:176
-#: ../src/boards/python/admin/board_list.py:663
+#: ../src/boards/python/admin/board_list.py:665
 #: ../src/boards/python/pythontest.py:473
 #: ../src/boards/smallnumbers.c:613
 msgid "Select sound locale"
@@ -4038,8 +4038,8 @@ msgstr "Val"
 #. combo level
 #: ../src/boards/missingletter_config.c:446
 #: ../src/gcompris/board_config_wordlist.c:221
-msgid "Choice of the level"
-msgstr "Val av nivå"
+msgid "Level:"
+msgstr "Nivå:"
 
 #: ../src/boards/missingletter_config.c:454
 #, c-format
@@ -4047,8 +4047,8 @@ msgid "Level %d"
 msgstr "Nivå %d"
 
 #: ../src/boards/missingletter_config.c:544
-msgid "Choice of the filename"
-msgstr "Val av filnamn"
+msgid "Filename:"
+msgstr "Filnamn:"
 
 #. Set here the way to display money. Change only the money sign, and it's place, always keep %.2f, it will be replaced by 0,34 if decimal is ',' in your locale
 #: ../src/boards/money.c:487
@@ -4126,12 +4126,12 @@ msgstr "Aktiv"
 msgid "Board title"
 msgstr "Brädtitel"
 
-#: ../src/boards/python/admin/board_list.py:411
+#: ../src/boards/python/admin/board_list.py:413
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
 msgstr "Filtrera svårighetsgrad för bräden för profilen %s"
 
-#: ../src/boards/python/admin/board_list.py:442
+#: ../src/boards/python/admin/board_list.py:444
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
@@ -4854,7 +4854,7 @@ msgid "is being displayed"
 msgstr "visas"
 
 #: ../src/boards/reading.c:462
-msgid "We skip this level because there are not enough words in the list !"
+msgid "We skip this level because there are not enough words in the list!"
 msgstr "Vi hoppar över denna nivå därför att det inte finns tillräckligt många ord i listan!"
 
 #: ../src/boards/reading.c:611
@@ -5069,8 +5069,8 @@ msgid "Configure the list of words"
 msgstr "Konfigurera ordlistan"
 
 #: ../src/gcompris/board_config_wordlist.c:209
-msgid "Choice of the language"
-msgstr "Val av språk"
+msgid "Language:"
+msgstr "Språk:"
 
 #: ../src/gcompris/board_config_wordlist.c:246
 msgid "Back to default"
@@ -5674,6 +5674,12 @@ msgstr "Speltid"
 msgid "Remaining Time = %d"
 msgstr "Återstående tid = %d"
 
+#~ msgid "Choice of the level"
+#~ msgstr "Val av nivå"
+#~ msgid "Choice of the filename"
+#~ msgstr "Val av filnamn"
+#~ msgid "Choice of the language"
+#~ msgstr "Val av språk"
 #~ msgid "Wordlist"
 #~ msgstr "Ordlista"
 #~ msgid "The dog is provided by Andre Connes and released under the GPL"
