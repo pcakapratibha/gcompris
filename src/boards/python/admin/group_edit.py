@@ -228,7 +228,7 @@ class GroupEdit(gtk.Window):
     # group_id: only users in this group are inserted
     # If with = True,  create a list only with user in the given class_id and group_id.
     #           False, create a list only with user in the given class_id but NOT this group_id
-    def __create_model(self, with, class_id, group_id):
+    def __create_model(self, _with, class_id, group_id):
 
         model = gtk.ListStore(
             gobject.TYPE_INT,
@@ -247,9 +247,9 @@ class GroupEdit(gtk.Window):
                              (group_id, user[0]))
             user_is_already = self.cur.fetchall()
 
-            if(with and user_is_already):
+            if(_with and user_is_already):
                 self.add_user_in_model(model, user)
-            elif(not with and not user_is_already):
+            elif(not _with and not user_is_already):
                 self.add_user_in_model(model, user)
 
 
