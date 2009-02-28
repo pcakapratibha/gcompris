@@ -224,7 +224,7 @@ class ProfileEdit(gtk.Window):
     # profile_id: only groups in this profile are inserted
     # If with = True,  create a list only with groups in the given profile_id
     #           False, create a list only with groups NOT this profile_id
-    def __create_model(self, with, profile_id):
+    def __create_model(self, _with, profile_id):
 
         model = gtk.ListStore(
             gobject.TYPE_INT,
@@ -253,9 +253,9 @@ class ProfileEdit(gtk.Window):
             # Insert the class name in the group
             group = (group[0], class_name, group[1], group[2])
 
-            if(with and group_is_already):
+            if(_with and group_is_already):
                 self.add_group_in_model(model, group)
-            elif(not with and not group_is_already):
+            elif(not _with and not group_is_already):
                 self.add_group_in_model(model, group)
 
         return model

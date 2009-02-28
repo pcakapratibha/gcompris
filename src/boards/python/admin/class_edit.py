@@ -224,10 +224,10 @@ class ClassEdit(gtk.Window):
     # If class_id is provided, only users in this class are inserted
     # If with = True, create a list only with the given class_id.
     #           False, create a list only without the given class_id
-    def __create_model(self, with, class_id):
+    def __create_model(self, _with, class_id):
 
         # Grab the user data
-        if(with):
+        if(_with):
             self.cur.execute('SELECT user_id,firstname,lastname FROM users where class_id=? ORDER BY login', (class_id,))
         else:
             self.cur.execute('SELECT user_id,firstname,lastname FROM users WHERE class_id!=? ORDER BY login', (class_id,))
