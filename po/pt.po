@@ -765,7 +765,7 @@ msgstr "Paul Gauguin, Arearea - 1892"
 
 #: ../boards/babyshapes/board8_1.xml.in.h:1
 msgid "Pieter Bruegel the Elder, The peasants wedding - 1568"
-msgstr "Pieter Brueghel, "O Velho" - O casamento - 1568"
+msgstr "Pieter Brueghel O Velho - O casamento - 1568"
 
 #: ../boards/babyshapes/board8_2.xml.in.h:1
 msgid "The Lady and the Unicorn - XVe century"
