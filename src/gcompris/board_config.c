@@ -1,7 +1,5 @@
 /* gcompris - board_config.c
  *
- * Time-stamp: <2007-08-22 01:21:27 bruno>
- *
  * Copyright (C) 2001 Pascal Georges
  *
  * This program is free software; you can redistribute it and/or modify
@@ -175,7 +173,7 @@ gc_board_config_window_display(gchar *label, GcomprisConfCallback callback)
       memset(&last_configure_event, 0, sizeof(GdkEventConfigure));
       gtk_widget_add_events(GTK_WIDGET(config->conf_window), GDK_STRUCTURE_MASK);
       gtk_signal_connect (GTK_OBJECT (config->conf_window), "configure_event",
-        GTK_SIGNAL_FUNC (_conf_window_configured), 0);
+			  GTK_SIGNAL_FUNC (_conf_window_configured), config);
     }
   else
 #endif
@@ -341,7 +339,7 @@ gc_board_config_spin_int(GcomprisBoardConf *config, const gchar *label, gchar *k
   gtk_spin_button_set_digits ( GTK_SPIN_BUTTON(spin), 0);
 
   gtk_spin_button_set_value ( GTK_SPIN_BUTTON(spin), (gdouble) init);
-  
+
   _gc_boardconf_key *u = g_malloc0(sizeof(_gc_boardconf_key));
   u->key = g_strdup(key);
   u->config = config;
@@ -351,7 +349,7 @@ gc_board_config_spin_int(GcomprisBoardConf *config, const gchar *label, gchar *k
 		    G_CALLBACK(spin_changed),
 		    u);
   g_signal_connect( G_OBJECT(spin),
-	  	"destroy", 
+	  	"destroy",
 		G_CALLBACK(_gc_destroy_boardconf_key),
 		u);
 

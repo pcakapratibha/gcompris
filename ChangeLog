@@ -1,5 +1,12 @@
 2009-03-03  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	- Patch from Miguel. On some windows manager, we were crashing
+	  when opening a configuration windows while in fullscreen.
+
+	* src/gcompris/board_config.c: (gc_board_config_window_display):
+
+2009-03-03  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- Was not compiling when USE_GNET was not active.
 
 	* src/gcompris/gc_net.c: (gc_net_destroy),
