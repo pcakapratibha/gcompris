@@ -1,7 +1,5 @@
 /* gcompris - gameutil_net.c
  *
- * Time-stamp: <2007-08-22 01:21:30 bruno>
- *
  * Copyright (C) 2006 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -34,31 +32,34 @@ gboolean         gnet_http_get                     (const gchar      *url,
 
 #ifdef USE_GNET
 static GHashTable *server_content = NULL;
+static GHashTable *cache_content=NULL;
 #define	SUPPORT_OR_RETURN(rv)	{if(!gc_prop_get()->server) return rv;}
 #else
 #define	SUPPORT_OR_RETURN(rv)	{ return rv; }
 #endif
 
+#ifdef USE_GNET
 static void load_md5file(GHashTable *ht, gchar *content)
 {
-	gchar **lines, **keyval;
-	int i;
+  gchar **lines, **keyval;
+  int i;
 
-	lines = g_strsplit(content, "\n", 0);
-	if(lines && lines[0])
+  lines = g_strsplit(content, "\n", 0);
+  if(lines && lines[0])
+    {
+      for(i=0; lines[i]; i++)
 	{
-		for(i=0; lines[i]; i++)
-		{
-			keyval = g_strsplit(lines[i], "  ", 2);
-			if(keyval && keyval[0])
-			{
-				g_hash_table_insert(ht, g_strdup(keyval[1]), g_strdup(keyval[0]));
-			}
-			g_strfreev(keyval);
-		}
+	  keyval = g_strsplit(lines[i], "  ", 2);
+	  if(keyval && keyval[0])
+	    {
+	      g_hash_table_insert(ht, g_strdup(keyval[1]), g_strdup(keyval[0]));
+	    }
+	  g_strfreev(keyval);
 	}
-	g_strfreev(lines);
+    }
+  g_strfreev(lines);
 }
+#endif
 
 /** Init the network library, must be called once before using it
  *
@@ -87,7 +88,7 @@ void gc_net_init()
   if(gnet_http_get(url, &buf, &buflen, &response) && response == 200)
     {
       server_content = g_hash_table_new(g_str_hash, g_str_equal);
-	  load_md5file(server_content, buf);
+      load_md5file(server_content, buf);
     }
   else
     {
@@ -104,9 +105,13 @@ void gc_net_init()
 
 void gc_net_destroy(void)
 {
+  SUPPORT_OR_RETURN();
+
+#ifdef USE_GNET
   if(server_content)
     g_hash_table_destroy(server_content);
   server_content = NULL;
+#endif
 }
 
 /** return an absolute URL if the given file is part of the file available on our server
@@ -130,59 +135,59 @@ gc_net_get_url_from_file(const gchar *format, ...)
   va_end (args);
 
   g_warning("gc_net_get_url_from_file '%s'", file);
-  
+
   value = g_hash_table_lookup(server_content, (gpointer) file);
   if(value)
-  {
-    cache = g_strconcat(properties->cache_dir, "/", file, NULL);
-    if(g_file_test(cache, G_FILE_TEST_IS_REGULAR))
     {
-      gchar * content;
-      gsize length;
-      GMD5 *md5cache, *md5serv;
+      cache = g_strconcat(properties->cache_dir, "/", file, NULL);
+      if(g_file_test(cache, G_FILE_TEST_IS_REGULAR))
+	{
+	  gchar * content;
+	  gsize length;
+	  GMD5 *md5cache, *md5serv;
 
-      /* calc md5 of cache file */
-      g_file_get_contents(cache, &content, &length, NULL);
-      md5cache = gnet_md5_new(content, length);
-      g_free(content);
+	  /* calc md5 of cache file */
+	  g_file_get_contents(cache, &content, &length, NULL);
+	  md5cache = gnet_md5_new(content, length);
+	  g_free(content);
 
-      md5serv = gnet_md5_new_string(value);
+	  md5serv = gnet_md5_new_string(value);
 
-      cache_ok = gnet_md5_equal(md5serv, md5cache);
+	  cache_ok = gnet_md5_equal(md5serv, md5cache);
 
-      gnet_md5_delete(md5serv);
-      gnet_md5_delete(md5cache);
+	  gnet_md5_delete(md5serv);
+	  gnet_md5_delete(md5cache);
+	}
+      if(cache_ok==0)
+	{
+	  gchar *url;
+	  gchar *buf = NULL;
+	  gsize  buflen;
+	  guint  response;
+
+	  url = g_strconcat(properties->server, "/", file, NULL);
+	  if(gnet_http_get(url, &buf, &buflen, &response) && response == 200)
+	    {
+	      gchar *dirname;
+
+	      dirname = g_path_get_dirname(cache);
+	      g_mkdir_with_parents(dirname, 0755);
+	      g_free(dirname);
+	      g_file_set_contents(cache, buf, buflen, NULL);
+	      g_free(buf);
+	    }
+	  else
+	    { /* file is in content.txt but not in server */
+	      g_free(cache);
+	      cache = NULL;
+	    }
+	}
     }
-    if(cache_ok==0)
-    {
-      gchar *url;
-      gchar *buf = NULL;
-      gsize  buflen;
-      guint  response;
-      
-      url = g_strconcat(properties->server, "/", file, NULL);
-      if(gnet_http_get(url, &buf, &buflen, &response) && response == 200)
-      {
-        gchar *dirname;
-
-	dirname = g_path_get_dirname(cache);
-	g_mkdir_with_parents(dirname, 0755);
-	g_free(dirname);
-        g_file_set_contents(cache, buf, buflen, NULL);
-	g_free(buf);
-      }
-      else
-      { /* file is in content.txt but not in server */
-      	g_free(cache);
-      	cache = NULL;
-      }
-    }
-  }
   g_free(file);
 
   return cache;
 #endif
-}
+  }
 
 #if 0
 /** return a glist with the content of the files in the given directory
@@ -213,158 +218,188 @@ GSList *gc_net_dir_read_name(const gchar* dir, const gchar *ext)
 
   return(filelist);
 #endif
-}
+  }
 #endif
 
 
 #define CONTENT_FILENAME "content.txt"
 
-static GHashTable *cache_content=NULL;
-
 void gc_cache_init(void)
 {
-	gchar *filename;
-	gchar *buf;
-	gsize buflen;
+  SUPPORT_OR_RETURN();
 
-	cache_content = g_hash_table_new(g_str_hash, g_str_equal);
-	filename = gc_file_find_absolute_writeable(CONTENT_FILENAME);
+#ifdef USE_GNET
+  gchar *filename;
+  gchar *buf;
+  gsize buflen;
 
-	if(g_file_get_contents(filename, &buf, &buflen,NULL))
-	{
-		load_md5file(cache_content, buf);
-		g_free(buf);
-	}
-	g_free(filename);
+  cache_content = g_hash_table_new(g_str_hash, g_str_equal);
+  filename = gc_file_find_absolute_writeable(CONTENT_FILENAME);
+
+  if(g_file_get_contents(filename, &buf, &buflen,NULL))
+    {
+      load_md5file(cache_content, buf);
+      g_free(buf);
+    }
+  g_free(filename);
+#endif
 }
 
+#ifdef USE_GNET
 static gchar *gc_cache_get_relative(gchar *filename)
 {
-	gchar *filename_content, *dirname;
+  SUPPORT_OR_RETURN(NULL);
 
-	filename_content = gc_file_find_absolute_writeable(CONTENT_FILENAME);
-	dirname = g_path_get_dirname(filename_content);
-	if(g_str_has_prefix(filename, dirname))
-		filename = filename + strlen(dirname) + 1;
-	g_free(filename_content);
-	g_free(dirname);
-	return filename;
+  gchar *filename_content, *dirname;
+
+  filename_content = gc_file_find_absolute_writeable(CONTENT_FILENAME);
+  dirname = g_path_get_dirname(filename_content);
+  if(g_str_has_prefix(filename, dirname))
+    filename = filename + strlen(dirname) + 1;
+  g_free(filename_content);
+  g_free(dirname);
+  return filename;
 }
+#endif
 
 void gc_cache_add(gchar *filename)
 {
-	if(cache_content==NULL)
-		return;
-	if(g_str_has_suffix(filename, CONTENT_FILENAME))
-		return;
+  SUPPORT_OR_RETURN();
 
-	filename = gc_cache_get_relative(filename);
-	g_hash_table_insert(cache_content, g_strdup(filename), g_strdup("0"));
+#ifdef USE_GNET
+  if(cache_content==NULL)
+    return;
+  if(g_str_has_suffix(filename, CONTENT_FILENAME))
+    return;
+
+  filename = gc_cache_get_relative(filename);
+  g_hash_table_insert(cache_content, g_strdup(filename), g_strdup("0"));
+#endif
 }
 
 gchar* gc_cache_import_pixmap(gchar *filename, gchar *boarddir, gint width, gint height)
 {
-	GdkPixbuf *pixmap;
-	gchar *basename, *file, *ext, *name, *abs;
+  SUPPORT_OR_RETURN(NULL);
 
-	if(!g_path_is_absolute(filename))
-		return g_strdup(filename);
-	basename = g_path_get_basename(filename);
-	name = g_build_filename(boarddir, basename,NULL);
-	abs = gc_file_find_absolute(name);
-	if(abs && strcmp(abs,filename)==0)
-	{
-		g_free(basename);
-		g_free(abs);
-		return name;
-	}
-	pixmap = gdk_pixbuf_new_from_file_at_size(filename, width, height,NULL);
-	if(!pixmap)
-	{
-		g_free(abs);
-		g_free(basename);
-		g_free(name);
-		return NULL;
-	}
+#ifdef USE_GNET
+  GdkPixbuf *pixmap;
+  gchar *basename, *file, *ext, *name, *abs;
 
-	file = gc_file_find_absolute_writeable(name);
-	ext = strchr(basename, '.')+1;
-	if(strcmp(ext, "jpg")==0)
-		ext ="jpeg";
+  if(!g_path_is_absolute(filename))
+    return g_strdup(filename);
+  basename = g_path_get_basename(filename);
+  name = g_build_filename(boarddir, basename,NULL);
+  abs = gc_file_find_absolute(name);
+  if(abs && strcmp(abs,filename)==0)
+    {
+      g_free(basename);
+      g_free(abs);
+      return name;
+    }
+  pixmap = gdk_pixbuf_new_from_file_at_size(filename, width, height,NULL);
+  if(!pixmap)
+    {
+      g_free(abs);
+      g_free(basename);
+      g_free(name);
+      return NULL;
+    }
 
-	gdk_pixbuf_save(pixmap, file, ext, NULL,NULL);
+  file = gc_file_find_absolute_writeable(name);
+  ext = strchr(basename, '.')+1;
+  if(strcmp(ext, "jpg")==0)
+    ext ="jpeg";
 
-	g_free(abs);
-	g_free(basename);
-	g_free(file);
-	return name;
+  gdk_pixbuf_save(pixmap, file, ext, NULL,NULL);
+
+  g_free(abs);
+  g_free(basename);
+  g_free(file);
+  return name;
+#endif
 }
 
 void gc_cache_remove(gchar *filename)
 {
-	g_remove(filename);
-	filename = gc_cache_get_relative(filename);
-	g_hash_table_remove(cache_content, filename);
+  SUPPORT_OR_RETURN();
+
+#ifdef USE_GNET
+  g_remove(filename);
+  filename = gc_cache_get_relative(filename);
+  g_hash_table_remove(cache_content, filename);
+#endif
 }
 
 struct _table_data
-{
-FILE *pf;
-gchar *path;
-};
+  {
+    FILE *pf;
+    gchar *path;
+  };
 
+#ifdef USE_GNET
 static void _table_foreach(gpointer key, gpointer value, gpointer user_data)
 {
-	struct _table_data *data = (struct _table_data*)user_data;
-	gchar * content, *filename;
-	gsize length;
-	GMD5 *md5;
+  SUPPORT_OR_RETURN();
 
-	if(strcmp(value, "0")==0)
+  struct _table_data *data = (struct _table_data*)user_data;
+  gchar * content, *filename;
+  gsize length;
+  GMD5 *md5;
+
+  if(strcmp(value, "0")==0)
+    {
+      filename = g_build_filename(data->path, (gchar*)key, NULL);
+      if(g_file_get_contents(filename, &content, &length, NULL))
 	{
-		filename = g_build_filename(data->path, (gchar*)key, NULL);
-		if(g_file_get_contents(filename, &content, &length, NULL))
-		{
-			md5 = gnet_md5_new(content, length);
-			value = gnet_md5_get_string(md5);
-			gnet_md5_delete(md5);
-			g_free(content);
-		}
-		g_free(filename);
+	  md5 = gnet_md5_new(content, length);
+	  value = gnet_md5_get_string(md5);
+	  gnet_md5_delete(md5);
+	  g_free(content);
 	}
-	if(strcmp(value, "0"))
-	{
-		fprintf(data->pf, "%s  %s\n", (gchar*)value, (gchar*)key);
-	}
+      g_free(filename);
+    }
+  if(strcmp(value, "0"))
+    {
+      fprintf(data->pf, "%s  %s\n", (gchar*)value, (gchar*)key);
+    }
 }
+#endif
 
 void gc_cache_save(void)
 {
-	struct _table_data data;
-	FILE *pf;
-	gchar *filename;
+  SUPPORT_OR_RETURN();
 
-	filename = gc_file_find_absolute_writeable(CONTENT_FILENAME);
-	pf = fopen(filename, "w");
-	if(!pf)
-	{
-		g_warning("Couldn't save %s\n", filename);
-		return;
-	}
-	
-	data.pf = pf;
-	data.path = g_path_get_dirname(filename);
-	g_hash_table_foreach(cache_content, _table_foreach, &data);
+#ifdef USE_GNET
+  struct _table_data data;
+  FILE *pf;
+  gchar *filename;
 
-	g_free(filename);
-	g_free(data.path);
-	fclose(pf);
+  filename = gc_file_find_absolute_writeable(CONTENT_FILENAME);
+  pf = fopen(filename, "w");
+  if(!pf)
+    {
+      g_warning("Couldn't save %s\n", filename);
+      return;
+    }
+
+  data.pf = pf;
+  data.path = g_path_get_dirname(filename);
+  g_hash_table_foreach(cache_content, _table_foreach, &data);
+
+  g_free(filename);
+  g_free(data.path);
+  fclose(pf);
+#endif
 }
 
 void gc_cache_destroy(void)
 {
-	gc_cache_save();
-	g_hash_table_destroy(cache_content);
-	cache_content = NULL;
+  SUPPORT_OR_RETURN();
+
+#ifdef USE_GNET
+  gc_cache_save();
+  g_hash_table_destroy(cache_content);
+  cache_content = NULL;
+#endif
 }
 

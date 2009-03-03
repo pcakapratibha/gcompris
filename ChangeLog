@@ -1,3 +1,13 @@
+2009-03-03  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Was not compiling when USE_GNET was not active.
+
+	* src/gcompris/gc_net.c: (gc_net_destroy),
+	(gc_net_get_url_from_file), (gc_net_dir_read_name),
+	(gc_cache_init), (gc_cache_get_relative), (gc_cache_add),
+	(gc_cache_import_pixmap), (gc_cache_remove), (_table_foreach),
+	(gc_cache_save), (gc_cache_destroy):
+
 2009-02-28  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Patch from Johan Cwiklinski <mailings x-tnd.be>
