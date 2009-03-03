@@ -1,5 +1,5 @@
 # French translation of gcompris
-# Copyright (C) 2000-2007 Free Software Foundation, Inc.
+# Copyright (C) 2000-2009 Free Software Foundation, Inc.
 #
 # Bruno Coudoin <bruno.coudoin@free.fr>, 2000-2005.
 # Christophe Merlet <redfox@redfoxcenter.org>, 2002.
@@ -7,16 +7,16 @@
 # Renaud de Colombel <renaud.decolombel@free.fr>, 2004-2005.
 # Jean-Philippe Ayanides <jp.ayanides@free.fr>, 2005-2007.
 # Jonathan Ernst <jonathan@ernstfamily.ch>, 2006.
-# Claude Paroz <claude@2xlibre.net>, 2006-2007.
+# Claude Paroz <claude@2xlibre.net>, 2006-2009.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-19 22:44+0100\n"
-"PO-Revision-Date: 2008-10-27 11:58+0100\n"
-"Last-Translator: Bruno Coudoin <bruno.coudoin@free.fr>\n"
+"POT-Creation-Date: 2009-03-03 14:56+0100\n"
+"PO-Revision-Date: 2009-03-03 15:51+0100\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -758,29 +758,31 @@ msgid ""
 "The dog is provided by Andre Connes and released under the GPL.\n"
 "Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://"
 "commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: "
-"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Artist: Pieter Bruegel the Elder. Title: The peasants wedding. Licence: "
+"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
+"Pieter_Bruegel_d._Ä._011.jpg\n"
 "Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel "
-"Malissin et frédéric Valdes. Licence: Free but requires the site and author. "
-"Source: http://www.galerie.roi-president.com\n"
+"Malissin and Frédéric Valdes. Licence: Free but requires the site and "
+"author. Source: http://www.galerie.roi-president.com\n"
 "Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. "
 "Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. "
-"Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
-"_the_Elder_04.jpg"
+"Artist: Ambrosius Bosschaert the Elder. Title: Flower Still Life. Licence: "
+"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
+"Ambrosius_Bosschaert,_the_Elder_04.jpg"
 msgstr ""
 "Le chien est fourni sous licence GPL par Andre Connes.\n"
-"Artiste : Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: "
+"Artiste : Gauguin, Paul. Titre : Arearea. Licence : domaine public. Source: "
 "http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"Artiste : Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. "
+"Artiste : Pieter Bruegel l'Ancien. Titre : Le Repas de noce. Licence : domaine public. "
 "Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011."
 "jpg\n"
-"Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel "
-"Malissin et frédéric Valdes. Licence: Free but requires the site and author. "
-"Source: http://www.galerie.roi-president.com\n"
-"Artiste : Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. "
-"Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"Artiste : Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. "
+"Description : The Lady and the Unicorn (tapestries). Auteur : Pierre-Emmanuel "
+"Malissin et Frédéric Valdes. Licence : Libre mais citation du site et de l'auteur "
+"obligatoire. "
+"Source : http://www.galerie.roi-president.com\n"
+"Artiste : Vincent van Gogh. Titre : La chambre de Van Gogh à Arles. Licence : domaine public. "
+"Source : http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"Artiste : Ambrosius Bosschaert l'Ancien. Titre: Flower Still Life. Licence : domaine public. "
 "Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
 "_the_Elder_04.jpg"
 
@@ -797,12 +799,12 @@ msgid "Lock with colored shapes."
 msgstr "Lock avec des formes colorées."
 
 #: ../boards/babyshapes/board8_0.xml.in.h:1
-msgid "Gauguin, Arearea - 1892"
-msgstr "Gauguin,  Joyeusetés - 1892"
+msgid "Paul Gauguin, Arearea - 1892"
+msgstr "Paul Gauguin,  Joyeusetés - 1892"
 
 #: ../boards/babyshapes/board8_1.xml.in.h:1
-msgid "Pieter Bruegel, Bauernhochzeit - 1568"
-msgstr "Pieter Bruegel, Le Repas de noce - 1568"
+msgid "Pieter Bruegel the Elder, The peasants wedding - 1568"
+msgstr "Pieter Bruegel l'Ancien, Le Repas de noce - 1568"
 
 #: ../boards/babyshapes/board8_2.xml.in.h:1
 msgid "The Lady and the Unicorn - XVe century"
@@ -813,8 +815,8 @@ msgid "Vincent van Gogh, Bedroom in Arles - 1888"
 msgstr "Vincent Van Gogh, Chambre à Coucher à Arles - 1888"
 
 #: ../boards/babyshapes/board8_4.xml.in.h:1
-msgid "Ambrosius Bosschaert, The Elder - 1614"
-msgstr "Ambrosius Bosschaert, The Elder - 1614"
+msgid "Ambrosius Bosschaert the Elder, Flower Still Life - 1614"
+msgstr "Ambrosius Bosschaert l'Ancien, Flower Still Life - 1614"
 
 #: ../boards/ballcatch.xml.in.h:1
 msgid "Make the ball go to Tux"
@@ -3823,12 +3825,11 @@ msgid "Practice money usage including cents"
 msgstr "Apprends à manipuler de la monnaie avec les centimes."
 
 #: ../boards/mosaic.xml.in.h:1
-#, fuzzy
 msgid ""
 "Rebuild the left mosaic on the right area. Select a color in the bottom area "
 "and click on grey boxes to paint them."
 msgstr ""
-"Reconstruis la mosaïque sur la droite. Sélectionne une couleur dans la zone "
+"Reconstruis à droite la mosaïque de gauche. Sélectionne une couleur dans la zone "
 "du bas et clique sur les carrés gris pour les peindre."
 
 #: ../boards/mosaic.xml.in.h:2
@@ -4772,7 +4773,7 @@ msgid "Multi-activity educational game"
 msgstr "Jeu éducatif multi-activités"
 
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:181 ../src/boards/memory.c:843
+#: ../src/boards/algebra.c:181 ../src/boards/memory.c:847
 msgid "+-×÷"
 msgstr "+-×÷"
 
@@ -4895,9 +4896,9 @@ msgstr ""
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:622 ../src/boards/colors.c:164
 #: ../src/boards/gletters.c:858 ../src/boards/imageid.c:750
-#: ../src/boards/missingletter.c:771
-#: ../src/boards/python/admin/board_list.py:633
-#: ../src/boards/python/admin/board_list.py:651
+#: ../src/boards/missingletter.c:782
+#: ../src/boards/python/admin/board_list.py:635
+#: ../src/boards/python/admin/board_list.py:653
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:876 ../src/boards/scale.c:861
@@ -4961,7 +4962,7 @@ msgstr "Clique sur le canard noir"
 msgid "Click on the white duck"
 msgstr "Clique sur le canard blanc"
 
-#: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:663
+#: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:665
 #: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:613
 msgid "Select sound locale"
 msgstr "Sélectionne la langue des sons"
@@ -5046,47 +5047,41 @@ msgstr "Sélectionne un tableau."
 #. pixmap
 #: ../src/boards/missingletter_config.c:390
 #: ../src/boards/missingletter_config.c:540
-#, fuzzy
 msgid "Picture"
-msgstr "bistre"
+msgstr "Image"
 
 #. answer
 #: ../src/boards/missingletter_config.c:396
 #: ../src/boards/missingletter_config.c:531
-#, fuzzy
 msgid "Answer"
-msgstr "Utilisateur"
+msgstr "Réponse"
 
 #. question
 #: ../src/boards/missingletter_config.c:402
 #: ../src/boards/missingletter_config.c:554
-#, fuzzy
 msgid "Question"
-msgstr "Numération"
+msgstr "Question"
 
 #. choice
 #: ../src/boards/missingletter_config.c:408
 #: ../src/boards/missingletter_config.c:563
-#, fuzzy
 msgid "Choice"
-msgstr "Chili"
+msgstr "Choix"
 
 #. combo level
 #: ../src/boards/missingletter_config.c:446
 #: ../src/gcompris/board_config_wordlist.c:221
-#, fuzzy
-msgid "Choice of the level"
-msgstr "Couleur de la ligne"
+msgid "Level:"
+msgstr "Niveau :"
 
 #: ../src/boards/missingletter_config.c:454
-#, fuzzy, c-format
+#, c-format
 msgid "Level %d"
-msgstr "Niveau"
+msgstr "Niveau %d"
 
 #: ../src/boards/missingletter_config.c:544
-#, fuzzy
-msgid "Choice of the filename"
-msgstr "Couleur de la ligne"
+msgid "Filename:"
+msgstr "Nom de fichier :"
 
 #. Set here the way to display money. Change only the money sign, and it's place, always keep %.2f, it will be replaced by 0,34 if decimal is ',' in your locale
 #: ../src/boards/money.c:487
@@ -5162,12 +5157,12 @@ msgstr "Actif"
 msgid "Board title"
 msgstr "Titre activité"
 
-#: ../src/boards/python/admin/board_list.py:411
+#: ../src/boards/python/admin/board_list.py:413
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
 msgstr "Filtre la difficulté des activités pour le profil %s"
 
-#: ../src/boards/python/admin/board_list.py:442
+#: ../src/boards/python/admin/board_list.py:444
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
@@ -5893,8 +5888,8 @@ msgid "is being displayed"
 msgstr "est affiché ?"
 
 #: ../src/boards/reading.c:462
-msgid "Skip this level. Not enough word in the list !"
-msgstr ""
+msgid "We skip this level because there are not enough words in the list!"
+msgstr "Nous sautons ce niveau car il n'y a pas assez de mots dans la liste !"
 
 #: ../src/boards/reading.c:611
 msgid "I am Ready"
@@ -6098,22 +6093,20 @@ msgstr ""
 #: ../src/gcompris/board_config_wordlist.c:106
 #, c-format
 msgid "%d (New level)"
-msgstr ""
+msgstr "%d (nouveau niveau)"
 
 #. frame
 #: ../src/gcompris/board_config_wordlist.c:180
-#, fuzzy
 msgid "Configure the list of words"
-msgstr "Entraine-toi à compléter des listes logiques"
+msgstr "Configurer la liste de mots"
 
 #: ../src/gcompris/board_config_wordlist.c:209
-#, fuzzy
-msgid "Choice of the language"
-msgstr "Couleur de la ligne"
+msgid "Language:"
+msgstr "Langue :"
 
 #: ../src/gcompris/board_config_wordlist.c:246
 msgid "Back to default"
-msgstr ""
+msgstr "Revenir aux valeurs par défaut"
 
 #: ../src/gcompris/config.c:58
 msgid "Your system default"
@@ -6687,21 +6680,23 @@ msgid "The list of available activities is :\n"
 msgstr "La liste des activités disponibles est :\n"
 
 #: ../src/gcompris/gcompris.c:1715
-#, fuzzy, c-format
+#, c-format
 msgid "Number of activities: %d\n"
-msgstr "Activités de numération."
+msgstr "Nombre d'activités : %d\n"
 
 #: ../src/gcompris/gcompris.c:1751
 #, c-format
 msgid "%s exists but is not readable or writable"
-msgstr ""
+msgstr "%s existe mais n'est ni lisible ni accessible en écriture"
 
 #: ../src/gcompris/gcompris.c:1812
 #, c-format
 msgid ""
-"The --server option cannot be used becauseGCompris has been compiled without "
-"network support!"
+"The --server option cannot be used because GCompris has been compiled "
+"without network support!"
 msgstr ""
+"L'option --server ne peut pas être utilisée car GCompris a été compilé "
+"sans la prise en charge du réseau."
 
 #: ../src/gcompris/gcompris.c:1863
 #, c-format
@@ -6709,6 +6704,8 @@ msgid ""
 "ERROR: Profile '%s' is not found. Run 'gcompris --profile-list' to list "
 "available ones\n"
 msgstr ""
+"Erreur : profil « %s » introuvable. Lancez « gcompris --profile-list » "
+"pour afficher tous les profils disponibles\n"
 
 #: ../src/gcompris/gcompris.c:1877
 #, c-format
@@ -6770,6 +6767,9 @@ msgstr "Temps écoulé"
 msgid "Remaining Time = %d"
 msgstr "Temps restant = %d"
 
+#~ msgid "Choice of the language"
+#~ msgstr "Couleur de la ligne"
+
 #~ msgid "Wordlist"
 #~ msgstr "Liste de mots"
 
@@ -6811,16 +6811,3 @@ msgstr "Temps restant = %d"
 #~ msgstr ""
 #~ "Les meilleurs amis d'Oscar étaient Charlie le crabe et Sandy l'étoile de "
 #~ "mer."
-
-#~ msgid ""
-#~ "Error: The external program gnuchess is required\n"
-#~ "to play chess in GCompris.\n"
-#~ "Find this program on http://www.rpmfind.net or in your\n"
-#~ "GNU/Linux distribution\n"
-#~ "And check it is located here: "
-#~ msgstr ""
-#~ "Erreur : le programme externe Gnuchess est nécessaire\n"
-#~ "pour jouer aux échecs dans GCompris.\n"
-#~ "Récupérez ce programme sur http://www.rpmfind.net ou \n"
-#~ "dans votre distribution GNU/Linux.\n"
-#~ "Vérifiez ensuite qu'il est bien présent ici :"
