@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-22 19:42+0100\n"
-"PO-Revision-Date: 2009-02-22 22:06+0100\n"
+"POT-Creation-Date: 2009-03-02 21:44+0100\n"
+"PO-Revision-Date: 2009-03-02 21:58+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.2\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../boards/administration.xml.in.h:1
@@ -515,7 +515,8 @@ msgstr "Fullfør ei følgje med figurar."
 
 #: ../boards/algorithm.xml.in.h:2
 msgid "Find the next symbol in a list."
-msgstr "Finn neste figur i den nedste følgja ved å sjå på mønsteret i den øvste."
+msgstr ""
+"Finn neste figur i den nedste følgja ved å sjå på mønsteret i den øvste."
 
 #: ../boards/algorithm.xml.in.h:3
 msgid "Logic training activity"
@@ -707,29 +708,31 @@ msgid ""
 "The dog is provided by Andre Connes and released under the GPL.\n"
 "Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://"
 "commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: "
-"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Artist: Pieter Bruegel the Elder. Title: The peasants wedding. Licence: "
+"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
+"Pieter_Bruegel_d._Ä._011.jpg\n"
 "Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel "
-"Malissin et frédéric Valdes. Licence: Free but requires the site and author. "
-"Source: http://www.galerie.roi-president.com\n"
+"Malissin and Frédéric Valdes. Licence: Free but requires the site and "
+"author. Source: http://www.galerie.roi-president.com\n"
 "Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. "
 "Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. "
-"Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
-"_the_Elder_04.jpg"
+"Artist: Ambrosius Bosschaert the Elder. Title: Flower Still Life. Licence: "
+"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
+"Ambrosius_Bosschaert,_the_Elder_04.jpg"
 msgstr ""
 "Hunden er levert av André Connes og er utgjeve under GPL-lisensen.\n"
 "Kunstnar: Paul Gauguin. Verk: Arearea. Lisens: Public Domain. Kjelde: http://"
 "commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"Kunstnar: Pieter Brueghel den eldre. Verk: Bondebryllaup. Lisens: Public Domain. Kjelde: "
-"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Kunstnar: Pieter Brueghel den eldre. Verk: Bondebryllaup. Lisens: Public "
+"Domain. Kjelde: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä."
+"_011.jpg\n"
 "Verk: Dama og einhjørningen (veggteppe). Fotografert av: Pierre-Emmanuel "
-"Malissin og Frédéric Valdes. Lisens: fri, men krev referanse til nettstad og opphavspersonar. "
-"Kjelde: http://www.galerie.roi-president.com\n"
+"Malissin og Frédéric Valdes. Lisens: fri, men krev referanse til nettstad og "
+"opphavspersonar. Kjelde: http://www.galerie.roi-president.com\n"
 "Kunstnar: Vincent van Gogh. Verk: Soverom i Arles. Lisens: Public Domain. "
 "Kjelde: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"Kustnar: Ambrosius Bosschaert. Verk: Stilleben med blomar. Lisens: Public Domain. "
-"Kjelde: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
+"Kunstnar: Ambrosius Bosschaert. Verk: Stilleben med blomar. Lisens: Public "
+"Domain. Kjelde: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
 "_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
@@ -749,8 +752,8 @@ msgid "Paul Gauguin, Arearea - 1892"
 msgstr "Paul Gauguin: Arearea (1892)"
 
 #: ../boards/babyshapes/board8_1.xml.in.h:1
-msgid "Pieter Bruegel, Bauernhochzeit - 1568"
-msgstr "Pieter Bruegel: Bondebryllaup (1568)"
+msgid "Pieter Bruegel the Elder, The peasants wedding - 1568"
+msgstr "Pieter Bruegel den eldre: Bondebryllaup (1568)"
 
 #: ../boards/babyshapes/board8_2.xml.in.h:1
 msgid "The Lady and the Unicorn - XVe century"
@@ -762,8 +765,8 @@ msgid "Vincent van Gogh, Bedroom in Arles - 1888"
 msgstr "Vincent van Gogh: Soverom i Arles (1888)"
 
 #: ../boards/babyshapes/board8_4.xml.in.h:1
-msgid "Ambrosius Bosschaert, The Elder - 1614"
-msgstr "Ambrosius Bosschaert: Stilleben med blomar (1614)"
+msgid "Ambrosius Bosschaert the Elder, Flower Still Life - 1614"
+msgstr "Ambrosius Bosschaert den eldre: Stilleben med blomar (1614)"
 
 #: ../boards/ballcatch.xml.in.h:1
 msgid "Make the ball go to Tux"
@@ -891,8 +894,10 @@ msgid ""
 "attack (in \"check\") and there is no way to remove it from attack on the "
 "next move."
 msgstr ""
-"Kvar spelar startar med å kontrollera seksen brikker, éin konge, éi dronning, to tårn, to springarar, to løparar og åtte bønder. Målet er å setja kongen til "
-"motstanderen under angrep (sjakk), slik at han ikkje kan unngå angrepet i neste trekk. Denne stillinga vert kalla «sjakkmatt»."
+"Kvar spelar startar med å kontrollera seksen brikker, éin konge, éi "
+"dronning, to tårn, to springarar, to løparar og åtte bønder. Målet er å "
+"setja kongen til motstanderen under angrep (sjakk), slik at han ikkje kan "
+"unngå angrepet i neste trekk. Denne stillinga vert kalla «sjakkmatt»."
 
 #: ../boards/chess_computer.xml.in.h:2 ../boards/chess_movelearn.xml.in.h:3
 #: ../boards/chess_partyend.xml.in.h:2
@@ -938,7 +943,8 @@ msgstr "Hent bileta frå feltet til venstre og legg dei på dei raude prikkane."
 
 #: ../boards/chronos.xml.in.h:5
 msgid "Sort the pictures into the order that tells the story"
-msgstr "Set saman bileta i rett rekkjefølgje, slik at dei fortel ei forteljing."
+msgstr ""
+"Set saman bileta i rett rekkjefølgje, slik at dei fortel ei forteljing."
 
 #: ../boards/chronos.xml.in.h:6
 msgid "Tell a short story"
@@ -1572,7 +1578,8 @@ msgstr ""
 "plass med den ledige ruta."
 
 #: ../boards/fifteen.xml.in.h:3
-msgid "Move each item to make an increasing series: from the smallest to the largest"
+msgid ""
+"Move each item to make an increasing series: from the smallest to the largest"
 msgstr "Flytt brikkene slik at dei står i rekkjefølgje, frå 1 til 15."
 
 #: ../boards/fifteen.xml.in.h:4
@@ -2271,7 +2278,8 @@ msgstr "Likskaps-talmumsar"
 msgid ""
 "Guide the Number Muncher to the expressions that equal the number at the top "
 "of the screen."
-msgstr "Hjelp talmumsaren fram til uttrykka som er like talet øvst på skjermen."
+msgstr ""
+"Hjelp talmumsaren fram til uttrykka som er like talet øvst på skjermen."
 
 #: ../boards/gnumch-equality.xml.in.h:3
 msgid "Practice addition, multiplication, division and subtraction."
@@ -2321,7 +2329,8 @@ msgstr ""
 msgid ""
 "Guide the Number Muncher to the all the expressions that do not equal the "
 "number at the top of the screen."
-msgstr "Hjelp talmumsaren fram til uttrykka som er ulike talet øvst på skjermen."
+msgstr ""
+"Hjelp talmumsaren fram til uttrykka som er ulike talet øvst på skjermen."
 
 #: ../boards/gnumch-inequality.xml.in.h:2
 msgid "Inequality Number Munchers"
@@ -2411,7 +2420,8 @@ msgstr "Gjett eit tal"
 
 #: ../boards/guessnumber.xml.in.h:2
 msgid "Help Tux escape the cave. Tux hides a number for you to find."
-msgstr "Hjelp Tux å komma seg ut av hola. Han har gøymd eit tal som du må gjetta."
+msgstr ""
+"Hjelp Tux å komma seg ut av hola. Han har gøymd eit tal som du må gjetta."
 
 #: ../boards/guessnumber.xml.in.h:3
 msgid "Numbers from 1 to 1000 for the last level."
@@ -2807,8 +2817,10 @@ msgstr ""
 "grøne knappen til høgre."
 
 #: ../boards/login.xml.in.h:1
-msgid "GCompris identifies each child, so we can provide child-specific reports."
-msgstr "GCompris kan identifiera kvar spelar, så dei kan få sine eigne rapportar."
+msgid ""
+"GCompris identifies each child, so we can provide child-specific reports."
+msgstr ""
+"GCompris kan identifiera kvar spelar, så dei kan få sine eigne rapportar."
 
 #: ../boards/login.xml.in.h:2
 msgid "GCompris login screen"
@@ -3035,7 +3047,8 @@ msgstr "Øv på å leggja til, heilt til du har fått vekke alle korta."
 msgid ""
 "Turn the cards over to find two numbers which add up the same, until all the "
 "cards are gone."
-msgstr "Snu korta til du finn to med same sum, heilt til du har fått vekk alle korta."
+msgstr ""
+"Snu korta til du finn to med same sum, heilt til du har fått vekk alle korta."
 
 #: ../boards/memory_add.xml.in.h:5 ../boards/memory_add_tux.xml.in.h:5
 msgid ""
@@ -3076,7 +3089,8 @@ msgstr "Hugsespel med addisjon og subtraksjon"
 #: ../boards/memory_add_minus.xml.in.h:2
 #: ../boards/memory_add_minus_tux.xml.in.h:2
 msgid "Practise addition, subtraction, until all the cards are gone."
-msgstr "Øv på å leggja til og å trekkja frå, heilt til du har fått vekke alle korta."
+msgstr ""
+"Øv på å leggja til og å trekkja frå, heilt til du har fått vekke alle korta."
 
 #: ../boards/memory_add_minus.xml.in.h:4
 #: ../boards/memory_add_minus_tux.xml.in.h:4
@@ -3629,7 +3643,9 @@ msgstr "Øv på å handtera pengar. Her òg med cent."
 msgid ""
 "Rebuild the left mosaic on the right area. Select a color in the bottom area "
 "and click on grey boxes to paint them."
-msgstr "Bygg opp mosaikken som står til venstre i området til høgre. Vel ein farge nede på skjermen, og trykk så på dei grå boksane for å fargeleggja dei."
+msgstr ""
+"Bygg opp mosaikken som står til venstre i området til høgre. Vel ein farge "
+"nede på skjermen, og trykk så på dei grå boksane for å fargeleggja dei."
 
 #: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
@@ -3786,7 +3802,8 @@ msgid "Python Template"
 msgstr "Python-mal"
 
 #: ../boards/pythontemplate.xml.in.h:5 ../boards/pythontest.xml.in.h:5
-msgid "Thanks to Guido van Rossum and the python team for this powerful language!"
+msgid ""
+"Thanks to Guido van Rossum and the python team for this powerful language!"
 msgstr "Takk til Guido van Rossum og Python-laget for dette kraftige språket!"
 
 #: ../boards/pythontest.xml.in.h:3
@@ -3992,7 +4009,8 @@ msgstr "Øv på å telja med eit artig spel"
 
 #: ../boards/reversecount.xml.in.h:4
 msgid "Tux is hungry. Help him find fish by counting to the correct ice spot."
-msgstr "Tux er svolten. Hjelp han å fanga fiskar ved å telja fram til rett isflak."
+msgstr ""
+"Tux er svolten. Hjelp han å fanga fiskar ved å telja fram til rett isflak."
 
 #: ../boards/scalesboard.xml.in.h:1
 msgid "Balance the scales properly"
@@ -4198,7 +4216,8 @@ msgid "Sudoku, place unique symbols in a square."
 msgstr "Sudoku"
 
 #: ../boards/sudoku.xml.in.h:4
-msgid "Symbols must be unique in a row, in a column, and (if defined) each region."
+msgid ""
+"Symbols must be unique in a row, in a column, and (if defined) each region."
 msgstr "Plasser figurar og siffer i eit spesielt mønster i eit rutenett."
 
 #: ../boards/sudoku.xml.in.h:5
@@ -4292,7 +4311,8 @@ msgid "The tangram puzzle game"
 msgstr "Tenkespelet tangram"
 
 #: ../boards/target.xml.in.h:1
-msgid "Can move the mouse, can read numbers and count up to 15 for the first level"
+msgid ""
+"Can move the mouse, can read numbers and count up to 15 for the first level"
 msgstr "Du må kunna bruka musa, lesa tal og telja opp til 15 for første nivå."
 
 #: ../boards/target.xml.in.h:2
@@ -4349,7 +4369,8 @@ msgstr "Tux Paint"
 
 #: ../boards/tuxpaint.xml.in.h:4
 msgid "Use Tuxpaint to draw. When Tuxpaint is finished this board will end."
-msgstr "Bruk Tux Paint til å teikna. Når programmet er ferdig vert brettet lukka."
+msgstr ""
+"Bruk Tux Paint til å teikna. Når programmet er ferdig vert brettet lukka."
 
 #: ../boards/tuxpaint.xml.in.h:5
 msgid "mouse and keyboard manipulation"
@@ -4414,7 +4435,8 @@ msgstr ""
 
 #: ../boards/wordprocessor.xml.in.h:4
 msgid "The children can type their own text or copy one given by the teacher."
-msgstr "Ungane kan skriva sin eigen tekst, eller skriva av ein tekst frå læraren."
+msgstr ""
+"Ungane kan skriva sin eigen tekst, eller skriva av ein tekst frå læraren."
 
 #: ../boards/wordprocessor.xml.in.h:5
 msgid "Your word processor"
@@ -4576,9 +4598,9 @@ msgstr ""
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:622 ../src/boards/colors.c:164
 #: ../src/boards/gletters.c:858 ../src/boards/imageid.c:750
-#: ../src/boards/missingletter.c:771
-#: ../src/boards/python/admin/board_list.py:633
-#: ../src/boards/python/admin/board_list.py:651
+#: ../src/boards/missingletter.c:782
+#: ../src/boards/python/admin/board_list.py:635
+#: ../src/boards/python/admin/board_list.py:653
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:876 ../src/boards/scale.c:861
@@ -4642,7 +4664,7 @@ msgstr "Trykk på den svarte anda"
 msgid "Click on the white duck"
 msgstr "Trykk på den kvite anda"
 
-#: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:663
+#: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:665
 #: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:613
 msgid "Select sound locale"
 msgstr "Vel lydspråk"
@@ -4700,7 +4722,8 @@ msgid ""
 msgstr "Sjå kor du er, og byt så tilbake til usynlege veggar for å flytta deg."
 
 #: ../src/boards/maze.c:493
-msgid "Look at your position, then switch back to 3D mode to continue your moves"
+msgid ""
+"Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "Sjå kor du er, og byt så tilbake til 3D-modus for å flytta deg."
 
 #: ../src/boards/memory.c:263
@@ -4722,48 +4745,41 @@ msgstr "Vel brett"
 #. pixmap
 #: ../src/boards/missingletter_config.c:390
 #: ../src/boards/missingletter_config.c:540
-#| msgid "bistre"
 msgid "Picture"
 msgstr "Bilete"
 
 #. answer
 #: ../src/boards/missingletter_config.c:396
 #: ../src/boards/missingletter_config.c:531
-#| msgid "User"
 msgid "Answer"
 msgstr "Svar"
 
 #. question
 #: ../src/boards/missingletter_config.c:402
 #: ../src/boards/missingletter_config.c:554
-#| msgid "Numeration"
 msgid "Question"
 msgstr "Spørsmål"
 
 #. choice
 #: ../src/boards/missingletter_config.c:408
 #: ../src/boards/missingletter_config.c:563
-#| msgid "Chile"
 msgid "Choice"
 msgstr "Val"
 
 #. combo level
 #: ../src/boards/missingletter_config.c:446
 #: ../src/gcompris/board_config_wordlist.c:221
-#| msgid "Color of the line"
-msgid "Choice of the level"
-msgstr "Val av nivå"
+msgid "Level:"
+msgstr "Nivå:"
 
 #: ../src/boards/missingletter_config.c:454
 #, c-format
-#| msgid "Level"
 msgid "Level %d"
 msgstr "Nivå %d"
 
 #: ../src/boards/missingletter_config.c:544
-#| msgid "Color of the line"
-msgid "Choice of the filename"
-msgstr "Val av filnamn"
+msgid "Filename:"
+msgstr "Filnamn:"
 
 #. Set here the way to display money. Change only the money sign, and it's place, always keep %.2f, it will be replaced by 0,34 if decimal is ',' in your locale
 #: ../src/boards/money.c:487
@@ -4839,12 +4855,12 @@ msgstr "I bruk"
 msgid "Board title"
 msgstr "Brettnamn"
 
-#: ../src/boards/python/admin/board_list.py:411
+#: ../src/boards/python/admin/board_list.py:413
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
 msgstr "Filtrer brettvanskegradar for profilen «%s»"
 
-#: ../src/boards/python/admin/board_list.py:442
+#: ../src/boards/python/admin/board_list.py:444
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
@@ -5129,7 +5145,8 @@ msgid "Birth date:"
 msgstr "Fødselsdato:"
 
 #: ../src/boards/python/admin/user_edit.py:159
-msgid "You need to provide at least a login, first name and last name for your users"
+msgid ""
+"You need to provide at least a login, first name and last name for your users"
 msgstr "Du må skriva inn brukarnamn, fornamn og etternamn for alle brukarane."
 
 #: ../src/boards/python/admin/user_edit.py:176
@@ -5566,7 +5583,7 @@ msgid "is being displayed"
 msgstr "vert vist no"
 
 #: ../src/boards/reading.c:462
-msgid "We skip this level because there are not enough words in the list !"
+msgid "We skip this level because there are not enough words in the list!"
 msgstr "Me hoppar over dette nivået sidan det ikkje finst nok ord i lista."
 
 #: ../src/boards/reading.c:611
@@ -5767,14 +5784,12 @@ msgstr "%d (nytt nivå)"
 
 #. frame
 #: ../src/gcompris/board_config_wordlist.c:180
-#| msgid "Complete a list of symbols"
 msgid "Configure the list of words"
 msgstr "Set opp ordlista"
 
 #: ../src/gcompris/board_config_wordlist.c:209
-#| msgid "Color of the line"
-msgid "Choice of the language"
-msgstr "Val av språk"
+msgid "Language:"
+msgstr "Språk:"
 
 #: ../src/gcompris/board_config_wordlist.c:246
 msgid "Back to default"
@@ -6260,13 +6275,15 @@ msgstr ""
 "Alle data vert henta frå vevtenaren."
 
 #: ../src/gcompris/gcompris.c:220
-msgid "In server mode, specify the cache directory used to avoid useless downloads."
+msgid ""
+"In server mode, specify the cache directory used to avoid useless downloads."
 msgstr ""
 "For tenarmodus, mellomlagermappa som vert brukt til å unngå unødvendige "
 "nedlastingar."
 
 #: ../src/gcompris/gcompris.c:223
-msgid "Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
+msgid ""
+"Global drag and drop mode: normal, 2clicks, both. Default mode is normal."
 msgstr ""
 "Global dra- og slepp-modus: eitt klikk, to klikk eller begge. Standard er "
 "eitt klikk."
@@ -6304,8 +6321,10 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:1478
 #, c-format
-msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
-msgstr "GCompris kan ikkje starta, då låsefila er mindre enn %d sekund gammal.\n"
+msgid ""
+"GCompris won't start because the lock file is less than %d seconds old.\n"
+msgstr ""
+"GCompris kan ikkje starta, då låsefila er mindre enn %d sekund gammal.\n"
 
 #: ../src/gcompris/gcompris.c:1480
 #, c-format
@@ -6338,7 +6357,6 @@ msgstr "Lista over tilgjengeleg aktivitetar er:\n"
 
 #: ../src/gcompris/gcompris.c:1715
 #, c-format
-#| msgid "Numeration activities."
 msgid "Number of activities: %d\n"
 msgstr "Talet på aktivitetar: %d\n"
 
@@ -6352,14 +6370,18 @@ msgstr "«%s» finst, men kan ikkje lesast eller skrivast til."
 msgid ""
 "The --server option cannot be used because GCompris has been compiled "
 "without network support!"
-msgstr "Du kan ikkje bruka valet «--server», då GCompris er kompilert utan nettverksstøtte."
+msgstr ""
+"Du kan ikkje bruka valet «--server», då GCompris er kompilert utan "
+"nettverksstøtte."
 
 #: ../src/gcompris/gcompris.c:1863
 #, c-format
 msgid ""
 "ERROR: Profile '%s' is not found. Run 'gcompris --profile-list' to list "
 "available ones\n"
-msgstr "Feil: Fann ikkje profilen «%s». Køyr «gcompris --profile-list» for å sjå ei oversikt over tilgjengelege profilar.\n"
+msgstr ""
+"Feil: Fann ikkje profilen «%s». Køyr «gcompris --profile-list» for å sjå ei "
+"oversikt over tilgjengelege profilar.\n"
 
 #: ../src/gcompris/gcompris.c:1877
 #, c-format
@@ -6419,6 +6441,18 @@ msgstr "Tid gått"
 msgid "Remaining Time = %d"
 msgstr "Tid igjen: %d"
 
+#~| msgid "Color of the line"
+#~ msgid "Choice of the level"
+#~ msgstr "Val av nivå"
+
+#~| msgid "Color of the line"
+#~ msgid "Choice of the filename"
+#~ msgstr "Val av filnamn"
+
+#~| msgid "Color of the line"
+#~ msgid "Choice of the language"
+#~ msgstr "Val av språk"
+
 #~ msgid "Wordlist"
 #~ msgstr "Ordliste"
 
@@ -6458,4 +6492,3 @@ msgstr "Tid igjen: %d"
 #~ msgid "Oscar's best friends were Charlie the crab and Sandy the sea-star."
 #~ msgstr ""
 #~ "Dei beste vennene til Benny var krabben Kennet og sjøstjerna Synnøve."
-
