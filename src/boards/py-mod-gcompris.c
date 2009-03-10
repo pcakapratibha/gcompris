@@ -33,6 +33,7 @@ typedef int Py_ssize_t;
 #include "py-gcompris-properties.h"
 #include "py-gcompris-profile.h"
 #include "py-gcompris-wordlist.h"
+#include "py-gcompris-boardconfig.h"
 
 /* submodules includes */
 #include "py-mod-bonus.h"
@@ -1055,10 +1056,9 @@ py_gc_board_config_window_display(PyObject* self, PyObject* args){
   Py_INCREF(pyGcomprisConfCallbackFunc);
 
 
-  return (PyObject *) \
-             pygobject_new((GObject*) \
-			   gc_board_config_window_display( label,
-							  (GcomprisConfCallback )pyGcomprisConfCallback));
+  return gcompris_new_pyGcomprisBoardConfigObject(
+		  gc_board_config_window_display( label,
+			  (GcomprisConfCallback )pyGcomprisConfCallback));
 
 }
 
@@ -1067,17 +1067,20 @@ py_gc_board_config_window_display(PyObject* self, PyObject* args){
 static PyObject*
 py_gc_board_config_boolean_box(PyObject* self, PyObject* args)
 {
-  PyObject *py_bool;
+  PyObject *py_bool, *py_bconf;
+  pyGcomprisBoardConfigObject * bconf;
   gchar *label;
   gchar *key;
 
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, "ssO:gc_board_config_boolean_box", &label, &key, &py_bool))
+  if(!PyArg_ParseTuple(args, "OssO:gc_board_config_boolean_box", &py_bconf, &label, &key, &py_bool))
     return NULL;
+
+  bconf = (pyGcomprisBoardConfigObject*)py_bconf;
 
   /* Call the corresponding C function */
   return (PyObject *)pygobject_new((GObject*) \
-				    gc_board_config_boolean_box(NULL,(const gchar *)label, key, PyObject_IsTrue(py_bool)));
+				    gc_board_config_boolean_box(bconf->cdata,(const gchar *)label, key, PyObject_IsTrue(py_bool)));
 
 }
 
@@ -1085,7 +1088,8 @@ py_gc_board_config_boolean_box(PyObject* self, PyObject* args)
 static PyObject*
 py_gc_board_config_combo_box(PyObject* self, PyObject* args)
 {
-  PyObject *py_list;
+  pyGcomprisBoardConfigObject * bconf;
+  PyObject *py_list, *py_bconf;
   gchar *label;
   gchar *key;
   gchar *init;
@@ -1095,7 +1099,7 @@ py_gc_board_config_combo_box(PyObject* self, PyObject* args)
   int i, size;
 
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, "sOss:gc_board_config_combo_box", &label, &py_list, &key, &init))
+  if(!PyArg_ParseTuple(args, "OsOss:gc_board_config_combo_box", &py_bconf, &label, &py_list, &key, &init))
     return NULL;
 
   if (!PyList_Check(py_list)){
@@ -1110,9 +1114,11 @@ py_gc_board_config_combo_box(PyObject* self, PyObject* args)
     list = g_list_append( list,
 			  PyString_AsString( PyList_GetItem( py_list, i)));
 
+  bconf = (pyGcomprisBoardConfigObject*)py_bconf;
+
   /* Call the corresponding C function */
   return (PyObject *)pygobject_new((GObject*) \
-				    gc_board_config_combo_box(NULL, (const gchar *)label,
+				    gc_board_config_combo_box(bconf->cdata, (const gchar *)label,
 						       list,
 						       key,
 						       init));
@@ -1167,14 +1173,15 @@ PyObject* hash_object_to_dict(GHashTable *table)
 static PyObject*
 py_gc_board_config_radio_buttons(PyObject* self, PyObject* args)
 {
-  PyObject *py_dict;
+  PyObject *py_dict, *py_bconf;
+  pyGcomprisBoardConfigObject *bconf;
   GHashTable *buttons_label, *result;
   gchar *label;
   gchar *key;
   gchar *init;
 
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, "ssOs:gc_board_config_radio_buttons", &label, &key, &py_dict, &init))
+  if(!PyArg_ParseTuple(args, "OssOs:gc_board_config_radio_buttons", &py_bconf, &label, &key, &py_dict, &init))
     return NULL;
 
   if (!PyDict_Check(py_dict)){
@@ -1182,6 +1189,7 @@ py_gc_board_config_radio_buttons(PyObject* self, PyObject* args)
 		      "gc_board_config_radio_buttons second argument must be a dict");
     return NULL;
   }
+  bconf = (pyGcomprisBoardConfigObject*) py_bconf;
 
   PyObject *pykey, *pyvalue;
   Py_ssize_t pos = 0;
@@ -1197,7 +1205,7 @@ py_gc_board_config_radio_buttons(PyObject* self, PyObject* args)
 			  g_strdup(PyString_AsString(pyvalue)));
   }
 
-  result = gc_board_config_radio_buttons(NULL,label,
+  result = gc_board_config_radio_buttons(bconf->cdata,label,
 				  key,
 				  buttons_label,
 				  init);
@@ -1210,16 +1218,20 @@ py_gc_board_config_radio_buttons(PyObject* self, PyObject* args)
 static PyObject*
 py_gc_board_config_spin_int(PyObject* self, PyObject* args)
 {
+  pyGcomprisBoardConfigObject *bconf;
+  PyObject *py_bconf;
   gchar *label;
   gchar *key;
   gint min, max, step, init;
 
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, "ssiiii:gc_board_config_radio_buttons", &label, &key, &min, &max, &step, &init))
+  if(!PyArg_ParseTuple(args, "Ossiiii:gc_board_config_radio_buttons", &py_bconf, &label, &key, &min, &max, &step, &init))
     return NULL;
-
+  
+  bconf = (pyGcomprisBoardConfigObject*)py_bconf;
+  
   return (PyObject *)pygobject_new((GObject*) \
-				   gc_board_config_spin_int(NULL, (const gchar *)label,
+				   gc_board_config_spin_int(bconf->cdata, (const gchar *)label,
 						     key,
 						     min,
 						     max,
@@ -1233,12 +1245,17 @@ py_gc_board_config_spin_int(PyObject* self, PyObject* args)
 static PyObject*
 py_gc_board_conf_separator(PyObject* self, PyObject* args)
 {
+  PyObject *py_bconf;
+  pyGcomprisBoardConfigObject * bconf; 
+
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, ":gc_board_conf_separator"))
+  if(!PyArg_ParseTuple(args, "O:gc_board_conf_separator", &py_bconf))
     return NULL;
 
+  bconf = (pyGcomprisBoardConfigObject*)py_bconf;
+
   /* Create and return the result */
-  return (PyObject *)pygobject_new((GObject*) gc_board_conf_separator(NULL));
+  return (PyObject *)pygobject_new((GObject*) gc_board_conf_separator(bconf->cdata));
 
 }
 
@@ -1246,14 +1263,17 @@ py_gc_board_conf_separator(PyObject* self, PyObject* args)
 static PyObject*
 py_gc_board_config_combo_locales(PyObject* self, PyObject* args)
 {
+  pyGcomprisBoardConfigObject *bconf;
+  PyObject *py_bconf;
   gchar *init;
 
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, "s:gc_board_config_combo_locales", &init))
+  if(!PyArg_ParseTuple(args, "Os:gc_board_config_combo_locales", &py_bconf, &init))
     return NULL;
-
+  bconf = (pyGcomprisBoardConfigObject*)py_bconf;
+  
   return (PyObject *)pygobject_new((GObject*) \
-				   gc_board_config_combo_locales(NULL, init));
+				   gc_board_config_combo_locales(bconf->cdata, init));
 }
 
 
@@ -1284,19 +1304,21 @@ py_gc_locale_gets_list(PyObject* self, PyObject* args)
 static PyObject*
 py_gc_board_config_combo_locales_asset(PyObject* self, PyObject* args)
 {
+  pyGcomprisBoardConfigObject *bconf;
+  PyObject *py_bconf;
   gchar *init;
   gchar *label;
   gchar *file;
 
   /* Parse arguments */
-  if(!PyArg_ParseTuple(args, "ssz:gc_board_config_combo_locales",
+  if(!PyArg_ParseTuple(args, "Ossz:gc_board_config_combo_locales", &py_bconf,
 		       &label,
 		       &init,
 		       &file))
     return NULL;
-
+  bconf = (pyGcomprisBoardConfigObject*)py_bconf;
   return (PyObject *)pygobject_new((GObject*) \
-				   gc_board_config_combo_locales_asset(NULL, label, init, file ));
+				   gc_board_config_combo_locales_asset(bconf->cdata, label, init, file ));
 }
 
 
@@ -1416,7 +1438,8 @@ static gboolean pyGcomprisTextCallback(gchar *key, gchar *text, GtkLabel *label)
 
 static PyObject*
 py_gc_board_config_textview(PyObject* self, PyObject* args){
-  PyObject* pyCallback;
+  pyGcomprisBoardConfigObject *bconf;
+  PyObject* pyCallback, *py_bconf;
   gchar *label;
   gchar *key;
   gchar *desc = NULL;
@@ -1424,7 +1447,8 @@ py_gc_board_config_textview(PyObject* self, PyObject* args){
 
   /* Parse arguments */
   if(!PyArg_ParseTuple(args,
-		       "sszzO:gc_board_config_window_display",
+		       "OsszzO:gc_board_config_window_display",
+		       &py_bconf,
 		       &label,
 		       &key,
 		       &desc,
@@ -1444,10 +1468,11 @@ py_gc_board_config_textview(PyObject* self, PyObject* args){
   g_hash_table_replace (text_callbacks, key, pyCallback);
 
   Py_INCREF(pyCallback);
+  bconf = (pyGcomprisBoardConfigObject*)py_bconf;
 
   return (PyObject *) \
              pygobject_new((GObject*) \
-			   gc_board_config_textview(NULL, label,
+			   gc_board_config_textview(bconf->cdata, label,
 					      key,
 					      desc,
 					      init_text,

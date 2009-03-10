@@ -120,6 +120,7 @@ PYTHON_C_SRC = \
 	     canvas.c \
 	     canvasmodule.c \
 	     py-gcompris-board.c \
+	     py-gcompris-boardconfig.c \
 	     py-gcompris-properties.c \
 	     py-gcompris-profile.c \
 	     py-gcompris-wordlist.c \
