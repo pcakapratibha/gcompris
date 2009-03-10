@@ -1,3 +1,17 @@
+2009-03-10  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixes to compile again on windows.
+
+	* Makefile.am:
+	* configure.in:
+	* src/boards/Makefile.mingw:
+	* src/gcompris/Makefile.mingw:
+	* src/gcompris/gc_net.c: (gc_net_destroy),
+	(gc_net_get_url_from_file), (gc_net_dir_read_name),
+	(gc_cache_init), (gc_cache_get_relative), (gc_cache_add),
+	(gc_cache_import_pixmap), (gc_cache_remove), (_table_foreach),
+	(gc_cache_save), (gc_cache_destroy):
+
 2009-03-04  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- gnet is now enable by default.

@@ -601,8 +601,7 @@ fi
 #        ])
 
 dnl Autoconf output
-AC_OUTPUT([ gcompris.spec
-Makefile.mingw
+AC_OUTPUT([ Makefile.mingw
 config.h.mingw
 gcompris-installer.nsi
 Makefile

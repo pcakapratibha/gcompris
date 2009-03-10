@@ -163,6 +163,7 @@ BOARDS_C_SRC =	\
 	memory.c \
 	menu2.c \
 	missingletter.c \
+	missingletter_config.c \
 	money.c \
 	money_widget.c \
 	paratrooper.c \

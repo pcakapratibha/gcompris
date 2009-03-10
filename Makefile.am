@@ -43,7 +43,6 @@ EXTRA_DIST = \
 	$(Applications_in_files) \
 	$(icon_DATA) \
 	$(Menu_DATA) \
-	gcompris.spec.in \
 	intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in \

@@ -92,8 +92,12 @@ EXE_C_SRC = \
 	binreloc.c \
 	board.c \
 	board_config.c \
+	board_config_combo.c \
+	board_config_common.c \
+	board_config_radio.c \
+	board_config_textview.c \
+	board_config_wordlist.c \
 	bonus.c \
-	cache.c \
 	config.c \
 	dialog.c \
 	drag.c \
