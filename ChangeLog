@@ -1,5 +1,13 @@
 2009-03-14  Bruno coudoin  <bruno.coudoin@free.fr>
 
+	Recompiled gnuchess on windows with the link option
+	-mwindows to avoid the black dos windows being displayed when
+	you start the chess game.
+
+	* Makefile.mingw.in:
+
+2009-03-14  Bruno coudoin  <bruno.coudoin@free.fr>
+
 	- Fixed an annoying bug in the locale selection.
 	  Punjabi was twice in our internal list which makes
 	  it impossible to access locale after Portuguese in

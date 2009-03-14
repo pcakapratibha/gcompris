@@ -26,7 +26,7 @@ SQLITE_TOP :=		/sqlite
 MAKENSIS := "/c/Program Files/NSIS/makensis.exe"
 
 # These will be copied in the win32-install-dir ready to be packaged.
-NEEDED_DLLS =		$(GNUCHESS_TOP)/bin/pthreadGC.dll \
+NEEDED_DLLS =		$(GNUCHESS_TOP)/bin/pthreadGC2.dll \
 			$(GNUCHESS_TOP)/bin/libreadline.dll \
 			$(PYTHON_DLL) \
 			$(GNUCAP_TOP)/src/MSW/gnucap.exe \
