@@ -1,7 +1,5 @@
 /* gcompris - log.c
  *
- * Time-stamp: <2003/10/29 18:55:55 bcoudoin>
- *
  * Copyright (C) 2004 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify

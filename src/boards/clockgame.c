@@ -1,7 +1,5 @@
 /* gcompris - clockgame.c
  *
- * Time-stamp: <2006/08/21 23:33:07 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify

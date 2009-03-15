@@ -1,7 +1,5 @@
 /* gcompris - score.c
  *
- * Time-stamp: <2006/08/21 23:27:04 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -34,13 +32,13 @@ static ScoreStyleList currentStyle;
 /*
  * Forward declarations
  */
-static void display_number(GnomeCanvasGroup *parent, 
+static void display_number(GnomeCanvasGroup *parent,
 			   guint x,
-			   guint y, 
+			   guint y,
 			   char *operand_str);
 
 /*
- * Main entry score 
+ * Main entry score
  * ----------------
  *
  */
@@ -73,7 +71,7 @@ gc_score_end()
 {
   if(boardRootItem!=NULL)
     gtk_object_destroy (GTK_OBJECT(boardRootItem));
-  
+
   boardRootItem=NULL;
 }
 
@@ -126,9 +124,9 @@ gc_score_set(guint value)
 #define NUMBERSWIDTH       110
 
 static void
-display_number(GnomeCanvasGroup *parent, 
+display_number(GnomeCanvasGroup *parent,
 	       guint x,
-	       guint y, 
+	       guint y,
 	       char *operand_str)
 {
 

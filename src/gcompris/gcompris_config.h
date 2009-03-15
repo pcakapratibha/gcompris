@@ -1,7 +1,5 @@
 /*  GCompris -- config.h
  *
- * Time-stamp: <2001/12/26 23:13:29 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  *  This program is free software; you can redistribute it and/or modify

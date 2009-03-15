@@ -1,7 +1,5 @@
 /* gcompris - wordsgame.c
  *
- * Time-stamp: <2007-04-15 21:17:08 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -657,8 +655,8 @@ static GnomeCanvasItem *wordsgame_create_item(GnomeCanvasGroup *parent)
       gnome_canvas_item_move (item->rootitem,(double) (g_random_int()%(gcomprisBoard->width-(gint)(x2))),(double) 0);
   else
    {
-      double new_x = (double)( g_random_int()%gcomprisBoard->width); 
-      if ( new_x < -x1 )      
+      double new_x = (double)( g_random_int()%gcomprisBoard->width);
+      if ( new_x < -x1 )
 		new_x -=  x1;
       gnome_canvas_item_move (item->rootitem, new_x ,(double) 0);
    }

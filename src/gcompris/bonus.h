@@ -1,7 +1,5 @@
 /* gcompris - bonus.h
  *
- * Time-stamp: <2001/10/15 01:10:21 bruno>
- *
  * Copyright (C) 2001 Pascal Georges
  *
  * This program is free software; you can redistribute it and/or modify

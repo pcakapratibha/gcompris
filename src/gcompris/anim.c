@@ -1,7 +1,5 @@
 /* gcompris - anim.c
  *
- * Time-stamp: <2005/02/13 11:59:55 joe>
- *
  * Copyright (C) 2005 Joe Neeman
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -58,7 +56,7 @@ gc_anim_load(char *filename)
   while(fscanf(f, "%99s", tmp) == 1)
     {
       GcomprisBoard   *gcomprisBoard = gc_board_get_current();
-      files = g_slist_append(files, 
+      files = g_slist_append(files,
                              g_strdup_printf("%s/%s", gcomprisBoard->board_dir, tmp));
     }
   fclose(f);
@@ -185,7 +183,7 @@ anim_tick(void *ignore)
       GcomprisAnimCanvasItem *a = (GcomprisAnimCanvasItem*)cur->data;
       if( gdk_pixbuf_animation_iter_advance( a->iter, NULL) )
         {
-          gnome_canvas_item_set((GnomeCanvasItem*)a->canvas, "pixbuf", 
+          gnome_canvas_item_set((GnomeCanvasItem*)a->canvas, "pixbuf",
                                 gdk_pixbuf_animation_iter_get_pixbuf(a->iter),
                                 NULL);
         }

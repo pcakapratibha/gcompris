@@ -1,7 +1,5 @@
 /* gcompris - gameutil.h
  *
- * Time-stamp: <2000/07/16 00:32:26 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify

@@ -1,7 +1,5 @@
 /* gcompris - timer.c
  *
- * Time-stamp: <2001/10/15 01:10:21 bruno>
- *
  * Copyright (C) 2002 Bruno coudoin
  *
  * This program is free software; you can redistribute it and/or modify
@@ -84,7 +82,7 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
 	gchar		*filefull = NULL;
 	gchar		*filename = NULL;
 	gint		fileid;
-	
+
 	switch(type)
 	  {
 	  case GCOMPRIS_TIMER_SAND:
@@ -100,18 +98,18 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
 	fileid = (gint)timer;
 	filename = g_strdup_printf(image_prefix, fileid);
 	filefull = g_strdup_printf("%s/%s", properties->package_data_dir, filename);
-	
+
 	if (g_file_test ((filefull), G_FILE_TEST_EXISTS))
 	  {
 	    pixmap = gc_pixmap_load(filename);
 
 	    gc_timer_item = gnome_canvas_item_new (boardRootItem,
 						   gnome_canvas_pixbuf_get_type (),
-						   "pixbuf", pixmap, 
+						   "pixbuf", pixmap,
 						   "x", x,
 						   "y", y,
 						   NULL);
-	    
+
 	    gdk_pixbuf_unref(pixmap);
 	  }
 	g_free(filename);
@@ -138,7 +136,7 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
       pixmap = gc_pixmap_load("gcompris/misc/tuxballoon.png");
       gc_timer_item = gnome_canvas_item_new (boardRootItem,
 					     gnome_canvas_pixbuf_get_type (),
-					     "pixbuf", pixmap, 
+					     "pixbuf", pixmap,
 					     "x", x,
 					     "y", y,
 					     NULL);
@@ -151,7 +149,7 @@ gc_timer_display(int ax, int ay, TimerList atype, int second, GcomprisTimerEnd a
       pixmap = gc_pixmap_load("gcompris/misc/sea.png");
       gnome_canvas_item_new (boardRootItem,
 			     gnome_canvas_pixbuf_get_type (),
-			     "pixbuf", pixmap, 
+			     "pixbuf", pixmap,
 			     "x", (double) 0,
 			     "y", (double) BOARDHEIGHT - gdk_pixbuf_get_height(pixmap),
 			     "width", (double) gdk_pixbuf_get_width(pixmap),
@@ -204,7 +202,7 @@ gc_timer_pause(gboolean pause)
       if (animate_id)
 	gtk_timeout_remove (animate_id);
       animate_id = 0;
-      
+
       if (subanimate_id)
 	gtk_timeout_remove (subanimate_id);
       subanimate_id = 0;

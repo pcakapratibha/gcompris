@@ -1,7 +1,5 @@
 /* gcompris - gcompris-board.h
  *
- * Time-stamp: <2005/09/21 22:14:01 yves>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify

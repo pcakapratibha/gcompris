@@ -1,7 +1,5 @@
 /* gcompris - gcompris_alphabeta.c
  *
- * Time-stamp: <2006/08/21 23:28:14 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify
@@ -46,13 +44,13 @@ gint gc_alphabeta (gboolean maximize,
   gint m, t, nextBest, index;
 
   g_assert (depth >= 0);
-  
+
   child = firstChild(treeGame);
 
   *bestChild = -1;
 
 /*   g_warning("gc_alphabeta %d %d %d", depth, alpha, beta); */
-  
+
   /* directly return value for leaf node*/
   if ((!child) || (depth == 0)){
 /*     g_warning("gc_alphabeta %d returns %d bestChild %d", depth, heuristic(treeGame), *bestChild); */
@@ -60,7 +58,7 @@ gint gc_alphabeta (gboolean maximize,
   }
 
   index = 0;
-      
+
   if (maximize) {
     m = alpha;
     while (child){

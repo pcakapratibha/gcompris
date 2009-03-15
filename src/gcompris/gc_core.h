@@ -1,7 +1,5 @@
 /* gcompris - gc_core.h
  *
- * Time-stamp: <2006/08/20 10:03:53 bruno>
- *
  * Copyright (C) 2006 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify

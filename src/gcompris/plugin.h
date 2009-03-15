@@ -1,7 +1,5 @@
 /* gcompris - plugin.h
  *
- * Time-stamp: <2005/09/14 23:30:48 yves>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify

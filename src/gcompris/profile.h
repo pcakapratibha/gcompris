@@ -1,7 +1,5 @@
 /* gcompris - profile.h
  *
- * Time-stamp: <2006/08/29 01:16:51 bruno>
- *
  * Copyright (C) 2005 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify
@@ -67,7 +65,7 @@ struct _GcomprisGroup {
 
   /*name of group -- must be unique */
   gchar               *name;
-  
+
   /* GcomprisClass containing the group */
   gint                class_id;
 
@@ -100,7 +98,7 @@ struct _GcomprisUser {
 
   /* Last Name */
   gchar             *lastname;
-  
+
   /* First Name */
   gchar             *firstname;
 
@@ -128,7 +126,7 @@ typedef struct {
   gchar             *description;
 
   /* list of GcomprisGroup. if empty user management is disabled */
-  GList             *group_ids; 
+  GList             *group_ids;
 
   /* list of activities to play -- gchar section/name */
   GList             *activities;

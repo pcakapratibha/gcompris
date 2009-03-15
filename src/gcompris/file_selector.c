@@ -1,7 +1,5 @@
 /* gcompris - file_selector.c
  *
- * Time-stamp: <2006/08/20 10:29:31 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  *   This program is free software; you can redistribute it and/or modify

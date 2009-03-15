@@ -69,7 +69,7 @@ static int item_height;
 
 static guint colorlist [] =
   {
-    0x00FFFFFF,
+    0x00C0C0C0,
     0xA00000FF,
     0xF00000FF,
     0x00A000FF,
@@ -78,7 +78,7 @@ static guint colorlist [] =
     0x0000FFFF,
     0x505000FF,
     0xA0A000FF,
-    0xF0F000FF,
+    0xC0C080FF,
     0x005050FF,
     0x00A0A0FF,
     0x500050FF,
@@ -87,6 +87,24 @@ static guint colorlist [] =
   };
 #define NUMBER_OF_COLOR G_N_ELEMENTS(colorlist)
 
+static char symbollist [NUMBER_OF_COLOR] =
+  {
+    '!',
+    '/',
+    '<',
+    '>',
+    '&',
+    '~',
+    '#',
+    '{',
+    '%',
+    '|',
+    '?',
+    '}',
+    '=',
+    '+',
+    '*'
+  };
 
 /* Description of this plugin */
 static BoardPlugin menu_bp =
@@ -530,16 +548,16 @@ static GnomeCanvasItem *hanoi_create_item(GnomeCanvasGroup *parent)
 					    "width_units", (double)1,
 					    NULL);
 
-	      car[0] = 'a' + position[i][j]->color;
+	      car[0] = symbollist[position[i][j]->color];
 	      car[1] = '\0';
 
 	       position[i][j]->item_text = \
 		 gnome_canvas_item_new (boardRootItem,
 					gnome_canvas_text_get_type (),
 					"text", &car,
-					"font", gc_skin_font_board_tiny,
+					"font", "sans bold 14",
 					"x", (double) position[i][j]->xt,
-					"y", (double) position[i][j]->yt,
+					"y", (double) position[i][j]->yt - 3,
 					"anchor", GTK_ANCHOR_NORTH,
 					"fill_color", "white",
 					"justification", GTK_JUSTIFY_CENTER,

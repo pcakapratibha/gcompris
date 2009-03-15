@@ -1,7 +1,5 @@
 /* gcompris - board_config.c
  *
- * Time-stamp: <2006/08/21 23:27:57 bruno>
- *
  * Copyright (C) 2001 Pascal Georges
  *
  * This program is free software; you can redistribute it and/or modify
@@ -342,7 +340,7 @@ gc_board_config_spin_int(GcomprisBoardConf *config, const gchar *label, gchar *k
   gtk_spin_button_set_digits ( GTK_SPIN_BUTTON(spin), 0);
 
   gtk_spin_button_set_value ( GTK_SPIN_BUTTON(spin), (gdouble) init);
-  
+
   _gc_boardconf_key *u = g_malloc0(sizeof(_gc_boardconf_key));
   u->key = g_strdup(key);
   u->config = config;
@@ -352,7 +350,7 @@ gc_board_config_spin_int(GcomprisBoardConf *config, const gchar *label, gchar *k
 		    G_CALLBACK(spin_changed),
 		    u);
   g_signal_connect( G_OBJECT(spin),
-	  	"destroy", 
+	  	"destroy",
 		G_CALLBACK(_gc_destroy_boardconf_key),
 		u);
 

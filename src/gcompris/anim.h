@@ -1,7 +1,5 @@
 /* gcompris - anim.h
  *
- * Time-stamp: <2005/02/13 11:59:55 joe>
- *
  * Copyright (C) 2000 Joe Neeman
  *
  *   This program is free software; you can redistribute it and/or modify

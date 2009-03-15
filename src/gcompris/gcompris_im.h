@@ -1,7 +1,5 @@
 /* gcompris - gcompris_im.h
  *
- * Time-stamp: <2006/08/29 01:18:09 bruno>
- *
  * Copyright (C) 2005 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify

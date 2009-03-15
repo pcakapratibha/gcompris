@@ -1,7 +1,5 @@
 /* gcompris - gcompris_alphabeta.h
  *
- * Time-stamp: <2006/08/28 21:20:56 bruno>
- *
  * Copyright (C) 2000 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify
