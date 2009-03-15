@@ -1,7 +1,5 @@
 /* gcompris - py-mod-gcompris.c
  *
- * Time-stamp: <2007-08-22 01:28:12 bruno>
- *
  * Copyright (C) 2003 Olivier Samyn <osamyn@ulb.ac.be>
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -1226,9 +1224,9 @@ py_gc_board_config_spin_int(PyObject* self, PyObject* args)
   /* Parse arguments */
   if(!PyArg_ParseTuple(args, "Ossiiii:gc_board_config_radio_buttons", &py_bconf, &label, &key, &min, &max, &step, &init))
     return NULL;
-  
+
   bconf = (pyGcomprisBoardConfigObject*)py_bconf;
-  
+
   return (PyObject *)pygobject_new((GObject*) \
 				   gc_board_config_spin_int(bconf->cdata, (const gchar *)label,
 						     key,
@@ -1245,7 +1243,7 @@ static PyObject*
 py_gc_board_conf_separator(PyObject* self, PyObject* args)
 {
   PyObject *py_bconf;
-  pyGcomprisBoardConfigObject * bconf; 
+  pyGcomprisBoardConfigObject * bconf;
 
   /* Parse arguments */
   if(!PyArg_ParseTuple(args, "O:gc_board_conf_separator", &py_bconf))
@@ -1270,7 +1268,7 @@ py_gc_board_config_combo_locales(PyObject* self, PyObject* args)
   if(!PyArg_ParseTuple(args, "Os:gc_board_config_combo_locales", &py_bconf, &init))
     return NULL;
   bconf = (pyGcomprisBoardConfigObject*)py_bconf;
-  
+
   return (PyObject *)pygobject_new((GObject*) \
 				   gc_board_config_combo_locales(bconf->cdata, init));
 }

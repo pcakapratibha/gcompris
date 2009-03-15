@@ -1,7 +1,5 @@
 /* gcompris - profile.c
  *
- * Time-stamp: <2007-08-22 01:21:26 bruno>
- *
  * Copyright (C) 2005 Bruno Coudoin
  *
  * This program is free software; you can redistribute it and/or modify
