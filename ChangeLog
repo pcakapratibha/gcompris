@@ -1,3 +1,11 @@
+2009-03-16  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	Fixed melody activity, some sound files was not correct which
+	made it sometimes imposible to complete.
+	merged from trunk 3779
+
+	* src/boards/memory.c:
+
 2009-03-15  Bruno Coudoin  <bruno.coudoin@free.fr>
 
 	- Replaced letter that differenciate blocks for
