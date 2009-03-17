@@ -6441,18 +6441,6 @@ msgstr "Tid gått"
 msgid "Remaining Time = %d"
 msgstr "Tid igjen: %d"
 
-#~| msgid "Color of the line"
-#~ msgid "Choice of the level"
-#~ msgstr "Val av nivå"
-
-#~| msgid "Color of the line"
-#~ msgid "Choice of the filename"
-#~ msgstr "Val av filnamn"
-
-#~| msgid "Color of the line"
-#~ msgid "Choice of the language"
-#~ msgstr "Val av språk"
-
 #~ msgid "Wordlist"
 #~ msgstr "Ordliste"
 
