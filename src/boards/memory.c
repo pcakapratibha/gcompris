@@ -224,7 +224,6 @@ static gchar *soundList[] =
    "sounds/LuneRouge/sf/LRWeird_3_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_5_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_6_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/sf/LRET_phone_home_01_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_02_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_03_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_04_by_Lionel_Allorge.ogg",
@@ -249,7 +248,7 @@ static gchar *soundList[] =
    "sounds/melody/tachos/son2.wav",
    "sounds/melody/tachos/son3.wav",
    "sounds/melody/tachos/son4.wav",
-   "sounds/melody/tachos/melody.ogg"
+   "sounds/melody/tachos/melody.wav"
 };
 
 #define NUMBER_OF_SOUNDS G_N_ELEMENTS(soundList)
@@ -289,6 +288,7 @@ static BoardPlugin menu_bp =
  */
 
 static gboolean to_tux = FALSE;
+static gboolean lock_user = FALSE;
 static GQueue *tux_memory;
 static gint tux_memory_size;
 static gint tux_memory_sizes[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -978,6 +978,8 @@ static void memory_next_level()
 
   create_item(boardRootItem);
 
+  lock_user = FALSE;
+
   if (currentMode == MODE_TUX){
 	tux_memory_size = tux_memory_sizes[gcomprisBoard->level];
 	g_warning("tux_memory_size %d", tux_memory_size );
@@ -1516,20 +1518,23 @@ static void check_win()
     timeout_tux = 2000;
   }
 
+
   // Check win
   if (compare_card((gpointer) firstCard, (gpointer) secondCard) == 0) {
     gc_sound_play_ogg ("sounds/flip.wav", NULL);
     win_id = g_timeout_add (timeout,
 			    (GSourceFunc) hide_card, NULL);
+    lock_user = FALSE;
     return;
   }
 
   if (currentMode == MODE_TUX){
-		 /* time to tux to play, after a delay */
+    /* time to tux to play, after a delay */
     to_tux = TRUE;
     g_warning("Now tux will play !");
     tux_id = g_timeout_add (timeout_tux,
 			    (GSourceFunc) tux_play, NULL);
+    lock_user = FALSE;
     return;
   }
 
@@ -1550,7 +1555,7 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, MemoryItem *memoryItem)
          case 1:
 
 	   if (currentMode == MODE_TUX){
-	     if (to_tux){
+	     if (to_tux || lock_user){
 	       g_warning("He ! it's tux turn !");
 	       return FALSE;
 	     }
@@ -1593,10 +1598,12 @@ item_event(GnomeCanvasItem *item, GdkEvent *event, MemoryItem *memoryItem)
 	       if (currentMode == MODE_TUX)
 		 add_card_in_tux_memory(memoryItem);
 	       display_card(memoryItem, ON_FRONT);
-	       if (currentUiMode == UIMODE_SOUND)
+	       if (currentUiMode == UIMODE_SOUND) {
 		 // Check win is called from callback return
+		 // The user lost, make sure she won't play again before tux
+		 lock_user = TRUE;
 		 return TRUE;
-	       else {
+	       } else {
 		 check_win();
 		 return TRUE;
 	       }
