@@ -226,8 +226,6 @@ GSList *gc_net_dir_read_name(const gchar* dir, const gchar *ext)
 
 void gc_cache_init(void)
 {
-  SUPPORT_OR_RETURN();
-
 #ifdef USE_GNET
   gchar *filename;
   gchar *buf;
@@ -248,8 +246,6 @@ void gc_cache_init(void)
 #ifdef USE_GNET
 static gchar *gc_cache_get_relative(gchar *filename)
 {
-  SUPPORT_OR_RETURN(NULL);
-
   gchar *filename_content, *dirname;
 
   filename_content = gc_file_find_absolute_writeable(CONTENT_FILENAME);
@@ -264,8 +260,6 @@ static gchar *gc_cache_get_relative(gchar *filename)
 
 void gc_cache_add(gchar *filename)
 {
-  SUPPORT_OR_RETURN();
-
 #ifdef USE_GNET
   if(cache_content==NULL)
     return;
@@ -279,8 +273,6 @@ void gc_cache_add(gchar *filename)
 
 gchar* gc_cache_import_pixmap(gchar *filename, gchar *boarddir, gint width, gint height)
 {
-  SUPPORT_OR_RETURN(NULL);
-
 #ifdef USE_GNET
   GdkPixbuf *pixmap;
   gchar *basename, *file, *ext, *name, *abs;
@@ -316,13 +308,13 @@ gchar* gc_cache_import_pixmap(gchar *filename, gchar *boarddir, gint width, gint
   g_free(basename);
   g_free(file);
   return name;
+#else
+  return NULL;
 #endif
 }
 
 void gc_cache_remove(gchar *filename)
 {
-  SUPPORT_OR_RETURN();
-
 #ifdef USE_GNET
   g_remove(filename);
   filename = gc_cache_get_relative(filename);
@@ -339,8 +331,6 @@ struct _table_data
 #ifdef USE_GNET
 static void _table_foreach(gpointer key, gpointer value, gpointer user_data)
 {
-  SUPPORT_OR_RETURN();
-
   struct _table_data *data = (struct _table_data*)user_data;
   gchar * content, *filename;
   gsize length;
@@ -367,8 +357,6 @@ static void _table_foreach(gpointer key, gpointer value, gpointer user_data)
 
 void gc_cache_save(void)
 {
-  SUPPORT_OR_RETURN();
-
 #ifdef USE_GNET
   struct _table_data data;
   FILE *pf;
@@ -394,8 +382,6 @@ void gc_cache_save(void)
 
 void gc_cache_destroy(void)
 {
-  SUPPORT_OR_RETURN();
-
 #ifdef USE_GNET
   gc_cache_save();
   g_hash_table_destroy(cache_content);

@@ -1,3 +1,12 @@
+2009-03-20  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Reverted a commit in which Bruno broke the saving of the content.txt
+	  file.
+
+	* src/gcompris/gc_net.c: (gc_cache_init), (gc_cache_get_relative),
+	(gc_cache_add), (gc_cache_import_pixmap), (gc_cache_remove),
+	(_table_foreach), (gc_cache_save), (gc_cache_destroy):
+
 2009-03-17  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Fixed a little issue. It was possible for the user in
