@@ -1,3 +1,10 @@
+2009-03-24  Bruno coudoin  <bruno.coudoin@free.fr>
+
+	- Replaced a level in memory sound to make the difficulty always increasing
+
+	* src/boards/memory.c: (start_board):
+	* boards/voices/*: normalized sounds.
+
 2009-03-20  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	- Reverted a commit in which Bruno broke the saving of the content.txt
