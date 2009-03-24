@@ -164,9 +164,9 @@ static guint levelDescription[] =
   0,0,
   3,2,
   4,2,
+  5,2,
   4,3,
   6,3,
-  4,4,
   5,4,
   6,4,
   7,4,
@@ -871,7 +871,8 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       to_tux = FALSE;
       if (currentUiMode == UIMODE_SOUND){
 	playing_sound = TRUE;
-	gc_sound_play_ogg_cb("sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg",start_callback);
+	gc_sound_play_ogg_cb("sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg",
+			     start_callback);
       } else
 	playing_sound = FALSE;
 
@@ -1451,7 +1452,10 @@ static gint hide_card (GtkWidget *widget, gpointer data)
     GList *to_remove = NULL;
 
     for (list =  winning_pairs; list != NULL; list=list->next)
-      if ((((WINNING *) list->data)->first == firstCard) || (((WINNING *) list->data)->first == secondCard) || (((WINNING *) list->data)->second == firstCard) || (((WINNING *) list->data)->second == secondCard) ){
+      if ((((WINNING *) list->data)->first == firstCard) ||
+	  (((WINNING *) list->data)->first == secondCard) ||
+	  (((WINNING *) list->data)->second == firstCard) ||
+	  (((WINNING *) list->data)->second == secondCard) ){
 	to_remove = g_list_append( to_remove, list->data);
       }
 
