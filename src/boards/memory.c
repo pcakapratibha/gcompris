@@ -30,20 +30,20 @@
 #define MAX_MEMORY_HEIGHT 4
 
 //#define TEXT_FONT gc_skin_font_board_huge_bold
-#define TEXT_FONT "Serif bold 28"
+#define TEXT_FONT "Sans bold 28"
 
 static gchar *op_fonts[10] =
   {
     "",
-    "Serif bold 28",
-    "Serif bold 24",
-    "Serif bold 20",
-    "Serif bold 20",
-    "Serif bold 17",
-    "Serif bold 13",
-    "Serif bold 13",
-    "Serif bold 13",
-    "Serif bold 11",
+    "Sans bold 28",
+    "Sans bold 24",
+    "Sans bold 20",
+    "Sans bold 20",
+    "Sans bold 17",
+    "Sans bold 13",
+    "Sans bold 13",
+    "Sans bold 13",
+    "Sans bold 11",
   };
 
 static GcomprisBoard *gcomprisBoard = NULL;
@@ -205,37 +205,34 @@ static gchar *imageList[] =
 /* List of sounds to use in the memory */
 static gchar *soundList[] =
 {
-   "sounds/LuneRouge/animaux/LRRain_in_garden_01_by_Lionel_Allorge_cut.ogg",
+   "sounds/LuneRouge/LRLaPause_short.ogg",
    "sounds/LuneRouge/animaux/LRBark_1_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/animaux/LRBark_3_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/animaux/LRFrogsInPondDuringStormByLionelAllorgeCut.ogg",
-   "sounds/LuneRouge/engins/LRObject_falling_02_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/engins/LRTrain_slowing_down_01_by_Lionel_Allorge_cut.ogg",
-   "sounds/LuneRouge/engins/LRStartAndStopCarEngine1ByLionelAllorgeCut.ogg",
+   "sounds/LuneRouge/animaux/LRRain_in_garden_01_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/engins/LRObject_falling_01_by_Lionel_Allorge.ogg",
+   "sounds/LuneRouge/engins/LRObject_falling_02_by_Lionel_Allorge.ogg",
+   "sounds/LuneRouge/engins/LRStartAndStopCarEngine1ByLionelAllorgeCut.ogg",
+   "sounds/LuneRouge/engins/LRTrain_slowing_down_01_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/humain/LRApplauses_1_by_Lionel_Allorge_cut.ogg",
    "sounds/LuneRouge/humain/LRHeart_beat_01_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/maison/LRDoor_Open_2_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/maison/LRRing_01_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/musique/LRBuddhist_gong_05_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/sf/LRWeird_4_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_1_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_2_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_3_by_Lionel_Allorge.ogg",
+   "sounds/LuneRouge/sf/LRWeird_4_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_5_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/sf/LRWeird_6_by_Lionel_Allorge.ogg",
+   "sounds/LuneRouge/usine/LRFactory_noise_01_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_02_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_03_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_04_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_05_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFactory_noise_06_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/usine/LRHits_01_by_Lionel_Allorge.ogg",
    "sounds/LuneRouge/usine/LRFireballs_01_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/usine/LRFactory_noise_01_by_Lionel_Allorge.ogg",
-   "sounds/LuneRouge/LRLaPause_short.ogg",
-   "sounds/memory/plick.ogg",
-   "sounds/memory/tick.ogg",
-   "sounds/memory/tri.ogg",
+   "sounds/LuneRouge/usine/LRHits_01_by_Lionel_Allorge.ogg",
    "sounds/chronos/space/1.ogg",
    "sounds/chronos/space/2.ogg",
    "sounds/melody/guitar/melody.wav",
@@ -248,7 +245,9 @@ static gchar *soundList[] =
    "sounds/melody/tachos/son2.wav",
    "sounds/melody/tachos/son3.wav",
    "sounds/melody/tachos/son4.wav",
-   "sounds/melody/tachos/melody.wav"
+   "sounds/memory/plick.ogg",
+   "sounds/memory/tick.ogg",
+   "sounds/memory/tri.ogg",
 };
 
 #define NUMBER_OF_SOUNDS G_N_ELEMENTS(soundList)
@@ -552,7 +551,7 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
 	int i, j;
 	i = k %  add_levelDescription[gcomprisBoard->level][0];
 	j = k /  add_levelDescription[gcomprisBoard->level][0];
-	result = g_strdup_printf("%d%s%d",i,op_add,j);
+	result = g_strdup_printf("%d %s %d",i,op_add,j);
 	second = g_strdup_printf("%d",i+j);;
 	break;
       }
@@ -561,7 +560,7 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
 	int i, j;
 	i = k %  minus_levelDescription[gcomprisBoard->level][0];
 	j = k /  minus_levelDescription[gcomprisBoard->level][0];
-	result = g_strdup_printf("%d%s%d",i+j,op_minus,i);
+	result = g_strdup_printf("%d %s %d",i+j,op_minus,i);
 	second = g_strdup_printf("%d",j);;
 	break;
       }
@@ -570,7 +569,7 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
 	int i, j;
 	i = k %  mult_levelDescription[gcomprisBoard->level][0];
 	j = k /  mult_levelDescription[gcomprisBoard->level][0];
-	result = g_strdup_printf("%d%s%d",i,op_mult,j);
+	result = g_strdup_printf("%d %s %d",i,op_mult,j);
 	second = g_strdup_printf("%d",i*j);;
 	break;
       }
@@ -580,7 +579,7 @@ void get_random_token(int token_type, gint *returned_type, gchar **string, gchar
 	i1 = k %  div_levelDescription[gcomprisBoard->level][0];
 	if (i1==0) skip=TRUE;
 	i2 = k /  div_levelDescription[gcomprisBoard->level][0];
-	result = g_strdup_printf("%d%s%d",i1*i2,op_div,i1);
+	result = g_strdup_printf("%d %s %d",i1*i2,op_div,i1);
 	second = g_strdup_printf("%d",i2);
 	break;
       }
@@ -1362,7 +1361,7 @@ static void create_item(GnomeCanvasGroup *parent)
 				       "x", (double) (width2)/2,
 				       "y", (double) (height2)/2,
 				       "anchor", GTK_ANCHOR_CENTER,
-				       "fill_color_rgba", 0x225AFFFF,
+				       "fill_color_rgba", 0xFFFFFFFF,
 				       NULL);
 
 	    }
