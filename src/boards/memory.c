@@ -397,8 +397,6 @@ static GList *passed_token = NULL;
 static GnomeCanvasItem *tux;
 static GnomeCanvasItem *tux_score;
 static GnomeCanvasItem *player_score;
-static GnomeCanvasItem *tux_score_s;
-static GnomeCanvasItem *player_score_s;
 
 /* set the type of the token returned in string in returned_type */
 void get_random_token(int token_type, gint *returned_type, gchar **string, gchar **second_value)
@@ -940,8 +938,6 @@ static void update_scores()
 
   gnome_canvas_item_set(tux_score,      "text", tux_score_str, NULL);
   gnome_canvas_item_set(player_score,   "text", player_score_str, NULL);
-  gnome_canvas_item_set(tux_score_s,    "text", tux_score_str, NULL);
-  gnome_canvas_item_set(player_score_s, "text", player_score_str, NULL);
 
   g_free(tux_score_str);
   g_free(player_score_str);
@@ -1006,11 +1002,11 @@ static void memory_destroy_all_items()
   win_id = 0;
 
   if (currentMode == MODE_TUX){
+    to_tux = FALSE;
     if (tux_id) {
       g_source_remove (tux_id);
     }
     tux_id =0;
-    to_tux = FALSE;
   }
 
   /* Now destroy all items */
@@ -1217,34 +1213,16 @@ static void create_item(GnomeCanvasGroup *parent)
     tux = gnome_canvas_item_new (GNOME_CANVAS_GROUP(parent),
 				 gnome_canvas_pixbuf_get_type (),
 				 "pixbuf", pixmap_tux,
-				 "x", (double) 50,
-				 "y", (double) 20,
+				 "x", (double) 35,
+				 "y", (double) 240,
 				 NULL);
     gdk_pixbuf_unref(pixmap_tux);
-
-    tux_score_s = gnome_canvas_item_new (GNOME_CANVAS_GROUP(parent),
-				       gnome_canvas_text_get_type (),
-				       "font", gc_skin_font_board_huge_bold,
-				       "x", (double) 100+1.0,
-				       "y", (double) 200+1.0,
-				       "anchor", GTK_ANCHOR_CENTER,
-				       "fill_color_rgba", 0x101010FF,
-				       NULL);
-
-    player_score_s = gnome_canvas_item_new (GNOME_CANVAS_GROUP(parent),
-					  gnome_canvas_text_get_type (),
-					  "font", gc_skin_font_board_huge_bold,
-					  "x", (double) 100+1.0,
-					  "y", (double) BASE_CARD_Y2 - 20+1.0,
-					  "anchor", GTK_ANCHOR_CENTER,
-					  "fill_color_rgba", 0x101010FF,
-					  NULL);
 
     tux_score = gnome_canvas_item_new (GNOME_CANVAS_GROUP(parent),
 				       gnome_canvas_text_get_type (),
 				       "font", gc_skin_font_board_huge_bold,
 				       "x", (double) 100,
-				       "y", (double) 200,
+				       "y", (double) 340,
 				       "anchor", GTK_ANCHOR_CENTER,
 				       "fill_color_rgba", 0xFF0F0FFF,
 				       NULL);
@@ -1497,9 +1475,9 @@ static gint hide_card (GtkWidget *widget, gpointer data)
   if(remainingCards<=0){
     if (currentMode == MODE_TUX){
       if (tux_id){
+	to_tux = FALSE;
 	g_source_remove(tux_id);
 	tux_id = 0;
-	to_tux = FALSE;
       }
     }
     player_win();
@@ -1697,6 +1675,9 @@ static gint tux_play(){
     return TRUE;
   }
 
+  if ( ! to_tux )
+    return TRUE;
+
   g_warning("Now tux playing !");
 
   if(secondCard)
@@ -1710,7 +1691,6 @@ static gint tux_play(){
   if (winning_pairs){
     g_warning("I will won !");
     if (!firstCard){
-      g_warning("case 1");
       firstCard = ((WINNING *) winning_pairs->data)->first ;
       display_card(firstCard, ON_FRONT);
       if (currentUiMode == UIMODE_SOUND)
@@ -1718,7 +1698,6 @@ static gint tux_play(){
       else
 	return TRUE;
     } else {
-      g_warning("case 2");
       secondCard = ((WINNING *) winning_pairs->data)->second;
       display_card(secondCard, ON_FRONT);
       if (currentUiMode == UIMODE_SOUND)
@@ -1760,7 +1739,6 @@ static gint tux_play(){
     }
 
   if (!firstCard){
-    g_warning("case 3");
     firstCard = memoryArray[rx][ry];
     add_card_in_tux_memory(firstCard);
     display_card(firstCard, ON_FRONT);
@@ -1770,7 +1748,6 @@ static gint tux_play(){
     else
       return TRUE;
   } else {
-    g_warning("case 4");
     secondCard = memoryArray[rx][ry];
     add_card_in_tux_memory(secondCard);
     display_card(secondCard, ON_FRONT);
@@ -1797,7 +1774,8 @@ static void sound_callback(gchar *file)
   if (! gcomprisBoard)
     return;
 
-  g_warning("sound_callback %s", file);
+  if (!playing_sound)
+    return;
 
   playing_sound = FALSE;
   if (currentMode == MODE_TUX){
