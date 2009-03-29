@@ -1,3 +1,6 @@
+
+	*** RELEASE 8.3.12 ***
+
 2009-03-26  Bruno coudoin  <bruno.coudoin@free.fr>
 
 	* src/boards/memory.c: (sound_callback): Hopefully fixed a race in which
@@ -92,6 +95,8 @@
 
 	* src/gcompris/board_config_combo.c:
 	(gc_board_config_combo_locales_asset):
+
+	*** RELEASE 8.3.11 ***
 
 2009-03-10  Bruno coudoin  <bruno.coudoin@free.fr>
 
