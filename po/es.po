@@ -6647,18 +6647,6 @@ msgstr "Tiempo transcurrido"
 msgid "Remaining Time = %d"
 msgstr "Tiempo restante = %d"
 
-#~| msgid "Color of the line"
-#~ msgid "Choice of the level"
-#~ msgstr "Elección de nivel"
-
-#~| msgid "Color of the line"
-#~ msgid "Choice of the filename"
-#~ msgstr "Selección del nombre de archivo"
-
-#~| msgid "Color of the line"
-#~ msgid "Choice of the language"
-#~ msgstr "Selección de idioma"
-
 #~ msgid "Wordlist"
 #~ msgstr "Lista de palabras"
 
