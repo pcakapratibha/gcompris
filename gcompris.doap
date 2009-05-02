@@ -8,7 +8,6 @@
   <shortdesc xml:lang="en">Multi Activity Educational Software</shortdesc>
   <homepage rdf:resource="http://gcompris.net" />
   <mailing-list rdf:resource="https://lists.sourceforge.net/lists/listinfo/gcompris-devel" />
-  <category rdf:resource="http://api.gnome.org/doap-extensions#other" />
 
   <maintainer>
     <foaf:Person>
