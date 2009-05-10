@@ -1,8 +1,8 @@
 
 INCLUDES = \
-	-I$(top_builddir) 				\
-	-I$(top_builddir)				\
-	-I$(top_builddir)/src				\
+	-I$(top_srcdir) 				\
+	-I$(top_srcdir)				\
+	-I$(top_srcdir)/src				\
 	$(WARN_CFLAGS) 					\
 	$(GCOMPRIS_CFLAGS) \
 	$(FT2_CFLAGS)					\

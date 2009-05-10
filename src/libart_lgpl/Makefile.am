@@ -100,7 +100,7 @@ libart_lgpl_2_a_SOURCES = \
 	libart-features.c
 
 libart_lgplincdir = $(top_builddir)/src
-INCLUDES = -I$(top_builddir) -I$(top_builddir) -DLIBART_COMPILATION
+INCLUDES = -I$(top_srcdir) -I$(top_srcdir) -DLIBART_COMPILATION
 
 DEPS = $(top_builddir)/libart_lgpl_2.a
 LDADDS = $(top_builddir)/libart_lgpl_2.a
