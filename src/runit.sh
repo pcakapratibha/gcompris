@@ -8,9 +8,16 @@ path=`dirname $0`
 . $1/init_path.sh
 
 menudir=$path
-localedir=$path/locale
 
-if [ ! -f $localedir ]; then
+# Search GCompris locale in different places
+# Full bundle case
+localedir=$path/share/locale
+if [ ! -d $localedir ]; then
+  # Single bundle case
+  localedir=$path/locale
+fi
+if [ ! -d $localedir ]; then
+  # On the host
   localedir=/usr/share/locale
 fi
 
@@ -34,7 +41,7 @@ $gcompris -L $plugindir \
     -P $pythonplugindir \
     -A $resourcedir \
     -M $menudir \
-    --locale_dir=$path/locale \
+    --locale_dir=$localedir \
     -l $section/$activity \
     --drag-mode=2clicks \
     $*
