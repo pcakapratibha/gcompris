@@ -4,18 +4,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dr.T.vasudevan <agnihot3@gmail.com>, 2008.
+# Dr.T.Vasudevan <agnihot3@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-07 11:16+0100\n"
-"PO-Revision-Date: 2008-12-16 14:38+0530\n"
-"Last-Translator: Dr.T.vasudevan <agnihot3@gmail.com>\n"
-"Language-Team: Tamil <Ubuntu-l10n-tam@lists.ubuntu.com>\n"
+"POT-Creation-Date: 2009-05-28 07:25+0530\n"
+"PO-Revision-Date: 2009-05-28 16:10+0530\n"
+"Last-Translator: Dr.T.Vasudevan <agnihot3@gmail.com>\n"
+"Language-Team: American English <Ubuntu-l10n-tam@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../boards/administration.xml.in.h:1
 msgid ""
@@ -410,8 +412,8 @@ msgstr "அல்ஜீப்ராவுக்கு போவோம்"
 msgid "Left-click the mouse on an activity to select it."
 msgstr "ஒரு விளையாட்டை தேர்ந்தெடுக்க அதன் மேல இடது சொடுக்குங்க"
 
-#: ../boards/algebra_guesscount.xml.in.h:1
-#: ../boards/erase_doubleclick.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/algebra_guesscount.xml.in.h:1 ../boards/erase_clic.xml.in.h:1
+#: ../boards/erase_doubleclick.xml.in.h:1
 msgid ""
 "Animal pictures come from the Animal Photography Page of Ralf Schmode "
 "(http://schmode.net/). Ralf has kindly permitted Gcompris to include his "
@@ -701,25 +703,30 @@ msgid ""
 "The dog is provided by Andre Connes and released under the GPL.\n"
 "Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://"
 "commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. Source: "
-"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"Artist: Pieter Bruegel the Elder. Title: The peasants wedding. Licence: "
+"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
+"Pieter_Bruegel_d._Ä._011.jpg\n"
 "Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel "
-"Malissin et frédéric Valdes. Licence: Free but requires the site and author. "
-"Source: http://www.galerie.roi-president.com\n"
+"Malissin and Frédéric Valdes. Licence: Free but requires the site and "
+"author. Source: http://www.galerie.roi-president.com\n"
 "Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. "
 "Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. "
-"Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
-"_the_Elder_04.jpg"
+"Artist: Ambrosius Bosschaert the Elder. Title: Flower Still Life. Licence: "
+"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
+"Ambrosius_Bosschaert,_the_Elder_04.jpg"
 msgstr ""
-"நாய் ப்டம் தந்தது ஆந்த்ரே கோன்ஸ். இது ஜிபிஎல் இல் வெளியிடப்படுகிறது.\n"
-"கலைஞர்: காகின், பால். தலைப்பு அரியரியா. உரிமம்: பொது தளம் மூலம்  http://"
-"commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"கலைஞர்: ப்ருஜெல் d. Ä. தலைப்பு: போர்ன்ஹோசிட் உரிமம்: பொது தளம் மூலம் : http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
-"விவரம்: தி லேடி அன்ட் தி யூனிகார்ன் (ஓவியத்திரைகள்). ஆசிரியர்: பியர் எமானுவெல் மலிசின் எ ப்ரெதிரிக் வால்டெ .உரிமம்: இலவசம் ஆயின் இடமும் ஆசிரியரும் தரப்பட வேண்டும். மூலம்: http://www.galerie.roi-president.com\n"
-"கலைஞர்: வின்சென்ட் வான் கோ. தலைப்பு: பெட்ரூம் இன் ஆர்ல்ஸ். உரிமம்: பொதுக்களம். மூலம்: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"கலைஞர்: அம்ரோசிஸ் போசெர்ட். தலைப்பு: தி எல்டர். உரிமம்: பொதுக்களம். மூலம்: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
-"_the_Elder_04.jpg"
+"நாய் படம் தந்தது ஆந்த்ரே கோன்ஸ். இது ஜிபிஎல் இல் வெளியிடப்படுகிறது.\n"
+"கலைஞர்: காகின், பால். தலைப்பு அரியரியா. உரிமம்: பொது தளம். மூலம்: http://commons."
+"wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"கலைஞர்:பீட்டர் ப்ருஜெல் தி எல்டர். தலைப்பு: பெசன்ட்ஸ் வெடிங் உரிமம்: பொது தளம் மூலம் : http://commons."
+"wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"விவரம்: தி லேடி அன்ட் தி யூனிகார்ன் (ஓவியத்திரைகள்). ஆசிரியர்: பியர் எமானுவெல் மலிசின் "
+"எ ப்ரெதிரிக் வால்டெ .உரிமம்: இலவசம் ஆயின் இடமும் ஆசிரியரும் தரப்பட வேண்டும். மூலம்: "
+"http://www.galerie.roi-president.com\n"
+"கலைஞர்: வின்சென்ட் வான் கோ. தலைப்பு: பெட்ரூம் இன் ஆர்ல்ஸ். உரிமம்: பொதுக்களம். மூலம்: http://"
+"commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
+"கலைஞர்: அம்ரோசிஸ் போசெர்ட் தி எல்டர். தலைப்பு:ப்ளவர் ஸ்டில் லைப்  உரிமம்: பொதுக்களம். மூலம்: http://"
+"commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -734,12 +741,12 @@ msgid "Lock with colored shapes."
 msgstr "வண்ண உருவங்களுடன் லாக்."
 
 #: ../boards/babyshapes/board8_0.xml.in.h:1
-msgid "Gauguin, Arearea - 1892"
-msgstr "காகின், அரீயரிய - 1892"
+msgid "Paul Gauguin, Arearea - 1892"
+msgstr "பால் காகின், அரீயரிய - 1892"
 
 #: ../boards/babyshapes/board8_1.xml.in.h:1
-msgid "Pieter Bruegel, Bauernhochzeit - 1568"
-msgstr "பீட்டர் ப்ருஜெல், போர்ன்ஹோசிட் - 1568"
+msgid "Pieter Bruegel the Elder, The peasants wedding - 1568"
+msgstr " பீட்டர் ப்ருஜெல் தி எல்டர். தலைப்பு: பெசன்ட்ஸ் வெடிங் உரிமம் - 1568"
 
 #: ../boards/babyshapes/board8_2.xml.in.h:1
 msgid "The Lady and the Unicorn - XVe century"
@@ -750,8 +757,8 @@ msgid "Vincent van Gogh, Bedroom in Arles - 1888"
 msgstr "வின்சென்ட் வான் கோ, பெட்ரூம் இன் அர்ல்ஸ் -1888"
 
 #: ../boards/babyshapes/board8_4.xml.in.h:1
-msgid "Ambrosius Bosschaert, The Elder - 1614"
-msgstr "அம்ரோசிஸ் போசெர்ட்., தி எல்டர்- 1614"
+msgid "Ambrosius Bosschaert the Elder, Flower Still Life - 1614"
+msgstr "அம்ரோசிஸ் போசெர்ட் தி எல்டர், ப்ளவர் ஸ்டில் லைப்- 1614"
 
 #: ../boards/ballcatch.xml.in.h:1
 msgid "Make the ball go to Tux"
@@ -797,10 +804,10 @@ msgstr "கோலுக்குள் பந்தை உதை"
 
 #: ../boards/billard.xml.in.h:3 ../boards/chess_computer.xml.in.h:3
 #: ../boards/chess_movelearn.xml.in.h:4 ../boards/chess_partyend.xml.in.h:3
-#: ../boards/clickgame.xml.in.h:5 ../boards/connect4.xml.in.h:6
-#: ../boards/connect4-2players.xml.in.h:5 ../boards/doubleclick.xml.in.h:4
-#: ../boards/erase.xml.in.h:3 ../boards/erase_doubleclick.xml.in.h:6
-#: ../boards/erase_clic.xml.in.h:6 ../boards/fifteen.xml.in.h:2
+#: ../boards/clickgame.xml.in.h:5 ../boards/connect4-2players.xml.in.h:5
+#: ../boards/connect4.xml.in.h:6 ../boards/doubleclick.xml.in.h:4
+#: ../boards/erase.xml.in.h:3 ../boards/erase_clic.xml.in.h:6
+#: ../boards/erase_doubleclick.xml.in.h:6 ../boards/fifteen.xml.in.h:2
 #: ../boards/hanoi.xml.in.h:3 ../boards/memory.xml.in.h:4
 #: ../boards/tangram.xml.in.h:8
 msgid "Mouse-manipulation"
@@ -876,7 +883,12 @@ msgid ""
 "is to checkmate the opponent's king, whereby the king is under immediate "
 "attack (in \"check\") and there is no way to remove it from attack on the "
 "next move."
-msgstr "துவங்கும்போது ஒவ்வொரு ஆட்டக்காரரும் ( ஒருவர் வெள்ளை காய்களை ஆடுகிறர்; ஒருவர் கருப்பு) பதினாறு காய்களை கட்டுப்படுத்துகின்றனர்: ஒரு ராஜா, ஒரு ராணி, இரண்டு கோட்டைகள்,  இரண்டு குதிரைகள், இரண்டு யானைகள், மற்றும் எட்டு காவலாட்கள். ஆடத்தில் இலக்கு ராஜாவை செக்மேட் செய்வது. அதாவது ராஜாவை நேரடியாக தாக்க (\"check\" இல் ராஜா) அவருக்கு அடுத்த நகர்வில் அதிலிருந்து தப்பிக்க வழி இல்லை."
+msgstr ""
+"துவங்கும்போது ஒவ்வொரு ஆட்டக்காரரும் ( ஒருவர் வெள்ளை காய்களை ஆடுகிறர்; ஒருவர் கருப்பு) "
+"பதினாறு காய்களை கட்டுப்படுத்துகின்றனர்: ஒரு ராஜா, ஒரு ராணி, இரண்டு கோட்டைகள்,  இரண்டு "
+"குதிரைகள், இரண்டு யானைகள், மற்றும் எட்டு காவலாட்கள். ஆடத்தில் இலக்கு ராஜாவை செக்மேட் "
+"செய்வது. அதாவது ராஜாவை நேரடியாக தாக்க (\"check\" இல் ராஜா) அவருக்கு அடுத்த நகர்வில் "
+"அதிலிருந்து தப்பிக்க வழி இல்லை."
 
 #: ../boards/chess_computer.xml.in.h:2 ../boards/chess_movelearn.xml.in.h:3
 #: ../boards/chess_partyend.xml.in.h:2
@@ -1093,18 +1105,6 @@ msgstr "1955 சித்ரோன் டிஎஸ் 19"
 msgid "Cars"
 msgstr "கார்கள்"
 
-#: ../boards/clickanddraw.xml.in.h:1
-msgid "Click and draw"
-msgstr "சொடுக்கி வரைக"
-
-#: ../boards/clickanddraw.xml.in.h:2
-msgid "Draw the picture by clicking on each blue point in sequence."
-msgstr "ஒவ்வொரு நீல புள்ளி மேலயும் வரிசையா சொடுக்கி படத்தை வரையுங்க"
-
-#: ../boards/clickanddraw.xml.in.h:3
-msgid "Draw the picture by clicking on the blue points."
-msgstr "நீல புள்ளிகள் மேலே சொடுக்கி படத்தை வரையுங்க"
-
 #: ../boards/click_on_letter.xml.in.h:1
 msgid ""
 "A letter is spoken. Click on the matching letter in the main area. You can "
@@ -1128,6 +1128,18 @@ msgstr "ஒரு எழுத்தை கேட்டு சரியான �
 #: ../boards/click_on_letter.xml.in.h:5
 msgid "Visual letter-recognition. Can move the mouse."
 msgstr "எழுத்து காட்சி அறிவு. சொடுக்கியை நகர்த்த முடியும்."
+
+#: ../boards/clickanddraw.xml.in.h:1
+msgid "Click and draw"
+msgstr "சொடுக்கி வரைக"
+
+#: ../boards/clickanddraw.xml.in.h:2
+msgid "Draw the picture by clicking on each blue point in sequence."
+msgstr "ஒவ்வொரு நீல புள்ளி மேலயும் வரிசையா சொடுக்கி படத்தை வரையுங்க"
+
+#: ../boards/clickanddraw.xml.in.h:3
+msgid "Draw the picture by clicking on the blue points."
+msgstr "நீல புள்ளிகள் மேலே சொடுக்கி படத்தை வரையுங்க"
 
 #: ../boards/clickgame.xml.in.h:1
 msgid "Click On Me"
@@ -1222,11 +1234,11 @@ msgstr "கணினியை புரிந்து கொள்வோம்.
 msgid "Play with computer peripherals."
 msgstr "கணினி துணைக் கருவிகளுடன் விளையாடுங்க."
 
-#: ../boards/connect4.xml.in.h:1 ../boards/connect4-2players.xml.in.h:1
+#: ../boards/connect4-2players.xml.in.h:1 ../boards/connect4.xml.in.h:1
 msgid "Arrange four coins in a row"
 msgstr "நான்கு காசுகளை ஒரு வரிசையில் வைப்போம்."
 
-#: ../boards/connect4.xml.in.h:2 ../boards/connect4-2players.xml.in.h:2
+#: ../boards/connect4-2players.xml.in.h:2 ../boards/connect4.xml.in.h:2
 msgid ""
 "Click the position in the line where you want to drop a piece. You can also "
 "use the arrow keys to move the piece left or right, and the down or space "
@@ -1234,26 +1246,6 @@ msgid ""
 msgstr ""
 "கோட்டில் ஒரு துண்டை போட விரும்பும் இடத்தில் சொடுக்குங்க. நீங்க மேல் கீழ் வலது இடது அம்பு "
 "விசைகளாலக் கூட அதை செய்யலாம்."
-
-#: ../boards/connect4.xml.in.h:3
-msgid "Connect 4"
-msgstr "நாலை இணைக்கவும்"
-
-#: ../boards/connect4.xml.in.h:4
-msgid ""
-"Create a line of 4 pieces either horizontally (lying down), vertically "
-"(standing up) or diagonally."
-msgstr "நான்கு துண்டுகளை கிடைமட்டமாகவோ நெடு மட்டமாகவோ குறுக்காகவோ அமையுங்க."
-
-#: ../boards/connect4.xml.in.h:5
-msgid ""
-"Laurent Lacheny. Images and Artificial Intelligence taken from project "
-"4stattack by Jeroen Vloothuis. The original project can be found on &lt;"
-"http://forcedattack.sourceforge.net&gt;"
-msgstr ""
-"லாரன்ட் லாஷெனி படங்களும் செயற்கை அறிவும் ஜெரோன் லூதிஸ் இன் 4stattack திட்டத்திலிருந்து "
-"எடுக்கப் பட்டது.  மெய்யான திட்டத்தை &lt;http://forcedattack.sourceforge.net&gt; இல் "
-"காணலாம்."
 
 #: ../boards/connect4-2players.xml.in.h:3
 msgid "Connect 4 (2 Players)"
@@ -1277,6 +1269,26 @@ msgstr ""
 "4stattack திட்டத்திலிருந்து எடுக்கப் பட்டது.  மெய்யான திட்டத்தை &lt;http://"
 "forcedattack.sourceforge.net&gt; இல் காணலாம்."
 
+#: ../boards/connect4.xml.in.h:3
+msgid "Connect 4"
+msgstr "நாலை இணைக்கவும்"
+
+#: ../boards/connect4.xml.in.h:4
+msgid ""
+"Create a line of 4 pieces either horizontally (lying down), vertically "
+"(standing up) or diagonally."
+msgstr "நான்கு துண்டுகளை கிடைமட்டமாகவோ நெடு மட்டமாகவோ குறுக்காகவோ அமையுங்க."
+
+#: ../boards/connect4.xml.in.h:5
+msgid ""
+"Laurent Lacheny. Images and Artificial Intelligence taken from project "
+"4stattack by Jeroen Vloothuis. The original project can be found on &lt;"
+"http://forcedattack.sourceforge.net&gt;"
+msgstr ""
+"லாரன்ட் லாஷெனி படங்களும் செயற்கை அறிவும் ஜெரோன் லூதிஸ் இன் 4stattack திட்டத்திலிருந்து "
+"எடுக்கப் பட்டது.  மெய்யான திட்டத்தை &lt;http://forcedattack.sourceforge.net&gt; இல் "
+"காணலாம்."
+
 #: ../boards/crane.xml.in.h:1
 msgid "Build the same model"
 msgstr "அதே மாதிரியை உருவாக்குங்க"
@@ -1286,8 +1298,8 @@ msgid "Drive the crane and copy the model"
 msgstr "தூக்கு வண்டியை இயக்கி அதே மாதிரியை உருவாக்குங்க"
 
 #: ../boards/crane.xml.in.h:3 ../boards/doubleclick.xml.in.h:3
-#: ../boards/erase.xml.in.h:2 ../boards/erase_doubleclick.xml.in.h:5
-#: ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase.xml.in.h:2 ../boards/erase_clic.xml.in.h:5
+#: ../boards/erase_doubleclick.xml.in.h:5
 msgid "Motor-coordination"
 msgstr "இயக்க ஒருங்கிணைவு."
 
@@ -1318,7 +1330,10 @@ msgid ""
 "Double click the mouse on the ball to kick it. You can double click the left "
 "right or middle mouse button. If you lose, Tux catches the ball. You must "
 "click on it to bring it back to its former position"
-msgstr "பந்தை உதைக்க அதன் மீது இரட்டை சொடுக்கு செய். சொடுக்கு இடது வலது அல்லது நடு பொத்தானாக இருக்கலாம். நீங்கள் தோல்வி அடந்தால் டக்ஸ் பந்தை பிடித்து விடும். முன் இருந்த இடத்துக்கு பந்தை கொண்டு வர அதன் மீது சொடுக்க வேண்டும்."
+msgstr ""
+"பந்தை உதைக்க அதன் மீது இரட்டை சொடுக்கு செய். சொடுக்கு இடது வலது அல்லது நடு பொத்தானாக "
+"இருக்கலாம். நீங்கள் தோல்வி அடந்தால் டக்ஸ் பந்தை பிடித்து விடும். முன் இருந்த இடத்துக்கு பந்தை "
+"கொண்டு வர அதன் மீது சொடுக்க வேண்டும்."
 
 #: ../boards/doubleclick.xml.in.h:2
 msgid "Double click the mouse on the ball to score a goal."
@@ -1491,18 +1506,6 @@ msgstr "சொடுக்கியை நகர்த்தி ஒரு இட
 msgid "Move the mouse until all the blocks disappear."
 msgstr "எல்லா தொகுதிகளும் காணாமல் போகும் வரை சொடுக்கியை நகர்த்தவும்."
 
-#: ../boards/erase_doubleclick.xml.in.h:2
-msgid "Double click the mouse"
-msgstr "சொடுக்கியை இரட்டை சொடுக்கவும்"
-
-#: ../boards/erase_doubleclick.xml.in.h:3
-msgid "Double click the mouse on rectangles until all the blocks disappear."
-msgstr "கட்டங்கள் மீது எல்லா தொகுதிகளும் காணாமல் போகும் வரை சொடுக்கியால் இரட்டை சொடுக்கு சொடுக்கவும்."
-
-#: ../boards/erase_doubleclick.xml.in.h:4
-msgid "Double click the mouse to erase the area and discover the background"
-msgstr "சொடுக்கியால் இரட்டை சொடுக்கி இடத்தை அழித்து அதன் பின்னால் உள்ளதை கண்டு பிடிக்கவும்."
-
 #: ../boards/erase_clic.xml.in.h:2
 msgid "Click the mouse"
 msgstr "சொடுக்கியை சொடுக்கவும்."
@@ -1514,6 +1517,20 @@ msgstr "கட்டங்கள் மீது எல்லா தொகுத
 #: ../boards/erase_clic.xml.in.h:4
 msgid "Click the mouse to erase the area and discover the background"
 msgstr "சொடுக்கியை சொடுக்கி இடத்தை அழித்து அதன் பின்னால் உள்ளதை கண்டு பிடிக்கவும்."
+
+#: ../boards/erase_doubleclick.xml.in.h:2
+msgid "Double click the mouse"
+msgstr "சொடுக்கியை இரட்டை சொடுக்கவும்"
+
+#: ../boards/erase_doubleclick.xml.in.h:3
+msgid "Double click the mouse on rectangles until all the blocks disappear."
+msgstr ""
+"கட்டங்கள் மீது எல்லா தொகுதிகளும் காணாமல் போகும் வரை சொடுக்கியால் இரட்டை சொடுக்கு "
+"சொடுக்கவும்."
+
+#: ../boards/erase_doubleclick.xml.in.h:4
+msgid "Double click the mouse to erase the area and discover the background"
+msgstr "சொடுக்கியால் இரட்டை சொடுக்கி இடத்தை அழித்து அதன் பின்னால் உள்ளதை கண்டு பிடிக்கவும்."
 
 #: ../boards/experience.xml.in.h:1
 msgid "Go to experiential activities"
@@ -1845,7 +1862,7 @@ msgstr "குரோவேசியா"
 msgid "Cyprus"
 msgstr "சைப்ரஸ்"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:67
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:65
 msgid "Czech Republic"
 msgstr "செக் குடியரசு"
 
@@ -2225,11 +2242,11 @@ msgstr "விசைப் பலகை கையாளுமை"
 msgid "Letter association between the screen and the keyboard"
 msgstr "திரை- விசைப் பலகை எழுத்து இணப்பு"
 
-#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:134
+#: ../boards/gletters.xml.in.h:3 ../src/boards/gletters.c:132
 msgid "Simple Letters"
 msgstr "எளிய எழுத்துக்கள்"
 
-#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:135
+#: ../boards/gletters.xml.in.h:4 ../src/boards/gletters.c:133
 msgid "Type the falling letters before they reach the ground"
 msgstr "எழுத்துக்கள் தரையில் விழு முன் அவற்றை டைப் செய்க"
 
@@ -2423,7 +2440,7 @@ msgstr ""
 "மேலே இருக்கும் துண்டுகளை மட்டும் ஒரு முளையிலிருந்து மற்றொன்றுக்கு இழுத்து விடவும். இடது "
 "பக்கம் காலி செய்து கோபுரத்தை வலது பக்கம் உருவாக்குங்க."
 
-#: ../boards/hanoi.xml.in.h:4 ../src/boards/hanoi.c:96
+#: ../boards/hanoi.xml.in.h:4 ../src/boards/hanoi.c:114
 msgid "Reproduce the given tower"
 msgstr "கொடுத்த கோபுரம் போலவே இன்னுமொன்னு உருவாக்குங்க"
 
@@ -2431,7 +2448,7 @@ msgstr "கொடுத்த கோபுரம் போலவே இன்ன
 msgid "Reproduce the tower on the right in the empty space on the left"
 msgstr "வலது பக்கம் உள்ள கோபுரம் போலவே இடது பக்கம் உள்ள காலி இடத்தில் உருவாக்குங்க."
 
-#: ../boards/hanoi.xml.in.h:6 ../src/boards/hanoi.c:95
+#: ../boards/hanoi.xml.in.h:6 ../src/boards/hanoi.c:113
 msgid "Simplified Tower of Hanoi"
 msgstr "எளிமையான ஹனாய் கோபுரம்"
 
@@ -2505,7 +2522,7 @@ msgstr "அச்சிட்ட உருவத்துக்கு பொர�
 
 #: ../boards/imageid.xml.in.h:3 ../boards/imagename.xml.in.h:4
 #: ../boards/readingh.xml.in.h:4 ../boards/readingv.xml.in.h:4
-#: ../src/boards/imageid.c:102 ../src/boards/missingletter.c:100
+#: ../src/boards/imageid.c:101 ../src/boards/missingletter.c:96
 msgid "Reading"
 msgstr "படித்தல்"
 
@@ -2812,31 +2829,6 @@ msgstr ""
 msgid "Select or enter your name to log in to GCompris"
 msgstr "ஜிகாம்ப்ரிக்குள் நுழைய உங்கள் பெயரை தேர்ந்தெடுக்கவும் அல்லது உள்ளிடவும்"
 
-#: ../boards/magic_hat_plus.xml.in.h:1 ../boards/memory_add.xml.in.h:1
-msgid "Addition"
-msgstr "கூட்டல்"
-
-#: ../boards/magic_hat_plus.xml.in.h:2
-msgid ""
-"Click on the hat to open or close it. Under the hat, how many stars can you "
-"see moving around? Count carefully. :) Click in the bottom-right area to "
-"input your answer."
-msgstr ""
-"தொப்பி மீது அதை திறக்கவோ அல்லது மூடவோ சொடுக்குங்க. எவ்வளவு நக்ஷத்திரங்கள் நகர்வதைப் "
-"பாத்தீங்க? ஜாக்கிரதையா எண்ணுங்க. :)  வலது கீழ் இடத்துல விடையை உள்ளிட சொடுக்குங்க. "
-
-#: ../boards/magic_hat_plus.xml.in.h:3
-msgid "Count how many items are under the magic hat"
-msgstr "மாயத் தொப்பியின் கீழ் எவ்வளவு உருப்படின்னு எண்ணுங்க. "
-
-#: ../boards/magic_hat_plus.xml.in.h:4
-msgid "Learn addition"
-msgstr "கூட்டல் கற்போம்"
-
-#: ../boards/magic_hat_plus.xml.in.h:5 ../boards/magic_hat_minus.xml.in.h:5
-msgid "The magician hat"
-msgstr "மாயத் தொப்பி"
-
 #: ../boards/magic_hat_minus.xml.in.h:1
 msgid "Count how many items are under the magic hat after some have got away"
 msgstr "சிலது காணாமல் போன பின் மாயத் தொப்பியின் கீழ் எவ்வளவு உருப்படின்னு எண்ணுங்க. "
@@ -2862,6 +2854,31 @@ msgstr ""
 #: ../boards/memory_minus_tux.xml.in.h:2
 msgid "Subtraction"
 msgstr "கழித்தல்"
+
+#: ../boards/magic_hat_minus.xml.in.h:5 ../boards/magic_hat_plus.xml.in.h:5
+msgid "The magician hat"
+msgstr "மாயத் தொப்பி"
+
+#: ../boards/magic_hat_plus.xml.in.h:1 ../boards/memory_add.xml.in.h:1
+msgid "Addition"
+msgstr "கூட்டல்"
+
+#: ../boards/magic_hat_plus.xml.in.h:2
+msgid ""
+"Click on the hat to open or close it. Under the hat, how many stars can you "
+"see moving around? Count carefully. :) Click in the bottom-right area to "
+"input your answer."
+msgstr ""
+"தொப்பி மீது அதை திறக்கவோ அல்லது மூடவோ சொடுக்குங்க. எவ்வளவு நக்ஷத்திரங்கள் நகர்வதைப் "
+"பாத்தீங்க? ஜாக்கிரதையா எண்ணுங்க. :)  வலது கீழ் இடத்துல விடையை உள்ளிட சொடுக்குங்க. "
+
+#: ../boards/magic_hat_plus.xml.in.h:3
+msgid "Count how many items are under the magic hat"
+msgstr "மாயத் தொப்பியின் கீழ் எவ்வளவு உருப்படின்னு எண்ணுங்க. "
+
+#: ../boards/magic_hat_plus.xml.in.h:4
+msgid "Learn addition"
+msgstr "கூட்டல் கற்போம்"
 
 #: ../boards/math.xml.in.h:1
 msgid "Mathematical activities."
@@ -3393,7 +3410,7 @@ msgstr ""
 msgid "GCompris Main Menu"
 msgstr "ஜிகாம்ப்ரி முதன்மை பட்டி"
 
-#: ../boards/menu.xml.in.h:17 ../src/boards/menu2.c:1006
+#: ../boards/menu.xml.in.h:17 ../src/boards/menu2.c:1007
 msgid ""
 "GCompris is a collection of educational games that provides different "
 "activities for children aged 2 and up."
@@ -3405,7 +3422,9 @@ msgstr ""
 msgid ""
 "The goal of GCompris is to provide a free alternative to popular proprietary "
 "edutainment software"
-msgstr "ஜிகாம்ப்ரி இன் நோக்கம் பிரபலமான தனியுடைமையான கல்வி விளையாட்டு மென் பொருட்களுக்கு இலவச மாற்றை தருவது."
+msgstr ""
+"ஜிகாம்ப்ரி இன் நோக்கம் பிரபலமான தனியுடைமையான கல்வி விளையாட்டு மென் பொருட்களுக்கு இலவச "
+"மாற்றை தருவது."
 
 #: ../boards/miscelaneous.xml.in.h:1
 msgid "Miscellaneous activities"
@@ -3444,142 +3463,142 @@ msgid "apple/_pple/a/i/o"
 msgstr "ஆப்பிள்/_ப்பிள்/ஆ/ஏ/ஈ"
 
 #: ../boards/missing_letter/board1.xml.in.h:2
-msgid "apple/app_e/l/h/n"
-msgstr "ஆப்பிள்/ஆ_பிள்/ப்/வ்/ம்"
-
-#: ../boards/missing_letter/board1.xml.in.h:3
-msgid "apple/appl_/e/h/a"
-msgstr "ஆப்பிள்/ஆப்பி_/ள்/ர்/ப்"
-
-#: ../boards/missing_letter/board1.xml.in.h:4
-msgid "ball/_all/b/p/d"
-msgstr "பந்து/_ந்து/ப/எ/ல"
-
-#: ../boards/missing_letter/board1.xml.in.h:5
-msgid "ball/b_ll/a/u/o"
-msgstr "பந்து/ப_து/ந்/ட்/க்"
-
-#: ../boards/missing_letter/board1.xml.in.h:6
-msgid "ball/bal_/l/h/s"
-msgstr "பந்து/பந்_/து/கு/சு"
-
-#: ../boards/missing_letter/board1.xml.in.h:7
-msgid "banana/_anana/b/p/d"
-msgstr "வாழைப்பழம்/_ழைப்பழம்/கா/வா/சா"
-
-#: ../boards/missing_letter/board1.xml.in.h:8
 msgid "banana/b_nana/a/o/i"
 msgstr "வாழைப்பழம்/வா_ப்பழம்/ழை/கை/சை"
 
-#: ../boards/missing_letter/board1.xml.in.h:9
-msgid "banana/ba_ana/n/m/b"
-msgstr "வாழைப்பழம்/வாழைப்_ழம்/ப/க/ட"
-
-#: ../boards/missing_letter/board1.xml.in.h:10
+#: ../boards/missing_letter/board1.xml.in.h:3
 msgid "bed/_ed/b/l/f"
 msgstr "படுக்கை/_டுக்கை/ப/ச/ல"
 
-#: ../boards/missing_letter/board1.xml.in.h:11
-msgid "bed/b_d/e/a/i"
-msgstr "படுக்கை/ப_க்கை/டு/லு/னு"
-
-#: ../boards/missing_letter/board1.xml.in.h:12
-msgid "bed/be_/d/p/b"
-msgstr "படுக்கை/படுக்_/கை/சை/டை"
-
-#: ../boards/missing_letter/board1.xml.in.h:13
-msgid "bottle/_ottle/b/t/p"
-msgstr "குடுவை/_டுவை/கு/லு/பு"
-
-#: ../boards/missing_letter/board1.xml.in.h:14
-msgid "bottle/b_ttle/o/u/d"
-msgstr "குடுவை/கு_வை/டு/லு/பு"
-
-#: ../boards/missing_letter/board1.xml.in.h:15
-msgid "bottle/bott_e/l/y/r"
-msgstr "குடுவை/குடு_/வை/டை/லை"
-
-#: ../boards/missing_letter/board1.xml.in.h:16
-msgid "cake/_ake/c/p/d"
-msgstr "கேக்கு/_க்கு/கே/ரே/மே"
-
-#: ../boards/missing_letter/board1.xml.in.h:17
-msgid "cake/c_ke/a/o/e"
-msgstr "கேக்கு/கே_கு/க்/ப்/வ்"
-
-#: ../boards/missing_letter/board1.xml.in.h:18
-msgid "cake/ca_e/k/q/c"
-msgstr "கேக்கு/கேக்_/கு/டு/பு"
-
-#: ../boards/missing_letter/board1.xml.in.h:19
-msgid "car/_ar/c/k/b"
-msgstr "வண்டி/_ண்டி/வ/ட/ல"
-
-#: ../boards/missing_letter/board1.xml.in.h:20
+#: ../boards/missing_letter/board1.xml.in.h:4
 msgid "car/c_r/a/k/o"
 msgstr "வண்டி/வ_டி/ண்/ம்/ப்"
 
-#: ../boards/missing_letter/board1.xml.in.h:21
-msgid "car/ca_/r/w/k"
-msgstr "வண்டி/வண்_/டி/லி/ரி"
-
-#: ../boards/missing_letter/board1.xml.in.h:22
+#: ../boards/missing_letter/board1.xml.in.h:5
 msgid "dog/_og/d/p/q"
 msgstr "விலங்கு/_லங்கு/வி/சி/டி"
 
-#: ../boards/missing_letter/board1.xml.in.h:23
-msgid "dog/d_g/o/g/a"
-msgstr "விலங்கு/வி_ங்கு/ல/ச/ன"
-
-#: ../boards/missing_letter/board1.xml.in.h:24
-msgid "dog/do_/g/p/q"
-msgstr "விலங்கு/விலங்_/கு/சு/பு"
-
-#: ../boards/missing_letter/board1.xml.in.h:25
-msgid "fish/_ish/f/h/l"
-msgstr "கடல்மீன்/_டல்மீன்/க/ர/ழ"
-
-#: ../boards/missing_letter/board1.xml.in.h:26
+#: ../boards/missing_letter/board1.xml.in.h:6
 msgid "fish/f_sh/i/u/l"
 msgstr "கடல்மீன்/க_ல்மீன்/ட/ப/ற"
 
-#: ../boards/missing_letter/board1.xml.in.h:27
-msgid "fish/fis_/h/o/i"
-msgstr "கடல்மீன்/கடல்மீ_/ன்/ல்/ச்"
-
-#: ../boards/missing_letter/board1.xml.in.h:28
-msgid "house/_ouse/h/e/j"
-msgstr "இல்லம்/_ல்லம்/இ/எ/உ"
-
-#: ../boards/missing_letter/board1.xml.in.h:29
-msgid "house/h_use/o/f/u"
-msgstr "இல்லம்/இ_லம்/ல்/வ்/ட்"
-
-#: ../boards/missing_letter/board1.xml.in.h:30
+#: ../boards/missing_letter/board1.xml.in.h:7
 msgid "house/hous_/e/a/i"
 msgstr "இல்லம்/இல்ல_/ம்/ன்/ச்"
 
-#: ../boards/missing_letter/board1.xml.in.h:31
+#: ../boards/missing_letter/board1.xml.in.h:8
 msgid "plane/_lane/p/g/d"
 msgstr "விமானம்/_மானம்/வி/சி/பி"
 
-#: ../boards/missing_letter/board1.xml.in.h:32
-msgid "plane/p_ane/l/j/i"
-msgstr "விமானம்/வி_னம்/மா/டா/கா"
-
-#: ../boards/missing_letter/board1.xml.in.h:33
-msgid "plane/pl_ne/a/o/s"
-msgstr "விமானம்/விமா_ம்/ல/க/ட"
-
-#: ../boards/missing_letter/board1.xml.in.h:34
-msgid "satchel/_atchel/s/c/l"
-msgstr "கைப்பை/_ப்பை/கை/யை/சை"
-
-#: ../boards/missing_letter/board1.xml.in.h:35
+#: ../boards/missing_letter/board1.xml.in.h:9
 msgid "satchel/s_tchel/a/o/i"
 msgstr "கைப்பை/கை_பை/ப்/ச்/ட்"
 
-#: ../boards/missing_letter/board1.xml.in.h:36
+#: ../boards/missing_letter/board2.xml.in.h:1
+msgid "ball/_all/b/p/d"
+msgstr "பந்து/_ந்து/ப/எ/ல"
+
+#: ../boards/missing_letter/board2.xml.in.h:2
+msgid "banana/_anana/b/p/d"
+msgstr "வாழைப்பழம்/_ழைப்பழம்/கா/வா/சா"
+
+#: ../boards/missing_letter/board2.xml.in.h:3
+msgid "bottle/_ottle/b/t/p"
+msgstr "குடுவை/_டுவை/கு/லு/பு"
+
+#: ../boards/missing_letter/board2.xml.in.h:4
+msgid "cake/_ake/c/p/d"
+msgstr "கேக்கு/_க்கு/கே/ரே/மே"
+
+#: ../boards/missing_letter/board2.xml.in.h:5
+msgid "car/_ar/c/k/b"
+msgstr "வண்டி/_ண்டி/வ/ட/ல"
+
+#: ../boards/missing_letter/board2.xml.in.h:6
+msgid "dog/d_g/o/g/a"
+msgstr "விலங்கு/வி_ங்கு/ல/ச/ன"
+
+#: ../boards/missing_letter/board2.xml.in.h:7
+msgid "fish/_ish/f/h/l"
+msgstr "கடல்மீன்/_டல்மீன்/க/ர/ழ"
+
+#: ../boards/missing_letter/board2.xml.in.h:8
+msgid "plane/p_ane/l/j/i"
+msgstr "விமானம்/வி_னம்/மா/டா/கா"
+
+#: ../boards/missing_letter/board2.xml.in.h:9
+msgid "satchel/_atchel/s/c/l"
+msgstr "கைப்பை/_ப்பை/கை/யை/சை"
+
+#: ../boards/missing_letter/board3.xml.in.h:1
+msgid "apple/appl_/e/h/a"
+msgstr "ஆப்பிள்/ஆப்பி_/ள்/ர்/ப்"
+
+#: ../boards/missing_letter/board3.xml.in.h:2
+msgid "ball/b_ll/a/u/o"
+msgstr "பந்து/ப_து/ந்/ட்/க்"
+
+#: ../boards/missing_letter/board3.xml.in.h:3
+msgid "bed/b_d/e/a/i"
+msgstr "படுக்கை/ப_க்கை/டு/லு/னு"
+
+#: ../boards/missing_letter/board3.xml.in.h:4
+msgid "bottle/b_ttle/o/u/d"
+msgstr "குடுவை/கு_வை/டு/லு/பு"
+
+#: ../boards/missing_letter/board3.xml.in.h:5
+msgid "cake/c_ke/a/o/e"
+msgstr "கேக்கு/கே_கு/க்/ப்/வ்"
+
+#: ../boards/missing_letter/board3.xml.in.h:6
+msgid "dog/do_/g/p/q"
+msgstr "விலங்கு/விலங்_/கு/சு/பு"
+
+#: ../boards/missing_letter/board3.xml.in.h:7
+msgid "fish/fis_/h/o/i"
+msgstr "கடல்மீன்/கடல்மீ_/ன்/ல்/ச்"
+
+#: ../boards/missing_letter/board3.xml.in.h:8
+msgid "house/h_use/o/f/u"
+msgstr "இல்லம்/இ_லம்/ல்/வ்/ட்"
+
+#: ../boards/missing_letter/board3.xml.in.h:9
+msgid "plane/pl_ne/a/o/s"
+msgstr "விமானம்/விமா_ம்/ல/க/ட"
+
+#: ../boards/missing_letter/board4.xml.in.h:1
+msgid "apple/app_e/l/h/n"
+msgstr "ஆப்பிள்/ஆ_பிள்/ப்/வ்/ம்"
+
+#: ../boards/missing_letter/board4.xml.in.h:2
+msgid "ball/bal_/l/h/s"
+msgstr "பந்து/பந்_/து/கு/சு"
+
+#: ../boards/missing_letter/board4.xml.in.h:3
+msgid "banana/ba_ana/n/m/b"
+msgstr "வாழைப்பழம்/வாழைப்_ழம்/ப/க/ட"
+
+#: ../boards/missing_letter/board4.xml.in.h:4
+msgid "bed/be_/d/p/b"
+msgstr "படுக்கை/படுக்_/கை/சை/டை"
+
+#: ../boards/missing_letter/board4.xml.in.h:5
+msgid "bottle/bott_e/l/y/r"
+msgstr "குடுவை/குடு_/வை/டை/லை"
+
+#: ../boards/missing_letter/board4.xml.in.h:6
+msgid "cake/ca_e/k/q/c"
+msgstr "கேக்கு/கேக்_/கு/டு/பு"
+
+#: ../boards/missing_letter/board4.xml.in.h:7
+msgid "car/ca_/r/w/k"
+msgstr "வண்டி/வண்_/டி/லி/ரி"
+
+#: ../boards/missing_letter/board4.xml.in.h:8
+msgid "house/_ouse/h/e/j"
+msgstr "இல்லம்/_ல்லம்/இ/எ/உ"
+
+#: ../boards/missing_letter/board4.xml.in.h:9
 msgid "satchel/sa_chel/t/p/c"
 msgstr "கைப்பை/கைப்_/பை/லை/கை"
 
@@ -3619,7 +3638,9 @@ msgstr "பண பறிமாற்றம் பைசா உட்பட"
 msgid ""
 "Rebuild the left mosaic on the right area. Select a color in the bottom area "
 "and click on grey boxes to paint them."
-msgstr "இடது சித்திர வடிவை வலது இடத்தில் மீண்டும் அமை. கீழ் பகுதியில் இருந்துஇ வண்ணத்தை தேர்ந்து எடுத்து சாம்பல் பெட்டிகளில் தீட்ட அவற்றில் சொடுக்கவும்."
+msgstr ""
+"இடது சித்திர வடிவை வலது இடத்தில் மீண்டும் அமை. கீழ் பகுதியில் இருந்துஇ வண்ணத்தை தேர்ந்து "
+"எடுத்து சாம்பல் பெட்டிகளில் தீட்ட அவற்றில் சொடுக்கவும்."
 
 #: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
@@ -3741,7 +3762,7 @@ msgstr "ஹெலிகாப்டரை நகர்த்தி மேகங�
 msgid "Number"
 msgstr "எண்"
 
-#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:74
+#: ../boards/planegame.xml.in.h:4 ../src/boards/planegame.c:72
 msgid "Numbers in Order"
 msgstr "வரிசையில் எண்கள்"
 
@@ -3998,7 +4019,9 @@ msgstr ""
 msgid ""
 "To balance the scales, move the masses on the left or the right side. The "
 "masses can be arranged in any order."
-msgstr "தராசை சமன் செய்ய எடைகளை இடது பக்கமோ அல்லது வலது பக்கமோ நகர்த்தவும். அவற்றை எந்த வரிசையில் வேண்டுமானாலும் வைக்கலாம்."
+msgstr ""
+"தராசை சமன் செய்ய எடைகளை இடது பக்கமோ அல்லது வலது பக்கமோ நகர்த்தவும். அவற்றை எந்த "
+"வரிசையில் வேண்டுமானாலும் வைக்கலாம்."
 
 #: ../boards/searace.xml.in.h:1
 msgid "Direct your boat accurately to win the race."
@@ -4022,11 +4045,18 @@ msgid ""
 "next level will give you more complex weather conditions."
 msgstr ""
 "உரை உள்ளீட்டில் உங்க படகை கட்டுப் படுத்த ஒரு வரியில் ஒரு கட்டளையை உள்ளிடுங்க.\n"
-"இரண்டு உள்ளீட்டு இடங்கள் இடையில் ஆதரவு உள்ள கட்டளைகள் காணப் படும். 'left' மற்றும் 'right' கட்டளைகளை டிகிரிகளில் கோணம் தொடர வேண்டும். இந்த மதிப்புக்கு 'left' மற்றும் 'right' கட்டளைகளின்  'parameter' எனப் படும். முன்னிருப்பு 45 டிகிரிகள். 'forward'  கட்டளை அடுத்து ஒரு தூரத்தை ஏற்றுக் கொள்ளும். முன்னிருப்பு 1.\n"
+"இரண்டு உள்ளீட்டு இடங்கள் இடையில் ஆதரவு உள்ள கட்டளைகள் காணப் படும். 'left' மற்றும் 'right' "
+"கட்டளைகளை டிகிரிகளில் கோணம் தொடர வேண்டும். இந்த மதிப்புக்கு 'left' மற்றும் 'right' "
+"கட்டளைகளின்  'parameter' எனப் படும். முன்னிருப்பு 45 டிகிரிகள். 'forward'  கட்டளை "
+"அடுத்து ஒரு தூரத்தை ஏற்றுக் கொள்ளும். முன்னிருப்பு 1.\n"
 " எ-டு:\n"
 "- left 90: முன்னால் 90 டிகிரிகள் இடது பக்கம் திரும்பவும்.\n"
-"-forward 10: 10 அலகுகள் (அளவு கோலில் காட்டியபடி)முன் செல்லவும்.\n "
-"இலக்கு திரையின் வலது ஓரத்தை அடைவது. (சிவப்பு கோடு)முடிந்த பிறகு நிரலை மேம் படுத்தலாம். அதே வானிலையில் ஒரு புதிய பந்தயத்தை மீண்டும் முயல் பொத்தானை அமுக்கி துவக்கலாம். நீங்கள் சொடுக்கியை திரையில் எங்கு வேண்டுமானாலும் சொடுக்கி இழுத்து தூரத்தையும் கோணத்தையும் தெரிந்து கொள்ளலாம். அடுத்த மட்டம் சென்றால் மேலும் அதிக குழப்பமான வானிலையை காணலாம்."
+"-forward 10: 10 அலகுகள் (அளவு கோலில் காட்டியபடி)முன் செல்லவும்.\n"
+" இலக்கு திரையின் வலது ஓரத்தை அடைவது. (சிவப்பு கோடு)முடிந்த பிறகு நிரலை மேம் "
+"படுத்தலாம். அதே வானிலையில் ஒரு புதிய பந்தயத்தை மீண்டும் முயல் பொத்தானை அமுக்கி "
+"துவக்கலாம். நீங்கள் சொடுக்கியை திரையில் எங்கு வேண்டுமானாலும் சொடுக்கி இழுத்து தூரத்தையும் "
+"கோணத்தையும் தெரிந்து கொள்ளலாம். அடுத்த மட்டம் சென்றால் மேலும் அதிக குழப்பமான வானிலையை "
+"காணலாம்."
 
 #: ../boards/searace.xml.in.h:8 ../boards/searace1player.xml.in.h:7
 msgid ""
@@ -4063,7 +4093,13 @@ msgid ""
 "conditions by using the retry button. You can click and drag your mouse "
 "anywhere on the map to get a measurement in distance and angle. Going to the "
 "next level will give you more complex weather conditions."
-msgstr "ப்டகை கட்டுப்படுத்த உரை உள்ளிட்டில் ஒரு வரிக்கு ஒரு கட்டளை உள்ளிடவும். இரண்டு உள்ளீட்டு இடங்களுக்கும் நடுவில் கிடைக்கக்கூடிய கட்டளைகள் காட்டப்படுகின்றன. 'இடது' மற்றும் 'வலது' கட்டளைகள் பின் பாகைகள் அளவில் கோணத்தை உள்ளிடுக. இந்த கோணம் என்பது வலது இடது கட்டளைகளுக்கு பாரமீட்டர் எனப்படும். அங். பாகைகள் இல் a இடது வலது  இல் பயன்பட்டது மேலே a இல் பயன்பட்டது இடது a இடது மேலே போ மேலே க்கு இயக்கு இல் வலது இதில் சிவப்பு நிரல் மற்றும் a புதிய பொத்தான் சொடுக்கு மற்றும் இயக்கு வரைபடம் a அங். மற்றும்."
+msgstr ""
+"ப்டகை கட்டுப்படுத்த உரை உள்ளிட்டில் ஒரு வரிக்கு ஒரு கட்டளை உள்ளிடவும். இரண்டு உள்ளீட்டு "
+"இடங்களுக்கும் நடுவில் கிடைக்கக்கூடிய கட்டளைகள் காட்டப்படுகின்றன. 'இடது' மற்றும் 'வலது' "
+"கட்டளைகள் பின் பாகைகள் அளவில் கோணத்தை உள்ளிடுக. இந்த கோணம் என்பது வலது இடது "
+"கட்டளைகளுக்கு பாரமீட்டர் எனப்படும். அங். பாகைகள் இல் a இடது வலது  இல் பயன்பட்டது மேலே a "
+"இல் பயன்பட்டது இடது a இடது மேலே போ மேலே க்கு இயக்கு இல் வலது இதில் சிவப்பு நிரல் "
+"மற்றும் a புதிய பொத்தான் சொடுக்கு மற்றும் இயக்கு வரைபடம் a அங். மற்றும்."
 
 #: ../boards/searace1player.xml.in.h:8
 msgid "Sea race (Single Player)"
@@ -4114,7 +4150,10 @@ msgid ""
 "Click on different active elements : engine, rudders and air tanks, in order "
 "to navigate to the required depth. There is a close gate on the right. Catch "
 "the jewel to open it, then pass through it to reach the next level."
-msgstr "தேவையான ஆழம் உள்ளே போக செயலில் உள்ள வெவ்வெறு மூலங்கள் மீது சொடுக்கவும்: இயந்திரம், சுக்கான், காற்று பைகள். வலது பக்கம் ஒரு மூடும் கதவு இருக்கிறது. அதை திறக்க ஆபரணத்தை பிடிக்க வேண்டும். பின் கதவு வழியாக அடுத்த மட்டத்துக்கு போகலாம்."
+msgstr ""
+"தேவையான ஆழம் உள்ளே போக செயலில் உள்ள வெவ்வெறு மூலங்கள் மீது சொடுக்கவும்: இயந்திரம், "
+"சுக்கான், காற்று பைகள். வலது பக்கம் ஒரு மூடும் கதவு இருக்கிறது. அதை திறக்க ஆபரணத்தை "
+"பிடிக்க வேண்டும். பின் கதவு வழியாக அடுத்த மட்டத்துக்கு போகலாம்."
 
 #: ../boards/submarine.xml.in.h:2
 msgid "Learn how a submarine works"
@@ -4339,22 +4378,6 @@ msgid ""
 "system back up so he can take a shower."
 msgstr "டக்ஸ் படகில் போய் மீன் பிடித்து வந்தது. அது குளிப்பதற்காக தண்ணீர் வர வழி செய்யுங்க."
 
-#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:108
-msgid "Falling Words"
-msgstr "விழும் வார்த்தைகள்"
-
-#: ../boards/wordsgame.xml.in.h:3
-msgid "Keyboard training"
-msgstr "விசைப்பலகை பயிற்சி"
-
-#: ../boards/wordsgame.xml.in.h:4
-msgid "Type the complete word as it falls, before it reachs the ground"
-msgstr "வார்த்தைகள் நிலத்தில் விழு முன் அதை உள்ளிடுங்க"
-
-#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:109
-msgid "Type the falling words before they reach the ground"
-msgstr "வார்த்தைகள் நிலத்தில் விழு முன் அதை உள்ளிடுங்க"
-
 #: ../boards/wordprocessor.xml.in.h:1
 msgid "A simple word processor to enter and save any text"
 msgstr "உள்ளிட்டு சேமிக்க ஒரு எளிய சொல் செயலி"
@@ -4391,6 +4414,22 @@ msgstr "குழந்தைகள் தானே உரை உள்ளிட
 msgid "Your word processor"
 msgstr "உங்கள் சொல் செயலி"
 
+#: ../boards/wordsgame.xml.in.h:1 ../src/boards/wordsgame.c:112
+msgid "Falling Words"
+msgstr "விழும் வார்த்தைகள்"
+
+#: ../boards/wordsgame.xml.in.h:3
+msgid "Keyboard training"
+msgstr "விசைப்பலகை பயிற்சி"
+
+#: ../boards/wordsgame.xml.in.h:4
+msgid "Type the complete word as it falls, before it reachs the ground"
+msgstr "வார்த்தைகள் நிலத்தில் விழு முன் அதை உள்ளிடுங்க"
+
+#: ../boards/wordsgame.xml.in.h:5 ../src/boards/wordsgame.c:113
+msgid "Type the falling words before they reach the ground"
+msgstr "வார்த்தைகள் நிலத்தில் விழு முன் அதை உள்ளிடுங்க"
+
 #: ../gcompris-edit.desktop.in.h:1
 msgid "Administration for gcompris"
 msgstr "ஜிகாம்ப்ரிக்கு நிர்வாகம்"
@@ -4412,7 +4451,7 @@ msgid "Multi-activity educational game"
 msgstr "கற்பிக்கும் பல் வித செயல்கள்"
 
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:181 ../src/boards/memory.c:843
+#: ../src/boards/algebra.c:179 ../src/boards/memory.c:840
 msgid "+-×÷"
 msgstr "+-×÷"
 
@@ -4474,8 +4513,8 @@ msgstr "கருப்பு ஜெயிக்கிறது"
 msgid "White mates"
 msgstr "வெள்ளை ஜெயிக்கிறது"
 
-#: ../src/boards/chess.c:1139 ../src/gcompris/bonus.c:354
-#: ../src/gcompris/bonus.c:363
+#: ../src/boards/chess.c:1139 ../src/gcompris/bonus.c:352
+#: ../src/gcompris/bonus.c:361
 msgid "Drawn game"
 msgstr "வெற்றி தோல்வி இல்லா ஆட்டம்"
 
@@ -4483,7 +4522,7 @@ msgstr "வெற்றி தோல்வி இல்லா ஆட்டம்
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "பிழை: வெளி நிரல் க்னூ செஸ் எதிர்பாராமல் செயலிழந்தது."
 
-#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:810
+#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:807
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -4498,8 +4537,8 @@ msgstr ""
 #. TRANSLATORS: Put here the alphabet in your language
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
-#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:232
-#: ../src/boards/memory.c:832
+#: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:230
+#: ../src/boards/memory.c:829
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "அஆஇஈஉஊஎஏஐஒஓஔகசடதபறயரலவழலஙஞணநமன"
 
@@ -4530,14 +4569,15 @@ msgstr ""
 #. the returned value is the main GtkVBox of the window,
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:622 ../src/boards/colors.c:164
-#: ../src/boards/gletters.c:858 ../src/boards/imageid.c:748
-#: ../src/boards/missingletter.c:770
-#: ../src/boards/python/admin/board_list.py:640
-#: ../src/boards/python/admin/board_list.py:658
+#: ../src/boards/gletters.c:856 ../src/boards/imageid.c:750
+#: ../src/boards/missingletter.c:782
+#: ../src/boards/python/admin/board_list.py:635
+#: ../src/boards/python/admin/board_list.py:653
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
-#: ../src/boards/reading.c:832 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1866 ../src/boards/smallnumbers.c:592
+#: ../src/boards/reading.c:874 ../src/boards/scale.c:861
+#: ../src/boards/shapegame.c:1871 ../src/boards/smallnumbers.c:590
+#: ../src/boards/wordsgame.c:777
 #, c-format, python-format
 msgid ""
 "<b>%s</b> configuration\n"
@@ -4547,12 +4587,12 @@ msgstr ""
 "வடிவமைப்பு"
 
 #. toggle box
-#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:891
+#: ../src/boards/click_on_letter.c:645 ../src/boards/gletters.c:889
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "உயர்நிலை மட்டும் உரை"
 
-#: ../src/boards/clockgame.c:549 ../src/boards/clockgame.c:559
+#: ../src/boards/clockgame.c:547 ../src/boards/clockgame.c:557
 msgid "Set the watch to:"
 msgstr "கடிகாரத்தை இதுக்கு அமையுங்க:"
 
@@ -4596,26 +4636,27 @@ msgstr "கருப்பு வாத்து மேல் சொடுக்
 msgid "Click on the white duck"
 msgstr "வெள்ளை வாத்து மேல் சொடுக்கவும் "
 
-#: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:670
-#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:612
+#. self.main_vbox.pack_start (label, False, False, 8)
+#: ../src/boards/colors.c:176 ../src/boards/python/admin/board_list.py:665
+#: ../src/boards/python/pythontest.py:473 ../src/boards/smallnumbers.c:611
 msgid "Select sound locale"
 msgstr "ஒலி உள்ளமைப்பை தேர்ந்தெடுங்க"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:228 ../src/boards/memory.c:828
+#: ../src/boards/gletters.c:226 ../src/boards/memory.c:825
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:238 ../src/boards/memory.c:838
+#: ../src/boards/gletters.c:236 ../src/boards/memory.c:835
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: ../src/boards/gletters.c:887 ../src/boards/smallnumbers.c:610
+#: ../src/boards/gletters.c:885 ../src/boards/smallnumbers.c:609
 msgid "Enable sounds"
 msgstr "ஒலிகளை செயல்படசெய்"
 
-#: ../src/boards/hanoi.c:331 ../src/boards/hanoi.c:342
+#: ../src/boards/hanoi.c:349 ../src/boards/hanoi.c:360
 msgid ""
 "Build the same tower in the empty area as the one you see on the right-hand "
 "side."
@@ -4629,7 +4670,7 @@ msgstr "ஹனாய் கோபுரம்"
 msgid "Move the entire stack to the right peg, one disc at a time"
 msgstr "ஒரு முறைக்கு ஒரு தட்டாக எல்லா தட்டுகளையும் வலது முளைக்கு மாற்றுக"
 
-#: ../src/boards/imageid.c:103 ../src/boards/missingletter.c:101
+#: ../src/boards/imageid.c:102 ../src/boards/missingletter.c:97
 msgid "Learn how to read"
 msgstr "படிக்க கற்றுக் கொள்ளுங்க"
 
@@ -4657,21 +4698,60 @@ msgstr "உங்க இடத்தை நல்லா பாத்துக்
 msgid "Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "உங்க இடத்தை நல்லா பாத்துக்கோங்க, அப்புறம் முப் பரிமாண பாங்கில் போய் நகர்த்தலை செய்யுங்க. "
 
-#: ../src/boards/memory.c:263
+#: ../src/boards/memory.c:261
 msgid "Memory"
 msgstr "நினைவகம்"
 
-#: ../src/boards/memory.c:264
+#: ../src/boards/memory.c:262
 msgid "Find the matching pair"
 msgstr "ஜோடியை கண்டு பிடியுங்க"
 
-#: ../src/boards/menu2.c:132
+#: ../src/boards/menu2.c:130
 msgid "Main Menu Second Version"
 msgstr "முதன்மை பட்டி இரண்டாம் பதிப்பு"
 
-#: ../src/boards/menu2.c:133
+#: ../src/boards/menu2.c:131
 msgid "Select a Board"
 msgstr "ஒரு பலகையை தேர்ந்தெடுக்கவும்."
+
+#. pixmap
+#: ../src/boards/missingletter_config.c:390
+#: ../src/boards/missingletter_config.c:540
+msgid "Picture"
+msgstr "படம்"
+
+#. answer
+#: ../src/boards/missingletter_config.c:396
+#: ../src/boards/missingletter_config.c:531
+msgid "Answer"
+msgstr "விடை"
+
+#. question
+#: ../src/boards/missingletter_config.c:402
+#: ../src/boards/missingletter_config.c:554
+msgid "Question"
+msgstr "கேள்வி"
+
+#. choice
+#: ../src/boards/missingletter_config.c:408
+#: ../src/boards/missingletter_config.c:563
+msgid "Choice"
+msgstr "தேர்வு"
+
+#. combo level
+#: ../src/boards/missingletter_config.c:446
+#: ../src/gcompris/board_config_wordlist.c:221
+msgid "Level:"
+msgstr "நிலை:"
+
+#: ../src/boards/missingletter_config.c:454
+#, c-format
+msgid "Level %d"
+msgstr "நிலை %d"
+
+#: ../src/boards/missingletter_config.c:544
+msgid "Filename:"
+msgstr "கோப்புப் பெயர்:"
 
 #. Set here the way to display money. Change only the money sign, and it's place, always keep %.2f, it will be replaced by 0,34 if decimal is ',' in your locale
 #: ../src/boards/money.c:487
@@ -4684,11 +4764,11 @@ msgstr "$ %.2f"
 msgid "$ %.0f"
 msgstr "$ %.0f"
 
-#: ../src/boards/paratrooper.c:437
+#: ../src/boards/paratrooper.c:435
 msgid "Control fall speed with up and down arrow keys."
 msgstr "கீழ் விழும் வேகத்தை மேல் கீழ் அம்புக்குறி விசைகளால் கட்டுப் படுத்துக."
 
-#: ../src/boards/planegame.c:75
+#: ../src/boards/planegame.c:73
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "விமானத்தைச் சரியாக நகர்த்தி, மேகங்களை பிடிக்கவும்"
 
@@ -4725,16 +4805,12 @@ msgid "Locales sound"
 msgstr "உள்ளமைவுகள் ஒலி"
 
 #: ../src/boards/python/admin/board_list.py:169
-msgid "Wordlist"
-msgstr "சொல்பட்டியல்"
-
-#: ../src/boards/python/admin/board_list.py:176
 #: ../src/boards/python/admin/group_user_list.py:143
 #: ../src/boards/python/admin/user_list.py:185
 msgid "Login"
 msgstr "உள்நுழை"
 
-#: ../src/boards/python/admin/board_list.py:234
+#: ../src/boards/python/admin/board_list.py:227
 msgid "Main menu"
 msgstr "முக்கிய பட்டி"
 
@@ -4743,20 +4819,20 @@ msgstr "முக்கிய பட்டி"
 #. image = gtk.image_new_from_stock(gtk.STOCK_PREFERENCES, gtk.ICON_SIZE_MENU)
 #. image.show()
 #. column_pref.set_widget(image)
-#: ../src/boards/python/admin/board_list.py:301
+#: ../src/boards/python/admin/board_list.py:294
 msgid "Active"
 msgstr "நடப்பில் உள்ள"
 
-#: ../src/boards/python/admin/board_list.py:302
+#: ../src/boards/python/admin/board_list.py:295
 msgid "Board title"
 msgstr "பலகை தலைப்பு"
 
-#: ../src/boards/python/admin/board_list.py:418
+#: ../src/boards/python/admin/board_list.py:413
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
 msgstr "விவரக்குறிப்பு %s க்கு பலகைகள் இடையூறுக்கு வடிகட்டி"
 
-#: ../src/boards/python/admin/board_list.py:449
+#: ../src/boards/python/admin/board_list.py:444
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
@@ -4901,7 +4977,8 @@ msgstr "எல்லா பயனர்களும்"
 #: ../src/boards/python/admin/log_list.py:107
 #: ../src/boards/python/admin/log_list.py:286
 #: ../src/boards/python/admin/profile_list.py:120
-#: ../src/gcompris/board_config.c:667 ../src/gcompris/board_config.c:925
+#: ../src/gcompris/board_config_combo.c:125
+#: ../src/gcompris/board_config_combo.c:398
 msgid "Default"
 msgstr "முன்னிருப்பு"
 
@@ -4923,7 +5000,7 @@ msgid "Board"
 msgstr "பலகை"
 
 #: ../src/boards/python/admin/log_list.py:237
-#: ../src/boards/python/redraw.py:346 ../src/boards/python/redraw.py:356
+#: ../src/boards/python/redraw.py:351 ../src/boards/python/redraw.py:361
 msgid "Level"
 msgstr "நிலை"
 
@@ -5083,14 +5160,6 @@ msgstr "எச்சரிக்கை பின்வரும் பிம்�
 msgid "The corresponding items have been skipped."
 msgstr "அதற்கு பொருந்தும் உருப்படிகள் தவிர்கப் பட்டன."
 
-#: ../src/boards/python/doubleclick.py:284
-msgid "Click on the balloon to place it again."
-msgstr "பலூனை திருப்பியும் பொருத்த அதன் மேலே சொடுக்குங்க."
-
-#: ../src/boards/python/doubleclick.py:286
-msgid "Click twice on the balloon to shoot it."
-msgstr "பலூனை சுட அதன் மீது இரட்டை சொடுக்கு செய்."
-
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
 msgstr "எல்லா செய்திகளும் இங்கு காட்டப்படும்.\n"
@@ -5116,6 +5185,14 @@ msgstr "நீங்கள் முதலில் உங்கள் வாய
 #: ../src/boards/python/chat.py:325
 msgid "Your friends must set the same channel in order to communicate with you"
 msgstr "உங்களுடன் தொடர்பு கொள்ள உங்கள் நண்பர்களும் அதே வாய்க்காலில் இருக்க வேண்டும்."
+
+#: ../src/boards/python/doubleclick.py:284
+msgid "Click on the balloon to place it again."
+msgstr "பலூனை திருப்பியும் பொருத்த அதன் மேலே சொடுக்குங்க."
+
+#: ../src/boards/python/doubleclick.py:286
+msgid "Click twice on the balloon to shoot it."
+msgstr "பலூனை சுட அதன் மீது இரட்டை சொடுக்கு செய்."
 
 #: ../src/boards/python/electric.py:94
 msgid ""
@@ -5296,10 +5373,6 @@ msgstr "உள்நுழை "
 msgid "Enter login to log in"
 msgstr "உள்நுழைய login என உள்ளிடவும்"
 
-#: ../src/boards/python/mosaic.py:193
-msgid "Rebuild the same mosaic on the right area"
-msgstr "அதே சித்திரத்தை வலது பக்கம் உருவாக்குக"
-
 #: ../src/boards/python/melody.py:119
 msgid ""
 "Error: this activity cannot be played with the\n"
@@ -5311,6 +5384,10 @@ msgstr ""
 "இல்லாமல் விளையாட முடியாது.\n"
 "வடிவமைப்புக்கு போய்\n"
 "ஒலியை செயல் படுத்துங்க"
+
+#: ../src/boards/python/mosaic.py:193
+msgid "Rebuild the same mosaic on the right area"
+msgstr "அதே சித்திரத்தை வலது பக்கம் உருவாக்குக"
 
 #: ../src/boards/python/pythontest.py:148
 msgid ""
@@ -5360,7 +5437,7 @@ msgstr "செவ்வகத்தைப் பயன்படுத்து"
 msgid "Choice of pattern"
 msgstr "தோரணித் தேர்வு"
 
-#: ../src/boards/python/redraw.py:908 ../src/boards/python/redraw.py:911
+#: ../src/boards/python/redraw.py:913 ../src/boards/python/redraw.py:916
 msgid "Coordinate"
 msgstr "ஆயத்தொலைவு"
 
@@ -5458,7 +5535,7 @@ msgstr "நினைவக விளையாட்டு"
 msgid "Build a train according to the model"
 msgstr "உருவாக்கு a பெறுவது"
 
-#: ../src/boards/reading.c:228 ../src/boards/wordsgame.c:205
+#: ../src/boards/reading.c:226 ../src/boards/wordsgame.c:209
 msgid ""
 "Error: We can't find\n"
 "a list of words to play this game.\n"
@@ -5466,38 +5543,42 @@ msgstr ""
 "பிழை: இந்த விளையாட்டை ஆட சொற்கள்\n"
 "பட்டியலை கண்டு பிடிக்க முடியவில்லை.\n"
 
-#: ../src/boards/reading.c:380
+#: ../src/boards/reading.c:388
 msgid "Please, check if the word"
 msgstr "தயைசெய்து சோதியுங்கள், சொல்"
 
-#: ../src/boards/reading.c:400
+#: ../src/boards/reading.c:408
 msgid "is being displayed"
 msgstr "தென்படுகிறதா"
 
-#: ../src/boards/reading.c:574
+#: ../src/boards/reading.c:460
+msgid "We skip this level because there are not enough words in the list!"
+msgstr "இந்த மட்டத்தில் போதிய சொற்கள் இல்லாததால் இதை தவிர்க்கிறோம்!"
+
+#: ../src/boards/reading.c:609
 msgid "I am Ready"
 msgstr "நான் தயார்"
 
-#: ../src/boards/reading.c:614
+#: ../src/boards/reading.c:649
 msgid "Yes, I saw it"
 msgstr "ஆம் நான் அதைப் பார்த்தேன்"
 
-#: ../src/boards/reading.c:644
+#: ../src/boards/reading.c:677
 msgid "No, it was not there"
 msgstr "இல்லை அது அங்கு இருக்கவில்லை"
 
 #. Report what was wrong in the log
-#: ../src/boards/reading.c:682
+#: ../src/boards/reading.c:716
 #, c-format
 msgid "The word to find was '%s'"
 msgstr "அந்த கண்டுபிடிக்கவேண்டிய வார்த்தை '%s'"
 
-#: ../src/boards/reading.c:685
+#: ../src/boards/reading.c:719
 #, c-format
 msgid "But it was not displayed"
 msgstr "ஆனால் அது காண்பிக்கப் படவில்லை"
 
-#: ../src/boards/reading.c:687
+#: ../src/boards/reading.c:721
 #, c-format
 msgid "And it was displayed"
 msgstr "மேலும் அது காண்பிக்கப்பட்டது"
@@ -5562,7 +5643,7 @@ msgstr "தலைப்பு 1"
 msgid "Heading 2"
 msgstr "தலைப்பு 2"
 
-#: ../src/gcompris/about.c:56
+#: ../src/gcompris/about.c:54
 msgid ""
 "Author: Bruno Coudoin\n"
 "Contribution: Pascal Georges, Jose Jorge, Yves Combe\n"
@@ -5577,19 +5658,19 @@ msgstr ""
 "பின்னணி இசை: ரிகொடா ஹால்வரஸ்\n"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/gcompris/about.c:64
+#: ../src/gcompris/about.c:62
 msgid "translator_credits"
 msgstr "மொழி பெயர்ர்பாளர் நன்றி அறிதல்"
 
-#: ../src/gcompris/about.c:95 ../src/gcompris/about.c:105
+#: ../src/gcompris/about.c:93 ../src/gcompris/about.c:103
 msgid "About GCompris"
 msgstr "ஜிகாம்ப்ரி பற்றி"
 
-#: ../src/gcompris/about.c:116
+#: ../src/gcompris/about.c:114
 msgid "Translators:"
 msgstr "மொழி பெயர்ப்பாளர்கள்: சுபத்ரா, சங்கர்,வாசுதேவன்."
 
-#: ../src/gcompris/about.c:229
+#: ../src/gcompris/about.c:227
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -5597,32 +5678,32 @@ msgstr ""
 "ஜிகாம்ப்ரி இல்ல பக்கம்\n"
 "http://gcompris.net"
 
-#: ../src/gcompris/about.c:251
+#: ../src/gcompris/about.c:249
 msgid ""
 "This software is a GNU Package and is released under the GNU General Public "
 "License"
 msgstr "இந்த மென்பொருள் க்னூ பொதியாகும். க்னூ பொது இணக்க ஆணையின் கீழ் வெளியிடப் படுகிறது."
 
-#: ../src/gcompris/about.c:279 ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:476 ../src/gcompris/config.c:486
-#: ../src/gcompris/dialog.c:102 ../src/gcompris/help.c:379
-#: ../src/gcompris/help.c:389 ../src/gcompris/images_selector.c:316
+#: ../src/gcompris/about.c:277 ../src/gcompris/about.c:287
+#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
+#: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:379
+#: ../src/gcompris/help.c:389 ../src/gcompris/images_selector.c:314
 msgid "OK"
 msgstr "சரி"
 
-#: ../src/gcompris/bar.c:597
+#: ../src/gcompris/bar.c:599
 msgid "GCompris confirmation"
 msgstr "ஜிகாம்ப்ரி உறுதி படுத்தல்"
 
-#: ../src/gcompris/bar.c:598
+#: ../src/gcompris/bar.c:600
 msgid "Are you sure you want to quit?"
 msgstr "நிச்சயம் வெளியேற வேண்டுமா?"
 
-#: ../src/gcompris/bar.c:599
+#: ../src/gcompris/bar.c:601
 msgid "Yes, I am sure!"
 msgstr "ஆம். நிச்சயம்!"
 
-#: ../src/gcompris/bar.c:600
+#: ../src/gcompris/bar.c:602
 msgid "No, I want to keep going"
 msgstr "இல்லை நான் தொடர விரும்புகிறேன்."
 
@@ -5630,7 +5711,7 @@ msgstr "இல்லை நான் தொடர விரும்புகி
 msgid "Dynamic module loading is not supported. GCompris cannot load.\n"
 msgstr "இயங்கு கூறு ஏற்றுதலுக்கு ஆதரவு இல்லை. ஜிகாம்ப்ரி ஐ ஏற்ற முடியாது.\n"
 
-#: ../src/gcompris/board_config.c:699
+#: ../src/gcompris/board_config_combo.c:157
 msgid ""
 "Select the language\n"
 " to use in the board"
@@ -5638,23 +5719,23 @@ msgstr ""
 "பலகத்தில் பயன் படுத்த\n"
 "மொழியை தேர்ந்தெடுக்கவும்"
 
-#: ../src/gcompris/board_config.c:762
+#: ../src/gcompris/board_config_combo.c:227
 msgid "Global GCompris mode"
 msgstr "உலகமய ஜிகாம்ப்ரி பாங்கு."
 
-#: ../src/gcompris/board_config.c:763
+#: ../src/gcompris/board_config_combo.c:228
 msgid "Normal"
 msgstr "இயல்பான"
 
-#: ../src/gcompris/board_config.c:764
+#: ../src/gcompris/board_config_combo.c:229
 msgid "2 clicks"
 msgstr "இரண்டு சொடுக்குகள்."
 
-#: ../src/gcompris/board_config.c:765
+#: ../src/gcompris/board_config_combo.c:230
 msgid "both modes"
 msgstr "இரண்டு பாங்குகளும்."
 
-#: ../src/gcompris/board_config.c:793
+#: ../src/gcompris/board_config_combo.c:258
 msgid ""
 "Select the drag and drop mode\n"
 " to use in the board"
@@ -5662,287 +5743,306 @@ msgstr ""
 "இந்த பலகையில் பயன் படுத்த\n"
 "இழுத்து விடும் பாங்கை செயல்படுத்துக"
 
-#: ../src/gcompris/config.c:58
+#. add a new level
+#: ../src/gcompris/board_config_wordlist.c:106
+#, c-format
+msgid "%d (New level)"
+msgstr "%d (புதிய மட்டம்)"
+
+#. frame
+#: ../src/gcompris/board_config_wordlist.c:180
+msgid "Configure the list of words"
+msgstr "சொற்களின் பட்டியலை அமைப்போம்"
+
+#: ../src/gcompris/board_config_wordlist.c:209
+msgid "Language:"
+msgstr "மொழி:"
+
+#: ../src/gcompris/board_config_wordlist.c:246
+msgid "Back to default"
+msgstr "முன்னிருப்புக்கு செல்க"
+
+#: ../src/gcompris/config.c:56
 msgid "Your system default"
 msgstr "உங்கள் கணினி முன்னிருப்பு"
 
-#: ../src/gcompris/config.c:59
+#: ../src/gcompris/config.c:57
 msgid "Afrikaans"
 msgstr "ஆப்ரிக்கான்ஸ்"
 
-#: ../src/gcompris/config.c:60
+#: ../src/gcompris/config.c:58
 msgid "Amharic"
 msgstr "அம்ஹாரிக்"
 
-#: ../src/gcompris/config.c:61
+#: ../src/gcompris/config.c:59
 msgid "Arabic"
 msgstr "அராபிக்"
 
-#: ../src/gcompris/config.c:62
+#: ../src/gcompris/config.c:60
 msgid "Arabic (Tunisia)"
 msgstr "அராபிக் (துனீசியா)"
 
-#: ../src/gcompris/config.c:63
+#: ../src/gcompris/config.c:61
 msgid "Turkish (Azerbaijan)"
 msgstr "துருக்கி அசர்பைசான்"
 
-#: ../src/gcompris/config.c:64
+#: ../src/gcompris/config.c:62
 msgid "Bulgarian"
 msgstr "பல்கேரியன்"
 
-#: ../src/gcompris/config.c:65
+#: ../src/gcompris/config.c:63
 msgid "Breton"
 msgstr "ப்ரெடன்"
 
-#: ../src/gcompris/config.c:66
+#: ../src/gcompris/config.c:64
 msgid "Catalan"
 msgstr "காட்டலான்"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:66
 msgid "Danish"
 msgstr "டேனிஷ்"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:67
 msgid "German"
 msgstr "ஜெர்மன்"
 
-#: ../src/gcompris/config.c:70
-msgid "Greek"
-msgstr "கிரீக்"
-
-#: ../src/gcompris/config.c:71
-msgid "English (Canada)"
-msgstr "ஆங்கிலம் (கனடா)"
-
-#: ../src/gcompris/config.c:72
-msgid "English (Great Britain)"
-msgstr "ஆங்கிலம் (கிரேட் பிரிட்டன்)"
-
-#: ../src/gcompris/config.c:73
-msgid "English (United States)"
-msgstr "ஆங்கிலம் (அமெரிக்கா)"
-
-#: ../src/gcompris/config.c:74
-msgid "Spanish"
-msgstr "ஸ்பானிஷ்"
-
-#: ../src/gcompris/config.c:75
-msgid "Basque"
-msgstr "பேஸ்க்"
-
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:68
 msgid "Dzongkha"
 msgstr "ட்சொங்க்ஹா"
 
-#: ../src/gcompris/config.c:77
+#: ../src/gcompris/config.c:69
+msgid "Greek"
+msgstr "கிரீக்"
+
+#: ../src/gcompris/config.c:70
+msgid "English (Canada)"
+msgstr "ஆங்கிலம் (கனடா)"
+
+#: ../src/gcompris/config.c:71
+msgid "English (Great Britain)"
+msgstr "ஆங்கிலம் (கிரேட் பிரிட்டன்)"
+
+#: ../src/gcompris/config.c:72
+msgid "English (United States)"
+msgstr "ஆங்கிலம் (அமெரிக்கா)"
+
+#: ../src/gcompris/config.c:73
+msgid "Spanish"
+msgstr "ஸ்பானிஷ்"
+
+#: ../src/gcompris/config.c:74
+msgid "Basque"
+msgstr "பேஸ்க்"
+
+#: ../src/gcompris/config.c:75
 msgid "Persian"
 msgstr "பெர்சியன்"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:76
 msgid "Finnish"
 msgstr "பின்னிஷ்"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:77
 msgid "French"
 msgstr "பிரெஞ்சு"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:78
 msgid "Irish (Gaelic)"
 msgstr "ஐரீஷ் (கேலிக்)"
 
-#: ../src/gcompris/config.c:81
-msgid "Hebrew"
-msgstr "ஹீப்ரு"
-
-#: ../src/gcompris/config.c:82
-msgid "Hindi"
-msgstr "ஹிந்தி"
-
-#: ../src/gcompris/config.c:83
-msgid "Indonesian"
-msgstr "இந்தோனேஷியன்"
-
-#: ../src/gcompris/config.c:84
-msgid "Japanese"
-msgstr "ஜப்பானிய"
-
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:79
 msgid "Gujarati"
 msgstr "குஜராத்தி"
 
-#: ../src/gcompris/config.c:86
-msgid "Punjabi"
-msgstr "பஞ்சாபி மொழி"
+#: ../src/gcompris/config.c:80
+msgid "Hebrew"
+msgstr "ஹீப்ரு"
 
-#: ../src/gcompris/config.c:87
-msgid "Hungarian"
-msgstr "ஹங்கேரியன்"
+#: ../src/gcompris/config.c:81
+msgid "Hindi"
+msgstr "ஹிந்தி"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:82
 msgid "Croatian"
 msgstr "குரேஷியன்"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:83
+msgid "Hungarian"
+msgstr "ஹங்கேரியன்"
+
+#: ../src/gcompris/config.c:84
+msgid "Indonesian"
+msgstr "இந்தோனேஷியன்"
+
+#: ../src/gcompris/config.c:85
 msgid "Italian"
 msgstr "இத்தாலியன்"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:86
+msgid "Japanese"
+msgstr "ஜப்பானிய"
+
+#: ../src/gcompris/config.c:87
 msgid "Georgian"
 msgstr "ஜியார்ஜியன்"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:88
 msgid "Korean"
 msgstr "கொரியன்"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:89
 msgid "Lithuanian"
 msgstr "லித்துனியன்"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:90
 msgid "Macedonian"
 msgstr "மாசிடோ னியன்"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:91
 msgid "Malayalam"
 msgstr "மலையாளம்"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:92
 msgid "Marathi"
 msgstr "மராத்தி"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:93
 msgid "Malay"
 msgstr "மலாய்"
 
-#: ../src/gcompris/config.c:97
-msgid "Nepal"
-msgstr "நேபாளம்"
-
-#: ../src/gcompris/config.c:98
-msgid "Dutch"
-msgstr "டச்சு"
-
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:94
 msgid "Norwegian Bokmal"
 msgstr "நார்வேஜியன் புக்மால்"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:95
+msgid "Nepal"
+msgstr "நேபாளம்"
+
+#: ../src/gcompris/config.c:96
+msgid "Dutch"
+msgstr "டச்சு"
+
+#: ../src/gcompris/config.c:97
 msgid "Norwegian Nynorsk"
 msgstr "நார்விஜியன் நைநோர்ஸ்க்"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:98
 msgid "Occitan (languedocien)"
 msgstr "ஆஸிடான் (லாங்குடோசியன்)"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:99
+msgid "Punjabi"
+msgstr "பஞ்சாபி மொழி"
+
+#: ../src/gcompris/config.c:100
 msgid "Polish"
 msgstr "போலிஷ்"
 
-#: ../src/gcompris/config.c:103
-msgid "Portuguese"
-msgstr "போர்ச்சுகீஸ்"
-
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:101
 msgid "Portuguese (Brazil)"
 msgstr "போர்ச்சுகீஸ் (பிரேசில்)"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:102
+msgid "Portuguese"
+msgstr "போர்ச்சுகீஸ்"
+
+#: ../src/gcompris/config.c:103
 msgid "Romanian"
 msgstr "ரோமானியன்"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:104
 msgid "Russian"
 msgstr "ரஷ்யன்"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:105
 msgid "Kinyarwanda"
 msgstr "கின்யார்வன்டா"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:106
 msgid "Slovak"
 msgstr "ஸ்லோவாக்"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:107
 msgid "Slovenian"
 msgstr "ஸ்லோவேனியன்"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:108
 msgid "Somali"
 msgstr "சோமாலி"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:109
 msgid "Albanian"
 msgstr "அல்பேனியன்"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:110
 msgid "Serbian (Latin)"
 msgstr "செர்பிய (லத்தீன்)"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:111
 msgid "Serbian"
 msgstr "செர்பிய"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:112
 msgid "Swedish"
 msgstr "ஸ்வீடிஷ்"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:113
 msgid "Tamil"
 msgstr "தமிழ்"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:114
 msgid "Thai"
 msgstr "தாய்"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:115
 msgid "Turkish"
 msgstr "துருக்கி"
 
-#: ../src/gcompris/config.c:118
-msgid "Urdu"
-msgstr "உருது"
-
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:116
 msgid "Ukrainian"
 msgstr "உக்ரெனியன்"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:117
+msgid "Urdu"
+msgstr "உருது"
+
+#: ../src/gcompris/config.c:118
 msgid "Vietnamese"
 msgstr "வியட்னாமி"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:119
 msgid "Walloon"
 msgstr "வாலூன்"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:120
 msgid "Chinese (Simplified)"
 msgstr "சீன (எளிதாக்கப்பட்ட)"
 
-#: ../src/gcompris/config.c:123
+#: ../src/gcompris/config.c:121
 msgid "Chinese (Traditional)"
 msgstr "சீனம் (பாரம்பரிய)"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:126
 msgid "No time limit"
 msgstr "நேர வரையரை இல்லை"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:127
 msgid "Slow timer"
 msgstr "மெதுவாக கடிகாரம்"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:128
 msgid "Normal timer"
 msgstr "இயல்பான கடிகாரம்"
 
-#: ../src/gcompris/config.c:131
+#: ../src/gcompris/config.c:129
 msgid "Fast timer"
 msgstr "வேகமாக கடிகாரம்"
 
-#: ../src/gcompris/config.c:136
+#: ../src/gcompris/config.c:134
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (ஜிகாம்ப்ரிக்கு முன்னிருப்பு)"
 
-#: ../src/gcompris/config.c:141
+#: ../src/gcompris/config.c:139
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5950,62 +6050,62 @@ msgstr ""
 "<i>பலகைகளை வடிகட்ட ஜிகாம்ப்ரி \n"
 "நிர்வாக கூறைப் பயன்படுத்துக</i>"
 
-#: ../src/gcompris/config.c:196 ../src/gcompris/config.c:206
+#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
 msgid "GCompris Configuration"
 msgstr "ஜிகாம்ப்ரி வடிவமைப்பு"
 
-#: ../src/gcompris/config.c:282
+#: ../src/gcompris/config.c:280
 msgid "Fullscreen"
 msgstr "முழுத்திரை"
 
-#: ../src/gcompris/config.c:325
+#: ../src/gcompris/config.c:323
 msgid "Music"
 msgstr "இசை"
 
-#: ../src/gcompris/config.c:353
+#: ../src/gcompris/config.c:351
 msgid "Effect"
 msgstr "விளைவு"
 
-#: ../src/gcompris/config.c:389
+#: ../src/gcompris/config.c:387
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "உறை அடைவை திறக்க முடியவில்லை : %s"
 
-#: ../src/gcompris/config.c:420 ../src/gcompris/config.c:870
-#: ../src/gcompris/config.c:884
+#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
+#: ../src/gcompris/config.c:882
 #, c-format
 msgid "Skin : %s"
 msgstr "உறை : %s"
 
-#: ../src/gcompris/config.c:422
+#: ../src/gcompris/config.c:420
 msgid "SKINS NOT FOUND"
 msgstr "உறைகளை காணவில்லை"
 
-#: ../src/gcompris/config.c:547
+#: ../src/gcompris/config.c:545
 msgid "English (United State)"
 msgstr "ஆங்கிலம் (அமெரிக்க)"
 
-#: ../src/gcompris/file_selector.c:336
+#: ../src/gcompris/file_selector.c:334
 msgid "CANCEL"
 msgstr "CANCEL"
 
-#: ../src/gcompris/file_selector.c:367
+#: ../src/gcompris/file_selector.c:365
 msgid "LOAD"
 msgstr "LOAD"
 
-#: ../src/gcompris/file_selector.c:367
+#: ../src/gcompris/file_selector.c:365
 msgid "SAVE"
 msgstr "SAVE"
 
-#: ../src/gcompris/gameutil.c:101
+#: ../src/gcompris/gameutil.c:97
 msgid "Couldn't find or load the file"
 msgstr "கோப்பை கண்டு பிடிக்கவும் ஏற்றவும் முடியவில்லை"
 
-#: ../src/gcompris/gameutil.c:103
+#: ../src/gcompris/gameutil.c:99
 msgid "This activity is incomplete."
 msgstr "செயல் முடியவில்லை."
 
-#: ../src/gcompris/gameutil.c:104
+#: ../src/gcompris/gameutil.c:100
 msgid ""
 "Exit it and report\n"
 "the problem to the authors."
@@ -6062,7 +6162,8 @@ msgid ""
 msgstr ""
 "உள்ளமை மெனுவில் ஜிகாம்ப்ரி ஐ இயக்குக (எ-டு: l /reading என்பது 'படிக்கும்'  அடைவில் "
 "உள்ள செயல்களை மட்டுமே அனுமதிக்கும். -l /boards/connect4 என்பது connect4 செயல்களை "
-"மட்டுமே அனுமதிக்கும்.) '-l list' கட்டளையை பயன்படுத்தி எல்லா செயல்களையும் அவற்றின் விவரங்களையும் பட்டியலிடலாம்."
+"மட்டுமே அனுமதிக்கும்.) '-l list' கட்டளையை பயன்படுத்தி எல்லா செயல்களையும் அவற்றின் "
+"விவரங்களையும் பட்டியலிடலாம்."
 
 #: ../src/gcompris/gcompris.c:171
 msgid "Run GCompris with local activity directory added to menu"
@@ -6183,17 +6284,19 @@ msgstr ""
 "யோசியுங்கள். மேலும் தகவல்களுக்கு FSF:\n"
 " <http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1476
+#: ../src/gcompris/gcompris.c:1478
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
-msgstr "ஜிகாம்ப்ரி துவங்காது. ஏனெனில் பூட்டு கோப்பு  %d நொடிகளுக்கும் குறைவாக இருப்பு உடையது.\n"
+msgstr ""
+"ஜிகாம்ப்ரி துவங்காது. ஏனெனில் பூட்டு கோப்பு  %d நொடிகளுக்கும் குறைவாக இருப்பு "
+"உடையது.\n"
 
-#: ../src/gcompris/gcompris.c:1478
+#: ../src/gcompris/gcompris.c:1480
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "பூட்டு கோப்பு: %s\n"
 
-#: ../src/gcompris/gcompris.c:1597
+#: ../src/gcompris/gcompris.c:1599
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6207,17 +6310,41 @@ msgstr ""
 "மேலும் தகவல்களுக்கு http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1681
+#: ../src/gcompris/gcompris.c:1683
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "ஒரு செயலை நேரடியாக அணுக -l பயன்படுத்துக.\n"
 
-#: ../src/gcompris/gcompris.c:1682
+#: ../src/gcompris/gcompris.c:1684
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "கிடைக்கப் பெறும் செயல்களின் பட்டியல்:\n"
 
-#: ../src/gcompris/gcompris.c:1869
+#: ../src/gcompris/gcompris.c:1715
+#, c-format
+msgid "Number of activities: %d\n"
+msgstr "செயல்களின் எண்ணிக்கை : %d\n"
+
+#: ../src/gcompris/gcompris.c:1751
+#, c-format
+msgid "%s exists but is not readable or writable"
+msgstr "%s உள்ளது ஆனால் படிக்க எழுத முடியாதது"
+
+#: ../src/gcompris/gcompris.c:1812
+#, c-format
+msgid ""
+"The --server option cannot be used because GCompris has been compiled "
+"without network support!"
+msgstr "--server தேர்வை பயன்படுத்த முடியாது. ஏனெனில் ஜிகாம்ப்ரி வலைப்பின்னல் உதவி இல்லாமல் தொகுகஙகப்பட்டு உள்ளது"
+
+#: ../src/gcompris/gcompris.c:1863
+#, c-format
+msgid ""
+"ERROR: Profile '%s' is not found. Run 'gcompris --profile-list' to list "
+"available ones\n"
+msgstr "ERROR: பிழை வரையுரு'%s' இருப்பில் இல்லை. 'gcompris --profile-list' ஐ இயக்கி எவை கிடைக்கும் என பாருங்கள்\n"
+
+#: ../src/gcompris/gcompris.c:1877
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "கிடைக்கப் பெறும் வரியுருக்களின் பட்டியல்:\n"
@@ -6246,17 +6373,17 @@ msgstr "கைமுறை"
 msgid "Credit"
 msgstr "நன்றி அறிதல்"
 
-#: ../src/gcompris/properties.c:502 ../src/gcompris/properties.c:509
+#: ../src/gcompris/properties.c:500 ../src/gcompris/properties.c:507
 msgid "readme"
 msgstr "என்னைப் படி"
 
-#: ../src/gcompris/properties.c:504
+#: ../src/gcompris/properties.c:502
 msgid ""
 "This directory contains the files you create with the GCompris educational "
 "suite\n"
 msgstr "ஜிகாம்ப்ரி கல்வி தொகுப்பில் நீங்கள் உருவாக்கும் கோப்புகளுக்கான அடைவு\n"
 
-#: ../src/gcompris/properties.c:511
+#: ../src/gcompris/properties.c:509
 msgid ""
 "Put any number of images in this directory.\n"
 "You can include these images in your drawings and animations.\n"
@@ -6266,12 +6393,15 @@ msgstr ""
 "அவற்றை உங்கள் சித்திரங்களிலும் அசைகலைகளிலும் பயன் படுத்தலாம்.\n"
 "ஆதரவுள்ள பட பாங்குகள் ஜெபெக் பிஎன்ஜி மற்றும் எஸ்விஜி\n"
 
-#: ../src/gcompris/timer.c:249
+#: ../src/gcompris/timer.c:260
 msgid "Time Elapsed"
 msgstr "கடந்த நேரம்"
 
-#: ../src/gcompris/timer.c:338
+#: ../src/gcompris/timer.c:349
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "மீதி நேரம் = %d"
+
+#~ msgid "Wordlist"
+#~ msgstr "சொல்பட்டியல்"
 
