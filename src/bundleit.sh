@@ -28,6 +28,14 @@ WARNING()
   echo "${CMAG}$1${CNONE}"
 }
 
+# Sugar cleanup
+cleanup()
+{
+    echo "Cleanup $activity_dir"
+    rm -rf $activity_dir
+    rm -f $activity_dir.tar.bz2
+}
+
 lang=
 if test -n "$2"; then
     lang=$2
@@ -151,7 +159,14 @@ if [ "$lang" != "" -a "$localized" != "" ]; then
   up=`dirname $mandatory_sound_dir`
   mkdir -p $activity_dir/resources/$up
   dotdot=`echo $up | sed s/[^/]*/../g`
-  ln -s $dotdot/../../../boards/$mandatory_sound_dir -t $activity_dir/resources/$up
+  if [ -d ../boards/$mandatory_sound_dir ]
+  then
+    ln -s $dotdot/../../../boards/$mandatory_sound_dir -t $activity_dir/resources/$up
+  else
+    echo "ERROR: Resource dir not found: $dotdot/../../../boards/$mandatory_sound_dir"
+    cleanup
+    exit 1
+  fi
 fi
 
 # Add the resources if they are in another activity
@@ -211,6 +226,4 @@ fi
 rm -f $activity_dir.xo
 tar -tjf $activity_dir.tar.bz2 | zip ${activity_dir}${suffix}.xo -@ > /dev/null
 
-# Sugar cleanup
-rm -rf $activity_dir
-rm $activity_dir.tar.bz2
+cleanup
