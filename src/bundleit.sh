@@ -6,6 +6,7 @@
 
 if test -z "$1"; then
     echo "Usage: bundleit.sh directory-activity [locale code]"
+    echo "       If no locale is provided then bundle all locales."
     echo "Example (for french locale):"
     echo "./bundleit.sh crane-activity fr"
     exit 1
@@ -31,7 +32,7 @@ lang=
 if test -n "$2"; then
     lang=$2
 else
-  WARNING "No locale specified"
+  WARNING "No locale specified => ALL LOCALES ARE PACKAGED"
 fi
 
 activitysrc=`basename $1`
@@ -126,18 +127,31 @@ if [ "$lang" != "" ]; then
   else
       WARNING "  WARNING: No translation found in ../po/$lang.gmo"
   fi
+else
+  for gmo in ../po/*.gmo
+  do
+    lng=`echo $gmo | sed s/.gmo//`
+    dir=$activity_dir/locale/$lng/LC_MESSAGES
+    mkdir -p $dir
+    cp ../po/$lng.gmo $dir/gcompris.mo
+  done
 fi
+
+# Never keep the voices by default
+rm -f $activity_dir/resources/voices
 
 # Add the mandatory sounds of this activity
 mandatory_sound_dir=`grep mandatory_sound_dir $activity_dir/*.xml | cut -d= -f2 | sed s/\"//g`
-if test -n "$mandatory_sound_dir"
-then
-    mandatory_sound_dir=`echo "$mandatory_sound_dir" | sed 's/\$LOCALE/'$lang/`
-    echo "  Adding mandatory sound dir directory: $mandatory_sound_dir"
-    up=`dirname $mandatory_sound_dir`
-    mkdir -p $activity_dir/resources/$up
-    dotdot=`echo $up | sed s/[^/]*/../g`
-    ln -s $dotdot/../../../boards/$mandatory_sound_dir -t $activity_dir/resources/$up
+localized=`echo "$mandatory_sound_dir" | grep "\$LOCALE"`
+# Is this a localized mandatory_sound_dir
+if [ "$lang" != "" -a "$localized" != "" ]; then
+  # Copying localized content
+  mandatory_sound_dir=`echo "$mandatory_sound_dir" | sed 's/\$LOCALE/'$lang/`
+  echo "  Adding mandatory sound dir directory: $mandatory_sound_dir"
+  up=`dirname $mandatory_sound_dir`
+  mkdir -p $activity_dir/resources/$up
+  dotdot=`echo $up | sed s/[^/]*/../g`
+  ln -s $dotdot/../../../boards/$mandatory_sound_dir -t $activity_dir/resources/$up
 fi
 
 # Add the resources if they are in another activity
@@ -172,6 +186,7 @@ fi
 cp $activity_dir/../runit.sh $activity_dir
 
 tar -cjf $activity_dir.tar.bz2 -h \
+    --exclude ".gitignore" \
     --exclude ".svn" \
     --exclude "resources/skins/babytoy" \
     $draw \
@@ -187,8 +202,14 @@ tar -cjf $activity_dir.tar.bz2 -h \
     $activity_dir
 
 # Create the sugar .xo zip bundle
+if test -z "$lang"; then
+  suffix=""
+else
+  suffix="-$lang"
+fi
+
 rm -f $activity_dir.xo
-tar -tjf $activity_dir.tar.bz2 | zip $activity_dir.xo -@ > /dev/null
+tar -tjf $activity_dir.tar.bz2 | zip ${activity_dir}${suffix}.xo -@ > /dev/null
 
 # Sugar cleanup
 rm -rf $activity_dir

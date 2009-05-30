@@ -1,6 +1,6 @@
 [Activity]
 name = @ACTIVITY_NAME@
-activity_version = 10
+activity_version = 11
 host_version = 1
 service_name = net.gcompris.@ACTIVITY_NAME@Activity
 bundle_id = net.gcompris.@ACTIVITY_NAME@Activity
