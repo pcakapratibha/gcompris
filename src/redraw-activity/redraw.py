@@ -921,7 +921,7 @@ class Gcompris_redraw:
 
     if event.type == gtk.gdk.LEAVE_NOTIFY:
       self.display_coord(event.x,event.y, 3)
-    else:
+    elif event.type == gtk.gdk.MOTION_NOTIFY:
       self.display_coord(event.x,event.y, 2)
 
 
@@ -930,7 +930,7 @@ class Gcompris_redraw:
 
     if event.type == gtk.gdk.LEAVE_NOTIFY:
       self.display_coord(event.x,event.y, 3)
-    else:
+    elif event.type == gtk.gdk.MOTION_NOTIFY:
       self.display_coord(event.x,event.y, 1)
 
     if event.type == gtk.gdk.BUTTON_PRESS:

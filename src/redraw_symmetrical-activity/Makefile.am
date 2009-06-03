@@ -1,6 +1,4 @@
-SUBDIRS = 
-
-
+SUBDIRS = resources
 
 xmldir = $(pkgdatadir)/@PACKAGE_DATA_DIR@
 
