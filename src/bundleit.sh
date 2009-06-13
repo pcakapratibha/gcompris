@@ -47,7 +47,6 @@ activitysrc=`basename $1`
 echo "Processing activity $activitysrc"
 if test "$activitysrc" != "draw-activity" && \
     test "$activitysrc" != "anim-activity" && \
-    test "$activitysrc" != "pythontest-activity" && \
     test "$activitysrc" != "electric-activity" ; then
   draw="--exclude resources/skins/gartoon/draw"
 else
@@ -60,6 +59,8 @@ if test "$activitysrc" = "administration-activity" || \
    test "$activitysrc" = "melody-activity" || \
    test "$activitysrc" = "login-activity" || \
    test "$activitysrc" = "gcompris-activity" || \
+   test "$activitysrc" = "pythontest-activity" || \
+   test "$activitysrc" = "pythontemplate-activity" || \
    test "$activitysrc" = "old-gcompris-activity" ; then
   echo "  Skipping it, not relevant for xo or not ready for it."
   exit 0
