@@ -261,14 +261,12 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       /**/
       while( (filename = gc_file_find_absolute("%s/board%d_0.xml",
 							 gcomprisBoard->boarddir,
-							 gcomprisBoard->maxlevel++,
+							 gcomprisBoard->maxlevel,
 							 NULL)) )
 	{
+	  gcomprisBoard->maxlevel++;
 	  g_free(filename);
-
 	}
-
-      /**/
       gcomprisBoard->maxlevel--;
 
       gc_bar_set(GC_BAR_CONFIG|GC_BAR_LEVEL);
