@@ -923,6 +923,7 @@ void target_point_switch_on(Shape *shape_on)
 static gint item_event_drag(GnomeCanvasItem *item, GdkEvent *event, gpointer data)
 {
     static GnomeCanvasItem *shadow_item=NULL;
+    static GnomeCanvasItem *dragged;
     double item_x, item_y;
     Shape *shape, *found_shape;
 
@@ -994,11 +995,14 @@ static gint item_event_drag(GnomeCanvasItem *item, GdkEvent *event, gpointer dat
                 gdk_pixbuf_unref(dest);
                 gdk_pixbuf_unref(pixmap);
             }
+	    dragged = shape->item;
             gnome_canvas_item_reparent(shape->item, GNOME_CANVAS_GROUP(shape_list_root_item->parent));
             gnome_canvas_item_raise_to_top(shape->item);
             gc_drag_item_move(event);
             break;
         case GDK_MOTION_NOTIFY:
+	    if (item != dragged)
+		break;
             gc_drag_item_move(event);
 
             item_x = event->button.x;
@@ -1023,6 +1027,8 @@ static gint item_event_drag(GnomeCanvasItem *item, GdkEvent *event, gpointer dat
             target_point_switch_on(found_shape);
             break;
         case GDK_BUTTON_RELEASE:
+	    if (item != dragged)
+		break;
             item_x = event->button.x;
             item_y = event->button.y;
             gnome_canvas_item_w2i(item->parent, &item_x, &item_y);
