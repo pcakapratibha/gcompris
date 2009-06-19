@@ -264,10 +264,11 @@ static void start_board (GcomprisBoard *agcomprisBoard)
       gcomprisBoard->maxlevel=1;
       /**/
       while( (filename = gc_file_find_absolute("%s/board%d_0.xml",
-							 gcomprisBoard->boarddir,
-							 gcomprisBoard->maxlevel++,
-							 NULL)) )
+					       gcomprisBoard->boarddir,
+					       gcomprisBoard->maxlevel,
+					       NULL)) )
 	{
+	  gcomprisBoard->maxlevel++;
 	  g_free(filename);
 
 	}
@@ -1314,7 +1315,7 @@ add_shape_to_canvas(Shape *shape)
 	{
 	  shape->w = (double)gdk_pixbuf_get_width(pixmap) * shape->zoomx;
 	  shape->h = (double)gdk_pixbuf_get_height(pixmap) * shape->zoomy;
-	  
+
 	  /* Display the shape itself but hide it until the user puts the right shape on it */
 	  /* I have to do it this way for the positionning (lower/raise) complexity          */
 	  item = gnome_canvas_item_new (GNOME_CANVAS_GROUP(shape_root_item),
