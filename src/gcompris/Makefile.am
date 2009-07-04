@@ -15,18 +15,6 @@ sqlite_ldadd =
 sqlite_cflags =
 endif
 
-#if USE_CAIRO
-#cairo_ldflags = $(CAIRO_LIBS)
-#cairo_cflags = $(CAIRO_CFLAGS)
-#cairo_h = gcompris-cairo.h
-#cairo_c = gcompris-cairo.c
-#else
-#cairo_ldflags =
-#cairo_cflags =
-#cairo_h =
-#cairo_c =
-#endif
-
 if PLATFORM_WIN32
 no_undefined = -no-undefined
 shared = -shared
@@ -55,12 +43,9 @@ INCLUDES = \
 	-DGNOME_DISABLE_DEPRECATED \
         $(sqlite_cflags) \
 	$(GNET_CFLAGS) \
-	$(cairo_cflags) \
 	$(NSBUNDLE_CPPFLAGS)
 
 gcompris_SOURCES = \
-	$(cairo_c) \
-	$(cairo_h) \
 	$(gcompris_nsbundle_h) \
 	$(gcompris_nsbundle_m) \
 	about.c \
@@ -122,7 +107,8 @@ gcompris_SOURCES = \
 	wordlist.h
 
 gcompris_LDFLAGS = \
-	-export-dynamic $(cairo_ldflags)
+	-export-dynamic $(top_builddir)/src/libgnomecanvas/libgnomecanvas-2.a \
+	$(top_builddir)/src/libart_lgpl/libart_lgpl_2.a
 
 
 gcompris_LDADD = \

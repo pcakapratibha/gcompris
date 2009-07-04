@@ -1909,5 +1909,12 @@ main (int argc, char *argv[])
 
   gtk_main ();
 
+  /* FIXME: HACK Needed or we have unresolved symbols at python plugin dlopen
+   *        Is there a better way to fix these?
+   */
+  printf("%s\n", g_type_name(GNOME_TYPE_CANVAS_POLYGON));
+  printf("%s\n", g_type_name(GNOME_TYPE_CANVAS_CLIPGROUP));
+  printf("%s\n", g_type_name(GNOME_TYPE_CANVAS_BPATH));
+
   return(0);
 }
