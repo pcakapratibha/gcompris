@@ -1,7 +1,6 @@
 *.[oa]
 *.l[oa]
 *.pyc
-*.gmo
 *~
 .deps
 .libs
