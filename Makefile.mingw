@@ -46,6 +46,9 @@ NEEDED_DLLS =		$(GNUCAP_TOP)/src/MSW/gnucap.exe \
 			$(PYTHON_TOP)/python24.dll \
 			$(SDL_TOP)/bin/SDL.dll \
 			$(SDL_TOP)/bin/SDL_mixer.dll \
+			$(SDL_TOP)/bin/libogg-0.dll \
+			$(SDL_TOP)/bin/libvorbis-0.dll \
+			$(SDL_TOP)/bin/libvorbisfile-3.dll \
 			$(SQLITE_TOP)/sqlite3.dll \
 			$(MSVCR71_DLL)
 
