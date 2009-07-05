@@ -56,7 +56,6 @@ INCLUDE_PATHS +=	-I$(INCLUDE_DIR) \
 			-I$(GTK_TOP)/include/freetype2 \
 			-I$(SDL_TOP)/include/SDL \
 			-I$(LIBXML2_TOP)/include \
-			-I$(GNUWIN32_TOP)/include \
 			-I$(CAIRO_TOP)/include/cairo \
 			-I$(SQLITE_TOP) \
 			-I$(GCOMPRIS_TOP) \
@@ -66,7 +65,6 @@ INCLUDE_PATHS +=	-I$(INCLUDE_DIR) \
 LIB_PATHS =		-L$(GTK_TOP)/lib \
 	  		-L$(GLIB_TOP)/lib \
 			-L$(LIBXML2_TOP)/lib \
-			-L$(GNUWIN32_TOP)/lib \
 			-L$(SDL_TOP)/lib \
 			-L$(CANVAS_TOP) \
 			-L$(PYTHON_TOP)/libs \

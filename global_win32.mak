@@ -22,11 +22,10 @@ DLL_LD_FLAGS += -Wl,--enable-auto-image-base
 
 DEFINES += 	-DHAVE_CONFIG_H
 
-LOCAL_PREFIX:=
+LOCAL_PREFIX:=/home/bruno/Projets/gcompris/windows
 GTK_TOP :=		$(LOCAL_PREFIX)/gtk
 GLIB_TOP :=		$(LOCAL_PREFIX)/gtk
 CAIRO_TOP :=		$(LOCAL_PREFIX)/gtk
-GNUWIN32_TOP :=		$(LOCAL_PREFIX)/gnuwin32
 LIBXML2_TOP :=		$(LOCAL_PREFIX)/libxml2
 SDL_TOP :=		$(LOCAL_PREFIX)/sdl
 GNUCHESS_TOP :=		$(LOCAL_PREFIX)/gnuchess

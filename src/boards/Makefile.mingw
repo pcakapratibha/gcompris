@@ -49,7 +49,6 @@ INCLUDE_PATHS +=	-I$(GCOMPRIS_PLUGINS) \
 			-I$(LIBART_TOP) \
 			-I$(GTK_TOP)/include/freetype2 \
 			-I$(LIBXML2_TOP)/include \
-			-I$(GNUWIN32_TOP)/include \
 			-I$(GCOMPRIS_TOP) \
 			-I$(GCOMPRIS_TOP)/src \
 			-I$(CAIRO_TOP)/include/cairo \
@@ -61,7 +60,6 @@ INCLUDE_PATHS +=	-I$(GCOMPRIS_PLUGINS) \
 
 LIB_PATHS =		-L$(GTK_TOP)/lib \
 			-L$(LIBXML2_TOP)/lib \
-			-L$(GNUWIN32_TOP)/lib \
 			-L$(SDL_TOP)/lib \
 			-L$(GCOMPRIS_TOP)/src/gcompris \
 			-L$(PYTHON_TOP)/lib
