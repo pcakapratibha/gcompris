@@ -54,7 +54,8 @@ INCLUDE_PATHS +=	-I$(GCOMPRIS_PLUGINS) \
 			-I$(CAIRO_TOP)/include/cairo \
 			-I$(PYTHON_TOP)/include \
 			-I$(PYTHON_TOP)/include/pygtk-2.0 \
-			-I$(SQLITE_TOP)
+			-I$(SQLITE_TOP) \
+			-I$(ICONV_TOP)/include
 
 
 
@@ -133,7 +134,7 @@ BOARDS_C_SRC =	\
 	algebra_guesscount.c \
 	awele.c awele_utils.c awele_alphaBeta.c \
 	canal_lock.c \
-	chess.c chess_position.c chess_notation.c \
+	chess_windows.c chess_position.c chess_notation.c \
 	click_on_letter.c \
 	clickgame.c \
 	clockgame.c \
@@ -198,7 +199,7 @@ libboards: \
 libboards.a: $(BOARDS_OBJECTS)
 	-rm -f libboards.a
 	$(AR) cru libboards.a $(BOARDS_OBJECTS)
-	ranlib libboards.a
+	$(RANLIB) libboards.a
 
 ##
 ## CLEAN RULES

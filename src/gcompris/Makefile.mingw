@@ -59,7 +59,8 @@ INCLUDE_PATHS +=	-I$(INCLUDE_DIR) \
 			-I$(CAIRO_TOP)/include/cairo \
 			-I$(SQLITE_TOP) \
 			-I$(GCOMPRIS_TOP) \
-			-I$(GCOMPRIS_TOP)/src/boards
+			-I$(GCOMPRIS_TOP)/src/boards \
+			-I$(ICONV_TOP)/include
 
 
 LIB_PATHS =		-L$(GTK_TOP)/lib \
@@ -69,6 +70,7 @@ LIB_PATHS =		-L$(GTK_TOP)/lib \
 			-L$(CANVAS_TOP) \
 			-L$(PYTHON_TOP)/libs \
 			-L$(SQLITE_TOP) \
+			-L$(ICONV_TOP)/lib \
 			-L$(GCOMPRIS_TOP)/src/gcompris
 
 
@@ -155,7 +157,7 @@ EXE_LIBS =		../boards/libboards.a \
 
 # How to make an RC file
 %.o: %.rc
-	windres -i $< -o $@
+	$(WINDRES) -i $< -o $@
 
 ##
 ## TARGET DEFINITIONS

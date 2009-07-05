@@ -5,7 +5,24 @@
 # wide definitions.
 #
 
-CC = gcc.exe
+OS:=$(OS)
+
+ifeq ($(OS),)
+	CROSSCOMPILER=i586-mingw32msvc-
+else
+	CROSSCOMPILER=
+endif
+
+CC = $(CROSSCOMPILER)gcc
+AR = $(CROSSCOMPILER)ar
+RANLIB = $(CROSSCOMPILER)ranlib
+WINDRES = $(CROSSCOMPILER)windres
+
+ifneq ($(CROSSCOMPILER),)
+	GLIB_GENMARSHAL := glib-genmarshal
+else
+	GLIB_GENMARSHAL := $(GTK_TOP)/bin/glib-genmarshal.exe
+endif
 
 # Use -g flag when building debug version of Gcompris (including plugins).
 # Use -fnative-struct instead of -mms-bitfields when using mingw 1.1
@@ -22,7 +39,16 @@ DLL_LD_FLAGS += -Wl,--enable-auto-image-base
 
 DEFINES += 	-DHAVE_CONFIG_H
 
-LOCAL_PREFIX:=/home/bruno/Projets/gcompris/windows
+ifneq ($(CROSSCOMPILER),)
+	# CROSS COMPILATION
+	LOCAL_PREFIX:=/home/bruno/Projets/gcompris/windows
+	MSVCR71_DLL:=$(LOCAL_PREFIX)/msvcr71.dll
+else
+	# MSYS CASE
+	LOCAL_PREFIX:=
+	MSVCR71_DLL:=/c/WINDOWS/system32/msvcr71.dll
+endif
+
 GTK_TOP :=		$(LOCAL_PREFIX)/gtk
 GLIB_TOP :=		$(LOCAL_PREFIX)/gtk
 CAIRO_TOP :=		$(LOCAL_PREFIX)/gtk
@@ -33,3 +59,5 @@ PYTHON_TOP :=		$(LOCAL_PREFIX)/Python24
 GNUCAP_TOP :=		$(LOCAL_PREFIX)/gnucap
 SQLITE_TOP :=		$(LOCAL_PREFIX)/sqlite
 FONTCONFIG_TOP :=	$(LOCAL_PREFIX)/fontconfig
+ICONV_TOP :=		$(LOCAL_PREFIX)/iconv
+FREETYPE_TOP :=		$(LOCAL_PREFIX)/freetype

@@ -21,15 +21,15 @@ NEEDED_DLLS =		$(GNUCAP_TOP)/src/MSW/gnucap.exe \
 			$(GNUCHESS_TOP)/bin/gnuchess.exe \
 			$(GNUCHESS_TOP)/bin/libreadline.dll \
 	    		$(GNUCHESS_TOP)/bin/pthreadGC2.dll \
-			$(GTK_TOP)/bin/freetype6.dll \
+			$(FREETYPE_TOP)/bin/freetype6.dll \
 			$(GTK_TOP)/bin/gspawn-win32-helper.exe \
-			$(GTK_TOP)/bin/iconv.dll \
+			$(ICONV_TOP)/bin/iconv.dll \
 			$(GTK_TOP)/bin/intl.dll \
 			$(GTK_TOP)/bin/libexpat.dll \
 			$(GTK_TOP)/bin/jpeg62.dll \
 			$(GTK_TOP)/bin/libatk-1.0-0.dll \
 			$(GTK_TOP)/bin/libcairo-2.dll \
-			$(GTK_TOP)/bin/libfontconfig-1.dll \
+			$(FONTCONFIG_TOP)/bin/libfontconfig-1.dll \
 			$(GTK_TOP)/bin/libgdk-win32-2.0-0.dll \
 			$(GTK_TOP)/bin/libgdk_pixbuf-2.0-0.dll \
 			$(GTK_TOP)/bin/libglib-2.0-0.dll \
@@ -41,19 +41,20 @@ NEEDED_DLLS =		$(GNUCAP_TOP)/src/MSW/gnucap.exe \
 			$(GTK_TOP)/bin/libpangocairo-1.0-0.dll \
 			$(GTK_TOP)/bin/libpangoft2-1.0-0.dll \
 			$(GTK_TOP)/bin/libpangowin32-1.0-0.dll \
-			$(GTK_TOP)/bin/libpng13.dll \
+			$(GTK_TOP)/bin/libpng12-0.dll \
 			$(GTK_TOP)/bin/zlib1.dll \
+			$(GTK_TOP)/bin/libgio-2.0-0.dll \
 			$(LIBXML2_TOP)/bin/libxml2.dll \
 			$(PYTHON_TOP)/python24.dll \
 			$(SDL_TOP)/bin/SDL.dll \
 			$(SDL_TOP)/bin/SDL_mixer.dll \
 			$(SQLITE_TOP)/sqlite3.dll \
-			/c/WINDOWS/system32/msvcr71.dll
+			$(MSVCR71_DLL)
 
 NEEDED_FILES =		README \
 	     		README.mingw \
 			COPYING \
-			Changelog
+			ChangeLog
 
 ##
 ##
@@ -80,7 +81,7 @@ install: all
 	rm -f $(GCOMPRIS_INSTALL_DIR)/share/gcompris/python/admin/Makefile*
 
 
-# Copy mandratory files for the package in the package directory
+# Copy mandatory files for the package in the package directory
 prepack:
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)/GTK
 	cp $(NEEDED_DLLS) $(GCOMPRIS_INSTALL_DIR)
@@ -89,9 +90,10 @@ prepack:
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)/GTK/share
 	cp -r $(GTK_TOP)/share/themes $(GCOMPRIS_INSTALL_DIR)/share
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)/lib
-	cp -r $(GTK_TOP)/lib/locale $(GCOMPRIS_INSTALL_DIR)/lib
+	cp -r $(GTK_TOP)/share/locale $(GCOMPRIS_INSTALL_DIR)/lib
 	cp -r $(GTK_TOP)/lib/gtk-2.0 $(GCOMPRIS_INSTALL_DIR)/lib
 
+# THIS STAGE MUST BE DONE ON WINDOWS
 python:
 	cp $(PYTHON_TOP)/DLLs/tcl84.dll $(GCOMPRIS_INSTALL_DIR)
 	cp $(PYTHON_TOP)/DLLs/tk84.dll $(GCOMPRIS_INSTALL_DIR)
@@ -107,6 +109,8 @@ installer:
 clean:
 	$(MAKE) -C $(GCOMPRIS_SRC) -f Makefile.mingw clean
 	$(MAKE) -C $(GCOMPRIS_BOARDS) -f Makefile.mingw clean
+	$(MAKE) -C ./src/libart_lgpl -f Makefile.mingw clean
+	$(MAKE) -C ./src/libgnomecanvas -f Makefile.mingw clean
 	rm -rf config.h
 	rm -rf gcompris*.exe
 
