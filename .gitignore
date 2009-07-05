@@ -5,7 +5,6 @@
 .deps
 .libs
 Makefile
-Makefile.mingw
 Makefile.in
 stamp-h1
 aclocal.m4
