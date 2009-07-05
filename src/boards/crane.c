@@ -108,7 +108,7 @@ static gboolean moving = FALSE;
 static move_object my_move;
 static int list_answer[CRANE_FRAME_LINE * CRANE_FRAME_COLUMN];
 static int list_game[CRANE_FRAME_LINE * CRANE_FRAME_COLUMN];
-static GnomeCanvasPoints *crane_rope;
+static GnomeCanvasPoints *crane_rope = NULL;
 
 // gcompris functions
 static void	 start_board (GcomprisBoard *agcomprisBoard);
@@ -277,7 +277,8 @@ static void crane_destroy_all_items()
     timer_id = 0;
   }
 
-  gnome_canvas_points_free(crane_rope);
+  if (crane_rope)
+    gnome_canvas_points_free(crane_rope);
 
   if(boardRootItem != NULL)
 	gtk_object_destroy (GTK_OBJECT(boardRootItem));
