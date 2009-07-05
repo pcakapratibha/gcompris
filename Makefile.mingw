@@ -88,7 +88,6 @@ prepack:
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)/GTK/share
 	cp -r $(GTK_TOP)/share/themes $(GCOMPRIS_INSTALL_DIR)/share
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)/lib
-	cp -r $(GTK_TOP)/share/locale $(GCOMPRIS_INSTALL_DIR)/lib
 	cp -r $(GTK_TOP)/lib/gtk-2.0 $(GCOMPRIS_INSTALL_DIR)/lib
 
 # THIS STAGE MUST BE DONE ON WINDOWS
