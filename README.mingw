@@ -55,14 +55,8 @@ Look at the NEEDED_DLLS section in the Makefile.mingw and make sure you have all
 
 2.6 PREREQUISITE SUMMARY
 ========================
-* At this point, you must have the following subdirectories:
-GTK_TOP :=		/gtk
-GNUWIN32_TOP :=		/gnuwin32
-LIBXML2_TOP :=		/libxml2
-SDL_TOP :=		/sdl
-CANVAS_TOP :=		/gnomecanvas
-GNUCHESS_TOP :=		/gnuchess
-
+Check the file global_win32.mak to know which dependancies must
+be provided and where.
 
 3: BUILDING GCOMPRIS.EXE
 ========================
