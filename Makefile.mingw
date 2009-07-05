@@ -14,8 +14,6 @@ GCOMPRIS_INSTALL_DIR = ./win32-install-dir
 
 include global_win32.mak
 
-MAKENSIS := "/c/Program Files/NSIS/makensis.exe"
-
 # These will be copied in the win32-install-dir ready to be packaged.
 NEEDED_DLLS =		$(GNUCAP_TOP)/src/MSW/gnucap.exe \
 			$(GNUCHESS_TOP)/bin/gnuchess.exe \
