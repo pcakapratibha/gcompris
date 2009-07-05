@@ -10,16 +10,9 @@
 
 GCOMPRIS_PLUGINS := 	.
 GCOMPRIS_TOP :=		../..
-GTK_TOP :=		/gtk
-GLIB_TOP :=		/glib
-GNUWIN32_TOP :=		/gnuwin32
-LIBXML2_TOP :=		/libxml2
-SDL_TOP :=		/sdl
-CANVAS_TOP :=		/gnomecanvas
-PYTHON_TOP :=		/c/Python24
-CAIRO_TOP :=		/cairo
+CANVAS_TOP :=		$(GCOMPRIS_TOP)/src/libgnomecanvas
+LIBART_TOP :=		$(GCOMPRIS_TOP)/src/libart_lgpl
 GCOMPRIS_INSTALL_DIR :=	$(GCOMPRIS_TOP)/win32-install-dir
-SQLITE_TOP := /sqlite
 
 ##
 ## VARIABLE DEFINITIONS
@@ -49,12 +42,11 @@ INCLUDE_PATHS +=	-I$(GCOMPRIS_PLUGINS) \
 			-I$(GTK_TOP)/include/gtk-2.0 \
 			-I$(GLIB_TOP)/include/glib-2.0 \
 			-I$(GTK_TOP)/include/pango-1.0 \
-			-I$(GTK_TOP)/include/atk-1.0 \
 			-I$(GLIB_TOP)/lib/glib-2.0/include \
 			-I$(GTK_TOP)/lib/gtk-2.0/include \
-			-I$(CANVAS_TOP)/include/libgnomecanvas-2.0 \
+			-I$(CANVAS_TOP) \
 			-I$(GTK_TOP)/include/atk-1.0 \
-			-I$(GTK_TOP)/include/libart-2.0 \
+			-I$(LIBART_TOP) \
 			-I$(GTK_TOP)/include/freetype2 \
 			-I$(LIBXML2_TOP)/include \
 			-I$(GNUWIN32_TOP)/include \

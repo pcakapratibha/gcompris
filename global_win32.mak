@@ -15,9 +15,22 @@ CFLAGS += -g -Wall -mno-cygwin -mms-bitfields
 
 # If not specified, dlls are built with the default base address of 0x10000000.
 # When loaded into a process address space a dll will be rebased if its base
-# address colides with the base address of an existing dll.  To avoid rebasing 
+# address colides with the base address of an existing dll.  To avoid rebasing
 # we do the following.  Rebasing can slow down the load time of dlls and it
 # also renders debug info useless.
 DLL_LD_FLAGS += -Wl,--enable-auto-image-base
 
 DEFINES += 	-DHAVE_CONFIG_H
+
+LOCAL_PREFIX:=
+GTK_TOP :=		$(LOCAL_PREFIX)/gtk
+GLIB_TOP :=		$(LOCAL_PREFIX)/gtk
+CAIRO_TOP :=		$(LOCAL_PREFIX)/gtk
+GNUWIN32_TOP :=		$(LOCAL_PREFIX)/gnuwin32
+LIBXML2_TOP :=		$(LOCAL_PREFIX)/libxml2
+SDL_TOP :=		$(LOCAL_PREFIX)/sdl
+GNUCHESS_TOP :=		$(LOCAL_PREFIX)/gnuchess
+PYTHON_TOP :=		$(LOCAL_PREFIX)/Python24
+GNUCAP_TOP :=		$(LOCAL_PREFIX)/gnucap
+SQLITE_TOP :=		$(LOCAL_PREFIX)/sqlite
+FONTCONFIG_TOP :=	$(LOCAL_PREFIX)/fontconfig
