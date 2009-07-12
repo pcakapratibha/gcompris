@@ -2,10 +2,12 @@
 *.l[oa]
 *.pyc
 *~
+*.exe
 .deps
 .libs
 Makefile
 Makefile.in
+Makefile.mingw
 stamp-h1
 aclocal.m4
 autom4te.cache/

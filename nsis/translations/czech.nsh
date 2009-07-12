@@ -9,20 +9,10 @@
 ;;
 
 
-; License Page
-!define GCOMPRIS_LICENSE_BUTTON			"Další >"
-!define GCOMPRIS_LICENSE_BOTTOM_TEXT		"K použití $(^Name) se vztahuje GPL licence. Licence je zde uvedena pouze pro Vaší informaci. $_CLICK"
-
-; Components Page
-!define GCOMPRIS_SECTION_TITLE                  "GCompris"
-!define GCOMPRIS_SECTION_DESCRIPTION		"Základní soubory a DLL pro GCompris"
-
-
 ; Installer Finish Page
 !define GCOMPRIS_FINISH_VISIT_WEB_SITE		"Navštívit Windows GCompris Web Page"
 
 ; GCompris Section Prompts and Texts
-!define GCOMPRIS_UNINSTALL_DESC			"GCompris (odinstalovat)"
 !define GCOMPRIS_PROMPT_WIPEOUT			"Váš starý adresáø pro GCompris bude vymazán. Chcete pokraèovat?$\r$\rUpozornìní: Jakákoli nestandardní rozšíøení (plugin) , která máte nainstalována budou ztracena.$\rUživatelská nastavení pro GCompris budou zachována."
 !define GCOMPRIS_PROMPT_DIR_EXISTS		"Adresáø který byl zadán pro instalaci již existuje. Veškerý obsah$\rbude smazán. Chcete pokraèovat?"
 
