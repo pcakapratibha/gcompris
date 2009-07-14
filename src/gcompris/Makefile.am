@@ -55,6 +55,7 @@ INCLUDES = \
         $(sqlite_cflags) \
 	$(GNET_CFLAGS) \
 	$(cairo_cflags) \
+	$(AUDIO_CFLAGS) \
 	$(NSBUNDLE_CPPFLAGS)
 
 gcompris_SOURCES = \
@@ -114,6 +115,7 @@ gcompris_SOURCES = \
 	skin.h \
 	soundutil.c \
 	soundutil.h \
+	gstreamer.c \
 	timer.c \
 	timer.h \
 	wordlist.c \
@@ -126,6 +128,7 @@ gcompris_LDFLAGS = \
 
 gcompris_LDADD = \
 	$(GCOMPRIS_LIBS) $(sqlite_ldadd) $(XML_LIBS) $(GNET_LIBS) \
+	$(AUDIO_LIBS) \
         $(INTLLIBS) $(NSBUNDLE_LDFLAGS) $(XF86VM_LIBS)
 
 EXTRA_DIST = \
