@@ -54,6 +54,21 @@ gc_sound_policy_get()
   return sound_policy;
 }
 
+void
+gc_sound_close()
+{
+  gc_sound_bg_close();
+  gc_sound_fx_close();
+}
+
+
+void
+gc_sound_reopen()
+{
+  gc_sound_bg_reopen();
+  gc_sound_fx_reopen();
+}
+
 GSList *
 gc_sound_get_music_list()
 {

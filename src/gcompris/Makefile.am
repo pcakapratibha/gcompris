@@ -54,8 +54,8 @@ INCLUDES = \
 	-DGNOME_DISABLE_DEPRECATED \
         $(sqlite_cflags) \
 	$(GNET_CFLAGS) \
-	$(cairo_cflags) \
 	$(AUDIO_CFLAGS) \
+	$(cairo_cflags) \
 	$(NSBUNDLE_CPPFLAGS)
 
 gcompris_SOURCES = \
@@ -116,6 +116,9 @@ gcompris_SOURCES = \
 	soundutil.c \
 	soundutil.h \
 	gstreamer.c \
+	soundutil_sdl.c \
+	soundutil_sdl.h \
+	sdlplayer.c \
 	timer.c \
 	timer.h \
 	wordlist.c \
