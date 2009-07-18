@@ -5,27 +5,24 @@
 # wide definitions.
 #
 
-#
-# PATHS
-#
+OS:=$(OS)
 
-INCLUDE_DIR :=		.
-GTK_TOP :=		/gtk
-GLIB_TOP :=		/gtk
-GNUWIN32_TOP :=		/gtk
-LIBXML2_TOP :=		/libxml2
-GSTREAMER_TOP :=	/gtk
-PYTHON_TOP :=		/Python24
-CAIRO_TOP :=		/gtk
-CANVAS_TOP :=		/gnomecanvas
-GCOMPRIS_INSTALL_DIR :=	$(GCOMPRIS_TOP)/win32-install-dir
-SQLITE_TOP :=		/sqlite
-GNUCHESS_TOP :=		/gnuchess
-PYTHON_DLL :=		/c/WINDOWS/system32/python24.dll
-GNUCAP_TOP :=		/gnucap
-MAKENSIS :=		"/c/Program Files/NSIS/makensis.exe"
+ifeq ($(OS),)
+	CROSSCOMPILER=i586-mingw32msvc-
+else
+	CROSSCOMPILER=
+endif
 
-CC = gcc.exe
+CC = $(CROSSCOMPILER)gcc
+AR = $(CROSSCOMPILER)ar
+RANLIB = $(CROSSCOMPILER)ranlib
+WINDRES = $(CROSSCOMPILER)windres
+
+ifneq ($(CROSSCOMPILER),)
+	GLIB_GENMARSHAL := glib-genmarshal
+else
+	GLIB_GENMARSHAL := $(GTK_TOP)/bin/glib-genmarshal.exe
+endif
 
 # Use -g flag when building debug version of Gcompris (including plugins).
 # Use -fnative-struct instead of -mms-bitfields when using mingw 1.1
@@ -41,3 +38,28 @@ CFLAGS += -g -Wall -mno-cygwin -mms-bitfields
 DLL_LD_FLAGS += -Wl,--enable-auto-image-base
 
 DEFINES += 	-DHAVE_CONFIG_H
+
+ifneq ($(CROSSCOMPILER),)
+	# CROSS COMPILATION
+	LOCAL_PREFIX:=/home/bruno/Projets/gcompris/windows
+	MSVCR71_DLL:=$(LOCAL_PREFIX)/msvcr71.dll
+	MAKENSIS:=makensis
+else
+	# MSYS CASE
+	LOCAL_PREFIX:=
+	MSVCR71_DLL:=/c/WINDOWS/system32/msvcr71.dll
+	MAKENSIS:="/c/Program Files/NSIS/makensis.exe"
+endif
+
+GTK_TOP :=		$(LOCAL_PREFIX)/gtk
+GLIB_TOP :=		$(LOCAL_PREFIX)/gtk
+CAIRO_TOP :=		$(LOCAL_PREFIX)/gtk
+LIBXML2_TOP :=		$(LOCAL_PREFIX)/libxml2
+SDL_TOP :=		$(LOCAL_PREFIX)/sdl
+GNUCHESS_TOP :=		$(LOCAL_PREFIX)/gnuchess
+PYTHON_TOP :=		$(LOCAL_PREFIX)/Python24
+GNUCAP_TOP :=		$(LOCAL_PREFIX)/gnucap
+SQLITE_TOP :=		$(LOCAL_PREFIX)/sqlite
+FONTCONFIG_TOP :=	$(LOCAL_PREFIX)/fontconfig
+ICONV_TOP :=		$(LOCAL_PREFIX)/iconv
+FREETYPE_TOP :=		$(LOCAL_PREFIX)/freetype

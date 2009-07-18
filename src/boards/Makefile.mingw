@@ -10,6 +10,9 @@
 
 GCOMPRIS_PLUGINS := 	.
 GCOMPRIS_TOP :=		../..
+CANVAS_TOP :=		$(GCOMPRIS_TOP)/src/libgnomecanvas
+LIBART_TOP :=		$(GCOMPRIS_TOP)/src/libart_lgpl
+GCOMPRIS_INSTALL_DIR :=	$(GCOMPRIS_TOP)/win32-install-dir
 
 ##
 ## VARIABLE DEFINITIONS
@@ -39,27 +42,25 @@ INCLUDE_PATHS +=	-I$(GCOMPRIS_PLUGINS) \
 			-I$(GTK_TOP)/include/gtk-2.0 \
 			-I$(GLIB_TOP)/include/glib-2.0 \
 			-I$(GTK_TOP)/include/pango-1.0 \
-			-I$(GTK_TOP)/include/atk-1.0 \
 			-I$(GLIB_TOP)/lib/glib-2.0/include \
 			-I$(GTK_TOP)/lib/gtk-2.0/include \
+			-I$(CANVAS_TOP) \
 			-I$(GTK_TOP)/include/atk-1.0 \
+			-I$(LIBART_TOP) \
 			-I$(GTK_TOP)/include/freetype2 \
 			-I$(LIBXML2_TOP)/include \
-			-I$(GNUWIN32_TOP)/include \
 			-I$(GCOMPRIS_TOP) \
 			-I$(GCOMPRIS_TOP)/src \
 			-I$(CAIRO_TOP)/include/cairo \
 			-I$(PYTHON_TOP)/include \
 			-I$(PYTHON_TOP)/include/pygtk-2.0 \
 			-I$(SQLITE_TOP) \
-			-I$(CANVAS_TOP)/include/libgnomecanvas-2.0 \
-			-I$(CANVAS_TOP)/include/libart-2.0
+			-I$(ICONV_TOP)/include
 
 
 
 LIB_PATHS =		-L$(GTK_TOP)/lib \
 			-L$(LIBXML2_TOP)/lib \
-			-L$(GNUWIN32_TOP)/lib \
 			-L$(SDL_TOP)/lib \
 			-L$(GCOMPRIS_TOP)/src/gcompris \
 			-L$(PYTHON_TOP)/lib
@@ -76,6 +77,8 @@ LIBS =			-lgtk-win32-2.0 \
 			-lgmodule-2.0 \
 			-lgdk_pixbuf-2.0 \
 			-lpango-1.0 \
+			-lgnomecanvas-2 \
+			-lart_lgpl_2 \
 			-lpangoft2-1.0 \
 			-latk-1.0 \
 			-lpangowin32-1.0 \
@@ -108,6 +111,7 @@ PYTHON_C_SRC = \
 	     canvas.c \
 	     canvasmodule.c \
 	     py-gcompris-board.c \
+	     py-gcompris-boardconfig.c \
 	     py-gcompris-properties.c \
 	     py-gcompris-profile.c \
 	     py-gcompris-wordlist.c \
@@ -130,7 +134,7 @@ BOARDS_C_SRC =	\
 	algebra_guesscount.c \
 	awele.c awele_utils.c awele_alphaBeta.c \
 	canal_lock.c \
-	chess.c chess_position.c chess_notation.c \
+	chess_windows.c chess_position.c chess_notation.c \
 	click_on_letter.c \
 	clickgame.c \
 	clockgame.c \
@@ -151,6 +155,7 @@ BOARDS_C_SRC =	\
 	memory.c \
 	menu2.c \
 	missingletter.c \
+	missingletter_config.c \
 	money.c \
 	money_widget.c \
 	paratrooper.c \
@@ -194,7 +199,7 @@ libboards: \
 libboards.a: $(BOARDS_OBJECTS)
 	-rm -f libboards.a
 	$(AR) cru libboards.a $(BOARDS_OBJECTS)
-	ranlib libboards.a
+	$(RANLIB) libboards.a
 
 ##
 ## CLEAN RULES

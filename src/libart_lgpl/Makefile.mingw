@@ -1,22 +1,21 @@
 #
 # Makefile.mingw
 #
+# Description: Makefile for win32 (mingw) version of GCompris
+#
 
 #
 # PATHS
 #
 
-GCOMPRIS_PLUGINS := 	.
+INCLUDE_DIR :=		.
 GCOMPRIS_TOP :=		../..
-GTK_TOP :=		/gtk
-GLIB_TOP :=		/glib
-GNUWIN32_TOP :=		/gnuwin32
 
 ##
 ## VARIABLE DEFINITIONS
 ##
 
-# Compiler Options
+# Compiler and Linker Options
 
 CFLAGS =
 
@@ -24,6 +23,8 @@ DEFINES =
 
 .SUFFIXES:
 .SUFFIXES: .c .a
+
+LDFLAGS = -mwindows -mno-cygwin -mms-bitfields
 
 ##
 ## INCLUDE  MAKEFILES
@@ -42,18 +43,14 @@ INCLUDE_PATHS +=	-I$(GTK_TOP)/include \
 			-I$(GTK_TOP)/include/atk-1.0 \
 			-I$(GLIB_TOP)/lib/glib-2.0/include \
 			-I$(GTK_TOP)/lib/gtk-2.0/include \
-			-I$(GTK_TOP)/include/atk-1.0 \
+			-I$(LIBART_TOP) \
 			-I$(GTK_TOP)/include/freetype2 \
-			-I$(GNUWIN32_TOP)/include \
+			-I$(LIBXML2_TOP)/include \
 			-I$(GCOMPRIS_TOP) \
-			-I$(GCOMPRIS_TOP)/src
+			-I$(GCOMPRIS_TOP)/src \
+			-I$(CAIRO_TOP)/include/cairo
 
-
-
-
-LIB_PATHS =		-L$(GTK_TOP)/lib \
-			-L$(GNUWIN32_TOP)/lib
-
+LIB_PATHS =		-L$(GTK_TOP)/lib
 
 ##
 ## LIBRARIES
@@ -66,6 +63,7 @@ LIBS =			-lgtk-win32-2.0 \
 			-lgmodule-2.0 \
 			-lgdk_pixbuf-2.0 \
 			-lpango-1.0 \
+			-lpangoft2-1.0 \
 			-latk-1.0 \
 			-lpangowin32-1.0 \
 			-lgdi32 -lgthread-2.0 \
@@ -73,23 +71,68 @@ LIBS =			-lgtk-win32-2.0 \
 			-lws2_32
 
 ##
-## RULES
-##
-
-##
 ## TARGET DEFINITIONS
 ##
 
 .PHONY: all clean
 
-all: libart_lgpl
+all: art_config.h libart_lgpl
 
 install:
 
-##
-##  SOURCES, OBJECTS
-##
-LIBART_C_SRC = \
+gen_art_config.exe: gen_art_config.c
+	$(CC) $(LDFLAGS) gen_art_config.c -I$(GCOMPRIS_TOP) $(LIB_PATHS) -o gen_art_config.exe
+
+art_config.h:	gen_art_config.exe
+	./gen_art_config.exe > art_config.h
+
+libart_lgpl_2_a_headers = \
+	art_affine.h \
+	art_alphagamma.h \
+	art_bpath.h \
+	art_config.h \
+	art_filterlevel.h \
+	art_gray_svp.h \
+	art_misc.h \
+	art_pathcode.h \
+	art_pixbuf.h \
+	art_point.h \
+	art_rect.h \
+	art_rect_svp.h \
+	art_rect_uta.h \
+	art_render.h \
+	art_render_gradient.h \
+	art_render_mask.h \
+	art_render_svp.h \
+	art_rgb.h \
+	art_rgb_affine.h \
+	art_rgb_bitmap_affine.h \
+	art_rgb_pixbuf_affine.h \
+	art_rgb_rgba_affine.h \
+	art_rgb_a_affine.h \
+	art_rgb_svp.h \
+	art_rgba.h \
+	art_svp.h \
+	art_svp_intersect.h \
+	art_svp_ops.h \
+	art_svp_point.h \
+	art_svp_render_aa.h \
+	art_svp_vpath.h \
+	art_svp_vpath_stroke.h \
+	art_svp_wind.h \
+	art_uta.h \
+	art_uta_ops.h \
+	art_uta_rect.h \
+	art_uta_vpath.h \
+	art_uta_svp.h \
+	art_vpath.h \
+	art_vpath_bpath.h \
+	art_vpath_dash.h \
+	art_vpath_svp.h	\
+	libart.h	\
+	libart-features.h
+
+libart_lgpl_2_a_SOURCES = \
 	art_affine.c \
 	art_alphagamma.c \
 	art_bpath.c \
@@ -130,12 +173,12 @@ LIBART_C_SRC = \
 	art_vpath_bpath.c \
 	art_vpath_dash.c \
 	art_vpath_svp.c	\
+	libart-features.c
 
-LIBART_OBJECTS = $(LIBART_C_SRC:%.c=%.o)
-
+OBJECTS = $(libart_lgpl_2_a_SOURCES:%.c=%.o)
 
 #
-# BUILD staticlibrary
+# BUILD Boards staticlibrary
 #
 
 # How to make a C file
@@ -149,10 +192,10 @@ LIBART_OBJECTS = $(LIBART_C_SRC:%.c=%.o)
 libart_lgpl: \
 		libart_lgpl.a
 
-libart_lgpl.a: $(LIBART_OBJECTS)
+libart_lgpl.a: $(OBJECTS)
 	-rm -f libart_lgpl.a
-	$(AR) cru libart_lgpl.a $(LIBART_OBJECTS)
-	ranlib libart_lgpl.a
+	$(AR) cru libart_lgpl.a $(OBJECTS)
+	$(RANLIB) libart_lgpl.a
 
 ##
 ## CLEAN RULES
@@ -161,3 +204,5 @@ libart_lgpl.a: $(LIBART_OBJECTS)
 clean:
 	rm -rf *.o
 	rm -rf *.a
+
+

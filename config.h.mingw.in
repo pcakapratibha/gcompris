@@ -139,3 +139,5 @@
 /* Activation code is disabled */
 /* #define DISABLE_ACTIVATION_CODE 1 */
 
+/* sdl mixer is enabled */
+#define USE_SDLMIXER

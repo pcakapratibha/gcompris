@@ -1,23 +1,28 @@
+
+CLEANFILES = $(marshal_sources)
+
+
 #
 # Makefile.mingw
+#
+# Description: Makefile for win32 (mingw) version of GCompris
 #
 
 #
 # PATHS
 #
 
-GCOMPRIS_PLUGINS := 	.
+INCLUDE_DIR :=		.
+LIBART_TOP :=		$(GCOMPRIS_TOP)/libart_lgpl
 GCOMPRIS_TOP :=		../..
-GTK_TOP :=		/gtk
-GLIB_TOP :=		/glib
-GNUWIN32_TOP :=		/gnuwin32
-CAIRO_TOP :=		/cairo
+GCOMPRIS_SRC :=		.
+GCOMPRIS_INSTALL_DIR :=	$(GCOMPRIS_TOP)/win32-install-dir
 
 ##
 ## VARIABLE DEFINITIONS
 ##
 
-# Compiler Options
+# Compiler and Linker Options
 
 CFLAGS =
 
@@ -25,6 +30,8 @@ DEFINES =
 
 .SUFFIXES:
 .SUFFIXES: .c .a
+
+LDFLAGS = -mwindows -mno-cygwin -mms-bitfields
 
 ##
 ## INCLUDE  MAKEFILES
@@ -43,19 +50,19 @@ INCLUDE_PATHS +=	-I$(GTK_TOP)/include \
 			-I$(GTK_TOP)/include/atk-1.0 \
 			-I$(GLIB_TOP)/lib/glib-2.0/include \
 			-I$(GTK_TOP)/lib/gtk-2.0/include \
-			-I$(GTK_TOP)/include/atk-1.0 \
+			-I$(LIBART_TOP) \
 			-I$(GTK_TOP)/include/freetype2 \
-			-I$(GNUWIN32_TOP)/include \
-			-I$(CAIRO_TOP)/include/cairo \
+			-I$(LIBXML2_TOP)/include \
 			-I$(GCOMPRIS_TOP) \
-			-I$(GCOMPRIS_TOP)/src
-
-
+			-I$(GCOMPRIS_TOP)/src \
+			-I$(CAIRO_TOP)/include/cairo \
+			-I$(FONTCONFIG_TOP) \
+			-I$(FREETYPE_TOP)/include \
+			-I$(FREETYPE_TOP)/include/freetype2/
 
 
 LIB_PATHS =		-L$(GTK_TOP)/lib \
-			-L$(GNUWIN32_TOP)/lib
-
+	  		-L$(FREETYPE_TOP)/lib
 
 ##
 ## LIBRARIES
@@ -68,6 +75,7 @@ LIBS =			-lgtk-win32-2.0 \
 			-lgmodule-2.0 \
 			-lgdk_pixbuf-2.0 \
 			-lpango-1.0 \
+			-lpangoft2-1.0 \
 			-latk-1.0 \
 			-lpangowin32-1.0 \
 			-lgdi32 -lgthread-2.0 \
@@ -75,23 +83,47 @@ LIBS =			-lgtk-win32-2.0 \
 			-lws2_32
 
 ##
-## RULES
-##
-
-##
 ## TARGET DEFINITIONS
 ##
 
 .PHONY: all clean
 
-all: libgnomecanvas
+all:  libgnomecanvas
 
 install:
 
-##
-##  SOURCES, OBJECTS
-##
-LIBGNOMECANVAS_C_SRC = \
+marshal_sources =                               \
+        gnome-canvas-marshal.c                  \
+        gnome-canvas-marshal.h
+
+libgnomecanvas: $(marshal_sources)
+
+BUILT_SOURCES =                                 \
+        $(marshal_sources)
+
+gnome-canvas-marshal.h: gnome-canvas-marshal.list
+	$(GLIB_GENMARSHAL) $< --header --prefix=gnome_canvas_marshal > $@
+gnome-canvas-marshal.c: gnome-canvas-marshal.list
+	$(GLIB_GENMARSHAL) $< --body --prefix=gnome_canvas_marshal > $@
+
+
+libgnomecanvasinclude_headers =			\
+	gnome-canvas-shape.h			\
+	gnome-canvas-bpath.h			\
+	gnome-canvas-clipgroup.h		\
+	gnome-canvas-line.h			\
+	gnome-canvas-pixbuf.h			\
+	gnome-canvas-polygon.h			\
+	gnome-canvas-rect-ellipse.h		\
+	gnome-canvas-text.h			\
+	gnome-canvas-rich-text.h		\
+	gnome-canvas-util.h			\
+	gnome-canvas-widget.h			\
+	gnome-canvas-path-def.h			\
+	gnome-canvas.h				\
+	libgnomecanvas.h
+
+libgnomecanvas_2_a_SOURCES =			\
 	gnome-canvas-shape.c			\
 	gnome-canvas-shape-private.h		\
 	gnome-canvas-bpath.c			\
@@ -107,14 +139,14 @@ LIBGNOMECANVAS_C_SRC = \
 	gnome-canvas-util.c			\
 	gnome-canvas-widget.c			\
 	gnome-canvas.c				\
-	libgnomecanvastypes.c			\
-	gnome-canvas-marshal.c
+	libgnomecanvastypes.c
 
-LIBGNOMECANVAS_OBJECTS = $(LIBGNOMECANVAS_C_SRC:%.c=%.o)
 
+
+OBJECTS = $(libgnomecanvas_2_a_SOURCES:%.c=%.o)
 
 #
-# BUILD staticlibrary
+# BUILD Boards staticlibrary
 #
 
 # How to make a C file
@@ -128,10 +160,10 @@ LIBGNOMECANVAS_OBJECTS = $(LIBGNOMECANVAS_C_SRC:%.c=%.o)
 libgnomecanvas: \
 		libgnomecanvas.a
 
-libgnomecanvas.a: $(LIBGNOMECANVAS_OBJECTS)
+libgnomecanvas.a: $(OBJECTS)
 	-rm -f libgnomecanvas.a
-	$(AR) cru libgnomecanvas.a $(LIBGNOMECANVAS_OBJECTS)
-	ranlib libgnomecanvas.a
+	$(AR) cru libgnomecanvas.a $(OBJECTS)
+	$(RANLIB) libgnomecanvas.a
 
 ##
 ## CLEAN RULES
@@ -140,3 +172,4 @@ libgnomecanvas.a: $(LIBGNOMECANVAS_OBJECTS)
 clean:
 	rm -rf *.o
 	rm -rf *.a
+	rm -rf $(marshal_sources)

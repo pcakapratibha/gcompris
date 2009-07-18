@@ -57,8 +57,8 @@ SetDateSave on
   !define MUI_HEADERIMAGE_BITMAP		".\nsis\gcompris-header.bmp"
 
   ; Alter License section
-  !define MUI_LICENSEPAGE_BUTTON		$(GcomprisLicenseButton)
-  !define MUI_LICENSEPAGE_TEXT_BOTTOM		$(GcomprisLicenseBottomText)
+  !define MUI_LICENSEPAGE_BUTTON              "$(^NextBtn)"
+  !define MUI_LICENSEPAGE_TEXT_BOTTOM         "$(^LicenseText)"
 
   !define MUI_COMPONENTSPAGE_SMALLDESC
   !define MUI_ABORTWARNING
@@ -232,7 +232,7 @@ Section "GCompris" SecGcompris
     WriteRegStr HKLM "${HKLM_APP_PATHS_KEY}" "Path" "$R1\bin"
     WriteRegStr HKLM ${GCOMPRIS_REG_KEY} "" "$INSTDIR"
     WriteRegStr HKLM ${GCOMPRIS_REG_KEY} "Version" "${GCOMPRIS_VERSION}"
-    WriteRegStr HKLM "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" $(GcomprisUninstallDesc)
+    WriteRegStr HKLM "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" "GCompris Uninstall"
     WriteRegStr HKLM "${GCOMPRIS_UNINSTALL_KEY}" "UninstallString" "$INSTDIR\${GCOMPRIS_UNINST_EXE}"
     ; Sets scope of the desktop and Start Menu entries for all users.
     SetShellVarContext "all"
@@ -241,7 +241,7 @@ Section "GCompris" SecGcompris
   gcompris_hkcu:
     WriteRegStr HKCU ${GCOMPRIS_REG_KEY} "" "$INSTDIR"
     WriteRegStr HKCU ${GCOMPRIS_REG_KEY} "Version" "${GCOMPRIS_VERSION}"
-    WriteRegStr HKCU "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" $(GcomprisUninstallDesc)
+    WriteRegStr HKCU "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" "GCompris Uninstall"
     WriteRegStr HKCU "${GCOMPRIS_UNINSTALL_KEY}" "UninstallString" "$INSTDIR\${GCOMPRIS_UNINST_EXE}"
     Goto gcompris_install_files
 
@@ -422,7 +422,7 @@ SectionEnd ; end of uninstall section
 ;Descriptions
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SecGcompris} \
-	$(GcomprisSectionDescription)
+  "Core GCompris files and dlls"
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
