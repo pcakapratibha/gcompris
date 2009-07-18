@@ -3,6 +3,7 @@
 *.pyc
 *~
 *.desktop
+*.exe
 .deps
 .libs
 Makefile
