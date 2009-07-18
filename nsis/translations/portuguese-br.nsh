@@ -9,17 +9,7 @@
 ;;
 
 
-; License Page
-!define GCOMPRIS_LICENSE_BUTTON			"Avançar >"
-!define GCOMPRIS_LICENSE_BOTTOM_TEXT		"$(^Name) é distribuído sob a licença GPL. Esta licença é disponibilizada aqui apenas para fins informativos. $_CLICK" 
-
-; Components Page
-!define GCOMPRIS_SECTION_TITLE                  "GCompris"
-!define GCOMPRIS_SECTION_DESCRIPTION		"Arquivos e bibliotecas principais do GCompris"
-
-
 ; GCompris Section Prompts and Texts
-!define GCOMPRIS_UNINSTALL_DESC			"GCompris (apenas remover)"
 !define GCOMPRIS_PROMPT_WIPEOUT			"Sua antiga instalação do GCompris está prestes a ser removida. Você gostaria de continuar?$\r$\rNota: Quaisquer plugins não-padrão que você pode ter instalado serão removidos.$\rAs configurações de usuário do GCompris não serão afetadas."
 !define GCOMPRIS_PROMPT_DIR_EXISTS		"O diretório de instalação do que você especificou já existe. Qualquer conteúdo$\rserá deletado. Deseja continuar?"
 

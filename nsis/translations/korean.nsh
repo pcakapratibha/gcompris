@@ -8,13 +8,7 @@
 ;;
 
 
-; Components Page
-!define GCOMPRIS_SECTION_TITLE                  "GCompris"
-!define GCOMPRIS_SECTION_DESCRIPTION		"가임의 코어 파일과 dll"
-
-
 ; GCompris Section Prompts and Texts
-!define GCOMPRIS_UNINSTALL_DESC			"GCompris (remove only)"
 !define GCOMPRIS_PROMPT_WIPEOUT			"가임 디렉토리가 지워질 것입니다. 계속 할까요?$\r$\rNote: 비표준 플러그인은 지워지지 않을 수도 있습니다.$\r가임 사용자 설정에는 영향을 미치지 않습니다."
 !define GCOMPRIS_PROMPT_DIR_EXISTS		"입력하신 설치 디렉토리가 이미 있습니다. 안에 들은 내용이 지워질 수도 있습니다. 계속할까요?"
 
