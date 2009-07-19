@@ -85,8 +85,6 @@ foreach my $lang (@localeKeys) {
     $muiLanguages .= "  !insertmacro MUI_LANGUAGE \"$localeNames{$lang}\"\n";
 }
 
-print $muiLanguages;
-
 # The specific GCompris translation for the installer
 # replacing:
 #   @GCOMPRIS_MACRO_INCLUDE_LANGFILE@
@@ -100,12 +98,38 @@ foreach my $lang (@localeKeys) {
      "\"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\$lang.nsh\"\n";
 }
 
-print $gcomprisLanguages;
+# We have all the data, let's replace it
+my $gcomprisInstaller;
+open (MYFILE, 'gcompris-installer.nsi');
+while (<MYFILE>) {
+    if ($_ =~ /\@INSERTMACRO_MUI_LANGUAGE\@/)
+    {
+	print "Processing \@INSERTMACRO_MUI_LANGUAGE\@\n";
+	$gcomprisInstaller .= $muiLanguages;
+    }
+    elsif ($_ =~ /\@GCOMPRIS_MACRO_INCLUDE_LANGFILE\@/)
+    {
+	print "Processing \@GCOMPRIS_MACRO_INCLUDE_LANGFILE\@\n";
+	$gcomprisInstaller .= $gcomprisLanguages;
+    }
+    else
+    {
+	$gcomprisInstaller .= "$_";
+    }
+}
+close (MYFILE);
+
+# Rewrite the file with the replaced data
+open (MYFILE, '>gcompris-installer.nsi');
+print MYFILE "$gcomprisInstaller";
+close (MYFILE);
 
 # Create each nsh translation file
 
+print "Creating each nsh file\n";
+
 foreach my $lang (@localeKeys) {
-    open (DESC, ">nsis/tt/$lang.nsh");
+    open (DESC, ">nsis/translations/$lang.nsh");
     print DESC ";; Auto generated file by create_nsis_translations.pl\n";
 
     # Extract the string to translate from the nsis_translations file
