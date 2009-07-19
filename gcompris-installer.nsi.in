@@ -57,8 +57,8 @@ SetDateSave on
   !define MUI_HEADERIMAGE_BITMAP		".\nsis\gcompris-header.bmp"
 
   ; Alter License section
-  !define MUI_LICENSEPAGE_BUTTON		$(GCOMPRIS_LICENSE_BUTTON)
-  !define MUI_LICENSEPAGE_TEXT_BOTTOM		$(GCOMPRIS_LICENSE_BOTTOM_TEXT)
+  !define MUI_LICENSEPAGE_BUTTON		$(GcomprisLicenseButton)
+  !define MUI_LICENSEPAGE_TEXT_BOTTOM		$(GcomprisLicenseBottomText)
 
   !define MUI_COMPONENTSPAGE_SMALLDESC
   !define MUI_ABORTWARNING
@@ -66,7 +66,7 @@ SetDateSave on
   ;Finish Page config
   !define MUI_FINISHPAGE_RUN			"$INSTDIR\gcompris.exe"
   !define MUI_FINISHPAGE_RUN_NOTCHECKED
-  !define MUI_FINISHPAGE_LINK			$(GCOMPRIS_FINISH_VISIT_WEB_SITE)
+  !define MUI_FINISHPAGE_LINK			$(GcomprisFinishVisitWebSite)
   !define MUI_FINISHPAGE_LINK_LOCATION          "http://gcompris.net/"
 
 ;--------------------------------
@@ -96,33 +96,7 @@ SetDateSave on
 
   !insertmacro MUI_LANGUAGE "English"
 
-  !insertmacro MUI_LANGUAGE "Albanian"
-  !insertmacro MUI_LANGUAGE "Bulgarian"
-  !insertmacro MUI_LANGUAGE "Catalan"
-  !insertmacro MUI_LANGUAGE "Czech"
-  !insertmacro MUI_LANGUAGE "Danish"
-  !insertmacro MUI_LANGUAGE "SimpChinese"
-  !insertmacro MUI_LANGUAGE "TradChinese"
-  !insertmacro MUI_LANGUAGE "German"
-  !insertmacro MUI_LANGUAGE "Spanish"
-  !insertmacro MUI_LANGUAGE "French"
-  !insertmacro MUI_LANGUAGE "Hebrew"
-  !insertmacro MUI_LANGUAGE "Italian"
-  !insertmacro MUI_LANGUAGE "Japanese"
-  !insertmacro MUI_LANGUAGE "Korean"
-  !insertmacro MUI_LANGUAGE "Hungarian"
-  !insertmacro MUI_LANGUAGE "Dutch"
-  !insertmacro MUI_LANGUAGE "Norwegian"
-  !insertmacro MUI_LANGUAGE "Polish"
-  !insertmacro MUI_LANGUAGE "PortugueseBR"
-  !insertmacro MUI_LANGUAGE "Portuguese"
-  !insertmacro MUI_LANGUAGE "Romanian"
-  !insertmacro MUI_LANGUAGE "Russian"
-  !insertmacro MUI_LANGUAGE "Serbian"
-  !insertmacro MUI_LANGUAGE "Slovak"
-  !insertmacro MUI_LANGUAGE "Slovenian"
-  !insertmacro MUI_LANGUAGE "Finnish"
-  !insertmacro MUI_LANGUAGE "Swedish"
+  @INSERTMACRO_MUI_LANGUAGE@
 
 ;--------------------------------
 ;Translations
@@ -131,34 +105,7 @@ SetDateSave on
 
   !include "${GCOMPRIS_NSIS_INCLUDE_PATH}\langmacros.nsh"
 
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "ALBANIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\albanian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "BULGARIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\bulgarian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "CATALAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\catalan.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "CZECH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\czech.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "DANISH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\danish.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "DUTCH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\dutch.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "ENGLISH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\english.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "FINNISH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\finnish.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "FRENCH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\french.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "GERMAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\german.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "HEBREW"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\hebrew.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "HUNGARIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\hungarian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "ITALIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\italian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "JAPANESE"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\japanese.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "KOREAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\korean.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "NORWEGIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\norwegian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "POLISH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\polish.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "PORTUGUESE"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\portuguese.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "PORTUGUESEBR"	"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\portuguese-br.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "ROMANIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\romanian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "RUSSIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\russian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "SERBIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\serbian-latin.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "SIMPCHINESE"	"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\simp-chinese.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "SLOVAK"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\slovak.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "SLOVENIAN"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\slovenian.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "SPANISH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\spanish.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "SWEDISH"		"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\swedish.nsh"
-  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "TRADCHINESE"	"${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\trad-chinese.nsh"
+  @GCOMPRIS_MACRO_INCLUDE_LANGFILE@
 
 ;--------------------------------
 ;Reserve Files
@@ -221,7 +168,7 @@ Section -SecUninstallOldGcompris
 	  ; We get here because versions 0.60a1 and 0.60a2 don't have versions set in the registry
 	  ; and versions 0.60 and lower did not correctly set the uninstall reg string
 	  ; (the string was set in quotes)
-          MessageBox MB_YESNO $(GCOMPRIS_PROMPT_WIPEOUT) IDYES do_wipeout IDNO cancel_install
+          MessageBox MB_YESNO $(GcomprisPromptWipeout) IDYES do_wipeout IDNO cancel_install
           cancel_install:
             Quit
 
@@ -268,7 +215,7 @@ SectionEnd
 ;--------------------------------
 ;Gcompris Install Section
 
-Section $(GCOMPRIS_SECTION_TITLE) SecGcompris
+Section "GCompris" SecGcompris
   SectionIn 1 RO
 
   ; Check install rights..
@@ -285,7 +232,7 @@ Section $(GCOMPRIS_SECTION_TITLE) SecGcompris
     WriteRegStr HKLM "${HKLM_APP_PATHS_KEY}" "Path" "$R1\bin"
     WriteRegStr HKLM ${GCOMPRIS_REG_KEY} "" "$INSTDIR"
     WriteRegStr HKLM ${GCOMPRIS_REG_KEY} "Version" "${GCOMPRIS_VERSION}"
-    WriteRegStr HKLM "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" $(GCOMPRIS_UNINSTALL_DESC)
+    WriteRegStr HKLM "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" $(GcomprisUninstallDesc)
     WriteRegStr HKLM "${GCOMPRIS_UNINSTALL_KEY}" "UninstallString" "$INSTDIR\${GCOMPRIS_UNINST_EXE}"
     ; Sets scope of the desktop and Start Menu entries for all users.
     SetShellVarContext "all"
@@ -294,7 +241,7 @@ Section $(GCOMPRIS_SECTION_TITLE) SecGcompris
   gcompris_hkcu:
     WriteRegStr HKCU ${GCOMPRIS_REG_KEY} "" "$INSTDIR"
     WriteRegStr HKCU ${GCOMPRIS_REG_KEY} "Version" "${GCOMPRIS_VERSION}"
-    WriteRegStr HKCU "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" $(GCOMPRIS_UNINSTALL_DESC)
+    WriteRegStr HKCU "${GCOMPRIS_UNINSTALL_KEY}" "DisplayName" $(GcomprisUninstallDesc)
     WriteRegStr HKCU "${GCOMPRIS_UNINSTALL_KEY}" "UninstallString" "$INSTDIR\${GCOMPRIS_UNINST_EXE}"
     Goto gcompris_install_files
 
@@ -458,13 +405,13 @@ Section Uninstall
 
   cant_uninstall:
     IfSilent skip_mb
-    MessageBox MB_OK $(un.GCOMPRIS_UNINSTALL_ERROR_1) IDOK
+    MessageBox MB_OK $(unGcomprisUninstallError1) IDOK
     skip_mb:
     Quit
 
   no_rights:
     IfSilent skip_mb1
-    MessageBox MB_OK $(un.GCOMPRIS_UNINSTALL_ERROR_2) IDOK
+    MessageBox MB_OK $(unGcomprisUninstallError2) IDOK
     skip_mb1:
     Quit
 
@@ -475,7 +422,7 @@ SectionEnd ; end of uninstall section
 ;Descriptions
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SecGcompris} \
-	$(GCOMPRIS_SECTION_DESCRIPTION)
+	$(GcomprisSectionDescription)
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
@@ -642,7 +589,7 @@ FunctionEnd
 Function RunCheck
   System::Call 'kernel32::OpenMutex(i 2031617, b 0, t "gcompris_is_running") i .R0'
   IntCmp $R0 0 done
-  MessageBox MB_OK|MB_ICONEXCLAMATION $(GCOMPRIS_IS_RUNNING) IDOK
+  MessageBox MB_OK|MB_ICONEXCLAMATION $(GcomprisIsRunning) IDOK
     Abort
   done:
 FunctionEnd
@@ -650,7 +597,7 @@ FunctionEnd
 Function un.RunCheck
   System::Call 'kernel32::OpenMutex(i 2031617, b 0, t "gcompris_is_running") i .R0'
   IntCmp $R0 0 done
-  MessageBox MB_OK|MB_ICONEXCLAMATION $(GCOMPRIS_IS_RUNNING) IDOK
+  MessageBox MB_OK|MB_ICONEXCLAMATION $(GcomprisIsRunning) IDOK
     Abort
   done:
 FunctionEnd
@@ -659,7 +606,7 @@ Function .onInit
   System::Call 'kernel32::CreateMutexA(i 0, i 0, t "gcompris_installer_running") i .r1 ?e'
   Pop $R0
   StrCmp $R0 0 +3
-    MessageBox MB_OK|MB_ICONEXCLAMATION $(INSTALLER_IS_RUNNING)
+    MessageBox MB_OK|MB_ICONEXCLAMATION $(InstallerIsRunning)
     Abort
   Call RunCheck
   StrCpy $name "Gcompris ${GCOMPRIS_VERSION}"

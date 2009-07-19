@@ -221,6 +221,7 @@ boards/wordprocessor.xml.in
 boards/wordsgame.xml.in
 gcompris-edit.desktop.in
 gcompris.desktop.in
+nsis_translations.desktop.in
 src/boards/advanced_colors.c
 src/boards/algebra.c
 src/boards/algebra_guesscount.c

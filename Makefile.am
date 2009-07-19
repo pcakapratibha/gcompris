@@ -26,8 +26,10 @@ Applications_in_files =
 Applications_DATA =
 else
 Applicationsdir = $(datadir)/applications/
-Applications_in_files = gcompris.desktop.in gcompris-edit.desktop.in
-Applications_DATA = gcompris.desktop gcompris-edit.desktop
+Applications_in_files = gcompris.desktop.in gcompris-edit.desktop.in \
+	nsis_translations.desktop.in
+Applications_DATA = gcompris.desktop gcompris-edit.desktop \
+	nsis_translations.desktop
 endif
 
 @INTLTOOL_DESKTOP_RULE@
