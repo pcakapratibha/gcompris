@@ -2,6 +2,15 @@
 ;; Windows Gcompris NSIS installer language macros
 ;;
 
+!macro GCOMPRIS_MACRO_DEFAULT_STRING LABEL VALUE
+  !ifndef "${LABEL}"
+    !define "${LABEL}" "${VALUE}"
+    !ifdef INSERT_DEFAULT
+      !warning "${LANG} lang file mising ${LABEL}, using default.."
+    !endif
+  !endif
+!macroend
+
 !macro GCOMPRIS_MACRO_LANGSTRING_INSERT LABEL LANG
   LangString "${LABEL}" "${LANG_${LANG}}" "${${LABEL}}"
   !undef "${LABEL}"
@@ -27,15 +36,10 @@
   !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisLicenseButton		${CUR_LANG}
   !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisLicenseBottomText	${CUR_LANG}
 
-  ; Components Page
-  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisSectionTitle		${CUR_LANG}
-  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisSectionDescription	${CUR_LANG}
-
   ; Installer Finish Page
   !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisFinishVisitWebSite	${CUR_LANG}
 
   ; Gcompris Section Prompts and Texts
-  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisUninstallDesc	${CUR_LANG}
   !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisPromptWipeout	${CUR_LANG}
   !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisPromptDirExists	${CUR_LANG}
 
