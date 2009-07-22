@@ -76,6 +76,32 @@ my %localeNames = (
 
 my @localeKeys = keys(%localeNames);
 
+# Create the holder for the results
+# %result{"locale"}{"stringname"} = result line
+print "Parsing nsis_translations.desktop\n";
+my %result;
+
+# Create a hash of the keys to translate
+open (MYFILE, 'nsis_translations.desktop');
+while (<MYFILE>) {
+    chomp $_;
+    if ($_ =~ /Encoding=UTF-8/)
+    {
+	next;
+    }
+    elsif ($_ =~ /^(\w+)=(.*)/)
+    {
+	my $line = "!define $1 \"$2\"\n";
+	$result{"en"}{"$1"} = $line;
+    }
+    elsif ($_ =~ /^(\w+)\[(\w+)\]=(.*)/)
+    {
+	my $line = "!define $1 \"$3\"\n";
+	$result{"$2"}{"$1"} = $line;
+    }
+}
+close (MYFILE);
+
 # Lets insert the default languages
 # in the installer file which means replacing:
 #   @INSERTMACRO_MUI_LANGUAGE@
@@ -103,12 +129,61 @@ foreach my $lang (@localeKeys) {
 
 my $gcomprisLanguages;
 
-$gcomprisLanguages .= "
+$gcomprisLanguages .= '
 ;--------------------------------
 ;Translations
-  !define GCOMPRIS_DEFAULT_LANGFILE \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\en.nsh\"
-  !include \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\langmacros.nsh\"
-";
+  !define GCOMPRIS_DEFAULT_LANGFILE "${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\en.nsh"
+;;
+;; Windows Gcompris NSIS installer language macros
+;;
+
+!macro GCOMPRIS_MACRO_DEFAULT_STRING LABEL VALUE
+  !ifndef "${LABEL}"
+    !define "${LABEL}" "${VALUE}"
+    !ifdef INSERT_DEFAULT
+      !warning "${LANG} lang file mising ${LABEL}, using default.."
+    !endif
+  !endif
+!macroend
+
+!macro GCOMPRIS_MACRO_LANGSTRING_INSERT LABEL LANG
+  LangString "${LABEL}" "${LANG_${LANG}}" "${${LABEL}}"
+  !undef "${LABEL}"
+!macroend
+
+!macro GCOMPRIS_MACRO_LANGUAGEFILE_BEGIN LANG
+  !define CUR_LANG "${LANG}"
+!macroend
+';
+
+
+# GCOMPRIS_MACRO_LANGUAGEFILE_END
+$gcomprisLanguages .= '
+!macro GCOMPRIS_MACRO_LANGUAGEFILE_END
+  !define INSERT_DEFAULT
+  !include "${GCOMPRIS_DEFAULT_LANGFILE}"
+  !undef INSERT_DEFAULT
+
+  ; String labels should match those from the default language file.
+';
+
+my $text_en = $result{"en"};
+foreach my $keyEn (keys(%$text_en)) {
+    $gcomprisLanguages .= "  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT $keyEn \${CUR_LANG}";
+}
+
+$gcomprisLanguages .= '
+  !undef CUR_LANG
+!macroend
+';
+
+$gcomprisLanguages .= '
+!macro GCOMPRIS_MACRO_INCLUDE_LANGFILE LANG FILE
+  !insertmacro GCOMPRIS_MACRO_LANGUAGEFILE_BEGIN "${LANG}"
+  !include "${FILE}"
+  !insertmacro GCOMPRIS_MACRO_LANGUAGEFILE_END
+!macroend
+';
 
 foreach my $lang (@localeKeys) {
     $gcomprisLanguages .= "  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE".
@@ -145,35 +220,8 @@ close (MYFILE);
 #
 # Create each nsh translation file
 #
-print "Parsing nsis_translations.desktop\n";
-
-# Create the holder for the results
-# %result{"locale"}{"stringname"} = result line
-my %result;
-
-# Create a hash of the keys to translate
-open (MYFILE, 'nsis_translations.desktop');
-while (<MYFILE>) {
-    chomp $_;
-    if ($_ =~ /Encoding=UTF-8/)
-    {
-	next;
-    }
-    elsif ($_ =~ /^(\w+)=(.*)/)
-    {
-	my $line = "!define $1 \"$2\"\n";
-	$result{"en"}{"$1"} = $line;
-    }
-    elsif ($_ =~ /^(\w+)\[(\w+)\]=(.*)/)
-    {
-	my $line = "!define $1 \"$3\"\n";
-	$result{"$2"}{"$1"} = $line;
-    }
-}
-close (MYFILE);
 
 print "Creating the nsh default file\n";
-my $text_en = $result{"en"};
 open (DESC, ">nsis/translations/en.nsh");
 print DESC ";; Auto generated file by create_nsis_translations.pl\n";
 foreach my $keyEn (keys(%$text_en)) {
