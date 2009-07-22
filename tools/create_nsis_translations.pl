@@ -3,12 +3,14 @@
 # You must 'cd' to the top directory of GCompris before you run it
 
 use strict;
+use Data::Dumper;
 
 my $gcompris_root_dir = ".";
 my $ALL_LINGUAS_STR   = `grep "ALL_LINGUAS=" $gcompris_root_dir/configure.in | cut -d= -f2`;
 $ALL_LINGUAS_STR      =~ s/\"//g;
 my @ALL_LINGUAS       = split(' ', $ALL_LINGUAS_STR);
 
+# Commented out locales that are not available in nsis
 my %localeNames = (
   "af", "Afrikaans",
 #  "am", "Amharic",
@@ -90,11 +92,13 @@ foreach my $lang (@localeKeys) {
 # By the list of locales:
 #   !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "ALBANIAN" "${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\albanian.nsh"
 
-my $gcomprisLanguages;
+my $gcomprisLanguages = "  !define GCOMPRIS_DEFAULT_LANGFILE" .
+    " \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\en.nsh\"\n\n";
+
 foreach my $lang (@localeKeys) {
     $gcomprisLanguages .= "  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE".
      " \"$localeNames{$lang}\"".
-     "\"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\$lang.nsh\"\n";
+     " \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\$lang.nsh\"\n";
 }
 
 # We have all the data, let's replace it
@@ -123,21 +127,70 @@ open (MYFILE, '>gcompris-installer.nsi');
 print MYFILE "$gcomprisInstaller";
 close (MYFILE);
 
+#
 # Create each nsh translation file
+#
+print "Parsing nsis_translations.desktop\n";
 
-print "Creating each nsh file\n";
+# Create the holder for the results
+# %result{"locale"}{"stringname"} = result line
+my %result;
 
+# Create a hash of the keys to translate
+open (MYFILE, 'nsis_translations.desktop');
+while (<MYFILE>) {
+    chomp $_;
+    if ($_ =~ /Encoding=UTF-8/)
+    {
+	next;
+    }
+    elsif ($_ =~ /^(\w+)=(.*)/)
+    {
+	my $line = "!define $1 \"$2\"\n";
+	$result{"en"}{"$1"} = $line;
+    }
+    elsif ($_ =~ /^(\w+)\[(\w+)\]=(.*)/)
+    {
+	my $line = "!define $1 \"$3\"\n";
+	$result{"$2"}{"$1"} = $line;
+    }
+}
+close (MYFILE);
+
+print "Creating the nsh default file\n";
+my $text_en = $result{"en"};
+open (DESC, ">nsis/translations/en.nsh");
+print DESC ";; Auto generated file by create_nsis_translations.pl\n";
+foreach my $keyEn (keys(%$text_en)) {
+    my $line = $result{'en'}{$keyEn};
+    $line =~ s/!define /!insertmacro GCOMPRIS_MACRO_DEFAULT_STRING /;
+    print DESC $line;
+}
+close DESC;
+
+print "Creating the nsh locale files\n";
 foreach my $lang (@localeKeys) {
     open (DESC, ">nsis/translations/$lang.nsh");
     print DESC ";; Auto generated file by create_nsis_translations.pl\n";
 
-    # Extract the string to translate from the nsis_translations file
-    my @text = `grep "\\\[$lang\\\]" $gcompris_root_dir/nsis_translations.desktop`;
-
-    foreach my $line (@text) {
-        chomp $line;
-        my @keyval = split("=", $line);
-        print DESC "@keyval[0]=\"@keyval[1]\"\n";
+    my $text_locale = $result{"$lang"};
+    foreach my $keyEn (keys(%$text_en)) {
+	my $found = 0;
+	foreach my $keyLocale (keys(%$text_locale)) {
+	    # Fine, we found a translation
+	    if ( $keyLocale eq $keyEn )
+	    {
+		print DESC "$result{$lang}{$keyLocale}";
+		$found = 1;
+		last;
+	    }
+	}
+	# English keys are the reference.
+	# If not found they are inserted
+	if ( ! $found )
+	{
+	    print DESC "$result{'en'}{$keyEn}";
+	}
     }
     close DESC;
 }

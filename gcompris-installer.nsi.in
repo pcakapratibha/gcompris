@@ -103,8 +103,6 @@ SetDateSave on
 
   !include "${GCOMPRIS_NSIS_INCLUDE_PATH}\langmacros.nsh"
 
-  !define GCOMPRIS_DEFAULT_LANGFILE "${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\english.nsh"
-
   @GCOMPRIS_MACRO_INCLUDE_LANGFILE@
 
 ;--------------------------------

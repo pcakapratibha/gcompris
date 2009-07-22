@@ -29,11 +29,11 @@
   ; String labels should match those from the default language file.
 
   ; Startup checks
-  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT InstallerIsRunning		${CUR_LANG}
-  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisIsRunning		${CUR_LANG}
+  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT InstallerIsRunning	${CUR_LANG}
+  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisIsRunning	${CUR_LANG}
 
   ; License Page
-  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisLicenseButton		${CUR_LANG}
+  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisLicenseButton	${CUR_LANG}
   !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT GcomprisLicenseBottomText	${CUR_LANG}
 
   ; Installer Finish Page
