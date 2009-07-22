@@ -170,6 +170,7 @@ $gcomprisLanguages .= '
 my $text_en = $result{"en"};
 foreach my $keyEn (keys(%$text_en)) {
     $gcomprisLanguages .= "  !insertmacro GCOMPRIS_MACRO_LANGSTRING_INSERT $keyEn \${CUR_LANG}";
+    $gcomprisLanguages .= "\n";
 }
 
 $gcomprisLanguages .= '
@@ -195,14 +196,10 @@ foreach my $lang (@localeKeys) {
 my $gcomprisInstaller;
 open (MYFILE, 'gcompris-installer.nsi');
 while (<MYFILE>) {
-    if ($_ =~ /\@INSERTMACRO_MUI_LANGUAGE\@/)
+    if ($_ =~ /\@INSERT_TRANSLATIONS\@/)
     {
-	print "Processing \@INSERTMACRO_MUI_LANGUAGE\@\n";
+	print "Processing \@INSERT_TRANSLATIONS\@\n";
 	$gcomprisInstaller .= $muiLanguages;
-    }
-    elsif ($_ =~ /\@GCOMPRIS_MACRO_INCLUDE_LANGFILE\@/)
-    {
-	print "Processing \@GCOMPRIS_MACRO_INCLUDE_LANGFILE\@\n";
 	$gcomprisInstaller .= $gcomprisLanguages;
     }
     else

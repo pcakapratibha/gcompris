@@ -90,9 +90,7 @@ SetDateSave on
 ;--------------------------------
 ;Languages
 
-  @INSERTMACRO_MUI_LANGUAGE@
-
-  @GCOMPRIS_MACRO_INCLUDE_LANGFILE@
+  @INSERT_TRANSLATIONS@
 
 ;--------------------------------
 ;Reserve Files
