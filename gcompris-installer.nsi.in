@@ -90,18 +90,7 @@ SetDateSave on
 ;--------------------------------
 ;Languages
 
-  ;; English goes first because its the default. The rest are
-  ;; in alphabetical order (at least the strings actually displayed
-  ;; will be).
-
-  !insertmacro MUI_LANGUAGE "English"
-
   @INSERTMACRO_MUI_LANGUAGE@
-
-;--------------------------------
-;Translations
-
-  !include "${GCOMPRIS_NSIS_INCLUDE_PATH}\langmacros.nsh"
 
   @GCOMPRIS_MACRO_INCLUDE_LANGFILE@
 

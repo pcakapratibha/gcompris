@@ -23,6 +23,7 @@ my %localeNames = (
   "de", "German",
 #  "dz",	"Dzongkha",
   "el", "Greek",
+  "en", "English",
   "es", "Spanish",
   "eu",	"Basque",
 #  "fa", "Persian",
@@ -82,7 +83,15 @@ my @localeKeys = keys(%localeNames);
 #   !insertmacro MUI_LANGUAGE "French"
 
 my $muiLanguages;
+$muiLanguages = '
+  ;; English goes first because its the default. The rest are
+  ;; in alphabetical order (at least the strings actually displayed
+  ;; will be).
+  !insertmacro MUI_LANGUAGE "English"
+';
+
 foreach my $lang (@localeKeys) {
+    if ( $lang eq "en" ) { next; }
     $muiLanguages .= "  !insertmacro MUI_LANGUAGE \"$localeNames{$lang}\"\n";
 }
 
@@ -92,8 +101,14 @@ foreach my $lang (@localeKeys) {
 # By the list of locales:
 #   !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE "ALBANIAN" "${GCOMPRIS_NSIS_INCLUDE_PATH}\translations\albanian.nsh"
 
-my $gcomprisLanguages = "  !define GCOMPRIS_DEFAULT_LANGFILE" .
-    " \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\en.nsh\"\n\n";
+my $gcomprisLanguages;
+
+$gcomprisLanguages .= "
+;--------------------------------
+;Translations
+  !define GCOMPRIS_DEFAULT_LANGFILE \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\en.nsh\"
+  !include \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\langmacros.nsh\"
+";
 
 foreach my $lang (@localeKeys) {
     $gcomprisLanguages .= "  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE".
@@ -170,6 +185,7 @@ close DESC;
 
 print "Creating the nsh locale files\n";
 foreach my $lang (@localeKeys) {
+    if ( $lang eq "en" ) { next; }
     open (DESC, ">nsis/translations/$lang.nsh");
     print DESC ";; Auto generated file by create_nsis_translations.pl\n";
 
