@@ -5,8 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-23 09:43+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gcompris&component=general\n"
+"POT-Creation-Date: 2009-07-23 06:53+0000\n"
 "PO-Revision-Date: 2008-10-26 17:40+0200\n"
 "Last-Translator: Vitali <Vitali_pe@yahoo.com>\n"
 "Language-Team: Hebrew\n"
@@ -1527,37 +1528,32 @@ msgstr "הפעלת העכבר: הזזה,  גרירה ושחרור."
 
 #: ../boards/geography/board1_0.xml.in.h:1
 #: ../boards/geography/board4_2.xml.in.h:1
-#, fuzzy
 msgid "Africa"
-msgstr "ערבית"
+msgstr "אפריקה"
 
 #: ../boards/geography/board1_0.xml.in.h:2
-#, fuzzy
 msgid "America"
-msgstr "אמהרית"
+msgstr "אמריקה"
 
 #: ../boards/geography/board1_0.xml.in.h:3
-#, fuzzy
 msgid "Antartica"
-msgstr "אמהרית"
+msgstr "אנטרטיקה"
 
 #: ../boards/geography/board1_0.xml.in.h:4
-#, fuzzy
 msgid "Asia"
-msgstr "אפור חומחומי (דיונון)"
+msgstr "אסיה"
 
 #: ../boards/geography/board1_0.xml.in.h:5
 msgid "Continents"
-msgstr ""
+msgstr "יבשות"
 
 #: ../boards/geography/board1_0.xml.in.h:6
-#, fuzzy
 msgid "Europe"
-msgstr "מערב אירופה"
+msgstr "אירופה"
 
 #: ../boards/geography/board1_0.xml.in.h:7
 msgid "Oceania"
-msgstr ""
+msgstr "אוקיאנה"
 
 #: ../boards/geography/board2_0.xml.in.h:1
 msgid "Alaska"
@@ -1568,9 +1564,8 @@ msgid "Bahamas"
 msgstr ""
 
 #: ../boards/geography/board2_0.xml.in.h:3
-#, fuzzy
 msgid "Canada"
-msgstr "יכולת לקרוא"
+msgstr "קנדה"
 
 #: ../boards/geography/board2_0.xml.in.h:4
 msgid "Cuba"
@@ -1582,7 +1577,7 @@ msgstr "הרפובליקה הדומיניקית"
 
 #: ../boards/geography/board2_0.xml.in.h:6
 msgid "Greenland"
-msgstr ""
+msgstr "גרינלנד"
 
 #: ../boards/geography/board2_0.xml.in.h:7
 msgid "Haiti"
@@ -1590,9 +1585,8 @@ msgstr "האיטי"
 
 #: ../boards/geography/board2_0.xml.in.h:8
 #: ../boards/geography/board3_0.xml.in.h:7
-#, fuzzy
 msgid "Iceland"
-msgstr "ירקרק"
+msgstr "איסלנד"
 
 #: ../boards/geography/board2_0.xml.in.h:9
 msgid "Jamaica"
@@ -1611,14 +1605,12 @@ msgid "United States of America"
 msgstr "ארצות הברית של אמריקה"
 
 #: ../boards/geography/board2_1.xml.in.h:1
-#, fuzzy
 msgid "Argentina"
-msgstr "ארגמן-אדום"
+msgstr "ארגנטינה"
 
 #: ../boards/geography/board2_1.xml.in.h:2
-#, fuzzy
 msgid "Bolivia"
-msgstr "זית"
+msgstr "בוליביה"
 
 #: ../boards/geography/board2_1.xml.in.h:3
 msgid "Brazil"
@@ -1637,18 +1629,16 @@ msgid "Ecuador"
 msgstr "אקוודור"
 
 #: ../boards/geography/board2_1.xml.in.h:7
-#, fuzzy
 msgid "French Guiana"
-msgstr "צרפתית"
+msgstr "גינאה הצרפתית"
 
 #: ../boards/geography/board2_1.xml.in.h:8
 msgid "Guyana"
 msgstr ""
 
 #: ../boards/geography/board2_1.xml.in.h:9
-#, fuzzy
 msgid "Panama"
-msgstr "בננה"
+msgstr "פנמה"
 
 #: ../boards/geography/board2_1.xml.in.h:10
 msgid "Paraguay"
@@ -1663,9 +1653,8 @@ msgid "South America"
 msgstr "דרום אמריקה"
 
 #: ../boards/geography/board2_1.xml.in.h:13
-#, fuzzy
 msgid "Suriname"
-msgstr "צוללת"
+msgstr "סורינם"
 
 #: ../boards/geography/board2_1.xml.in.h:14
 msgid "Uruguay"
@@ -1676,13 +1665,12 @@ msgid "Venezuela"
 msgstr "ונצואלה"
 
 #: ../boards/geography/board3_0.xml.in.h:1
-#, fuzzy
 msgid "Austria"
-msgstr "מחבר"
+msgstr "אוסטריה"
 
 #: ../boards/geography/board3_0.xml.in.h:2
 msgid "Belgium"
-msgstr ""
+msgstr "בלגיה"
 
 #: ../boards/geography/board3_0.xml.in.h:3
 msgid "Denmark"
@@ -1693,51 +1681,44 @@ msgid "Finland"
 msgstr "פינלנד"
 
 #: ../boards/geography/board3_0.xml.in.h:5
-#, fuzzy
 msgid "France"
-msgstr "מחבט"
+msgstr "צרפת"
 
 #: ../boards/geography/board3_0.xml.in.h:6
-#, fuzzy
 msgid "Germany"
-msgstr "גרמנית"
+msgstr "גרמניה"
 
 #: ../boards/geography/board3_0.xml.in.h:8
 msgid "Ireland"
 msgstr "אירלנד"
 
 #: ../boards/geography/board3_0.xml.in.h:9
-#, fuzzy
 msgid "Italy"
-msgstr "איטלקית"
+msgstr "איטליה"
 
-#: ../boards/geography/board3_0.xml.in.h:10
+#: ../boards/g	eography/board3_0.xml.in.h:10
 msgid "Luxembourg"
 msgstr "לוקסמבורג"
 
 #: ../boards/geography/board3_0.xml.in.h:11
-#, fuzzy
 msgid "Norway"
-msgstr "נורווגית"
+msgstr "נורווגיה"
 
 #: ../boards/geography/board3_0.xml.in.h:12
-#, fuzzy
 msgid "Portugal"
-msgstr "פורטוגזית"
+msgstr "פורטוגל"
 
 #: ../boards/geography/board3_0.xml.in.h:13
-#, fuzzy
 msgid "Spain"
-msgstr "אופאלין"
+msgstr "ספרד"
 
 #: ../boards/geography/board3_0.xml.in.h:14
-#, fuzzy
 msgid "Sweden"
-msgstr "שוודית"
+msgstr "שוודיה"
 
 #: ../boards/geography/board3_0.xml.in.h:15
 msgid "Switzerland"
-msgstr ""
+msgstr "שוויץ"
 
 #: ../boards/geography/board3_0.xml.in.h:16
 msgid "The Netherlands"
@@ -1748,28 +1729,24 @@ msgid "United Kingdom"
 msgstr "אנגליה"
 
 #: ../boards/geography/board3_0.xml.in.h:18
-#, fuzzy
 msgid "Western Europe"
 msgstr "מערב אירופה"
 
 #: ../boards/geography/board3_1.xml.in.h:1
-#, fuzzy
 msgid "Albania"
-msgstr "בננה"
+msgstr "אלבניה"
 
 #: ../boards/geography/board3_1.xml.in.h:2
-#, fuzzy
 msgid "Belarus"
-msgstr "אפור-לבנבן (עופרת)"
+msgstr "בלרוס"
 
 #: ../boards/geography/board3_1.xml.in.h:3
 msgid "Bosnia Herzegovina"
 msgstr "בוסניה הרצגובינה"
 
 #: ../boards/geography/board3_1.xml.in.h:4
-#, fuzzy
 msgid "Bulgaria"
-msgstr "הונגרית"
+msgstr "בולגריה"
 
 #: ../boards/geography/board3_1.xml.in.h:5
 msgid "Croatia"
@@ -1784,7 +1761,6 @@ msgid "Czech Republic"
 msgstr "צכיה"
 
 #: ../boards/geography/board3_1.xml.in.h:8
-#, fuzzy
 msgid "Eastern Europe"
 msgstr "מזרח אירופה"
 
@@ -1793,47 +1769,40 @@ msgid "Estonia"
 msgstr "אסטוניה"
 
 #: ../boards/geography/board3_1.xml.in.h:10
-#, fuzzy
 msgid "Greece"
-msgstr "יוונית"
+msgstr "יוון"
 
 #: ../boards/geography/board3_1.xml.in.h:11
-#, fuzzy
 msgid "Hungary"
-msgstr "הונגרית"
+msgstr "הונגריה"
 
 #: ../boards/geography/board3_1.xml.in.h:12
 msgid "Latvia"
 msgstr "לטביה"
 
 #: ../boards/geography/board3_1.xml.in.h:13
-#, fuzzy
 msgid "Lithuania"
-msgstr "ליטאית"
+msgstr "ליטא"
 
 #: ../boards/geography/board3_1.xml.in.h:14
-#, fuzzy
 msgid "Macedonia"
-msgstr "מקדונית"
+msgstr "מקדוניה"
 
 #: ../boards/geography/board3_1.xml.in.h:15
-#, fuzzy
 msgid "Moldova"
-msgstr "סלובקית"
+msgstr "מולדובה"
 
 #: ../boards/geography/board3_1.xml.in.h:16
 msgid "Poland"
 msgstr "פולין"
 
 #: ../boards/geography/board3_1.xml.in.h:17
-#, fuzzy
 msgid "Romania"
-msgstr "רומנית"
+msgstr "רומניה"
 
 #: ../boards/geography/board3_1.xml.in.h:18
-#, fuzzy
 msgid "Russia"
-msgstr "רוסית"
+msgstr "רוסיה"
 
 #: ../boards/geography/board3_1.xml.in.h:19
 msgid "Serbia Montenegro"
@@ -1844,19 +1813,16 @@ msgid "Slovak Republic"
 msgstr ""
 
 #: ../boards/geography/board3_1.xml.in.h:21
-#, fuzzy
 msgid "Slovenia"
-msgstr "סלובנית"
+msgstr "סלובניה"
 
 #: ../boards/geography/board3_1.xml.in.h:22
-#, fuzzy
 msgid "Turkey"
-msgstr "טורקית"
+msgstr "טורקיה"
 
 #: ../boards/geography/board3_1.xml.in.h:23
-#, fuzzy
 msgid "Ukraine"
-msgstr "כתום"
+msgstr "אוקראינה"
 
 #: ../boards/geography/board4_0.xml.in.h:1
 #: ../boards/geography/board4_2.xml.in.h:2
@@ -1866,7 +1832,7 @@ msgstr "אלג'יריה"
 #: ../boards/geography/board4_0.xml.in.h:2
 #: ../boards/geography/board4_2.xml.in.h:4
 msgid "Benin"
-msgstr ""
+msgstr "בנין"
 
 #: ../boards/geography/board4_0.xml.in.h:3
 #: ../boards/geography/board4_2.xml.in.h:6
@@ -1875,9 +1841,8 @@ msgstr ""
 
 #: ../boards/geography/board4_0.xml.in.h:4
 #: ../boards/geography/board4_2.xml.in.h:7
-#, fuzzy
 msgid "Cameroon"
-msgstr "צהוב-חום (ענבר)"
+msgstr "קמרון"
 
 #: ../boards/geography/board4_0.xml.in.h:5
 #: ../boards/geography/board4_2.xml.in.h:8
@@ -1918,11 +1883,11 @@ msgstr "אתיופיה"
 #: ../boards/geography/board4_1.xml.in.h:6
 #: ../boards/geography/board4_2.xml.in.h:14
 msgid "Gabon"
-msgstr ""
+msgstr "גבון"
 
 #: ../boards/geography/board4_0.xml.in.h:13
 msgid "Gambia"
-msgstr ""
+msgstr "גמביה"
 
 #: ../boards/geography/board4_0.xml.in.h:14
 #: ../boards/geography/board4_2.xml.in.h:15
@@ -1932,7 +1897,7 @@ msgstr ""
 #: ../boards/geography/board4_0.xml.in.h:15
 #: ../boards/geography/board4_2.xml.in.h:16
 msgid "Guinea"
-msgstr ""
+msgstr "גינאה"
 
 #: ../boards/geography/board4_0.xml.in.h:16
 msgid "Guinea Bissau"
@@ -1946,12 +1911,12 @@ msgstr ""
 #: ../boards/geography/board4_0.xml.in.h:18
 #: ../boards/geography/board4_2.xml.in.h:19
 msgid "Liberia"
-msgstr ""
+msgstr "ליבריה"
 
 #: ../boards/geography/board4_0.xml.in.h:19
 #: ../boards/geography/board4_2.xml.in.h:20
 msgid "Libya"
-msgstr ""
+msgstr "לוב"
 
 #: ../boards/geography/board4_0.xml.in.h:20
 #: ../boards/geography/board4_2.xml.in.h:23
@@ -1962,7 +1927,7 @@ msgstr "מלאית"
 #: ../boards/geography/board4_0.xml.in.h:21
 #: ../boards/geography/board4_2.xml.in.h:24
 msgid "Mauritania"
-msgstr ""
+msgstr "מאוריטניה"
 
 #: ../boards/geography/board4_0.xml.in.h:22
 #: ../boards/geography/board4_2.xml.in.h:25
@@ -1977,7 +1942,7 @@ msgstr ""
 #: ../boards/geography/board4_0.xml.in.h:24
 #: ../boards/geography/board4_2.xml.in.h:29
 msgid "Nigeria"
-msgstr ""
+msgstr "ניגריה"
 
 #: ../boards/geography/board4_0.xml.in.h:25
 #, fuzzy
@@ -1987,7 +1952,7 @@ msgstr "צפון אמריקה"
 #: ../boards/geography/board4_0.xml.in.h:26
 #: ../boards/geography/board4_1.xml.in.h:14
 msgid "Rwanda"
-msgstr ""
+msgstr "רואנדה"
 
 #: ../boards/geography/board4_0.xml.in.h:27
 #: ../boards/geography/board4_2.xml.in.h:30
@@ -2000,9 +1965,8 @@ msgstr ""
 
 #: ../boards/geography/board4_0.xml.in.h:29
 #: ../boards/geography/board4_2.xml.in.h:31
-#, fuzzy
 msgid "Somalia"
-msgstr "רומנית"
+msgstr "סומליה"
 
 #: ../boards/geography/board4_0.xml.in.h:30
 #: ../boards/geography/board4_2.xml.in.h:33
@@ -2023,7 +1987,7 @@ msgstr "טוניסיה"
 #: ../boards/geography/board4_1.xml.in.h:19
 #: ../boards/geography/board4_2.xml.in.h:37
 msgid "Uganda"
-msgstr ""
+msgstr "אוגנדה"
 
 #: ../boards/geography/board4_0.xml.in.h:34
 msgid "Western Sahara"
@@ -2051,7 +2015,7 @@ msgstr ""
 #: ../boards/geography/board4_1.xml.in.h:7
 #: ../boards/geography/board4_2.xml.in.h:18
 msgid "Kenya"
-msgstr ""
+msgstr "קניה"
 
 #: ../boards/geography/board4_1.xml.in.h:8
 msgid "Lesotho"
@@ -2071,7 +2035,7 @@ msgstr "מלאית"
 #: ../boards/geography/board4_1.xml.in.h:11
 #: ../boards/geography/board4_2.xml.in.h:26
 msgid "Mozambique"
-msgstr ""
+msgstr "מוזמביק"
 
 #: ../boards/geography/board4_1.xml.in.h:12
 #: ../boards/geography/board4_2.xml.in.h:27
@@ -2084,9 +2048,8 @@ msgstr ""
 
 #: ../boards/geography/board4_1.xml.in.h:15
 #: ../boards/geography/board4_2.xml.in.h:32
-#, fuzzy
 msgid "South Africa"
-msgstr "דרום אמריקה"
+msgstr "דרום אפריקה"
 
 #: ../boards/geography/board4_1.xml.in.h:16
 #, fuzzy
@@ -2110,7 +2073,7 @@ msgstr "זמביה"
 #: ../boards/geography/board4_1.xml.in.h:21
 #: ../boards/geography/board4_2.xml.in.h:39
 msgid "Zimbabwe"
-msgstr ""
+msgstr "זימבבווה"
 
 #: ../boards/geography_country.xml.in.h:1
 msgid "Drag and Drop the regions to redraw the whole country"
