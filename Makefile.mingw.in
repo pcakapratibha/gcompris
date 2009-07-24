@@ -74,7 +74,7 @@ config.h: config.h.mingw.in
 
 gcompris-installer.nsi: gcompris-installer.nsi.in nsis_translations.desktop
 	./config.status gcompris-installer.nsi
-	./tools/create_nsis_translations.pl
+	./tools/create_nsis_translations.pl nsis_translations.desktop gcompris-installer.nsi nsis/translations
 
 nsis_translations.desktop: nsis_translations.desktop.in
 	LC_ALL=C /usr/bin/intltool-merge -d -u -c ./po/.intltool-merge-cache ./po nsis_translations.desktop.in nsis_translations.desktop
@@ -150,6 +150,4 @@ prep: Makefile.mingw
 	find $(GCOMPRIS_INSTALL_DIR) -name "Makefile*" -exec rm -f {} \;
 	find $(GCOMPRIS_INSTALL_DIR) -name "*.in" -exec rm -f {} \;
 	find $(GCOMPRIS_INSTALL_DIR) -name "*~" -exec rm -f {} \;
-	cp -r nsis tools Makefile.mingw config.h.mingw $(GCOMPRIS_INSTALL_DIR)
-	mkdir -p $(GCOMPRIS_INSTALL_DIR)/nsis/translations
-	cp "/usr/share/nsis/Contrib/Language files"/* $(GCOMPRIS_INSTALL_DIR)/nsis/translations
+	cp -r tools Makefile.mingw config.h.mingw $(GCOMPRIS_INSTALL_DIR)
