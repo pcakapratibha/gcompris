@@ -50,17 +50,12 @@ SetDateSave on
 ;--------------------------------
 ;Modern UI Configuration
 
-  !define MUI_ICON				".\gcompris.ico"
+  !define MUI_ICON				".\gcompris-install.ico"
   !define MUI_UNICON				".\gcompris-uninstal.ico"
   !define MUI_WELCOMEFINISHPAGE_BITMAP 		".\nsis\gcompris-intro.bmp"
   !define MUI_HEADERIMAGE
   !define MUI_HEADERIMAGE_BITMAP		".\nsis\gcompris-header.bmp"
 
-  ; Alter License section
-  !define MUI_LICENSEPAGE_BUTTON              "$(^NextBtn)"
-  !define MUI_LICENSEPAGE_TEXT_BOTTOM         "$(^LicenseText)"
-
-  !define MUI_COMPONENTSPAGE_SMALLDESC
   !define MUI_ABORTWARNING
 
   ;Finish Page config
@@ -375,6 +370,20 @@ Section Uninstall
     Delete "$INSTDIR\zlib.pyd"
     Delete "$INSTDIR\zlib1.dll"
     Delete "$INSTDIR\README.mingw"
+    Delete "$INSTDIR\bzip2.dll"
+    Delete "$INSTDIR\config.h.mingw"
+    Delete "$INSTDIR\libcroco-0.6-3.dll"
+    Delete "$INSTDIR\libexpat.dll"
+    Delete "$INSTDIR\libgio-2.0-0.dll"
+    Delete "$INSTDIR\libgsf-1-114.dll"
+    Delete "$INSTDIR\libgsf-gnome-1-114.dll"
+    Delete "$INSTDIR\libgsf-win32-1-114.dll"
+    Delete "$INSTDIR\libogg-0.dll"
+    Delete "$INSTDIR\libpng12-0.dll"
+    Delete "$INSTDIR\librsvg-2-2.dll"
+    Delete "$INSTDIR\libvorbis-0.dll"
+    Delete "$INSTDIR\libvorbisfile-3.dll"
+    Delete "$INSTDIR\pthreadGC2.dll"
 
     ;Try to remove Gcompris install dir .. if empty
     RMDir "$INSTDIR"
@@ -401,12 +410,6 @@ Section Uninstall
   done:
 SectionEnd ; end of uninstall section
 
-;--------------------------------
-;Descriptions
-!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-  !insertmacro MUI_DESCRIPTION_TEXT ${SecGcompris} \
-  "Core GCompris files and dlls"
-!insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
 ;Functions
