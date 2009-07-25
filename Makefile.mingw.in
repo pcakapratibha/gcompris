@@ -135,7 +135,7 @@ clean: Makefile.mingw
 prep: Makefile.mingw
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)/share/$(pkgdatadir)/boards
-	cd boards ; tar cf -  --exclude "*.in" --exclude .svn * | ( cd ../$(GCOMPRIS_INSTALL_DIR)/share/$(pkgdatadir)/boards ; tar xf -) ; cd .. ;
+	cd boards ; tar cf - -h --exclude "*.in" --exclude ".*" * | ( cd ../$(GCOMPRIS_INSTALL_DIR)/share/$(pkgdatadir)/boards ; tar xf -) ; cd .. ;
 	@echo "-------------------------------------------------------------------------------"
 	@echo " WARNING: MAKE SURE TO HAVE RUN A MAKE INSTALL OF GCOMPRIS IN /USR/LOCAL FIRST"
 	@echo "-------------------------------------------------------------------------------"
