@@ -53,20 +53,41 @@ EXTRA_DIST = \
 
 distcore = $(PACKAGE)-core-$(VERSION)
 
+missing_voice_error = ERROR: MISSING boards/voices.\\n \
+	'      You need to get the git branch named "voices"'\\n \
+	'      and make a link boards/voices that points to it'\\n
+
 install-data-local:
 	@$(NORMAL_INSTALL)
 	if test -d $(srcdir)/$(PACKAGE_DATA_DIR); then \
 	  $(mkinstalldirs) $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR); \
-	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "*.in" --exclude "*~" --exclude "Makefile" --exclude "Makefile.am" --exclude .svn --mode 644 * | ( cd $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) ; tar xf - ; find -type d -exec chmod 755 '{}' \;) ; cd .. ; \
+	  ( cd $(srcdir)/$(PACKAGE_DATA_DIR) ; \
+	    tar cf -  -h --exclude "Makefile*" --exclude "*.in" --exclude "*~" --exclude ".*" --mode 644 * \
+	    | ( cd $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) ; \
+	        tar xf - ; find -type d -exec chmod 755 '{}' \;) ; cd .. ; ) ; \
+	fi
+	@if test ! -d $(PACKAGE_DATA_DIR)/voices; then \
+	  echo -e $(missing_voice_error); \
 	fi
 
 uninstall-local:
 	-find $(DESTDIR)/$(pkgdatadir)/$(PACKAGE_DATA_DIR) -name '*' -delete
 
+#
+# We force the destruction of the $disdir under construction if
+# the voices are not there.
+#
 dist-hook:
-	if test -d $(PACKAGE_DATA_DIR); then \
+	@if test ! -d $(PACKAGE_DATA_DIR)/voices; then \
+	  rm -fr $(distdir); \
+	  echo -e $(missing_voice_error); \
+	  exit 1; \
+	fi
+	@if test -d $(PACKAGE_DATA_DIR); then \
 	  $(mkinstalldirs) $(distdir)/$(PACKAGE_DATA_DIR); \
-	  cd $(srcdir)/$(PACKAGE_DATA_DIR) ; tar cf -  --exclude "Makefile.in" --exclude "Makefile" --exclude "*~" --exclude ".*" --exclude .svn * | ( cd ../$(distdir)/$(PACKAGE_DATA_DIR) ; tar xf -) ; cd .. ; \
+	  ( cd $(srcdir)/$(PACKAGE_DATA_DIR) ; \
+	    tar cf - -h --exclude "Makefile*" --exclude "*~" --exclude ".*" * \
+	    | ( cd ../$(distdir)/$(PACKAGE_DATA_DIR) ; tar xf -) ; ); \
 	fi
 	@if test -d "$(srcdir)/.git"; \
 	then \
@@ -92,10 +113,10 @@ clean-local:
 
 update-voices:
 	@if test -d $(PACKAGE_DATA_DIR)/voices; then \
-	  svn up $(PACKAGE_DATA_DIR)/voices; \
+	  pushd .; cd $(PACKAGE_DATA_DIR)/voices; git pull; popd; \
 	else \
-	  mkdir $(PACKAGE_DATA_DIR)/voices; \
-	  svn co http://svn.gnome.org/svn/gcompris/voices $(PACKAGE_DATA_DIR)/voices; \
+	  echo -e $(missing_voice_error); \
+	  exit 1; \
 	fi
 
 all-local:
