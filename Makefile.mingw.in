@@ -104,7 +104,7 @@ prepack: Makefile.mingw
 	cp -r $(GTK_TOP)/share/locale $(GCOMPRIS_INSTALL_DIR)/lib
 	cp -r $(GTK_TOP)/lib/gtk-2.0 $(GCOMPRIS_INSTALL_DIR)/lib
 	@echo Adding svg image loader to GTK
-	cp -r $(LOCAL_PREFIX)/svg_loader $(GCOMPRIS_INSTALL_DIR)
+	cp -r $(LOCAL_PREFIX)/svg_loader/* $(GCOMPRIS_INSTALL_DIR)
 
 python: Makefile.mingw
 	cp $(PYTHON_TOP)/DLLs/tcl84.dll $(GCOMPRIS_INSTALL_DIR)
