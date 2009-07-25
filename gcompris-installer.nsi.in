@@ -1,4 +1,4 @@
-; Installer script for win32 Gcompris
+; Installer script for win32 GCompris
 ; Copyed from GAIM By Herman Bloggs <hermanator12002@yahoo.com>
 ; Bruno Coudoin for GCompris
 ;
@@ -41,7 +41,7 @@ SetDateSave on
 !define GCOMPRIS_INSTALLER_DEPS			"..\win32-dev\gcompris-inst-deps"
 
 !define GCOMPRIS_REG_KEY			"SOFTWARE\gcompris"
-!define GCOMPRIS_UNINSTALL_KEY			"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Gcompris"
+!define GCOMPRIS_UNINSTALL_KEY			"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GCompris"
 !define HKLM_APP_PATHS_KEY			"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\gcompris.exe"
 !define GCOMPRIS_STARTUP_RUN_KEY		"SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
 !define GCOMPRIS_UNINST_EXE			"gcompris-uninst.exe"
@@ -69,7 +69,7 @@ SetDateSave on
 
   !insertmacro MUI_PAGE_WELCOME
 
-  ; Gcompris install dir page
+  ; GCompris install dir page
   !insertmacro MUI_PAGE_DIRECTORY
 
   !insertmacro MUI_PAGE_INSTFILES
@@ -99,7 +99,7 @@ SetDateSave on
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;--------------------------------
-;Uninstall any old version of Gcompris
+;Uninstall any old version of GCompris
 
 Section -SecUninstallOldGcompris
   ; Check install rights..
@@ -142,7 +142,7 @@ Section -SecUninstallOldGcompris
         IfFileExists $R3 0 uninstall_problem
           ; Have uninstall string.. go ahead and uninstall.
 
-	  ; In this case just wipe out previous Gcompris install dir..
+	  ; In this case just wipe out previous GCompris install dir..
 	  ; We get here because versions 0.60a1 and 0.60a2 don't have versions set in the registry
 	  ; and versions 0.60 and lower did not correctly set the uninstall reg string
 	  ; (the string was set in quotes)
@@ -168,7 +168,7 @@ Section -SecUninstallOldGcompris
               Goto uninstall_problem
 
         uninstall_problem:
-	  ; In this case just wipe out previous Gcompris install dir..
+	  ; In this case just wipe out previous GCompris install dir..
 	  ; We get here because versions 0.60a1 and 0.60a2 don't have versions set in the registry
 	  ; and versions 0.60 and lower did not correctly set the uninstall reg string
 	  ; (the string was set in quotes)
@@ -191,7 +191,7 @@ SectionEnd
 
 
 ;--------------------------------
-;Gcompris Install Section
+;GCompris Install Section
 
 Section "GCompris" SecGcompris
   SectionIn 1 RO
@@ -227,7 +227,7 @@ Section "GCompris" SecGcompris
 
   gcompris_install_files:
     SetOutPath "$INSTDIR"
-    ; Gcompris files
+    ; GCompris files
     SetOverwrite on
     File /r .\win32-install-dir\*.*
 
@@ -243,16 +243,16 @@ Section "GCompris" SecGcompris
 
     nt4_done:
 
-    CreateDirectory "$SMPROGRAMS\Gcompris"
-    CreateShortCut "$SMPROGRAMS\Gcompris\Gcompris.lnk" "$INSTDIR\gcompris.exe"
-    CreateShortCut "$DESKTOP\Gcompris.lnk" "$INSTDIR\gcompris.exe"
-    CreateShortCut "$SMPROGRAMS\Gcompris\Gcompris Admin.lnk" "$INSTDIR\gcompris.exe" `-a` "$INSTDIR\gcompris.exe" 1
-    CreateShortCut "$DESKTOP\Gcompris Admin.lnk" "$INSTDIR\gcompris.exe" `-a` "$INSTDIR\gcompris.exe" 1
+    CreateDirectory "$SMPROGRAMS\GCompris"
+    CreateShortCut "$SMPROGRAMS\GCompris\GCompris.lnk" "$INSTDIR\gcompris.exe"
+    CreateShortCut "$DESKTOP\GCompris.lnk" "$INSTDIR\gcompris.exe"
+    CreateShortCut "$SMPROGRAMS\GCompris\GCompris Admin.lnk" "$INSTDIR\gcompris.exe" `-a` "$INSTDIR\gcompris.exe" 1
+    CreateShortCut "$DESKTOP\GCompris Admin.lnk" "$INSTDIR\gcompris.exe" `-a` "$INSTDIR\gcompris.exe" 1
     SetOutPath "$INSTDIR"
 
     ; If we don't have install rights.. we're done
     StrCmp $R0 "NONE" done
-    CreateShortCut "$SMPROGRAMS\Gcompris\Uninstall.lnk" "$INSTDIR\${GCOMPRIS_UNINST_EXE}"
+    CreateShortCut "$SMPROGRAMS\GCompris\Uninstall.lnk" "$INSTDIR\${GCOMPRIS_UNINST_EXE}"
     SetOverwrite off
 
     ; Write out installer language
@@ -270,7 +270,7 @@ Section "GCompris" SecGcompris
     WriteRegStr HKLM "${GCOMPRIS_STARTUP_RUN_KEY}" "Gcompris" "$INSTDIR\gcompris.exe"
 
   done:
-SectionEnd ; end of default Gcompris section
+SectionEnd ; end of default GCompris section
 
 ;--------------------------------
 ;Uninstaller Section
@@ -385,13 +385,13 @@ Section Uninstall
     Delete "$INSTDIR\libvorbisfile-3.dll"
     Delete "$INSTDIR\pthreadGC2.dll"
 
-    ;Try to remove Gcompris install dir .. if empty
+    ;Try to remove GCompris install dir .. if empty
     RMDir "$INSTDIR"
 
     ; Shortcuts..
-    RMDir /r "$SMPROGRAMS\Gcompris"
-    Delete "$DESKTOP\Gcompris.lnk"
-    Delete "$DESKTOP\Gcompris Admin.lnk"
+    RMDir /r "$SMPROGRAMS\GCompris"
+    Delete "$DESKTOP\GCompris.lnk"
+    Delete "$DESKTOP\GCompris Admin.lnk"
 
     Goto done
 
@@ -595,7 +595,7 @@ Function .onInit
     MessageBox MB_OK|MB_ICONEXCLAMATION $(InstallerIsRunning)
     Abort
   Call RunCheck
-  StrCpy $name "Gcompris ${GCOMPRIS_VERSION}"
+  StrCpy $name "GCompris ${GCOMPRIS_VERSION}"
   StrCpy $ISSILENT "/NOUI"
 
   ; GTK installer has two silent states.. one with Message boxes, one without
@@ -628,7 +628,7 @@ Function .onInit
   Pop $0
 
   StrCmp $0 "HKLM" 0 user_dir
-    StrCpy $INSTDIR "$PROGRAMFILES\Gcompris"
+    StrCpy $INSTDIR "$PROGRAMFILES\GCompris"
     Goto instdir_done
   user_dir:
     StrCpy $2 "$SMPROGRAMS"
@@ -636,7 +636,7 @@ Function .onInit
     Call GetParent
     Call GetParent
     Pop $2
-    StrCpy $INSTDIR "$2\Gcompris"
+    StrCpy $INSTDIR "$2\GCompris"
 
   instdir_done:
 
@@ -644,7 +644,7 @@ FunctionEnd
 
 Function un.onInit
   Call un.RunCheck
-  StrCpy $name "Gcompris ${GCOMPRIS_VERSION}"
+  StrCpy $name "GCompris ${GCOMPRIS_VERSION}"
 
   ; Get stored language prefrence
   ReadRegStr $LANGUAGE HKCU ${GCOMPRIS_REG_KEY} "${GCOMPRIS_REG_LANG}"
