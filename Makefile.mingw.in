@@ -126,6 +126,8 @@ clean: Makefile.mingw
 	$(MAKE) -C $(GCOMPRIS_BOARDS) -f Makefile.mingw clean
 	rm -rf config.h
 	rm -rf gcompris*.exe
+	rm -f gcompris-installer.nsi
+	rm -f nsis_translations.desktop
 
 #
 # Run this on Linux to prepare datadir for windows
@@ -150,4 +152,4 @@ prep: Makefile.mingw
 	find $(GCOMPRIS_INSTALL_DIR) -name "Makefile*" -exec rm -f {} \;
 	find $(GCOMPRIS_INSTALL_DIR) -name "*.in" -exec rm -f {} \;
 	find $(GCOMPRIS_INSTALL_DIR) -name "*~" -exec rm -f {} \;
-	cp -r tools Makefile.mingw config.h.mingw $(GCOMPRIS_INSTALL_DIR)
+
