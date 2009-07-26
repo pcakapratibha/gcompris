@@ -87,66 +87,66 @@ print "                Working dir '$tmp_dir'\n";
 
 # Commented out locales that are not available in nsis
 my %localeNames = (
-  "af", "Afrikaans",
-#  "am", "Amharic",
-  "ar", "Arabic",
-  "bg",	"Bulgarian",
-  "br",	"Breton",
-  "ca",	"Catalan",
-  "cs",	"Czech",
-  "da", "Danish",
-  "de", "German",
-#  "dz",	"Dzongkha",
-  "el", "Greek",
-  "en", "English",
-  "es", "Spanish",
-  "eu",	"Basque",
-#  "fa", "Persian",
-  "fi", "Finnish",
-  "fr", "French",
-  "ga", "Irish",
-#  "gu",	"Gujarati",
-  "he",	"Hebrew",
-#  "hi",	"Hindi",
-  "hr",	"Croatian",
-  "hu",	"Hungarian",
-  "id",	"Indonesian",
-  "it", "Italian",
-  "ja",	"Japanese",
-#  "ka", "Georgian",
-  "ko", "Korean",
-  "lt",	"Lithuanian",
-  "mk",	"Macedonian",
-#  "ml",	"Malayalam",
-#  "mr",	"Marathi",
-  "ms",	"Malay",
-  "nb",	"Norwegian",
-#  "ne",	"Nepal",
-  "nl",	"Dutch",
-  "nn",	"NorwegianNynorsk",
-#  "oc",	"Occitan",
-#  "pa",	"Punjabi",
-  "pl",	"Polish",
-  "pt",	"Portuguese",
-  "pt_BR", "PortugueseBR",
-  "ro",	"Romanian",
-  "ru",	"Russian",
- # "rw",	"Kinyarwanda",
-  "sk",	"Slovak",
-  "sl",	"Slovenian",
-#  "so",	"Somali",
-  "sq",	"Albanian",
-  "sr",	"Serbian",
-  "sv",	"Swedish",
-#  "ta",	"Tamil",
-  "th",	"Thai",
-  "tr",	"Turkish",
-  "uk", "Ukrainian",
-#  "ur",	"Urdu",
-#  "vi",	"Vietnamese",
-#  "wa",	"Walloon",
-  "zh",	"SimpChinese",
-  "zh", "TradChinese"
+  "af" =>	["Afrikaans", "UTF-8"],
+#  "am" =>	["Amharic", "UTF-8"],
+  "ar" =>	["Arabic", "UTF-8"],
+  "bg" =>	["Bulgarian", "WINDOWS-1251"],
+  "br" =>	["Breton", "UTF-8"],
+  "ca" =>	["Catalan", "WINDOWS-1252"],
+  "cs" =>	["Czech", "WINDOWS-1252"],
+  "da" =>	["Danish", "WINDOWS-1252"],
+  "de" =>	["German", "WINDOWS-1252"],
+#  "dz" =>	["Dzongkha", "UTF-8"],
+  "el" =>	["Greek", "UTF-8"],
+  "en" =>	["English", "WINDOWS-1252"],
+  "es" =>	["Spanish", "WINDOWS-1252"],
+  "eu" =>	["Basque", "UTF-8"],
+#  "fa" =>	["Persian", "UTF-8"],
+  "fi" =>	["Finnish", "WINDOWS-1252"],
+  "fr" =>	["French", "WINDOWS-1252"],
+  "ga" =>	["Irish", "UTF-8"],
+#  "gu" =>	["Gujarati", "UTF-8"],
+  "he" =>	["Hebrew", "WINDOWS-1255"],
+#  "hi" =>	["Hindi", "UTF-8"],
+  "hr" =>	["Croatian", "UTF-8"],
+  "hu" =>	["Hungarian", "WINDOWS-1250"],
+  "id" =>	["Indonesian", "UTF-8"],
+  "it" =>	["Italian", "WINDOWS-1252"],
+  "ja" =>	["Japanese", "WINDOWS-932"],
+#  "ka" =>	["Georgian", "UTF-8"],
+  "ko" =>	["Korean", "WINDOWS-949"],
+  "lt" =>	["Lithuanian", "UTF-8"],
+  "mk" =>	["Macedonian", "UTF-8"],
+#  "ml" =>	["Malayalam", "UTF-8"],
+#  "mr" =>	["Marathi", "UTF-8"],
+  "ms" =>	["Malay", "UTF-8"],
+  "nb" =>	["Norwegian", "WINDOWS-1252"],
+#  "ne" =>	["Nepal", "UTF-8"],
+  "nl" =>	["Dutch", "WINDOWS-1252"],
+  "nn" =>	["NorwegianNynorsk", "UTF-8"],
+#  "oc" =>	["Occitan", "UTF-8"],
+#  "pa" =>	["Punjabi", "UTF-8"],
+  "pl" =>	["Polish", "WINDOWS-1250"],
+  "pt" =>	["Portuguese", "WINDOWS-1252"],
+  "pt_BR" =>	["PortugueseBR", "WINDOWS-1252"],
+  "ro" =>	["Romanian", "WINDOWS-1250"],
+  "ru" =>	["Russian", "WINDOWS-1251"],
+ # "rw" =>	["Kinyarwanda", "UTF-8"],
+  "sk" =>	["Slovak", "WINDOWS-1250"],
+  "sl" =>	["Slovenian", "WINDOWS-1250"],
+#  "so" =>	["Somali", "UTF-8"],
+  "sq" =>	["Albanian", "WINDOWS-1252"],
+  "sr" =>	["Serbian", "WINDOWS-1250"],
+  "sv" =>	["Swedish", "WINDOWS-1252"],
+#  "ta" =>	["Tamil", "UTF-8"],
+  "th" =>	["Thai", "UTF-8"],
+  "tr" =>	["Turkish", "UTF-8"],
+  "uk" =>	["Ukrainian", "UTF-8"],
+#  "ur" =>	["Urdu", "UTF-8"],
+#  "vi" =>	["Vietnamese", "WINDOWS-1258"],
+#  "wa" =>	["Walloon", "UTF-8"],
+  "zh" =>	["SimpChinese", "WINDOWS-936"],
+  "zh" =>	["TradChinese", "WINDOWS-950"],
 );
 
 my @localeKeys = keys(%localeNames);
@@ -193,7 +193,7 @@ $muiLanguages = '
 
 foreach my $lang (@localeKeys) {
     if ( $lang eq "en" ) { next; }
-    $muiLanguages .= "  !insertmacro MUI_LANGUAGE \"$localeNames{$lang}\"\n";
+    $muiLanguages .= "  !insertmacro MUI_LANGUAGE \"$localeNames{$lang}[0]\"\n";
 }
 
 # The specific GCompris translation for the installer
@@ -209,7 +209,7 @@ $gcomprisLanguages .= '
 ;Translations
   !define GCOMPRIS_DEFAULT_LANGFILE "${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\en.nsh"
 ;;
-;; Windows Gcompris NSIS installer language macros
+;; Windows GCompris NSIS installer language macros
 ;;
 
 !macro GCOMPRIS_MACRO_DEFAULT_STRING LABEL VALUE
@@ -263,7 +263,7 @@ $gcomprisLanguages .= '
 
 foreach my $lang (@localeKeys) {
     $gcomprisLanguages .= "  !insertmacro GCOMPRIS_MACRO_INCLUDE_LANGFILE".
-     " \"$localeNames{$lang}\"".
+     " \"$localeNames{$lang}[0]\"".
      " \"\${GCOMPRIS_NSIS_INCLUDE_PATH}\\translations\\$lang.nsh\"\n";
 }
 
@@ -303,11 +303,17 @@ foreach my $keyEn (keys(%$text_en)) {
 }
 close DESC;
 
+#
+# Two pass are needed:
+# - create the utf8 file
+# - transform it to the proper windows locale
+#
 print "Creating the nsh locale files\n";
 foreach my $lang (@localeKeys) {
     if ( $lang eq "en" ) { next; }
-    open (DESC, ">$tmp_dir/$lang.nsh");
+    open (DESC, ">$tmp_dir/$lang.nsh.utf8");
     print DESC ";; Auto generated file by create_nsis_translations.pl\n";
+    print DESC ";; Code Page: $localeNames{$lang}[1]\n";
 
     my $text_locale = $result{"$lang"};
     foreach my $keyEn (keys(%$text_en)) {
@@ -329,4 +335,13 @@ foreach my $lang (@localeKeys) {
 	}
     }
     close DESC;
+
+    # iconv conversion
+    system("iconv -f UTF-8 -t $localeNames{$lang}[1] $tmp_dir/$lang.nsh.utf8 -o $tmp_dir/$lang.nsh");
+    if ($? ne 0)
+    {
+	print("ERROR: Failed to run: iconv -f UTF-8 -t $localeNames{$lang}[1] $lang.nsh.utf8 -o $lang.nsh\n");
+    }
+    `rm $tmp_dir/$lang.nsh.utf8`;
+
 }
