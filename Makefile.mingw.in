@@ -153,3 +153,11 @@ prep: Makefile.mingw
 	find $(GCOMPRIS_INSTALL_DIR) -name "*.in" -exec rm -f {} \;
 	find $(GCOMPRIS_INSTALL_DIR) -name "*~" -exec rm -f {} \;
 
+svg2png:
+	sed -i "s:\(/[a-zA-Z_-]\+\\.\)svg:\1png:g" boards/*.xml.in
+	sed -i "s:\(/[a-zA-Z_-]\+\\.\)svg:\1png:g" src/*/*.c
+	sed -i "s:\(/[a-zA-Z_-]\+\\.\)svg:\1png:g" src/*/*/*.py
+	for f in `find boards -name '*.svg'`; \
+	  do e=`echo $$f | sed s/.svg/.png/`; \
+	  inkscape -z -f $$f -e $$e; \
+	done
