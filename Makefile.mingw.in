@@ -26,7 +26,7 @@ NEEDED_DLLS =		$(GNUCHESS_TOP)/bin/pthreadGC2.dll \
 			$(GTK_TOP)/bin/jpeg62.dll \
 			$(GTK_TOP)/bin/libatk-1.0-0.dll \
 			$(GTK_TOP)/bin/libcairo-2.dll \
-			$(GTK_TOP)/bin/libexpat.dll \
+			$(LIBEXPAT_TOP)/bin/libexpat.dll \
 			$(GTK_TOP)/bin/libgdk-win32-2.0-0.dll \
 			$(GTK_TOP)/bin/libgdk_pixbuf-2.0-0.dll \
 			$(GTK_TOP)/bin/libglib-2.0-0.dll \
@@ -153,7 +153,7 @@ prep: Makefile.mingw
 	find $(GCOMPRIS_INSTALL_DIR) -name "*.in" -exec rm -f {} \;
 	find $(GCOMPRIS_INSTALL_DIR) -name "*~" -exec rm -f {} \;
 	@echo Remove svg files
-	find $(GCOMPRIS_INSTALL_DIR) -name "*.svg" exec rm -f {} \;
+	find $(GCOMPRIS_INSTALL_DIR) -name "*.svg" -exec rm -f {} \;
 
 svg2png:
 	sed -i "s:\(/[a-zA-Z0-9_-]\+\\.\)svg:\1png:g" boards/*.xml.in
