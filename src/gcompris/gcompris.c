@@ -73,7 +73,7 @@ static void single_instance_release();
  * For the Activation dialog
  */
 #ifdef STATIC_MODULE
-int gc_activation_check(const char *code);
+gint gc_activation_check(const char *code);
 static void activation_enter_callback(GtkWidget *widget,
 				      GtkWidget *entry );
 static void activation_done();
@@ -815,13 +815,18 @@ display_activation_dialog()
   int board_count = 0;
   int gc_board_number_in_demo = 0;
   GList *list;
-  guint  key_is_valid = 0;
+  gint  key_is_valid = 0;
 
   key_is_valid = gc_activation_check(properties->key);
 
   if(key_is_valid == 1)
     return FALSE;
-
+  else if(key_is_valid == 2)
+    {
+      g_free ( gc_prop_get()->key );
+      gc_prop_get()->key = strdup("");
+      gc_prop_save(properties);
+    }
   /* Count non menu boards */
   for (list = gc_menu_get_boards(); list != NULL; list = list->next)
     {
@@ -869,8 +874,9 @@ display_activation_dialog()
  * Return -1 if the code is not valid
  *        0  if the code is valid but out of date
  *        1  if the code is valid and under 2 years
+ *        2  this is a demo code, must request the code again
  */
-int gc_activation_check(const char *code)
+gint gc_activation_check(const char *code)
 {
 #ifdef  DISABLE_ACTIVATION_CODE
   return 1;
@@ -883,6 +889,13 @@ int gc_activation_check(const char *code)
 
   if(strlen(code) != 6)
     return -1;
+
+  // A special code to test the full version without
+  // saving the activation
+  if (strncmp(code, "123321", 6) == 0)
+    {
+      return 2;
+    }
 
   for(i=3; i>=0; i--)
     {
@@ -927,17 +940,11 @@ activation_enter_callback( GtkWidget *entry,
 			   GtkWidget *notused )
 {
   const char *code = gtk_entry_get_text(GTK_ENTRY(entry));
-  // A special code to test the full version without
-  // saving the activation
-  if (strncmp(code, "123321", 6) == 0)
-    {
-      gtk_entry_set_text(GTK_ENTRY(entry), "GOOD");
-      return;
-    }
 
   switch(gc_activation_check(code))
     {
     case 1:
+    case 2:
       gc_prop_get()->key = strdup(gtk_entry_get_text(GTK_ENTRY(entry)));
       gc_prop_save(properties);
       gtk_entry_set_text(GTK_ENTRY(entry), "GOOD");

@@ -28,7 +28,7 @@ static struct BoardPluginData *bp_data;
 static gboolean	 get_board_playing(void);
 
 #ifdef STATIC_MODULE
-int gc_activation_check(char *code);
+gint gc_activation_check(char *code);
 extern BoardPlugin * get_advanced_colors_bplugin_info();
 extern BoardPlugin * get_algebra_bplugin_info();
 extern BoardPlugin * get_algebra_guesscount_bplugin_info();
@@ -220,7 +220,7 @@ gc_board_check_file(GcomprisBoard *gcomprisBoard)
   GcomprisProperties	*properties = gc_prop_get();
   BoardPlugin *bp;
   guint        i=0;
-  guint        key_is_valid = 0;
+  gint         key_is_valid = 0;
 
   g_assert(gcomprisBoard!=NULL);
   g_assert(properties->key!=NULL);
@@ -236,7 +236,7 @@ gc_board_check_file(GcomprisBoard *gcomprisBoard)
     key_is_valid = gc_activation_check(properties->key);
 
   i = 0;
-  if(key_is_valid == 1)
+  if(key_is_valid >= 1)
     {
       while(static_boards[i++] != NULL) {
 
