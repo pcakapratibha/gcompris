@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-20 19:39+0100\n"
-"PO-Revision-Date: 2009-03-20 19:56+0100\n"
+"POT-Creation-Date: 2009-09-02 19:48+0200\n"
+"PO-Revision-Date: 2009-09-02 19:52+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
 #: ../boards/administration.xml.in.h:1
@@ -919,11 +919,11 @@ msgid ""
 "attack (in \"check\") and there is no way to remove it from attack on the "
 "next move."
 msgstr ""
-"Hasieran, jokalari bakoitzak (batak pieza zuriak kontrolatuz, besteak beltzak) "
-"hamasei pieza kontrolatzen ditu: errege bat, erregin bat, bi dorre, bi zaldun, "
-"bi alfil eta zortzi peoi. Jokoaren helburua aurkariaren erregeari xake-matea "
-"ematea da, eta horrela erregea bapateko erasopean dago (\"xake\") eta hurrengo "
-"mugimenduan ez dauka inora joateko aukerarik erasoa saihesteko."
+"Hasieran, jokalari bakoitzak (batak pieza zuriak kontrolatuz, besteak "
+"beltzak) hamasei pieza kontrolatzen ditu: errege bat, erregin bat, bi dorre, "
+"bi zaldun, bi alfil eta zortzi peoi. Jokoaren helburua aurkariaren erregeari "
+"xake-matea ematea da, eta horrela erregea bapateko erasopean dago (\"xake\") "
+"eta hurrengo mugimenduan ez dauka inora joateko aukerarik erasoa saihesteko."
 
 #: ../boards/chess_computer.xml.in.h:2 ../boards/chess_movelearn.xml.in.h:3
 #: ../boards/chess_partyend.xml.in.h:2
@@ -1908,7 +1908,7 @@ msgstr "Kroazia"
 msgid "Cyprus"
 msgstr "Zipre"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:65
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:64
 msgid "Czech Republic"
 msgstr "Txekiar Errepublika"
 
@@ -3734,8 +3734,8 @@ msgid ""
 "Rebuild the left mosaic on the right area. Select a color in the bottom area "
 "and click on grey boxes to paint them."
 msgstr ""
-"Eraiki berriro ezkerreko lauza eskuineko arean. Hautatu kolore bat beheko arean "
-"eta egin klik kutxa grisetan hauek margotzeko."
+"Eraiki berriro ezkerreko lauza eskuineko arean. Hautatu kolore bat beheko "
+"arean eta egin klik kutxa grisetan hauek margotzeko."
 
 #: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
@@ -4586,8 +4586,47 @@ msgstr "GCompris suite hezigarria"
 msgid "Multi-activity educational game"
 msgstr "Ariketa anitzeko joku hezigarria"
 
+#: ../nsis_translations.desktop.in.h:1
+msgid ""
+"An instance of GCompris is currently running. Exit GCompris and then try "
+"again."
+msgstr ""
+"GCompris-en instantzia bat exekutatzen ari da jadanik. Irten "
+"GCompris-etik eta saiatu berriro."
+
+#: ../nsis_translations.desktop.in.h:2
+msgid "The installer is already running."
+msgstr "Instalatzailea jadanik exekutatzen ari da."
+
+#: ../nsis_translations.desktop.in.h:3
+msgid "Visit the GCompris Web Site"
+msgstr "Bisitatu GCompris-en webgunea"
+
+#: ../nsis_translations.desktop.in.h:4
+msgid "You do not have permission to uninstall this application."
+msgstr "Ez duzu baimenik aplikazio hau desintalatzeko."
+
+#: ../nsis_translations.desktop.in.h:5
+msgid ""
+"Your old GCompris directory is about to be deleted. Would you like to "
+"continue?$\\r$\\rNote: Any non-standard plugins that you may have installed "
+"will be deleted.$\\rGCompris user settings will not be affected."
+msgstr ""
+"Zure GComprisen direktorio zaharra ezabatzera doa. Nahi duzu jarraitu?$\\r$\\r"
+"Oharra: instalatuta zenituen edozein plugin ez-estandar "
+"ezabatu egingo da.$\\rEz da eraginik inzago GCompris erabiltzailearen ezarpenetan."
+
+#: ../nsis_translations.desktop.in.h:6
+msgid ""
+"the uninstaller could not find registry entries for GCompris.$\\rIt is "
+"likely that another user installed this application."
+msgstr ""
+"Desinstalatzaileak ezin izan du GCompris-en sarrerako "
+"erregistrorik aurkitu.$\\r Baliteke beste erabiltzaile batek aplikazio "
+"hau instalatu izatea."
+
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:179 ../src/boards/memory.c:842
+#: ../src/boards/algebra.c:179 ../src/boards/memory.c:840
 msgid "+-×÷"
 msgstr "+-×÷"
 
@@ -4658,7 +4697,7 @@ msgstr "Berdinketa"
 msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Errorea: kanpoko 'gnuchess' programa ustekabean hil da"
 
-#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:809
+#: ../src/boards/click_on_letter.c:258 ../src/boards/memory.c:807
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -4674,7 +4713,7 @@ msgstr ""
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
 #: ../src/boards/click_on_letter.c:263 ../src/boards/gletters.c:230
-#: ../src/boards/memory.c:831
+#: ../src/boards/memory.c:829
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
@@ -4712,7 +4751,7 @@ msgstr ""
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:874 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1871 ../src/boards/smallnumbers.c:590
+#: ../src/boards/shapegame.c:1877 ../src/boards/smallnumbers.c:590
 #: ../src/boards/wordsgame.c:777
 #, c-format, python-format
 msgid ""
@@ -4779,12 +4818,12 @@ msgid "Select sound locale"
 msgstr "Hautatu soinu lokala"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:226 ../src/boards/memory.c:827
+#: ../src/boards/gletters.c:226 ../src/boards/memory.c:825
 msgid "0123456789"
 msgstr "0123456789"
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:236 ../src/boards/memory.c:837
+#: ../src/boards/gletters.c:236 ../src/boards/memory.c:835
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -5827,7 +5866,7 @@ msgstr ""
 "argitaratu da"
 
 #: ../src/gcompris/about.c:277 ../src/gcompris/about.c:287
-#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
+#: ../src/gcompris/config.c:473 ../src/gcompris/config.c:483
 #: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:379
 #: ../src/gcompris/help.c:389 ../src/gcompris/images_selector.c:314
 msgid "OK"
@@ -5921,270 +5960,266 @@ msgid "Arabic"
 msgstr "Arabiera"
 
 #: ../src/gcompris/config.c:60
-msgid "Arabic (Tunisia)"
-msgstr "Arabiera (Tunisia)"
-
-#: ../src/gcompris/config.c:61
 msgid "Turkish (Azerbaijan)"
 msgstr "Turkiera (Azerbaijan)"
 
-#: ../src/gcompris/config.c:62
+#: ../src/gcompris/config.c:61
 msgid "Bulgarian"
 msgstr "Bulgariera"
 
-#: ../src/gcompris/config.c:63
+#: ../src/gcompris/config.c:62
 msgid "Breton"
 msgstr "Bretoiera"
 
-#: ../src/gcompris/config.c:64
+#: ../src/gcompris/config.c:63
 msgid "Catalan"
 msgstr "Katalana"
 
-#: ../src/gcompris/config.c:66
+#: ../src/gcompris/config.c:65
 msgid "Danish"
 msgstr "Daniera"
 
-#: ../src/gcompris/config.c:67
+#: ../src/gcompris/config.c:66
 msgid "German"
 msgstr "Alemana"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:67
 msgid "Dzongkha"
 msgstr "Dzongkha"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:68
 msgid "Greek"
 msgstr "Grekoa"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:69
 msgid "English (Canada)"
 msgstr "Ingelesa (Kanada)"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:70
 msgid "English (Great Britain)"
 msgstr "Ingelesa (Britainia Handia)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:71
 msgid "English (United States)"
 msgstr "Ingelesa (Ameriketako Estatu Batuak)"
 
-#: ../src/gcompris/config.c:73
+#: ../src/gcompris/config.c:72
 msgid "Spanish"
 msgstr "Gaztelania"
 
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:73
 msgid "Basque"
 msgstr "Euskara"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:74
 msgid "Persian"
 msgstr "Persiera"
 
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:75
 msgid "Finnish"
 msgstr "Finlandiera"
 
-#: ../src/gcompris/config.c:77
+#: ../src/gcompris/config.c:76
 msgid "French"
 msgstr "Frantsesa"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:77
 msgid "Irish (Gaelic)"
 msgstr "Gaelikoa (Irlandakoa)"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:78
 msgid "Gujarati"
 msgstr "Gujaratera"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:79
 msgid "Hebrew"
 msgstr "Hebreera"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:80
 msgid "Hindi"
 msgstr "Hindia"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:81
 msgid "Croatian"
 msgstr "Kroaziera"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:82
 msgid "Hungarian"
 msgstr "Hungariera"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:83
 msgid "Indonesian"
 msgstr "Indonesiera"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:84
 msgid "Italian"
 msgstr "Italiera"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:85
 msgid "Japanese"
 msgstr "Japoniera"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:86
 msgid "Georgian"
 msgstr "Georgiera"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:87
 msgid "Korean"
 msgstr "Koreera"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:88
 msgid "Lithuanian"
 msgstr "Lituaniera"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:89
 msgid "Macedonian"
 msgstr "Mazedoniera"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:90
 msgid "Malayalam"
 msgstr "Malayalama"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:91
 msgid "Marathi"
 msgstr "Marathiera"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:92
 msgid "Malay"
 msgstr "Malaysiera"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:93
 msgid "Norwegian Bokmal"
 msgstr "Norvegiako Bokmal"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:94
 msgid "Nepal"
 msgstr "Nepal"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:95
 msgid "Dutch"
 msgstr "Nederlandera"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:96
 msgid "Norwegian Nynorsk"
 msgstr "Norvegiako Nynorsk"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:97
 msgid "Occitan (languedocien)"
 msgstr "Okzitaniera (languedocien)"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:98
 msgid "Punjabi"
 msgstr "Punjabera"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:99
 msgid "Polish"
 msgstr "Poloniera"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:100
 msgid "Portuguese (Brazil)"
 msgstr "Portugesa (Brasil)"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:101
 msgid "Portuguese"
 msgstr "Portugesa"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:102
 msgid "Romanian"
 msgstr "Errumaniera"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:103
 msgid "Russian"
 msgstr "Errusiera"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:104
 msgid "Kinyarwanda"
 msgstr "Kinyaruanda"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:105
 msgid "Slovak"
 msgstr "Eslovakiera"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:106
 msgid "Slovenian"
 msgstr "Esloveniera"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:107
 msgid "Somali"
 msgstr "Somaliera"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:108
 msgid "Albanian"
 msgstr "Albaniera"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:109
 msgid "Serbian (Latin)"
 msgstr "Serbiera (latinoa)"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:110
 msgid "Serbian"
 msgstr "Serbiera"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:111
 msgid "Swedish"
 msgstr "Suediera"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:112
 msgid "Tamil"
 msgstr "Tamilera"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:113
 msgid "Thai"
 msgstr "Thailandiera"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:114
 msgid "Turkish"
 msgstr "Turkiera"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:115
 msgid "Ukrainian"
 msgstr "Ukraniera"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:116
 msgid "Urdu"
 msgstr "Urdu"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:117
 msgid "Vietnamese"
 msgstr "Vietnamera"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:118
 msgid "Walloon"
 msgstr "Waloiera"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:119
 msgid "Chinese (Simplified)"
 msgstr "Txinera (erraztua)"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:120
 msgid "Chinese (Traditional)"
 msgstr "Txinatar tradizionala"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:125
 msgid "No time limit"
 msgstr "Denbora-mugarik ez"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:126
 msgid "Slow timer"
 msgstr "Kronometro motela"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:127
 msgid "Normal timer"
 msgstr "Kronometro normala"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:128
 msgid "Fast timer"
 msgstr "Kronometro bizkorra"
 
-#: ../src/gcompris/config.c:134
+#: ../src/gcompris/config.c:133
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Gcompris-en lehenetsia)"
 
-#: ../src/gcompris/config.c:139
+#: ../src/gcompris/config.c:138
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6192,38 +6227,38 @@ msgstr ""
 "<i>Erabili GCompris-en administrazio-modulua\n"
 "arbelak iragazteko</i>"
 
-#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
+#: ../src/gcompris/config.c:193 ../src/gcompris/config.c:203
 msgid "GCompris Configuration"
 msgstr "GCompris-en konfigurazioa"
 
-#: ../src/gcompris/config.c:280
+#: ../src/gcompris/config.c:279
 msgid "Fullscreen"
 msgstr "Pantaila osoa"
 
-#: ../src/gcompris/config.c:323
+#: ../src/gcompris/config.c:322
 msgid "Music"
 msgstr "Musika"
 
-#: ../src/gcompris/config.c:351
+#: ../src/gcompris/config.c:350
 msgid "Effect"
 msgstr "Efektua"
 
-#: ../src/gcompris/config.c:387
+#: ../src/gcompris/config.c:386
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Ezin izan da direktorioa ireki: %s"
 
-#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
-#: ../src/gcompris/config.c:882
+#: ../src/gcompris/config.c:417 ../src/gcompris/config.c:867
+#: ../src/gcompris/config.c:881
 #, c-format
 msgid "Skin : %s"
 msgstr "Azala: %s"
 
-#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:419
 msgid "SKINS NOT FOUND"
 msgstr "AZALIK EZ DA AURKITU"
 
-#: ../src/gcompris/config.c:545
+#: ../src/gcompris/config.c:544
 msgid "English (United State)"
 msgstr "Ingelesa (Ameriketako Estatu Batuak)"
 
@@ -6407,7 +6442,7 @@ msgstr "Ez bistaratu ariketen atzeko planoko irudiak."
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Ez saihestu GCompris-en hainbat instantzia exekutatzea."
 
-#: ../src/gcompris/gcompris.c:860
+#: ../src/gcompris/gcompris.c:865
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6431,19 +6466,19 @@ msgstr ""
 "gunean:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1478
+#: ../src/gcompris/gcompris.c:1494
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr ""
 "GCompris ez da abiatuko blokeoko fitxategia %d segundo baino gutxiagokoa "
 "delako.\n"
 
-#: ../src/gcompris/gcompris.c:1480
+#: ../src/gcompris/gcompris.c:1496
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Blokeoko fitxategia: %s\n"
 
-#: ../src/gcompris/gcompris.c:1599
+#: ../src/gcompris/gcompris.c:1615
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6457,45 +6492,45 @@ msgstr ""
 "Informazio gehiago: http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1683
+#: ../src/gcompris/gcompris.c:1699
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Erabili -l ariketetara zuzenean sartzeko.\n"
 
-#: ../src/gcompris/gcompris.c:1684
+#: ../src/gcompris/gcompris.c:1700
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Ariketa erabilgarrien zerrenda: \n"
 
-#: ../src/gcompris/gcompris.c:1715
+#: ../src/gcompris/gcompris.c:1731
 #, c-format
 msgid "Number of activities: %d\n"
 msgstr "Ekintza kopurua: %d\n"
 
-#: ../src/gcompris/gcompris.c:1751
+#: ../src/gcompris/gcompris.c:1767
 #, c-format
 msgid "%s exists but is not readable or writable"
 msgstr "%s existitzen da baina ez da irakurgarria edo idazgarria"
 
-#: ../src/gcompris/gcompris.c:1812
+#: ../src/gcompris/gcompris.c:1828
 #, c-format
 msgid ""
 "The --server option cannot be used because GCompris has been compiled "
 "without network support!"
 msgstr ""
-"--server aukera ezin da erabili GCompris sareko euskarririk "
-"gabe konpilatu delako."
+"--server aukera ezin da erabili GCompris sareko euskarririk gabe konpilatu "
+"delako."
 
-#: ../src/gcompris/gcompris.c:1863
+#: ../src/gcompris/gcompris.c:1879
 #, c-format
 msgid ""
 "ERROR: Profile '%s' is not found. Run 'gcompris --profile-list' to list "
 "available ones\n"
 msgstr ""
-"ERROREA: ez da '%s' profila aurkitu. Exekutatu 'gcompris --profile-list' dauden "
-"profilak zerrendatzeko\n"
+"ERROREA: ez da '%s' profila aurkitu. Exekutatu 'gcompris --profile-list' "
+"dauden profilak zerrendatzeko\n"
 
-#: ../src/gcompris/gcompris.c:1877
+#: ../src/gcompris/gcompris.c:1893
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Profila erabilgarrien zerrenda: \n"
