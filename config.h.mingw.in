@@ -140,4 +140,4 @@
 #define USE_SDLMIXER
 
 /* Use binary relocation */
-#define ENABLE_BINRELOC 1
+#define ENABLE_BINRELOC 0

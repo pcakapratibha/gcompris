@@ -668,19 +668,18 @@ static void setup_window ()
    * ------------------------
    */
   icon_file = g_strconcat(properties->system_icon_dir, "/gcompris.png", NULL);
-  if (!g_file_test (icon_file, G_FILE_TEST_EXISTS)) {
-      /* Now check if this file is on the net */
-      icon_file = gc_net_get_url_from_file("gcompris.png", NULL);
-  }
 
   if(!icon_file)
       g_warning ("Couldn't find file %s !", icon_file);
 
-  icon_pixbuf = gdk_pixbuf_new_from_file(icon_file,NULL);
+  GError *error = NULL;
+  icon_pixbuf = gdk_pixbuf_new_from_file(icon_file, &error);
   if (!icon_pixbuf)
     {
-      g_warning ("Failed to load pixbuf file: %s\n",
-               icon_file);
+      g_warning ("Failed to load pixbuf file: %s / %s\n",
+		 icon_file, error->message);
+      g_error_free (error);
+
     }
   g_free(icon_file);
 
