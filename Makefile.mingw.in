@@ -26,7 +26,6 @@ NEEDED_DLLS =		$(GNUCHESS_TOP)/bin/pthreadGC2.dll \
 			$(GTK_TOP)/bin/jpeg62.dll \
 			$(GTK_TOP)/bin/libatk-1.0-0.dll \
 			$(GTK_TOP)/bin/libcairo-2.dll \
-			$(LIBEXPAT_TOP)/bin/libexpat.dll \
 			$(GTK_TOP)/bin/libgdk-win32-2.0-0.dll \
 			$(GTK_TOP)/bin/libgdk_pixbuf-2.0-0.dll \
 			$(GTK_TOP)/bin/libglib-2.0-0.dll \
@@ -103,8 +102,6 @@ prepack: Makefile.mingw
 	mkdir -p $(GCOMPRIS_INSTALL_DIR)/lib
 	cp -r $(GTK_TOP)/share/locale $(GCOMPRIS_INSTALL_DIR)/lib
 	cp -r $(GTK_TOP)/lib/gtk-2.0 $(GCOMPRIS_INSTALL_DIR)/lib
-	@echo Adding svg image loader to GTK
-	cp -r $(LOCAL_PREFIX)/svg_loader/* $(GCOMPRIS_INSTALL_DIR)
 
 python: Makefile.mingw
 	cp $(PYTHON_TOP)/DLLs/tcl84.dll $(GCOMPRIS_INSTALL_DIR)
