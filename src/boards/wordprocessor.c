@@ -414,6 +414,8 @@ static GnomeCanvasItem *wordprocessor_create()
   /* Now we can create the tags */
   create_tags(buffer, doctype_list[0]);
 
+  gtk_widget_grab_focus(view);
+
   return NULL;
 }
 
