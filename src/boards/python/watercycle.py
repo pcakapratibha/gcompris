@@ -34,9 +34,6 @@ class Gcompris_watercycle:
   def __init__(self, gcomprisBoard):
     self.gcomprisBoard = gcomprisBoard
 
-    print("Gcompris_watercycle __init__.")
-
-
   def start(self):
     self.gcomprisBoard.level=1
     self.gcomprisBoard.maxlevel=1
@@ -276,8 +273,6 @@ class Gcompris_watercycle:
     # Ready GO
     self.move_boat()
 
-    print("Gcompris_watercycle start.")
-
 
   def end(self):
     # Remove all the timer first
@@ -295,22 +290,19 @@ class Gcompris_watercycle:
     # Remove the root item removes all the others inside it
     self.rootitem.destroy()
 
-    print("Gcompris_watercycle end.")
-
 
   def ok(self):
-    print("Gcompris_watercycle ok.")
+    pass
 
 
   def repeat(self):
-    print("Gcompris_watercycle repeat.")
+    pass
 
 
   def config(self):
-    print("Gcompris_watercycle config.")
+    pass
 
   def key_press(self, keyval, commit_str, preedit_str):
-    print("got key %i" % keyval)
     return False
 
   # This is called each second to update to castle water level
@@ -462,10 +454,10 @@ class Gcompris_watercycle:
       self.sun_direction = self.sun_direction * -1
 
   def pause(self, pause):
-    print("Gcompris_watercycle pause. %i" % pause)
+    pass
 
   def set_level(self, level):
-    print("Gcompris_watercycle set level. %i" % level)
+    pass
 
   def sun_item_event(self, widget, event=None):
     if event.type == gtk.gdk.BUTTON_PRESS:
