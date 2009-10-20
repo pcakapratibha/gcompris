@@ -20,14 +20,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gcompris&component=general\n"
-"POT-Creation-Date: 2009-02-24 23:31+0000\n"
-"PO-Revision-Date: 2009-03-04 21:28+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2009-08-01 19:14+0000\n"
+"PO-Revision-Date: 2009-10-13 20:08+0200\n"
+"Last-Translator: Yannis Kaskamanidis <ttnfy17@yahoo.gr>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);X-Generator: KBabel 1.11.4X-\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../boards/administration.xml.in.h:1
@@ -555,22 +555,6 @@ msgid "Good mouse-control"
 msgstr "Καλός χειρισμός ποντικιού"
 
 #: ../boards/babyshapes.xml.in.h:5
-#| msgid ""
-#| "The dog is provided by Andre Connes and released under the GPL.\n"
-#| "Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: "
-#| "http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-#| "Artist: Bruegel d. Ä. Title: Bauernhochzeit. Licence: Public Domain. "
-#| "Source: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011."
-#| "jpg\n"
-#| "Description: The Lady and the Unicorn (tapestries). Author: Pierre-"
-#| "Emmanuel Malissin et frédéric Valdes. Licence: Free but requires the site "
-#| "and author. Source: http://www.galerie.roi-president.com\n"
-#| "Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public "
-#| "Domain. Source: http://commons.wikimedia.org/wiki/Image:"
-#| "Vincent_Van_Gogh_0011.jpg\n"
-#| "Artist: Ambrosius Bosschaert. Title: The Elder. Licence: Public Domain. "
-#| "Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
-#| "_the_Elder_04.jpg"
 msgid ""
 "The dog is provided by Andre Connes and released under the GPL.\n"
 "Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
@@ -599,12 +583,10 @@ msgid "Lock with colored shapes."
 msgstr "Ο Φλόκ με χρωματιστά σχήματα."
 
 #: ../boards/babyshapes/board8_0.xml.in.h:1
-#| msgid "Gauguin, Arearea - 1892"
 msgid "Paul Gauguin, Arearea - 1892"
 msgstr "Paul Gauguin, Arearea - 1892"
 
 #: ../boards/babyshapes/board8_1.xml.in.h:1
-#| msgid "Pieter Bruegel, Bauernhochzeit - 1568"
 msgid "Pieter Bruegel the Elder, The peasants wedding - 1568"
 msgstr "Pieter Bruegel, Ο γάμος του χωρικού - 1568"
 
@@ -617,7 +599,6 @@ msgid "Vincent van Gogh, Bedroom in Arles - 1888"
 msgstr "Vincent Van Gogh, Υπνοδωμάτιο στην Αρλ - 1888"
 
 #: ../boards/babyshapes/board8_4.xml.in.h:1
-#| msgid "Ambrosius Bosschaert, The Elder - 1614"
 msgid "Ambrosius Bosschaert the Elder, Flower Still Life - 1614"
 msgstr "Ambrosius Bosschaert ο πρεσβύτερος,  Η ακίνητη ζωή του λουλουδιού - 1614"
 
@@ -1605,7 +1586,7 @@ msgid "Cyprus"
 msgstr "Κύπρος"
 
 #: ../boards/geography/board3_1.xml.in.h:7
-#: ../src/gcompris/config.c:67
+#: ../src/gcompris/config.c:64
 msgid "Czech Republic"
 msgstr "Τσεχία"
 
@@ -1982,12 +1963,12 @@ msgid "Letter association between the screen and the keyboard"
 msgstr "Σχέση γραμμάτων μεταξύ οθόνης και πληκτρολογίου"
 
 #: ../boards/gletters.xml.in.h:3
-#: ../src/boards/gletters.c:134
+#: ../src/boards/gletters.c:132
 msgid "Simple Letters"
 msgstr "Απλά Γράμματα"
 
 #: ../boards/gletters.xml.in.h:4
-#: ../src/boards/gletters.c:135
+#: ../src/boards/gletters.c:133
 msgid "Type the falling letters before they reach the ground"
 msgstr "Πληκτρολογήστε τα γράμματα που πέφτουν πριν φτάσουν στο έδαφος"
 
@@ -2101,7 +2082,7 @@ msgid "Drag and Drop one top piece at a time, from one peg to another, to reprod
 msgstr "Μετακίνησε και τοποθέτησε ένα δίσκο κάθε φορά από τον ένα πάσσαλο στον άλλο, για να ξαναδημιουργήσεις τον πύργο που βρίσκεται στα δεξιά σου στον άδειο πάσσαλο στο αριστερά."
 
 #: ../boards/hanoi.xml.in.h:4
-#: ../src/boards/hanoi.c:96
+#: ../src/boards/hanoi.c:114
 msgid "Reproduce the given tower"
 msgstr "Φτιάξε το ίδιο σχήμα"
 
@@ -2110,7 +2091,7 @@ msgid "Reproduce the tower on the right in the empty space on the left"
 msgstr "Φτιάξε στον κενό αριστερό πάσσαλο τον ίδιο πύργο που βρίσκεται στα δεξιά"
 
 #: ../boards/hanoi.xml.in.h:6
-#: ../src/boards/hanoi.c:95
+#: ../src/boards/hanoi.c:113
 msgid "Simplified Tower of Hanoi"
 msgstr "Απλοποιημένος πύργος του Ανόι"
 
@@ -2914,7 +2895,7 @@ msgid "GCompris Main Menu"
 msgstr "Κύριο μενού του GCompris "
 
 #: ../boards/menu.xml.in.h:17
-#: ../src/boards/menu2.c:1009
+#: ../src/boards/menu2.c:1007
 msgid "GCompris is a collection of educational games that provides different activities for children aged 2 and up."
 msgstr "Το GCompris είναι μια συλλογή εκπαιδευτικών δραστηριοτήτων για παιδιά από 2 έως 10 ετών."
 
@@ -3231,7 +3212,7 @@ msgid "Number"
 msgstr "Αριθμοί κατά αύξουσα σειρά"
 
 #: ../boards/planegame.xml.in.h:4
-#: ../src/boards/planegame.c:74
+#: ../src/boards/planegame.c:72
 msgid "Numbers in Order"
 msgstr "Αριθμοί σε αύξουσα σειρά"
 
@@ -3756,9 +3737,34 @@ msgstr "Εκπαιδευτική σουίτα GCompris"
 msgid "Multi-activity educational game"
 msgstr "Εκπαιδευτικό παιχνίδι πολλαπλών δραστηριοτήτων"
 
+#: ../nsis_translations.desktop.in.h:1
+msgid "An instance of GCompris is currently running. Exit GCompris and then try again."
+msgstr "Ένα στιγμιότυπο του GCompris εκτελείται ήδη. Κλείστε το GCompris και προσπαθήστε πάλι."
+
+#: ../nsis_translations.desktop.in.h:2
+#| msgid "The race is already being run"
+msgid "The installer is already running."
+msgstr "Ο εγκαταστάτης εκτελείται ήδη."
+
+#: ../nsis_translations.desktop.in.h:3
+msgid "Visit the GCompris Web Site"
+msgstr "Επισκεφθείτε τον ιστότοπο του GCompris"
+
+#: ../nsis_translations.desktop.in.h:4
+msgid "You do not have permission to uninstall this application."
+msgstr "Δεν έχετε επαρκή δικαιώματα ώστε να απεγκαταστήσετε την εφαρμογή."
+
+#: ../nsis_translations.desktop.in.h:5
+msgid "Your old GCompris directory is about to be deleted. Would you like to continue?$\\r$\\rNote: Any non-standard plugins that you may have installed will be deleted.$\\rGCompris user settings will not be affected."
+msgstr "Ο παλιός φάκελος του GCompris πρόκειται να διαγραφεί. Θέλετε να συνεχίσετε;$\\r$\\rΣημείωση: Όλα τα ανεπίσημα πρόσθετα που ενδεχομένως έχετε εγκαταστήσει θα διαγραφούν.$\\rΩστόσο, οι ρυθμίσεις του χρήστη δεν θα επηρεαστούν."
+
+#: ../nsis_translations.desktop.in.h:6
+msgid "the uninstaller could not find registry entries for GCompris.$\\rIt is likely that another user installed this application."
+msgstr "Tο πρόγραμμα απεγκατάστασης δεν μπόρεσε να βρει καταχωρήσεις μητρώου για το GCompris.$\\rΕίναι πιθανόν κάποιος άλλος χρήστης να έχει εγκαταστήσει αυτή την εφαρμογή."
+
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
-#: ../src/boards/algebra.c:181
-#: ../src/boards/memory.c:843
+#: ../src/boards/algebra.c:179
+#: ../src/boards/memory.c:840
 msgid "+-×÷"
 msgstr "+-*/"
 
@@ -3836,8 +3842,8 @@ msgstr ""
 "με τα άσπρα πιόνια"
 
 #: ../src/boards/chess.c:1139
-#: ../src/gcompris/bonus.c:354
-#: ../src/gcompris/bonus.c:363
+#: ../src/gcompris/bonus.c:352
+#: ../src/gcompris/bonus.c:361
 msgid "Drawn game"
 msgstr "Ισόπαλο παιχνίδι"
 
@@ -3846,7 +3852,7 @@ msgid "Error: The external program gnuchess died unexpectingly"
 msgstr "Σφάλμα: Η εξωτερική εφαρμογή gnuchess τερματίστηκε απροσδόκητα"
 
 #: ../src/boards/click_on_letter.c:258
-#: ../src/boards/memory.c:810
+#: ../src/boards/memory.c:807
 msgid ""
 "Error: this activity cannot be played with the\n"
 "sound effects disabled.\n"
@@ -3862,8 +3868,8 @@ msgstr ""
 #. require by all utf8-functions
 #. TRANSLATORS: Put here the alphabet lowercase in your language
 #: ../src/boards/click_on_letter.c:263
-#: ../src/boards/gletters.c:232
-#: ../src/boards/memory.c:832
+#: ../src/boards/gletters.c:230
+#: ../src/boards/memory.c:829
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "αβγδεζηθικλμνξοπρστυφχψω"
 
@@ -3893,7 +3899,7 @@ msgstr ""
 #. we can add what you want in it.
 #: ../src/boards/click_on_letter.c:622
 #: ../src/boards/colors.c:164
-#: ../src/boards/gletters.c:858
+#: ../src/boards/gletters.c:856
 #: ../src/boards/imageid.c:750
 #: ../src/boards/missingletter.c:782
 #: ../src/boards/python/admin/board_list.py:635
@@ -3902,10 +3908,10 @@ msgstr ""
 #: ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409
 #: ../src/boards/python/tuxpaint.py:207
-#: ../src/boards/reading.c:876
+#: ../src/boards/reading.c:874
 #: ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1873
-#: ../src/boards/smallnumbers.c:592
+#: ../src/boards/shapegame.c:1877
+#: ../src/boards/smallnumbers.c:590
 #: ../src/boards/wordsgame.c:777
 #, c-format, python-format
 msgid ""
@@ -3917,13 +3923,13 @@ msgstr ""
 
 #. toggle box
 #: ../src/boards/click_on_letter.c:645
-#: ../src/boards/gletters.c:891
+#: ../src/boards/gletters.c:889
 #: ../src/boards/python/login.py:540
 msgid "Uppercase only text"
 msgstr "Κείμενο μόνο με κεφαλαία γράμματα"
 
-#: ../src/boards/clockgame.c:549
-#: ../src/boards/clockgame.c:559
+#: ../src/boards/clockgame.c:547
+#: ../src/boards/clockgame.c:557
 msgid "Set the watch to:"
 msgstr "Ορισμός ρολογιού σε:"
 
@@ -3967,32 +3973,33 @@ msgstr "Πάτησε στη μαύρη πάπια"
 msgid "Click on the white duck"
 msgstr "Πάτησε στην άσπρη πάπια"
 
+#. self.main_vbox.pack_start (label, False, False, 8)
 #: ../src/boards/colors.c:176
 #: ../src/boards/python/admin/board_list.py:665
 #: ../src/boards/python/pythontest.py:473
-#: ../src/boards/smallnumbers.c:613
+#: ../src/boards/smallnumbers.c:611
 msgid "Select sound locale"
 msgstr "Διάλεξε τοπικοποιημένο σύνολο ήχων"
 
 #. TRANSLATORS: Put here the numbers in your language
-#: ../src/boards/gletters.c:228
-#: ../src/boards/memory.c:828
+#: ../src/boards/gletters.c:226
+#: ../src/boards/memory.c:825
 msgid "0123456789"
 msgstr "0123456789 "
 
 #. TRANSLATORS: Put here the alphabet uppercase in your language
-#: ../src/boards/gletters.c:238
-#: ../src/boards/memory.c:838
+#: ../src/boards/gletters.c:236
+#: ../src/boards/memory.c:835
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"
 
-#: ../src/boards/gletters.c:887
-#: ../src/boards/smallnumbers.c:611
+#: ../src/boards/gletters.c:885
+#: ../src/boards/smallnumbers.c:609
 msgid "Enable sounds"
 msgstr "Ενεργοποίηση ήχων"
 
-#: ../src/boards/hanoi.c:331
-#: ../src/boards/hanoi.c:342
+#: ../src/boards/hanoi.c:349
+#: ../src/boards/hanoi.c:360
 msgid "Build the same tower in the empty area as the one you see on the right-hand side."
 msgstr "Κατασκεύασε τον ίδιο πύργο, σύμφωνα με το δείγμα στα δεξιά."
 
@@ -4042,65 +4049,58 @@ msgstr ""
 msgid "Look at your position, then switch back to 3D mode to continue your moves"
 msgstr "Κοίταξε την θέση σου και ξαναγύρνα στην τρισδιάσταστη λειτουργία για να συνεχίσεις τις κινήσεις σου"
 
-#: ../src/boards/memory.c:263
+#: ../src/boards/memory.c:261
 msgid "Memory"
 msgstr "Μνήμη"
 
-#: ../src/boards/memory.c:264
+#: ../src/boards/memory.c:262
 msgid "Find the matching pair"
 msgstr "Βρες το ζευγάρι που ταιριάζει"
 
-#: ../src/boards/menu2.c:132
+#: ../src/boards/menu2.c:130
 msgid "Main Menu Second Version"
 msgstr "Κυρίως Μενού Δεύτερη Έκδοση"
 
-#: ../src/boards/menu2.c:133
+#: ../src/boards/menu2.c:131
 msgid "Select a Board"
 msgstr "Διάλεξε πίνακα"
 
 #. pixmap
 #: ../src/boards/missingletter_config.c:390
 #: ../src/boards/missingletter_config.c:540
-#| msgid "bistre"
 msgid "Picture"
 msgstr "Εικόνα"
 
 #. answer
 #: ../src/boards/missingletter_config.c:396
 #: ../src/boards/missingletter_config.c:531
-#| msgid "User"
 msgid "Answer"
 msgstr "Απάντηση"
 
 #. question
 #: ../src/boards/missingletter_config.c:402
 #: ../src/boards/missingletter_config.c:554
-#| msgid "Numeration"
 msgid "Question"
 msgstr "Ερώτηση"
 
 #. choice
 #: ../src/boards/missingletter_config.c:408
 #: ../src/boards/missingletter_config.c:563
-#| msgid "Chile"
 msgid "Choice"
 msgstr "Επιλογή"
 
 #. combo level
 #: ../src/boards/missingletter_config.c:446
 #: ../src/gcompris/board_config_wordlist.c:221
-#| msgid "Level"
 msgid "Level:"
 msgstr "Επίπεδο:"
 
 #: ../src/boards/missingletter_config.c:454
 #, c-format
-#| msgid "Level"
 msgid "Level %d"
 msgstr "Επίπεδο %d"
 
 #: ../src/boards/missingletter_config.c:544
-#| msgid "First name:"
 msgid "Filename:"
 msgstr "Όνομα αρχείου:"
 
@@ -4115,11 +4115,11 @@ msgstr "$ %.2f "
 msgid "$ %.0f"
 msgstr "$ %.0f"
 
-#: ../src/boards/paratrooper.c:437
+#: ../src/boards/paratrooper.c:435
 msgid "Control fall speed with up and down arrow keys."
 msgstr "Ρύθμισε την ταχύτητα πτώσης με τα βέλη των πλήκτρων (πάνω και κάτω)."
 
-#: ../src/boards/planegame.c:75
+#: ../src/boards/planegame.c:73
 msgid "Move the plane to catch the clouds in the correct order"
 msgstr "Κινείστε το αεροπλάνο για να πιάσει τα σύννεφα με τη σωστή σειρά"
 
@@ -4889,7 +4889,7 @@ msgstr "Παιχνίδι μνήμης"
 msgid "Build a train according to the model"
 msgstr "Φτιάξε ένα τρένο σύμφωνα με το μοντέλο"
 
-#: ../src/boards/reading.c:228
+#: ../src/boards/reading.c:226
 #: ../src/boards/wordsgame.c:209
 msgid ""
 "Error: We can't find\n"
@@ -4898,43 +4898,43 @@ msgstr ""
 "Λάθος: δεν βρήκαμε\n"
 "κατάλογο λέξεων για να παίξουμε αυτό το παιχνίδι.\n"
 
-#: ../src/boards/reading.c:390
+#: ../src/boards/reading.c:388
 msgid "Please, check if the word"
 msgstr "Παρακαλώ, ελέγξτε αν η λέξη"
 
-#: ../src/boards/reading.c:410
+#: ../src/boards/reading.c:408
 msgid "is being displayed"
 msgstr "εμφανίζεται"
 
-#: ../src/boards/reading.c:462
+#: ../src/boards/reading.c:460
 msgid "We skip this level because there are not enough words in the list!"
 msgstr "Αυτό το επίπεδο θα αγνοηθεί επειδή δεν υπάρχουν αρκετές λέξεις στον κατάλογο!"
 
-#: ../src/boards/reading.c:611
+#: ../src/boards/reading.c:609
 msgid "I am Ready"
 msgstr "Είμαι Έτοιμος"
 
-#: ../src/boards/reading.c:651
+#: ../src/boards/reading.c:649
 msgid "Yes, I saw it"
 msgstr "Ναι, το είδα"
 
-#: ../src/boards/reading.c:679
+#: ../src/boards/reading.c:677
 msgid "No, it was not there"
 msgstr "Όχι, δεν υπήρχε"
 
 #  Report what was wrong in the log
 #. Report what was wrong in the log
-#: ../src/boards/reading.c:718
+#: ../src/boards/reading.c:716
 #, c-format
 msgid "The word to find was '%s'"
 msgstr "Η λέξη που βρέθηκε ήταν '%s'"
 
-#: ../src/boards/reading.c:721
+#: ../src/boards/reading.c:719
 #, c-format
 msgid "But it was not displayed"
 msgstr "Αλλά δεν εμφανίστηκε"
 
-#: ../src/boards/reading.c:723
+#: ../src/boards/reading.c:721
 #, c-format
 msgid "And it was displayed"
 msgstr "και εμφανίζεται"
@@ -5001,7 +5001,7 @@ msgstr "Επικεφαλίδα 1"
 msgid "Heading 2"
 msgstr "Επικεφαλίδα 2"
 
-#: ../src/gcompris/about.c:56
+#: ../src/gcompris/about.c:54
 msgid ""
 "Author: Bruno Coudoin\n"
 "Contribution: Pascal Georges, Jose Jorge, Yves Combe\n"
@@ -5017,23 +5017,23 @@ msgstr ""
 
 #  TRANSLATORS: Replace this string with your names, one name per line.
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/gcompris/about.c:64
+#: ../src/gcompris/about.c:62
 msgid "translator_credits"
 msgstr ""
 "Κώστας Παπαδήμας <pkst@gnome.org>\n"
 "Άννα Κωνσταντινίδου <annkonst@yahoo.com>\n"
 "Γιάννης Κασκαμανίδης <ttnfy17@yahoo.gr>"
 
-#: ../src/gcompris/about.c:95
-#: ../src/gcompris/about.c:105
+#: ../src/gcompris/about.c:93
+#: ../src/gcompris/about.c:103
 msgid "About GCompris"
 msgstr "Σχετικά με το GCompris"
 
-#: ../src/gcompris/about.c:116
+#: ../src/gcompris/about.c:114
 msgid "Translators:"
 msgstr "Μεταφραστές:"
 
-#: ../src/gcompris/about.c:229
+#: ../src/gcompris/about.c:227
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -5041,34 +5041,34 @@ msgstr ""
 "Αρχική Σελίδα του GCompris\n"
 "http://gcompris.net"
 
-#: ../src/gcompris/about.c:251
+#: ../src/gcompris/about.c:249
 msgid "This software is a GNU Package and is released under the GNU General Public License"
 msgstr "Το GCompris είναι ένα πακέτο GNU και διέπεται από τους όρους της GNU/GPL"
 
-#: ../src/gcompris/about.c:279
-#: ../src/gcompris/about.c:289
-#: ../src/gcompris/config.c:477
-#: ../src/gcompris/config.c:487
-#: ../src/gcompris/dialog.c:99
+#: ../src/gcompris/about.c:277
+#: ../src/gcompris/about.c:287
+#: ../src/gcompris/config.c:473
+#: ../src/gcompris/config.c:483
+#: ../src/gcompris/dialog.c:97
 #: ../src/gcompris/help.c:379
 #: ../src/gcompris/help.c:389
-#: ../src/gcompris/images_selector.c:316
+#: ../src/gcompris/images_selector.c:314
 msgid "OK"
 msgstr "Εντάξει"
 
-#: ../src/gcompris/bar.c:601
+#: ../src/gcompris/bar.c:599
 msgid "GCompris confirmation"
 msgstr "Επιβεβαίωση GCompris"
 
-#: ../src/gcompris/bar.c:602
+#: ../src/gcompris/bar.c:600
 msgid "Are you sure you want to quit?"
 msgstr "Θέλεις να κλείσεις το GCompris?"
 
-#: ../src/gcompris/bar.c:603
+#: ../src/gcompris/bar.c:601
 msgid "Yes, I am sure!"
 msgstr "Ναι, θέλω να το κλείσω!"
 
-#: ../src/gcompris/bar.c:604
+#: ../src/gcompris/bar.c:602
 msgid "No, I want to keep going"
 msgstr "Όχι, θέλω να συνεχίσω"
 
@@ -5116,12 +5116,10 @@ msgstr "%d (Νέο επίπεδο)"
 
 #. frame
 #: ../src/gcompris/board_config_wordlist.c:180
-#| msgid "Complete a list of symbols"
 msgid "Configure the list of words"
 msgstr "Διαμόρφωση του καταλόγου των λέξεων"
 
 #: ../src/gcompris/board_config_wordlist.c:209
-#| msgid "Last name:"
 msgid "Language:"
 msgstr "Γλώσσα:"
 
@@ -5129,288 +5127,283 @@ msgstr "Γλώσσα:"
 msgid "Back to default"
 msgstr "Επιστροφή στο προκαθορισμένο"
 
-#: ../src/gcompris/config.c:58
+#: ../src/gcompris/config.c:56
 msgid "Your system default"
 msgstr "Χρήση προεπιλεγμένων από το σύστημα"
 
-#: ../src/gcompris/config.c:59
+#: ../src/gcompris/config.c:57
 msgid "Afrikaans"
 msgstr "Afrikaans"
 
-#: ../src/gcompris/config.c:60
+#: ../src/gcompris/config.c:58
 msgid "Amharic"
 msgstr "Amharic"
 
-#: ../src/gcompris/config.c:61
+#: ../src/gcompris/config.c:59
 msgid "Arabic"
 msgstr "Αραβικά"
 
-#: ../src/gcompris/config.c:62
-msgid "Arabic (Tunisia)"
-msgstr "Αραβικά (Τυνησία)"
-
-#: ../src/gcompris/config.c:63
+#: ../src/gcompris/config.c:60
 msgid "Turkish (Azerbaijan)"
 msgstr "Τουρκικά (Αζερμπαϊτζάν)"
 
-#: ../src/gcompris/config.c:64
+#: ../src/gcompris/config.c:61
 msgid "Bulgarian"
 msgstr "Βουλγαρικά"
 
-#: ../src/gcompris/config.c:65
+#: ../src/gcompris/config.c:62
 msgid "Breton"
 msgstr "Βρετονικά"
 
-#: ../src/gcompris/config.c:66
+#: ../src/gcompris/config.c:63
 msgid "Catalan"
 msgstr "Καταλανικά"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:65
 msgid "Danish"
 msgstr "Δανέζικα"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:66
 msgid "German"
 msgstr "Γερμανικά"
 
-#: ../src/gcompris/config.c:70
-msgid "Greek"
-msgstr "Ελληνικά"
-
-#: ../src/gcompris/config.c:71
-msgid "English (Canada)"
-msgstr "Αγγλικά (Καναδάς)"
-
-#: ../src/gcompris/config.c:72
-msgid "English (Great Britain)"
-msgstr "Αγγλικά (Μεγάλη Βρετανία)"
-
-#: ../src/gcompris/config.c:73
-msgid "English (United States)"
-msgstr "Αγγλικά (Ηνωμένων Πολιτειών)"
-
-#: ../src/gcompris/config.c:74
-msgid "Spanish"
-msgstr "Ισπανικά"
-
-#: ../src/gcompris/config.c:75
-msgid "Basque"
-msgstr "Βασκικά"
-
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:67
 msgid "Dzongkha"
 msgstr "Ντζόγκα (Μπουτάν)"
 
-#: ../src/gcompris/config.c:77
+#: ../src/gcompris/config.c:68
+msgid "Greek"
+msgstr "Ελληνικά"
+
+#: ../src/gcompris/config.c:69
+msgid "English (Canada)"
+msgstr "Αγγλικά (Καναδάς)"
+
+#: ../src/gcompris/config.c:70
+msgid "English (Great Britain)"
+msgstr "Αγγλικά (Μεγάλη Βρετανία)"
+
+#: ../src/gcompris/config.c:71
+msgid "English (United States)"
+msgstr "Αγγλικά (Ηνωμένων Πολιτειών)"
+
+#: ../src/gcompris/config.c:72
+msgid "Spanish"
+msgstr "Ισπανικά"
+
+#: ../src/gcompris/config.c:73
+msgid "Basque"
+msgstr "Βασκικά"
+
+#: ../src/gcompris/config.c:74
 msgid "Persian"
 msgstr "Περσικά"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:75
 msgid "Finnish"
 msgstr "Φινλανδικό"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:76
 msgid "French"
 msgstr "Γαλλικά"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:77
 msgid "Irish (Gaelic)"
 msgstr "Ιρλανδική (Γαελική)"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:78
+msgid "Gujarati"
+msgstr "Γκουτζαράτι"
+
+#: ../src/gcompris/config.c:79
 msgid "Hebrew"
 msgstr "Εβραϊκά"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:80
 msgid "Hindi"
 msgstr "Χίντι"
+
+#: ../src/gcompris/config.c:81
+msgid "Croatian"
+msgstr "Κροατικά"
+
+#: ../src/gcompris/config.c:82
+msgid "Hungarian"
+msgstr "Ουγγρικό"
 
 #: ../src/gcompris/config.c:83
 msgid "Indonesian"
 msgstr "Ινδονησιακή"
 
 #: ../src/gcompris/config.c:84
-msgid "Japanese"
-msgstr "Ιαπωνικά"
-
-#: ../src/gcompris/config.c:85
-msgid "Gujarati"
-msgstr "Γκουτζαράτι"
-
-#: ../src/gcompris/config.c:86
-#: ../src/gcompris/config.c:104
-msgid "Punjabi"
-msgstr "Πουντζάμπι"
-
-#: ../src/gcompris/config.c:87
-msgid "Hungarian"
-msgstr "Ουγγρικό"
-
-#: ../src/gcompris/config.c:88
-msgid "Croatian"
-msgstr "Κροατικά"
-
-#: ../src/gcompris/config.c:89
 msgid "Italian"
 msgstr "Italian"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:85
+msgid "Japanese"
+msgstr "Ιαπωνικά"
+
+#: ../src/gcompris/config.c:86
 msgid "Georgian"
 msgstr "Γεωργιανικά"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:87
 msgid "Korean"
 msgstr "Κορεάτικα"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:88
 msgid "Lithuanian"
 msgstr "Λιθουανική"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:89
 msgid "Macedonian"
 msgstr "ΠΓΔΜ"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:90
 msgid "Malayalam"
 msgstr "Μαλαγιάλαμ"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:91
 msgid "Marathi"
 msgstr "Μαράθι"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:92
 msgid "Malay"
 msgstr "Μαλαισιακή"
 
-#: ../src/gcompris/config.c:97
-msgid "Nepal"
-msgstr "Νεπάλ"
-
-#: ../src/gcompris/config.c:98
-msgid "Dutch"
-msgstr "Dutch"
-
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:93
 msgid "Norwegian Bokmal"
 msgstr "Norwegian Bokmal"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:94
+msgid "Nepal"
+msgstr "Νεπάλ"
+
+#: ../src/gcompris/config.c:95
+msgid "Dutch"
+msgstr "Dutch"
+
+#: ../src/gcompris/config.c:96
 msgid "Norwegian Nynorsk"
 msgstr "Norwegian Nynorsk"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:97
 msgid "Occitan (languedocien)"
 msgstr "Οξιτανικά (Νότια Γαλλία)"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:98
+msgid "Punjabi"
+msgstr "Πουντζάμπι"
+
+#: ../src/gcompris/config.c:99
 msgid "Polish"
 msgstr "Polish"
 
-#: ../src/gcompris/config.c:103
-msgid "Portuguese"
-msgstr "Πορτογαλικό"
-
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:100
 msgid "Portuguese (Brazil)"
 msgstr "Πορτογαλικά (Βραζιλίας)"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:101
+msgid "Portuguese"
+msgstr "Πορτογαλικό"
+
+#: ../src/gcompris/config.c:102
 msgid "Romanian"
 msgstr "Ρουμάνικα"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:103
 msgid "Russian"
 msgstr "Ρωσικά"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:104
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:105
 msgid "Slovak"
 msgstr "Σλοβακική"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:106
 msgid "Slovenian"
 msgstr "Σλοβενικό"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:107
 msgid "Somali"
 msgstr "Σομαλικά"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:108
 msgid "Albanian"
 msgstr "Αλβανικά"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:109
 msgid "Serbian (Latin)"
 msgstr "Σερβικά/Λατινικά"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:110
 msgid "Serbian"
 msgstr "Σερβική"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:111
 msgid "Swedish"
 msgstr "Σουηδικά"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:112
 msgid "Tamil"
 msgstr "Ταμίλ"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:113
 msgid "Thai"
 msgstr "Τάι"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:114
 msgid "Turkish"
 msgstr "Τουρκικά"
 
-#: ../src/gcompris/config.c:119
-msgid "Urdu"
-msgstr "Ούρντου"
-
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:115
 msgid "Ukrainian"
 msgstr "Ουκρανικά"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:116
+msgid "Urdu"
+msgstr "Ούρντου"
+
+#: ../src/gcompris/config.c:117
 msgid "Vietnamese"
 msgstr "Βιετναμέζικα"
 
-#: ../src/gcompris/config.c:122
+#: ../src/gcompris/config.c:118
 msgid "Walloon"
 msgstr "Walloon"
 
-#: ../src/gcompris/config.c:123
+#: ../src/gcompris/config.c:119
 msgid "Chinese (Simplified)"
 msgstr "Κινέζικα (απλουστευμένα)"
 
-#: ../src/gcompris/config.c:124
+#: ../src/gcompris/config.c:120
 msgid "Chinese (Traditional)"
 msgstr "Κινέζικα (Παραδοσιακά)"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:125
 msgid "No time limit"
 msgstr "Χωρίς όριο χρόνου"
 
-#: ../src/gcompris/config.c:130
+#: ../src/gcompris/config.c:126
 msgid "Slow timer"
 msgstr "Αργό χρονόμετρο"
 
-#: ../src/gcompris/config.c:131
+#: ../src/gcompris/config.c:127
 msgid "Normal timer"
 msgstr "Κανονικό χρονόμετρο"
 
-#: ../src/gcompris/config.c:132
+#: ../src/gcompris/config.c:128
 msgid "Fast timer"
 msgstr "Γρήγορο χρονόμετρο"
 
-#: ../src/gcompris/config.c:137
+#: ../src/gcompris/config.c:133
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (Προεπιλεγμένο για gcompris)"
 
-#: ../src/gcompris/config.c:142
+#: ../src/gcompris/config.c:138
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -5419,52 +5412,52 @@ msgstr ""
 "GCompris για να καθορίσετε το\n"
 "επίπεδο δυσκολίας για κάθε προφίλ</i>"
 
-#: ../src/gcompris/config.c:197
-#: ../src/gcompris/config.c:207
+#: ../src/gcompris/config.c:193
+#: ../src/gcompris/config.c:203
 msgid "GCompris Configuration"
 msgstr "Ρύθμιση GCompris"
 
-#: ../src/gcompris/config.c:283
+#: ../src/gcompris/config.c:279
 msgid "Fullscreen"
 msgstr "Πλήρης οθόνη"
 
-#: ../src/gcompris/config.c:326
+#: ../src/gcompris/config.c:322
 msgid "Music"
 msgstr "Μουσική"
 
-#: ../src/gcompris/config.c:354
+#: ../src/gcompris/config.c:350
 msgid "Effect"
 msgstr "Εφέ"
 
-#: ../src/gcompris/config.c:390
+#: ../src/gcompris/config.c:386
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "Αδυναμία ανοίγματος καταλόγου skin: %s"
 
-#: ../src/gcompris/config.c:421
-#: ../src/gcompris/config.c:871
-#: ../src/gcompris/config.c:885
+#: ../src/gcompris/config.c:417
+#: ../src/gcompris/config.c:867
+#: ../src/gcompris/config.c:881
 #, c-format
 msgid "Skin : %s"
 msgstr "Θέμα: %s"
 
-#: ../src/gcompris/config.c:423
+#: ../src/gcompris/config.c:419
 msgid "SKINS NOT FOUND"
 msgstr "ΔΕΝ ΒΡΕΘΗΚΑΝ ΤΑ ΘΕΜΑΤΑ"
 
-#: ../src/gcompris/config.c:548
+#: ../src/gcompris/config.c:544
 msgid "English (United State)"
 msgstr "Αγγλικά (Ηνωμένων Πολιτειών)"
 
-#: ../src/gcompris/file_selector.c:336
+#: ../src/gcompris/file_selector.c:334
 msgid "CANCEL"
 msgstr "ΑΚΥΡΟ"
 
-#: ../src/gcompris/file_selector.c:367
+#: ../src/gcompris/file_selector.c:365
 msgid "LOAD"
 msgstr "ΦΟΡΤΩΣΗ"
 
-#: ../src/gcompris/file_selector.c:367
+#: ../src/gcompris/file_selector.c:365
 msgid "SAVE"
 msgstr "ΑΠΟΘΗΚΕΥΣΗ"
 
@@ -5617,17 +5610,17 @@ msgstr ""
 "Η έκδοση GNU/Linux δεν έχει αυτόν τον περιορισμό. Σημειώστε ότι το GCompris αναπτύσσεται για να απελευθερώσει τα σχολεία από τους μονοπωλιακούς προμηθευτές λογισμικού. Αν πιστεύετε επίσης ότι μπορούμε να διδάξουμε την ελευθερία στα παιδιά, τότε είναι απαραίτητη η χρήση λογισμικού GNU/Linux. Περισσότερες πληροφορίες στο FSF:\n"
 "<http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1478
+#: ../src/gcompris/gcompris.c:1487
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr "Δεν είναι δυνατή η εκκίνηση του gcompris επειδή το αρχείο κλειδώματος είναι ενεργό για λιγότερο από %d δευτερόλεπτα.\n"
 
-#: ../src/gcompris/gcompris.c:1480
+#: ../src/gcompris/gcompris.c:1489
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "Το αρχείο κλειδώματος είναι: %s\n"
 
-#: ../src/gcompris/gcompris.c:1599
+#: ../src/gcompris/gcompris.c:1608
 #, c-format
 msgid ""
 "GCompris\n"
@@ -5641,38 +5634,37 @@ msgstr ""
 "Πληροφορίες στο http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1683
+#: ../src/gcompris/gcompris.c:1692
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "Χρησιμοποίησε το -l για να αποκτήσεις άμεση πρόσβαση σε μια δραστηριότητα.\n"
 
-#: ../src/gcompris/gcompris.c:1684
+#: ../src/gcompris/gcompris.c:1693
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "Ο κατάλογος των διαθέσιμων δραστηριοτήτων είναι:\n"
 
-#: ../src/gcompris/gcompris.c:1715
+#: ../src/gcompris/gcompris.c:1724
 #, c-format
-#| msgid "Numeration activities."
 msgid "Number of activities: %d\n"
 msgstr "Αριθμός δραστηριοτήτων: %d\n"
 
-#: ../src/gcompris/gcompris.c:1751
+#: ../src/gcompris/gcompris.c:1760
 #, c-format
 msgid "%s exists but is not readable or writable"
 msgstr "%s υπάρχει αλλά δεν είναι αναγνώσιμο ή εγγράψιμο"
 
-#: ../src/gcompris/gcompris.c:1812
+#: ../src/gcompris/gcompris.c:1821
 #, c-format
 msgid "The --server option cannot be used because GCompris has been compiled without network support!"
 msgstr "Η επιλογή --διακομιστή δεν μπορεί να χρησιμοποιηθεί, επειδή το GCompris έχει μεταγλωττιστεί χωρίς υποστήριξη δικτύου!"
 
-#: ../src/gcompris/gcompris.c:1863
+#: ../src/gcompris/gcompris.c:1872
 #, c-format
 msgid "ERROR: Profile '%s' is not found. Run 'gcompris --profile-list' to list available ones\n"
 msgstr "ΣΦΑΛΜΑ: Το προφίλ '%s' δεν βρέθηκε. Εκτελέστε την εντολή  'gcompris --profile-list' για να δείτε τα διαθέσιμα προφίλ\n"
 
-#: ../src/gcompris/gcompris.c:1877
+#: ../src/gcompris/gcompris.c:1886
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "Ο κατάλογος των διαθέσιμων προφίλ είναι:\n"
@@ -5701,16 +5693,16 @@ msgstr "Οδηγός"
 msgid "Credit"
 msgstr "Μνεία"
 
-#: ../src/gcompris/properties.c:502
-#: ../src/gcompris/properties.c:509
+#: ../src/gcompris/properties.c:500
+#: ../src/gcompris/properties.c:507
 msgid "readme"
 msgstr "αρχείο ανάγνωσης"
 
-#: ../src/gcompris/properties.c:504
+#: ../src/gcompris/properties.c:502
 msgid "This directory contains the files you create with the GCompris educational suite\n"
 msgstr "Ο φάκελος περιέχει τα αρχεία που δημιούργησες με το εκπαιδευτικό πακέτο GCompris\n"
 
-#: ../src/gcompris/properties.c:511
+#: ../src/gcompris/properties.c:509
 msgid ""
 "Put any number of images in this directory.\n"
 "You can include these images in your drawings and animations.\n"
@@ -5720,15 +5712,17 @@ msgstr ""
 "Μπορείς να συμπεριλάβεις αυτές τις εικόνες στα ζωγραφικά και στα κινούμενα σχέδια.\n"
 "Οι μορφές των αρχείων που υποστηρίζονται είναι jpeg, png και svg.\n"
 
-#: ../src/gcompris/timer.c:262
+#: ../src/gcompris/timer.c:260
 msgid "Time Elapsed"
 msgstr "Χρόνος που πέρασε"
 
-#: ../src/gcompris/timer.c:351
+#: ../src/gcompris/timer.c:349
 #, c-format
 msgid "Remaining Time = %d"
 msgstr "Χρόνος που απομένει = %d"
 
+#~ msgid "Arabic (Tunisia)"
+#~ msgstr "Αραβικά (Τυνησία)"
 #~ msgid "Wordlist"
 #~ msgstr "Κατάλογος λέξεων"
 
