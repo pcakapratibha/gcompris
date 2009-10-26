@@ -290,6 +290,7 @@ libpython_la_SOURCES = python.c \
 
 
 EXTRA_DIST = README \
-	Makefile.mingw
+	Makefile.mingw \
+	chess_windows.c
 
 
