@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-28 07:25+0530\n"
-"PO-Revision-Date: 2009-05-28 16:10+0530\n"
+"POT-Creation-Date: 2009-10-27 14:19+0530\n"
+"PO-Revision-Date: 2009-10-27 14:33+0530\n"
 "Last-Translator: Dr.T.Vasudevan <agnihot3@gmail.com>\n"
 "Language-Team: American English <Ubuntu-l10n-tam@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.2\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../boards/administration.xml.in.h:1
@@ -718,15 +718,16 @@ msgstr ""
 "நாய் படம் தந்தது ஆந்த்ரே கோன்ஸ். இது ஜிபிஎல் இல் வெளியிடப்படுகிறது.\n"
 "கலைஞர்: காகின், பால். தலைப்பு அரியரியா. உரிமம்: பொது தளம். மூலம்: http://commons."
 "wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
-"கலைஞர்:பீட்டர் ப்ருஜெல் தி எல்டர். தலைப்பு: பெசன்ட்ஸ் வெடிங் உரிமம்: பொது தளம் மூலம் : http://commons."
-"wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
+"கலைஞர்:பீட்டர் ப்ருஜெல் தி எல்டர். தலைப்பு: பெசன்ட்ஸ் வெடிங் உரிமம்: பொது தளம் மூலம் : "
+"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
 "விவரம்: தி லேடி அன்ட் தி யூனிகார்ன் (ஓவியத்திரைகள்). ஆசிரியர்: பியர் எமானுவெல் மலிசின் "
 "எ ப்ரெதிரிக் வால்டெ .உரிமம்: இலவசம் ஆயின் இடமும் ஆசிரியரும் தரப்பட வேண்டும். மூலம்: "
 "http://www.galerie.roi-president.com\n"
 "கலைஞர்: வின்சென்ட் வான் கோ. தலைப்பு: பெட்ரூம் இன் ஆர்ல்ஸ். உரிமம்: பொதுக்களம். மூலம்: http://"
 "commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
-"கலைஞர்: அம்ரோசிஸ் போசெர்ட் தி எல்டர். தலைப்பு:ப்ளவர் ஸ்டில் லைப்  உரிமம்: பொதுக்களம். மூலம்: http://"
-"commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04.jpg"
+"கலைஞர்: அம்ரோசிஸ் போசெர்ட் தி எல்டர். தலைப்பு:ப்ளவர் ஸ்டில் லைப்  உரிமம்: பொதுக்களம். மூலம்: "
+"http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,_the_Elder_04."
+"jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -1862,7 +1863,7 @@ msgstr "குரோவேசியா"
 msgid "Cyprus"
 msgstr "சைப்ரஸ்"
 
-#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:65
+#: ../boards/geography/board3_1.xml.in.h:7 ../src/gcompris/config.c:64
 msgid "Czech Republic"
 msgstr "செக் குடியரசு"
 
@@ -4450,6 +4451,37 @@ msgstr "ஜிகாம்ப்ரி கல்வி தொகுதி"
 msgid "Multi-activity educational game"
 msgstr "கற்பிக்கும் பல் வித செயல்கள்"
 
+#: ../nsis_translations.desktop.in.h:1
+msgid ""
+"An instance of GCompris is currently running. Exit GCompris and then try "
+"again."
+msgstr "ஜிகாம்ப்ரி ஏற்கனவே இயங்கிக் கொண்டு இருக்கின்றது. ஜிகாம்ப்ரியிலிருந்து வெளியேறி பின் முயற்சி செய்க. "
+
+#: ../nsis_translations.desktop.in.h:2
+msgid "The installer is already running."
+msgstr "நிறுவி ஏற்கனவே இயங்கிக் கொண்டு இருக்கின்றது"
+
+#: ../nsis_translations.desktop.in.h:3
+msgid "Visit the GCompris Web Site"
+msgstr "ஜிகாம்ப்ரி வலைத்தளத்துக்கு வருகை தருக"
+
+#: ../nsis_translations.desktop.in.h:4
+msgid "You do not have permission to uninstall this application."
+msgstr "இந்த நிரலை நீக்க உங்களுக்கு தேவையான அனுமதி இல்லை"
+
+#: ../nsis_translations.desktop.in.h:5
+msgid ""
+"Your old GCompris directory is about to be deleted. Would you like to "
+"continue?$\\r$\\rNote: Any non-standard plugins that you may have installed "
+"will be deleted.$\\rGCompris user settings will not be affected."
+msgstr "உங்கள் பழைய ஜிகாம்ப்ரி அடைவு நீக்கப்படப்போகிறது. தொடர விருப்பமா? $\\r$\\r குறிப்பு: செந்தரமல்லாத சொருகிகளை நீங்கள் நிறுவி இருந்தால் அவை நீக்கப்படும். $\\r ஜிகாம்ப்ரி பயனர் அமைப்புகள் நீக்கப்படமாட்டா"
+
+#: ../nsis_translations.desktop.in.h:6
+msgid ""
+"the uninstaller could not find registry entries for GCompris.$\\rIt is "
+"likely that another user installed this application."
+msgstr "நிரல் நீக்கியால ஜிகாம்ப்ரி க்கான பதிவேட்டு உள்ளீடுகளை காண முடியவில்லை. $\\r வேறு பயனர் ஒருவர் இதை நிரல்நீக்கம் செய்து இருக்க வேண்டும்."
+
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
 #: ../src/boards/algebra.c:179 ../src/boards/memory.c:840
 msgid "+-×÷"
@@ -4576,7 +4608,7 @@ msgstr ""
 #: ../src/boards/python/admin/wordlist.py:49 ../src/boards/python/login.py:535
 #: ../src/boards/python/pythontest.py:409 ../src/boards/python/tuxpaint.py:207
 #: ../src/boards/reading.c:874 ../src/boards/scale.c:861
-#: ../src/boards/shapegame.c:1871 ../src/boards/smallnumbers.c:590
+#: ../src/boards/shapegame.c:1877 ../src/boards/smallnumbers.c:590
 #: ../src/boards/wordsgame.c:777
 #, c-format, python-format
 msgid ""
@@ -5623,7 +5655,7 @@ msgstr "உணர்ச்சி பூர்வமான"
 msgid "Official"
 msgstr "அதிகார பூர்வமானது"
 
-#: ../src/boards/wordprocessor.c:87 ../src/boards/wordprocessor.c:435
+#: ../src/boards/wordprocessor.c:87 ../src/boards/wordprocessor.c:437
 msgid "Text"
 msgstr "உரை"
 
@@ -5631,15 +5663,15 @@ msgstr "உரை"
 msgid "Flyer"
 msgstr "சுற்றரிக்கை"
 
-#: ../src/boards/wordprocessor.c:432
+#: ../src/boards/wordprocessor.c:434
 msgid "Title"
 msgstr "தலைப்பு"
 
-#: ../src/boards/wordprocessor.c:433
+#: ../src/boards/wordprocessor.c:435
 msgid "Heading 1"
 msgstr "தலைப்பு 1"
 
-#: ../src/boards/wordprocessor.c:434
+#: ../src/boards/wordprocessor.c:436
 msgid "Heading 2"
 msgstr "தலைப்பு 2"
 
@@ -5685,7 +5717,7 @@ msgid ""
 msgstr "இந்த மென்பொருள் க்னூ பொதியாகும். க்னூ பொது இணக்க ஆணையின் கீழ் வெளியிடப் படுகிறது."
 
 #: ../src/gcompris/about.c:277 ../src/gcompris/about.c:287
-#: ../src/gcompris/config.c:474 ../src/gcompris/config.c:484
+#: ../src/gcompris/config.c:473 ../src/gcompris/config.c:483
 #: ../src/gcompris/dialog.c:97 ../src/gcompris/help.c:379
 #: ../src/gcompris/help.c:389 ../src/gcompris/images_selector.c:314
 msgid "OK"
@@ -5779,270 +5811,266 @@ msgid "Arabic"
 msgstr "அராபிக்"
 
 #: ../src/gcompris/config.c:60
-msgid "Arabic (Tunisia)"
-msgstr "அராபிக் (துனீசியா)"
-
-#: ../src/gcompris/config.c:61
 msgid "Turkish (Azerbaijan)"
 msgstr "துருக்கி அசர்பைசான்"
 
-#: ../src/gcompris/config.c:62
+#: ../src/gcompris/config.c:61
 msgid "Bulgarian"
 msgstr "பல்கேரியன்"
 
-#: ../src/gcompris/config.c:63
+#: ../src/gcompris/config.c:62
 msgid "Breton"
 msgstr "ப்ரெடன்"
 
-#: ../src/gcompris/config.c:64
+#: ../src/gcompris/config.c:63
 msgid "Catalan"
 msgstr "காட்டலான்"
 
-#: ../src/gcompris/config.c:66
+#: ../src/gcompris/config.c:65
 msgid "Danish"
 msgstr "டேனிஷ்"
 
-#: ../src/gcompris/config.c:67
+#: ../src/gcompris/config.c:66
 msgid "German"
 msgstr "ஜெர்மன்"
 
-#: ../src/gcompris/config.c:68
+#: ../src/gcompris/config.c:67
 msgid "Dzongkha"
 msgstr "ட்சொங்க்ஹா"
 
-#: ../src/gcompris/config.c:69
+#: ../src/gcompris/config.c:68
 msgid "Greek"
 msgstr "கிரீக்"
 
-#: ../src/gcompris/config.c:70
+#: ../src/gcompris/config.c:69
 msgid "English (Canada)"
 msgstr "ஆங்கிலம் (கனடா)"
 
-#: ../src/gcompris/config.c:71
+#: ../src/gcompris/config.c:70
 msgid "English (Great Britain)"
 msgstr "ஆங்கிலம் (கிரேட் பிரிட்டன்)"
 
-#: ../src/gcompris/config.c:72
+#: ../src/gcompris/config.c:71
 msgid "English (United States)"
 msgstr "ஆங்கிலம் (அமெரிக்கா)"
 
-#: ../src/gcompris/config.c:73
+#: ../src/gcompris/config.c:72
 msgid "Spanish"
 msgstr "ஸ்பானிஷ்"
 
-#: ../src/gcompris/config.c:74
+#: ../src/gcompris/config.c:73
 msgid "Basque"
 msgstr "பேஸ்க்"
 
-#: ../src/gcompris/config.c:75
+#: ../src/gcompris/config.c:74
 msgid "Persian"
 msgstr "பெர்சியன்"
 
-#: ../src/gcompris/config.c:76
+#: ../src/gcompris/config.c:75
 msgid "Finnish"
 msgstr "பின்னிஷ்"
 
-#: ../src/gcompris/config.c:77
+#: ../src/gcompris/config.c:76
 msgid "French"
 msgstr "பிரெஞ்சு"
 
-#: ../src/gcompris/config.c:78
+#: ../src/gcompris/config.c:77
 msgid "Irish (Gaelic)"
 msgstr "ஐரீஷ் (கேலிக்)"
 
-#: ../src/gcompris/config.c:79
+#: ../src/gcompris/config.c:78
 msgid "Gujarati"
 msgstr "குஜராத்தி"
 
-#: ../src/gcompris/config.c:80
+#: ../src/gcompris/config.c:79
 msgid "Hebrew"
 msgstr "ஹீப்ரு"
 
-#: ../src/gcompris/config.c:81
+#: ../src/gcompris/config.c:80
 msgid "Hindi"
 msgstr "ஹிந்தி"
 
-#: ../src/gcompris/config.c:82
+#: ../src/gcompris/config.c:81
 msgid "Croatian"
 msgstr "குரேஷியன்"
 
-#: ../src/gcompris/config.c:83
+#: ../src/gcompris/config.c:82
 msgid "Hungarian"
 msgstr "ஹங்கேரியன்"
 
-#: ../src/gcompris/config.c:84
+#: ../src/gcompris/config.c:83
 msgid "Indonesian"
 msgstr "இந்தோனேஷியன்"
 
-#: ../src/gcompris/config.c:85
+#: ../src/gcompris/config.c:84
 msgid "Italian"
 msgstr "இத்தாலியன்"
 
-#: ../src/gcompris/config.c:86
+#: ../src/gcompris/config.c:85
 msgid "Japanese"
 msgstr "ஜப்பானிய"
 
-#: ../src/gcompris/config.c:87
+#: ../src/gcompris/config.c:86
 msgid "Georgian"
 msgstr "ஜியார்ஜியன்"
 
-#: ../src/gcompris/config.c:88
+#: ../src/gcompris/config.c:87
 msgid "Korean"
 msgstr "கொரியன்"
 
-#: ../src/gcompris/config.c:89
+#: ../src/gcompris/config.c:88
 msgid "Lithuanian"
 msgstr "லித்துனியன்"
 
-#: ../src/gcompris/config.c:90
+#: ../src/gcompris/config.c:89
 msgid "Macedonian"
 msgstr "மாசிடோ னியன்"
 
-#: ../src/gcompris/config.c:91
+#: ../src/gcompris/config.c:90
 msgid "Malayalam"
 msgstr "மலையாளம்"
 
-#: ../src/gcompris/config.c:92
+#: ../src/gcompris/config.c:91
 msgid "Marathi"
 msgstr "மராத்தி"
 
-#: ../src/gcompris/config.c:93
+#: ../src/gcompris/config.c:92
 msgid "Malay"
 msgstr "மலாய்"
 
-#: ../src/gcompris/config.c:94
+#: ../src/gcompris/config.c:93
 msgid "Norwegian Bokmal"
 msgstr "நார்வேஜியன் புக்மால்"
 
-#: ../src/gcompris/config.c:95
+#: ../src/gcompris/config.c:94
 msgid "Nepal"
 msgstr "நேபாளம்"
 
-#: ../src/gcompris/config.c:96
+#: ../src/gcompris/config.c:95
 msgid "Dutch"
 msgstr "டச்சு"
 
-#: ../src/gcompris/config.c:97
+#: ../src/gcompris/config.c:96
 msgid "Norwegian Nynorsk"
 msgstr "நார்விஜியன் நைநோர்ஸ்க்"
 
-#: ../src/gcompris/config.c:98
+#: ../src/gcompris/config.c:97
 msgid "Occitan (languedocien)"
 msgstr "ஆஸிடான் (லாங்குடோசியன்)"
 
-#: ../src/gcompris/config.c:99
+#: ../src/gcompris/config.c:98
 msgid "Punjabi"
 msgstr "பஞ்சாபி மொழி"
 
-#: ../src/gcompris/config.c:100
+#: ../src/gcompris/config.c:99
 msgid "Polish"
 msgstr "போலிஷ்"
 
-#: ../src/gcompris/config.c:101
+#: ../src/gcompris/config.c:100
 msgid "Portuguese (Brazil)"
 msgstr "போர்ச்சுகீஸ் (பிரேசில்)"
 
-#: ../src/gcompris/config.c:102
+#: ../src/gcompris/config.c:101
 msgid "Portuguese"
 msgstr "போர்ச்சுகீஸ்"
 
-#: ../src/gcompris/config.c:103
+#: ../src/gcompris/config.c:102
 msgid "Romanian"
 msgstr "ரோமானியன்"
 
-#: ../src/gcompris/config.c:104
+#: ../src/gcompris/config.c:103
 msgid "Russian"
 msgstr "ரஷ்யன்"
 
-#: ../src/gcompris/config.c:105
+#: ../src/gcompris/config.c:104
 msgid "Kinyarwanda"
 msgstr "கின்யார்வன்டா"
 
-#: ../src/gcompris/config.c:106
+#: ../src/gcompris/config.c:105
 msgid "Slovak"
 msgstr "ஸ்லோவாக்"
 
-#: ../src/gcompris/config.c:107
+#: ../src/gcompris/config.c:106
 msgid "Slovenian"
 msgstr "ஸ்லோவேனியன்"
 
-#: ../src/gcompris/config.c:108
+#: ../src/gcompris/config.c:107
 msgid "Somali"
 msgstr "சோமாலி"
 
-#: ../src/gcompris/config.c:109
+#: ../src/gcompris/config.c:108
 msgid "Albanian"
 msgstr "அல்பேனியன்"
 
-#: ../src/gcompris/config.c:110
+#: ../src/gcompris/config.c:109
 msgid "Serbian (Latin)"
 msgstr "செர்பிய (லத்தீன்)"
 
-#: ../src/gcompris/config.c:111
+#: ../src/gcompris/config.c:110
 msgid "Serbian"
 msgstr "செர்பிய"
 
-#: ../src/gcompris/config.c:112
+#: ../src/gcompris/config.c:111
 msgid "Swedish"
 msgstr "ஸ்வீடிஷ்"
 
-#: ../src/gcompris/config.c:113
+#: ../src/gcompris/config.c:112
 msgid "Tamil"
 msgstr "தமிழ்"
 
-#: ../src/gcompris/config.c:114
+#: ../src/gcompris/config.c:113
 msgid "Thai"
 msgstr "தாய்"
 
-#: ../src/gcompris/config.c:115
+#: ../src/gcompris/config.c:114
 msgid "Turkish"
 msgstr "துருக்கி"
 
-#: ../src/gcompris/config.c:116
+#: ../src/gcompris/config.c:115
 msgid "Ukrainian"
 msgstr "உக்ரெனியன்"
 
-#: ../src/gcompris/config.c:117
+#: ../src/gcompris/config.c:116
 msgid "Urdu"
 msgstr "உருது"
 
-#: ../src/gcompris/config.c:118
+#: ../src/gcompris/config.c:117
 msgid "Vietnamese"
 msgstr "வியட்னாமி"
 
-#: ../src/gcompris/config.c:119
+#: ../src/gcompris/config.c:118
 msgid "Walloon"
 msgstr "வாலூன்"
 
-#: ../src/gcompris/config.c:120
+#: ../src/gcompris/config.c:119
 msgid "Chinese (Simplified)"
 msgstr "சீன (எளிதாக்கப்பட்ட)"
 
-#: ../src/gcompris/config.c:121
+#: ../src/gcompris/config.c:120
 msgid "Chinese (Traditional)"
 msgstr "சீனம் (பாரம்பரிய)"
 
-#: ../src/gcompris/config.c:126
+#: ../src/gcompris/config.c:125
 msgid "No time limit"
 msgstr "நேர வரையரை இல்லை"
 
-#: ../src/gcompris/config.c:127
+#: ../src/gcompris/config.c:126
 msgid "Slow timer"
 msgstr "மெதுவாக கடிகாரம்"
 
-#: ../src/gcompris/config.c:128
+#: ../src/gcompris/config.c:127
 msgid "Normal timer"
 msgstr "இயல்பான கடிகாரம்"
 
-#: ../src/gcompris/config.c:129
+#: ../src/gcompris/config.c:128
 msgid "Fast timer"
 msgstr "வேகமாக கடிகாரம்"
 
-#: ../src/gcompris/config.c:134
+#: ../src/gcompris/config.c:133
 msgid "800x600 (Default for GCompris)"
 msgstr "800x600 (ஜிகாம்ப்ரிக்கு முன்னிருப்பு)"
 
-#: ../src/gcompris/config.c:139
+#: ../src/gcompris/config.c:138
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
@@ -6050,38 +6078,38 @@ msgstr ""
 "<i>பலகைகளை வடிகட்ட ஜிகாம்ப்ரி \n"
 "நிர்வாக கூறைப் பயன்படுத்துக</i>"
 
-#: ../src/gcompris/config.c:194 ../src/gcompris/config.c:204
+#: ../src/gcompris/config.c:193 ../src/gcompris/config.c:203
 msgid "GCompris Configuration"
 msgstr "ஜிகாம்ப்ரி வடிவமைப்பு"
 
-#: ../src/gcompris/config.c:280
+#: ../src/gcompris/config.c:279
 msgid "Fullscreen"
 msgstr "முழுத்திரை"
 
-#: ../src/gcompris/config.c:323
+#: ../src/gcompris/config.c:322
 msgid "Music"
 msgstr "இசை"
 
-#: ../src/gcompris/config.c:351
+#: ../src/gcompris/config.c:350
 msgid "Effect"
 msgstr "விளைவு"
 
-#: ../src/gcompris/config.c:387
+#: ../src/gcompris/config.c:386
 #, c-format
 msgid "Couldn't open skin dir: %s"
 msgstr "உறை அடைவை திறக்க முடியவில்லை : %s"
 
-#: ../src/gcompris/config.c:418 ../src/gcompris/config.c:868
-#: ../src/gcompris/config.c:882
+#: ../src/gcompris/config.c:417 ../src/gcompris/config.c:867
+#: ../src/gcompris/config.c:881
 #, c-format
 msgid "Skin : %s"
 msgstr "உறை : %s"
 
-#: ../src/gcompris/config.c:420
+#: ../src/gcompris/config.c:419
 msgid "SKINS NOT FOUND"
 msgstr "உறைகளை காணவில்லை"
 
-#: ../src/gcompris/config.c:545
+#: ../src/gcompris/config.c:544
 msgid "English (United State)"
 msgstr "ஆங்கிலம் (அமெரிக்க)"
 
@@ -6261,7 +6289,7 @@ msgstr "செயல்களின் பின்னணி படங்கள�
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "ஜிகாம்ப்ரியில் பல நிகழ்வுகளை செயல் படுத்துவதை தடுக்காதே."
 
-#: ../src/gcompris/gcompris.c:860
+#: ../src/gcompris/gcompris.c:864
 #, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
@@ -6284,19 +6312,19 @@ msgstr ""
 "யோசியுங்கள். மேலும் தகவல்களுக்கு FSF:\n"
 " <http://www.fsf.org/philosophy>"
 
-#: ../src/gcompris/gcompris.c:1478
+#: ../src/gcompris/gcompris.c:1493
 #, c-format
 msgid "GCompris won't start because the lock file is less than %d seconds old.\n"
 msgstr ""
 "ஜிகாம்ப்ரி துவங்காது. ஏனெனில் பூட்டு கோப்பு  %d நொடிகளுக்கும் குறைவாக இருப்பு "
 "உடையது.\n"
 
-#: ../src/gcompris/gcompris.c:1480
+#: ../src/gcompris/gcompris.c:1495
 #, c-format
 msgid "The lock file is: %s\n"
 msgstr "பூட்டு கோப்பு: %s\n"
 
-#: ../src/gcompris/gcompris.c:1599
+#: ../src/gcompris/gcompris.c:1614
 #, c-format
 msgid ""
 "GCompris\n"
@@ -6310,41 +6338,45 @@ msgstr ""
 "மேலும் தகவல்களுக்கு http://gcompris.net\n"
 
 #. check the list of possible values for -l, then exit
-#: ../src/gcompris/gcompris.c:1683
+#: ../src/gcompris/gcompris.c:1698
 #, c-format
 msgid "Use -l to access an activity directly.\n"
 msgstr "ஒரு செயலை நேரடியாக அணுக -l பயன்படுத்துக.\n"
 
-#: ../src/gcompris/gcompris.c:1684
+#: ../src/gcompris/gcompris.c:1699
 #, c-format
 msgid "The list of available activities is :\n"
 msgstr "கிடைக்கப் பெறும் செயல்களின் பட்டியல்:\n"
 
-#: ../src/gcompris/gcompris.c:1715
+#: ../src/gcompris/gcompris.c:1730
 #, c-format
 msgid "Number of activities: %d\n"
 msgstr "செயல்களின் எண்ணிக்கை : %d\n"
 
-#: ../src/gcompris/gcompris.c:1751
+#: ../src/gcompris/gcompris.c:1766
 #, c-format
 msgid "%s exists but is not readable or writable"
 msgstr "%s உள்ளது ஆனால் படிக்க எழுத முடியாதது"
 
-#: ../src/gcompris/gcompris.c:1812
+#: ../src/gcompris/gcompris.c:1827
 #, c-format
 msgid ""
 "The --server option cannot be used because GCompris has been compiled "
 "without network support!"
-msgstr "--server தேர்வை பயன்படுத்த முடியாது. ஏனெனில் ஜிகாம்ப்ரி வலைப்பின்னல் உதவி இல்லாமல் தொகுகஙகப்பட்டு உள்ளது"
+msgstr ""
+"--server தேர்வை பயன்படுத்த முடியாது. ஏனெனில் ஜிகாம்ப்ரி வலைப்பின்னல் உதவி இல்லாமல் "
+"தொகுகஙகப்பட்டு உள்ளது"
 
-#: ../src/gcompris/gcompris.c:1863
+#: ../src/gcompris/gcompris.c:1878
 #, c-format
 msgid ""
 "ERROR: Profile '%s' is not found. Run 'gcompris --profile-list' to list "
 "available ones\n"
-msgstr "ERROR: பிழை வரையுரு'%s' இருப்பில் இல்லை. 'gcompris --profile-list' ஐ இயக்கி எவை கிடைக்கும் என பாருங்கள்\n"
+msgstr ""
+"ERROR: பிழை வரையுரு'%s' இருப்பில் இல்லை. 'gcompris --profile-list' ஐ இயக்கி எவை "
+"கிடைக்கும் என பாருங்கள்\n"
 
-#: ../src/gcompris/gcompris.c:1877
+#: ../src/gcompris/gcompris.c:1892
 #, c-format
 msgid "The list of available profiles is:\n"
 msgstr "கிடைக்கப் பெறும் வரியுருக்களின் பட்டியல்:\n"
@@ -6402,6 +6434,8 @@ msgstr "கடந்த நேரம்"
 msgid "Remaining Time = %d"
 msgstr "மீதி நேரம் = %d"
 
+#~ msgid "Arabic (Tunisia)"
+#~ msgstr "அராபிக் (துனீசியா)"
+
 #~ msgid "Wordlist"
 #~ msgstr "சொல்பட்டியல்"
-
