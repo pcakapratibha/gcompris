@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-08 22:18+0000\n"
+"POT-Creation-Date: 2009-11-10 22:47+0000\n"
 "PO-Revision-Date: 2009-03-17 21:21-0100\n"
 "Last-Translator: IFILP-TEC <tec.ifilp.org/info?gcompris>\n"
 "Language-Team: IFILP-TEC <tec.ifilp.org/info?gcompris>\n"
@@ -635,7 +635,7 @@ msgstr ""
 "remove-os ou adiciona outros e voltar a clicar no botão ‘Câmara’. Altera o "
 "teu desenho e clica no botão ‘Câmara’ as vezes que quiseres. Depois, para "
 "veres a animação que criaste, apenas tens de clicar no botão ‘Claquete’ ou "
-"‘Filme’(o botão ao lado de ‘Câmara’). Na nova janela que entretanto se abre, "
+"‘Filme’ (o botão ao lado de ‘Câmara’). Na nova janela que entretanto se abre, "
 "podes alterar a velocidade da animação — clica nos botões ‘+’ e ‘−’ que "
 "encontras em baixo, à esquerda. Para regressares aos desenhos, clica no "
 "botão ‘Pincel e Figuras Geométricas’. Podes então aperfeiçoar cada uma das "
@@ -4733,7 +4733,7 @@ msgstr ""
 
 #: ../boards/superbrain.xml.in.h:2 ../src/boards/superbrain.c:105
 msgid "Super Brain"
-msgstr "SMastermind"
+msgstr "Mastermind"
 
 #: ../boards/superbrain.xml.in.h:3 ../src/boards/superbrain.c:106
 msgid "Tux has hidden several items. Find them again in the correct order"
@@ -5053,15 +5053,16 @@ msgid ""
 msgstr ""
 "O seu directório antigo do GCompris está prestes a ser apagado. Deseja "
 "prosseguir?$\\r$\\rNota: Quaisquer plugins adicionais que tenha instalado "
-"serão apagados.$\\rAs definições de utilizador do GCompris não serão afectadas."
+"serão apagados.$\\rAs definições de utilizador do GCompris não serão "
+"afectadas."
 
 #: ../nsis_translations.desktop.in.h:6
 msgid ""
 "the uninstaller could not find registry entries for GCompris.$\\rIt is "
 "likely that another user installed this application."
 msgstr ""
-"o instalador foi incapaz de encontrar entradas no registo para o GCompris."
-"$\\rÉ provável que tenha sido outro utilizador a instalar esta aplicação."
+"o instalador foi incapaz de encontrar entradas no registo para o GCompris.$"
+"\\rÉ provável que tenha sido outro utilizador a instalar esta aplicação."
 
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
 #: ../src/boards/algebra.c:179 ../src/boards/memory.c:840
@@ -6450,7 +6451,7 @@ msgstr "Inglês (Canadá)"
 
 #: ../src/gcompris/config.c:70
 msgid "English (Great Britain)"
-msgstr "Inglês (Grã Bretanha)"
+msgstr "Inglês (Grã-Bretanha)"
 
 #: ../src/gcompris/config.c:71
 msgid "English (United States)"
