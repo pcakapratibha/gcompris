@@ -7,7 +7,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-23 03:33+0000\n"
 "PO-Revision-Date: 2008-02-12 18:23+0200\n"
@@ -4202,14 +4202,14 @@ msgstr "بورڈ کا عنوان"
 #: ../src/boards/python/admin/board_list.py:409
 #, python-format
 msgid "Filter Boards difficulty for profile %s"
-msgstr "پا ئتھون ۔ فارميٹ"
+msgstr "%s پا ئتھون ۔ فارميٹ"
 
 #: ../src/boards/python/admin/board_list.py:440
 #, python-format
 msgid ""
 "<span size='x-large'> Select the difficulty range \n"
 "for profile <b>%s</b></span>"
-msgstr "<span size='x-large'> پروفا ئل %sکے ليے بورڈز کي مشکل کو چھانيے<b>%s</b></span>"
+msgstr "<span size='x-large'> پروفا ئل کے ليے بورڈز کي مشکل کو چھانيے<b>%s</b></span>"
 
 #. Init configuration window:
 #. all the configuration functions will use it
@@ -4592,7 +4592,7 @@ msgstr "%dاور"
 #: ../src/boards/python/gnumch.py:117
 #, python-format
 msgid "%d is divisible by %s."
-msgstr "%s %dتقسيم پذير هے"
+msgstr "%d %sتقسيم پذير هے"
 
 #: ../src/boards/python/gnumch.py:121
 msgid "1 is not a prime number."
@@ -4610,7 +4610,7 @@ msgid ""
 "Multiples of %(d1)d include %(s)s,\n"
 "but %(d2)d is not a multiple of %(d3)d."
 msgstr "%(d1)dکے ملٹو پلز%(s)sهے, \n"
-"ليکن%%(d2)d , %(d3)d ياmultipleنهيں هے"
+"ليکن%(d2)d , %(d3)d ياmultipleنهيں هے"
 
 #: ../src/boards/python/gnumch.py:164
 #, python-format
@@ -4620,7 +4620,7 @@ msgstr "%dکي ا زاائے تر کيبي"
 #: ../src/boards/python/gnumch.py:197
 #, python-format
 msgid "%s are the factors of %d."
-msgstr "%d ,%sکي اجزا ئے ضربي هے"
+msgstr "%s ,%dکي اجزا ئے ضربي هے"
 
 #: ../src/boards/python/gnumch.py:209
 #, python-format
