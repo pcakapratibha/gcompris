@@ -319,6 +319,9 @@ class Gcompris_followline:
     return done
 
   def loosing_item_event(self, widget, event=None):
+    if event.type == gtk.gdk.BUTTON_PRESS:
+      return False
+
     if(self.state == "Started"):
       self.loosing_count += 1
       if(self.loosing_count % 10):
