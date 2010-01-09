@@ -114,7 +114,7 @@ my %sections = (
     "ur", 0,
     "vi", 116,
     "wa", 0,
-    "zh_CN", 0,
+    "zh_CN", 425,
     "zh_TW", 0,
     );
 
@@ -184,7 +184,7 @@ my %rubriques = (
     "ur", 0,
     "vi", 117,
     "wa", 0,
-    "zh_CN", 0,
+    "zh_CN", 430,
     "zh_TW", 0,
     );
 
@@ -255,7 +255,7 @@ my %rubriques_all = (
     "ur", 0,
     "vi", 118,
     "wa", 0,
-    "zh_CN", 0,
+    "zh_CN", 431,
     "zh_TW", 0,
     );
 
