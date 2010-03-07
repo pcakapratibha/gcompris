@@ -20,11 +20,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-05 20:38+0200\n"
-"PO-Revision-Date: 2010-02-28 19:28+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=gcompris&component=general\n"
+"POT-Creation-Date: 2010-03-05 19:37+0000\n"
+"PO-Revision-Date: 2010-03-06 16:19+0200\n"
 "Last-Translator: Yannis Kaskamanidis <kiolalis@gmail.com>\n"
-"Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
+"Language-Team: Ελληνικά <i18ngr@lists.hellug.gr"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
+">\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -594,7 +609,6 @@ msgid "Needs to be capable of moving and clicking the mouse easily"
 msgstr "Πρέπει να είναι ικανός να κινεί και να κάνει κλικ με το ποντίκι εύκολα"
 
 #: ../boards/anim.xml.in.h:5
-#, fuzzy
 msgid ""
 "Select a drawing tool on the left, and a color down the bottom. Then click "
 "and drag in the white area to create a new shape. Once you've completed a "
@@ -1414,7 +1428,6 @@ msgid "Mouse manipulation"
 msgstr "Χρήση ποντικιού"
 
 #: ../boards/crane.xml.in.h:5
-#, fuzzy
 msgid ""
 "Move the items in the bottom left frame to copy their position in the top "
 "right model. Below the crane itself, you will find four arrows that let you "
@@ -3697,7 +3710,6 @@ msgid "banana/b_nana/a/o/i"
 msgstr "μπανάνα/μπ_νάνα/α/ε/ι"
 
 #: ../boards/missing_letter/board1.xml.in.h:3
-#, fuzzy
 msgid "bed/_ed/b/l/f"
 msgstr "κρεβάτι/κρ_βάτι/ε/α/ι"
 
@@ -3726,137 +3738,110 @@ msgid "satchel/s_tchel/a/o/i"
 msgstr "σακίδιο/σακίδ_ο/ι/η/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:1
-#, fuzzy
 msgid "ball/_all/b/p/d"
-msgstr "τόπι/τ_πι/ο/α/ω"
+msgstr "τόπι/τ_πι/ό/α/ω"
 
 #: ../boards/missing_letter/board2.xml.in.h:2
-#, fuzzy
 msgid "banana/_anana/b/p/d"
 msgstr "μπανάνα/μ_ανάνα/π/ι/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:3
-#, fuzzy
 msgid "bottle/_ottle/b/t/p"
 msgstr "μπουκάλι/_πουκάλι/μ/π/ρ"
 
 #: ../boards/missing_letter/board2.xml.in.h:4
-#, fuzzy
 msgid "cake/_ake/c/p/d"
-msgstr "τούρτα/το_ρτα/υ/η/ι "
+msgstr "τούρτα/το_ρτα/ύ/η/ι "
 
 #: ../boards/missing_letter/board2.xml.in.h:5
-#, fuzzy
 msgid "car/_ar/c/k/b"
-msgstr "αυτοκίνητο/αυτοκ_νητο/ι/η/υ"
+msgstr "αυτοκίνητο/αυτοκ_νητο/ί/η/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:6
-#, fuzzy
 msgid "dog/d_g/o/g/a"
 msgstr "σκύλος/σκύλ_ς/ο/ω/ε"
 
 #: ../boards/missing_letter/board2.xml.in.h:7
-#, fuzzy
 msgid "fish/_ish/f/h/l"
-msgstr "Ψάρι/Ψάρ_/ι/η/υ"
+msgstr "ψάρι/ψάρ_/ι/η/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:8
-#, fuzzy
 msgid "plane/p_ane/l/j/i"
 msgstr "αεροπλάνο/α_ροπλάνο/ε/υ/γ"
 
 #: ../boards/missing_letter/board2.xml.in.h:9
-#, fuzzy
 msgid "satchel/_atchel/s/c/l"
-msgstr "σακίδιο/σακ_διο/ι/η/υ"
+msgstr "σακίδιο/σακ_διο/ί/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:1
-#, fuzzy
 msgid "apple/appl_/e/h/a"
 msgstr "μήλο/μή_ο/λ/σ/τ"
 
 #: ../boards/missing_letter/board3.xml.in.h:2
-#, fuzzy
 msgid "ball/b_ll/a/u/o"
 msgstr "τόπι/τόπ_/ι/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:3
-#, fuzzy
 msgid "bed/b_d/e/a/i"
 msgstr "κρεβάτι/κρεβάτ_/ι/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:4
-#, fuzzy
 msgid "bottle/b_ttle/o/u/d"
 msgstr "μπουκάλι/μπο_κάλι/υ/ι/η"
 
 #: ../boards/missing_letter/board3.xml.in.h:5
-#, fuzzy
 msgid "cake/c_ke/a/o/e"
 msgstr "τούρτα/τ_ύρτα/ο/ω/α"
 
 #: ../boards/missing_letter/board3.xml.in.h:6
-#, fuzzy
 msgid "dog/do_/g/p/q"
 msgstr "σκύλος/σ_ύλος/κ/τ/π"
 
 #: ../boards/missing_letter/board3.xml.in.h:7
-#, fuzzy
 msgid "fish/fis_/h/o/i"
-msgstr "Ψάρι/Ψά_ι/ρ/λ/θ"
+msgstr "ψάρι/ψά_ι/ρ/λ/θ"
 
 #: ../boards/missing_letter/board3.xml.in.h:8
-#, fuzzy
 msgid "house/h_use/o/f/u"
 msgstr "σπίτι/σπίτ_/ι/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:9
-#, fuzzy
 msgid "plane/pl_ne/a/o/s"
 msgstr "αεροπλάνο/αεροπλάν_/ο/ω/ι"
 
 #: ../boards/missing_letter/board4.xml.in.h:1
-#, fuzzy
 msgid "apple/app_e/l/h/n"
 msgstr "μήλο/μήλ_/ο/ω/υ"
 
 #: ../boards/missing_letter/board4.xml.in.h:2
-#, fuzzy
 msgid "ball/bal_/l/h/s"
 msgstr "τόπι/_όπι/τ/π/κ"
 
 #: ../boards/missing_letter/board4.xml.in.h:3
-#, fuzzy
 msgid "banana/ba_ana/n/m/b"
 msgstr "μπανάνα/μπα_άνα/ν/τ/λ"
 
 #: ../boards/missing_letter/board4.xml.in.h:4
-#, fuzzy
 msgid "bed/be_/d/p/b"
 msgstr "κρεβάτι/κρεβά_ι/τ/σ/π"
 
 #: ../boards/missing_letter/board4.xml.in.h:5
-#, fuzzy
 msgid "bottle/bott_e/l/y/r"
 msgstr "μπουκάλι/μπουκάλ_/ι/η/υ"
 
 #: ../boards/missing_letter/board4.xml.in.h:6
-#, fuzzy
 msgid "cake/ca_e/k/q/c"
 msgstr "τούρτα/_ούρτα/τ/φ/δ"
 
 #: ../boards/missing_letter/board4.xml.in.h:7
-#, fuzzy
 msgid "car/ca_/r/w/k"
 msgstr "αυτοκίνητο/α_τοκίνητο/υ/φ/β"
 
 #: ../boards/missing_letter/board4.xml.in.h:8
-#, fuzzy
 msgid "house/_ouse/h/e/j"
-msgstr "σπίτι/σπ_τι/ι/η/υ"
+msgstr "σπίτι/σπ_τι/ί/η/υ"
 
 #: ../boards/missing_letter/board4.xml.in.h:9
-#, fuzzy
 msgid "satchel/sa_chel/t/p/c"
 msgstr "σακίδιο/σακί_ιο/δ/τ/θ"
 
@@ -5553,14 +5538,18 @@ msgstr ""
 #: ../src/boards/python/anim.py:2224
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr ""
+"Το SVG είναι απενεργοποιημένο. Εγκαταστήστε το άρθρωμα python xml για να το "
+"ενεργοποιήσετε."
 
 #: ../src/boards/python/anim.py:2380
 msgid "Warning: the following images cannot be accessed on your system.\n"
 msgstr ""
+"Προειδοποίηση: οι παρακάτω εικόνες δεν είναι δυνατόν να προσπελαστούν στο "
+"σύστημά σας.\n"
 
 #: ../src/boards/python/anim.py:2382
 msgid "The corresponding items have been skipped."
-msgstr ""
+msgstr "Τα αντίστοιχα αντικείμενα έχουν αγνοηθεί."
 
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
@@ -5970,9 +5959,8 @@ msgid "I am Ready"
 msgstr "Είμαι Έτοιμος"
 
 #: ../src/boards/reading.c:649
-#, fuzzy
 msgid "Yes, I saw it"
-msgstr "Ναι, θέλω να το κλείσω!"
+msgstr "Ναι, το είδα"
 
 #: ../src/boards/reading.c:677
 msgid "No, it was not there"
@@ -6087,11 +6075,12 @@ msgid "Translators:"
 msgstr "Μεταφραστές:"
 
 #: ../src/gcompris/about.c:227
-#, fuzzy
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
-msgstr "Αρχική σελίδα του GCompris: http://gcompris.net"
+msgstr ""
+"Αρχική σελίδα του GCompris:\n"
+"http://gcompris.net"
 
 #: ../src/gcompris/about.c:249
 msgid ""
@@ -6173,9 +6162,8 @@ msgid "Configure the list of words"
 msgstr "Διαμόρφωση του καταλόγου των λέξεων"
 
 #: ../src/gcompris/board_config_wordlist.c:209
-#, fuzzy
 msgid "Language:"
-msgstr "Επώνυμο:"
+msgstr "Γλώσσα:"
 
 #: ../src/gcompris/board_config_wordlist.c:246
 msgid "Back to default"
@@ -6455,7 +6443,7 @@ msgstr "Γρήγορο χρονόμετρο"
 
 #: ../src/gcompris/config.c:133
 msgid "800x600 (Default for GCompris)"
-msgstr ""
+msgstr "800x600 (Προκαθορισμένο για το GCompris)"
 
 #: ../src/gcompris/config.c:138
 msgid ""
@@ -6563,11 +6551,11 @@ msgstr "Εκτύπωση της έκδοσης του"
 
 #: ../src/gcompris/gcompris.c:160
 msgid "Use the antialiased canvas (slower)."
-msgstr ""
+msgstr "Χρήση του καμβά που έχει υποστεί εξομάλυνση (αργό)."
 
 #: ../src/gcompris/gcompris.c:163
 msgid "Disable XF86VidMode (No screen resolution change)."
-msgstr ""
+msgstr "Απενεργοποίηση XF86VidMode (Καμία αλλαγή στην ανάλυση της οθόνης)."
 
 #: ../src/gcompris/gcompris.c:166
 msgid ""
@@ -6581,9 +6569,10 @@ msgstr ""
 "strategy/connect4 σου επιτρέπει να παίξεις με το παιχνίδι connect 4)"
 
 #: ../src/gcompris/gcompris.c:171
-#, fuzzy
 msgid "Run GCompris with local activity directory added to menu"
-msgstr "Το GCompris θα βρει τη δραστηριότητα σε αυτόν τον κατάλογο."
+msgstr ""
+"Η εκτέλεση του GCompris από τον τοπικό κατάλογο δραστηριοτήτων έχει "
+"προστεθεί στο μενού."
 
 #: ../src/gcompris/gcompris.c:174
 msgid "Run GCompris in administration and user-management mode"
@@ -6646,6 +6635,7 @@ msgstr "Απενεργοποίηση του κουμπιού config"
 #: ../src/gcompris/gcompris.c:209
 msgid "Display the resources on stdout based on the selected activities"
 msgstr ""
+"Εμφάνιση των πόρων στο stdout που βασίζεται στις επιλεγμένες δραστηριότητες"
 
 #: ../src/gcompris/gcompris.c:213
 msgid ""
@@ -6680,14 +6670,14 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:226
 msgid "Do not display the background images of activities."
-msgstr ""
+msgstr "Απόκρυψη των εικόνων φόντου των δραστηριοτήτων."
 
 #: ../src/gcompris/gcompris.c:229
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Να αποφεύγετε την εκτέλεση πολλαπλών στιγμιότυπων του GCompris."
 
 #: ../src/gcompris/gcompris.c:864
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
 "support its development, the Windows version provides only %d of the %d "
