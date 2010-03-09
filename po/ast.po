@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=gcompris&component=general\n"
-"POT-Creation-Date: 2010-03-08 21:58+0000\n"
-"PO-Revision-Date: 2010-03-08 23:15+0200\n"
-"Last-Translator: Xandru Armesto <xandru@softastur.org>\n"
-"Language-Team: Asturian Team alministradores@softastur.org\n"
+"POT-Creation-Date: 2010-03-08 22:17+0000\n"
+"PO-Revision-Date: 2010-03-09 14:30+0200\n"
+"Last-Translator: Xandru <xandru@softastur.org>\n"
+"Language-Team: Softastur <alministradores@softastur.org>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,21 +40,21 @@ msgid ""
 "children as individuals; they can learn to type in and recognize their own "
 "usernames (login is configurable)."
 msgstr ""
-"- Na seición «Tableros» pues camudar la llista de xeres. Namás desactívales "
-"na vista d'árbol. Pues camudar l'idioma usáu pa lleeles, por exemplu, y "
-"dempues l'idioma usáu pa dicir los nomes de los colores. \n"
+"- Na seición «Tableros» pues camudar la llista de xeres. Namás les tienes "
+"que desautivar na vista d'árbol. Pues camudar l'idioma usáu pa lleeles, por "
+"exemplu, y dempues l'idioma usáu pa dicir los nomes de los colores. \n"
 "- Pues guardar configuraciones múltiples, y camudar cenciellamente ente "
 "elles. Na seición «Perfil» amesta un perfil, dempués na seición «Tableru» "
-"seleiciona'l perfil na llista desplegable, y dempués elixe los tableros que "
+"seleiciona'l perfil na llista desplegable y dempués escueyi los tableros que "
 "quies que tean activos. Pues amestar un montonera de perfiles, con "
 "diferentes llistes de tableros, y diferentes idiomes. Pues afitar el perfil "
-"por omisión na seición «Perfil», elixendo'l perfil que te pruya, y dempués "
-"calcando'l botón «Predetermináu». Tamién pues elexir un perfil dende la "
-"llinia d'órdenes.\n"
+"por omisión na seición «Perfil», escoyendo'l perfil que te pruya y dempués "
+"calcando'l botón «Predetermináu». Tamién pues escoyer un perfil dende la "
+"llinia de comandos.\n"
 "- Pues amestar usuarios, clases y pa cada clase, pues criar grupos "
-"d'usuarios. Ten en cunta que pues importar usuarios d'un archivu separtáu "
-"por comes. Asigna ún o más grupos a un perfil, y los nuevos identificadores "
-"d'usuariu apaecerán tres de reaniciar GCompris. El ser quien a identificar a "
+"d'usuarios. Ten en cunta que pues importar usuarios d'un ficheru separtáu "
+"per comes. Asigna ún o más grupos a un perfil, y los nuevos identificadores "
+"d'usuariu apaecerán tres reaniciar GCompris. El ser quien a identificar a "
 "los neños de mou individual en GCompris significa que podemos apurrir "
 "informes individuales. Tamién se reconoz a los neños como individuos, puen "
 "deprender a teclear y reconocer los propios nomes d'usuariu (l'identificador "
@@ -571,19 +571,6 @@ msgid "Needs to be capable of moving and clicking the mouse easily"
 msgstr "Necesita ser quien a mover y calcar col mur de mena cenciella"
 
 #: ../boards/anim.xml.in.h:5
-#| msgid ""
-#| "Select a drawing tool on the left, and a color down the bottom. Then "
-#| "click and drag in the white area to create a new shape. Once you've "
-#| "completed a drawing, you can select a new frame to work on by selecting "
-#| "one of the small rectangles on the bottom. Each frame contains the same "
-#| "content as its previous one. You can then edit it by moving objects a "
-#| "little bit or adding/deleting objects. When you create several frames and "
-#| "then click on the 'film' button, you will see all your images in a "
-#| "continuous slide-show (an infinite loop pattern). You can change the last "
-#| "image in your film by right clicking on a time frame. You can also change "
-#| "the viewing speed in this mode. In viewing mode, click on the 'drawing' "
-#| "button to return to drawing mode. You can also save and reload your "
-#| "animations with the 'floppy disk' and 'folder' buttons."
 msgid ""
 "Select a drawing tool on the left, and a color down the bottom. Then click "
 "and drag in the white area to create a new shape. Once you've completed a "
@@ -600,15 +587,15 @@ msgid ""
 msgstr ""
 "Seleiciona una ferramienta de dibuxu a la izquierda escueyi y abaxo un "
 "color. Darréu calca y arrastra na estaya en blancu pa crear una forma nueva. "
-"En terminando'l dibuxu pues tomar un pantallazu col botón de la cámara. "
-"Esto va crear una imaxe nueva col mesmu conteníu, una copia de la to imaxe. "
-"Pues editala moviéndola un poco o amestando o esborrando oxetos. Cuando "
-"tengas creaos dellos dibuxos y calques nel botón 'película' vas ver toles "
-"imáxenes nuna reproducción continua (nun bucle infinitu). Tamién pues "
-"camudar la velocidá de pasu d'una semeya a otra. Calca nel botón 'dibuxar' "
-"pa tornar al mou de dibuxu. Tamién pues editar cada imaxe na animación "
-"usando'l seleutor na esquina inferior izquierda de la pantalla. Tamién pues "
-"guardar y recargar les animaciones colos botones 'disquín' y direutoriu'."
+"En terminando'l dibuxu pues tomar un pantallazu col botón de la cámara. Esto "
+"va crear una imaxe nueva col mesmu conteníu, una copia de la to imaxe. Pues "
+"editala moviéndola un poco o amestando o esborrando oxetos. Cuando tengas "
+"creaos dellos dibuxos y calques nel botón 'película' vas ver toles imáxenes "
+"nuna reproducción continua (nun bucle infinitu). Tamién pues camudar la "
+"velocidá de pasu d'una semeya a otra. Calca nel botón 'dibuxar' pa tornar al "
+"mou de dibuxu. Tamién pues editar cada imaxe na animación usando'l seleutor "
+"na esquina inferior izquierda de la pantalla. Tamién pues guardar y recargar "
+"les animaciones colos botones 'disquín' y direutoriu'."
 
 #: ../boards/awele.xml.in.h:1
 msgid ""
@@ -628,12 +615,12 @@ msgid ""
 "move would capture all an opponent's seeds, the capture is forfeited, and "
 "the seeds are instead left on the board, since this would prevent the "
 "opponent from continuing the game. The proscription against capturing all an "
-"opponent's seeds is related to a more general idea, that one ought to make "
-"a move that allows the opponent to continue playing. If an opponent's houses "
+"opponent's seeds is related to a more general idea, that one ought to make a "
+"move that allows the opponent to continue playing. If an opponent's houses "
 "are all empty, the current player must make a move that gives the opponent "
 "seeds. If no such move is possible, the current player captures all seeds in "
-"his/her own territory, ending the game. (Source Wikipedia "
-"&lt;http://en.wikipedia.org/wiki/Oware&gt;)"
+"his/her own territory, ending the game. (Source Wikipedia &lt;http://en."
+"wikipedia.org/wiki/Oware&gt;)"
 msgstr ""
 "Anicia'l xuegu allugando 48 semientes nes doce cases (furacos) que tenemos "
 "nel tableru, a razón de cuatro semientes por casa. Los xugadores dispónense "
@@ -642,8 +629,8 @@ msgstr ""
 "qu'escoyer una de les sos cases, sacar toles semientes d'ella y dir "
 "espardiéndoles una per una peles cases contigües, tean éstes na so ringlera "
 "o na del alversariu, faciendo un recorríu contrariu a les aguyes del reló. A "
-"esti procesu vamos nomalu \"semar\". Les semientes nun s'esparden na casa que "
-"fai d'almacén nin tampoco na casa d'onde salieron. Si nuna casa hai "
+"esti procesu vamos nomalu \"semar\". Les semientes nun s'esparden na casa "
+"que fai d'almacén nin tampoco na casa d'onde salieron. Si nuna casa hai "
 "amontonaes doce semientes hai que la saltar y la doceava semiente hai "
 "qu'asitiala na siguiente casa. Si al semar el caberu granu ésti queda nuna "
 "casa del campu contrariu y nella hai (dempués de semar) dos o tres "
@@ -654,13 +641,13 @@ msgstr ""
 "o llegue a campu propiu. Si con un movimientu completu se prinden tolos "
 "granos del alversariu, la collecha piérdese y los granos hai que los dexar "
 "nel tableru pa que pueda continuar el xuegu. La prohibición escontra'l coyer "
-"toles semientes de golpe tien que ver cola idega más xeneral de permitir "
-"que l'alversariu puea facer un movimientu pa continuar col xuegu. Tamién ye "
+"toles semientes de golpe tien que ver cola idega más xeneral de permitir que "
+"l'alversariu puea facer un movimientu pa continuar col xuegu. Tamién ye "
 "obligatorio, cuando un contrariu nun tien grana (les sos cases tán vacíes), "
 "facer un movimientu pa proporcioná-yla y siguir xugando. Si nun ye posible, "
 "la partida párase y el xugador que tien la mano recueye tola grana que-y "
-"queda por semar y acaba'l xuegu. (Fonte Uiquipedia "
-"&lt;http://en.wikipedia.org/wiki/Oware&gt;)"
+"queda por semar y acaba'l xuegu. (Fonte Uiquipedia &lt;http://en.wikipedia."
+"org/wiki/Oware&gt;)"
 
 #: ../boards/awele.xml.in.h:2
 msgid "Oware"
@@ -748,35 +735,35 @@ msgstr "Bon control del mur"
 #: ../boards/babyshapes.xml.in.h:5
 msgid ""
 "The dog is provided by Andre Connes and released under the GPL.\n"
-"Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: http://"
-"commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
+"Artist: Gauguin, Paul. Title Arearea. Licence: Public Domain. Source: "
+"http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
 "Artist: Pieter Bruegel the Elder. Title: The peasants wedding. Licence: "
-"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
-"Pieter_Bruegel_d._Ä._011.jpg\n"
+"Public Domain. Source: "
+"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
 "Description: The Lady and the Unicorn (tapestries). Author: Pierre-Emmanuel "
 "Malissin and Frédéric Valdes. Licence: Free but requires the site and "
 "author. Source: http://www.galerie.roi-president.com\n"
 "Artist: Vincent van Gogh. Title: Bedroom in Arles. Licence: Public Domain. "
 "Source: http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
 "Artist: Ambrosius Bosschaert the Elder. Title: Flower Still Life. Licence: "
-"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:"
-"Ambrosius_Bosschaert,_the_Elder_04.jpg"
+"Public Domain. Source: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bos"
+"schaert,_the_Elder_04.jpg"
 msgstr ""
-"El perro proporciónalu Andre Connes y ta lliberáu baxo la GPL.\n"
+"El perru proporciónalu Andre Connes y ta lliberáu baxo la GPL.\n"
 "Artista: Gauguin, Paul. Título Arearea. Llicencia: Dominiu Públicu. Fonte:  "
 "http://commons.wikimedia.org/wiki/Image:Paul_Gauguin_006.jpg\n"
 "Artista: Pieter Bruegel el Vieyu. Títulu: Bauernhochzeit. Llicencia: Dominiu "
-"Públicu. Fonte: http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä."
-"_011.jpg\n"
+"Públicu. Fonte: "
+"http://commons.wikimedia.org/wiki/Image:Pieter_Bruegel_d._Ä._011.jpg\n"
 "Descripción: La Dama y l'Unicorniu (tapestries). Autor: Pierre-Emmanuel "
 "Malissin y Frédéric Valdes. Llicencia: Llibre pero requier sitiu y autor. "
 "Fonte: http://www.galerie.roi-president.com\n"
 "Artista: Vincent van Gogh. Títulu: Habitación en Arles. Llicencia: Dominiu "
-"Públicu. Fonte: http://commons.wikimedia.org/wiki/Image:"
-"Vincent_Van_Gogh_0011.jpg\n"
+"Públicu. Fonte: "
+"http://commons.wikimedia.org/wiki/Image:Vincent_Van_Gogh_0011.jpg\n"
 "Artista: Ambrosius Bosschaert. Título: El más mayor. Llicencia: Dominiu "
-"Públicu. Fonte: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert,"
-"_the_Elder_04.jpg"
+"Públicu. Fonte: http://commons.wikimedia.org/wiki/Image:Ambrosius_Bosschaert"
+",_the_Elder_04.jpg"
 
 #: ../boards/babyshapes/board5_0.xml.in.h:1
 msgid "Hello ! My name is Lock."
@@ -934,14 +921,14 @@ msgid ""
 "controlling the black pieces) controls sixteen pieces: one king, one queen, "
 "two rooks, two knights, two bishops, and eight pawns. The object of the game "
 "is to checkmate the opponent's king, whereby the king is under immediate "
-"attack (in \"check\") and there is no way to remove it from attack on the "
-"next move."
+"attack (in \"check\") and there is no way to remove it from attack on the next "
+"move."
 msgstr ""
-"Al entamu, cada xugador (uno remanando les pieces blanques, y l'otru "
-"remanando les pieces prietes) remana dieciséis pieces: un rei, una reina, "
-"dos torres, dos caballos, dos alfiles y ocho peones. L'oxetivu del xuegu ye "
-"facer xaque mate al rei del oponente, au el rei tea baxo arrebexu direutu "
-"(en «xaque») y nun hai mou de refugar l'arrebexu na siguiente xugada."
+"Al entamu, cada xugador (uno remanando les pieces blanques y l'otru les "
+"prietes) tien dieciséis pieces: un rei, una reina, dos torres, dos caballos, "
+"dos alfiles y ocho peones. L'oxetivu del xuegu ye facer xaque mate al rei "
+"del oponente, u'l rei tea baxo arrebexu direutu (en «xaque») y nun hai mou "
+"de refugar l'arrebexu na siguiente xugada."
 
 #: ../boards/chess_computer.xml.in.h:2 ../boards/chess_movelearn.xml.in.h:3
 #: ../boards/chess_partyend.xml.in.h:2
@@ -1367,11 +1354,6 @@ msgid "Mouse manipulation"
 msgstr "Remanamientu del mur"
 
 #: ../boards/crane.xml.in.h:5
-#| msgid ""
-#| "Move the items in the bottom left frame to copy their position in the top "
-#| "right model. Below the crane itself, you will find four arrows that let "
-#| "you move items. To select the item to move, just click on it. If you "
-#| "prefer, you can use the arrow keys and the space or tab key instead."
 msgid ""
 "Move the items in the bottom left frame to copy their position in the top "
 "right model. Below the crane itself, you will find four arrows that let you "
@@ -2624,7 +2606,7 @@ msgstr "mazana"
 
 #: ../boards/imageid/board1.xml.in.h:2
 msgid "back"
-msgstr "espalda"
+msgstr "tornar"
 
 #: ../boards/imageid/board1.xml.in.h:3
 msgid "bag"
@@ -3585,7 +3567,6 @@ msgid "banana/b_nana/a/o/i"
 msgstr "plátanu/plátan_/o/e/a"
 
 #: ../boards/missing_letter/board1.xml.in.h:3
-#| msgid "bed/_ed/b/l/f/t"
 msgid "bed/_ed/b/l/f"
 msgstr "cama/ca_a/m/t/n"
 
@@ -3614,137 +3595,110 @@ msgid "satchel/s_tchel/a/o/i"
 msgstr "cartera/c_rtera/a/o/i"
 
 #: ../boards/missing_letter/board2.xml.in.h:1
-#| msgid "ball/_all/b/p/d/m"
 msgid "ball/_all/b/p/d"
 msgstr "pelota/_elota/p/d/b"
 
 #: ../boards/missing_letter/board2.xml.in.h:2
-#| msgid "banana/_anana/b/p/d/m"
 msgid "banana/_anana/b/p/d"
 msgstr "plátanu/_látanu/p/b/d"
 
 #: ../boards/missing_letter/board2.xml.in.h:3
-#| msgid "bottle/_ottle/b/t/p/l"
 msgid "bottle/_ottle/b/t/p"
 msgstr "botella/bo_ella/t/b/d"
 
 #: ../boards/missing_letter/board2.xml.in.h:4
-#| msgid "cake/_ake/c/p/d/k"
 msgid "cake/_ake/c/p/d"
 msgstr "tarta/ta_ta/r/l/s"
 
 #: ../boards/missing_letter/board2.xml.in.h:5
-#| msgid "car/_ar/c/k/b/u"
 msgid "car/_ar/c/k/b"
 msgstr "automóvil/a_tomóvil/u/i/e"
 
 #: ../boards/missing_letter/board2.xml.in.h:6
-#| msgid "dog/d_g/o/g/a/u"
 msgid "dog/d_g/o/g/a"
 msgstr "perru/p_rru/e/i/u"
 
 #: ../boards/missing_letter/board2.xml.in.h:7
-#| msgid "fish/_ish/f/h/l/j"
 msgid "fish/_ish/f/h/l"
 msgstr "pexe/_exe/p/h/l"
 
 #: ../boards/missing_letter/board2.xml.in.h:8
-#| msgid "plane/p_ane/l/j/i/t"
 msgid "plane/p_ane/l/j/i"
 msgstr "avión/av_ón/i/e/u"
 
 #: ../boards/missing_letter/board2.xml.in.h:9
-#| msgid "satchel/_atchel/s/c/l/z"
 msgid "satchel/_atchel/s/c/l"
 msgstr "cartera/c_rtera/a/e/o"
 
 #: ../boards/missing_letter/board3.xml.in.h:1
-#| msgid "apple/appl_/e/h/a/i/o/u"
 msgid "apple/appl_/e/h/a"
 msgstr "mazana/maz_na/a/i/o"
 
 #: ../boards/missing_letter/board3.xml.in.h:2
-#| msgid "ball/b_ll/a/u/o/e/i/y"
 msgid "ball/b_ll/a/u/o"
 msgstr "pelota/_elota/p/b/m"
 
 #: ../boards/missing_letter/board3.xml.in.h:3
-#| msgid "bed/b_d/e/a/i/o/u/s"
 msgid "bed/b_d/e/a/i"
 msgstr "cama/ca_a/m/t/l"
 
 #: ../boards/missing_letter/board3.xml.in.h:4
-#| msgid "bottle/b_ttle/o/u/d/a/t/i"
 msgid "bottle/b_ttle/o/u/d"
 msgstr "botella/bo_ella/t/b/d"
 
 #: ../boards/missing_letter/board3.xml.in.h:5
-#| msgid "cake/c_ke/a/o/e/i/u/y"
 msgid "cake/c_ke/a/o/e"
 msgstr "tarta/to_ta/r/s/l"
 
 #: ../boards/missing_letter/board3.xml.in.h:6
-#| msgid "dog/do_/g/p/q/q/k"
 msgid "dog/do_/g/p/q"
 msgstr "perru/perr_/u/e/i"
 
 #: ../boards/missing_letter/board3.xml.in.h:7
-#| msgid "fish/fis_/h/o/i/y/z"
 msgid "fish/fis_/h/o/i"
 msgstr "pexe/pe_e/z/s/c"
 
 #: ../boards/missing_letter/board3.xml.in.h:8
-#| msgid "house/h_use/o/f/u/i"
 msgid "house/h_use/o/f/u"
 msgstr "casa/c_sa/a/e/i"
 
 #: ../boards/missing_letter/board3.xml.in.h:9
-#| msgid "plane/pl_ne/a/o/s/e/i/u/y"
 msgid "plane/pl_ne/a/o/s"
 msgstr "avión/avi_n/ó/é/ú"
 
 #: ../boards/missing_letter/board4.xml.in.h:1
-#| msgid "apple/app_e/l/h/n/i/t"
 msgid "apple/app_e/l/h/n"
 msgstr "mazana/maza_a/m/n/l"
 
 #: ../boards/missing_letter/board4.xml.in.h:2
-#| msgid "ball/bal_/l/h/s/z/t"
 msgid "ball/bal_/l/h/s"
 msgstr "pelota/pe_ota/l/t/z"
 
 #: ../boards/missing_letter/board4.xml.in.h:3
-#| msgid "banana/ba_ana/n/m/b/z/q"
 msgid "banana/ba_ana/n/m/b"
 msgstr "plátanu/pláta_u/n/m/b"
 
 #: ../boards/missing_letter/board4.xml.in.h:4
-#| msgid "bed/be_/d/p/b/c/v/n"
 msgid "bed/be_/d/p/b"
 msgstr "cama/cam_/a/i/u"
 
 #: ../boards/missing_letter/board4.xml.in.h:5
-#| msgid "bottle/bott_e/l/y/r/s/g"
 msgid "bottle/bott_e/l/y/r"
 msgstr "botella/bo_ella/t/b/d"
 
 #: ../boards/missing_letter/board4.xml.in.h:6
-#| msgid "cake/ca_e/k/q/c/r/z"
 msgid "cake/ca_e/k/q/c"
 msgstr "tarta/t_rta/o/e/a"
 
 #: ../boards/missing_letter/board4.xml.in.h:7
-#| msgid "car/ca_/r/w/k/c/a"
 msgid "car/ca_/r/w/k"
 msgstr "automóvil/automó_il/v/b/n"
 
 #: ../boards/missing_letter/board4.xml.in.h:8
-#| msgid "house/_ouse/h/e/j/z/p/s"
 msgid "house/_ouse/h/e/j"
 msgstr "casa/ca_a/s/z/r"
 
 #: ../boards/missing_letter/board4.xml.in.h:9
-#| msgid "satchel/sa_chel/t/p/c/z/s/l"
 msgid "satchel/sa_chel/t/p/c"
 msgstr "cartera/ca_tera/r/s/l"
 
@@ -4194,8 +4148,8 @@ msgstr "Empobina'l to barcu con precisión pa ganar la carrera."
 msgid ""
 "In the text entry, enter one command per line, to control your boat.\n"
 "Commands supported are displayed between the two entry areas. The 'left' and "
-"'right' commands must be followed by an angle in degrees. The angle value is "
-"also called a 'parameter' to the left or right command. By default 45 "
+"'right' commands must be followed by an angle in degrees. The angle value "
+"is also called a 'parameter' to the left or right command. By default 45 "
 "degrees is used. The 'forward' command accepts a distance parameter. By "
 "default 1 is used.\n"
 "For example:\n"
@@ -4247,8 +4201,8 @@ msgstr "Da instrucciones al to barcu pa que seya'l primeru na carrera."
 msgid ""
 "In the text entry, enter one command per line, to control your boat. "
 "Commands supported are displayed between the two entry areas. The 'left' and "
-"'right' commands must be followed by an angle in degrees. The angle value is "
-"also called a 'parameter' to the left or right command. By default 45 "
+"'right' commands must be followed by an angle in degrees. The angle value "
+"is also called a 'parameter' to the left or right command. By default 45 "
 "degrees is used. The 'forward' command accepts a distance parameter. By "
 "default 1 is used.\n"
 "For example:\n"
@@ -4514,7 +4468,7 @@ msgstr ""
 #: ../boards/traffic.xml.in.h:3
 msgid "Remove the red car from the parking lot through the gate on the right"
 msgstr ""
-"Saca'l coche encarnáu del aparcamientu a traviés de la puerte de la drecha."
+"Saca'l coche encarnáu del aparcamientu a traviés de la puerta de la drecha."
 
 #: ../boards/tuxpaint.xml.in.h:1
 msgid "Drawing activity (pixmap)"
@@ -4644,11 +4598,10 @@ msgid ""
 "An instance of GCompris is currently running. Exit GCompris and then try "
 "again."
 msgstr ""
-"Hai una instanción de GCompris corriendo. Cola de GCompris y téntola otra "
+"Hai una instanción de GCompris corriendo. Cola de GCompris y téntalo otra "
 "vuelta."
 
 #: ../nsis_translations.desktop.in.h:2
-#| msgid "The race is already being run"
 msgid "The installer is already running."
 msgstr "L'instalador yá ta corriendo."
 
@@ -4666,14 +4619,14 @@ msgid ""
 "continue?$\\r$\\rNote: Any non-standard plugins that you may have installed "
 "will be deleted.$\\rGCompris user settings will not be affected."
 msgstr ""
-"El direutoriu anterior de GCompris paez va ser esborráu. ¿Quies "
-"continuar?$\\r$\\rNote: Cualquier plugin non-estándar qu'instalares va "
-"esborrase.$\\r$\\rNote les preferencies d'usuariu nun se van ver afeutaes."
+"El direutoriu anterior de GCompris paez va ser esborráu. ¿Quies continuar?$"
+"\\r$\\rNote: Cualquier plugin non-estándar qu'instalares va esborrase.$\\r$"
+"\\rNote les preferencies d'usuariu nun se van ver afeutaes."
 
 #: ../nsis_translations.desktop.in.h:6
 msgid ""
-"the uninstaller could not find registry entries for GCompris.$\\rIt is likely "
-"that another user installed this application."
+"the uninstaller could not find registry entries for GCompris.$\\rIt is "
+"likely that another user installed this application."
 msgstr ""
 "el desinstalador nun pudo atopar les entraes del rexistru pa GCompris.$\\rYe "
 "como si otru usuariu instalare l'aplicación."
@@ -5024,11 +4977,11 @@ msgstr "Peñera"
 
 #: ../src/boards/python/admin/board_list.py:149
 msgid "Select all"
-msgstr "Escoyer toos"
+msgstr "Seleicionar toos"
 
 #: ../src/boards/python/admin/board_list.py:154
 msgid "Unselect all"
-msgstr "Desescoyer toos"
+msgstr "Deseleicionar toos"
 
 #: ../src/boards/python/admin/board_list.py:159
 msgid "Locales"
@@ -5916,7 +5869,6 @@ msgid "Translators:"
 msgstr "Traductores:"
 
 #: ../src/gcompris/about.c:227
-#| msgid "GCompris Home Page: http://gcompris.net"
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
@@ -6411,7 +6363,6 @@ msgstr ""
 "descripciones."
 
 #: ../src/gcompris/gcompris.c:171
-#| msgid "GCompris will find the python activity in this directory"
 msgid "Run GCompris with local activity directory added to menu"
 msgstr "Executa GCompris col direutoriu de xeres llocal amestáu al menú"
 
@@ -6512,15 +6463,6 @@ msgstr "Permitir la execución d'instancies múltiples de GCompris"
 
 #: ../src/gcompris/gcompris.c:864
 #, c-format
-#| msgid ""
-#| "GCompris is free software released under the GPL License. In order to "
-#| "support its development, the Windows version provides only %d of the %d "
-#| "activities. You can get the full version for a small fee at\n"
-#| "<http://gcompris.net>\n"
-#| "The GNU/Linux version does not have this restriction. If you also believe "
-#| "that we should teach freedom to children, please consider using GNU/"
-#| "Linux. Get more information at FSF:\n"
-#| "<http://www.fsf.org/philosophy>"
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
 "support its development, the Windows version provides only %d of the %d "
