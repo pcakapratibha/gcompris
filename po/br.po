@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gcompris&component=general\n"
-"POT-Creation-Date: 2010-04-13 11:07+0000\n"
-"PO-Revision-Date: 2010-04-14 20:00+0100\n"
-"Last-Translator: Denis <denisarnuad@yahoo.fr>\n"
+"POT-Creation-Date: 2010-04-14 18:06+0000\n"
+"PO-Revision-Date: 2010-04-15 11:48+0100\n"
+"Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
 "Language-Team: An Drouizig <drouizig@drouizig.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3791,28 +3791,27 @@ msgstr "C'hoarioù kelennadel dre obererezhioù lies"
 
 #: ../nsis_translations.desktop.in.h:1
 msgid "An instance of GCompris is currently running. Exit GCompris and then try again."
-msgstr ""
+msgstr "Emañ GCompris war erounit endeo. Kuitait GCompris ha klaskit en-dro."
 
 #: ../nsis_translations.desktop.in.h:2
-#, fuzzy
 msgid "The installer is already running."
-msgstr "Kroget he deus ar redadeg endeo"
+msgstr "O labourat emañ ar meziant staliañ endeo."
 
 #: ../nsis_translations.desktop.in.h:3
 msgid "Visit the GCompris Web Site"
-msgstr ""
+msgstr "Kit da weladenniñ lec'hienn GCompris"
 
 #: ../nsis_translations.desktop.in.h:4
 msgid "You do not have permission to uninstall this application."
-msgstr ""
+msgstr "N'hoc'h eus ket an aotre da zistaliañ an arload-mañ."
 
 #: ../nsis_translations.desktop.in.h:5
 msgid "Your old GCompris directory is about to be deleted. Would you like to continue?$\\r$\\rNote: Any non-standard plugins that you may have installed will be deleted.$\\rGCompris user settings will not be affected."
-msgstr ""
+msgstr "Ho kevelc'hiad kozh eus GCompris a ya da vezañ diverket. Fellout a ra deoc'h kenderc'hel ganti ?$\\r$\\rNotenn : Diverket e vo an holl enlugelladoù nad int ket skouriek bet staliet ganeoc'h.$\\rArventennoù arveriaded GCompris ne vint ket tizhet."
 
 #: ../nsis_translations.desktop.in.h:6
 msgid "the uninstaller could not find registry entries for GCompris.$\\rIt is likely that another user installed this application."
-msgstr ""
+msgstr "ar meziant distaliañ n'eo ket barrek da gavout an enankadoù er varilh evit GCompris.$\\rAn dra-se a dalv ez eo bet staliet an arload-mañ gant un arveriad all."
 
 #. TRANSLATORS: Put here the mathematical operators '+-x/' for  your language.
 #: ../src/boards/algebra.c:179
