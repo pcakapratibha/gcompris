@@ -23,7 +23,7 @@ NEEDED_DLLS =		$(GNUCHESS_TOP)/bin/pthreadGC2.dll \
 			$(GNUCAP_TOP)/src/MSW/gnucap.exe \
 			$(GTK_TOP)/bin/gspawn-win32-helper.exe \
 			$(GTK_TOP)/bin/intl.dll \
-			$(GTK_TOP)/bin/jpeg62.dll \
+			$(GTK_TOP)/bin/libjpeg-7.dll \
 			$(GTK_TOP)/bin/libatk-1.0-0.dll \
 			$(GTK_TOP)/bin/libcairo-2.dll \
 			$(GTK_TOP)/bin/libgdk-win32-2.0-0.dll \
@@ -44,10 +44,10 @@ NEEDED_DLLS =		$(GNUCHESS_TOP)/bin/pthreadGC2.dll \
 			$(LIBXML2_TOP)/bin/libxml2.dll \
 			$(MSVCR71_DLL) \
 			$(SDL_TOP)/bin/SDL.dll \
-			$(SDL_TOP)/bin/SDL_mixer.dll \
-			$(SDL_TOP)/bin/libogg-0.dll \
-			$(SDL_TOP)/bin/libvorbis-0.dll \
-			$(SDL_TOP)/bin/libvorbisfile-3.dll \
+			$(SDLMIXER_TOP)/bin/SDL_mixer.dll \
+			$(SDLMIXER_TOP)/bin/libogg-0.dll \
+			$(SDLMIXER_TOP)/bin/libvorbis-0.dll \
+			$(SDLMIXER_TOP)/bin/libvorbisfile-3.dll \
 			$(SQLITE_TOP)/sqlite3.dll
 
 NEEDED_FILES =		README \
