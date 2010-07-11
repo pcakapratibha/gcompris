@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gcompris&component=general\n"
 "POT-Creation-Date: 2010-06-25 17:38+0000\n"
-"PO-Revision-Date: 2010-07-11 10:12+0200\n"
+"PO-Revision-Date: 2010-07-11 12:22+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
 "Language-Team: Esperanto <ubuntu-l10n-eo@lists.launchpad.net>\n"
 "MIME-Version: 1.0\n"
@@ -3449,10 +3449,11 @@ msgid ""
 "    1, 2 or 3 simple stars  - from 2 to 6 years old\n"
 "    1, 2 or 3 complex stars - 7 years and up"
 msgstr ""
-"Unu simpla klako sur ikono enirigas vin en aktiveco aŭ menuo de aktivecoj.\n"
-"Je la malsupra parto de ekrano estas la GCompris kontrolo baro.\n"
-"La subaj ikonoj estas montritaj de la dekstre al maldekstre.\n"
-"(memoru ke ĉiuj ikonoj aperas nur se ili estas haveblaj dume)\n"
+"Unu simpla klako sur piktogramo enirigas vin en aktiveco aŭ menuo de "
+"aktivecoj.\n"
+"Je la malsupra parto de ekrano estas la GCompris kontrolo-breto.\n"
+"La subaj piktogramoj estas montritaj de la dekstre al maldekstre.\n"
+"(memoru ke ĉiuj piktogramoj aperas nur se ili estas disponeblaj dume)\n"
 "    Domo – Eliru de aktiveco, reiru al la menuo\n"
 "    Dikfingro – Jes. Konfirmu vian respondon\n"
 "    Ĵetkubo – Montru la nunan nivelon. Klaku por elekti alian nivelon\n"
@@ -3503,7 +3504,7 @@ msgstr ""
 
 #: ../boards/missing_letter.xml.in.h:2
 msgid "Fill in the missing letter"
-msgstr "Trovu la mankantan literon"
+msgstr "Enigu la mankantan literon"
 
 #: ../boards/missing_letter.xml.in.h:3
 msgid "Missing Letter"
@@ -3679,14 +3680,14 @@ msgstr "Mono"
 
 #: ../boards/money.xml.in.h:4
 msgid "Practice money usage"
-msgstr "Praktiku mono-uzon"
+msgstr "Praktiki mono-uzon"
 
 #: ../boards/money.xml.in.h:5 ../boards/money_cents.xml.in.h:5
 msgid ""
 "You must buy the different items and give the exact price. At higher levels, "
 "several items are displayed, and you must first calculate the total price."
 msgstr ""
-"Vi devas aĉeti diversajn aferojn kaj unue klkulu la ĝustan prezon. Je alt-"
+"Vi devas aĉeti diversajn aferojn kaj unue kalkulu la ĝustan prezon. Je alt-"
 "niveloj, pluraj aferoj montriĝas, kaj unue vi devas kalkuli la tutan prezon. "
 
 #: ../boards/money_cents.xml.in.h:4
@@ -3701,7 +3702,7 @@ msgstr ""
 
 #: ../boards/mosaic.xml.in.h:2
 msgid "Rebuild the mosaic"
-msgstr "Rekonstruu la mozaikon"
+msgstr "Rekonstrui la mozaikon"
 
 #: ../boards/mouse.xml.in.h:1
 msgid "Mouse-manipulation activities."
@@ -3721,18 +3722,18 @@ msgstr "Aktivecoj por kalkuli."
 
 #: ../boards/paintings.xml.in.h:1
 msgid "Assemble the puzzle"
-msgstr "Kunmetu la puzlon"
+msgstr "Kunmeti la puzlon"
 
 #: ../boards/paintings.xml.in.h:2
 msgid "Drag and Drop the items to rebuild the original paintings"
-msgstr "Tiru kaj Faligu la aferojn por rekonstrui la originalan pentraĵojn "
+msgstr "Ŝovu kaj demetu la aferojn por rekonstrui la originalan pentraĵojn "
 
 #: ../boards/paintings.xml.in.h:3
 msgid ""
 "Drag the image parts from the box on the left to create a painting on the "
 "main board."
 msgstr ""
-"Tiru la partojn de bildoj maldekstren el skatolo por krei pentraĵon en la "
+"Ŝovu la partojn de bildoj maldekstren el skatolo por krei pentraĵon en la "
 "ĉeftabulo. "
 
 #: ../boards/paintings.xml.in.h:4
@@ -4908,7 +4909,7 @@ msgstr "Speciala tabulo kiu inkludas (xx python) en GCompris."
 
 #: ../src/boards/python/admin/board_list.py:88
 msgid "Select a profile:"
-msgstr "Elektu profilon:"
+msgstr "Elekti profilon:"
 
 #: ../src/boards/python/admin/board_list.py:144
 msgid "Filter"
@@ -4916,11 +4917,11 @@ msgstr "Filtrilo"
 
 #: ../src/boards/python/admin/board_list.py:149
 msgid "Select all"
-msgstr "Elektu ĉiujn"
+msgstr "Elekti ĉiujn"
 
 #: ../src/boards/python/admin/board_list.py:154
 msgid "Unselect all"
-msgstr "Malelektu ĉiujn"
+msgstr "Malelekti ĉiujn"
 
 #: ../src/boards/python/admin/board_list.py:159
 msgid "Locales"
@@ -4947,7 +4948,7 @@ msgstr "Ĉefa-menuo"
 #. column_pref.set_widget(image)
 #: ../src/boards/python/admin/board_list.py:294
 msgid "Active"
-msgstr "Aktivigu"
+msgstr "Aktive"
 
 #: ../src/boards/python/admin/board_list.py:295
 msgid "Board title"
@@ -4964,8 +4965,8 @@ msgid ""
 "<span size='x-large'> Select the difficulty range \n"
 "for profile <b>%s</b></span>"
 msgstr ""
-"<spano grandeco='x-larĝa'> Elekt la malfacilecan distancon\n"
-"Por profilo <b>%s</b></spano>"
+"<span size='x-larĝa'> Elekti la malfacilecan distancon\n"
+"por profilo <b>%s</b></span>"
 
 #: ../src/boards/python/admin/class_edit.py:60
 msgid "Editing a Class"
@@ -5898,67 +5899,67 @@ msgstr "Via sistema defaŭlto"
 
 #: ../src/gcompris/config.c:57
 msgid "Afrikaans"
-msgstr "afrikansa"
+msgstr "Afrikansa"
 
 #: ../src/gcompris/config.c:58
 msgid "Amharic"
-msgstr "amhara"
+msgstr "Amhara"
 
 #: ../src/gcompris/config.c:59
 msgid "Arabic"
-msgstr "araba"
+msgstr "Araba"
 
 #: ../src/gcompris/config.c:60
 msgid "Turkish (Azerbaijan)"
-msgstr "turka (Azerio)"
+msgstr "Turka (Azerio)"
 
 #: ../src/gcompris/config.c:61
 msgid "Bulgarian"
-msgstr "bulgara"
+msgstr "Bulgara"
 
 #: ../src/gcompris/config.c:62
 msgid "Breton"
-msgstr "bretona"
+msgstr "Bretona"
 
 #: ../src/gcompris/config.c:63
 msgid "Catalan"
-msgstr "kataluna"
+msgstr "Kataluna"
 
 #: ../src/gcompris/config.c:65
 msgid "Danish"
-msgstr "dana"
+msgstr "Dana"
 
 #: ../src/gcompris/config.c:66
 msgid "German"
-msgstr "germana"
+msgstr "Germana"
 
 #: ../src/gcompris/config.c:67
 msgid "Dzongkha"
-msgstr "dzonka"
+msgstr "Dzonka"
 
 #: ../src/gcompris/config.c:68
 msgid "Greek"
-msgstr "greka"
+msgstr "Greka"
 
 #: ../src/gcompris/config.c:69
 msgid "English (Canada)"
-msgstr "angla (Kanado)"
+msgstr "Angla (kanado)"
 
 #: ../src/gcompris/config.c:70
 msgid "English (Great Britain)"
-msgstr "angla (Britio)"
+msgstr "Angla (britio)"
 
 #: ../src/gcompris/config.c:71
 msgid "English (United States)"
-msgstr "angla (Usono)"
+msgstr "Angla (usono)"
 
 #: ../src/gcompris/config.c:72
 msgid "Spanish"
-msgstr "hispana"
+msgstr "Hispana"
 
 #: ../src/gcompris/config.c:73
 msgid "Basque"
-msgstr "vaska"
+msgstr "Vaska"
 
 #: ../src/gcompris/config.c:74
 msgid "Persian"
@@ -5966,163 +5967,163 @@ msgstr "Persa"
 
 #: ../src/gcompris/config.c:75
 msgid "Finnish"
-msgstr "finna"
+msgstr "Finna"
 
 #: ../src/gcompris/config.c:76
 msgid "French"
-msgstr "franca"
+msgstr "Franca"
 
 #: ../src/gcompris/config.c:77
 msgid "Irish (Gaelic)"
-msgstr "irlanda (gaela)"
+msgstr "Irlanda (gaela)"
 
 #: ../src/gcompris/config.c:78
 msgid "Gujarati"
-msgstr "guĝarata"
+msgstr "Guĝarata"
 
 #: ../src/gcompris/config.c:79
 msgid "Hebrew"
-msgstr "hebrea"
+msgstr "Hebrea"
 
 #: ../src/gcompris/config.c:80
 msgid "Hindi"
-msgstr "hindia"
+msgstr "Hinda"
 
 #: ../src/gcompris/config.c:81
 msgid "Croatian"
-msgstr "kroata"
+msgstr "Kroata"
 
 #: ../src/gcompris/config.c:82
 msgid "Hungarian"
-msgstr "hungara"
+msgstr "Hungara"
 
 #: ../src/gcompris/config.c:83
 msgid "Indonesian"
-msgstr "indonezia"
+msgstr "Indoneza"
 
 #: ../src/gcompris/config.c:84
 msgid "Italian"
-msgstr "itala"
+msgstr "Itala"
 
 #: ../src/gcompris/config.c:85
 msgid "Japanese"
-msgstr "japana"
+msgstr "Japana"
 
 #: ../src/gcompris/config.c:86
 msgid "Georgian"
-msgstr "kartveluja"
+msgstr "Kartvela"
 
 #: ../src/gcompris/config.c:87
 msgid "Korean"
-msgstr "korea"
+msgstr "Korea"
 
 #: ../src/gcompris/config.c:88
 msgid "Lithuanian"
-msgstr "litova"
+msgstr "Litova"
 
 #: ../src/gcompris/config.c:89
 msgid "Macedonian"
-msgstr "makedona"
+msgstr "Makedona"
 
 #: ../src/gcompris/config.c:90
 msgid "Malayalam"
-msgstr "malajala"
+msgstr "Malajala"
 
 #: ../src/gcompris/config.c:91
 msgid "Marathi"
-msgstr "marata"
+msgstr "Marata"
 
 #: ../src/gcompris/config.c:92
 msgid "Malay"
-msgstr "malaja"
+msgstr "Malaja"
 
 #: ../src/gcompris/config.c:93
 msgid "Norwegian Bokmal"
-msgstr "norvega (bokmål)"
+msgstr "Norvega (bokmål)"
 
 #: ../src/gcompris/config.c:94
 msgid "Nepal"
-msgstr "nepala"
+msgstr "Nepala"
 
 #: ../src/gcompris/config.c:95
 msgid "Dutch"
-msgstr "nederlanda"
+msgstr "Nederlanda"
 
 #: ../src/gcompris/config.c:96
 msgid "Norwegian Nynorsk"
-msgstr "norvega (nynorsk)"
+msgstr "Norvega (nynorsk)"
 
 #: ../src/gcompris/config.c:97
 msgid "Occitan (languedocien)"
-msgstr "okcitana"
+msgstr "Okcitana"
 
 #: ../src/gcompris/config.c:98
 msgid "Punjabi"
-msgstr "panĝaba"
+msgstr "Panĝaba"
 
 #: ../src/gcompris/config.c:99
 msgid "Polish"
-msgstr "pola"
+msgstr "Pola"
 
 #: ../src/gcompris/config.c:100
 msgid "Portuguese (Brazil)"
-msgstr "portugala (brazila)"
+msgstr "Portugala (brazila)"
 
 #: ../src/gcompris/config.c:101
 msgid "Portuguese"
-msgstr "portugala"
+msgstr "Portugala"
 
 #: ../src/gcompris/config.c:102
 msgid "Romanian"
-msgstr "rumana"
+msgstr "Rumana"
 
 #: ../src/gcompris/config.c:103
 msgid "Russian"
-msgstr "rusa"
+msgstr "Rusa"
 
 #: ../src/gcompris/config.c:104
 msgid "Kinyarwanda"
-msgstr "kinjarvanda"
+msgstr "Kinjarvanda"
 
 #: ../src/gcompris/config.c:105
 msgid "Slovak"
-msgstr "slovaka"
+msgstr "Slovaka"
 
 #: ../src/gcompris/config.c:106
 msgid "Slovenian"
-msgstr "slovena"
+msgstr "Slovena"
 
 #: ../src/gcompris/config.c:107
 msgid "Somali"
-msgstr "somala"
+msgstr "Somala"
 
 #: ../src/gcompris/config.c:108
 msgid "Albanian"
-msgstr "albana"
+msgstr "Albana"
 
 #: ../src/gcompris/config.c:109
 msgid "Serbian (Latin)"
-msgstr "serba (latina)"
+msgstr "Serba (latina)"
 
 #: ../src/gcompris/config.c:110
 msgid "Serbian"
-msgstr "serba"
+msgstr "Serba"
 
 #: ../src/gcompris/config.c:111
 msgid "Swedish"
-msgstr "sveda"
+msgstr "Sveda"
 
 #: ../src/gcompris/config.c:112
 msgid "Tamil"
-msgstr "tamila"
+msgstr "Tamila"
 
 #: ../src/gcompris/config.c:113
 msgid "Thai"
-msgstr "taja"
+msgstr "Taja"
 
 #: ../src/gcompris/config.c:114
 msgid "Turkish"
-msgstr "turka"
+msgstr "Turka"
 
 #: ../src/gcompris/config.c:115
 msgid "Ukrainian"
@@ -6130,23 +6131,23 @@ msgstr "Ukraina"
 
 #: ../src/gcompris/config.c:116
 msgid "Urdu"
-msgstr "urdua"
+msgstr "Urdua"
 
 #: ../src/gcompris/config.c:117
 msgid "Vietnamese"
-msgstr "vjetnama"
+msgstr "Vjetnama"
 
 #: ../src/gcompris/config.c:118
 msgid "Walloon"
-msgstr "valona"
+msgstr "Valona"
 
 #: ../src/gcompris/config.c:119
 msgid "Chinese (Simplified)"
-msgstr "ĉina (simpligita)"
+msgstr "Ĉina (simpligita)"
 
 #: ../src/gcompris/config.c:120
 msgid "Chinese (Traditional)"
-msgstr "ĉina (tradicia)"
+msgstr "Ĉina (tradicia)"
 
 #: ../src/gcompris/config.c:125
 msgid "No time limit"
@@ -6201,11 +6202,11 @@ msgstr "Malsukcesis malfermi skin dir: %s"
 #: ../src/gcompris/config.c:881
 #, c-format
 msgid "Skin : %s"
-msgstr "Skin : %s"
+msgstr "Haŭto : %s"
 
 #: ../src/gcompris/config.c:419
 msgid "SKINS NOT FOUND"
-msgstr "NE TROVIS SKINS"
+msgstr "NE TROVIS HAŬTOJN"
 
 #: ../src/gcompris/config.c:544
 msgid "English (United State)"
@@ -6217,11 +6218,11 @@ msgstr "Nuligu"
 
 #: ../src/gcompris/file_selector.c:365
 msgid "LOAD"
-msgstr "Ŝarĝu"
+msgstr "ŜARĜI"
 
 #: ../src/gcompris/file_selector.c:365
 msgid "SAVE"
-msgstr "SAVU"
+msgstr "KONSERVI"
 
 #: ../src/gcompris/gameutil.c:97
 msgid "Couldn't find or load the file"
@@ -6236,28 +6237,28 @@ msgid ""
 "Exit it and report\n"
 "the problem to the authors."
 msgstr ""
-"Nuligu ĝin kaj raportu\n"
-"problemoj al la aŭtoroj"
+"Ĉesi ĝin kaj raporti\n"
+"problemoj al la aŭtoroj."
 
 #: ../src/gcompris/gcompris.c:136
 msgid "run GCompris in fullscreen mode."
-msgstr "uzu GCompris en tutekrana maniero."
+msgstr "uzi GCompris en tutekrana maniero."
 
 #: ../src/gcompris/gcompris.c:139
 msgid "run GCompris in window mode."
-msgstr "uzu GCompris en fenestra maniero."
+msgstr "uzi GCompris en fenestra maniero."
 
 #: ../src/gcompris/gcompris.c:142
 msgid "run GCompris with sound enabled."
-msgstr "funkciigu GCompris kun sono."
+msgstr "uzi GCompris kun sono enŝaltita."
 
 #: ../src/gcompris/gcompris.c:145
 msgid "run GCompris without sound."
-msgstr "uzu GCompris sen sono."
+msgstr "uzi GCompris sen sono."
 
 #: ../src/gcompris/gcompris.c:148
 msgid "run GCompris with the default gnome cursor."
-msgstr "uzu GCompris per la defaŭlta gnome kursoro."
+msgstr "uzi GCompris per la defaŭlta GNOME-kursoro."
 
 #: ../src/gcompris/gcompris.c:151
 msgid "display only activities with this difficulty level."
@@ -6273,7 +6274,7 @@ msgstr "Presu la version de "
 
 #: ../src/gcompris/gcompris.c:160
 msgid "Use the antialiased canvas (slower)."
-msgstr "Uzu la glatigitan kanvason (pli malrapide)."
+msgstr "Uzi la glatigitan kanvason (pli malrapide)."
 
 #: ../src/gcompris/gcompris.c:163
 msgid "Disable XF86VidMode (No screen resolution change)."
@@ -6503,7 +6504,7 @@ msgstr "Kredito"
 
 #: ../src/gcompris/properties.c:500 ../src/gcompris/properties.c:507
 msgid "readme"
-msgstr "Legu min"
+msgstr "LeguMin"
 
 #: ../src/gcompris/properties.c:502
 msgid ""
