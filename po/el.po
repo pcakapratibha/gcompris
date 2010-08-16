@@ -21,28 +21,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcompris.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-03 16:31+0300\n"
-"PO-Revision-Date: 2010-04-14 15:14+0300\n"
+"POT-Creation-Date: 2010-08-16 10:58+0300\n"
+"PO-Revision-Date: 2010-08-12 10:32+0200\n"
 "Last-Translator: Yannis Kaskamanidis <kiolalis@gmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
-">\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.0\n"
 "X-Poedit-Language: Greek\n"
@@ -604,6 +589,7 @@ msgid "Needs to be capable of moving and clicking the mouse easily"
 msgstr "Πρέπει να είναι ικανός να κινεί και να κάνει κλικ με το ποντίκι εύκολα"
 
 #: ../boards/anim.xml.in.h:5
+#, fuzzy
 msgid ""
 "Select a drawing tool on the left, and a color down the bottom. Then click "
 "and drag in the white area to create a new shape. Once you've completed a "
@@ -1423,6 +1409,7 @@ msgid "Mouse manipulation"
 msgstr "Χρήση ποντικιού"
 
 #: ../boards/crane.xml.in.h:5
+#, fuzzy
 msgid ""
 "Move the items in the bottom left frame to copy their position in the top "
 "right model. Below the crane itself, you will find four arrows that let you "
@@ -3705,6 +3692,7 @@ msgid "banana/b_nana/a/o/i"
 msgstr "μπανάνα/μπ_νάνα/α/ε/ι"
 
 #: ../boards/missing_letter/board1.xml.in.h:3
+#, fuzzy
 msgid "bed/_ed/b/l/f"
 msgstr "κρεβάτι/κρ_βάτι/ε/α/ι"
 
@@ -3733,110 +3721,137 @@ msgid "satchel/s_tchel/a/o/i"
 msgstr "σακίδιο/σακίδ_ο/ι/η/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:1
+#, fuzzy
 msgid "ball/_all/b/p/d"
 msgstr "τόπι/τ_πι/ο/α/ω"
 
 #: ../boards/missing_letter/board2.xml.in.h:2
+#, fuzzy
 msgid "banana/_anana/b/p/d"
 msgstr "μπανάνα/μ_ανάνα/π/ι/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:3
+#, fuzzy
 msgid "bottle/_ottle/b/t/p"
 msgstr "μπουκάλι/_πουκάλι/μ/π/ρ"
 
 #: ../boards/missing_letter/board2.xml.in.h:4
+#, fuzzy
 msgid "cake/_ake/c/p/d"
 msgstr "τούρτα/το_ρτα/υ/η/ι "
 
 #: ../boards/missing_letter/board2.xml.in.h:5
+#, fuzzy
 msgid "car/_ar/c/k/b"
 msgstr "αυτοκίνητο/αυτοκ_νητο/ι/η/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:6
+#, fuzzy
 msgid "dog/d_g/o/g/a"
 msgstr "σκύλος/σκύλ_ς/ο/ω/ε"
 
 #: ../boards/missing_letter/board2.xml.in.h:7
+#, fuzzy
 msgid "fish/_ish/f/h/l"
 msgstr "Ψάρι/Ψάρ_/ι/η/υ"
 
 #: ../boards/missing_letter/board2.xml.in.h:8
+#, fuzzy
 msgid "plane/p_ane/l/j/i"
 msgstr "αεροπλάνο/α_ροπλάνο/ε/υ/γ"
 
 #: ../boards/missing_letter/board2.xml.in.h:9
+#, fuzzy
 msgid "satchel/_atchel/s/c/l"
 msgstr "σακίδιο/σακ_διο/ι/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:1
+#, fuzzy
 msgid "apple/appl_/e/h/a"
 msgstr "μήλο/μή_ο/λ/σ/τ"
 
 #: ../boards/missing_letter/board3.xml.in.h:2
+#, fuzzy
 msgid "ball/b_ll/a/u/o"
 msgstr "τόπι/τόπ_/ι/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:3
+#, fuzzy
 msgid "bed/b_d/e/a/i"
 msgstr "κρεβάτι/κρεβάτ_/ι/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:4
+#, fuzzy
 msgid "bottle/b_ttle/o/u/d"
 msgstr "μπουκάλι/μπο_κάλι/υ/ι/η"
 
 #: ../boards/missing_letter/board3.xml.in.h:5
+#, fuzzy
 msgid "cake/c_ke/a/o/e"
 msgstr "τούρτα/τ_ύρτα/ο/ω/α"
 
 #: ../boards/missing_letter/board3.xml.in.h:6
+#, fuzzy
 msgid "dog/do_/g/p/q"
 msgstr "σκύλος/σ_ύλος/κ/τ/π"
 
 #: ../boards/missing_letter/board3.xml.in.h:7
+#, fuzzy
 msgid "fish/fis_/h/o/i"
 msgstr "Ψάρι/Ψά_ι/ρ/λ/θ"
 
 #: ../boards/missing_letter/board3.xml.in.h:8
+#, fuzzy
 msgid "house/h_use/o/f/u"
 msgstr "σπίτι/σπίτ_/ι/η/υ"
 
 #: ../boards/missing_letter/board3.xml.in.h:9
+#, fuzzy
 msgid "plane/pl_ne/a/o/s"
 msgstr "αεροπλάνο/αεροπλάν_/ο/ω/ι"
 
 #: ../boards/missing_letter/board4.xml.in.h:1
+#, fuzzy
 msgid "apple/app_e/l/h/n"
 msgstr "μήλο/μήλ_/ο/ω/υ"
 
 #: ../boards/missing_letter/board4.xml.in.h:2
+#, fuzzy
 msgid "ball/bal_/l/h/s"
 msgstr "τόπι/_όπι/τ/π/κ"
 
 #: ../boards/missing_letter/board4.xml.in.h:3
+#, fuzzy
 msgid "banana/ba_ana/n/m/b"
 msgstr "μπανάνα/μπα_άνα/ν/τ/λ"
 
 #: ../boards/missing_letter/board4.xml.in.h:4
+#, fuzzy
 msgid "bed/be_/d/p/b"
 msgstr "κρεβάτι/κρεβά_ι/τ/σ/π"
 
 #: ../boards/missing_letter/board4.xml.in.h:5
+#, fuzzy
 msgid "bottle/bott_e/l/y/r"
 msgstr "μπουκάλι/μπουκάλ_/ι/η/υ"
 
 #: ../boards/missing_letter/board4.xml.in.h:6
+#, fuzzy
 msgid "cake/ca_e/k/q/c"
 msgstr "τούρτα/_ούρτα/τ/φ/δ"
 
 #: ../boards/missing_letter/board4.xml.in.h:7
+#, fuzzy
 msgid "car/ca_/r/w/k"
 msgstr "αυτοκίνητο/α_τοκίνητο/υ/φ/β"
 
 #: ../boards/missing_letter/board4.xml.in.h:8
+#, fuzzy
 msgid "house/_ouse/h/e/j"
 msgstr "σπίτι/σπ_τι/ι/η/υ"
 
 #: ../boards/missing_letter/board4.xml.in.h:9
+#, fuzzy
 msgid "satchel/sa_chel/t/p/c"
 msgstr "σακίδιο/σακί_ιο/δ/τ/θ"
 
@@ -4468,6 +4483,7 @@ msgid "Completing the puzzle requires patience and logical ability"
 msgstr "Υπομονή και λογικές ικανότητες"
 
 #: ../boards/sudoku.xml.in.h:2
+#, fuzzy
 msgid ""
 "For the first level with colored symbols, drag symbols on the left to their "
 "target position. For the higher levels, click on an empty square to give it "
@@ -5531,16 +5547,14 @@ msgstr ""
 #: ../src/boards/python/anim.py:2224
 msgid "SVG is disabled. Install python xml module to enable it"
 msgstr ""
-"Το SVG είναι απενεργοποιημένο. Εγκαταστήστε το άρθρωμα python xml για να το "
-"ενεργοποιήσετε."
 
 #: ../src/boards/python/anim.py:2380
 msgid "Warning: the following images cannot be accessed on your system.\n"
-msgstr "Προειδοποίηση: δεν είναι δυνατή η πρόσβαση στις παρακάτω εικόνες.\n"
+msgstr ""
 
 #: ../src/boards/python/anim.py:2382
 msgid "The corresponding items have been skipped."
-msgstr "Τα αντίστοιχα αντικείμενα έχουν παρακαμφθεί."
+msgstr ""
 
 #: ../src/boards/python/chat.py:81
 msgid "All messages will be displayed here.\n"
@@ -6066,12 +6080,11 @@ msgid "Translators:"
 msgstr "Μεταφραστές:"
 
 #: ../src/gcompris/about.c:227
+#, fuzzy
 msgid ""
 "GCompris Home Page\n"
 "http://gcompris.net"
-msgstr ""
-"Αρχική σελίδα του GCompris:\n"
-"http://gcompris.net"
+msgstr "Αρχική σελίδα του GCompris: http://gcompris.net"
 
 #: ../src/gcompris/about.c:249
 msgid ""
@@ -6153,8 +6166,9 @@ msgid "Configure the list of words"
 msgstr "Διαμόρφωση του καταλόγου των λέξεων"
 
 #: ../src/gcompris/board_config_wordlist.c:209
+#, fuzzy
 msgid "Language:"
-msgstr "Γλώσσα:"
+msgstr "Επώνυμο:"
 
 #: ../src/gcompris/board_config_wordlist.c:246
 msgid "Back to default"
@@ -6434,15 +6448,15 @@ msgstr "Γρήγορο χρονόμετρο"
 
 #: ../src/gcompris/config.c:133
 msgid "800x600 (Default for GCompris)"
-msgstr "800x600 (Προκαθορισμένη ανάλυση για το GCompris)"
+msgstr ""
 
 #: ../src/gcompris/config.c:138
+#, fuzzy
 msgid ""
 "<i>Use Gcompris administration module\n"
 "to filter boards</i>"
 msgstr ""
-"<i>Χρησιμοποιήστε τη διαχείριση του\n"
-"GCompris για να φιλτράρετε τους πίνακες.</i>"
+"Χρησιμοποιήστε τη διαχείριση του GCompris για να φιλτράρετε τους πίνακες."
 
 #: ../src/gcompris/config.c:193 ../src/gcompris/config.c:203
 msgid "GCompris Configuration"
@@ -6541,11 +6555,11 @@ msgstr "Εκτύπωση της έκδοσης του"
 
 #: ../src/gcompris/gcompris.c:160
 msgid "Use the antialiased canvas (slower)."
-msgstr "Χρησιμοποιήστε τον καμβά εξομάλυνσης (αργό)."
+msgstr ""
 
 #: ../src/gcompris/gcompris.c:163
 msgid "Disable XF86VidMode (No screen resolution change)."
-msgstr "Απενεργοποίηση XF86VidMode (Δεν αλλάζει η ανάλυση της οθόνης)."
+msgstr ""
 
 #: ../src/gcompris/gcompris.c:166
 msgid ""
@@ -6559,10 +6573,9 @@ msgstr ""
 "strategy/connect4 σου επιτρέπει να παίξεις με το παιχνίδι connect 4)"
 
 #: ../src/gcompris/gcompris.c:171
+#, fuzzy
 msgid "Run GCompris with local activity directory added to menu"
-msgstr ""
-"Εκτελέστε το GCompris με τον τοπικό κατάλογο δραστηριοτήτων που προστέθηκε "
-"στο μενού."
+msgstr "Το GCompris θα βρει τη δραστηριότητα σε αυτόν τον κατάλογο."
 
 #: ../src/gcompris/gcompris.c:174
 msgid "Run GCompris in administration and user-management mode"
@@ -6625,8 +6638,6 @@ msgstr "Απενεργοποίηση του κουμπιού config"
 #: ../src/gcompris/gcompris.c:209
 msgid "Display the resources on stdout based on the selected activities"
 msgstr ""
-"Εμφάνιση των πόρων κατά την έξοδο, βασισμένων στις επιλεγμένες "
-"δραστηριότητες."
 
 #: ../src/gcompris/gcompris.c:213
 msgid ""
@@ -6661,14 +6672,14 @@ msgstr ""
 
 #: ../src/gcompris/gcompris.c:226
 msgid "Do not display the background images of activities."
-msgstr "Απενεργοποίηση εμφάνισης εικόνων παρασκηνίου των δραστηριοτήτων."
+msgstr ""
 
 #: ../src/gcompris/gcompris.c:229
 msgid "Do not avoid the execution of multiple instances of GCompris."
 msgstr "Να αποφεύγετε την εκτέλεση πολλαπλών στιγμιότυπων του GCompris."
 
 #: ../src/gcompris/gcompris.c:864
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCompris is free software released under the GPL License. In order to "
 "support its development, the Windows version provides only %d of the %d "
@@ -6900,6 +6911,9 @@ msgstr "Χρόνος που απομένει = %d"
 #~ "Ο σκύλος είναι προσφορά του Andre Connes και κυκλοφορεί υπό τους όρους "
 #~ "της άδειας GPL."
 
+#~ msgid "Number of activities: %d"
+#~ msgstr "Αριθμός δραστηριοτήτων: %d"
+
 #~ msgid "Special board that embeds python into gcompris."
 #~ msgstr ""
 #~ "Ειδικός πίνακας που ενσωματώνει τη γλώσσα προγραμματισμού python στο "
@@ -6913,6 +6927,120 @@ msgstr "Χρόνος που απομένει = %d"
 #~ msgstr ""
 #~ "ΣΦΑΛΜΑ: Αδυναμία αρχικοποίησης της διεπαφής δικτύου. Δεν μπορείτε να "
 #~ "επικοινωνήσετε."
+
+#~ msgid "%s: option `%s' is ambiguous\n"
+#~ msgstr "%s: επιλογή `%s' είναι διφορούμενη\n"
+
+#~ msgid "%s: option `--%s' doesn't allow an argument\n"
+#~ msgstr "%s: επιλογή `--%s' δεν επιτρέπει μια παράμετρο\n"
+
+#~ msgid "%s: option `%c%s' doesn't allow an argument\n"
+#~ msgstr "%s: επιλογή `%c%s' δεν επιτρέπει μια παράμετρο\n"
+
+#~ msgid "%s: option `%s' requires an argument\n"
+#~ msgstr "%s: επιλογή `%s' απαιτεί μια παράμετρο\n"
+
+#~ msgid "%s: unrecognized option `--%s'\n"
+#~ msgstr "%s: μη αναγνωρίσιμη επιλογή `--%s'\n"
+
+#~ msgid "%s: unrecognized option `%c%s'\n"
+#~ msgstr "%s: μη αναγνωρίσιμη επιλογή `%c%s'\n"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: μη επιθυμητή επιλογή -- %c\n"
+
+#~ msgid "%s: invalid option -- %c\n"
+#~ msgstr "%s: μη έγκυρη επιλογή -- %c\n"
+
+#~ msgid "%s: option requires an argument -- %c\n"
+#~ msgstr "%s: η επιλογή απαιτεί μία παράμετρο -- %c\n"
+
+#~ msgid "%s: option `-W %s' is ambiguous\n"
+#~ msgstr "%s: επιλογή `-W %s' είναι διφορούμενη\n"
+
+#~ msgid "%s: option `-W %s' doesn't allow an argument\n"
+#~ msgstr "%s: επιλογή `-W %s' δεν επιτρέπει μία παράμετρο\n"
+
+#~| msgid "Find the matching pair"
+#~ msgid "Find the details"
+#~ msgstr "Βρες τις λεπτομέρειες"
+
+#~ msgid "The images are from wiki commons"
+#~ msgstr "Οι εικόνες προέρχονται από τα κοινόχρηστα wiki"
+
+#~| msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+#~ msgid "Vincent van Gogh, Entrance Hall of Saint-Paul Hospital - 1889"
+#~ msgstr "Vincent Van Gogh, Είσοδος του νοσοκομείου Σέντ Πολ - 1889"
+
+#~ msgid ""
+#~ "Vincent van Gogh, The Bridge of Langlois at Arles with a lady with "
+#~ "umbrella - 1888"
+#~ msgstr ""
+#~ "Vincent van Gogh, Η γέφυρα των Λαγκλουά και Αρλέ με τη γυναίκα που κρατά "
+#~ "ομπρέλα - 1888"
+
+#~| msgid "Vincent Van Gogh, Village Street in Auvers - 1890"
+#~ msgid "Vincent van Gogh, The Church at Auvers-sur-Oise - 1890"
+#~ msgstr "Vincent Van Gogh, Η εκκλησία Auvers-sur-Oise - 1890"
+
+#~| msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+#~ msgid "Vincent van Gogh, Painter on His Way to Work - 1888"
+#~ msgstr "Vincent Van Gogh, Ο ζωγράφος στη δουλειά του - 1888"
+
+#~| msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+#~ msgid "Vincent van Gogh, The Harvest - 1888"
+#~ msgstr "Vincent Van Gogh, Η σοδειά - 1888"
+
+#~| msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+#~ msgid "Vincent van Gogh, Cafe Terrace at Night - 1888"
+#~ msgstr "Vincent Van Gogh, Καφέ Τεράς τη νύχτα - 1888"
+
+#~| msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+#~ msgid "Vincent van Gogh, Entrance Hall of Saint-Paul Hospital - 1888"
+#~ msgstr "Vincent Van Gogh, Είσοδος του νοσοκομείου του Σέντ Πολ - 1888"
+
+#~| msgid "Vincent van Gogh, Bedroom in Arles - 1888"
+#~ msgid "Vincent van Gogh, Portrait of Pere Tanguy 1887-8"
+#~ msgstr "Vincent Van Gogh, Πορτρέτο του Περέ Τανγκί - 1887-8"
+
+#~ msgid "Eilean Donan castle"
+#~ msgstr "Κάστρο του Eilean Donan"
+
+#~ msgid "Eiffel Tower, seen from the champ de Mars, Paris, France"
+#~ msgstr ""
+#~ "Ο Πύργος του Άιφελ όπως φαίνεται από το Πεδίον του Άρεως, Παρίσι, Γαλλία"
+
+#~ msgid "Gizah Pyramids, Egypt"
+#~ msgstr "Πυραμίδες της Γκίζας, Αίγυπτος"
+
+#~ msgid "Sydney Opera House, Austriala"
+#~ msgstr "Η Όπερα του Σίδνεϊ, Αυστραλία"
+
+#~ msgid "Courtyard of the Museum of Louvre, and its pyramid"
+#~ msgstr "Η αυλή του Μουσείου του Λούβρου και η πυραμίδα του"
+
+#~ msgid "Panorama of Château de Chenonceau, Indre-et-Loire, France."
+#~ msgstr "Πανόραμα από το Κάστρο του Σενονσό, Γαλλία."
+
+#~ msgid ""
+#~ "Notre Dame de Paris cathedral on the Île de la Cité island in Paris, "
+#~ "France."
+#~ msgstr "Καθεδρικός ναός Νότρ Νταμ του Παρισιού στο νησί Σιτέ, Γαλλία."
+
+#~ msgid "Nagoya Castle, Aichi Prefecture, Japan."
+#~ msgstr "Κάστρο Ναγκόγια, περιφέρεια Αϊσί, Ιαπωνία."
+
+#~ msgid "Taj Mahal, Agra, India"
+#~ msgstr "Ταζ Μαχάλ, Άγκρα, Ινδία."
+
+#~ msgid "Castle Neuschwanstein at Schwangau, Bavaria, Germany"
+#~ msgstr "Κάστρο Νόιεσβανσταϊν στο Σβάνγκαου, Βαυαρία, Γερμανία"
+
+#~ msgid "Egeskov Castle, Denmark"
+#~ msgstr "Κάστρο Έγκεσκοβ, Δανία"
+
+#~ msgid "Windmill in Sønderho, Fanø, Denmark"
+#~ msgstr "Ανεμόμυλος στο Σεντέρχο, Φάνο, Δανία"
 
 #~ msgid "Choice of the language"
 #~ msgstr "Επιλογή γλώσσας"
@@ -6951,7 +7079,6 @@ msgstr "Χρόνος που απομένει = %d"
 #~ "Φόρτωση δραστηριότητας από τη βάση δεδομένων:\n"
 #~ "%s"
 
-#~| msgid "Reading activities."
 #~ msgid ""
 #~ "Loading activity from file:\n"
 #~ "%s"
@@ -7022,10 +7149,6 @@ msgstr "Χρόνος που απομένει = %d"
 #~ "κλικ που χρειάζονται για τη λύση του παζλ. Εάν κάνεις κλικ στον Tux, θα "
 #~ "εμφανιστεί η λύση."
 
-#~| msgid ""
-#~| "The solver algorithm described on the haar.clara.co.uk is a valuable "
-#~| "resource to know more about the Lights Off game: &lt;http://www.haar."
-#~| "clara.co.uk/Lights/solving.html&gt;"
 #~ msgid ""
 #~ "The solver algorithm described on haar.clara.co.uk is a valuable resource "
 #~ "to know more about the Lights Off game: &lt;http://www.haar.clara.co.uk/"
@@ -7110,14 +7233,17 @@ msgstr "Χρόνος που απομένει = %d"
 #~ msgid "Woman holding a fan"
 #~ msgstr "Γυναίκα που κρατά μια βεντάλια"
 
-#~ msgid "Botticelli, Primavera - 1482"
-#~ msgstr "Sandro Botticelli, Πριμαβέρα - 1482"
+#~ msgid "Mona Lisa"
+#~ msgstr "Μόνα Λίζα"
 
-#~ msgid "Caravage, Rest on the Flight into Egypt - 1597"
-#~ msgstr "Caravage, Ανάπαυση στην πτήση για την Αίγυπτο - 1597"
+#~ msgid "Bellini : Pala di pesaro"
+#~ msgstr "Μπελίνι: Pala di pesaro"
 
-#~ msgid "Botticelli, The Birth of Venus - 1482–1486"
-#~ msgstr "Sandro Botticelli, Η γέννηση της Αφροδίτης - 1482–1486"
+#~ msgid "Dürer : Lion"
+#~ msgstr "Ντυρέρ: Λιοντάρι"
+
+#~ msgid "Pieter Brugel : Harvest"
+#~ msgstr "Pieter Brugel: Σοδειά"
 
 #~ msgid "Error: Absolutely no photo found in the data directory"
 #~ msgstr "ΣΦΑΛΜΑ: Δεν βρέθηκε καμία φωτογραφία στον κατάλογο δεδομένων."
@@ -7161,6 +7287,15 @@ msgstr "Χρόνος που απομένει = %d"
 #~ "δεξιά πλευρά της. Προσέξτε το βάρος και τις μονάδες των σταθμών και "
 #~ "θυμηθείτε ότι ένα κιλό (κ.) έχει 1000 γραμμάρια (γρ.). Τα σταθμά μπορείς "
 #~ "να τα διευθετήσεις με όποια σειρά θέλεις."
+
+#~ msgid "Botticelli, Primavera - 1482"
+#~ msgstr "Sandro Botticelli, Πριμαβέρα - 1482"
+
+#~ msgid "Caravage, Rest on the Flight into Egypt - 1597"
+#~ msgstr "Caravage, Ανάπαυση στην πτήση για την Αίγυπτο - 1597"
+
+#~ msgid "Botticelli, The Birth of Venus - 1482–1486"
+#~ msgstr "Sandro Botticelli, Η γέννηση της Αφροδίτης - 1482–1486"
 
 #~ msgid "The aim is to switch off all the lights"
 #~ msgstr "Σκοπός του παιχνιδιού είναι να σβήσουν όλα τα φώτα."
