@@ -1113,7 +1113,7 @@ msgstr "Osnove štetja"
 
 #: ../boards/doubleentry.xml.in.h:2
 msgid "Double-entry table"
-msgstr "Razpredelnica"
+msgstr "Vnosna preglednica"
 
 #: ../boards/doubleentry.xml.in.h:3
 msgid "Drag and Drop each proposed item on its destination"
@@ -1121,12 +1121,12 @@ msgstr "Povleci in spusti predlagane predmete na pravo mesto"
 
 #: ../boards/doubleentry.xml.in.h:4
 msgid "Drag and Drop the items in the double-entry table"
-msgstr "Povleci in spusti predmete v razpredelnico"
+msgstr "Povleci in spusti predmete v preglednico"
 
 # double entry tukaj ni potreben
 #: ../boards/doubleentry.xml.in.h:5
 msgid "Move the items on the left to their proper position in the double-entry table."
-msgstr "Premakni predmete na levi na pravo mesto v razpredelnici."
+msgstr "Premakni predmete na levi na pravo mesto v preglednici."
 
 #: ../boards/doubleentry/board3_0.xml.in.h:1
 msgid "Click on an item and listen to its target position"
