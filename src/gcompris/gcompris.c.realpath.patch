@@ -1,0 +1,96 @@
+diff --git a/src/gcompris/gcompris.c b/src/gcompris/gcompris.c
+index d5053f9..5519bd1 100644
+--- a/src/gcompris/gcompris.c
++++ b/src/gcompris/gcompris.c
+@@ -61,6 +61,14 @@ static double zoom_factor = 1.0;
+ #define GC_LOCK_FILE "gcompris.lock"
+ #define GC_LOCK_LIMIT 30 /* seconds */
+ 
++// for realpath
++#include <limits.h>
++#include <stdlib.h>
++
++#ifdef WIN32
++#define realpath(N,R) _fullpath((R),(N),_MAX_PATH)
++#endif
++
+ static GtkWidget *window;
+ static GtkWidget *workspace;
+ static GtkWidget *alignment;
+@@ -1276,6 +1284,14 @@ void gc_terminate(int signum)
+ 
+ }
+ 
++static char *get_absolute_path (gchar *dir, gchar *subdir)
++{
++  gchar *path = g_strconcat(dir, subdir, NULL);
++  char *real_path = realpath(path, NULL);
++  g_free(path);
++  return real_path;
++}
++
+ static void load_properties ()
+ {
+   GError *error = NULL;
+@@ -1302,13 +1318,12 @@ static void load_properties ()
+     gchar *pkg_data_dir = gbr_find_data_dir(PACKAGE_DATA_DIR);
+     gchar *pkg_clib_dir = gbr_find_lib_dir(PACKAGE_CLIB_DIR);
+ 
+-    properties->package_data_dir = g_strconcat(pkg_data_dir, "/gcompris/boards", NULL);
+-    properties->package_skin_dir = g_strconcat(pkg_data_dir, "/gcompris/boards/skins", NULL);
++    properties->package_data_dir = get_absolute_path(pkg_data_dir, "/gcompris/boards");
++    properties->package_skin_dir = get_absolute_path(pkg_data_dir, "/gcompris/boards/skins");
+     properties->package_locale_dir = gbr_find_locale_dir(PACKAGE_LOCALE_DIR);
+-    properties->package_plugin_dir = g_strconcat(pkg_clib_dir, "/gcompris", NULL);
+-    properties->package_python_plugin_dir = g_strconcat(pkg_data_dir, "/gcompris/python",
+-							NULL);
+-    properties->system_icon_dir = g_strconcat(pkg_data_dir, "/pixmaps", NULL);
++    properties->package_plugin_dir = get_absolute_path(pkg_clib_dir, "/gcompris");
++    properties->package_python_plugin_dir = get_absolute_path(pkg_data_dir, "/gcompris/python");
++    properties->system_icon_dir = get_absolute_path(pkg_data_dir, "/pixmaps");
+     properties->menu_dir = g_strdup(properties->package_data_dir);
+     g_free(pkg_data_dir);
+     g_free(pkg_clib_dir);
+@@ -1671,36 +1686,42 @@ main (int argc, char *argv[])
+     }
+ 
+   if (popt_package_data_dir) {
++    popt_package_data_dir = get_absolute_path(popt_package_data_dir, NULL);
+     printf("Overloaded package_data_dir          = %s\n", popt_package_data_dir);
+     g_free(properties->package_data_dir);
+     properties->package_data_dir = g_strdup(popt_package_data_dir);
+   }
+ 
+   if (popt_package_skin_dir) {
++    popt_package_skin_dir = get_absolute_path(popt_package_skin_dir, NULL);
+     printf("Overloaded package_skin_dir          = %s\n", popt_package_skin_dir);
+     g_free(properties->package_skin_dir);
+     properties->package_skin_dir = g_strdup(popt_package_skin_dir);
+   }
+ 
+   if (popt_menu_dir) {
++    popt_menu_dir = get_absolute_path(popt_menu_dir, NULL);
+     printf("Overloaded menu_dir                  = %s\n", popt_menu_dir);
+     g_free(properties->menu_dir);
+     properties->menu_dir = g_strdup(popt_menu_dir);
+   }
+ 
+   if (popt_plugin_dir) {
++    popt_plugin_dir = get_absolute_path(popt_plugin_dir, NULL);
+     printf("Overloaded package_plugin_dir        = %s\n", popt_plugin_dir);
+     g_free(properties->package_plugin_dir);
+     properties->package_plugin_dir = g_strdup(popt_plugin_dir);
+   }
+ 
+   if (popt_python_plugin_dir) {
++    popt_python_plugin_dir = get_absolute_path(popt_python_plugin_dir, NULL);
+     printf("Overloaded package_python_plugin_dir = %s\n", popt_python_plugin_dir);
+     g_free(properties->package_python_plugin_dir);
+     properties->package_python_plugin_dir = g_strdup(popt_python_plugin_dir);
+   }
+ 
+   if (popt_locale_dir) {
++    popt_locale_dir = get_absolute_path(popt_locale_dir, NULL);
+     printf("Overloaded locale_dir                = %s\n", popt_locale_dir);
+     g_free(properties->package_locale_dir);
+     properties->package_locale_dir = g_strdup(popt_locale_dir);
