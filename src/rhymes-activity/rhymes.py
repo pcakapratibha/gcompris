@@ -23,8 +23,17 @@ import gcompris.utils
 import gcompris.skin
 import goocanvas
 import pango
+import gcompris.sound
 
 from gcompris import gcompris_gettext as _
+
+class Textbox:
+
+ tb = None
+ tv = None
+ sw = None
+ x  = 0.0
+ y  = 0.0
 
 class Gcompris_rhymes:
   """Rhymes python class"""
@@ -56,8 +65,19 @@ class Gcompris_rhymes:
                                     self.gcomprisBoard.canvas.get_root_item())
     #rhyme list having title,text,image path, icon path, audio path, and co
     #ordinates for each.
+
+    self.gcomprisBoard.level=1
+    self.gcomprisBoard.maxlevel=2
+    self.gcomprisBoard.sublevel=1
+    self.gcomprisBoard.number_of_sublevel=1
+    gcompris.bar_set(gcompris.BAR_LEVEL)
+    gcompris.bar_set_level(self.gcomprisBoard)
+
     self.rhymelist = [
-	{'title':"Humpty Dumpty", 'text':"Humpty Dumpty sat on a wall,\nHumpty Dumpty had a great fall,\nAll the king's horses and all the king's men\n Couldn't put Humpty together again.",'image':"humptydumpty.svg",'icon':"humptydumptyicon.jpg",'audio':"",'x':600,'y':250}]
+	{'title':"Humpty Dumpty", 'text':"Humpty Dumpty sat on a wall,\nHumpty Dumpty had a great fall,\nAll the king's horses and all the king's men\n Couldn't put Humpty together again.",'image':"humptydumpty.svg",'icon':"humptydumptyicon.jpg",'audio':"",'x':600,'y':250}, 
+
+{'title':"Twinkle Twinkle little star", 'text':"  Twinkle, twinkle, little star,\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.\nWhen the blazing sun is gone,\nWhen he nothing shines upon,\nThen you show your little light,\nTwinkle, twinkle, all the night.\n\nThen the traveller in the dark,\nThanks you for your tiny spark,\nHe could not see which way to go,\n If you did not twinkle so.\n\nIn the dark blue sky you keep,\nAnd often through my curtains peep,\nFor you never shut your eye,\nTill the sun is in the sky.\n\nAs your bright and tiny spark,\nLights the traveller in the dark.\nThough I know not what you are,\nTwinkle, twinkle, little star.\n\nTwinkle, twinkle, little star.\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.\n\nTwinkle, twinkle, little star.\nHow I wonder what you are.\nHow I wonder what you are.",'image':"twinkletwinkle.jpg",'icon':"twinkleicon.svg",'audio':"twinkle.ogg",'x':600,'y':250}
+]
 
     self.title=goocanvas.Text(
       parent = self.rootitem,
@@ -69,24 +89,14 @@ class Gcompris_rhymes:
       alignment = pango.ALIGN_CENTER
       )
 
-    item1=goocanvas.Image(
-	parent = self.rootitem,
-	x=100,
-	y=180,
-	width=100,
-	height=100,
-	pixbuf=gcompris.utils.load_pixmap(self.rhymelist[0]['icon'])
-	)
-    item1.connect("button-press-event",self.showpoem1,0) 
+    self.showrhyme(0)
 
 #prints each rhyme according to the calling parameter.
-  def showpoem1(self,item,item1,event,calledrhyme):
-    print "hello"
-    print event
-    print item1
-    item.remove()
-#removes existing elements and fills with the image and rhyme heading
-    rhymetitle=goocanvas.Text(
+  def showrhyme(self,calledrhyme):
+
+ #fills the rhyme title
+    
+    self.rhymetitle=goocanvas.Text(
         parent=self.rootitem,
         x=400,
         y=100,
@@ -95,18 +105,43 @@ class Gcompris_rhymes:
         anchor=gtk.ANCHOR_CENTER,
         alignment=pango.ALIGN_CENTER
         )
+
  #fills with the text
-    rhymetext=goocanvas.Text(
-	parent=self.rootitem,
-	x=self.rhymelist[calledrhyme]['x'],
-	y=self.rhymelist[calledrhyme]['y'],
-	text=self.rhymelist[calledrhyme]['text'],
-	fill_color='black',
-	anchor=gtk.ANCHOR_CENTER,
-	alignment=pango.ALIGN_CENTER
-	)
+
+    self.rhymetext = Textbox()
+   
+    self.rhymetext.sw=gtk.ScrolledWindow()
+    self.rhymetext.sw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_ALWAYS)
+    self.rhymetext.sw.set_shadow_type(gtk.SHADOW_ETCHED_OUT)
+    
+    w=250.0
+    h=450.0
+    x_left=self.rhymelist[calledrhyme]['x']
+    x_right=self.rhymelist[calledrhyme]['x']+200
+    y=self.rhymelist[calledrhyme]['y']-100
+    
+    self.rhymetext.tb=gtk.TextBuffer()
+    self.rhymetext.tv=gtk.TextView(self.rhymetext.tb)
+    self.rhymetext.tv.editable=False
+    self.rhymetext.sw.add(self.rhymetext.tv)
+     
+    self.rhymetext.tb.set_text(self.rhymelist[calledrhyme]['text'])
+    
+    self.rhymetext.tv.set_wrap_mode(gtk.WRAP_CHAR)
+    self.rhymewidget=goocanvas.Widget(
+       parent = self.rootitem,
+       widget = self.rhymetext.sw,
+       x=x_left,
+       y=y,
+       width=w,
+       height=h-200,
+       anchor=gtk.ANCHOR_N)
+    self.rhymetext.tv.show()
+    self.rhymetext.sw.show()
+
+
  #fills the rhymeimage
-    rhymeimage=goocanvas.Image(
+    self.rhymeimage=goocanvas.Image(
         parent = self.rootitem,
         x=100,
         y=140,
@@ -114,17 +149,37 @@ class Gcompris_rhymes:
         height=280,
         pixbuf=gcompris.utils.load_pixmap(self.rhymelist[calledrhyme]['image'])
         )
-    
+ #draw the play Icon
+    self.rhymeplayicon=goocanvas.Image(
+        parent = self.rootitem,
+        x=450,
+        y=400,
+        width=60,
+        height=60,
+        pixbuf=gcompris.utils.load_pixmap("playbutton.svg")
+        )
+    self.rhymeplayicon.connect("button-press-event",self.playrhyme,calledrhyme)
 
+
+  def playrhyme(self,item,item1,event, calledrhyme):
+    gcompris.sound.reopen()
+    gcompris.sound.play_ogg(self.rhymelist[calledrhyme]['audio'])
+    
   def end(self):
     print "rhymes end"
     # Remove the root item removes all the others inside it
     self.rootitem.remove()
-
+    gcompris.sound.close()
 
   def ok(self):
     print("rhymes ok.")
 
+  def cleanup_rhyme(self):
+    self.rhymetitle.remove()
+    self.rhymewidget.remove()
+    self.rhymeimage.remove()
+    gcompris.sound.close()
+  
 
   def repeat(self):
     print("rhymes repeat.")
@@ -146,4 +201,11 @@ class Gcompris_rhymes:
 
   def set_level(self, level):
     print("rhymes set level. %i" % level)
+    self.gcomprisBoard.level=level;
+    self.gcomprisBoard.sublevel=1;
+
+    # Set the level in the control bar
+    gcompris.bar_set_level(self.gcomprisBoard);
+    self.cleanup_rhyme()
+    self.showrhyme(self.gcomprisBoard.level-1)
 
