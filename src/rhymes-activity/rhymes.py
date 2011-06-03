@@ -66,10 +66,10 @@ class Gcompris_rhymes:
     #rhyme list having title,text,image path, icon path, audio path, and co
     #ordinates for each.
 
-    self.gcomprisBoard.level=1
-    self.gcomprisBoard.maxlevel=2
-    self.gcomprisBoard.sublevel=1
-    self.gcomprisBoard.number_of_sublevel=1
+    self.gcomprisBoard.level = 1
+    self.gcomprisBoard.maxlevel = 2
+    self.gcomprisBoard.sublevel = 1
+    self.gcomprisBoard.number_of_sublevel = 1
     gcompris.bar_set(gcompris.BAR_LEVEL)
     gcompris.bar_set_level(self.gcomprisBoard)
 
@@ -81,10 +81,10 @@ class Gcompris_rhymes:
 
     self.title=goocanvas.Text(
       parent = self.rootitem,
-      x=400.0,
-      y=50.0,
-      text=_("Rhymes activity"),
-      fill_color="black",
+      x = 400.0,
+      y = 50.0,
+      text = _("Rhymes activity"),
+      fill_color = "black",
       anchor = gtk.ANCHOR_CENTER,
       alignment = pango.ALIGN_CENTER
       )
@@ -97,45 +97,51 @@ class Gcompris_rhymes:
  #fills the rhyme title
     
     self.rhymetitle=goocanvas.Text(
-        parent=self.rootitem,
-        x=400,
-        y=100,
-        text=self.rhymelist[calledrhyme]['title'],
-        fill_color='black',
-        anchor=gtk.ANCHOR_CENTER,
-        alignment=pango.ALIGN_CENTER
+        parent = self.rootitem,
+        x = 400,
+        y = 100,
+        text = self.rhymelist[calledrhyme]['title'],
+        fill_color = 'black',
+        anchor = gtk.ANCHOR_CENTER,
+        alignment = pango.ALIGN_CENTER
         )
 
  #fills with the text
 
     self.rhymetext = Textbox()
    
-    self.rhymetext.sw=gtk.ScrolledWindow()
+#Create a scrolled window and a text buffer, text view inside it
+    self.rhymetext.sw = gtk.ScrolledWindow()
     self.rhymetext.sw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_ALWAYS)
     self.rhymetext.sw.set_shadow_type(gtk.SHADOW_ETCHED_OUT)
     
-    w=250.0
-    h=450.0
-    x_left=self.rhymelist[calledrhyme]['x']
-    x_right=self.rhymelist[calledrhyme]['x']+200
-    y=self.rhymelist[calledrhyme]['y']-100
+    w = 300.0
+    h = 450.0
+    x_left = self.rhymelist[calledrhyme]['x']
+    x_right = self.rhymelist[calledrhyme]['x']+200
+    y = self.rhymelist[calledrhyme]['y']-100
     
-    self.rhymetext.tb=gtk.TextBuffer()
-    self.rhymetext.tv=gtk.TextView(self.rhymetext.tb)
-    self.rhymetext.tv.editable=False
-    self.rhymetext.sw.add(self.rhymetext.tv)
-     
-    self.rhymetext.tb.set_text(self.rhymelist[calledrhyme]['text'])
-    
-    self.rhymetext.tv.set_wrap_mode(gtk.WRAP_CHAR)
-    self.rhymewidget=goocanvas.Widget(
+    self.rhymetext.tb = gtk.TextBuffer()
+    self.rhymetext.tv = gtk.TextView(self.rhymetext.tb)
+    self.rhymetext.tv.set_editable(False)
+    self.rhymetext.tv.set_cursor_visible(False)
+    self.rhymetext.tv.set_justification(gtk.JUSTIFY_CENTER)
+    self.rhymetext.tv.modify_font(pango.FontDescription('sans bold 17'))
+    self.rhymetext.tv.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse('grey'))
+
+    self.rhymetext.sw.add(self.rhymetext.tv)     
+    self.rhymetext.tb.set_text(self.rhymelist[calledrhyme]['text']) 
+    self.rhymetext.tv.set_wrap_mode(gtk.WRAP_WORD)
+
+#Create a goocanvas widget to hold the scrolled window
+    self.rhymewidget = goocanvas.Widget(
        parent = self.rootitem,
        widget = self.rhymetext.sw,
-       x=x_left,
-       y=y,
-       width=w,
-       height=h-200,
-       anchor=gtk.ANCHOR_N)
+       x = x_left,
+       y = y,
+       width = w,
+       height = h-200,
+       anchor = gtk.ANCHOR_N)
     self.rhymetext.tv.show()
     self.rhymetext.sw.show()
 
@@ -143,22 +149,22 @@ class Gcompris_rhymes:
  #fills the rhymeimage
     self.rhymeimage=goocanvas.Image(
         parent = self.rootitem,
-        x=100,
-        y=140,
-        width=280,
-        height=280,
-        pixbuf=gcompris.utils.load_pixmap(self.rhymelist[calledrhyme]['image'])
+        x = 100,
+        y = 140,
+        width = 280,
+        height = 280,
+        pixbuf = gcompris.utils.load_pixmap(self.rhymelist[calledrhyme]['image'])
         )
  #draw the play Icon
-    self.rhymeplayicon=goocanvas.Image(
+    self.rhymeplayicon = goocanvas.Image(
         parent = self.rootitem,
-        x=450,
-        y=400,
-        width=60,
-        height=60,
-        pixbuf=gcompris.utils.load_pixmap("playbutton.svg")
+        x = 450,
+        y = 400,
+        width = 60,
+        height = 60,
+        pixbuf = gcompris.utils.load_pixmap("playbutton.svg")
         )
-    self.rhymeplayicon.connect("button-press-event",self.playrhyme,calledrhyme)
+    self.rhymeplayicon.connect("button-press-event", self.playrhyme,calledrhyme)
 
 
   def playrhyme(self,item,item1,event, calledrhyme):
@@ -197,12 +203,18 @@ class Gcompris_rhymes:
 
   def pause(self, pause):
     print("rhymes pause. %i" % pause)
+    self.board_paused = pause
 
+#hides the textbox when paused
+    if(pause):
+      self.rhymetext.sw.hide()
+    else:
+      self.rhymetext.sw.show()
 
   def set_level(self, level):
     print("rhymes set level. %i" % level)
-    self.gcomprisBoard.level=level;
-    self.gcomprisBoard.sublevel=1;
+    self.gcomprisBoard.level = level;
+    self.gcomprisBoard.sublevel = 1;
 
     # Set the level in the control bar
     gcompris.bar_set_level(self.gcomprisBoard);
