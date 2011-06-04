@@ -24,6 +24,7 @@ import gcompris.skin
 import goocanvas
 import pango
 import gcompris.sound
+import ConfigParser
 
 from gcompris import gcompris_gettext as _
 
@@ -49,6 +50,27 @@ class Gcompris_rhymes:
     # Needed to get key_press
     gcomprisBoard.disable_im_context = True
 
+  def read_data(self):
+    '''Load the activity data'''
+    config = ConfigParser.RawConfigParser()
+    p = gcompris.get_properties()
+    filename = gcompris.DATA_DIR + '/' + self.gcomprisBoard.name + '/activity.desktop'
+    try:
+      gotit = config.read(filename)
+      if not gotit:
+         gcompris.utils.dialog(_("Cannot find the file '{filename}'").format(filename=filename),None)
+         return False
+
+    except ConfigParser.Error as error:
+      gcompris.utils.dialog(_("Failed to parse data set '{filename}'"
+                              " with error:\n{error}").\
+                              format(filename=filename, error=error),
+                            None)
+      return False
+  
+    self.dataset = config
+    return True
+
   def start(self):
     print "rhymes start"
 
@@ -72,12 +94,9 @@ class Gcompris_rhymes:
     self.gcomprisBoard.number_of_sublevel = 1
     gcompris.bar_set(gcompris.BAR_LEVEL)
     gcompris.bar_set_level(self.gcomprisBoard)
-
-    self.rhymelist = [
-	{'title':"Humpty Dumpty", 'text':"Humpty Dumpty sat on a wall,\nHumpty Dumpty had a great fall,\nAll the king's horses and all the king's men\n Couldn't put Humpty together again.",'image':"humptydumpty.svg",'icon':"humptydumptyicon.jpg",'audio':"",'x':600,'y':250}, 
-
-{'title':"Twinkle Twinkle little star", 'text':"  Twinkle, twinkle, little star,\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.\nWhen the blazing sun is gone,\nWhen he nothing shines upon,\nThen you show your little light,\nTwinkle, twinkle, all the night.\n\nThen the traveller in the dark,\nThanks you for your tiny spark,\nHe could not see which way to go,\n If you did not twinkle so.\n\nIn the dark blue sky you keep,\nAnd often through my curtains peep,\nFor you never shut your eye,\nTill the sun is in the sky.\n\nAs your bright and tiny spark,\nLights the traveller in the dark.\nThough I know not what you are,\nTwinkle, twinkle, little star.\n\nTwinkle, twinkle, little star.\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.\n\nTwinkle, twinkle, little star.\nHow I wonder what you are.\nHow I wonder what you are.",'image':"twinkletwinkle.jpg",'icon':"twinkleicon.svg",'audio':"twinkle.ogg",'x':600,'y':250}
-]
+    self.read_data()
+    print self.dataset.sections()
+    print self.dataset.get("1","title")
 
     self.title=goocanvas.Text(
       parent = self.rootitem,
@@ -89,7 +108,7 @@ class Gcompris_rhymes:
       alignment = pango.ALIGN_CENTER
       )
 
-    self.showrhyme(0)
+    self.showrhyme(1)
 
 #prints each rhyme according to the calling parameter.
   def showrhyme(self,calledrhyme):
@@ -100,7 +119,7 @@ class Gcompris_rhymes:
         parent = self.rootitem,
         x = 400,
         y = 100,
-        text = self.rhymelist[calledrhyme]['title'],
+        text = str(self.dataset.get(str(calledrhyme),"title")),
         fill_color = 'black',
         anchor = gtk.ANCHOR_CENTER,
         alignment = pango.ALIGN_CENTER
@@ -117,9 +136,9 @@ class Gcompris_rhymes:
     
     w = 300.0
     h = 450.0
-    x_left = self.rhymelist[calledrhyme]['x']
-    x_right = self.rhymelist[calledrhyme]['x']+200
-    y = self.rhymelist[calledrhyme]['y']-100
+    x_left = int(self.dataset.get(str(calledrhyme),"x"))
+    x_right = int(self.dataset.get(str(calledrhyme),"x"))+200
+    y = int(self.dataset.get(str(calledrhyme),"y"))-100
     
     self.rhymetext.tb = gtk.TextBuffer()
     self.rhymetext.tv = gtk.TextView(self.rhymetext.tb)
@@ -130,7 +149,7 @@ class Gcompris_rhymes:
     self.rhymetext.tv.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse('grey'))
 
     self.rhymetext.sw.add(self.rhymetext.tv)     
-    self.rhymetext.tb.set_text(self.rhymelist[calledrhyme]['text']) 
+    self.rhymetext.tb.set_text(str(self.dataset.get(str(calledrhyme),"text"))) 
     self.rhymetext.tv.set_wrap_mode(gtk.WRAP_WORD)
 
 #Create a goocanvas widget to hold the scrolled window
@@ -153,7 +172,7 @@ class Gcompris_rhymes:
         y = 140,
         width = 280,
         height = 280,
-        pixbuf = gcompris.utils.load_pixmap(self.rhymelist[calledrhyme]['image'])
+        pixbuf = gcompris.utils.load_pixmap(self.dataset.get(str(calledrhyme),"image"))
         )
  #draw the play Icon
     self.rhymeplayicon = goocanvas.Image(
@@ -162,7 +181,7 @@ class Gcompris_rhymes:
         y = 400,
         width = 60,
         height = 60,
-        pixbuf = gcompris.utils.load_pixmap("playbutton.svg")
+        pixbuf = gcompris.utils.load_pixmap("rhymes/playbutton.svg")
         )
     self.rhymeplayicon.connect("button-press-event", self.playrhyme,calledrhyme)
 
@@ -219,5 +238,5 @@ class Gcompris_rhymes:
     # Set the level in the control bar
     gcompris.bar_set_level(self.gcomprisBoard);
     self.cleanup_rhyme()
-    self.showrhyme(self.gcomprisBoard.level-1)
+    self.showrhyme(self.gcomprisBoard.level)
 
