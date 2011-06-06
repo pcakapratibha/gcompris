@@ -149,7 +149,9 @@ class Gcompris_rhymes:
     self.rhymetext.tv.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse('grey'))
 
     self.rhymetext.sw.add(self.rhymetext.tv)     
-    self.rhymetext.tb.set_text(str(self.dataset.get(str(calledrhyme),"text"))) 
+    text = self.dataset.get(str(calledrhyme),"text")
+    text = text.replace("\\n", "\n")
+    self.rhymetext.tb.set_text(text) 
     self.rhymetext.tv.set_wrap_mode(gtk.WRAP_WORD)
 
 #Create a goocanvas widget to hold the scrolled window
