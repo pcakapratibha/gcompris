@@ -87,13 +87,14 @@ class Gcompris_rhymes:
                                     self.gcomprisBoard.canvas.get_root_item())
     #rhyme list having title,text,image path, icon path, audio path, and co
     #ordinates for each.
-
+    
     self.gcomprisBoard.level = 1
     self.gcomprisBoard.maxlevel = 2
     self.gcomprisBoard.sublevel = 1
     self.gcomprisBoard.number_of_sublevel = 1
     gcompris.bar_set(gcompris.BAR_LEVEL)
     gcompris.bar_set_level(self.gcomprisBoard)
+    gcompris.sound.policy_set(gcompris.sound.PLAY_AND_INTERRUPT)
     self.read_data()
     print self.dataset.sections()
     print self.dataset.get("1","title")
@@ -186,11 +187,10 @@ class Gcompris_rhymes:
         pixbuf = gcompris.utils.load_pixmap("rhymes/playbutton.svg")
         )
     self.rhymeplayicon.connect("button-press-event", self.playrhyme,calledrhyme)
-
+    gcompris.utils.item_focus_init(self.rhymeplayicon,None)
 
   def playrhyme(self,item,item1,event, calledrhyme):
-    gcompris.sound.reopen()
-    gcompris.sound.play_ogg(self.rhymelist[calledrhyme]['audio'])
+    gcompris.sound.play_ogg(self.dataset.get(str(calledrhyme),"audio"))
     
   def end(self):
     print "rhymes end"
