@@ -1,16 +1,28 @@
 [1]
 title=Humpty Dumpty
+title_x=400
+title_y=50
 text='Humpty Dumpty sat on a wall\nHumpty Dumpty had a great fall,\nAll the king's horses and all the king's men\nCouldn't put Humpty together again.'
 image=rhymes/humptydumpty.svg
+image_x=100
+image_y=140
 icon=rhymes/humptydumptyicon.jpg
-x=600
-y=250
+icon_x=450
+icon_y=400
+text_x=600
+text_y=250
 
 [2]
 title=Twinkle Twinkle little star
+title_x=400
+title_y=50
 text=Twinkle, twinkle, little star\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.\nWhen the blazing sun is gone,\nWhen he nothing shines upon,\nThen you show your little light,\nTwinkle, twinkle, all the night.\n\nThen the traveller in the dark,\nThanks you for your tiny spark,\nHe could not see which way to go,\n If you did not twinkle so.\n\nIn the dark blue sky you keep,\nAnd often through my curtains peep,\nFor you never shut your eye,\nTill the sun is in the sky.\n\nAs your bright and tiny spark,\nLights the traveller in the dark.\nThough I know not what you are,\nTwinkle, twinkle, little star.\n\nTwinkle, twinkle, little star.\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.\n\nTwinkle, twinkle, little star.\nHow I wonder what you are.\nHow I wonder what you are.
 image=rhymes/twinkletwinkle.jpg
+image_x=100
+image_y=140
 icon=rhymes/twinkleicon.svg
+icon_x=450
+icon_y=400
 audio=rhymes/twinkle.ogg
-x=600
-y=250
+text_x=600
+text_y=250

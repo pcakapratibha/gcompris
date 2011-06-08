@@ -107,8 +107,8 @@ class Gcompris_rhymes:
     
     self.rhymetitle=goocanvas.Text(
         parent = self.rootitem,
-        x = 400,
-        y = 50,
+        x = int(self.dataset.get(str(calledrhyme),"title_x")),
+        y = int(self.dataset.get(str(calledrhyme),"title_y")),
         text = str(self.dataset.get(str(calledrhyme),"title")),
         font = 'sans bold 25',
         fill_color = 'black',
@@ -127,9 +127,9 @@ class Gcompris_rhymes:
     
     w = 300.0
     h = 475.0
-    x_left = int(self.dataset.get(str(calledrhyme),"x"))
-    x_right = int(self.dataset.get(str(calledrhyme),"x"))+200
-    y = int(self.dataset.get(str(calledrhyme),"y"))-125
+    x_left = int(self.dataset.get(str(calledrhyme),"text_x"))
+    x_right = int(self.dataset.get(str(calledrhyme),"text_x"))+200
+    y = int(self.dataset.get(str(calledrhyme),"text_y"))-125
     
     self.rhymetext.tb = gtk.TextBuffer()
     self.rhymetext.tv = gtk.TextView(self.rhymetext.tb)
@@ -161,8 +161,8 @@ class Gcompris_rhymes:
  #fills the rhymeimage
     self.rhymeimage=goocanvas.Image(
         parent = self.rootitem,
-        x = 100,
-        y = 140,
+        x = int(self.dataset.get(str(calledrhyme),"image_x")),
+        y = int(self.dataset.get(str(calledrhyme),"image_y")),
         width = 280,
         height = 280,
         pixbuf = gcompris.utils.load_pixmap(self.dataset.get(str(calledrhyme),"image"))
@@ -170,8 +170,8 @@ class Gcompris_rhymes:
  #draw the play Icon
     self.rhymeplayicon = goocanvas.Image(
         parent = self.rootitem,
-        x = 450,
-        y = 400,
+        x = int(self.dataset.get(str(calledrhyme),"icon_x")),
+        y = int(self.dataset.get(str(calledrhyme),"icon_y")),
         width = 60,
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("rhymes/playbutton.svg")
