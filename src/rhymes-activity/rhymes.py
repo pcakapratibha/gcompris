@@ -97,30 +97,20 @@ class Gcompris_rhymes:
     gcompris.sound.policy_set(gcompris.sound.PLAY_AND_INTERRUPT)
     self.read_data()
     print self.dataset.sections()
-    print self.dataset.get("1","title")
-
-    self.title=goocanvas.Text(
-      parent = self.rootitem,
-      x = 400.0,
-      y = 50.0,
-      text = _("Rhymes activity"),
-      fill_color = "black",
-      anchor = gtk.ANCHOR_CENTER,
-      alignment = pango.ALIGN_CENTER
-      )
 
     self.showrhyme(1)
 
-#prints each rhyme according to the calling parameter.
+  #prints each rhyme according to the calling parameter.
   def showrhyme(self,calledrhyme):
 
- #fills the rhyme title
+    #fills the rhyme title
     
     self.rhymetitle=goocanvas.Text(
         parent = self.rootitem,
         x = 400,
-        y = 100,
+        y = 50,
         text = str(self.dataset.get(str(calledrhyme),"title")),
+        font = 'sans bold 25',
         fill_color = 'black',
         anchor = gtk.ANCHOR_CENTER,
         alignment = pango.ALIGN_CENTER
@@ -136,10 +126,10 @@ class Gcompris_rhymes:
     self.rhymetext.sw.set_shadow_type(gtk.SHADOW_ETCHED_OUT)
     
     w = 300.0
-    h = 450.0
+    h = 475.0
     x_left = int(self.dataset.get(str(calledrhyme),"x"))
     x_right = int(self.dataset.get(str(calledrhyme),"x"))+200
-    y = int(self.dataset.get(str(calledrhyme),"y"))-100
+    y = int(self.dataset.get(str(calledrhyme),"y"))-125
     
     self.rhymetext.tb = gtk.TextBuffer()
     self.rhymetext.tv = gtk.TextView(self.rhymetext.tb)

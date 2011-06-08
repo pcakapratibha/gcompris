@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-SUBDIRS = \
+SUBDIRS = piano-activity \
 	administration-activity \
 	advanced_colors-activity \
 	algebra_by-activity \
@@ -107,6 +107,7 @@ SUBDIRS = \
 	redraw-activity \
 	redraw_symmetrical-activity \
 	reversecount-activity \
+        rhymes-activity \
 	scalesboard-activity \
 	scalesboard_weight-activity \
 	searace-activity \

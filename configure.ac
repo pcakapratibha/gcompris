@@ -548,7 +548,7 @@ AC_SUBST(CFLAGS)
 AC_SUBST(LIBS)
 
 dnl Autoconf output
-AC_OUTPUT([
+AC_OUTPUT([ src/piano-activity/Makefile
 Makefile.mingw
 Makefile
 autopackage/Makefile
@@ -830,6 +830,9 @@ src/redraw_symmetrical-activity/resources/redraw_symmetrical/Makefile
 src/reversecount-activity/Makefile
 src/reversecount-activity/resources/Makefile
 src/reversecount-activity/resources/reversecount/Makefile
+src/rhymes-activity/Makefile
+src/rhymes-activity/resources/Makefile
+src/rhymes-activity/resources/rhymes/Makefile
 src/scalesboard-activity/Makefile
 src/scalesboard-activity/resources/Makefile
 src/scalesboard-activity/resources/scale/Makefile
