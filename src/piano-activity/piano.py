@@ -120,17 +120,34 @@ class Gcompris_piano:
     print("piano config.")
 
   def play_note(self, note):
-    gcompris.sound.play_ogg(self.dataset.get("common",note))
+
+    fname = self.dataset.get("common", note)
+    
+    svghandle = gcompris.utils.load_svg("piano/pianobg2.svg")
+    self.pianobg = goocanvas.Svg(
+                                      parent = self.rootitem,
+                                      svg_handle = svghandle,
+                                      svg_id = '#'+fname[fname.find('/')+1:fname.find('.')] ,
+                                      visibility = goocanvas.ITEM_VISIBLE
+                                     # x = 275,
+                                     # y = 200,
+                                     # width = 250,
+                                     # height = 150
+                                     )
+    self.pianobg.translate(275, 200)
     print ("playing %s" % (note))
+    gcompris.sound.play_ogg(fname)
 
   def key_press(self, keyval, commit_str, preedit_str):
+ 
     utf8char = gtk.gdk.keyval_to_unicode(keyval)
     allowed = ['a','s','d','f','g','h','j','k','w','e','t','y','u']
     strn = u'%c' % utf8char
     #Play the corresponding note only if present in the allowed array
     if strn in allowed:
       self.play_note(strn)
-
+#    self.pianobg.remove()
+#    self.pianobg.props.visibility = goocanvas.ITEM_INVISIBLE
     print("Gcompris_piano key press keyval=%i %s" % (keyval, strn))
 
   def pause(self, pause):
