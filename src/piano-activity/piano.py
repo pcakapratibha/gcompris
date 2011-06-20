@@ -42,7 +42,8 @@ class Gcompris_piano:
     gcompris.sound.policy_set(gcompris.sound.PLAY_AND_INTERRUPT)
     # Needed to get key_press
     gcomprisBoard.disable_im_context = True
-
+    
+    self.save = False
   #Open the config file
   def read_data(self):
     '''Load the activity data'''
@@ -84,10 +85,10 @@ class Gcompris_piano:
     self.read_data()
     goocanvas.Text(
       parent = self.rootitem,
-      x=400.0,
-      y=100.0,
-      text=_("Piano"),
-      fill_color="black",
+      x = 400.0,
+      y = 100.0,
+      text = _("Piano"),
+      fill_color = "black",
       anchor = gtk.ANCHOR_CENTER,
       alignment = pango.ALIGN_CENTER
       )
@@ -100,10 +101,51 @@ class Gcompris_piano:
         height = 150,
         pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
         )
+    self.notetext = goocanvas.Text(
+         parent = self.rootitem,
+         x = 400.0,
+         y = 170.0,
+         text = "",
+         font = 'sans bold 20',
+         fill_color = "black",
+         anchor = gtk.ANCHOR_CENTER,
+         alignment = pango.ALIGN_CENTER
+         )
+    self.saveicon = goocanvas.Image(
+        parent = self.rootitem,
+        x = 650,
+        y = 200,
+        width = 60,
+        height = 60,
+        pixbuf = gcompris.utils.load_pixmap("piano/save.svg")
+        )
+    gcompris.utils.item_focus_init(self.saveicon,None)
+    
+    self.saveicon.connect("button-press-event", self.savenotes)
 
+    svghandle = gcompris.utils.load_svg("piano/pianobg2.svg")
+
+    self.pianobg = goocanvas.Svg(
+                                    parent = self.rootitem,
+                                    svg_handle = svghandle,
+                                    svg_id = '' ,
+                                    visibility = goocanvas.ITEM_VISIBLE
+                                     # x = 275,
+                                     # y = 200,
+                                     # width = 250,
+                                     # height = 150
+                                 )
+    self.pianobg.translate(275, 200)
+
+
+  def savenotes(self, item, event, attr):
+    self.save = True
+    notesfile = open("savenotes.txt","w")
 
   def end(self):
     print "piano end"
+ #   if self.save is True:
+#       notesfile.close()
     # Remove the root item removes all the others inside it
     self.rootitem.remove()
 
@@ -123,18 +165,15 @@ class Gcompris_piano:
 
     fname = self.dataset.get("common", note)
     
-    svghandle = gcompris.utils.load_svg("piano/pianobg2.svg")
-    self.pianobg = goocanvas.Svg(
-                                      parent = self.rootitem,
-                                      svg_handle = svghandle,
-                                      svg_id = '#'+fname[fname.find('/')+1:fname.find('.')] ,
-                                      visibility = goocanvas.ITEM_VISIBLE
-                                     # x = 275,
-                                     # y = 200,
-                                     # width = 250,
-                                     # height = 150
-                                     )
-    self.pianobg.translate(275, 200)
+    notename = fname[fname.find('/')+1:fname.find('.')]
+    self.notetext.props.text = notename
+    if self.save is True:
+      notesfile.write(notename + " ")
+
+    print '#'+notename
+    self.pianobg.props.visibility = goocanvas.ITEM_INVISIBLE
+    self.pianobg.props.svg_id = '#' + notename
+    self.pianobg.props.visibility = goocanvas.ITEM_VISIBLE
     print ("playing %s" % (note))
     gcompris.sound.play_ogg(fname)
 
@@ -147,7 +186,7 @@ class Gcompris_piano:
     if strn in allowed:
       self.play_note(strn)
 #    self.pianobg.remove()
-#    self.pianobg.props.visibility = goocanvas.ITEM_INVISIBLE
+ #   self.pianobg.props.visibility = goocanvas.ITEM_INVISIBLE
     print("Gcompris_piano key press keyval=%i %s" % (keyval, strn))
 
   def pause(self, pause):
