@@ -120,6 +120,18 @@ class Gcompris_piano:
         pixbuf = gcompris.utils.load_pixmap("piano/save.svg")
         )
     gcompris.utils.item_focus_init(self.saveicon,None)
+ 
+    self.savestatus = goocanvas.Text(
+       parent = self.rootitem,
+       x = 670.0,
+       y = 280.0,
+       text = "",
+       font = 'sans bold 15',
+       fill_color = "black",
+       anchor = gtk.ANCHOR_CENTER,
+       alignment = pango.ALIGN_CENTER
+       )
+
     
     self.saveicon.connect("button-press-event", self.savenotes)
 
@@ -140,7 +152,11 @@ class Gcompris_piano:
 
   def savenotes(self, item, event, attr):
     self.save = True
-    notesfile = open("savenotes.txt","w")
+    filename = gcompris.DATA_DIR + '/' + self.gcomprisBoard.name + '/savenotes.txt'
+
+    self.notesfile = open(filename, 'w')
+    self.savestatus.props.text = "Saving.."
+   
 
   def end(self):
     print "piano end"
@@ -167,8 +183,9 @@ class Gcompris_piano:
     
     notename = fname[fname.find('/')+1:fname.find('.')]
     self.notetext.props.text = notename
-    if self.save is True:
-      notesfile.write(notename + " ")
+    if self.save == True:
+   
+      self.notesfile.write(notename + " ")
 
     print '#'+notename
     self.pianobg.props.visibility = goocanvas.ITEM_INVISIBLE
@@ -178,7 +195,7 @@ class Gcompris_piano:
     gcompris.sound.play_ogg(fname)
 
   def key_press(self, keyval, commit_str, preedit_str):
- 
+
     utf8char = gtk.gdk.keyval_to_unicode(keyval)
     allowed = ['a','s','d','f','g','h','j','k','w','e','t','y','u']
     strn = u'%c' % utf8char
