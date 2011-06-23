@@ -82,6 +82,14 @@ class Gcompris_piano:
     self.rootitem = goocanvas.Group(parent =
                                     self.gcomprisBoard.canvas.get_root_item())
 
+    self.gcomprisBoard.level = 1
+    self.gcomprisBoard.maxlevel = 2
+    self.gcomprisBoard.sublevel = 1
+    self.gcomprisBoard.number_of_sublevel = 1
+    gcompris.bar_set(gcompris.BAR_LEVEL)
+    gcompris.bar_set_level(self.gcomprisBoard)
+
+
     self.read_data()
     goocanvas.Text(
       parent = self.rootitem,
@@ -93,7 +101,7 @@ class Gcompris_piano:
       alignment = pango.ALIGN_CENTER
       )
     
-    self.pianopic = goocanvas.Image(
+    self.pianopic1 = goocanvas.Image(
         parent = self.rootitem,
         x = 275,
         y = 200,
@@ -101,6 +109,18 @@ class Gcompris_piano:
         height = 150,
         pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
         )
+    
+    self.labelflag = 0
+    labelhandle = gcompris.utils.load_svg("piano/pianolabel1.svg")
+
+    self.pianolabel = goocanvas.Svg(
+                    parent = self.rootitem,
+                    svg_handle = labelhandle,
+                    visibility = goocanvas.ITEM_INVISIBLE
+                                )
+    self.pianolabel.translate(275, 200)
+
+
     self.notetext = goocanvas.Text(
          parent = self.rootitem,
          x = 400.0,
@@ -119,8 +139,18 @@ class Gcompris_piano:
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("piano/save.svg")
         )
-    gcompris.utils.item_focus_init(self.saveicon,None)
- 
+    gcompris.utils.item_focus_init(self.saveicon, None)
+  
+    self.labelicon = goocanvas.Image(
+        parent = self.rootitem,
+        x = 650,
+        y = 140,
+        width = 60,
+        height = 60,
+        pixbuf = gcompris.utils.load_pixmap("piano/label.svg")
+        )
+    gcompris.utils.item_focus_init(self.labelicon, None)
+    
     self.savestatus = goocanvas.Text(
        parent = self.rootitem,
        x = 670.0,
@@ -134,12 +164,15 @@ class Gcompris_piano:
 
     
     self.saveicon.connect("button-press-event", self.savenotes)
+    self.labelicon.connect("button-press-event",self.showlabel)
 
-    svghandle = gcompris.utils.load_svg("piano/pianobg2.svg")
+    svghandle1 = gcompris.utils.load_svg("piano/pianobg2.svg")
+    svghandle2 = gcompris.utils.load_svg("piano/pianobg3.svg")
 
-    self.pianobg = goocanvas.Svg(
+
+    self.pianobg1 = goocanvas.Svg(
                                     parent = self.rootitem,
-                                    svg_handle = svghandle,
+                                    svg_handle = svghandle1,
                                     svg_id = '' ,
                                     visibility = goocanvas.ITEM_VISIBLE
                                      # x = 275,
@@ -147,21 +180,36 @@ class Gcompris_piano:
                                      # width = 250,
                                      # height = 150
                                  )
-    self.pianobg.translate(275, 200)
+    self.pianobg1.translate(275, 200)
+
+    self.pianobg2 = goocanvas.Svg(
+                    parent = self.rootitem,
+                    svg_handle = svghandle2,
+                    svg_id = '' ,
+                    visibility = goocanvas.ITEM_INVISIBLE
+                                )
 
 
+  def showlabel (self, item, event, attr):
+    if self.labelflag == 0:
+      self.pianolabel.props.visibility = goocanvas.ITEM_VISIBLE
+      self.labelflag = 1
+    elif self.labelflag == 1:
+      self.pianolabel.props.visibility = goocanvas.ITEM_INVISIBLE
+      self.labelflag = 0
+     
   def savenotes(self, item, event, attr):
     self.save = True
-    filename = gcompris.DATA_DIR + '/' + self.gcomprisBoard.name + '/savenotes.txt'
+    filename = '/home/karthik/My GCompris/piano'+'/savenotes.txt'
 
     self.notesfile = open(filename, 'w')
     self.savestatus.props.text = "Saving.."
-   
+    self.pianolabel.props.visibility = goocanvas.ITEM_VISIBLE 
 
   def end(self):
     print "piano end"
- #   if self.save is True:
-#       notesfile.close()
+    if self.save is True:
+       self.notesfile.close()
     # Remove the root item removes all the others inside it
     self.rootitem.remove()
 
@@ -177,34 +225,41 @@ class Gcompris_piano:
   def config(self):
     print("piano config.")
 
-  def play_note(self, note):
+  def play_note(self, note, pianobg):
 
     fname = self.dataset.get("common", note)
     
-    notename = fname[fname.find('/')+1:fname.find('.')]
+    notename = fname[fname.find('/') + 1 : fname.find('.')]
     self.notetext.props.text = notename
     if self.save == True:
    
       self.notesfile.write(notename + " ")
 
     print '#'+notename
-    self.pianobg.props.visibility = goocanvas.ITEM_INVISIBLE
-    self.pianobg.props.svg_id = '#' + notename
-    self.pianobg.props.visibility = goocanvas.ITEM_VISIBLE
+    self.pianobg1.props.visibility = goocanvas.ITEM_INVISIBLE
+    self.pianobg2.props.visibility = goocanvas.ITEM_INVISIBLE
+    pianobg.props.svg_id = '#' + notename
+    pianobg.props.visibility = goocanvas.ITEM_VISIBLE
     print ("playing %s" % (note))
     gcompris.sound.play_ogg(fname)
 
   def key_press(self, keyval, commit_str, preedit_str):
 
     utf8char = gtk.gdk.keyval_to_unicode(keyval)
-    allowed = ['a','s','d','f','g','h','j','k','w','e','t','y','u']
+    allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
+    allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
     strn = u'%c' % utf8char
     #Play the corresponding note only if present in the allowed array
-    if strn in allowed:
-      self.play_note(strn)
-#    self.pianobg.remove()
- #   self.pianobg.props.visibility = goocanvas.ITEM_INVISIBLE
+    if strn in allowed1:
+      self.play_note(strn, self.pianobg1)
+    elif strn in allowed2 and self.gcomprisBoard.level == 2:
+      self.play_note(strn, self.pianobg2)
+
     print("Gcompris_piano key press keyval=%i %s" % (keyval, strn))
+    # Return  True  if you did process a key
+    # Return  False if you did not processed a key
+    #        (gtk need to send it to next widget)
+    return True
 
   def pause(self, pause):
     print("piano pause. %i" % pause)
@@ -212,4 +267,23 @@ class Gcompris_piano:
 
   def set_level(self, level):
     print("piano set level. %i" % level)
+    self.gcomprisBoard.level = level
+    gcompris.bar_set_level(self.gcomprisBoard);
+    self.levelup(self.gcomprisBoard.level)
 
+  def levelup(self, level):
+    if level == 2:
+     self.pianopic2 = goocanvas.Image(
+        parent = self.rootitem,
+        x = 275,
+        y = 200,
+        width = 250,
+        height = 150,
+        pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
+        )
+     
+
+     self.pianopic1.translate(-150, 0)
+     self.pianopic2.translate(+100, 0)
+     self.pianobg1.translate(-150, 0)
+     self.pianobg2.translate(375,200)
