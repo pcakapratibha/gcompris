@@ -21,6 +21,7 @@ import gtk.gdk
 import gcompris
 import gcompris.utils
 import gcompris.skin
+import gcompris.bonus
 import gcompris.sound
 import goocanvas
 import ConfigParser
@@ -83,11 +84,14 @@ class Gcompris_piano:
                                     self.gcomprisBoard.canvas.get_root_item())
 
     self.gcomprisBoard.level = 1
-    self.gcomprisBoard.maxlevel = 2
+    self.gcomprisBoard.maxlevel = 3
     self.gcomprisBoard.sublevel = 1
     self.gcomprisBoard.number_of_sublevel = 1
     gcompris.bar_set(gcompris.BAR_LEVEL)
     gcompris.bar_set_level(self.gcomprisBoard)
+
+    self.cmajor = ['c2', 'd2', 'e2', 'f2', 'g2', 'a2', 'b2', 'c3','c3','b2', 'a2', 'g2', 'f2', 'e2', 'd2', 'c2']
+    self.dmajor = ['e2', 'fh2' , 'g2', 'a2', 'b2', 'ch3', 'd3', 'd3', 'ch3','b2','a2','g2','fh2','e2']
 
 
     self.read_data()
@@ -109,7 +113,27 @@ class Gcompris_piano:
         height = 150,
         pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
         )
-    
+    self.pianopic2 = goocanvas.Image(
+        parent = self.rootitem,
+        x = 375,
+        y = 200,
+        width = 250,
+        height = 150,
+        visibility = goocanvas.ITEM_INVISIBLE,
+        pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
+        )
+   #the notes displayed in order to be typed properly..
+    self.notestext = goocanvas.Text(
+        parent = self.rootitem,
+        x = 400,
+        y = 150,
+        text = '',
+        fill_color = "black",
+        anchor = gtk.ANCHOR_CENTER,
+        alignment = pango.ALIGN_CENTER
+      )
+
+
     self.labelflag = 0
     labelhandle = gcompris.utils.load_svg("piano/pianolabel1.svg")
 
@@ -188,7 +212,7 @@ class Gcompris_piano:
                     svg_id = '' ,
                     visibility = goocanvas.ITEM_INVISIBLE
                                 )
-
+    self.pianobg2.translate(375, 200)
 
   def showlabel (self, item, event, attr):
     if self.labelflag == 0:
@@ -242,6 +266,19 @@ class Gcompris_piano:
     pianobg.props.visibility = goocanvas.ITEM_VISIBLE
     print ("playing %s" % (note))
     gcompris.sound.play_ogg(fname)
+    if self.gcomprisBoard.level == 2:
+      self.noteno += 1
+      self.dochecknotes(notename)
+      if self.noteno == 15:
+          gcompris.bonus.display(gcompris.bonus.WIN,gcompris.bonus.FLOWER)
+          self.noteno = 0         
+    elif self.gcomprisBoard.level == 3:
+      self.noteno += 1
+      self.dochecknotes(notename)
+      if self.noteno == 15:
+          gcompris.bonus.display(gcompris.bonus.WIN,gcompris.bonus.FLOWER)
+          self.noteno = 0
+
 
   def key_press(self, keyval, commit_str, preedit_str):
 
@@ -259,31 +296,51 @@ class Gcompris_piano:
     # Return  True  if you did process a key
     # Return  False if you did not processed a key
     #        (gtk need to send it to next widget)
+ 
+
     return True
 
   def pause(self, pause):
     print("piano pause. %i" % pause)
 
+  
+  def dochecknotes(self, notename):
+  
+    if self.gcomprisBoard.level == 2:
+      if self.cmajor [self.noteno] == notename:
+        print self.noteno
+        return True
+      else:
+        self.noteno = 0
+    elif self.gcomprisBoard.level == 3:
+      if self.dmajor [self.noteno] == notename:
+        print self.noteno
+        return True
+      else:
+        self.noteno = 0
 
   def set_level(self, level):
     print("piano set level. %i" % level)
     self.gcomprisBoard.level = level
     gcompris.bar_set_level(self.gcomprisBoard);
-    self.levelup(self.gcomprisBoard.level)
+    if level == 1 : 
+       self.notestext.props.text = 'Freeplay!'
+    elif level == 2 : 
+      
+       self.notestext.props.text = 'C D E F G A B C C B A G F E D C'
+    elif level == 3 :
+       self.setpiano(2)
+       self.notestext.props.text = 'E F# G A B C# D D C# B A G F# E'
+    self.noteno = 0
 
-  def levelup(self, level):
-    if level == 2:
-     self.pianopic2 = goocanvas.Image(
-        parent = self.rootitem,
-        x = 275,
-        y = 200,
-        width = 250,
-        height = 150,
-        pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
-        )
-     
-
+  def setpiano(self, size):
+    if size == 1:
+      self.pianopic2.props.visibility = goocanvas.ITEM_INVISIBLE
+      self.pianopic1.translate(150, 0)
+      self.pianobg1.translate(150, 0)
+      self.pianolabel.translate(150, 0)
+    elif size == 2:
+     self.pianopic2.props.visibility = goocanvas.ITEM_VISIBLE
      self.pianopic1.translate(-150, 0)
-     self.pianopic2.translate(+100, 0)
+     self.pianolabel.translate(-150, 0)
      self.pianobg1.translate(-150, 0)
-     self.pianobg2.translate(375,200)
