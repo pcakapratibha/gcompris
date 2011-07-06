@@ -84,16 +84,22 @@ class Gcompris_piano:
                                     self.gcomprisBoard.canvas.get_root_item())
 
     self.gcomprisBoard.level = 1
-    self.gcomprisBoard.maxlevel = 5
+    self.gcomprisBoard.maxlevel = 6
     self.gcomprisBoard.sublevel = 1
     self.gcomprisBoard.number_of_sublevel = 1
     gcompris.bar_set(gcompris.BAR_LEVEL)
     gcompris.bar_set_level(self.gcomprisBoard)
+    
+    self.allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
+    self.allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
+   
+    self.allowed = self.allowed1
 
     self.cmajor = ['c2', 'd2', 'e2', 'f2', 'g2', 'a2', 'b2', 'c3','c3','b2', 'a2', 'g2', 'f2', 'e2', 'd2', 'c2']
     self.dmajor = ['e2', 'fh2' , 'g2', 'a2', 'b2', 'ch3', 'd3', 'e3', 'e3', 'd3', 'ch3','b2','a2','g2','fh2','e2']
     self.mohanam = ['c2', 'd2', 'e2', 'g2', 'a2', 'c3', 'c3', 'a2', 'g2', 'e2', 'd2', 'c2']
-    self.bday = ['g2', 'g2', 'a2', 'g2', 'c3', 'b2', 'g2', 'g2', 'a2', 'g2', 'd3','c3']
+    self.bday = ['g2', 'g2', 'a2', 'g2', 'c3', 'b2', 'g2', 'g2', 'a2', 'g2', 'd3','c3', 'g2','g2','g3','e3','c3','b2','a2','f3','f3','e3','c3','d3','c3']
+    self.twinkle = ['c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2','d2', 'd2', 'c2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'd2', 'c2']
     self.noteslength = 15
     self.pianosize = 1    
 
@@ -101,7 +107,7 @@ class Gcompris_piano:
     self.titletext = goocanvas.Text(
       parent = self.rootitem,
       x = 400.0,
-      y = 100.0,
+      y = 95.0,
       text = _("Piano"),
       font = 'sans bold 20',
       fill_color = "black",
@@ -130,7 +136,7 @@ class Gcompris_piano:
     self.notestext = goocanvas.Text(
         parent = self.rootitem,
         x = 400,
-        y = 150,
+        y = 145,
         text = '',
         fill_color = "black",
         anchor = gtk.ANCHOR_CENTER,
@@ -148,6 +154,15 @@ class Gcompris_piano:
                                 )
     self.pianolabel.translate(275, 200)
 
+    #self.pianoblackkeys = goocanvas.Text(
+    #    parent = self.rootitem,
+    #    x = 400,
+    #    y = 190,
+    #    text = '      2      3          5      6      7     ',
+    #    fill_color = 'black',
+    #    anchor = gtk.ANCHOR_CENTER,
+    #    alignment = pango.ALIGN_CENTER
+    #    )
 
     self.notetext = goocanvas.Text(
          parent = self.rootitem,
@@ -270,30 +285,22 @@ class Gcompris_piano:
     pianobg.props.visibility = goocanvas.ITEM_VISIBLE
     print ("playing %s" % (note))
     gcompris.sound.play_ogg(fname)
-    if self.gcomprisBoard.level == 2:
+    if self.gcomprisBoard.level >= 2:
       self.noteno += 1
       self.dochecknotes(notename)
       if self.noteno == self.noteslength:
           gcompris.bonus.display(gcompris.bonus.WIN,gcompris.bonus.FLOWER)
           self.noteno = 0         
-    elif self.gcomprisBoard.level == 3:
-      self.noteno += 1
-      self.dochecknotes(notename)
-      if self.noteno == self.noteslength:
-          gcompris.bonus.display(gcompris.bonus.WIN,gcompris.bonus.FLOWER)
-          self.noteno = 0
 
 
   def key_press(self, keyval, commit_str, preedit_str):
 
     utf8char = gtk.gdk.keyval_to_unicode(keyval)
-    allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
-    allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
     strn = u'%c' % utf8char
     #Play the corresponding note only if present in the allowed array
-    if strn in allowed1:
+    if strn in self.allowed1:
       self.play_note(strn, self.pianobg1)
-    elif strn in allowed2 and self.gcomprisBoard.level > 2:
+    elif strn in self.allowed and len(self.allowed)>13:
       self.play_note(strn, self.pianobg2)
 
     print("Gcompris_piano key press keyval=%i %s" % (keyval, strn))
@@ -310,23 +317,10 @@ class Gcompris_piano:
   
   def dochecknotes(self, notename):
   
-    if self.gcomprisBoard.level == 2:
-      if self.mohanam [self.noteno] == notename:
+     if self.currentsong [self.noteno] == notename:
         print self.noteno
         return True
-      else:
-        self.noteno = 0
-    elif self.gcomprisBoard.level == 3:
-      if self.cmajor [self.noteno] == notename:
-        print self.noteno
-        return True
-      else:
-        self.noteno = 0
-    elif self.gcomprisBoard.level == 4:
-      if self.dmajor [self.noteno] == notename:
-        print self.noteno
-        return True
-      else:
+     else:
         self.noteno = 0
 
   def set_level(self, level):
@@ -336,31 +330,44 @@ class Gcompris_piano:
     if level == 1 : 
        self.setpiano(1)
        self.pianosize = 1
-       self.notestext.props.text = 'Freeplay!'
+       self.titletext.props.text = 'Freeplay'
+       self.notestext.props.text = ''
     elif level == 2 :
        self.setpiano(1)
        self.pianosize = 1
        self.noteslength = 11  
+       self.currentsong = self.mohanam
        self.titletext.props.text = ' Pentatonic Scale (Mohanam)'
        self.notestext.props.text = 'C D E G A C C A G E D C'
     elif level == 3 : 
        self.setpiano(1)
        self.pianosize = 1
        self.noteslength = 15
+       self.currentsong = self.cmajor
        self.titletext.props.text = ' C Major Scale ' 
        self.notestext.props.text = 'C D E F G A B C C B A G F E D C'
     elif level == 4 :
        self.noteslength = 15
        self.setpiano(2)
        self.pianosize = 2
+       self.currentsong = self.dmajor
        self.titletext.props.text = ' D Major Scale '
        self.notestext.props.text = 'E F# G A B C# D E E D C# B A G F# E'
     elif level == 5:
-       self.noteslength = 11
+       self.noteslength = 24
        self.setpiano(2)
        self.pianosize = 2
+       self.currentsong = self.bday
        self.titletext.props.text = 'Happy Birthday tune (Pentatonic Scale)'
-       self.notestext.props.text = 'G G A G C3 B G G A G D3 C3'
+       self.notestext.props.text = 'G G A G C3 B G G A G D3 C3 G G  G3 E3 C3 B A F3 F3 E3 D3 C3'
+    elif level == 6:
+       self.noteslength = 41
+       self.setpiano(1)
+       self.pianosize = 1
+       self.currentsong = self.twinkle
+       self.titletext.props.text = 'Twinkle Twinkle little star tune (Pentatonic Scale)'
+       self.notestext.props.text = 'C C G G A A G |  F F E E D D C | G G F F E E D | G G F F E E D | C C G G A A G | F F E E D D C'
+
     self.noteno = 0
 
   def setpiano(self, nextsize):
@@ -369,8 +376,10 @@ class Gcompris_piano:
       self.pianopic1.props.x = 275
       self.pianobg1.translate(150, 0)
       self.pianolabel.translate(150, 0)
+      self.allowed = self.allowed1
     elif self.pianosize == 1 and nextsize == 2:
      self.pianopic2.props.visibility = goocanvas.ITEM_VISIBLE
      self.pianopic1.props.x = 125
      self.pianolabel.translate(-150, 0)
      self.pianobg1.translate(-150, 0)
+     self.allowed = self.allowed1 + self.allowed2
