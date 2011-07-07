@@ -146,8 +146,16 @@ class Gcompris_piano:
         anchor = gtk.ANCHOR_CENTER,
         alignment = pango.ALIGN_CENTER
       )
+    
+    self.pianosizeicon = goocanvas.Image(
+        parent = self.rootitem,
+        x = 175,
+        y = 150,
+            
+        pixbuf = gcompris.utils.load_pixmap("piano/pianoicon.svg")
+        )
 
-
+   
     self.labelflag = 0
     labelhandle = gcompris.utils.load_svg("piano/pianolabel1.svg")
 
@@ -209,7 +217,8 @@ class Gcompris_piano:
         pixbuf = gcompris.utils.load_pixmap("piano/label.svg")
         )
     gcompris.utils.item_focus_init(self.labelicon, None)
-    
+    gcompris.utils.item_focus_init(self.pianosizeicon, None)
+
     self.savestatus = goocanvas.Text(
        parent = self.rootitem,
        x = 670.0,
@@ -221,7 +230,8 @@ class Gcompris_piano:
        alignment = pango.ALIGN_CENTER
        )
 
-    
+    self.pianosizeicon.connect("button-press-event", self.change_size)
+
     self.saveicon.connect("button-press-event", self.save_notes)
     self.labelicon.connect("button-press-event", self.show_label)
     self.loadicon.connect("button-press-event", self.load_file)    
@@ -249,6 +259,17 @@ class Gcompris_piano:
                     visibility = goocanvas.ITEM_INVISIBLE
                                 )
     self.pianobg2.translate(375, 200)
+
+  def change_size(self, item, event, attr):
+     if self.pianosize == 1 : 
+        self.setpiano(2)
+        self.pianosize = 2
+        pixbuf = gcompris.utils.load_pixmap("piano/pianoicon.svg")
+
+     else:
+        self.setpiano(1)
+        self.pianosize = 1
+        pixbuf = gcompris.utils.load_pixmap("piano/pianoicon2.svg")
 
   def show_label (self, item, event, attr):
     if self.labelflag == 0:
@@ -330,10 +351,40 @@ class Gcompris_piano:
 
 
   def config(self):
-    print("piano config.")
+    pass
+
+  def init_config(self):
+    default_config = { 'c2'    : 'q',
+                       'd2'    : 'w'
+                       }
+    return default_config
+
+
+  def config_start(self, profile):
+    # keep profile in mind
+    self.configuring_profile = profile
+
+    # init with default values
+    self.config_dict = self.init_config()
+
+    #get the configured values for that profile
+    self.config_dict.update(gcompris.get_conf(profile, self.gcomprisBoard))
+
+    # Init configuration window:
+    # all the configuration functions will use it
+    # all the configuration functions returns values for their key in
+    # the dict passed to the apply_callback
+    # the returned value is the main GtkVBox of the window,
+    #we can add what you want in it.
+
+    bconf = gcompris.configuration_window ( \
+      _('<b>%s</b> configuration\n for profile <b>%s</b>') % ('Login', profile.name ),
+      self.ok_callback
+      )
+
 
   def play_note(self, note, pianobg):
-
+        
     fname = self.dataset.get("common", note)
     
     notename = fname[fname.find('/') + 1 : fname.find('.')]
