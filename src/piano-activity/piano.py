@@ -90,6 +90,8 @@ class Gcompris_piano:
     gcompris.bar_set(gcompris.BAR_LEVEL)
     gcompris.bar_set_level(self.gcomprisBoard)
     
+    self.file_type = ".gcpiano"    
+    self.selector_section = "piano"
     self.allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
     self.allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
    
@@ -242,12 +244,24 @@ class Gcompris_piano:
       self.labelflag = 0
      
   def savenotes(self, item, event, attr):
-    self.save = True
-    filename = '/home/karthik/My GCompris/piano'+'/savenotes.txt'
+    if self.save == False :
+       self.save = True
+       gcompris.file_selector_save( self.gcomprisBoard, self.selector_section,
+                                    self.file_type,
+                                   general_save, self)
 
-    self.notesfile = open(filename, 'w')
-    self.savestatus.props.text = "Saving.."
-    self.pianolabel.props.visibility = goocanvas.ITEM_VISIBLE 
+    
+       self.savestatus.props.text = "Saving.."
+       self.pianolabel.props.visibility = goocanvas.ITEM_VISIBLE
+    else : 
+       if self.save is True:
+         self.notesfile.close()
+         self.savestatus.props.text = ""
+         self.save = False
+
+      
+  def piano_to_file(self, filename):
+     self.notesfile = open(filename, 'wb')
 
   def end(self):
     print "piano end"
@@ -324,9 +338,13 @@ class Gcompris_piano:
         self.noteno = 0
 
   def set_level(self, level):
+    
     print("piano set level. %i" % level)
     self.gcomprisBoard.level = level
     gcompris.bar_set_level(self.gcomprisBoard);
+    if self.save is True:
+       self.notesfile.close()
+       self.savestatus.props.text = ""
     if level == 1 : 
        self.setpiano(1)
        self.pianosize = 1
@@ -383,3 +401,14 @@ class Gcompris_piano:
      self.pianolabel.translate(-150, 0)
      self.pianobg1.translate(-150, 0)
      self.allowed = self.allowed1 + self.allowed2
+
+
+#GLOBAL
+def general_save( filename, filetype, fles):
+
+     #print filename
+     fles.piano_to_file(filename)
+def general_load( filename, filetype, fles):
+
+     fles.file_to_piano(filename)
+
