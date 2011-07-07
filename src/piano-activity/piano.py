@@ -26,6 +26,7 @@ import gcompris.sound
 import goocanvas
 import ConfigParser
 import pango
+import time
 
 from gcompris import gcompris_gettext as _
 
@@ -45,6 +46,7 @@ class Gcompris_piano:
     gcomprisBoard.disable_im_context = True
     
     self.save = False
+
   #Open the config file
   def read_data(self):
     '''Load the activity data'''
@@ -186,6 +188,18 @@ class Gcompris_piano:
         )
     gcompris.utils.item_focus_init(self.saveicon, None)
   
+    self.loadicon = goocanvas.Image(
+        parent = self.rootitem,
+        x = 650,
+        y = 270,
+        width = 60,
+        height = 60,
+        pixbuf = gcompris.utils.load_pixmap("piano/loadicon.svg")
+        )
+    gcompris.utils.item_focus_init(self.loadicon, None)
+
+
+  
     self.labelicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
@@ -208,9 +222,10 @@ class Gcompris_piano:
        )
 
     
-    self.saveicon.connect("button-press-event", self.savenotes)
-    self.labelicon.connect("button-press-event",self.showlabel)
-
+    self.saveicon.connect("button-press-event", self.save_notes)
+    self.labelicon.connect("button-press-event", self.show_label)
+    self.loadicon.connect("button-press-event", self.load_file)    
+ 
     svghandle1 = gcompris.utils.load_svg("piano/pianobg2.svg")
     svghandle2 = gcompris.utils.load_svg("piano/pianobg3.svg")
 
@@ -235,7 +250,7 @@ class Gcompris_piano:
                                 )
     self.pianobg2.translate(375, 200)
 
-  def showlabel (self, item, event, attr):
+  def show_label (self, item, event, attr):
     if self.labelflag == 0:
       self.pianolabel.props.visibility = goocanvas.ITEM_VISIBLE
       self.labelflag = 1
@@ -243,7 +258,7 @@ class Gcompris_piano:
       self.pianolabel.props.visibility = goocanvas.ITEM_INVISIBLE
       self.labelflag = 0
      
-  def savenotes(self, item, event, attr):
+  def save_notes(self, item, event, attr):
     if self.save == False :
        self.save = True
        gcompris.file_selector_save( self.gcomprisBoard, self.selector_section,
@@ -258,11 +273,46 @@ class Gcompris_piano:
          self.notesfile.close()
          self.savestatus.props.text = ""
          self.save = False
+   
+  def load_file(self, item, event, attr):
+     gcompris.file_selector_load( self.gcomprisBoard, self.selector_section,
+                                    self.file_type,
+                                   general_load, self)
 
-      
   def piano_to_file(self, filename):
      self.notesfile = open(filename, 'wb')
 
+  def file_to_piano(self, filename):
+     print filename+" opening..."
+     file = open(filename, 'rb')
+     try:
+       notes = file.read()
+       print notes
+       notesarray = notes.split(' ')
+       gcompris.sound.policy_set(gcompris.sound.PLAY_AFTER_CURRENT)
+       for ch in notesarray : 
+ #          if ch in self.allowed1:
+         self.play_file(ch, self.pianobg1)
+ #          elif ch in self.allowed and len(self.allowed)>13:
+ #             self.play_file(ch, self.pianobg2)
+       gcompris.sound.policy_set(gcompris.sound.PLAY_AND_INTERRUPT)
+     except:
+       file.close()
+       print 'Cannot load ' , filename , "as GCompris Piano"
+       return     
+
+  def play_file(self, notename, pianobg):
+    fname = 'piano/'+notename+'.wav'
+    print '#'+notename
+    print fname
+    self.pianobg1.props.visibility = goocanvas.ITEM_INVISIBLE
+    self.pianobg2.props.visibility = goocanvas.ITEM_INVISIBLE
+    pianobg.props.svg_id = '#' + notename
+    pianobg.props.visibility = goocanvas.ITEM_VISIBLE
+    print ("playing %s" % (notename))
+    gcompris.sound.play_ogg(fname)
+   
+    
   def end(self):
     print "piano end"
     if self.save is True:
