@@ -44,15 +44,164 @@ class Gcompris_piano:
     gcompris.sound.policy_set(gcompris.sound.PLAY_AND_INTERRUPT)
     # Needed to get key_press
     gcomprisBoard.disable_im_context = True
-    
+
     self.save = False
+    self.noteslength = 15
+    self.pianosize = 1
+
+  def set_config(self):
+    
+    window = gtk.Window(gtk.WINDOW_TOPLEVEL)	              
+    window.set_size_request(400, 400)
+    window.set_title("Configuration")
+    
+    self.entry = []
+    i = 0
+    while i <= 24 :
+       self.entry.append(gtk.Entry(1))
+       i += 1
+    hbox1 = gtk.HBox(False, 0)
+    hbox1.show()
+    hbox2 = gtk.HBox(False, 0)
+    hbox2.show()
+    hbox3 = gtk.HBox(False, 0)
+    hbox3.show()
+    hbox4 = gtk.HBox(False, 0)
+    hbox4.show()
+    hbox5 = gtk.HBox(False, 0)
+    hbox5.show()
+    
+    vbox = gtk.VBox(False, 0)
+    window.add(vbox)
+    vbox.show()
+
+    self.draw_row('C2','CH2', 'D2','DH2','E2',self.entry[0], self.entry[1], self.entry[2], self.entry[3], self.entry[4], hbox1)
+    vbox.pack_start(hbox1, True, True, 1)
+
+    self.draw_row('F2','FH2', 'G2','GH2','A2',self.entry[5], self.entry[6], self.entry[7], self.entry[8], self.entry[9], hbox2)
+    vbox.pack_start(hbox2, True, True, 1)
+
+    self.draw_row('AH2','B2', 'C3','CH3','D3',self.entry[10], self.entry[11], self.entry[12], self.entry[13], self.entry[14], hbox3)
+    vbox.pack_start(hbox3, True, True, 1)
+
+    self.draw_row('DH3','E3', 'F3','FH3','G3',self.entry[15], self.entry[16], self.entry[17], self.entry[18], self.entry[19], hbox4)
+    vbox.pack_start(hbox4, True, True, 1)
+
+    self.draw_row('GH3','A3', 'AH3','B3','C4',self.entry[20], self.entry[21], self.entry[22], self.entry[23], self.entry[24], hbox5)
+    vbox.pack_start(hbox5, True, True, 1)
+
+
+    separator = gtk.HSeparator()
+    separator.show()
+
+    button = gtk.Button('OK')
+    button.connect("clicked", self.save_data)
+
+    vbox.pack_start(separator, False, True, 5)
+    vbox.pack_start(button, True, True, 0)
+    button.set_flags(gtk.CAN_DEFAULT)
+    button.grab_default()
+    button.show()
+
+    window.show()
+
+  def draw_row(self, l1, l2, l3, l4, l5, first, second, third, fourth, fifth, hbox):
+
+    label1 = gtk.Label(l1)
+    label1.set_justify(gtk.JUSTIFY_LEFT)
+    hbox.pack_start(label1, False, False, 3)
+    label1.show()
+
+    hbox.pack_start(first, True, True, 3)
+    first.show()
+
+    label2 = gtk.Label(l2)
+    label2.set_justify(gtk.JUSTIFY_LEFT)
+    hbox.pack_start(label2, False, False, 3)
+    label2.show()
+
+    hbox.pack_start(second, True, True, 3)
+    second.show()
+
+    label3 = gtk.Label(l3)
+    label3.set_justify(gtk.JUSTIFY_LEFT)
+    hbox.pack_start(label3, False, False, 3)
+    label3.show()
+
+    hbox.pack_start(third, True, True, 3)
+    third.show()
+
+    label4 = gtk.Label(l4)
+    label4.set_justify(gtk.JUSTIFY_LEFT)
+    hbox.pack_start(label4, False, False, 3)
+    label4.show()
+    
+    hbox.pack_start(fourth, True, True, 3)
+    fourth.show()
+
+    label5 = gtk.Label(l5)
+    label5.set_justify(gtk.JUSTIFY_LEFT)
+    hbox.pack_start(label5, False, False, 3)
+    label5.show()
+
+    hbox.pack_start(fifth, True, True, 3)
+    fifth.show()
+
+  def save_data(self, button):
+    print "in save data fn"
+    config = ConfigParser.RawConfigParser()
+    filename = gcompris.DATA_DIR + '/' + self.gcomprisBoard.name + '/activity.desktop'
+    config.add_section('common')
+    config.set('common',self.entry[0].get_text(),'c2')
+    config.set('common',self.entry[1].get_text(),'ch2')
+    config.set('common',self.entry[2].get_text(),'d2')
+    config.set('common',self.entry[3].get_text(),'dh2')
+    config.set('common',self.entry[4].get_text(),'e2')
+    config.set('common',self.entry[5].get_text(),'f2')
+    config.set('common',self.entry[6].get_text(),'fh2')
+    config.set('common',self.entry[7].get_text(),'g2')
+    config.set('common',self.entry[8].get_text(),'gh2')
+    config.set('common',self.entry[9].get_text(),'a2')
+    config.set('common',self.entry[10].get_text(),'ah2')
+    config.set('common',self.entry[11].get_text(),'b2')
+    config.set('common',self.entry[12].get_text(),'c3')
+    config.set('common',self.entry[13].get_text(),'ch3')
+    config.set('common',self.entry[14].get_text(),'d3')
+    config.set('common',self.entry[15].get_text(),'dh3')
+    config.set('common',self.entry[16].get_text(),'e3')
+    config.set('common',self.entry[17].get_text(),'f3')
+    config.set('common',self.entry[18].get_text(),'fh3')
+    config.set('common',self.entry[19].get_text(),'g3')
+    config.set('common',self.entry[20].get_text(),'gh3')
+    config.set('common',self.entry[21].get_text(),'a3')
+    config.set('common',self.entry[22].get_text(),'ah3')
+    config.set('common',self.entry[23].get_text(),'b3')
+    config.set('common',self.entry[24].get_text(),'c4')
+
+    with open(filename, 'wb') as configfile:
+        config.write(configfile)
+    self.read_data('activity.desktop')
+
+    self.allowed2 = []
+    self.allowed1 = []
+
+    for val,each in enumerate(self.entry):
+      if val<=14:
+         self.allowed1.append(each.get_text())
+      else :
+         self.allowed2.append(each.get_text())
+    if self.pianosize == 1 :
+      self.allowed = self.allowed1
+    else :
+      self.allowed = self.allowed1 + self.allowed2
+
 
   #Open the config file
-  def read_data(self):
+  def read_data(self, fname):
     '''Load the activity data'''
     config = ConfigParser.RawConfigParser()
     p = gcompris.get_properties()
-    filename = gcompris.DATA_DIR + '/' + self.gcomprisBoard.name + '/activity.desktop'
+    filename = gcompris.DATA_DIR + '/' + self.gcomprisBoard.name + '/'+fname
     try:
       gotit = config.read(filename)
       if not gotit:
@@ -89,14 +238,14 @@ class Gcompris_piano:
     self.gcomprisBoard.maxlevel = 6
     self.gcomprisBoard.sublevel = 1
     self.gcomprisBoard.number_of_sublevel = 1
-    gcompris.bar_set(gcompris.BAR_LEVEL)
+    gcompris.bar_set(gcompris.BAR_LEVEL|gcompris.BAR_CONFIG)
     gcompris.bar_set_level(self.gcomprisBoard)
-    
-    self.file_type = ".gcpiano"    
+
+    self.file_type = ".gcpiano"
     self.selector_section = "piano"
     self.allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
     self.allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
-   
+
     self.allowed = self.allowed1
 
     self.cmajor = ['c2', 'd2', 'e2', 'f2', 'g2', 'a2', 'b2', 'c3','c3','b2', 'a2', 'g2', 'f2', 'e2', 'd2', 'c2']
@@ -104,10 +253,9 @@ class Gcompris_piano:
     self.mohanam = ['c2', 'd2', 'e2', 'g2', 'a2', 'c3', 'c3', 'a2', 'g2', 'e2', 'd2', 'c2']
     self.bday = ['g2', 'g2', 'a2', 'g2', 'c3', 'b2', 'g2', 'g2', 'a2', 'g2', 'd3','c3', 'g2','g2','g3','e3','c3','b2','a2','f3','f3','e3','c3','d3','c3']
     self.twinkle = ['c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2','d2', 'd2', 'c2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'd2', 'c2']
-    self.noteslength = 15
-    self.pianosize = 1    
+    
 
-    self.read_data()
+    self.read_data('default.desktop')
     self.titletext = goocanvas.Text(
       parent = self.rootitem,
       x = 400.0,
@@ -118,7 +266,7 @@ class Gcompris_piano:
       anchor = gtk.ANCHOR_CENTER,
       alignment = pango.ALIGN_CENTER
       )
-    
+
     self.pianopic1 = goocanvas.Image(
         parent = self.rootitem,
         x = 275,
@@ -146,16 +294,16 @@ class Gcompris_piano:
         anchor = gtk.ANCHOR_CENTER,
         alignment = pango.ALIGN_CENTER
       )
-    
+
     self.pianosizeicon = goocanvas.Image(
         parent = self.rootitem,
         x = 175,
         y = 150,
-            
+
         pixbuf = gcompris.utils.load_pixmap("piano/pianoicon.svg")
         )
 
-   
+
     self.labelflag = 0
     labelhandle1 = gcompris.utils.load_svg("piano/pianolabel1.svg")
 
@@ -194,7 +342,7 @@ class Gcompris_piano:
         pixbuf = gcompris.utils.load_pixmap("piano/save.svg")
         )
     gcompris.utils.item_focus_init(self.saveicon, None)
-  
+
     self.loadicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
@@ -206,7 +354,7 @@ class Gcompris_piano:
     gcompris.utils.item_focus_init(self.loadicon, None)
 
 
-  
+
     self.labelicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
@@ -233,8 +381,8 @@ class Gcompris_piano:
 
     self.saveicon.connect("button-press-event", self.save_notes)
     self.labelicon.connect("button-press-event", self.show_label)
-    self.loadicon.connect("button-press-event", self.load_file)    
- 
+    self.loadicon.connect("button-press-event", self.load_file)
+
     svghandle1 = gcompris.utils.load_svg("piano/pianobg2.svg")
     svghandle2 = gcompris.utils.load_svg("piano/pianobg3.svg")
 
@@ -260,7 +408,7 @@ class Gcompris_piano:
     self.pianobg2.translate(375, 200)
 
   def change_size(self, item, event, attr):
-     if self.pianosize == 1 : 
+     if self.pianosize == 1 :
         self.setpiano(2)
         self.pianosize = 2
         pixbuf = gcompris.utils.load_pixmap("piano/pianoicon.svg")
@@ -286,7 +434,7 @@ class Gcompris_piano:
          self.pianolabel2.props.visibility = goocanvas.ITEM_INVISIBLE
 
       self.labelflag = 0
-     
+
   def save_notes(self, item, event, attr):
     if self.save == False :
        self.save = True
@@ -294,15 +442,15 @@ class Gcompris_piano:
                                     self.file_type,
                                    general_save, self)
 
-    
+
        self.savestatus.props.text = "Saving.."
-     
-    else : 
+
+    else :
        if self.save is True:
          self.notesfile.close()
          self.savestatus.props.text = ""
          self.save = False
-   
+
   def load_file(self, item, event, attr):
      gcompris.file_selector_load( self.gcomprisBoard, self.selector_section,
                                     self.file_type,
@@ -319,7 +467,7 @@ class Gcompris_piano:
        print notes
        notesarray = notes.split(' ')
        gcompris.sound.policy_set(gcompris.sound.PLAY_AFTER_CURRENT)
-       for ch in notesarray : 
+       for ch in notesarray :
  #          if ch in self.allowed1:
          self.play_file(ch, self.pianobg1)
  #          elif ch in self.allowed and len(self.allowed)>13:
@@ -328,7 +476,7 @@ class Gcompris_piano:
      except:
        file.close()
        print 'Cannot load ' , filename , "as GCompris Piano"
-       return     
+       return
 
   def play_file(self, notename, pianobg):
     fname = 'piano/'+notename+'.wav'
@@ -340,8 +488,8 @@ class Gcompris_piano:
     pianobg.props.visibility = goocanvas.ITEM_VISIBLE
     print ("playing %s" % (notename))
     gcompris.sound.play_ogg(fname)
-   
-    
+
+
   def end(self):
     print "piano end"
     if self.save is True:
@@ -362,43 +510,19 @@ class Gcompris_piano:
     pass
 
   def init_config(self):
-    default_config = { 'c2'    : 'q',
-                       'd2'    : 'w'
-                       }
-    return default_config
-
+    pass
 
   def config_start(self, profile):
-    # keep profile in mind
-    self.configuring_profile = profile
-
-    # init with default values
-    self.config_dict = self.init_config()
-
-    #get the configured values for that profile
-    self.config_dict.update(gcompris.get_conf(profile, self.gcomprisBoard))
-
-    # Init configuration window:
-    # all the configuration functions will use it
-    # all the configuration functions returns values for their key in
-    # the dict passed to the apply_callback
-    # the returned value is the main GtkVBox of the window,
-    #we can add what you want in it.
-
-    bconf = gcompris.configuration_window ( \
-      _('<b>%s</b> configuration\n for profile <b>%s</b>') % ('Login', profile.name ),
-      self.ok_callback
-      )
-
+    self.set_config()
 
   def play_note(self, note, pianobg):
-        
-    fname = self.dataset.get("common", note)
-    
-    notename = fname[fname.find('/') + 1 : fname.find('.')]
+
+    notename = self.dataset.get("common", note)
+
+    fname = 'piano/'+notename+'.wav'
     self.notetext.props.text = notename
     if self.save == True:
-   
+
       self.notesfile.write(notename + " ")
 
     print '#'+notename
@@ -413,7 +537,7 @@ class Gcompris_piano:
       self.dochecknotes(notename)
       if self.noteno == self.noteslength:
           gcompris.bonus.display(gcompris.bonus.WIN,gcompris.bonus.FLOWER)
-          self.noteno = 0         
+          self.noteno = 0
 
 
   def key_press(self, keyval, commit_str, preedit_str):
@@ -430,16 +554,16 @@ class Gcompris_piano:
     # Return  True  if you did process a key
     # Return  False if you did not processed a key
     #        (gtk need to send it to next widget)
- 
+
 
     return True
 
   def pause(self, pause):
     print("piano pause. %i" % pause)
 
-  
+
   def dochecknotes(self, notename):
-  
+
      if self.currentsong [self.noteno] == notename:
         print self.noteno
         return True
@@ -447,14 +571,14 @@ class Gcompris_piano:
         self.noteno = 0
 
   def set_level(self, level):
-    
+
     print("piano set level. %i" % level)
     self.gcomprisBoard.level = level
     gcompris.bar_set_level(self.gcomprisBoard);
     if self.save is True:
        self.notesfile.close()
        self.savestatus.props.text = ""
-    if level == 1 : 
+    if level == 1 :
        self.setpiano(1)
        self.pianosize = 1
        self.titletext.props.text = 'Freeplay'
@@ -463,17 +587,17 @@ class Gcompris_piano:
     elif level == 2 :
        self.setpiano(1)
        self.pianosize = 1
-       self.noteslength = 11  
+       self.noteslength = 11
        self.currentsong = self.mohanam
        self.titletext.props.text = ' Pentatonic Scale (Mohanam)'
        self.notestext.props.text = 'C D E G A C C A G E D C'
        self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE
-    elif level == 3 : 
+    elif level == 3 :
        self.setpiano(1)
        self.pianosize = 1
        self.noteslength = 15
        self.currentsong = self.cmajor
-       self.titletext.props.text = ' C Major Scale ' 
+       self.titletext.props.text = ' C Major Scale '
        self.notestext.props.text = 'C D E F G A B C C B A G F E D C'
     elif level == 4 :
        self.noteslength = 15
