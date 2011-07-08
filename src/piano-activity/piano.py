@@ -157,24 +157,23 @@ class Gcompris_piano:
 
    
     self.labelflag = 0
-    labelhandle = gcompris.utils.load_svg("piano/pianolabel1.svg")
+    labelhandle1 = gcompris.utils.load_svg("piano/pianolabel1.svg")
 
-    self.pianolabel = goocanvas.Svg(
+    self.pianolabel1 = goocanvas.Svg(
                     parent = self.rootitem,
-                    svg_handle = labelhandle,
+                    svg_handle = labelhandle1,
                     visibility = goocanvas.ITEM_INVISIBLE
                                 )
-    self.pianolabel.translate(275, 200)
+    self.pianolabel1.translate(275, 200)
 
-    #self.pianoblackkeys = goocanvas.Text(
-    #    parent = self.rootitem,
-    #    x = 400,
-    #    y = 190,
-    #    text = '      2      3          5      6      7     ',
-    #    fill_color = 'black',
-    #    anchor = gtk.ANCHOR_CENTER,
-    #    alignment = pango.ALIGN_CENTER
-    #    )
+    labelhandle2 = gcompris.utils.load_svg("piano/pianolabel1.svg")
+
+    self.pianolabel2 = goocanvas.Svg(
+                    parent = self.rootitem,
+                    svg_handle = labelhandle2,
+                    visibility = goocanvas.ITEM_INVISIBLE
+                                )
+    self.pianolabel2.translate(375, 200)
 
     self.notetext = goocanvas.Text(
          parent = self.rootitem,
@@ -273,10 +272,19 @@ class Gcompris_piano:
 
   def show_label (self, item, event, attr):
     if self.labelflag == 0:
-      self.pianolabel.props.visibility = goocanvas.ITEM_VISIBLE
+      if self.pianosize == 1:
+         self.pianolabel1.props.visibility = goocanvas.ITEM_VISIBLE
+      else :
+         self.pianolabel1.props.visibility = goocanvas.ITEM_VISIBLE
+         self.pianolabel2.props.visibility = goocanvas.ITEM_VISIBLE
       self.labelflag = 1
     elif self.labelflag == 1:
-      self.pianolabel.props.visibility = goocanvas.ITEM_INVISIBLE
+      if self.pianosize == 1 :
+         self.pianolabel1.props.visibility = goocanvas.ITEM_INVISIBLE
+      else :
+         self.pianolabel1.props.visibility = goocanvas.ITEM_INVISIBLE
+         self.pianolabel2.props.visibility = goocanvas.ITEM_INVISIBLE
+
       self.labelflag = 0
      
   def save_notes(self, item, event, attr):
@@ -288,7 +296,7 @@ class Gcompris_piano:
 
     
        self.savestatus.props.text = "Saving.."
-       self.pianolabel.props.visibility = goocanvas.ITEM_VISIBLE
+     
     else : 
        if self.save is True:
          self.notesfile.close()
@@ -451,6 +459,7 @@ class Gcompris_piano:
        self.pianosize = 1
        self.titletext.props.text = 'Freeplay'
        self.notestext.props.text = ''
+       self.pianosizeicon.props.visibility = goocanvas.ITEM_VISIBLE
     elif level == 2 :
        self.setpiano(1)
        self.pianosize = 1
@@ -458,6 +467,7 @@ class Gcompris_piano:
        self.currentsong = self.mohanam
        self.titletext.props.text = ' Pentatonic Scale (Mohanam)'
        self.notestext.props.text = 'C D E G A C C A G E D C'
+       self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE
     elif level == 3 : 
        self.setpiano(1)
        self.pianosize = 1
@@ -486,6 +496,7 @@ class Gcompris_piano:
        self.currentsong = self.twinkle
        self.titletext.props.text = 'Twinkle Twinkle little star tune (Pentatonic Scale)'
        self.notestext.props.text = 'C C G G A A G |  F F E E D D C | G G F F E E D | G G F F E E D | C C G G A A G | F F E E D D C'
+       self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE
 
     self.noteno = 0
 
@@ -494,12 +505,13 @@ class Gcompris_piano:
       self.pianopic2.props.visibility = goocanvas.ITEM_INVISIBLE
       self.pianopic1.props.x = 275
       self.pianobg1.translate(150, 0)
-      self.pianolabel.translate(150, 0)
+      self.pianolabel1.translate(150, 0)
+      self.pianolabel2.props.visibility = goocanvas.ITEM_INVISIBLE
       self.allowed = self.allowed1
     elif self.pianosize == 1 and nextsize == 2:
      self.pianopic2.props.visibility = goocanvas.ITEM_VISIBLE
      self.pianopic1.props.x = 125
-     self.pianolabel.translate(-150, 0)
+     self.pianolabel1.translate(-150, 0)
      self.pianobg1.translate(-150, 0)
      self.allowed = self.allowed1 + self.allowed2
 
