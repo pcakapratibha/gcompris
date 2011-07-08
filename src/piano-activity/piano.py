@@ -45,10 +45,12 @@ class Gcompris_piano:
     # Needed to get key_press
     gcomprisBoard.disable_im_context = True
 
+    # Set the default values
     self.save = False
     self.noteslength = 15
     self.pianosize = 1
 
+  # To set the keys manually using pygtk window
   def set_config(self):
     
     window = gtk.Window(gtk.WINDOW_TOPLEVEL)	              
@@ -57,9 +59,11 @@ class Gcompris_piano:
     
     self.entry = []
     i = 0
+    # Initialise Entry type array
     while i <= 24 :
        self.entry.append(gtk.Entry(1))
        i += 1
+    # Hbox holding five elements in a row
     hbox1 = gtk.HBox(False, 0)
     hbox1.show()
     hbox2 = gtk.HBox(False, 0)
@@ -74,7 +78,7 @@ class Gcompris_piano:
     vbox = gtk.VBox(False, 0)
     window.add(vbox)
     vbox.show()
-
+    
     self.draw_row('C2','CH2', 'D2','DH2','E2',self.entry[0], self.entry[1], self.entry[2], self.entry[3], self.entry[4], hbox1)
     vbox.pack_start(hbox1, True, True, 1)
 
@@ -105,6 +109,7 @@ class Gcompris_piano:
 
     window.show()
 
+  # Draw each row of the configuration window l1.. are labels and rest are entry elements
   def draw_row(self, l1, l2, l3, l4, l5, first, second, third, fourth, fifth, hbox):
 
     label1 = gtk.Label(l1)
@@ -147,6 +152,7 @@ class Gcompris_piano:
     hbox.pack_start(fifth, True, True, 3)
     fifth.show()
 
+  # To save the new configuration into activity.desktop file
   def save_data(self, button):
     print "in save data fn"
     config = ConfigParser.RawConfigParser()
@@ -184,7 +190,8 @@ class Gcompris_piano:
 
     self.allowed2 = []
     self.allowed1 = []
-
+    
+    # Reinitialise the allowed keys
     for val,each in enumerate(self.entry):
       if val<=14:
          self.allowed1.append(each.get_text())
@@ -241,20 +248,23 @@ class Gcompris_piano:
     gcompris.bar_set(gcompris.BAR_LEVEL|gcompris.BAR_CONFIG)
     gcompris.bar_set_level(self.gcomprisBoard)
 
+    # Files saved are saved with extension .gcpiano
     self.file_type = ".gcpiano"
     self.selector_section = "piano"
+    # Default allowed keys, Only these keys when pressed return a note
     self.allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
     self.allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
 
     self.allowed = self.allowed1
-
+ 
+    # Songs from different scales
     self.cmajor = ['c2', 'd2', 'e2', 'f2', 'g2', 'a2', 'b2', 'c3','c3','b2', 'a2', 'g2', 'f2', 'e2', 'd2', 'c2']
     self.dmajor = ['e2', 'fh2' , 'g2', 'a2', 'b2', 'ch3', 'd3', 'e3', 'e3', 'd3', 'ch3','b2','a2','g2','fh2','e2']
     self.mohanam = ['c2', 'd2', 'e2', 'g2', 'a2', 'c3', 'c3', 'a2', 'g2', 'e2', 'd2', 'c2']
     self.bday = ['g2', 'g2', 'a2', 'g2', 'c3', 'b2', 'g2', 'g2', 'a2', 'g2', 'd3','c3', 'g2','g2','g3','e3','c3','b2','a2','f3','f3','e3','c3','d3','c3']
     self.twinkle = ['c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2','d2', 'd2', 'c2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'd2', 'c2']
     
-
+    # For the first time, use the default.desktop file
     self.read_data('default.desktop')
     self.titletext = goocanvas.Text(
       parent = self.rootitem,
@@ -266,7 +276,8 @@ class Gcompris_piano:
       anchor = gtk.ANCHOR_CENTER,
       alignment = pango.ALIGN_CENTER
       )
-
+    
+    # Piano image of the first piano
     self.pianopic1 = goocanvas.Image(
         parent = self.rootitem,
         x = 275,
@@ -275,6 +286,7 @@ class Gcompris_piano:
         height = 150,
         pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
         )
+    # Image of the second piano
     self.pianopic2 = goocanvas.Image(
         parent = self.rootitem,
         x = 375,
@@ -284,7 +296,7 @@ class Gcompris_piano:
         visibility = goocanvas.ITEM_INVISIBLE,
         pixbuf = gcompris.utils.load_pixmap("piano/piano2.svg")
         )
-   #the notes displayed in order to be typed properly..
+   # the 'correct' notes displayed in order to be typed properly.
     self.notestext = goocanvas.Text(
         parent = self.rootitem,
         x = 400,
@@ -294,7 +306,7 @@ class Gcompris_piano:
         anchor = gtk.ANCHOR_CENTER,
         alignment = pango.ALIGN_CENTER
       )
-
+   # The icon of toggle button to change piano size
     self.pianosizeicon = goocanvas.Image(
         parent = self.rootitem,
         x = 175,
@@ -306,7 +318,8 @@ class Gcompris_piano:
 
     self.labelflag = 0
     labelhandle1 = gcompris.utils.load_svg("piano/pianolabel1.svg")
-
+    
+    # Label on the keys of the first piano
     self.pianolabel1 = goocanvas.Svg(
                     parent = self.rootitem,
                     svg_handle = labelhandle1,
@@ -316,6 +329,7 @@ class Gcompris_piano:
 
     labelhandle2 = gcompris.utils.load_svg("piano/pianolabel1.svg")
 
+    # Label on the keys of the second piano
     self.pianolabel2 = goocanvas.Svg(
                     parent = self.rootitem,
                     svg_handle = labelhandle2,
@@ -323,6 +337,7 @@ class Gcompris_piano:
                                 )
     self.pianolabel2.translate(375, 200)
 
+    # Displays the current note being played
     self.notetext = goocanvas.Text(
          parent = self.rootitem,
          x = 400.0,
@@ -333,6 +348,8 @@ class Gcompris_piano:
          anchor = gtk.ANCHOR_CENTER,
          alignment = pango.ALIGN_CENTER
          )
+
+    # Save notes - icon toggle
     self.saveicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
@@ -343,6 +360,7 @@ class Gcompris_piano:
         )
     gcompris.utils.item_focus_init(self.saveicon, None)
 
+    # Load song toggle button
     self.loadicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
@@ -354,7 +372,7 @@ class Gcompris_piano:
     gcompris.utils.item_focus_init(self.loadicon, None)
 
 
-
+    # Key Label toggle button
     self.labelicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
@@ -366,6 +384,7 @@ class Gcompris_piano:
     gcompris.utils.item_focus_init(self.labelicon, None)
     gcompris.utils.item_focus_init(self.pianosizeicon, None)
 
+    # Displays the status of whether notes are currently being saved or not
     self.savestatus = goocanvas.Text(
        parent = self.rootitem,
        x = 670.0,
