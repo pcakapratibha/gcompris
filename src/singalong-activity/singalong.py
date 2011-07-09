@@ -25,6 +25,7 @@ import gcompris.sound
 import gobject
 import time
 import goocanvas
+import ConfigParser
 import pango
 
 from gcompris import gcompris_gettext as _
@@ -52,22 +53,23 @@ class Gcompris_singalong:
     # Set the buttons we want in the bar
     gcompris.bar_set(gcompris.BAR_LEVEL)
 
+    self.gcomprisBoard.level = 1
+    self.gcomprisBoard.maxlevel = 3
+    self.gcomprisBoard.sublevel = 1
+    self.gcomprisBoard.number_of_sublevel = 1
+    gcompris.bar_set_level(self.gcomprisBoard)
+
     # Set a background image
     gcompris.set_default_background(self.gcomprisBoard.canvas.get_root_item())
 
     # Create our rootitem. We put each canvas item in it so at the end we
     # only have to kill it. The canvas deletes all the items it contains
     # automaticaly.
-    self.rootitem = goocanvas.Group(parent =
-                                    self.gcomprisBoard.canvas.get_root_item())
+    self.rootitem = goocanvas.Group(parent =                self.gcomprisBoard.canvas.get_root_item())
 
     self.mapping = { 'C' : 310, 'D' : 340 , 'E' : 370, 'F' : 400, 'G' : 430, 'A' : 460, 'C3': 490 }
+    self.currentsong = "twinkle"
 
-    self.mapping1 = { 'C' : 'singalong/c.wav', 'D' : 'singalong/d.wav' , 'E' : 'singalong/e.wav', 'F' : 'singalong/f.wav', 'G' : 'singalong/g.wav', 'A' :'singalong/a.wav', 'C3':'singalong/c3.wav' }
-
-    self.twinkle = ['X','C', 'C', 'G', 'G', 'A', 'A', 'G', 'X', 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'X', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'X', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'X', 'C', 'C', 'G', 'G', 'A', 'A', 'G', 'X', 'F', 'F', 'E', 'E', 'D', 'D', 'C']
-
-    self.twinklelyrics = ["","Twinkle", "Twinkle", "Twinkle", "Twinkle", "Little","Little", "Star", "", "How I", "How I", "Wonder", "Wonder","What you", "What You", "Are", "", "Up above the", "Up above the", "Up above the","Up above the", "World so", "World so", "High", "", "Like a", "Like a", "Diamond", "Diamond", "in the", "in the", "sky","", "Twinkle", "Twinkle", "Twinkle", "Twinkle", "Little","Little", "Star","", "How I", "How I", "Wonder", "Wonder","What you", "What You", "Are"]
 
     self.notecount = 0
     self.count = 0
@@ -92,6 +94,18 @@ class Gcompris_singalong:
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("singalong/ball.svg")
         )
+    
+    self.play_button = goocanvas.Image(
+        parent = self.rootitem,
+        x = 600,
+        y = 400,
+        width = 50,
+        height = 50,
+        pixbuf = gcompris.utils.load_pixmap("singalong/play_button.png")
+        )
+
+    gcompris.utils.item_focus_init(self.play_button, None)
+    self.play_button.connect("button-press-event", self.play_again)
 
     self.notetext = goocanvas.Text(
       parent = self.rootitem,
@@ -115,31 +129,61 @@ class Gcompris_singalong:
       alignment = pango.ALIGN_CENTER
       )
 
-    
+        
    
     self.status_timer = self.delay
+    
+    self.lyrics_dataset = self.read_data()
     self.play_song()
   
+  def play_again(self, item, event, attr):
+    self.count = 0
+    self.play_song()
+      
+  def read_data(self):
+    '''Load the activity data'''
+    config = ConfigParser.RawConfigParser()
+    p = gcompris.get_properties()
+    filename = gcompris.DATA_DIR + '/' + self.gcomprisBoard.name + '/activity.desktop'
+    try:
+      gotit = config.read(filename)
+      if not gotit:
+         gcompris.utils.dialog(_("Cannot find the file '{filename}'").format(filename=filename),None)
+         return False
+
+    except ConfigParser.Error as error:
+      gcompris.utils.dialog(_("Failed to parse data set '{filename}'"
+                              " with error:\n{error}").\
+                              format(filename=filename, error=error),
+                            None)
+      return False
+
+    
+    return config
+
   def play_song(self):
+   
    self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)    
         
              
 
   def timer_loop(self):
     self.status_timer = self.status_timer - 1
-    if(self.status_timer == 0 and self.count < len(self.twinkle) - 1):
+    length = int(self.lyrics_dataset.get(self.currentsong+'notes','len'))
+    if(self.status_timer == 0 and self.count < length-1):
       self.status_timer = self.delay
       self.count+=1
-      note = self.twinkle[self.count]
+      note = self.lyrics_dataset.get(self.currentsong+'notes',str(self.count))
       if note != 'X':     
         self.notetext.props.text = note
         self.notetext.props.x = int(self.mapping[note]) + 30
         self.ball.props.visibility = goocanvas.ITEM_INVISIBLE
         self.ball.props.x = int(self.mapping[note])
-        self.songlyrics.props.text = self.twinklelyrics [self.count]
+        self.songlyrics.props.text = self.lyrics_dataset.get(self.currentsong+"song",str(self.count))
         print self.ball.props.x
         self.ball.props.visibility = goocanvas.ITEM_VISIBLE
         gcompris.sound.play_ogg('singalong/'+note+'.wav')
+
     
     print self.status_timer
     self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)
@@ -176,4 +220,17 @@ class Gcompris_singalong:
 
   def set_level(self, level):
     print("singalong set level. %i" % level)
+    self.gcomprisBoard.level = level
+    gcompris.bar_set_level(self.gcomprisBoard);
+    if level == 2 :
+        self.currentsong = "london"
+        self.delay = 40
+        self.count = 0
+        self.play_song()
+    elif level == 1 : 
+        self.delay = 30
+        self.currentsong = "twinkle"
+        self.count = 0
+        self.play_song()
+        
 
