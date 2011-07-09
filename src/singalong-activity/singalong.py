@@ -22,6 +22,7 @@ import gcompris
 import gcompris.utils
 import gcompris.skin
 import gcompris.sound
+import gobject
 import time
 import goocanvas
 import pango
@@ -42,7 +43,7 @@ class Gcompris_singalong:
     # Needed to get key_press
     gcomprisBoard.disable_im_context = True
 
-    gcompris.sound.policy_set(gcompris.sound.PLAY_AFTER_CURRENT)
+    gcompris.sound.policy_set(gcompris.sound.PLAY_AND_INTERRUPT)
 
 
   def start(self):
@@ -64,7 +65,13 @@ class Gcompris_singalong:
 
     self.mapping1 = { 'C' : 'singalong/c.wav', 'D' : 'singalong/d.wav' , 'E' : 'singalong/e.wav', 'F' : 'singalong/f.wav', 'G' : 'singalong/g.wav', 'A' :'singalong/a.wav', 'C3':'singalong/c3.wav' }
 
-    self.twinkle = ['C', 'C', 'G', 'G', 'A', 'A', 'G', 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'C', 'C', 'G', 'G', 'A', 'A', 'G', 'F', 'F', 'E', 'E', 'D', 'D', 'C']
+    self.twinkle = ['X','C', 'C', 'G', 'G', 'A', 'A', 'G', 'X', 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'X', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'X', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'X', 'C', 'C', 'G', 'G', 'A', 'A', 'G', 'X', 'F', 'F', 'E', 'E', 'D', 'D', 'C']
+
+    self.twinklelyrics = ["","Twinkle", "Twinkle", "Twinkle", "Twinkle", "Little","Little", "Star", "", "How I", "How I", "Wonder", "Wonder","What you", "What You", "Are", "", "Up above the", "Up above the", "Up above the","Up above the", "World so", "World so", "High", "", "Like a", "Like a", "Diamond", "Diamond", "in the", "in the", "sky","", "Twinkle", "Twinkle", "Twinkle", "Twinkle", "Little","Little", "Star","", "How I", "How I", "Wonder", "Wonder","What you", "What You", "Are"]
+
+    self.notecount = 0
+    self.count = 0
+    self.delay = 30
 
     goocanvas.Text(
       parent = self.rootitem,
@@ -74,7 +81,6 @@ class Gcompris_singalong:
       font = 'sans bold 20',
       fill_color="black",
       anchor = gtk.ANCHOR_CENTER,
-      visibility = goocanvas.ITEM_INVISIBLE,
       alignment = pango.ALIGN_CENTER
       )
 
@@ -86,15 +92,60 @@ class Gcompris_singalong:
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("singalong/ball.svg")
         )
-    for note in self.twinkle : 
-        self.ball.props.visibility = goocanvas.ITEM_INVISIBLE
-        self.ball.props.x = int(self.mapping[note])
-        self.ball.props.visibility = goocanvas.ITEM_VISIBLE
-        gcompris.sound.play_ogg('singalong/'+note+'.wav')
-        print note
-               
+
+    self.notetext = goocanvas.Text(
+      parent = self.rootitem,
+      x=650.0,
+      y=230.0,
+      text=_(""),
+      font = 'sans bold 12',
+      fill_color="black",
+      anchor = gtk.ANCHOR_CENTER,
+      alignment = pango.ALIGN_CENTER
+      )
+
+    self.songlyrics = goocanvas.Text(
+      parent = self.rootitem,
+      x=400.0,
+      y=300.0,
+      text=_(""),
+      font = 'sans bold 17',
+      fill_color="black",
+      anchor = gtk.ANCHOR_CENTER,
+      alignment = pango.ALIGN_CENTER
+      )
 
     
+   
+    self.status_timer = self.delay
+    self.play_song()
+  
+  def play_song(self):
+   self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)    
+        
+             
+
+  def timer_loop(self):
+    self.status_timer = self.status_timer - 1
+    if(self.status_timer == 0 and self.count < len(self.twinkle) - 1):
+      self.status_timer = self.delay
+      self.count+=1
+      note = self.twinkle[self.count]
+      if note != 'X':     
+        self.notetext.props.text = note
+        self.notetext.props.x = int(self.mapping[note]) + 30
+        self.ball.props.visibility = goocanvas.ITEM_INVISIBLE
+        self.ball.props.x = int(self.mapping[note])
+        self.songlyrics.props.text = self.twinklelyrics [self.count]
+        print self.ball.props.x
+        self.ball.props.visibility = goocanvas.ITEM_VISIBLE
+        gcompris.sound.play_ogg('singalong/'+note+'.wav')
+    
+    print self.status_timer
+    self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)
+    
+
+   
   def end(self):
     print "singalong end"
     # Remove the root item removes all the others inside it
