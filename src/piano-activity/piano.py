@@ -454,9 +454,8 @@ class Gcompris_piano:
        notesarray = notes.split(' ')
        print notesarray
        for note in notesarray: 
-            if len(note)==3:
-              note[1]='#'
-            elif note=='':
+            note = note.replace('h','#')
+            if note=='':
               break
             song.append((''+note+'',3))
        song.append(('r',3))
