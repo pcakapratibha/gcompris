@@ -24,6 +24,7 @@ import gcompris.skin
 import gcompris.bonus
 import gcompris.sound
 import goocanvas
+import pysynth
 import ConfigParser
 import pango
 import time
@@ -364,7 +365,7 @@ class Gcompris_piano:
     self.loadicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
-        y = 270,
+        y = 300,
         width = 60,
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("piano/loadicon.svg")
@@ -384,6 +385,18 @@ class Gcompris_piano:
     gcompris.utils.item_focus_init(self.labelicon, None)
     gcompris.utils.item_focus_init(self.pianosizeicon, None)
 
+
+    # Convert Icon
+    self.converticon = goocanvas.Image(
+        parent = self.rootitem,
+        x = 650,
+        y = 390,
+        width = 60,
+        height = 60,
+        pixbuf = gcompris.utils.load_pixmap("piano/convert_icon.svg")
+        )
+    gcompris.utils.item_focus_init(self.converticon, None)
+
     # Displays the status of whether notes are currently being saved or not
     self.savestatus = goocanvas.Text(
        parent = self.rootitem,
@@ -397,7 +410,7 @@ class Gcompris_piano:
        )
 
     self.pianosizeicon.connect("button-press-event", self.change_size)
-
+    self.converticon.connect("button-press-event", self.convert_notes)
     self.saveicon.connect("button-press-event", self.save_notes)
     self.labelicon.connect("button-press-event", self.show_label)
     self.loadicon.connect("button-press-event", self.load_file)
@@ -425,6 +438,32 @@ class Gcompris_piano:
                     visibility = goocanvas.ITEM_INVISIBLE
                                 )
     self.pianobg2.translate(375, 200)
+
+  def convert_notes(self, item, event, attr):
+
+     gcompris.file_selector_load( self.gcomprisBoard,  self.selector_section, self.file_type, convert_load, self)
+
+     print 'Converting'
+
+  def convert_to_wav(self, filename):
+     file = open(filename, 'rb')
+     fname = filename.replace('.gcpiano','.wav')
+     try:
+       song = []
+       notes = file.read()
+       notesarray = notes.split(' ')
+       print notesarray
+       for note in notesarray: 
+            if len(note)==3:
+              note[1]='#'
+            elif note=='':
+              break
+            song.append((''+note+'',3))
+       song.append(('r',3))
+       pysynth.make_wav(song,fn=fname)
+       
+     except: 
+       file.close()
 
   def change_size(self, item, event, attr):
      if self.pianosize == 1 :
@@ -456,13 +495,13 @@ class Gcompris_piano:
 
   def save_notes(self, item, event, attr):
     if self.save == False :
-       self.save = True
+       
        gcompris.file_selector_save( self.gcomprisBoard, self.selector_section,
                                     self.file_type,
                                    general_save, self)
 
 
-       self.savestatus.props.text = "Saving.."
+       
 
     else :
        if self.save is True:
@@ -630,7 +669,7 @@ class Gcompris_piano:
        self.setpiano(2)
        self.pianosize = 2
        self.currentsong = self.bday
-       self.titletext.props.text = 'Happy Birthday tune (Pentatonic Scale)'
+       self.titletext.props.text = 'Happy Birthday tune'
        self.notestext.props.text = 'G G A G C3 B G G A G D3 C3 G G  G3 E3 C3 B A F3 F3 E3 D3 C3'
     elif level == 6:
        self.noteslength = 41
@@ -663,8 +702,13 @@ class Gcompris_piano:
 def general_save( filename, filetype, fles):
 
      #print filename
+     fles.save = True
+     fles.savestatus.props.text = "Saving.."
      fles.piano_to_file(filename)
 def general_load( filename, filetype, fles):
 
      fles.file_to_piano(filename)
 
+def convert_load(filename, filetype, fles):
+
+     fles.convert_to_wav(filename)
