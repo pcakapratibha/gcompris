@@ -129,11 +129,23 @@ class Gcompris_singalong:
       alignment = pango.ALIGN_CENTER
       )
 
-        
-   
+    self.songtitle = goocanvas.Text(
+      parent = self.rootitem,
+      x=400.0,
+      y=150.0,
+      text=_(""),
+      font = 'sans bold 17',
+      fill_color="black",
+      anchor = gtk.ANCHOR_CENTER,
+      alignment = pango.ALIGN_CENTER
+      )
+
+     
     self.status_timer = self.delay
     
     self.lyrics_dataset = self.read_data()
+    self.songtitle.props.text =  self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'song_name')
+
     self.play_song()
   
   def play_again(self, item, event, attr):
@@ -224,15 +236,7 @@ class Gcompris_singalong:
     print("singalong set level. %i" % level)
     self.gcomprisBoard.level = level
     gcompris.bar_set_level(self.gcomprisBoard);
-    if level == 2 :
-        self.currentsong = "london"
-        self.delay = 40
-        self.count = 0
-        self.play_song()
-    elif level == 1 : 
-        self.delay = 30
-        self.currentsong = "twinkle"
-        self.count = 0
-        self.play_song()
-        
-
+    self.songtitle.props.text =  self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'song_name')
+    self.delay = 35
+    self.count = 0
+    self.play_song()
