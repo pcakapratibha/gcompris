@@ -50,6 +50,7 @@ class Gcompris_piano:
     self.save = False
     self.noteslength = 15
     self.pianosize = 1
+    self.filename_save = ""
 
   # To set the keys manually using pygtk window
   def set_config(self):
@@ -354,24 +355,14 @@ class Gcompris_piano:
     self.saveicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
-        y = 200,
+        y = 230,
         width = 60,
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("piano/save.svg")
         )
     gcompris.utils.item_focus_init(self.saveicon, None)
 
-    # Load song toggle button
-    self.loadicon = goocanvas.Image(
-        parent = self.rootitem,
-        x = 650,
-        y = 300,
-        width = 60,
-        height = 60,
-        pixbuf = gcompris.utils.load_pixmap("piano/loadicon.svg")
-        )
-    gcompris.utils.item_focus_init(self.loadicon, None)
-
+   
 
     # Key Label toggle button
     self.labelicon = goocanvas.Image(
@@ -386,16 +377,16 @@ class Gcompris_piano:
     gcompris.utils.item_focus_init(self.pianosizeicon, None)
 
 
-    # Convert Icon
-    self.converticon = goocanvas.Image(
+    # Play Icon
+    self.playicon = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
-        y = 390,
+        y = 330,
         width = 60,
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("piano/convert_icon.svg")
         )
-    gcompris.utils.item_focus_init(self.converticon, None)
+    gcompris.utils.item_focus_init(self.playicon, None)
 
     # Displays the status of whether notes are currently being saved or not
     self.savestatus = goocanvas.Text(
@@ -410,10 +401,9 @@ class Gcompris_piano:
        )
 
     self.pianosizeicon.connect("button-press-event", self.change_size)
-    self.converticon.connect("button-press-event", self.convert_notes)
+    self.playicon.connect("button-press-event", self.play_song)
     self.saveicon.connect("button-press-event", self.save_notes)
     self.labelicon.connect("button-press-event", self.show_label)
-    self.loadicon.connect("button-press-event", self.load_file)
 
     svghandle1 = gcompris.utils.load_svg("piano/pianobg2.svg")
     svghandle2 = gcompris.utils.load_svg("piano/pianobg3.svg")
@@ -439,13 +429,15 @@ class Gcompris_piano:
                                 )
     self.pianobg2.translate(375, 200)
 
-  def convert_notes(self, item, event, attr):
+  def play_song(self, item, event, attr):
 
-     gcompris.file_selector_load( self.gcomprisBoard,  self.selector_section, self.file_type, convert_load, self)
+     gcompris.file_selector_load( self.gcomprisBoard, self.selector_section,
+                                    self.file_type,
+                                   general_play, self)
 
-     print 'Converting'
 
   def convert_to_wav(self, filename):
+     print filename
      file = open(filename, 'rb')
      fname = filename.replace('.gcpiano','.wav')
      try:
@@ -498,7 +490,7 @@ class Gcompris_piano:
        gcompris.file_selector_save( self.gcomprisBoard, self.selector_section,
                                     self.file_type,
                                    general_save, self)
-
+       
 
        
 
@@ -506,6 +498,8 @@ class Gcompris_piano:
        if self.save is True:
          self.notesfile.close()
          self.savestatus.props.text = ""
+         print "file name is : "+self.filename_save
+         self.convert_to_wav(self.filename_save)
          self.save = False
 
   def load_file(self, item, event, attr):
@@ -698,15 +692,18 @@ class Gcompris_piano:
 
 
 #GLOBAL
+
 def general_save( filename, filetype, fles):
 
      #print filename
      fles.save = True
      fles.savestatus.props.text = "Saving.."
      fles.piano_to_file(filename)
-def general_load( filename, filetype, fles):
+     fles.filename_save = filename
 
-     fles.file_to_piano(filename)
+def general_play( filename, filetype, fles):
+
+     gcompris.sound.play_ogg(filename)
 
 def convert_load(filename, filetype, fles):
 
