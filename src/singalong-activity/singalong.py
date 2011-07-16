@@ -138,6 +138,7 @@ class Gcompris_singalong:
   
   def play_again(self, item, event, attr):
     self.count = 0
+    self.pause(1)
     self.play_song()
       
   def read_data(self):
@@ -169,17 +170,18 @@ class Gcompris_singalong:
 
   def timer_loop(self):
     self.status_timer = self.status_timer - 1
-    length = int(self.lyrics_dataset.get(self.currentsong+'notes','len'))
+    
+    length = int(self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'notes_len'))
     if(self.status_timer == 0 and self.count < length-1):
       self.status_timer = self.delay
       self.count+=1
-      note = self.lyrics_dataset.get(self.currentsong+'notes',str(self.count))
+      note = self.lyrics_dataset.get(str(self.gcomprisBoard.level),'note_'+str(self.count))
       if note != 'X':     
         self.notetext.props.text = note
         self.notetext.props.x = int(self.mapping[note]) + 30
         self.ball.props.visibility = goocanvas.ITEM_INVISIBLE
         self.ball.props.x = int(self.mapping[note])
-        self.songlyrics.props.text = self.lyrics_dataset.get(self.currentsong+"song",str(self.count))
+        self.songlyrics.props.text = self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'song_'+str(self.count))
         print self.ball.props.x
         self.ball.props.visibility = goocanvas.ITEM_VISIBLE
         gcompris.sound.play_ogg('singalong/'+note+'.wav')
