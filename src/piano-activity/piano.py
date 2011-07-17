@@ -266,13 +266,6 @@ class Gcompris_piano:
     self.allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
 
     self.allowed = self.allowed1
- 
-    # Songs from different scales
-    self.cmajor = ['c2', 'd2', 'e2', 'f2', 'g2', 'a2', 'b2', 'c3','c3','b2', 'a2', 'g2', 'f2', 'e2', 'd2', 'c2']
-    self.dmajor = ['e2', 'fh2' , 'g2', 'a2', 'b2', 'ch3', 'd3', 'e3', 'e3', 'd3', 'ch3','b2','a2','g2','fh2','e2']
-    self.mohanam = ['c2', 'd2', 'e2', 'g2', 'a2', 'c3', 'c3', 'a2', 'g2', 'e2', 'd2', 'c2']
-    self.bday = ['g2', 'g2', 'a2', 'g2', 'c3', 'b2', 'g2', 'g2', 'a2', 'g2', 'd3','c3', 'g2','g2','g3','e3','c3','b2','a2','f3','f3','e3','c3','d3','c3']
-    self.twinkle = ['c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2','d2', 'd2', 'c2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'd2', 'c2']
     
     # For the first time, use the default.desktop file
     self.read_data('activity.desktop')
@@ -319,6 +312,7 @@ class Gcompris_piano:
    # The icon of toggle button to change piano size
     self.pianosizeicon = goocanvas.Image(
         parent = self.rootitem,
+        tooltip = 'Piano Size',
         x = 175,
         y = 150,
 
@@ -364,6 +358,7 @@ class Gcompris_piano:
         parent = self.rootitem,
         x = 650,
         y = 230,
+        tooltip = 'Save',
         width = 60,
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("piano/save.svg")
@@ -377,6 +372,7 @@ class Gcompris_piano:
         parent = self.rootitem,
         x = 650,
         y = 140,
+        tooltip = 'Label',
         width = 60,
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("piano/label.svg")
@@ -390,6 +386,7 @@ class Gcompris_piano:
         parent = self.rootitem,
         x = 650,
         y = 330,
+        tooltip = 'Play',
         width = 60,
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("piano/convert_icon.svg")
@@ -684,36 +681,6 @@ class Gcompris_piano:
        self.titletext.props.text = self.songs[level-2].title
        self.notestext.props.text =  self.songs[level-2].notestext
        self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE
- #   elif level == 3 :
- #      self.setpiano(1)
- #      self.pianosize = 1
- #      self.noteslength = 15
- #      self.currentsong = self.cmajor
- #      self.titletext.props.text = ' C Major Scale '
- #      self.notestext.props.text = 'C D E F G A B C C B A G F E D C'
- #   elif level == 4 :
- #      self.noteslength = 15
- #      self.setpiano(2)
- #      self.pianosize = 2
- #      self.currentsong = self.dmajor
- #      self.titletext.props.text = ' D Major Scale '
- #      self.notestext.props.text = 'E F# G A B C# D E E D C# B A G F# E'
- #   elif level == 5:
- #      self.noteslength = 24
- #      self.setpiano(2)
- #      self.pianosize = 2
- #      self.currentsong = self.bday
- #      self.titletext.props.text = 'Happy Birthday tune'
- #      self.notestext.props.text = 'G G A G C3 B G G A G D3 C3 G G  G3 E3 C3 B A F3 F3 E3 D3 C3'
- #   elif level == 6:
- #      self.noteslength = 41
- #      self.setpiano(1)
- #      self.pianosize = 1
- #      self.currentsong = self.twinkle
- #      self.titletext.props.text = 'Twinkle Twinkle little star tune (Pentatonic Scale)'
- #      self.notestext.props.text = 'C C G G A A G |  F F E E D D C | G G F F E E D | G G F F E E D | C C G G A A G | F F E E D D C'
- #      self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE """
-
     self.noteno = 0
 
   def setpiano(self, nextsize):
