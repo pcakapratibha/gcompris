@@ -31,6 +31,15 @@ import time
 
 from gcompris import gcompris_gettext as _
 
+class Song:
+
+  pianosize = 1
+  title = None
+  notestext = None
+  notes = []
+
+
+
 class Gcompris_piano:
   """Piano gcompris python class"""
 
@@ -48,7 +57,6 @@ class Gcompris_piano:
 
     # Set the default values
     self.save = False
-    self.noteslength = 15
     self.pianosize = 1
     self.filename_save = ""
 
@@ -267,7 +275,7 @@ class Gcompris_piano:
     self.twinkle = ['c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2','d2', 'd2', 'c2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'g2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'c2', 'c2', 'g2', 'g2', 'a2', 'a2', 'g2', 'f2', 'f2', 'e2', 'e2', 'd2', 'd2', 'c2']
     
     # For the first time, use the default.desktop file
-    self.read_data('default.desktop')
+    self.read_data('activity.desktop')
     self.titletext = goocanvas.Text(
       parent = self.rootitem,
       x = 400.0,
@@ -429,6 +437,35 @@ class Gcompris_piano:
                                 )
     self.pianobg2.translate(375, 200)
 
+    self.songs = []
+    count = 0
+    while(True):
+        try:
+            temp = Song()
+            print count
+            print 'song object created'
+            temp.pianosize = int(self.dataset.get(str(count),'pianosize'))
+            print 'piano size assigned'
+            temp.title = self.dataset.get(str(count),'title')
+            temp.notestext = self.dataset.get(str(count),'notes')
+            noteslength = 1
+            temp.notes=[]
+            while(True):
+                try:
+                   note = self.dataset.get(str(count),'note_'+str(noteslength))
+                   temp.notes.append(note)
+                   noteslength += 1
+                except:
+                   break
+            self.songs.append(temp)
+            count += 1
+        except: 
+            print 'song not created'
+            break   
+    print self.songs
+    print count 
+    self.gcomprisBoard.maxlevel = count+1
+
   def play_song(self, item, event, attr):
 
      gcompris.file_selector_load( self.gcomprisBoard, self.selector_section,
@@ -586,9 +623,12 @@ class Gcompris_piano:
     if self.gcomprisBoard.level >= 2:
       self.noteno += 1
       self.dochecknotes(notename)
-      if self.noteno == self.noteslength:
+      print 'checked notes'
+      print len(self.currentsong)-1
+      if self.noteno ==  len(self.currentsong)-1:
           gcompris.bonus.display(gcompris.bonus.WIN,gcompris.bonus.FLOWER)
           self.noteno = 0
+      print 'checked length'
 
 
   def key_press(self, keyval, commit_str, preedit_str):
@@ -635,43 +675,44 @@ class Gcompris_piano:
        self.titletext.props.text = 'Freeplay'
        self.notestext.props.text = ''
        self.pianosizeicon.props.visibility = goocanvas.ITEM_VISIBLE
-    elif level == 2 :
-       self.setpiano(1)
-       self.pianosize = 1
-       self.noteslength = 11
-       self.currentsong = self.mohanam
-       self.titletext.props.text = ' Pentatonic Scale (Mohanam)'
-       self.notestext.props.text = 'C D E G A C C A G E D C'
+    else:
+       self.setpiano(int(self.songs[level-2].pianosize))
+       self.pianosize = int(self.songs[level-2].pianosize)
+       print self.pianosize
+       self.currentsong = self.songs[level-2].notes
+       print len(self.currentsong)
+       self.titletext.props.text = self.songs[level-2].title
+       self.notestext.props.text =  self.songs[level-2].notestext
        self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE
-    elif level == 3 :
-       self.setpiano(1)
-       self.pianosize = 1
-       self.noteslength = 15
-       self.currentsong = self.cmajor
-       self.titletext.props.text = ' C Major Scale '
-       self.notestext.props.text = 'C D E F G A B C C B A G F E D C'
-    elif level == 4 :
-       self.noteslength = 15
-       self.setpiano(2)
-       self.pianosize = 2
-       self.currentsong = self.dmajor
-       self.titletext.props.text = ' D Major Scale '
-       self.notestext.props.text = 'E F# G A B C# D E E D C# B A G F# E'
-    elif level == 5:
-       self.noteslength = 24
-       self.setpiano(2)
-       self.pianosize = 2
-       self.currentsong = self.bday
-       self.titletext.props.text = 'Happy Birthday tune'
-       self.notestext.props.text = 'G G A G C3 B G G A G D3 C3 G G  G3 E3 C3 B A F3 F3 E3 D3 C3'
-    elif level == 6:
-       self.noteslength = 41
-       self.setpiano(1)
-       self.pianosize = 1
-       self.currentsong = self.twinkle
-       self.titletext.props.text = 'Twinkle Twinkle little star tune (Pentatonic Scale)'
-       self.notestext.props.text = 'C C G G A A G |  F F E E D D C | G G F F E E D | G G F F E E D | C C G G A A G | F F E E D D C'
-       self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE
+ #   elif level == 3 :
+ #      self.setpiano(1)
+ #      self.pianosize = 1
+ #      self.noteslength = 15
+ #      self.currentsong = self.cmajor
+ #      self.titletext.props.text = ' C Major Scale '
+ #      self.notestext.props.text = 'C D E F G A B C C B A G F E D C'
+ #   elif level == 4 :
+ #      self.noteslength = 15
+ #      self.setpiano(2)
+ #      self.pianosize = 2
+ #      self.currentsong = self.dmajor
+ #      self.titletext.props.text = ' D Major Scale '
+ #      self.notestext.props.text = 'E F# G A B C# D E E D C# B A G F# E'
+ #   elif level == 5:
+ #      self.noteslength = 24
+ #      self.setpiano(2)
+ #      self.pianosize = 2
+ #      self.currentsong = self.bday
+ #      self.titletext.props.text = 'Happy Birthday tune'
+ #      self.notestext.props.text = 'G G A G C3 B G G A G D3 C3 G G  G3 E3 C3 B A F3 F3 E3 D3 C3'
+ #   elif level == 6:
+ #      self.noteslength = 41
+ #      self.setpiano(1)
+ #      self.pianosize = 1
+ #      self.currentsong = self.twinkle
+ #      self.titletext.props.text = 'Twinkle Twinkle little star tune (Pentatonic Scale)'
+ #      self.notestext.props.text = 'C C G G A A G |  F F E E D D C | G G F F E E D | G G F F E E D | C C G G A A G | F F E E D D C'
+ #      self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE """
 
     self.noteno = 0
 
@@ -689,6 +730,7 @@ class Gcompris_piano:
      self.pianolabel1.translate(-150, 0)
      self.pianobg1.translate(-150, 0)
      self.allowed = self.allowed1 + self.allowed2
+
 
 
 #GLOBAL
