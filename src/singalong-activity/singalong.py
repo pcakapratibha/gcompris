@@ -30,6 +30,14 @@ import pango
 
 from gcompris import gcompris_gettext as _
 
+class Song:
+
+  title = None
+  notes = []
+  lyrics = []
+
+
+
 class Gcompris_singalong:
   """Sing Along gcompris python class"""
 
@@ -144,13 +152,14 @@ class Gcompris_singalong:
     self.status_timer = self.delay
     
     self.lyrics_dataset = self.read_data()
-    self.songtitle.props.text =  self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'song_name')
+   
+    self.populate_songs()
 
     self.play_song()
   
   def play_again(self, item, event, attr):
     self.count = 0
-    self.pause(1)
+    self.status_timer = self.delay
     self.play_song()
       
   def read_data(self):
@@ -178,28 +187,58 @@ class Gcompris_singalong:
    
    self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)    
         
-             
+  def populate_songs(self):
+   self.songs = []
+   levels = 1
+   while(True):
+     try:
+        temp = Song()
+        temp.title = self.lyrics_dataset.get(str(levels), 'song_name')
+        print temp.title
+        counter = 1
+        temp.notes = []
+        temp.lyrics = []
+        while(True):
+           try:
+              note = self.lyrics_dataset.get(str(levels), 'note_'+str(counter))
+              lyric = self.lyrics_dataset.get(str(levels), 'song_'+str(counter))   
+              temp.notes.append(note)
+              temp.lyrics.append(lyric)
+              counter += 1
+              print counter
+           except:
+              print 'inner while broken'
+              break
+        self.songs.append(temp)
+        print self.songs[levels-1].notes
+        levels += 1
+     except:
+        print 'Exception Occurred'
+        break
+   print self.songs
+   self.gcomprisBoard.maxlevel = levels - 1
+  
 
   def timer_loop(self):
     self.status_timer = self.status_timer - 1
+    length = len(self.songs[self.gcomprisBoard.level-1].notes)
     
-    length = int(self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'notes_len'))
     if(self.status_timer == 0 and self.count < length-1):
       self.status_timer = self.delay
       self.count+=1
-      note = self.lyrics_dataset.get(str(self.gcomprisBoard.level),'note_'+str(self.count))
+      note = self.songs[self.gcomprisBoard.level-1].notes[self.count]
       if note != 'X':     
         self.notetext.props.text = note
         self.notetext.props.x = int(self.mapping[note]) + 30
         self.ball.props.visibility = goocanvas.ITEM_INVISIBLE
         self.ball.props.x = int(self.mapping[note])
-        self.songlyrics.props.text = self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'song_'+str(self.count))
-        print self.ball.props.x
+        self.songlyrics.props.text = self.songs[self.gcomprisBoard.level - 1].lyrics[self.count]
         self.ball.props.visibility = goocanvas.ITEM_VISIBLE
         gcompris.sound.play_ogg('singalong/'+note+'.wav')
 
     
-    print self.status_timer
+#    print self.status_timer
+    
     self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)
     
 
@@ -236,7 +275,8 @@ class Gcompris_singalong:
     print("singalong set level. %i" % level)
     self.gcomprisBoard.level = level
     gcompris.bar_set_level(self.gcomprisBoard);
-    self.songtitle.props.text =  self.lyrics_dataset.get(str(self.gcomprisBoard.level), 'song_name')
+    self.songtitle.props.text =  self.songs[self.gcomprisBoard.level - 1].title
     self.delay = 35
+    self.status_timer = self.delay
     self.count = 0
     self.play_song()
