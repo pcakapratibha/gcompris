@@ -78,7 +78,7 @@ class Gcompris_singalong:
     self.mapping = { 'C' : 310, 'D' : 340 , 'E' : 370, 'F' : 400, 'G' : 430, 'A' : 460, 'C3': 490 }
     self.currentsong = "twinkle"
 
-
+    self.mute = False
     self.notecount = 0
     self.count = 0
     self.delay = 30
@@ -102,7 +102,18 @@ class Gcompris_singalong:
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("singalong/ball.svg")
         )
-    
+    self.mute_button = goocanvas.Image(
+        parent = self.rootitem,
+        x = 600,
+        y = 320,
+        width = 50,
+        height = 50,
+        pixbuf = gcompris.utils.load_pixmap("singalong/audio-volume-muted.png")
+        )
+
+    gcompris.utils.item_focus_init(self.mute_button, None)
+    self.mute_button.connect("button-press-event", self.mute_and_play)
+
     self.play_button = goocanvas.Image(
         parent = self.rootitem,
         x = 600,
@@ -154,6 +165,8 @@ class Gcompris_singalong:
     self.lyrics_dataset = self.read_data()
    
     self.populate_songs()
+ 
+    self.songtitle.props.text =  self.songs[self.gcomprisBoard.level - 1].title
 
     self.play_song()
   
@@ -161,6 +174,12 @@ class Gcompris_singalong:
     self.count = 0
     self.status_timer = self.delay
     self.play_song()
+
+  def mute_and_play(self, item, event, attr):
+    if self.mute == False:
+       self.mute = True
+    else:
+       self.mute = False
       
   def read_data(self):
     '''Load the activity data'''
@@ -234,7 +253,9 @@ class Gcompris_singalong:
         self.ball.props.x = int(self.mapping[note])
         self.songlyrics.props.text = self.songs[self.gcomprisBoard.level - 1].lyrics[self.count]
         self.ball.props.visibility = goocanvas.ITEM_VISIBLE
-        gcompris.sound.play_ogg('singalong/'+note+'.wav')
+        if self.mute == False:
+           gcompris.sound.play_ogg('singalong/'+note+'.wav')
+       
 
     
 #    print self.status_timer
