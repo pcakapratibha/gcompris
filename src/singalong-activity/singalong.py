@@ -73,15 +73,16 @@ class Gcompris_singalong:
     # Create our rootitem. We put each canvas item in it so at the end we
     # only have to kill it. The canvas deletes all the items it contains
     # automaticaly.
-    self.rootitem = goocanvas.Group(parent =                self.gcomprisBoard.canvas.get_root_item())
+    self.rootitem = goocanvas.Group(parent = self.gcomprisBoard.canvas.get_root_item())
 
     self.mapping = { 'C' : 310, 'D' : 340 , 'E' : 370, 'F' : 400, 'G' : 430, 'A' : 460, 'C3': 490 }
-    self.currentsong = "twinkle"
+    
 
     self.mute = False
     self.notecount = 0
     self.count = 0
     self.delay = 30
+    self.play = 1
 
     goocanvas.Text(
       parent = self.rootitem,
@@ -104,8 +105,9 @@ class Gcompris_singalong:
         )
     self.mute_button = goocanvas.Image(
         parent = self.rootitem,
-        x = 600,
-        y = 320,
+        tooltip = _('Mute'),
+        x = 540,
+        y = 370,
         width = 50,
         height = 50,
         pixbuf = gcompris.utils.load_pixmap("singalong/audio-volume-muted.png")
@@ -116,12 +118,39 @@ class Gcompris_singalong:
 
     self.play_button = goocanvas.Image(
         parent = self.rootitem,
+        tooltip = _('Play'),
         x = 600,
-        y = 400,
+        y = 370,
         width = 50,
         height = 50,
         pixbuf = gcompris.utils.load_pixmap("singalong/play_button.png")
         )
+     
+    self.faster_button = goocanvas.Image(
+        parent = self.rootitem,
+        tooltip = _('Faster'),
+        x = 240,
+        y = 370,
+        width = 50,
+        height = 50,
+        pixbuf = gcompris.utils.load_pixmap("singalong/forward.svg")
+        )
+    gcompris.utils.item_focus_init(self.faster_button, None)
+    self.faster_button.connect("button-press-event", self.play_faster)
+
+
+    self.slower_button = goocanvas.Image(
+        parent = self.rootitem,
+        tooltip = _('Slower'),
+        x = 180,
+        y = 370,
+        width = 50,
+        height = 50,
+        pixbuf = gcompris.utils.load_pixmap("singalong/backward.svg")
+        )
+
+    gcompris.utils.item_focus_init(self.slower_button, None)
+    self.slower_button.connect("button-press-event", self.play_slower)
 
     gcompris.utils.item_focus_init(self.play_button, None)
     self.play_button.connect("button-press-event", self.play_again)
@@ -171,8 +200,24 @@ class Gcompris_singalong:
     self.play_song()
   
   def play_again(self, item, event, attr):
+    if self.play == 1:
+      length = len(self.songs[self.gcomprisBoard.level-1].notes)
+      self.count = length - 1 
+      self.play = 0
+    else : 
+      self.count = 0
+      self.play = 1
+      self.play_song()
+      
+
+  def play_faster(self, item, event, attr):
     self.count = 0
-    self.status_timer = self.delay
+    self.delay = self.delay - 5
+    self.play_song()
+    
+  def play_slower(self, item, event, attr):
+    self.count = 0
+    self.delay = self.delay + 5
     self.play_song()
 
   def mute_and_play(self, item, event, attr):
@@ -203,6 +248,7 @@ class Gcompris_singalong:
     return config
 
   def play_song(self):
+   self.status_timer = self.delay
    
    self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)    
         
