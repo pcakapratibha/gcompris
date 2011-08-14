@@ -261,6 +261,7 @@ class Gcompris_piano:
     # Files saved are saved with extension .gcpiano
     self.file_type = ".gcpiano"
     self.selector_section = "piano"
+    self.keys = []
     # Default allowed keys, Only these keys when pressed return a note
     self.allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
     self.allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
@@ -462,6 +463,31 @@ class Gcompris_piano:
     print self.songs
     print count 
     self.gcomprisBoard.maxlevel = count+1
+    self.allnotes = ['c','ch','d','dh','e','f','fh','g','gh','a','ah','b']
+    
+    for note in self.allnotes:
+       self.keys.append(self.create_key('#'+note + '2'))
+
+  def create_key(self, keyname):
+    keyhandle = gcompris.utils.load_svg("piano/pianotransparent.svg")
+    key =  goocanvas.Svg(
+          parent = self.rootitem,
+          svg_handle = keyhandle,
+          svg_id = keyname,
+          visibility = goocanvas.ITEM_VISIBLE
+                         )
+    key.translate(275,200)
+    key.connect('button-press-event', self.play_mouse, keyname)
+    print 'key almost created'
+    return key
+
+
+  def play_mouse(self, item, event, attr, keyname):
+    
+    print keyname
+    notename = keyname[1:]
+    self.play_note(notename, self.pianobg1, 1)
+
 
   def play_song(self, item, event, attr):
 
@@ -600,9 +626,12 @@ class Gcompris_piano:
   def config_start(self, profile):
     self.set_config()
 
-  def play_note(self, note, pianobg):
+  def play_note(self, note, pianobg, mouse):
 
-    notename = self.dataset.get("common", note)
+    if mouse == 0:
+       notename = self.dataset.get("common", note)
+    else: 
+       notename = note
 
     fname = 'piano/'+notename+'.wav'
     self.notetext.props.text = notename
@@ -634,9 +663,9 @@ class Gcompris_piano:
     strn = u'%c' % utf8char
     #Play the corresponding note only if present in the allowed array
     if strn in self.allowed1:
-      self.play_note(strn, self.pianobg1)
+      self.play_note(strn, self.pianobg1, 0)
     elif strn in self.allowed and len(self.allowed)>13:
-      self.play_note(strn, self.pianobg2)
+      self.play_note(strn, self.pianobg2, 0)
 
     print("Gcompris_piano key press keyval=%i %s" % (keyval, strn))
     # Return  True  if you did process a key
@@ -697,7 +726,6 @@ class Gcompris_piano:
      self.pianolabel1.translate(-150, 0)
      self.pianobg1.translate(-150, 0)
      self.allowed = self.allowed1 + self.allowed2
-
 
 
 #GLOBAL
