@@ -31,6 +31,7 @@ import time
 
 from gcompris import gcompris_gettext as _
 
+# class to store the populated songs from config file
 class Song:
 
   pianosize = 1
@@ -262,10 +263,12 @@ class Gcompris_piano:
     self.file_type = ".gcpiano"
     self.selector_section = "piano"
     self.keys = []
+    self.keys1 = []
     # Default allowed keys, Only these keys when pressed return a note
     self.allowed1 = ['q','2','w','3','e','r','5','t','6','y','7','u','i']
     self.allowed2 = ['z','s','x','d','c','v','g','b','h','n','j','m',',']
 
+    # Initialise with single piano configuration
     self.allowed = self.allowed1
     
     # For the first time, use the default.desktop file
@@ -414,19 +417,16 @@ class Gcompris_piano:
     svghandle1 = gcompris.utils.load_svg("piano/pianobg2.svg")
     svghandle2 = gcompris.utils.load_svg("piano/pianobg3.svg")
 
-
+    # Highlighting item for the first octave
     self.pianobg1 = goocanvas.Svg(
                                     parent = self.rootitem,
                                     svg_handle = svghandle1,
                                     svg_id = '' ,
                                     visibility = goocanvas.ITEM_VISIBLE
-                                     # x = 275,
-                                     # y = 200,
-                                     # width = 250,
-                                     # height = 150
                                  )
     self.pianobg1.translate(275, 200)
-
+    
+    # Highlighting item for the second octave
     self.pianobg2 = goocanvas.Svg(
                     parent = self.rootitem,
                     svg_handle = svghandle2,
@@ -434,7 +434,8 @@ class Gcompris_piano:
                     visibility = goocanvas.ITEM_INVISIBLE
                                 )
     self.pianobg2.translate(375, 200)
-
+    
+    # Populate all the songs in the songs[] array and save it locally
     self.songs = []
     count = 0
     while(True):
@@ -460,41 +461,64 @@ class Gcompris_piano:
         except: 
             print 'song not created'
             break   
-    print self.songs
-    print count 
-    self.gcomprisBoard.maxlevel = count+1
+    #print self.songs
+    #print count 
+    # Set the number of levels as the number of songs read from the file
+    self.gcomprisBoard.maxlevel = count + 1
+
+    # Mouse feature
     self.allnotes = ['c','ch','d','dh','e','f','fh','g','gh','a','ah','b']
     
-    for note in self.allnotes:
-       self.keys.append(self.create_key('#'+note + '2'))
+    # Create another transparent layer over the piano with corresponding 
+    # tag names to receive the mouse click 
 
-  def create_key(self, keyname):
-    keyhandle = gcompris.utils.load_svg("piano/pianotransparent.svg")
+    for note in self.allnotes:
+       self.keys.append(self.create_key('#' + note + '2',2))
+    for note in self.allnotes:
+       temp = self.create_key('#' + note + '3',3)
+       temp.props.visibility = goocanvas.ITEM_INVISIBLE
+       self.keys1.append(temp)
+
+    
+  
+  # Create all key items to 
+  def create_key(self, keyname, idno):
+    if idno == 2:
+       keyhandle = gcompris.utils.load_svg("piano/pianotransparent.svg")
+    else :
+       keyhandle = gcompris.utils.load_svg("piano/pianotransparent2.svg")
     key =  goocanvas.Svg(
           parent = self.rootitem,
           svg_handle = keyhandle,
           svg_id = keyname,
           visibility = goocanvas.ITEM_VISIBLE
                          )
-    key.translate(275,200)
+    if idno == 2 :
+       key.translate(275,200)
+    else :
+       key.translate(375,200)
+
     key.connect('button-press-event', self.play_mouse, keyname)
-    print 'key almost created'
     return key
 
-
+  # play the corresponding note when clicked
   def play_mouse(self, item, event, attr, keyname):
     
     print keyname
     notename = keyname[1:]
-    self.play_note(notename, self.pianobg1, 1)
+    if keyname[-1] == '2':
+       self.play_note(notename, self.pianobg1, 1)
+    else:
+       self.play_note(notename, self.pianobg2, 1)
 
-
+  # Play the song when a file is chosen
   def play_song(self, item, event, attr):
 
      gcompris.file_selector_load( self.gcomprisBoard, self.selector_section,
                                     self.file_type,
                                    general_play, self)
 
+  # Convert the .gcpiano file to .wav file
 
   def convert_to_wav(self, filename):
      print filename
@@ -516,6 +540,7 @@ class Gcompris_piano:
      except: 
        file.close()
 
+  # Called when size toggle button is clicked in the free play mode
   def change_size(self, item, event, attr):
      if self.pianosize == 1 :
         self.setpiano(2)
@@ -550,10 +575,7 @@ class Gcompris_piano:
        gcompris.file_selector_save( self.gcomprisBoard, self.selector_section,
                                     self.file_type,
                                    general_save, self)
-       
-
-       
-
+     
     else :
        if self.save is True:
          self.notesfile.close()
@@ -712,6 +734,7 @@ class Gcompris_piano:
        self.pianosizeicon.props.visibility = goocanvas.ITEM_INVISIBLE
     self.noteno = 0
 
+  # When size is changed, call this function to move the pianos
   def setpiano(self, nextsize):
     if self.pianosize == 2 and nextsize == 1:
       self.pianopic2.props.visibility = goocanvas.ITEM_INVISIBLE
@@ -720,12 +743,23 @@ class Gcompris_piano:
       self.pianolabel1.translate(150, 0)
       self.pianolabel2.props.visibility = goocanvas.ITEM_INVISIBLE
       self.allowed = self.allowed1
+      for key in self.keys:
+        key.translate(150,0)
+      for key in self.keys1:
+          key.props.visibility = goocanvas.ITEM_INVISIBLE
+          
     elif self.pianosize == 1 and nextsize == 2:
      self.pianopic2.props.visibility = goocanvas.ITEM_VISIBLE
      self.pianopic1.props.x = 125
      self.pianolabel1.translate(-150, 0)
      self.pianobg1.translate(-150, 0)
      self.allowed = self.allowed1 + self.allowed2
+     for key in self.keys:
+       key.translate(-150,0)
+
+     for key in self.keys1:
+       key.props.visibility = goocanvas.ITEM_VISIBLE
+          
 
 
 #GLOBAL
