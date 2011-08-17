@@ -75,6 +75,7 @@ class Gcompris_singalong:
     # automaticaly.
     self.rootitem = goocanvas.Group(parent = self.gcomprisBoard.canvas.get_root_item())
 
+    # specifies x position of ball for each note
     self.mapping = { 'C' : 310, 'D' : 340 , 'E' : 370, 'F' : 400, 'G' : 430, 'A' : 460, 'C3': 490 }
     
 
@@ -84,6 +85,7 @@ class Gcompris_singalong:
     self.delay = 30
     self.play = 1
 
+    # Title Text
     goocanvas.Text(
       parent = self.rootitem,
       x=400.0,
@@ -95,6 +97,7 @@ class Gcompris_singalong:
       alignment = pango.ALIGN_CENTER
       )
 
+    # creating ball Item
     self.ball = goocanvas.Image(
         parent = self.rootitem,
         x = 650,
@@ -103,6 +106,8 @@ class Gcompris_singalong:
         height = 60,
         pixbuf = gcompris.utils.load_pixmap("singalong/ball.svg")
         )
+   
+    # Mute toggle button for the sing alone mode
     self.mute_button = goocanvas.Image(
         parent = self.rootitem,
         tooltip = _('Mute'),
@@ -116,6 +121,7 @@ class Gcompris_singalong:
     gcompris.utils.item_focus_init(self.mute_button, None)
     self.mute_button.connect("button-press-event", self.mute_and_play)
 
+    # Play button to repeat the song
     self.play_button = goocanvas.Image(
         parent = self.rootitem,
         tooltip = _('Play'),
@@ -125,7 +131,8 @@ class Gcompris_singalong:
         height = 50,
         pixbuf = gcompris.utils.load_pixmap("singalong/play_button.png")
         )
-     
+    
+    # Button to increase the tempo 
     self.faster_button = goocanvas.Image(
         parent = self.rootitem,
         tooltip = _('Faster'),
@@ -138,7 +145,7 @@ class Gcompris_singalong:
     gcompris.utils.item_focus_init(self.faster_button, None)
     self.faster_button.connect("button-press-event", self.play_faster)
 
-
+    # Button to decrease the tempo
     self.slower_button = goocanvas.Image(
         parent = self.rootitem,
         tooltip = _('Slower'),
@@ -155,6 +162,7 @@ class Gcompris_singalong:
     gcompris.utils.item_focus_init(self.play_button, None)
     self.play_button.connect("button-press-event", self.play_again)
 
+    # Text displaying each note on the ball
     self.notetext = goocanvas.Text(
       parent = self.rootitem,
       x=650.0,
@@ -166,6 +174,7 @@ class Gcompris_singalong:
       alignment = pango.ALIGN_CENTER
       )
 
+    # Text displaying each lyric corresponding to the played note
     self.songlyrics = goocanvas.Text(
       parent = self.rootitem,
       x=400.0,
@@ -176,7 +185,8 @@ class Gcompris_singalong:
       anchor = gtk.ANCHOR_CENTER,
       alignment = pango.ALIGN_CENTER
       )
-
+    
+    # Title of the song
     self.songtitle = goocanvas.Text(
       parent = self.rootitem,
       x=400.0,
@@ -252,6 +262,7 @@ class Gcompris_singalong:
    
    self.timer_inc  = gobject.timeout_add(self.status_timer, self.timer_loop)    
         
+  # Populate the songs by reading the config file and set the number of levels	
   def populate_songs(self):
    self.songs = []
    levels = 1
@@ -283,7 +294,7 @@ class Gcompris_singalong:
    print self.songs
    self.gcomprisBoard.maxlevel = levels - 1
   
-
+  # Loop to perform delay between each note
   def timer_loop(self):
     self.status_timer = self.status_timer - 1
     length = len(self.songs[self.gcomprisBoard.level-1].notes)
