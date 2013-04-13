@@ -612,6 +612,18 @@ msgstr "गेंद की तेजी और दिशा निश्चि�
 msgid "The football game"
 msgstr "फुटबॉल का खेल"
 
+#: ../boards/braille.xml.in.h:1
+#: ../src/braille_alphabets-activity/braille_alphabets.xml.in.h:1
+msgid "Discover the Braille system"
+msgstr "ब्रेल प्रणाली की खोज"
+
+#: ../boards/braille.xml.in.h:2
+msgid ""
+"The Braille system is a method that is widely used by blind people to read "
+"and write, and was the first digital form of writing."
+msgstr ""
+"ब्रेल प्रणाली,एक व्यापक विधि है जो नेत्रहीन लोगों द्वारा पढ़ने-लिखने के लिए प्रयोग कि जाती है और यह डिजिटल लेखन पहला रूप था"
+
 #: ../boards/canal_lock.xml.in.h:1
 msgid "Operate a canal lock"
 msgstr "नहरी बांधपर ध्यान दे"
